@@ -929,7 +929,17 @@ Jede Zeile ist maschinell oder mit einer konkreten Handlung prüfbar. Ergebnis k
 2. `rg "score|rating|grade|stars?|ranking|progress|meter|gauge" apps/web/components apps/web/lib` = 0 Treffer außer in Kommentaren, die das Verbot erklären.
 3. `rg -P "[\x{2713}\x{2714}\x{2717}\x{2718}\x{274C}\x{2705}]" apps/web` = 0 Treffer.
 4. `rg -i "ff6131|athenarun" apps/web` = 0 Treffer.
-5. `rg -i "spenden jetzt|jetzt spenden|donate|jetzt helfen" apps/web` = 0 Treffer.
+5. Kein Spendenaufruf. Der Link tragt ein neutrales Substantiv ("Offizieller
+   Spendenweg"), nie eine Aufforderung. Maschinell: `npm run check:copy` (Teil von
+   `verify`). Das Skript entfernt zuerst verneinte Formen, weil "Sie bewertet keine
+   Organisation und empfiehlt keine Spende" und "Wir bewerten nicht und empfehlen nicht"
+   das Versprechen des Produkts sind, und prueft dann auf Imperative ("jetzt spenden",
+   "spenden Sie", "donate now") und Rangsprache ("empfohlen", "recommended", "beste
+   Organisation"). Die alte Form dieser Zeile war `rg -i "...|donate|..." = 0 Treffer`;
+   sie ist mit dem Aktionspfad unbrauchbar geworden, weil das Wort in 34 fremden
+   Spenden-URLs, im Datensatz und im Modulnamen `lib/donation.ts` vorkommt. Ein
+   Null-Treffer-Grep haette dort das Umbenennen des ehrlichen Dings erzwungen statt das
+   Entfernen eines unehrlichen.
 6. Sortier-Optionen enthalten keine Option nach Beleggrad. Manuell in `lib/filter.ts` gelesen.
 7. Kein `text-muted`, `opacity-`, `italic`, `line-through`, `text-sm` an einem
    Nicht-gefunden-Wert: `rg "not_found|notFound" -A4 apps/web/components` gelesen, plus der
@@ -942,7 +952,16 @@ Jede Zeile ist maschinell oder mit einer konkreten Handlung prüfbar. Ergebnis k
     Graustufen (Playwright `filter: grayscale(1)`) muss vollständig lesbar bleiben.
 11. `not_public` ist als Aussage über das Register formuliert. Der String wird wörtlich gelesen.
 12. Keine Fotos: `rg -i "<Image|<img|\.jpg|\.jpeg|\.png|\.webp" apps/web/app apps/web/components`
-    findet nur das statische Locator-SVG und `opengraph-image.tsx`.
+    findet nur `opengraph-image.tsx`. (Das fruher hier genannte Locator-SVG wurde in
+    G1/G2 entfernt, weil seine Geometrie erfunden war.)
+
+13. Kein Zustand des Spendenwegs wird schwacher dargestellt als ein gefundener. "kein
+    offizieller Spendenweg gefunden" tragt dieselbe Groesse, Staerke, Neigung, Deckkraft
+    und Textdekoration wie ein gefundener Link; nur die beiden belegten Farbtoene
+    unterscheiden sich, und die halt `scripts/contrast.mjs` innerhalb von 0,1. Geprueft
+    im Computed-Style-Test in `e2e/board.spec.ts` ("a missing donation channel reads with
+    the same weight as a found one"). Der Zustand selbst kommt aus `lib/donation.ts`,
+    damit keine Ansicht ihn eigenmaechtig anders formuliert.
 
 ---
 

@@ -31,7 +31,11 @@ export function DonationSection({ donation }: { donation: OrgDetail["donation"] 
         {view.scopeKey ? (
           <p className="text-sm text-muted">{tCommon(`donation.scope.${view.scopeKey}`)}</p>
         ) : null}
-        <p className="text-sm text-muted">{tCommon("donation.safety")}</p>
+        {/* Ink, not muted. This is the one instruction on the page a reader is
+            meant to act on ("check the bank details on the original site"), and it
+            was the quietest text in the section. Same size as the scope line, full
+            strength colour. */}
+        <p className="text-sm text-ink">{tCommon("donation.safety")}</p>
       </div>
     </OrgSection>
   );

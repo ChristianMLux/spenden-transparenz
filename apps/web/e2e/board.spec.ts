@@ -160,6 +160,102 @@ test.describe("axe", () => {
   }
 });
 
+test.describe("the action path", () => {
+  test("a missing donation channel reads with the same weight as a found one", async ({
+    page,
+  }) => {
+    const response = await page.goto(BOARD.de);
+    expect(response?.status()).toBe(200);
+
+    // The board carries both states side by side: 34 organisations have an official
+    // channel and 10 were searched without one. The rule that matters is the same rule
+    // that governs every other gap in this product - the honest "we found nothing"
+    // must not be rendered as a lesser thing than the value - so it is a test, not a
+    // comment. Colour is allowed to differ (the two evidence tones are contrast-tuned
+    // to within 0.1 of each other by scripts/contrast.mjs); size, weight, slant,
+    // opacity and decoration are not.
+    const styles = await page.evaluate(() => {
+      const read = (el: Element) => {
+        const cs = getComputedStyle(el);
+        return {
+          fontSize: cs.fontSize,
+          fontWeight: cs.fontWeight,
+          fontStyle: cs.fontStyle,
+          opacity: cs.opacity,
+          textDecorationLine: cs.textDecorationLine,
+          textTransform: cs.textTransform,
+        };
+      };
+      // Both states render through the same component, so both carry the same wrapper
+      // class. Matching on that wrapper rather than on an exact string keeps the test
+      // honest when the line grows a part: the found line reads
+      // "Offizieller Spendenweg . host . date . Eigenangabe" and the missing one
+      // "kein offizieller Spendenweg gefunden . date", because the date we searched on
+      // is information too.
+      const lines = [...document.querySelectorAll('[class*="min-h-6"]')];
+      const textOf = (el: Element) => (el.textContent ?? "").trim();
+      const found = lines.find((el) => textOf(el).startsWith("Offizieller Spendenweg"));
+      const missing = lines.find((el) =>
+        textOf(el).startsWith("kein offizieller Spendenweg gefunden"),
+      );
+      return {
+        found: found ? read(found) : null,
+        missing: missing ? read(missing) : null,
+        foundIsLink: found?.tagName === "A",
+        missingIsNotLink: missing?.tagName !== "A",
+      };
+    });
+
+    expect(styles.found).not.toBeNull();
+    expect(styles.missing).not.toBeNull();
+    expect(styles.missing).toEqual(styles.found);
+    expect(styles.foundIsLink).toBe(true);
+    expect(styles.missingIsNotLink).toBe(true);
+  });
+
+  test("every found channel points at a page, never at a bank detail", async ({ page }) => {
+    await page.goto(BOARD.de);
+    const hrefs = await page
+      .locator('a:has-text("Offizieller Spendenweg")')
+      .evaluateAll((els) => els.map((el) => (el as HTMLAnchorElement).href));
+    expect(hrefs.length).toBeGreaterThan(0);
+    for (const href of hrefs) {
+      expect(href).toMatch(/^https:\/\//);
+    }
+    // No account number may reach the reader through the donation lines. Scoped to
+    // those lines on purpose: the first version of this check scanned the whole page
+    // and failed on a Nepali phone number inside a research note, which is legitimate
+    // published contact detail and not a bank account. The precise guarantee - that the
+    // donation data itself carries no account number anywhere, whether rendered or not -
+    // is asserted at the data layer in lib/donation.test.ts.
+    const lineTexts = await page
+      .locator('[class*="min-h-6"]')
+      .evaluateAll((els) =>
+        els
+          .map((el) => (el.textContent ?? "").trim())
+          .filter((s) => s.toLowerCase().includes("spendenweg")),
+      );
+    expect(lineTexts.length).toBeGreaterThan(0);
+    for (const line of lineTexts) {
+      expect(line).not.toMatch(/\b[A-Z]{2}\d{2}[A-Z0-9]{10,}\b/);
+      expect(line).not.toMatch(/\b\d{9,}\b/);
+    }
+  });
+
+  test("the help section carries the state fund outside the organisation list", async ({
+    page,
+  }) => {
+    await page.goto(BOARD.de);
+    const help = page.locator("#helfen");
+    await expect(help).toContainText("Prime Minister");
+    // The count line is computed from the 44 organisations and must not have moved.
+    await expect(page.getByText("44 von 44 Organisationen")).toBeVisible();
+    // and the fund is not one of the rows
+    const rowNames = await page.locator("article h2").allTextContents();
+    expect(rowNames.some((n) => n.includes("Prime Minister"))).toBe(false);
+  });
+});
+
 test.describe("screenshots", () => {
   const PAGES = [
     { name: "board-de", path: BOARD.de },
