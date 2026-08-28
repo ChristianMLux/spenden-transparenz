@@ -103,6 +103,28 @@ PO-5 decision.
 
 ---
 
+## The same bug, a second time, in my own file
+
+Chasing WP-C's rate-limit finding turned up a second instance of it in `apps/api/start.sh`, which
+I wrote. uvicorn's `ProxyHeadersMiddleware` implements the correct rightmost-untrusted algorithm -
+it walks `X-Forwarded-For` in reverse and returns the first host that is not a trusted proxy -
+**except** when `--forwarded-allow-ips "*"` is set. That flips on `always_trust`, and the code then
+returns `x_forwarded_for_hosts[0]`: the first entry, the one the caller sent.
+
+`start.sh` passes exactly that flag, so `request.client.host` in this application is
+attacker-controlled. Nothing keys on it today, because the rate limiter reads the header directly
+and the fallback branch only runs when no `X-Forwarded-For` is present at all. But anything added
+later that treats `request.client.host` as an identity - a per-client budget, an audit trail, an
+allowlist - would inherit the bypass silently.
+
+Naming Railway's proxy addresses instead of `"*"` is not an option: they are internal and dynamic.
+So the flag stays, with the trade-off written down where the flag is set, and the app parses the
+header itself wherever the answer has to be trustworthy.
+
+Worth noting for the security review: the first fix was in a worker's code, the second in the
+lead's, and both came from the same wrong sentence in the spec. One wrong instruction reproduced
+itself in every place that followed it.
+
 ## Cross-cutting
 
 **Test databases were shared between worktrees.** All three conftests used fixed database names
