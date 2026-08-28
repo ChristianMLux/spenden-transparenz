@@ -224,6 +224,34 @@ async def test_disbursed_is_an_allowed_value_even_though_the_pilot_data_has_none
     assert row.amount_basis == "disbursed"
 
 
+async def test_a_hand_researched_statement_may_have_no_quote(session):
+    """The 44 researched responses in the pilot data came from structured pages, and 5 of them
+    have no quotable sentence. Dropping those would lose real, sourced responses."""
+    row = await _statement(session, quote=None, model="hand_research")
+    assert row.quote is None
+
+
+async def test_an_extracted_statement_may_not_have_no_quote(session):
+    """A claim a model produced must show the sentence it came from. This is the database half of
+    the verbatim gate: even if the pipeline let one through, the row cannot exist."""
+    with pytest.raises((IntegrityError, DBAPIError), match="ck_response_statement_quote_required_for_extracted"):
+        await _statement(session, quote=None, model="claude-sonnet-5")
+
+
+async def test_the_40_word_rule_still_applies_to_hand_researched_quotes(session):
+    with pytest.raises(IntegrityError, match="ck_response_statement_quote_words"):
+        await _statement(session, quote=" ".join(["word"] * 41), model="hand_research")
+
+
+async def test_a_run_may_be_queued(session):
+    """The admin endpoint records a queued run and returns; the pipeline drains it on its next
+    tick. The API never runs a job inside a web request."""
+    run = IngestionRun(job="ingest_orgs", status="queued")
+    session.add(run)
+    await session.flush()
+    assert run.status == "queued"
+
+
 async def test_a_statement_may_have_no_org_id(session):
     """Named but not identified stays visible. That is a designed state, not a failure."""
     row = await _statement(session, org_id=None, org_name_raw="Local youth club, Timure")

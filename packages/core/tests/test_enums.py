@@ -39,8 +39,12 @@ def test_warning_type_matches_the_json_schema_enum():
 
 
 def test_presence_mode_matches_the_json_schema_enum():
+    """The schema enum also carries null since v0.3, because a presence mode can be a gap. The
+    Python tuple lists only the real values - a gap is expressed by value IS NULL, not by a
+    member called "null"."""
     schema_mode = SCHEMA["$defs"]["datum_presence_mode"]["allOf"][1]["properties"]["value"]["enum"]
-    assert list(enums.PRESENCE_MODE) == schema_mode
+    assert list(enums.PRESENCE_MODE) == [value for value in schema_mode if value is not None]
+    assert None in schema_mode
 
 
 def test_activity_type_contains_the_three_classes_the_spec_added():
@@ -72,3 +76,19 @@ def test_all_enums_registry_covers_every_exported_tuple():
     exported = {n for n in dir(enums) if n.isupper() and isinstance(getattr(enums, n), tuple)}
     registered = {n.upper() for n in enums.ALL_ENUMS}
     assert exported == registered, f"not in ALL_ENUMS: {sorted(exported - registered)}"
+
+
+def test_run_status_includes_queued():
+    """The admin endpoint writes it and the pipeline drains it; without the value the API would
+    have to run jobs in-process."""
+    assert "queued" in enums.RUN_STATUS
+
+
+def test_job_names_are_shared_without_importing_the_pipeline():
+    """The API validates a job name against this tuple. It must never import the pipeline package:
+    separate service, separate deploy artefact, and the pipeline carries the LLM credentials."""
+    from core.jobs import JOB_NAMES
+
+    assert "seed_reference" in JOB_NAMES
+    assert "extract_statements" in JOB_NAMES
+    assert len(set(JOB_NAMES)) == len(JOB_NAMES)

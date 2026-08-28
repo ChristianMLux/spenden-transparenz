@@ -1,4 +1,4 @@
-# Datenmodell v0.2 — Organisations-Record (Pilot „Nepal Flut 2026")
+# Datenmodell v0.3 — Organisations-Record (Pilot „Nepal Flut 2026")
 
 **Stand:** 2026-08-28 · **Status:** Entwurf, entstanden aus dem Pilot-Datensatz. Feldnamen EN (Handoff-Entscheidung 4, als Annahme übernommen). Maschinenlesbar: `schema/org.schema.json` (JSON Schema 2020-12), Beispiel: `schema/example-org.json`.
 
@@ -36,6 +36,21 @@ deshalb gewinnt `source_unreachable` gegen `not_public`, wenn beides auf eine No
 `gap_reason` ist **nicht** required. Ein Datum mit Wert trägt keinen Grund, und ein Pflichtfeld
 hätte jeden bestehenden Record ungültig gemacht. Erzwungen wird es dort, wo es zählt: die
 Datenbank (`org_datum`) lässt eine Lücke ohne `note` **und** `gap_reason` nicht zu.
+
+### Warum `nepal_presence.mode` null sein darf (v0.3)
+
+`datum_presence_mode` war der einzige Datum-Typ im Vertrag, dessen `value` nicht null sein durfte.
+Wer nicht ermitteln konnte, wie eine Organisation in Nepal arbeitet, hatte genau ein Wort dafür:
+das Enum-Mitglied `unknown`. Sieben Records nutzten es — alle sieben mit `source_url: null`, alle
+sieben mit `nepal_presence.mode` in ihren `data_gaps`, vier mit einer Notiz, was nicht erreichbar
+war. Sie haben eine Lücke dokumentiert, im einzigen Vokabular, das das Schema hergab.
+
+Die Datenbank hat das zu Recht abgelehnt (`ck_org_datum_provenance`: ein Wert ohne Quelle ist kein
+Wert). Falsch war nicht die Regel und nicht die Recherche, sondern das Schema. Seit v0.3 ist
+`value` hier nullable; die sieben Records sind echte Lücken mit `gap_reason`.
+
+`unknown` bleibt ein gültiger Wert: „die Quelle sagt selbst, dass die Rolle unklar ist" ist eine
+belegte Aussage und muss weiterhin ausdrückbar sein. Der Unterschied ist die Quelle.
 
 Die Konvention (`source_url`, ISO-Datum, typisiertes Verifizierungs-Enum, Zitat + Locator) ist bewusst an die Haus-Konvention aus ProofRun (`source`/`claim`/`evidence`) und `idea-package.schema.json` (`source_url`, `evidence_quality`) angelehnt, damit ein späterer Umzug in eine gemeinsame Vault-Struktur ohne Umbenennung geht.
 

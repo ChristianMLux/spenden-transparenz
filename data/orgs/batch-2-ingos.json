@@ -248,12 +248,13 @@
         "gap_reason": "searched_not_found"
       },
       "mode": {
-        "value": "unknown",
+        "value": null,
         "source_url": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "CARE Nepal's about page did not state direct-implementation vs. partner mode with sufficient confidence to map to a specific enum value."
+        "note": "CARE Nepal's about page did not state direct-implementation vs. partner mode with sufficient confidence to map to a specific enum value.",
+        "gap_reason": "searched_not_found"
       },
       "staff_count": {
         "value": null,
@@ -1288,12 +1289,13 @@
         "note": "Multiple third-party listings describe LWF Nepal as established in 1984 as a country programme of LWF/Department for World Service. Could not independently confirm on lutheranworld.org or worldservice.lutheranworld.org — both blocked automated fetch (HTTP 403) throughout this session."
       },
       "mode": {
-        "value": "unknown",
+        "value": null,
         "source_url": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "A LWF World Service Nepal country fact sheet referencing a Kathmandu country office plus Dhanighat/Jhapa field offices was located via search, suggesting direct implementation, but the page/PDF itself could not be fetched (403) to confirm."
+        "note": "A LWF World Service Nepal country fact sheet referencing a Kathmandu country office plus Dhanighat/Jhapa field offices was located via search, suggesting direct implementation, but the page/PDF itself could not be fetched (403) to confirm.",
+        "gap_reason": "searched_not_found"
       },
       "staff_count": {
         "value": null,
@@ -1876,12 +1878,13 @@
         "gap_reason": "source_unreachable"
       },
       "mode": {
-        "value": "unknown",
+        "value": null,
         "source_url": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "Could not access Nepal-specific pages to determine direct implementation vs. local-partner model."
+        "note": "Could not access Nepal-specific pages to determine direct implementation vs. local-partner model.",
+        "gap_reason": "searched_not_found"
       },
       "staff_count": {
         "value": null,
