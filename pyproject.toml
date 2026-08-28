@@ -20,6 +20,10 @@ dev = [
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
+# One event loop for the whole run: an asyncpg engine created in a session-scoped fixture cannot
+# be used from a per-test loop.
+asyncio_default_fixture_loop_scope = "session"
+asyncio_default_test_loop_scope = "session"
 pythonpath = [".", "apps/api"]
 testpaths = ["packages/core/tests", "apps/api/tests", "pipeline/tests"]
 filterwarnings = ["ignore::DeprecationWarning:jsonschema"]
