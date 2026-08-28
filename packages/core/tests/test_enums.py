@@ -39,8 +39,12 @@ def test_warning_type_matches_the_json_schema_enum():
 
 
 def test_presence_mode_matches_the_json_schema_enum():
+    """The schema enum also carries null since v0.3, because a presence mode can be a gap. The
+    Python tuple lists only the real values - a gap is expressed by value IS NULL, not by a
+    member called "null"."""
     schema_mode = SCHEMA["$defs"]["datum_presence_mode"]["allOf"][1]["properties"]["value"]["enum"]
-    assert list(enums.PRESENCE_MODE) == schema_mode
+    assert list(enums.PRESENCE_MODE) == [value for value in schema_mode if value is not None]
+    assert None in schema_mode
 
 
 def test_activity_type_contains_the_three_classes_the_spec_added():

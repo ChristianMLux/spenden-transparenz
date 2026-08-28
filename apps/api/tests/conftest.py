@@ -6,6 +6,7 @@ create_all, and running `alembic upgrade head` into the same schema would collid
 
 from __future__ import annotations
 
+import hashlib
 import os
 from collections.abc import AsyncIterator, Callable, Iterator
 from pathlib import Path
@@ -21,7 +22,27 @@ API_DIR = Path(__file__).resolve().parents[1]
 REPO = API_DIR.parents[1]
 
 DEFAULT_SYNC_URL = "postgresql+psycopg://spenden:spenden@localhost:55432/spenden"
-SCRATCH_DB = "spenden_migrations"
+SCRATCH_DB_BASE = "spenden_migrations"
+
+
+def scratch_db(base: str) -> str:
+    """A database name unique to this checkout.
+
+    Every worktree points at the same Postgres container, and the names used to be fixed. Two
+    workers running their suites at the same time would then DROP the database the other was
+    using, which surfaced as ConnectionDoesNotExistError and as rows vanishing between insert and
+    read - in test files neither worker had touched. Hashing the repository root gives each
+    checkout its own database, stable across runs so the containers do not fill up with strays.
+    Override with SPENDEN_TEST_DB_SUFFIX when you want to pin one.
+    """
+    suffix = (
+        os.environ.get("SPENDEN_TEST_DB_SUFFIX")
+        or hashlib.blake2s(str(REPO).encode("utf-8"), digest_size=3).hexdigest()
+    )
+    return f"{base}_{suffix}"
+
+
+SCRATCH_DB = scratch_db(SCRATCH_DB_BASE)
 
 
 def base_sync_url() -> str:

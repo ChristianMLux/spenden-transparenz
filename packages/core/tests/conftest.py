@@ -10,18 +10,42 @@ CI:    the postgres:16 service container, via TEST_DATABASE_URL.
 
 from __future__ import annotations
 
+import hashlib
 import os
 from collections.abc import AsyncIterator
+from pathlib import Path
 
 import psycopg
 import pytest
 from core.models import Base
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 
+REPO = Path(__file__).resolve().parents[3]
+
 # Locally the model tests get their own database: `spenden` is the Alembic-managed dev database,
 # and create_all/drop_all here would fight the migration for it. In CI the service container is
 # empty, so TEST_DATABASE_URL can point straight at it.
-DEFAULT_TEST_URL = "postgresql+asyncpg://spenden:spenden@localhost:55432/spenden_test"
+DEFAULT_TEST_DB_BASE = "spenden_test"
+
+
+def scratch_db(base: str) -> str:
+    """A database name unique to this checkout.
+
+    Every worktree points at the same Postgres container, and the names used to be fixed. Two
+    workers running their suites at the same time would then DROP the database the other was
+    using, which surfaced as ConnectionDoesNotExistError and as rows vanishing between insert and
+    read - in test files neither worker had touched. Hashing the repository root gives each
+    checkout its own database, stable across runs so the containers do not fill up with strays.
+    Override with SPENDEN_TEST_DB_SUFFIX when you want to pin one.
+    """
+    suffix = (
+        os.environ.get("SPENDEN_TEST_DB_SUFFIX")
+        or hashlib.blake2s(str(REPO).encode("utf-8"), digest_size=3).hexdigest()
+    )
+    return f"{base}_{suffix}"
+
+
+DEFAULT_TEST_URL = f"postgresql+asyncpg://spenden:spenden@localhost:55432/{scratch_db(DEFAULT_TEST_DB_BASE)}"
 
 
 def test_database_url() -> str:
