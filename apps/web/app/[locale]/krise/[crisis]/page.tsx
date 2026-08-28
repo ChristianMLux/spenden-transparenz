@@ -5,9 +5,11 @@ import { BoardExplorer } from "@/components/board/board-explorer";
 import type { BoardLabels } from "@/components/board/board-labels";
 import { buildChronoNodes, buildDayLabels } from "@/components/board/chronological";
 import { ResponderRow } from "@/components/board/responder-row";
+import { DonationLine } from "@/components/donation/donation-line";
 import type { Locale } from "@/i18n/routing";
 import { ACTIVE_CRISIS, routing } from "@/i18n/routing";
 import { getBoard } from "@/lib/api";
+import { donationView } from "@/lib/donation";
 import type { Responder } from "@/lib/types";
 
 export function generateStaticParams() {
@@ -150,9 +152,40 @@ export default async function BoardPage() {
       <h1 className="text-2xl">{crisisName}</h1>
       <p className="mt-1 font-mono text-xs text-muted">{board.crisis.glide_id}</p>
 
-      <p className="mt-4 max-w-[68ch] text-base text-ink">
-        {t("scopeLine1")} {t("scopeLine2")}
-      </p>
+      {/* "Ich möchte helfen" (action-path addition): the masthead's entry jumps here.
+          A native <details>, collapsed by default — DESIGN.md's own sanctioned
+          accordion replacement (6.2) — so the fold gate pays almost nothing for it: one
+          summary line, not a stacked paragraph. It also absorbs the page's old opening
+          scope sentence (board.help.line1/line2 say almost exactly what
+          scopeLine1/scopeLine2 said) rather than stacking a second copy of the same
+          claim above the figures panel. */}
+      <details id="helfen" className="dossier-panel mt-4">
+        <summary className="cursor-pointer text-lg text-ink">{t("help.heading")}</summary>
+        <div className="mt-3 flex flex-col gap-2">
+          <p className="max-w-[68ch] text-base text-ink">{t("help.line1")}</p>
+          <p className="max-w-[68ch] text-base text-ink">{t("help.line2")}</p>
+          <p className="max-w-[68ch] text-sm text-muted">{t("help.line3")}</p>
+          {board.government_funds.length > 0 ? (
+            <div className="mt-2">
+              {/* Government funds live only here, never in the record list: mixing them
+                  into board.responders would corrupt "44 von 44 Organisationen", every
+                  facet count, and "9 ohne gefundene Reaktion" (variant brief, point e). */}
+              <span className="dossier-panel-label">{t("help.governmentHeading")}</span>
+              <ul className="mt-1 flex flex-col gap-3">
+                {board.government_funds.map((fund) => (
+                  <li key={fund.name}>
+                    <p className="text-sm text-ink">{fund.name}</p>
+                    <p className="text-xs text-muted">{t("help.governmentNote")}</p>
+                    <div className="mt-1">
+                      <DonationLine view={donationView(fund)} />
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+        </div>
+      </details>
 
       <div className="mt-6">
         <BoardExplorer

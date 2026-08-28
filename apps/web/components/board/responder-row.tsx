@@ -1,7 +1,9 @@
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import type { Locale } from "@/i18n/routing";
+import { DonationLine } from "@/components/donation/donation-line";
 import { formatDate } from "@/lib/format";
+import { donationView } from "@/lib/donation";
 import type { Responder } from "@/lib/types";
 import { Statement } from "./statement";
 
@@ -65,6 +67,14 @@ export function ResponderRow({ responder, generatedAt }: { responder: Responder;
               </p>
             </div>
           )}
+
+          {/* The official donation channel, one line, same weight whether found or not
+              (DonationLine mirrors ProvenanceLine's own found/not-found parity rule).
+              Administrative information, not part of the reaction above it, so it gets
+              its own dashed rule the way a second statement would. */}
+          <div className="mt-3 border-t border-dashed border-rule pt-3">
+            <DonationLine view={donationView(responder.donation)} />
+          </div>
 
           {responder.org_id && (
             <p className="mt-3">

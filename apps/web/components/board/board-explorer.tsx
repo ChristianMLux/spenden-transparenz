@@ -238,7 +238,12 @@ export function BoardExplorer({
           separate lines without changing what a screen reader announces. */}
       <div className="dossier-panel">
         <span className="dossier-panel-label">{labels.figures.panelLabel}</span>
-        <div className="grid grid-cols-2 divide-x divide-rule sm:grid-cols-4">
+        {/* Fixed at four columns, deliberately not `sm:grid-cols-4`: this project only
+            defines the `md`/`xl` breakpoints (DESIGN.md 5.5, "base / md / xl. Nur diese
+            drei."), so `sm:` compiled to nothing and the row silently fell back to its
+            base two-column class — a whole wasted second row that pushed the board's
+            fold gate from a 500px limit to 734px. One line of four tiles, always. */}
+        <div className="grid grid-cols-4 divide-x divide-rule">
           {numberLine.map((n, i) => (
             <a
               key={n.key}
@@ -248,7 +253,7 @@ export function BoardExplorer({
                 setFilters(targets[n.key]);
               }}
               aria-label={n.text}
-              className={`block py-1 pr-4 hover:underline ${i === 0 ? "pl-0" : "pl-4"}`}
+              className={`block py-1 pr-2 hover:underline md:pr-4 ${i === 0 ? "pl-0" : "pl-2 md:pl-4"}`}
             >
               <span aria-hidden="true" className="block text-2xl text-ink">
                 {n.count}

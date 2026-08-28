@@ -1,6 +1,6 @@
 import { useLocale, useTranslations } from "next-intl";
 import type { Locale } from "@/i18n/routing";
-import { routing } from "@/i18n/routing";
+import { ACTIVE_CRISIS, routing } from "@/i18n/routing";
 import { formatDate } from "@/lib/format";
 import type { Crisis } from "@/lib/types";
 import { LocaleSwitch } from "./locale-switch";
@@ -17,6 +17,12 @@ import { LocaleSwitch } from "./locale-switch";
  * GLIDE id and the data-stand timestamp. The <h1> for the crisis title still lives on
  * the page itself (DESIGN.md 8.2); this band repeats the same text as a label, not as a
  * second heading, so the document outline stays exactly what DESIGN.md specifies.
+ *
+ * Band 1 also carries the "Ich möchte helfen" entry (WP4 action-path addition): a plain
+ * white link, same tier as the wordmark, that jumps to `#helfen` on the board — the
+ * short, collapsed-by-default section built in krise/[crisis]/page.tsx. It renders on
+ * every page, not only the board, because the destination is one fixed anchor and "how
+ * do I help" is a fair question from any page on this site, not only the board.
  */
 export function SiteHeader({
   crisis,
@@ -29,12 +35,23 @@ export function SiteHeader({
 }) {
   const locale = useLocale() as Locale;
   const t = useTranslations("common");
+  const tBoard = useTranslations("board");
+  const helpHref = `/${locale}${routing.pathnames["/krise/[crisis]"][locale].replace("[crisis]", ACTIVE_CRISIS)}#helfen`;
 
   return (
     <header className="print:hidden">
       <div className="bg-masthead">
-        <div className="mx-auto flex max-w-[80rem] flex-wrap items-center justify-between gap-2 px-4 py-3">
-          <p className="text-sm text-white">{siteName}</p>
+        {/* py-1, not py-3: the row's real height already comes from LocaleSwitch's own
+            44px targets (min-h-11, a real WCAG tap-target requirement), so the outer
+            padding is free to be thin without shrinking anything a reader has to tap.
+            Trimmed as part of the board-fold budget (e2e/board-fold.spec.ts). */}
+        <div className="mx-auto flex max-w-[80rem] flex-wrap items-center justify-between gap-2 px-4 py-1">
+          <div className="flex flex-wrap items-center gap-4">
+            <p className="text-sm text-white">{siteName}</p>
+            <a href={helpHref} className="text-sm text-white underline underline-offset-2">
+              {tBoard("help.navLabel")}
+            </a>
+          </div>
           <LocaleSwitch
             current={locale}
             locales={routing.locales}
