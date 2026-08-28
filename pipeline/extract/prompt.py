@@ -93,7 +93,26 @@ _STATEMENT_SCHEMA = {
             "description": "The verbatim, at-most-40-word quote from the report text that supports this statement.",
         },
     },
-    "required": ["org_name_raw", "activity", "activity_type", "where_raw", "amount_basis", "quote"],
+    # Strict structured output requires EVERY property in `required` and additionalProperties
+    # false. Fields that are logically optional express that as a nullable type rather than by
+    # being absent - which is also the honest encoding: "the text states no date" is a fact about
+    # the report, not a missing key.
+    #
+    # This exists because a live run returned 18 of 41 claims missing a required field. The schema
+    # already listed `required`; nothing enforced it. A claim with no quote is a claim with no
+    # evidence, and the pipeline should never have to decide what to do with one.
+    "required": [
+        "org_name_raw",
+        "activity",
+        "activity_type",
+        "where_raw",
+        "happened_on",
+        "amount",
+        "currency",
+        "amount_basis",
+        "quote",
+    ],
+    "additionalProperties": False,
 }
 
 STATEMENT_TOOL = {
@@ -101,6 +120,8 @@ STATEMENT_TOOL = {
     "function": {
         "name": STATEMENT_TOOL_NAME,
         "description": "Record every organisational disaster-response statement found in this report.",
+        # strict makes the provider enforce the schema instead of merely advertising it.
+        "strict": True,
         "parameters": {
             "type": "object",
             "properties": {
@@ -110,6 +131,7 @@ STATEMENT_TOOL = {
                 }
             },
             "required": ["statements"],
+            "additionalProperties": False,
         },
     },
 }

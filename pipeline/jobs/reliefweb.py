@@ -342,27 +342,33 @@ async def fetch_report_bodies(
     rejected = 0
 
     async with session_factory() as session:
-        candidates = (
+        # The host filter runs BEFORE the per-run limit, not after it.
+        #
+        # ingest_orgs creates a report row per researched source_url - org sites, press releases,
+        # news - so the table holds rows this job was never meant to fetch. With the limit applied
+        # first, those rows filled the entire budget of 25 and every reliefweb.int report went
+        # unfetched, run after run. The job reported success with 25 rejected, which reads like a
+        # network problem rather than a selection bug.
+        #
+        # A report we are not allowed to fetch is not a failed candidate; it is not a candidate.
+        # It gets no extraction_attempts increment, because nothing was attempted.
+        unfetched = (
             (
                 await session.execute(
                     select(Report)
                     .where(Report.body_text.is_(None), Report.extraction_attempts < MAX_EXTRACTION_ATTEMPTS)
                     .order_by(Report.id)
-                    .limit(limit)
                 )
             )
             .scalars()
             .all()
         )
+        candidates = [report for report in unfetched if is_allowed_host(report.url, hosts)][:limit]
+        not_ours = len(unfetched) - len([r for r in unfetched if is_allowed_host(r.url, hosts)])
+        if not_ours:
+            log.info("reports_outside_the_allowlist_skipped", extra={"count": not_ours})
 
         for report in candidates:
-            if not is_allowed_host(report.url, hosts):
-                log.warning("report_url_host_not_allowed", extra={"report_id": report.id, "url": report.url})
-                report.extraction_attempts += 1
-                report.last_extraction_error = "host not in allowed_fetch_hosts"
-                rejected += 1
-                continue
-
             limiter.wait()
             result = fetch_fn(report.url)
             report.extraction_attempts += 1

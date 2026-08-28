@@ -259,7 +259,14 @@ async def test_fetch_report_bodies_second_run_does_not_reselect_a_fetched_report
     assert run.rows_written == 0
 
 
-async def test_fetch_report_bodies_rejects_a_disallowed_host_without_fetching(job_sessionmaker, session):
+async def test_fetch_report_bodies_never_fetches_a_disallowed_host(job_sessionmaker, session):
+    """A report we are not allowed to fetch is not a candidate, so nothing is attempted on it.
+
+    Changed from the original contract, which counted it as rejected and incremented
+    extraction_attempts. Both were wrong: nothing was attempted, so there is no attempt to record,
+    and after three runs the row would have been excluded for having "failed" three times it never
+    tried.
+    """
     calls: list[str] = []
 
     def _must_not_be_called(url: str) -> dict:
@@ -277,11 +284,41 @@ async def test_fetch_report_bodies_rejects_a_disallowed_host_without_fetching(jo
     assert calls == []
     report = (await session.execute(select(Report).where(Report.url == "https://evil.example/report/x"))).scalar_one()
     assert report.body_text is None
-    assert report.extraction_attempts == 1
-    assert report.last_extraction_error == "host not in allowed_fetch_hosts"
+    assert report.extraction_attempts == 0
+    assert report.last_extraction_error is None
 
+
+async def test_a_disallowed_host_does_not_consume_the_per_run_budget(job_sessionmaker, session):
+    """The bug this whole change exists for.
+
+    ingest_orgs writes a report row per researched source_url - org sites, press releases, news -
+    and the limit used to be applied before the host check. Those rows filled the entire budget and
+    every reliefweb.int report went unfetched, run after run, while the job reported success.
+    """
+    fetched: list[str] = []
+
+    def _fetch(url: str) -> dict:
+        fetched.append(url)
+        return {"status": 200, "text": "body text", "title": "T", "date": None}
+
+    async with job_sessionmaker() as write:
+        for index in range(3):
+            write.add(Report(url=f"https://not-ours-{index}.example/x", title=None, disaster_glide_id=None))
+        write.add(Report(url="https://reliefweb.int/report/nepal/wanted", title=None, disaster_glide_id=None))
+        await write.commit()
+
+    # A budget of two, with three unfetchable rows sorted ahead of the one that matters.
+    await fetch_report_bodies(
+        job_sessionmaker,
+        fetch_fn=_fetch,
+        allowed_hosts=("reliefweb.int",),
+        min_interval_s=0.0,
+        max_reports=2,
+    )
+
+    assert fetched == ["https://reliefweb.int/report/nepal/wanted"]
     run = await _latest_run(session, "fetch_report_bodies")
-    assert run.rows_rejected == 1
+    assert run.rows_written == 1
 
 
 async def test_fetch_report_bodies_stops_retrying_after_three_attempts(job_sessionmaker, session):

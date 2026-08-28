@@ -20,10 +20,13 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Any
 
+from core.logging import get_logger
 from core.settings import Settings, get_settings
 from openai import AsyncOpenAI
 
 from pipeline.extract.prompt import PROMPT_VERSION, STATEMENT_TOOL, STATEMENT_TOOL_NAME, ReportInput, build_messages
+
+log = get_logger("extract.client")
 
 # Prices read from openrouter.ai/models for anthropic/claude-sonnet-5 on 2026-08-28. USD per
 # 1,000,000 tokens. Update this dict (and the date in this comment) when the model or its price
@@ -63,6 +66,41 @@ def _build_client(settings: Settings) -> AsyncOpenAI:
     )
 
 
+def _statements(raw: Any) -> list[dict[str, Any]]:
+    """Normalise whatever the model put in `statements` into a list of claim dicts.
+
+    The tool schema asks for an array of objects. A live run returned it as a JSON *string*
+    containing that array - some models and gateways serialise nested structures inside tool
+    arguments rather than nesting them. The recorded fixture had a real list, so no test saw it,
+    and the job crashed with "dictionary update sequence element #0 has length 1" because
+    list.extend over a string iterates its characters.
+
+    Anything that is not a dict after normalising is dropped with a log line rather than guessed
+    at. A malformed claim has no quote we can verify, and inventing structure for it would put an
+    unverifiable statement in front of a reader - which is the one thing this pipeline exists to
+    prevent.
+    """
+    if raw is None:
+        return []
+    if isinstance(raw, str):
+        try:
+            raw = json.loads(raw)
+        except json.JSONDecodeError:
+            log.warning("statements_not_json", extra={"preview": raw[:120]})
+            return []
+    if isinstance(raw, dict):
+        raw = [raw]
+    if not isinstance(raw, list):
+        log.warning("statements_unexpected_type", extra={"type": type(raw).__name__})
+        return []
+
+    claims = [item for item in raw if isinstance(item, dict)]
+    dropped = len(raw) - len(claims)
+    if dropped:
+        log.warning("statements_non_object_entries_dropped", extra={"dropped": dropped})
+    return claims
+
+
 async def extract(report: ReportInput, *, openai_client: AsyncOpenAI | None = None) -> ExtractionResult:
     """Call the model once for one report and return its claims plus cost.
 
@@ -85,7 +123,7 @@ async def extract(report: ReportInput, *, openai_client: AsyncOpenAI | None = No
     if message.tool_calls:
         for tool_call in message.tool_calls:
             payload = json.loads(tool_call.function.arguments)
-            claims.extend(payload.get("statements", []))
+            claims.extend(_statements(payload.get("statements")))
 
     tokens_in = response.usage.prompt_tokens if response.usage else 0
     tokens_out = response.usage.completion_tokens if response.usage else 0
