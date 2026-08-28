@@ -12,9 +12,14 @@ endpoint with wrong tokens would never trip the rate limit at all. Checking the 
 body puts the 401 after the rate-limit check, so brute-forcing the token is throttled like
 everything else here.
 
-Triggering a job runs it in-process, awaiting completion, and then reports the ingestion_run row
-that pipeline.runs.run_context wrote - run_context always closes that row, including on failure,
-so there is always something to report back even when the job raised.
+Triggering a job starts it via BackgroundTasks and returns immediately; it does not await
+completion. `extract_statements` is capped at 25 reports and makes one LLM call each, so a run can
+take minutes - long enough that Railway's proxy would time the connection out before an in-process
+`await run_job(job)` returned, either handing the caller a 502 for a job that is still running, or
+killing it mid-run, which is exactly the state ingestion_run bookkeeping exists to avoid.
+`accepted` means "the job was started," not "the job finished"; the caller learns the outcome from
+GET /v1/admin/runs, which is what that route is for. The 404 for an unknown job name still happens
+synchronously, before anything is scheduled.
 
 The `pipeline.cli` import is deliberately deferred to inside trigger_ingest(), not at module level.
 `pipeline/pyproject.toml` documents pipeline as a virtual project with no build-system, run from
@@ -34,7 +39,7 @@ from app.deps import ADMIN_LIMIT, get_session, limiter, no_store, require_admin_
 from app.schemas import AcceptedOut, RunOut
 from core.logging import get_logger
 from core.models import IngestionRun
-from fastapi import APIRouter, Depends, Header, HTTPException, Query, Request
+from fastapi import APIRouter, BackgroundTasks, Depends, Header, HTTPException, Query, Request
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -42,6 +47,19 @@ router = APIRouter(prefix="/v1/admin", tags=["admin"])
 log = get_logger("admin")
 
 LimitQuery = Annotated[int, Query(ge=1, le=100, description="page size, at most 100")]
+
+
+async def _run_and_log(job: str) -> None:
+    """Runs after the response is already sent. Errors cannot reach the caller from here - they
+    would only vanish into the ASGI server's logs - so pipeline.runs.run_context's own failure
+    bookkeeping in ingestion_run is the record of truth, and this just makes sure the failure is
+    visible in this process's logs too."""
+    from pipeline.cli import run_job  # see module docstring for why this import is deferred
+
+    try:
+        await run_job(job)
+    except Exception:
+        log.warning("admin_triggered_job_failed", extra={"job": job})
 
 
 @router.post(
@@ -54,31 +72,18 @@ LimitQuery = Annotated[int, Query(ge=1, le=100, description="page size, at most 
 async def trigger_ingest(
     request: Request,
     job: str,
-    session: Annotated[AsyncSession, Depends(get_session)],
+    background_tasks: BackgroundTasks,
     x_admin_token: Annotated[str | None, Header()] = None,
 ) -> AcceptedOut:
     require_admin_token(x_admin_token)
 
-    from pipeline.cli import JOBS, run_job  # see module docstring for why this import is deferred
+    from pipeline.cli import JOBS  # see module docstring for why this import is deferred
 
     if job not in JOBS:
         raise HTTPException(status_code=404, detail=f"unknown job: {job}")
 
-    accepted = True
-    try:
-        await run_job(job)
-    except Exception:
-        # run_context already closed the ingestion_run row as failed; the trigger itself still
-        # succeeded, so this is reported through the response body, not a 500.
-        log.warning("admin_triggered_job_failed", extra={"job": job})
-        accepted = False
-
-    latest = (
-        await session.execute(
-            select(IngestionRun.id).where(IngestionRun.job == job).order_by(IngestionRun.started_at.desc()).limit(1)
-        )
-    ).scalar_one_or_none()
-    return AcceptedOut(accepted=accepted, job=job, run_id=str(latest) if latest else None)
+    background_tasks.add_task(_run_and_log, job)
+    return AcceptedOut(accepted=True, job=job, run_id=None)
 
 
 @router.get(

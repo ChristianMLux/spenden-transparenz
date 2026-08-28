@@ -9,7 +9,7 @@ from __future__ import annotations
 
 from typing import Annotated, Literal
 
-from app.deps import detail_cache, get_session, list_cache
+from app.deps import ILIKE_ESCAPE, detail_cache, get_session, ilike_pattern, list_cache
 from app.routers.statements import hydrate_statements, statement_query
 from app.schemas import (
     DatumHistoryEntry,
@@ -88,7 +88,7 @@ async def list_orgs(
     elif hq == "international":
         query = query.where(Organisation.hq_country.isnot(None), Organisation.hq_country != "NP")
     if q:
-        query = query.where(Organisation.name_common.ilike(f"%{q}%"))
+        query = query.where(Organisation.name_common.ilike(ilike_pattern(q), escape=ILIKE_ESCAPE))
 
     if sort == "latest":
         query = query.order_by(Organisation.last_updated.desc().nullslast(), Organisation.org_id)

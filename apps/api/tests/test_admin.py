@@ -9,7 +9,46 @@ deployments forgot to set the token.
 
 from __future__ import annotations
 
+from app.deps import rate_limit_key
 from httpx import AsyncClient
+from starlette.requests import Request
+
+
+def _request_with_headers(headers: dict[str, str]) -> Request:
+    scope = {
+        "type": "http",
+        "headers": [(k.lower().encode(), v.encode()) for k, v in headers.items()],
+        "client": ("203.0.113.9", 12345),  # an arbitrary fallback address, distinct from any test value
+    }
+    return Request(scope)
+
+
+def test_rate_limit_key_uses_the_last_hop_when_there_is_no_proxy_chain():
+    """X-Forwarded-For reads left to right as "client, proxy1, proxy2": with a single trusted
+    proxy (Railway) directly in front of the app, the LAST entry is the one Railway itself
+    appended - the address it actually observed the connection from."""
+    key = rate_limit_key(_request_with_headers({"X-Forwarded-For": "9.9.9.9"}))
+    assert key == "9.9.9.9"
+
+
+def test_a_spoofed_first_entry_cannot_change_the_key():
+    """The property that matters: a caller cannot dodge the rate limit by prepending a fake
+    address of their own choosing. Only Railway's own appended, last entry may set the key."""
+    key = rate_limit_key(_request_with_headers({"X-Forwarded-For": "1.2.3.4, 9.9.9.9"}))
+    assert key == "9.9.9.9"
+
+
+def test_rotating_the_spoofed_first_entry_still_yields_the_same_key():
+    """The actual attack the rate limit exists to stop: rotating a self-chosen first entry to try
+    to get a fresh bucket on every request. It must not work."""
+    first = rate_limit_key(_request_with_headers({"X-Forwarded-For": "1.2.3.4, 9.9.9.9"}))
+    second = rate_limit_key(_request_with_headers({"X-Forwarded-For": "5.6.7.8, 9.9.9.9"}))
+    assert first == second == "9.9.9.9"
+
+
+def test_rate_limit_key_falls_back_to_the_asgi_client_address_without_the_header():
+    key = rate_limit_key(_request_with_headers({}))
+    assert key == "203.0.113.9"
 
 
 async def test_ingest_without_a_token_is_401(client: AsyncClient):
@@ -48,3 +87,34 @@ async def test_admin_ingest_limit_is_five_per_minute_and_counts_failed_auth_atte
         statuses.append(r.status_code)
     assert statuses[:5] == [401] * 5
     assert statuses[5] == 429
+
+
+async def test_ingest_with_a_valid_token_starts_the_job_and_returns_immediately(client: AsyncClient, monkeypatch):
+    """accepted=true means "we started it", not "it finished": the job runs via BackgroundTasks
+    after the response is sent, so run_id is always null here - the caller learns the outcome
+    from GET /v1/admin/runs, not from this response."""
+    from core.settings import get_settings
+
+    monkeypatch.setenv("ADMIN_TOKEN", "a" * 32)
+    get_settings.cache_clear()
+    try:
+        r = await client.post("/v1/admin/ingest/seed_reference", headers={"X-Admin-Token": "a" * 32})
+        assert r.status_code == 200, r.text
+        body = r.json()
+        assert body == {"accepted": True, "job": "seed_reference", "run_id": None}
+    finally:
+        get_settings.cache_clear()
+
+
+async def test_ingest_with_a_valid_token_but_an_unknown_job_is_404(client: AsyncClient, monkeypatch):
+    """The 404 for an unknown job name is still synchronous - checked against pipeline.cli.JOBS
+    before anything is scheduled - so a typo'd job name never even starts a background task."""
+    from core.settings import get_settings
+
+    monkeypatch.setenv("ADMIN_TOKEN", "a" * 32)
+    get_settings.cache_clear()
+    try:
+        r = await client.post("/v1/admin/ingest/does_not_exist", headers={"X-Admin-Token": "a" * 32})
+        assert r.status_code == 404
+    finally:
+        get_settings.cache_clear()

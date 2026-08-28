@@ -29,7 +29,7 @@ from __future__ import annotations
 from datetime import date
 from typing import Annotated, Literal
 
-from app.deps import get_session, list_cache
+from app.deps import ILIKE_ESCAPE, get_session, ilike_pattern, list_cache
 from app.routers.statements import NOT_REJECTED, hydrate_statements
 from app.schemas import OrgRef, ResponderCounts, ResponderFlags, ResponderItem
 from core.models import Organisation, OrgRegistration, OrgWarning, Report, ResponseStatement, StatementDistrict
@@ -127,7 +127,7 @@ async def _fetch_candidate_orgs(
     elif hq == "international":
         query = query.where(Organisation.hq_country.isnot(None), Organisation.hq_country != "NP")
     if q:
-        query = query.where(Organisation.name_common.ilike(f"%{q}%"))
+        query = query.where(Organisation.name_common.ilike(ilike_pattern(q), escape=ILIKE_ESCAPE))
     return (await session.execute(query)).all()
 
 
@@ -163,8 +163,10 @@ async def _fetch_statements(
     elif hq == "international":
         query = query.where(Organisation.hq_country.isnot(None), Organisation.hq_country != "NP")
     if q:
+        pattern = ilike_pattern(q)
         query = query.where(
-            (Organisation.name_common.ilike(f"%{q}%")) | (ResponseStatement.org_name_raw.ilike(f"%{q}%"))
+            (Organisation.name_common.ilike(pattern, escape=ILIKE_ESCAPE))
+            | (ResponseStatement.org_name_raw.ilike(pattern, escape=ILIKE_ESCAPE))
         )
     return (await session.execute(query)).all()
 

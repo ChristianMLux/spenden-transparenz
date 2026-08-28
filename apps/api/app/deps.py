@@ -30,6 +30,23 @@ async def get_session(request: Request) -> AsyncIterator[AsyncSession]:
             await session.rollback()
 
 
+# --- Name search -------------------------------------------------------------------------------
+
+ILIKE_ESCAPE = "\\"
+
+
+def ilike_pattern(q: str) -> str:
+    """Turn free-text search input into a literal ILIKE pattern, wrapped in wildcards.
+
+    ILIKE treats "%" and "_" in the search text itself as wildcards - not just an injection risk
+    (this is parameterised, never string-formatted SQL), but a correctness one: an unescaped
+    q="%" would match every organisation. Escaping them (and the escape character itself, first)
+    makes the search behave like a literal substring match, which is what "search by name" means.
+    """
+    escaped = q.replace(ILIKE_ESCAPE, ILIKE_ESCAPE * 2).replace("%", r"\%").replace("_", r"\_")
+    return f"%{escaped}%"
+
+
 # --- Cache-Control ---------------------------------------------------------------------------
 #
 # One dependency per cache tier, not a global guess: list endpoints refresh often (a new
@@ -84,16 +101,21 @@ def require_admin_token(x_admin_token: str | None = Header(default=None)) -> Non
 
 # --- Rate limiting -------------------------------------------------------------------------------
 #
-# Railway terminates TLS and is this API's only ingress, so the FIRST hop of X-Forwarded-For is
-# the one honest client address. Anything after the first hop could have been appended by the
-# client itself (or by any earlier untrusted proxy) and must never be trusted: a caller who wants
-# to dodge the limit just has to prepend a fake first entry unless we ignore everything past it.
+# X-Forwarded-For reads left to right as "client, proxy1, proxy2, ...": each hop APPENDS the
+# address it received the request from, so the client's own value - real or invented - always
+# comes first. Railway terminates TLS and is this API's only ingress, so the LAST entry is the one
+# Railway itself appended: the address it actually observed the connection from, which a caller
+# cannot forge no matter how many fake entries they prepend or how often they rotate them. This is
+# correct whether Railway appends to an existing header or replaces it outright, so it does not
+# depend on verifying Railway's exact proxy behaviour. Trusting the first hop instead - the
+# original mistake here - lets a caller get a fresh rate-limit bucket on every request just by
+# sending a different X-Forwarded-For value, defeating the 5/min admin limit entirely.
 
 
 def rate_limit_key(request: Request) -> str:
     forwarded = request.headers.get("x-forwarded-for")
     if forwarded:
-        return forwarded.split(",")[0].strip()
+        return forwarded.split(",")[-1].strip()
     return request.client.host if request.client else "unknown"
 
 

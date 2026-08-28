@@ -27,6 +27,15 @@ async def test_list_orgs_filters_by_hq(client: AsyncClient):
     assert WORLD_VISION_ORG_ID not in ids  # hq_country=US
 
 
+async def test_list_orgs_name_search_escapes_like_wildcards(client: AsyncClient):
+    """ "%" and "_" are live wildcards inside an (unescaped) ILIKE pattern - q="%" would otherwise
+    match every organisation, which is not what "search by name" should mean."""
+    r = await client.get("/v1/orgs?q=%")
+    assert r.json() == []
+    r = await client.get("/v1/orgs?q=_")
+    assert r.json() == []
+
+
 async def test_list_orgs_name_search_is_case_insensitive(client: AsyncClient):
     r = await client.get("/v1/orgs?q=RED CROSS")
     ids = {o["org_id"] for o in r.json()}
