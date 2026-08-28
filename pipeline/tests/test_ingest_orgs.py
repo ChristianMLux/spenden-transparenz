@@ -59,22 +59,24 @@ from pipeline.jobs.orgs import (
 from pipeline.jobs.seed_reference import seed_reference
 from pipeline.runs import run_context
 
-# 45, not the 44 of the pilot dataset: the Prime Minister Disaster Relief Fund was added in v0.5
-# so the state fund appears on the board like any other recipient instead of being the one obvious
-# destination the site never names. It is a Nepali entity, hence 15 NP.
-EXPECTED_ORGS = 45
-EXPECTED_NP = 15
-# 474 = the 420 of v0.4, plus one donation_channel datum for each of the 45 organisations, plus the
-# 9 datums the government record carries of its own.
-EXPECTED_DATUMS = 474
-EXPECTED_VALUES = 187
-EXPECTED_GAPS = 287
-EXPECTED_ALIASES = 105
-# 34 of the 45 donation_channel datums carry a URL. The other 11 are gaps that say so: 10 the
+EXPECTED_ORGS = 44
+EXPECTED_NP = 14
+# 464 = the 420 of v0.4 plus one donation_channel datum for each of the 44 organisations.
+#
+# The Prime Minister Disaster Relief Fund is NOT among them. It was briefly added as an
+# organisation record in v0.5 and taken out again the same day: a state fund is not a responder,
+# and counting it as one would have moved 44/44 and put a row into "no response found" for an
+# entity that never claimed to respond. It lives in donation-channels.json under government_funds
+# and is rendered in the help section instead - see test_the_state_fund_is_not_an_organisation.
+EXPECTED_DATUMS = 464
+EXPECTED_VALUES = 183
+EXPECTED_GAPS = 281
+EXPECTED_ALIASES = 100
+# 33 of the 44 donation_channel datums carry a URL. The other 11 are gaps that say so: 10 the
 # research could not find a channel for, and CARE Nepal, whose researched link pointed at care.org
 # (CARE USA) and was rejected by the official-domain rule.
-EXPECTED_DONATION_CHANNELS = 45
-EXPECTED_DONATION_URLS = 34
+EXPECTED_DONATION_CHANNELS = 44
+EXPECTED_DONATION_URLS = 33
 EXPECTED_REGISTRATIONS_NULL_IDENTIFIER = 56
 EXPECTED_REPORTS = 39
 EXPECTED_STATEMENTS = 44
@@ -97,7 +99,7 @@ async def _latest_run(session, job: str = "ingest_orgs") -> IngestionRun:
 # --- ingest_orgs: counts, idempotency, history --------------------------------------------------
 
 
-async def test_ingest_writes_45_orgs_15_nepalese_and_474_datums(job_sessionmaker, session):
+async def test_ingest_writes_44_orgs_14_nepalese_and_464_datums(job_sessionmaker, session):
     await ingest_orgs(job_sessionmaker)
     assert await _count(session, Organisation) == EXPECTED_ORGS
     assert await _count_where(session, Organisation, Organisation.hq_country == "NP") == EXPECTED_NP
@@ -608,21 +610,33 @@ async def test_a_donation_page_is_its_own_source_when_the_record_names_no_other(
         assert source_url, value
 
 
-async def test_the_state_relief_fund_is_on_the_board_like_any_other_recipient(job_sessionmaker, session):
-    """Chris's user test found an official Nepali account number through Google in minutes while
-    this site offered no way to act at all. The fund is a record, not a special case: same table,
-    same provenance, same gap handling."""
-    await ingest_orgs(job_sessionmaker)
-    org = await session.scalar(select(Organisation).where(Organisation.org_id == "pm-disaster-relief-fund-nepal"))
-    assert org is not None
-    assert org.org_type == "government"
-    assert org.hq_country == "NP"
+async def test_the_state_fund_is_not_an_organisation(job_sessionmaker, session):
+    """A state relief fund is not a responder, and putting it in the organisations table made it
+    one: it moved the 44/44 counts and would have appeared under "no response found" for an entity
+    that never claimed to have responded. It belongs in the help section, fed from
+    donation-channels.json under government_funds, which is where the corrected spec puts it.
 
-    channel = await session.scalar(
-        select(OrgDatum).where(OrgDatum.org_id == "pm-disaster-relief-fund-nepal", OrgDatum.path == "donation_channel")
-    )
-    assert channel.value == "https://www.opmcm.gov.np"
-    assert channel.channel_type == "donation_page"
+    The record existed for part of an evening. This test is what stops it coming back by accident.
+    """
+    await ingest_orgs(job_sessionmaker)
+    assert await _count_where(session, Organisation, Organisation.org_id == "pm-disaster-relief-fund-nepal") == 0
+    assert await _count(session, Organisation) == EXPECTED_ORGS
+
+
+def test_the_government_fund_is_carried_in_the_data_file_on_a_gov_np_domain():
+    """It still has to be reachable and checkable, just not as a responder. The domain rule for a
+    state fund is the state's own domain - the one exception the corrected spec names, and the
+    reason the loader's org-website check does not apply to it."""
+    from core.donation import host_of
+
+    from pipeline.jobs.orgs import load_donation_channels
+
+    _channels, funds = load_donation_channels()
+    assert len(funds) == 1
+    fund = funds[0]
+    assert "Prime Minister" in fund["name"]
+    assert (host_of(fund["value"]) or "").endswith("gov.np")
+    assert fund["verification"] == "self_reported"
 
 
 async def test_no_account_number_is_stored_anywhere(job_sessionmaker, session):
