@@ -1489,7 +1489,8 @@
    "financial_transparency.iati_publisher",
    "financial_transparency.income",
    "financial_transparency.expenditure",
-   "financial_transparency.program_ratio"
+   "financial_transparency.program_ratio",
+   "nepal_presence.since_year"
   ],
   "research_notes": "Searched worecnepal.org homepage and the specific Rasuwa flood press release. No annual report/financials/registration numbers were found; the flood-response page is an appeal to other stakeholders plus a general commitment to cooperate, not a record of WOREC's own direct relief activity.",
   "last_updated": "2026-08-28"

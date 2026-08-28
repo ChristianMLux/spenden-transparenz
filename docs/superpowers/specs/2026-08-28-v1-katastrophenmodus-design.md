@@ -55,7 +55,7 @@ spenden-transparenz/
 | Job | Quelle → Ziel | Takt |
 |---|---|---|
 | `seed_reference` | HAPI admin1/2 JSON + Quellenkatalog → district, source | on deploy |
-| `ingest_orgs` | `data/orgs/batch-*.json` (JSON-Schema-validiert) → organisations, org_datum, registration, warning, alias | manuell/Admin |
+| `ingest_orgs` | `data/orgs/batch-*.json` (JSON-Schema-validiert) → organisations, org_datum, registration, warning, alias, **und** `report` (eine Zeile je distinkter `source_url`, `body_text` NULL) + `response_statement` je `current_response`-Eintrag mit `model = 'hand_research'` (Spec-Korrektur 28.08.: sonst zeigt das Board 44 Orgs ohne Reaktionen, obwohl 44 belegte vorliegen; `quote` darf nur bei hand_research fehlen, DB-CHECK) | manuell/Admin |
 | `ingest_reliefweb_listing` | `probe_reliefweb.current_disasters()` + `listing("(D52684)")` → disaster, report (Metadaten) | */30 min |
 | `fetch_report_bodies` | reports ohne body → body_text + sha256; ≤ 1 req/2 s, ehrlicher UA | 5,35 * * * * |
 | `extract_statements` | body → LLM (Sonnet, tool-schema = response_statement, prompt_version v2, Report-Distrikte als Kontext) → Verbatim-Gate (Normalisierung Whitespace/Entities/Unicode; Zahl-Tokens im Zitat, sonst amount NULL) → statements | 15 * * * * |
