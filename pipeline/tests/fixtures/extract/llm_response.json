@@ -1,0 +1,250 @@
+{
+  "https://reliefweb.int/report/nepal/wvi-nepal-declares-category-i-national-response-flash-floods-rasuwa-and-nuwakot": [
+    {
+      "org_name_raw": "World Vision Nepal",
+      "activity": "closely monitoring the situation and coordinating with government authorities, local partners, and humanitarian actors to assess needs of affected communities",
+      "activity_type": "assessment",
+      "where_raw": [],
+      "happened_on": null,
+      "amount": null,
+      "currency": null,
+      "amount_basis": "reported",
+      "quote": "World Vision Nepal is closely monitoring the evolving situation and coordinating with government authorities, local partners, and humanitarian actors to assess the needs of affected communities."
+    },
+    {
+      "org_name_raw": "WV Nepal",
+      "activity": "declared a Category I National Response",
+      "activity_type": "other",
+      "where_raw": [],
+      "happened_on": null,
+      "amount": null,
+      "currency": null,
+      "amount_basis": "reported",
+      "quote": "WV Nepal has declared a Category I National Response"
+    },
+    {
+      "org_name_raw": "WV Nepal",
+      "activity": "preparing a 90-day humanitarian response focused on emergency food assistance, shelter support, hygiene and protection services for vulnerable families",
+      "activity_type": "relief_distribution",
+      "where_raw": [],
+      "happened_on": null,
+      "amount": null,
+      "currency": null,
+      "amount_basis": "reported",
+      "quote": "preparing a 90-day humanitarian response focused on emergency food assistance, shelter support, hygiene and protection services for vulnerable families."
+    },
+    {
+      "org_name_raw": "World Vision Nepal",
+      "activity": "plans to support approximately 1,000 affected households with emergency food assistance, shelter kits, hygiene kits (including support for pregnant/lactating women), and dignity kits",
+      "activity_type": "relief_distribution",
+      "where_raw": [],
+      "happened_on": null,
+      "amount": null,
+      "currency": null,
+      "amount_basis": "reported",
+      "quote": "World Vision Nepal plans to support approximately 1,000 affected households with emergency food assistance, shelter kits, hygiene kits, including support for pregnant and lactating women, and dignity kits to address immediate protection and basic needs."
+    },
+    {
+      "org_name_raw": "authorities",
+      "activity": "issued alerts for communities along the Trishuli River",
+      "activity_type": "other",
+      "where_raw": [],
+      "happened_on": null,
+      "amount": null,
+      "currency": null,
+      "amount_basis": "reported",
+      "quote": "authorities have issued alerts for communities along the Trishuli River."
+    },
+    {
+      "org_name_raw": "World Vision International Nepal",
+      "activity": "previously ran a response in the same area following the 2015 earthquake",
+      "activity_type": "other",
+      "where_raw": [],
+      "happened_on": null,
+      "amount": null,
+      "currency": null,
+      "amount_basis": "reported",
+      "quote": "The area was previously part of World Vision International Nepal's 2015 earthquake response."
+    }
+  ],
+  "https://reliefweb.int/report/nepal/nepal-landslides-flash-floods-situation-report-1-august-27-2026": [
+    {
+      "org_name_raw": "Project HOPE's Emergency Response Team",
+      "activity": "is in Nepal, mobilizing a response to the landslides and flash floods",
+      "activity_type": "staff_deployed",
+      "where_raw": [],
+      "happened_on": null,
+      "amount": null,
+      "currency": null,
+      "amount_basis": "reported",
+      "quote": "Project HOPE's Emergency Response Team is in Nepal, mobilizing a response to devastating landslides and flash floods caused by a massive glacier avalanche."
+    }
+  ],
+  "https://reliefweb.int/report/nepal/nepal-catastrophic-flash-flood-rasuwa-trishuli-nepal-26-august-2026": [
+    {
+      "org_name_raw": "PDC's AI for Humanity",
+      "activity": "reported/assessed that communications and hydropower infrastructure had been severely damaged",
+      "activity_type": "assessment",
+      "where_raw": [],
+      "happened_on": null,
+      "amount": null,
+      "currency": null,
+      "amount_basis": "reported",
+      "quote": "other critical infrastructure including communications and hydropower have been severly damaged according to PDC's AI for Humanity."
+    }
+  ],
+  "https://reliefweb.int/report/nepal/ifrc-launches-chf-25-million-emergency-appeal-response-devastating-nepal-flash-floods": [
+    {
+      "org_name_raw": "International Federation of Red Cross and Red Crescent Societies (IFRC)",
+      "activity": "launched an Emergency Appeal for CHF 25 million to support the Nepal Red Cross Society's flood response",
+      "activity_type": "appeal_launched",
+      "where_raw": [
+        "northern Nepal"
+      ],
+      "happened_on": null,
+      "amount": "25000000",
+      "currency": "CHF",
+      "amount_basis": "appeal",
+      "quote": "The International Federation of Red Cross and Red Crescent Societies (IFRC) has launched an Emergency Appeal for CHF 25 million to support the Nepal Red Cross Society's response to the devastating flash floods that struck northern Nepal"
+    },
+    {
+      "org_name_raw": "IFRC",
+      "activity": "released nearly CHF 1 million in emergency funding to support the immediate lifesaving response, a day before the CHF 25m appeal",
+      "activity_type": "cash_assistance",
+      "where_raw": [],
+      "happened_on": null,
+      "amount": "1000000",
+      "currency": "CHF",
+      "amount_basis": "released",
+      "quote": "just a day after releasing nearly CHF 1 million in emergency funding to support the immediate lifesaving response"
+    },
+    {
+      "org_name_raw": "IFRC",
+      "activity": "24-month appeal will fund the Nepal Red Cross response across shelter, cash assistance, health, household relief items, WASH, mental health/psychosocial support, and restoring family links",
+      "activity_type": "appeal_launched",
+      "where_raw": [],
+      "happened_on": null,
+      "amount": null,
+      "currency": null,
+      "amount_basis": "reported",
+      "quote": "The 24-month IFRC Emergency Appeal will support the Nepal Red Cross response across shelter, cash assistance, health, household relief items, water, sanitation and hygiene, mental health and psychosocial support, and restoring family links."
+    },
+    {
+      "org_name_raw": "IFRC",
+      "activity": "mobilized its entire global network to support Nepal Red Cross",
+      "activity_type": "staff_deployed",
+      "where_raw": [],
+      "happened_on": null,
+      "amount": null,
+      "currency": null,
+      "amount_basis": "reported",
+      "quote": "IFRC has immediately mobilized its entire global network to support Nepal Red Cross and will adapt the response as further information becomes available."
+    },
+    {
+      "org_name_raw": "Nepal Red Cross",
+      "activity": "responding since the immediate aftermath, providing food and water and distributing tarpaulins, blankets, first aid kits, stretchers, emergency WASH kits and body bags",
+      "activity_type": "relief_distribution",
+      "where_raw": [],
+      "happened_on": null,
+      "amount": null,
+      "currency": null,
+      "amount_basis": "reported",
+      "quote": "Nepal Red Cross teams have been responding since the immediate aftermath of the disaster, providing food and water and distributing emergency supplies including tarpaulins, blankets, first aid kits, stretchers, emergency WASH kits and body bags."
+    },
+    {
+      "org_name_raw": "Nepal Red Cross",
+      "activity": "additional teams being mobilised to support teams already on the ground",
+      "activity_type": "staff_deployed",
+      "where_raw": [],
+      "happened_on": null,
+      "amount": null,
+      "currency": null,
+      "amount_basis": "reported",
+      "quote": "additional teams are being mobilised to support those already on the ground"
+    }
+  ],
+  "https://reliefweb.int/report/nepal/oxfam-launches-nepal-flood-response-worst-hit-rasuwa-and-nuwakot-destroyed-roads-and-swept-away-bridges-block-relief-efforts": [
+    {
+      "org_name_raw": "Oxfam",
+      "activity": "launching an emergency response in the worst-affected districts",
+      "activity_type": "presence_declared",
+      "where_raw": [
+        "Rasuwa",
+        "Nuwakot"
+      ],
+      "happened_on": null,
+      "amount": null,
+      "currency": null,
+      "amount_basis": "reported",
+      "quote": "Oxfam is launching an emergency response in Rasuwa and Nuwakot, the districts worst affected by Wednesday's flash flood"
+    },
+    {
+      "org_name_raw": "Government of Nepal",
+      "activity": "asked for 30 temporary bridges of 50 to 70 metres each, plus food, shelter and water purification supplies",
+      "activity_type": "needs_statement",
+      "where_raw": [],
+      "happened_on": null,
+      "amount": null,
+      "currency": null,
+      "amount_basis": "reported",
+      "quote": "The Government of Nepal's has asked for 30 temporary bridges of 50 to 70 metres each, alongside food, shelter and water purification supplies."
+    },
+    {
+      "org_name_raw": "Oxfam",
+      "activity": "supplying emergency hygiene kits with water purification solutions for 200 households in Rasuwa",
+      "activity_type": "wash",
+      "where_raw": [
+        "Rasuwa district"
+      ],
+      "happened_on": null,
+      "amount": null,
+      "currency": null,
+      "amount_basis": "reported",
+      "quote": "Oxfam, working with its partners and in close coordination with local authorities, is immediately supplying emergency hygiene kits, incorporating water purification solutions, for 200 households in the hardest-hit Rasuwa district."
+    },
+    {
+      "org_name_raw": "Government of Nepal",
+      "activity": "estimates 8,692 households (nearly 40,000 people) require emergency hygiene support and water purification, plus 3,130 dignity kits and nearly 4,000 baby kits for children under five",
+      "activity_type": "assessment",
+      "where_raw": [],
+      "happened_on": null,
+      "amount": null,
+      "currency": null,
+      "amount_basis": "reported",
+      "quote": "The Government of Nepal estimates that 8,692 households – nearly 40,000 people – require emergency hygiene support and water purification, in addition to 3,130 dignity kits and nearly 4,000 baby kits for children under five."
+    },
+    {
+      "org_name_raw": "Oxfam",
+      "activity": "urgently needs £1 million to scale up its response and reach 10,000 people with temporary shelter, clean water, and sanitation and hygiene kits",
+      "activity_type": "appeal_launched",
+      "where_raw": [],
+      "happened_on": null,
+      "amount": "1000000",
+      "currency": "GBP",
+      "amount_basis": "appeal",
+      "quote": "Oxfam urgently needs £1 million British pounds to scale up its response and reach 10,000 people with temporary shelter, clean water, and sanitation and hygiene kits."
+    },
+    {
+      "org_name_raw": "Oxfam",
+      "activity": "working closely with NDRRMA, the Social Welfare Council and District Administration Offices to deliver relief materials to affected communities",
+      "activity_type": "logistics",
+      "where_raw": [],
+      "happened_on": null,
+      "amount": null,
+      "currency": null,
+      "amount_basis": "reported",
+      "quote": "Oxfam is working closely with the National Disaster Risk Reduction and Management Authority (NDRRMA), the Social Welfare Council and District Administration Offices to deliver relief materials to affected communities."
+    },
+    {
+      "org_name_raw": "Oxfam",
+      "activity": "has worked in Nepal since the 1980s delivering humanitarian and development programmes alongside communities and local partners",
+      "activity_type": "presence_declared",
+      "where_raw": [],
+      "happened_on": null,
+      "amount": null,
+      "currency": null,
+      "amount_basis": "reported",
+      "quote": "Oxfam has worked in Nepal since the 1980s, alongside communities and local partners to tackle inequality and deliver humanitarian and development programmes."
+    }
+  ]
+}
