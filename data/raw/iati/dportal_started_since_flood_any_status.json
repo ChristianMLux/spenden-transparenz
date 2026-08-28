@@ -1,0 +1,38 @@
+{
+ "retrieved_at": "2026-08-28T12:16:35+00:00",
+ "source": "iati",
+ "data": [
+  {
+   "aid": "XI-IATI-EC_INTPA-2021-ACT-63144",
+   "reporting": "European Commission - Directorate-General for International Partnerships",
+   "reporting_ref": "XI-IATI-EC_INTPA",
+   "title": "Support Measures for Nepal 2025-2027",
+   "status_code": 2,
+   "day_start": 21915
+  },
+  {
+   "aid": "XI-IATI-EC_INTPA-2021-ACT-63603",
+   "reporting": "European Commission - Directorate-General for International Partnerships",
+   "reporting_ref": "XI-IATI-EC_INTPA",
+   "title": "Activity under preparation Advancing Quality Education for all in Nepal",
+   "status_code": 1,
+   "day_start": 47482
+  },
+  {
+   "aid": "XI-IATI-EC_INTPA-2026-PC-75215",
+   "reporting": "European Commission - Directorate-General for International Partnerships",
+   "reporting_ref": "XI-IATI-EC_INTPA",
+   "title": "Activity under preparation EU-Nepal Cooperation Facility (EU-NCF)",
+   "status_code": 1,
+   "day_start": 20696
+  },
+  {
+   "aid": "XI-IATI-EC_INTPA-2026-PC-88353",
+   "reporting": "European Commission - Directorate-General for International Partnerships",
+   "reporting_ref": "XI-IATI-EC_INTPA",
+   "title": "Activity under preparation SWITCH-Asia",
+   "status_code": 1,
+   "day_start": 20818
+  }
+ ]
+}

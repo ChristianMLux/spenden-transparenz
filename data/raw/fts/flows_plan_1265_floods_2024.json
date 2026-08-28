@@ -1,0 +1,4288 @@
+{
+ "retrieved_at": "2026-08-28T12:09:28+00:00",
+ "source": "fts",
+ "meta": {
+  "incoming": {
+   "flowCount": 39,
+   "fundingTotal": 27173764,
+   "pledgeTotal": 0
+  },
+  "outgoing": {
+   "flowCount": 0,
+   "fundingTotal": 0,
+   "pledgeTotal": 0
+  },
+  "internal": {
+   "flowCount": 0
+  }
+ },
+ "data": [
+  {
+   "id": "294483",
+   "amountUSD": 693455,
+   "budgetYear": "2024",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-02-14T12:35:31.861Z",
+   "date": "2022-12-21T00:00:00Z",
+   "decisionDate": "2023-11-09T00:00:00Z",
+   "description": "Save the Children International Humanitarian Fund nonthematic, flexible health",
+   "grandBargainEarmarkingType": [
+    "unearmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2023-11-12T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "commitment",
+   "updatedAt": "2025-02-14T12:35:31.861Z",
+   "versionId": 3,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2849",
+     "name": "Save the Children",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "2849",
+     "name": "Save the Children",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7926",
+     "name": "Health",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "7",
+     "name": "Health",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Save the Children",
+     "reportChannel": "Email",
+     "date": "2025-02-06T00:00:00.000Z"
+    }
+   ],
+   "refCode": "99701142"
+  },
+  {
+   "id": "310949",
+   "amountUSD": 5256571,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-05-27T07:57:27.247Z",
+   "date": "2025-05-07T00:00:00Z",
+   "decisionDate": "2024-05-02T00:00:00Z",
+   "description": "Food Security - Food Assistance",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 0.7849,
+   "firstReportedDate": "2025-04-10T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "FCDO",
+    "Earthquake"
+   ],
+   "newMoney": true,
+   "originalAmount": 4125800,
+   "originalCurrency": "GBP",
+   "method": "Traditional aid",
+   "parentFlowId": 310948,
+   "status": "paid",
+   "updatedAt": "2025-05-07T10:01:44.740Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2917",
+     "name": "United Kingdom, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "236",
+     "name": "United Kingdom",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3049",
+     "name": "World Food Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7925",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "World Food Programme",
+     "reportChannel": "Email",
+     "date": "2025-04-10T00:00:00.000Z"
+    }
+   ],
+   "refCode": "10048700\t No \t 301010 CA -REDI \t UK -C-00552-01 \t NP03.04.033.CAR1"
+  },
+  {
+   "id": "310950",
+   "amountUSD": 28343,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-05-27T07:58:04.681Z",
+   "date": "2025-05-07T00:00:00Z",
+   "decisionDate": "2024-05-03T00:00:00Z",
+   "description": "Food Security - Food Assistance",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 0.7849,
+   "firstReportedDate": "2025-04-10T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "FCDO",
+    "Earthquake"
+   ],
+   "newMoney": true,
+   "originalAmount": 22200,
+   "originalCurrency": "GBP",
+   "method": "Traditional aid",
+   "parentFlowId": 310948,
+   "status": "paid",
+   "updatedAt": "2025-05-07T10:02:38.027Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2917",
+     "name": "United Kingdom, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "236",
+     "name": "United Kingdom",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3049",
+     "name": "World Food Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7925",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "World Food Programme",
+     "reportChannel": "Email",
+     "date": "2025-04-10T00:00:00.000Z"
+    }
+   ],
+   "refCode": "10048699\t No \t 203186-301010-AM 3/2024 \t UK -C-00493-06 \t NP03.04.033.CAR1"
+  },
+  {
+   "id": "314654",
+   "amountUSD": 10234,
+   "budgetYear": "2024",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-11-21T12:30:54.760Z",
+   "date": "2024-05-24T00:00:00Z",
+   "decisionDate": "2024-05-24T00:00:00Z",
+   "description": "HAC-ROSA\tCanadian UNICEF Committee\tROSA, Nepal\t\tThematic Cross Sectoral - ROSA\tCross-Sectoral (two or more outcome areas)\tTHM HUMANITAR 2022-2025",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 1.368,
+   "firstReportedDate": "2024-07-02T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 14000,
+   "originalCurrency": "CAD",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2024-11-21T12:30:54.760Z",
+   "versionId": 2,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "5352",
+     "name": "UNICEF National Committee/Canada",
+     "behavior": "single",
+     "organizationTypes": [
+      "Private Organizations"
+     ],
+     "organizationSubTypes": [
+      "Local/National Private Organizations"
+     ],
+     "organizationLevels": [
+      "Local and National Non-State Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "2915",
+     "name": "United Nations Children's Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7933",
+     "name": "Education",
+     "behavior": "shared"
+    },
+    {
+     "type": "Cluster",
+     "id": "7926",
+     "name": "Health",
+     "behavior": "shared"
+    },
+    {
+     "type": "Cluster",
+     "id": "7927",
+     "name": "Nutrition",
+     "behavior": "shared"
+    },
+    {
+     "type": "Cluster",
+     "id": "7930",
+     "name": "WASH",
+     "behavior": "shared"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "3",
+     "name": "Education",
+     "behavior": "shared"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "7",
+     "name": "Health",
+     "behavior": "shared"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "12",
+     "name": "Protection - Child Protection",
+     "behavior": "shared"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "9",
+     "name": "Nutrition",
+     "behavior": "shared"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "11",
+     "name": "Water Sanitation Hygiene",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "United Nations Children's Fund",
+     "reportChannel": "Email",
+     "date": "2024-11-21T00:00:00.000Z"
+    }
+   ],
+   "refCode": "SM2299200334"
+  },
+  {
+   "id": "322689",
+   "amountUSD": 683278,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-09-30T02:25:40.378Z",
+   "date": "2024-10-01T00:00:00Z",
+   "decisionDate": null,
+   "description": "Anticipatory Flood Response in Eastern Nepal (EAST)",
+   "grandBargainEarmarkingType": [
+    "unearmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2024-09-30T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "Rapid response"
+   ],
+   "newMoney": false,
+   "method": "Traditional aid",
+   "parentFlowId": 322688,
+   "status": "paid",
+   "updatedAt": "2024-10-25T07:26:11.386Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "4762",
+     "name": "Central Emergency Response Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Pooled Funds"
+     ],
+     "organizationSubTypes": [
+      "Global UN Pooled Funds"
+     ],
+     "organizationLevels": [
+      "Pooled Funds"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "2915",
+     "name": "United Nations Children's Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7933",
+     "name": "Education",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "3",
+     "name": "Education",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Central Emergency Response Fund",
+     "reportChannel": "From CERF",
+     "date": "2024-10-02T00:00:00.000Z"
+    }
+   ],
+   "refCode": "24-RR-CEF-033"
+  },
+  {
+   "id": "322690",
+   "amountUSD": 143848,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-09-30T02:25:41.311Z",
+   "date": "2024-10-01T00:00:00Z",
+   "decisionDate": null,
+   "description": "Anticipatory Flood Response in Eastern Nepal (EAST)",
+   "grandBargainEarmarkingType": [
+    "unearmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2024-09-30T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "Rapid response"
+   ],
+   "newMoney": false,
+   "method": "Traditional aid",
+   "parentFlowId": 322688,
+   "status": "paid",
+   "updatedAt": "2024-10-25T07:27:23.073Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "4762",
+     "name": "Central Emergency Response Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Pooled Funds"
+     ],
+     "organizationSubTypes": [
+      "Global UN Pooled Funds"
+     ],
+     "organizationLevels": [
+      "Pooled Funds"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "2915",
+     "name": "United Nations Children's Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7930",
+     "name": "WASH",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "11",
+     "name": "Water Sanitation Hygiene",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Central Emergency Response Fund",
+     "reportChannel": "From CERF",
+     "date": "2024-10-02T00:00:00.000Z"
+    }
+   ],
+   "refCode": "24-RR-CEF-033"
+  },
+  {
+   "id": "322691",
+   "amountUSD": 71924,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-09-30T02:25:42.234Z",
+   "date": "2024-10-01T00:00:00Z",
+   "decisionDate": null,
+   "description": "Anticipatory Flood Response in Eastern Nepal (EAST)",
+   "grandBargainEarmarkingType": [
+    "unearmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2024-09-30T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "Rapid response"
+   ],
+   "newMoney": false,
+   "method": "Traditional aid",
+   "parentFlowId": 322688,
+   "status": "paid",
+   "updatedAt": "2024-10-25T07:26:38.950Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "4762",
+     "name": "Central Emergency Response Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Pooled Funds"
+     ],
+     "organizationSubTypes": [
+      "Global UN Pooled Funds"
+     ],
+     "organizationLevels": [
+      "Pooled Funds"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "2915",
+     "name": "United Nations Children's Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7928",
+     "name": "Protection",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "10",
+     "name": "Protection",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Central Emergency Response Fund",
+     "reportChannel": "From CERF",
+     "date": "2024-10-02T00:00:00.000Z"
+    }
+   ],
+   "refCode": "24-RR-CEF-033"
+  },
+  {
+   "id": "322693",
+   "amountUSD": 350000,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-09-30T02:25:44.102Z",
+   "date": "2024-10-02T00:00:00Z",
+   "decisionDate": null,
+   "description": "Food security-Agriculture",
+   "grandBargainEarmarkingType": [
+    "unearmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2024-09-30T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "Rapid response"
+   ],
+   "newMoney": false,
+   "method": "Traditional aid",
+   "parentFlowId": 322692,
+   "status": "paid",
+   "updatedAt": "2024-10-25T07:25:02.361Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "4762",
+     "name": "Central Emergency Response Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Pooled Funds"
+     ],
+     "organizationSubTypes": [
+      "Global UN Pooled Funds"
+     ],
+     "organizationLevels": [
+      "Pooled Funds"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "4399",
+     "name": "Food and Agriculture Organization of the United Nations",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7925",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Central Emergency Response Fund",
+     "reportChannel": "From CERF",
+     "date": "2024-10-04T00:00:00.000Z"
+    }
+   ],
+   "refCode": "24-RR-FAO-018"
+  },
+  {
+   "id": "322695",
+   "amountUSD": 122955,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-09-30T02:25:45.982Z",
+   "date": "2024-10-04T00:00:00Z",
+   "decisionDate": null,
+   "description": "Anticipatory action to reduce the impact of floods on vulnerable women and girls through provision of essential SRH and GBV services",
+   "grandBargainEarmarkingType": [
+    "unearmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2024-09-30T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "Rapid response"
+   ],
+   "newMoney": false,
+   "method": "Traditional aid",
+   "parentFlowId": 322694,
+   "status": "paid",
+   "updatedAt": "2024-10-25T07:25:45.413Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "4762",
+     "name": "Central Emergency Response Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Pooled Funds"
+     ],
+     "organizationSubTypes": [
+      "Global UN Pooled Funds"
+     ],
+     "organizationLevels": [
+      "Pooled Funds"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "4293",
+     "name": "United Nations Population Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7926",
+     "name": "Health",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "7",
+     "name": "Health",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Central Emergency Response Fund",
+     "reportChannel": "From CERF",
+     "date": "2024-10-05T00:00:00.000Z"
+    }
+   ],
+   "refCode": "24-RR-FPA-011"
+  },
+  {
+   "id": "322696",
+   "amountUSD": 524179,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-09-30T02:25:46.893Z",
+   "date": "2024-10-04T00:00:00Z",
+   "decisionDate": null,
+   "description": "Anticipatory action to reduce the impact of floods on vulnerable women and girls through provision of essential SRH and GBV services",
+   "grandBargainEarmarkingType": [
+    "unearmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2024-09-30T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "Rapid response"
+   ],
+   "newMoney": false,
+   "method": "Traditional aid",
+   "parentFlowId": 322694,
+   "status": "paid",
+   "updatedAt": "2024-10-25T07:25:23.953Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "4762",
+     "name": "Central Emergency Response Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Pooled Funds"
+     ],
+     "organizationSubTypes": [
+      "Global UN Pooled Funds"
+     ],
+     "organizationLevels": [
+      "Pooled Funds"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "4293",
+     "name": "United Nations Population Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7928",
+     "name": "Protection",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "10",
+     "name": "Protection",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Central Emergency Response Fund",
+     "reportChannel": "From CERF",
+     "date": "2024-10-05T00:00:00.000Z"
+    }
+   ],
+   "refCode": "24-RR-FPA-011"
+  },
+  {
+   "id": "322698",
+   "amountUSD": 1511399,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-09-30T02:25:48.765Z",
+   "date": "2024-10-04T00:00:00Z",
+   "decisionDate": null,
+   "description": "Forecast based Anticipatory Action to Strengthen Food Security and Coping Capacity of Households-at-highest risk (EAST)",
+   "grandBargainEarmarkingType": [
+    "unearmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2024-09-30T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "Rapid response"
+   ],
+   "newMoney": false,
+   "method": "Traditional aid",
+   "parentFlowId": 322697,
+   "status": "paid",
+   "updatedAt": "2024-10-25T07:24:41.472Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "4762",
+     "name": "Central Emergency Response Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Pooled Funds"
+     ],
+     "organizationSubTypes": [
+      "Global UN Pooled Funds"
+     ],
+     "organizationLevels": [
+      "Pooled Funds"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3049",
+     "name": "World Food Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7925",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Central Emergency Response Fund",
+     "reportChannel": "From CERF",
+     "date": "2024-10-05T00:00:00.000Z"
+    }
+   ],
+   "refCode": "24-RR-WFP-030"
+  },
+  {
+   "id": "323999",
+   "amountUSD": 56172,
+   "budgetYear": "2024",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-10-11T02:25:42.397Z",
+   "date": "2024-10-10T00:00:00Z",
+   "decisionDate": "2024-10-10T00:00:00Z",
+   "description": "Annual programme 2024 – Emergency Response Fund 2024",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 6.667,
+   "firstReportedDate": "2024-10-10T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 374500,
+   "originalCurrency": "DKK",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "commitment",
+   "updatedAt": "2024-10-16T06:10:01.577Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "3776",
+     "name": "Denmark, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "61",
+     "name": "Denmark",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3348",
+     "name": "ActionAid International",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7925",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Denmark, Government of",
+     "reportChannel": "From EDRIS",
+     "date": "2024-10-10T00:00:00.000Z"
+    }
+   ],
+   "refCode": "23/00646"
+  },
+  {
+   "id": "325365",
+   "amountUSD": 78446,
+   "budgetYear": "2024",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-10-23T02:25:46.956Z",
+   "date": "2024-10-21T00:00:00Z",
+   "decisionDate": "2024-10-21T00:00:00Z",
+   "description": "Annual programme 2024 – Emergency Response Fund 2024",
+   "grandBargainEarmarkingType": [
+    "softly earmarked"
+   ],
+   "exchangeRate": 6.82,
+   "firstReportedDate": "2024-10-22T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 535000,
+   "originalCurrency": "DKK",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "commitment",
+   "updatedAt": "2024-10-23T06:08:01.184Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "3776",
+     "name": "Denmark, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "61",
+     "name": "Denmark",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "8572",
+     "name": "ACT Alliance / DanChurchAid",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Denmark, Government of",
+     "reportChannel": "From EDRIS",
+     "date": "2024-10-22T00:00:00.000Z"
+    }
+   ],
+   "refCode": "23/00642"
+  },
+  {
+   "id": "327277",
+   "amountUSD": 108661,
+   "budgetYear": "2024",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-11-16T02:25:59.702Z",
+   "date": "2024-11-14T00:00:00Z",
+   "decisionDate": "2024-11-14T00:00:00Z",
+   "description": "Flexible Funds 2024 - Training aimed to build and strengthen the capacity of young people to organize and take action in crisis situations. ",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 6.893,
+   "firstReportedDate": "2024-11-15T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 749000,
+   "originalCurrency": "DKK",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "commitment",
+   "updatedAt": "2024-11-18T07:07:27.547Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "3776",
+     "name": "Denmark, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "61",
+     "name": "Denmark",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3348",
+     "name": "ActionAid International",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7933",
+     "name": "Education",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "3",
+     "name": "Education",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Denmark, Government of",
+     "reportChannel": "From EDRIS",
+     "date": "2024-11-15T00:00:00.000Z"
+    }
+   ],
+   "refCode": "23/00646"
+  },
+  {
+   "id": "327557",
+   "amountUSD": 149521,
+   "budgetYear": "2024",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-11-19T01:07:15.079Z",
+   "date": "2024-11-19T00:00:00Z",
+   "decisionDate": "2024-08-29T00:00:00Z",
+   "description": "Protection\nBorder Management and Monitoring Project",
+   "grandBargainEarmarkingType": [
+    "tightly earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2024-11-14T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "USA/BPRM",
+    "SA"
+   ],
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2024-11-19T01:15:09.270Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "14269",
+     "name": "United States Department of State",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "237",
+     "name": "United States",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "8418",
+     "name": "National NGOs (Confidential)",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "National NGOs/CSOs"
+     ],
+     "organizationLevels": [
+      "Local and National Non-State Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7928",
+     "name": "Protection",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "10",
+     "name": "Protection",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "United States Department of State",
+     "reportChannel": "Email",
+     "date": "2024-11-14T00:00:00.000Z"
+    }
+   ],
+   "refCode": "SPRMCO24CA0113"
+  },
+  {
+   "id": "327602",
+   "amountUSD": 228686,
+   "budgetYear": "2024",
+   "childFlowIds": null,
+   "contributionType": "in kind",
+   "createdAt": "2024-11-19T02:25:48.733Z",
+   "date": "2024-11-19T00:00:00Z",
+   "decisionDate": "2024-11-18T00:00:00Z",
+   "description": "The most critical impact of this project will be immediate access to cash for vulnerable households, allowing them to secure basic necessities. Additionally, the project will establish two safe spaces and provide dignity kits to 800 women and adolescent",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 10.932,
+   "firstReportedDate": "2024-11-18T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 2500000,
+   "originalCurrency": "SEK",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "commitment",
+   "updatedAt": "2024-11-19T08:44:36.649Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2921",
+     "name": "Sweden, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "216",
+     "name": "Sweden",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "744",
+     "name": "Oxfam",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7928",
+     "name": "Protection",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "10",
+     "name": "Protection",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Sweden, Government of",
+     "reportChannel": "From EDRIS",
+     "date": "2024-11-18T00:00:00.000Z"
+    }
+   ],
+   "refCode": "Sida id.14405"
+  },
+  {
+   "id": "328528",
+   "amountUSD": 509454,
+   "budgetYear": "2024",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-11-21T04:10:53.753Z",
+   "date": "2024-11-21T00:00:00Z",
+   "decisionDate": "2024-07-30T00:00:00Z",
+   "description": "Protection\tProtection and Humanitarian Assistance for Tibetan Refugees in South Asia",
+   "grandBargainEarmarkingType": [
+    "tightly earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2024-11-14T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "USA/BPRM",
+    "SA"
+   ],
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2024-11-21T04:11:35.180Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "14269",
+     "name": "United States Department of State",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "237",
+     "name": "United States",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3587",
+     "name": "The Tibet Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Private Organizations"
+     ],
+     "organizationSubTypes": [
+      "International Private Organizations"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7928",
+     "name": "Protection",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "10",
+     "name": "Protection",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "United States Department of State",
+     "reportChannel": "Email",
+     "date": "2024-11-14T00:00:00.000Z"
+    }
+   ],
+   "refCode": "SPRMCO24CA0123"
+  },
+  {
+   "id": "328904",
+   "amountUSD": 109409,
+   "budgetYear": "2024",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-11-23T02:44:24.521Z",
+   "date": "2024-11-23T00:00:00Z",
+   "decisionDate": "2024-10-29T00:00:00Z",
+   "description": "Flood Response-Nepal\tCross-Sectoral (two or more outcome areas)",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 0.914,
+   "firstReportedDate": "2024-11-19T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 100000,
+   "originalCurrency": "EUR",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2024-11-23T02:46:15.593Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "3778",
+     "name": "UNICEF National Committee/Germany",
+     "behavior": "single",
+     "organizationTypes": [
+      "Private Organizations"
+     ],
+     "organizationSubTypes": [
+      "Local/National Private Organizations"
+     ],
+     "organizationLevels": [
+      "Local and National Non-State Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "2915",
+     "name": "United Nations Children's Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "United Nations Children's Fund",
+     "reportChannel": "Email",
+     "date": "2024-11-19T00:00:00.000Z"
+    }
+   ],
+   "refCode": "SM240501"
+  },
+  {
+   "id": "328905",
+   "amountUSD": 500000,
+   "budgetYear": "2024",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-11-23T02:45:43.231Z",
+   "date": "2024-11-23T00:00:00Z",
+   "decisionDate": "2024-10-29T00:00:00Z",
+   "description": "Nepal:Humanitarian response to the flood and landslide affected population\tCross-Sectoral (two or more outcome areas)",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2024-11-19T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2024-11-23T02:45:43.231Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2929",
+     "name": "Korea, Republic of, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "119",
+     "name": "Korea, Republic of",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "2915",
+     "name": "United Nations Children's Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "United Nations Children's Fund",
+     "reportChannel": "Email",
+     "date": "2024-11-19T00:00:00.000Z"
+    }
+   ],
+   "refCode": "SM240502"
+  },
+  {
+   "id": "329214",
+   "amountUSD": 3405288,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-11-25T10:42:05.242Z",
+   "date": "2025-05-07T00:00:00Z",
+   "decisionDate": "2024-02-01T00:00:00Z",
+   "description": "Food Security - Food Assistance",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 0.7849,
+   "firstReportedDate": "2025-04-10T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "FCDO",
+    "Earthquake"
+   ],
+   "newMoney": true,
+   "originalAmount": 2672800,
+   "originalCurrency": "GBP",
+   "method": "Traditional aid",
+   "parentFlowId": 310948,
+   "status": "paid",
+   "updatedAt": "2025-05-07T10:02:17.792Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2917",
+     "name": "United Kingdom, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "236",
+     "name": "United Kingdom",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3049",
+     "name": "World Food Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7925",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "World Food Programme",
+     "reportChannel": "Email",
+     "date": "2025-04-10T00:00:00.000Z"
+    }
+   ],
+   "refCode": "10048111\t No \t203186\t UK -C-00493-05 \t NP03.04.033.CAR1"
+  },
+  {
+   "id": "329217",
+   "amountUSD": 45430,
+   "budgetYear": "2024",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-11-25T10:45:31.519Z",
+   "date": "2024-11-06T00:00:00Z",
+   "decisionDate": "2024-11-06T00:00:00Z",
+   "description": "Establishment of childfriendly space  -  Flood Response",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 0.8254,
+   "firstReportedDate": "2024-11-25T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "Flood"
+   ],
+   "newMoney": true,
+   "originalAmount": 37500,
+   "originalCurrency": "GBP",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2024-11-25T10:45:31.519Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2917",
+     "name": "United Kingdom, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "236",
+     "name": "United Kingdom",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "2915",
+     "name": "United Nations Children's Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7928",
+     "name": "Protection",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "10",
+     "name": "Protection",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "United Kingdom, Government of",
+     "reportChannel": "Email",
+     "date": "2024-11-25T00:00:00.000Z"
+    }
+   ],
+   "refCode": "300003-111"
+  },
+  {
+   "id": "329219",
+   "amountUSD": 45430,
+   "budgetYear": "2024",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-11-25T10:47:17.970Z",
+   "date": "2024-11-06T00:00:00Z",
+   "decisionDate": "2024-11-06T00:00:00Z",
+   "description": "Emergency assistance to women and gender-based violence survivors including the dignity and adolescent kits",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 0.8254,
+   "firstReportedDate": "2024-11-25T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "Flood"
+   ],
+   "newMoney": true,
+   "originalAmount": 37498,
+   "originalCurrency": "GBP",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2024-11-25T10:47:17.970Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2917",
+     "name": "United Kingdom, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "236",
+     "name": "United Kingdom",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "4293",
+     "name": "United Nations Population Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7928",
+     "name": "Protection",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "13",
+     "name": "Protection - Gender-Based Violence",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "United Kingdom, Government of",
+     "reportChannel": "Email",
+     "date": "2024-11-25T00:00:00.000Z"
+    }
+   ],
+   "refCode": "300003-111"
+  },
+  {
+   "id": "329222",
+   "amountUSD": 751505,
+   "budgetYear": "2024",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-11-25T10:49:58.013Z",
+   "date": "2024-08-12T00:00:00Z",
+   "decisionDate": "2024-08-12T00:00:00Z",
+   "description": "Supporting the marginalized and the most vulnerable people to cope with flood and landslide",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 0.7954,
+   "firstReportedDate": "2024-11-25T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "Flood"
+   ],
+   "newMoney": true,
+   "originalAmount": 597713,
+   "originalCurrency": "GBP",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2024-11-25T10:49:58.013Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2917",
+     "name": "United Kingdom, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "236",
+     "name": "United Kingdom",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "2849",
+     "name": "Save the Children",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7930",
+     "name": "WASH",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "11",
+     "name": "Water Sanitation Hygiene",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "United Kingdom, Government of",
+     "reportChannel": "Email",
+     "date": "2024-11-25T00:00:00.000Z"
+    }
+   ],
+   "refCode": "300003-110"
+  },
+  {
+   "id": "335407",
+   "amountUSD": 35772,
+   "budgetYear": "2024",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-01-07T14:12:41.036Z",
+   "date": "2025-01-07T00:00:00Z",
+   "decisionDate": "2024-07-01T00:00:00Z",
+   "description": "Sponsoring  orphans\t\nSponsoring  families\t\nProtection",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 0.307,
+   "firstReportedDate": "2025-01-07T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 10982,
+   "originalCurrency": "KWD",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2025-01-07T14:12:41.036Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "7283",
+     "name": "Rahma International Society",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "10705",
+     "name": "Nepal Development Society (NEDS)",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "National NGOs/CSOs"
+     ],
+     "organizationLevels": [
+      "Local and National Non-State Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7928",
+     "name": "Protection",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "10",
+     "name": "Protection",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Rahma International Society",
+     "reportChannel": "Email",
+     "date": "2025-01-07T00:00:00.000Z"
+    }
+   ],
+   "refCode": "July to September 2024"
+  },
+  {
+   "id": "335410",
+   "amountUSD": 7023,
+   "budgetYear": "2024",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-01-07T14:13:40.706Z",
+   "date": "2025-01-07T00:00:00Z",
+   "decisionDate": "2024-07-01T00:00:00Z",
+   "description": "Sponsoring a school student\t\nSponsoring a university student \t\nEducation",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 0.307,
+   "firstReportedDate": "2025-01-07T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 2156,
+   "originalCurrency": "KWD",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2025-01-07T14:13:40.706Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "7283",
+     "name": "Rahma International Society",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "10705",
+     "name": "Nepal Development Society (NEDS)",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "National NGOs/CSOs"
+     ],
+     "organizationLevels": [
+      "Local and National Non-State Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7933",
+     "name": "Education",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "3",
+     "name": "Education",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Rahma International Society",
+     "reportChannel": "Email",
+     "date": "2025-01-07T00:00:00.000Z"
+    }
+   ],
+   "refCode": "July to September 2024"
+  },
+  {
+   "id": "335802",
+   "amountUSD": 247280,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-01-13T14:24:28.368Z",
+   "date": "2025-01-13T00:00:00Z",
+   "decisionDate": "2024-10-15T00:00:00Z",
+   "description": "WASH, MPCA, PROTECTION\tAssistance in response to floods",
+   "grandBargainEarmarkingType": [
+    "softly earmarked"
+   ],
+   "exchangeRate": 1.4154,
+   "firstReportedDate": "2024-10-05T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 350000,
+   "originalCurrency": "CAD",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2025-01-13T14:24:28.368Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2928",
+     "name": "Canada, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "40",
+     "name": "Canada",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "744",
+     "name": "Oxfam",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7930",
+     "name": "WASH",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "11",
+     "name": "Water Sanitation Hygiene",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Canada, Government of",
+     "reportChannel": "Email",
+     "date": "2024-12-13T00:00:00.000Z"
+    }
+   ],
+   "refCode": "Hurricane Oscar UN Response Plan"
+  },
+  {
+   "id": "343188",
+   "amountUSD": 32858,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-05-07T10:00:02.011Z",
+   "date": "2025-05-07T00:00:00Z",
+   "decisionDate": "2024-08-07T00:00:00Z",
+   "description": "Food Security - Food Assistance",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 0.7849,
+   "firstReportedDate": "2025-04-10T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "FCDO",
+    "Earthquake"
+   ],
+   "newMoney": true,
+   "originalAmount": 25800,
+   "originalCurrency": "GBP",
+   "method": "Traditional aid",
+   "parentFlowId": 310948,
+   "status": "paid",
+   "updatedAt": "2025-05-07T10:02:05.860Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2917",
+     "name": "United Kingdom, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "236",
+     "name": "United Kingdom",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3049",
+     "name": "World Food Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7925",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "World Food Programme",
+     "reportChannel": "Email",
+     "date": "2025-04-10T00:00:00.000Z"
+    }
+   ],
+   "refCode": "10049346\t No \t 301010/203186- AM 4-2024 \t UK -C-00493-07 \t NP03.04.033.CAR1"
+  },
+  {
+   "id": "343190",
+   "amountUSD": 386566,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-05-07T10:00:33.601Z",
+   "date": "2025-05-07T00:00:00Z",
+   "decisionDate": "2024-11-19T00:00:00Z",
+   "description": "Food Security - Food Assistance",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 0.7849,
+   "firstReportedDate": "2025-04-10T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "FCDO",
+    "Earthquake"
+   ],
+   "newMoney": true,
+   "originalAmount": 303400,
+   "originalCurrency": "GBP",
+   "method": "Traditional aid",
+   "parentFlowId": 310948,
+   "status": "paid",
+   "updatedAt": "2025-05-07T10:01:06.241Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2917",
+     "name": "United Kingdom, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "236",
+     "name": "United Kingdom",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3049",
+     "name": "World Food Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7925",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "World Food Programme",
+     "reportChannel": "Email",
+     "date": "2025-04-10T00:00:00.000Z"
+    }
+   ],
+   "refCode": "10049886\t No \t 301010/203186-AM 5-2024 \t UK -C-00493-08 \t NP03.04.033.CAR1"
+  },
+  {
+   "id": "343193",
+   "amountUSD": 48061,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-05-07T10:10:09.288Z",
+   "date": "2025-05-07T00:00:00Z",
+   "decisionDate": "2024-01-26T00:00:00Z",
+   "description": "Food Security - Food Assistance",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2025-04-10T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2025-05-07T10:10:09.288Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "4543",
+     "name": "Private (individuals & organizations)",
+     "behavior": "single",
+     "organizationTypes": [
+      "Private Organizations"
+     ],
+     "organizationSubTypes": [
+      "International Private Organizations"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3049",
+     "name": "World Food Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7925",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "World Food Programme",
+     "reportChannel": "Email",
+     "date": "2025-04-10T00:00:00.000Z"
+    }
+   ],
+   "refCode": "10048087\t No \t WPD 26.01.2024 TRAN.LET \t WPD-C-06382-02 \t NP03"
+  },
+  {
+   "id": "343194",
+   "amountUSD": 157613,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-05-07T10:10:49.502Z",
+   "date": "2025-05-07T00:00:00Z",
+   "decisionDate": "2024-04-23T00:00:00Z",
+   "description": "Food Security - Food Assistance",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2025-04-10T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2025-05-07T10:10:49.502Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "4543",
+     "name": "Private (individuals & organizations)",
+     "behavior": "single",
+     "organizationTypes": [
+      "Private Organizations"
+     ],
+     "organizationSubTypes": [
+      "International Private Organizations"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3049",
+     "name": "World Food Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7925",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "World Food Programme",
+     "reportChannel": "Email",
+     "date": "2025-04-10T00:00:00.000Z"
+    }
+   ],
+   "refCode": "10048638\t No \t WPD 23.04.2024 TRANSFER \t WPD-C-06717-01 \t NP03"
+  },
+  {
+   "id": "343196",
+   "amountUSD": 316667,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-05-07T10:11:29.231Z",
+   "date": "2025-05-07T00:00:00Z",
+   "decisionDate": "2024-05-07T00:00:00Z",
+   "description": "Food Security - Food Assistance",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2025-04-10T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2025-05-07T10:11:29.231Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "4543",
+     "name": "Private (individuals & organizations)",
+     "behavior": "single",
+     "organizationTypes": [
+      "Private Organizations"
+     ],
+     "organizationSubTypes": [
+      "International Private Organizations"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3049",
+     "name": "World Food Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7925",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "World Food Programme",
+     "reportChannel": "Email",
+     "date": "2025-04-10T00:00:00.000Z"
+    }
+   ],
+   "refCode": "10048756\t No \t WPD 07.05.2024 GTF \t WPD-C-06731-01 \t NP03.02.022.SMP1"
+  },
+  {
+   "id": "343197",
+   "amountUSD": 633333,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-05-07T10:12:20.709Z",
+   "date": "2025-05-07T00:00:00Z",
+   "decisionDate": "2024-05-07T00:00:00Z",
+   "description": "Food Security - Food Assistance",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2025-04-10T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2025-05-07T10:12:20.709Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "4543",
+     "name": "Private (individuals & organizations)",
+     "behavior": "single",
+     "organizationTypes": [
+      "Private Organizations"
+     ],
+     "organizationSubTypes": [
+      "International Private Organizations"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3049",
+     "name": "World Food Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7925",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "World Food Programme",
+     "reportChannel": "Email",
+     "date": "2025-04-10T00:00:00.000Z"
+    }
+   ],
+   "refCode": "10048765\t No \t WPD 07.05.2024 GTF \t WPD-C-06732-02 \t NP03.02.022.SMP1"
+  },
+  {
+   "id": "343198",
+   "amountUSD": 13132,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-05-07T10:13:30.716Z",
+   "date": "2025-05-07T00:00:00Z",
+   "decisionDate": "2024-12-26T00:00:00Z",
+   "description": "Food Security - Food Assistance",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2025-04-10T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2025-05-07T10:13:30.716Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "4543",
+     "name": "Private (individuals & organizations)",
+     "behavior": "single",
+     "organizationTypes": [
+      "Private Organizations"
+     ],
+     "organizationSubTypes": [
+      "International Private Organizations"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3049",
+     "name": "World Food Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7925",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "World Food Programme",
+     "reportChannel": "Email",
+     "date": "2025-04-10T00:00:00.000Z"
+    }
+   ],
+   "refCode": "10050170\t No \t WPD 26.12.2024 GTF \t WPD-C-06920-05 \t NP03.02.022.NPA1"
+  },
+  {
+   "id": "343199",
+   "amountUSD": 188588,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-05-07T10:14:07.281Z",
+   "date": "2025-05-07T00:00:00Z",
+   "decisionDate": "2024-01-01T00:00:00Z",
+   "description": "Food Security - Food Assistance",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2025-04-10T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2025-05-07T10:14:07.281Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "4543",
+     "name": "Private (individuals & organizations)",
+     "behavior": "single",
+     "organizationTypes": [
+      "Private Organizations"
+     ],
+     "organizationSubTypes": [
+      "International Private Organizations"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3049",
+     "name": "World Food Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7925",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "World Food Programme",
+     "reportChannel": "Email",
+     "date": "2025-04-10T00:00:00.000Z"
+    }
+   ],
+   "refCode": "10050196\t No \t ALLOCATION FILE \t WPD-C-06618-35 \t NP03.02.022.NPA1"
+  },
+  {
+   "id": "343200",
+   "amountUSD": 8721487,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-05-07T10:15:52.493Z",
+   "date": "2025-05-07T00:00:00Z",
+   "decisionDate": "2024-04-25T00:00:00Z",
+   "description": "Food Security - Food Assistance",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2025-04-10T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": false,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2025-05-07T10:15:52.493Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "971",
+     "name": "UN Multi-Partner Trust Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Pooled Funds"
+     ],
+     "organizationSubTypes": [
+      "Global UN Pooled Funds"
+     ],
+     "organizationLevels": [
+      "Pooled Funds"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3049",
+     "name": "World Food Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7925",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "World Food Programme",
+     "reportChannel": "Email",
+     "date": "2025-04-10T00:00:00.000Z"
+    }
+   ],
+   "refCode": "70002945\t No \t UN MPTFO 25.04.2024 MOU \t 001-C-02933-01 \t NP03"
+  },
+  {
+   "id": "343201",
+   "amountUSD": 99520,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-05-07T10:16:30.397Z",
+   "date": "2025-05-07T00:00:00Z",
+   "decisionDate": "2024-05-16T00:00:00Z",
+   "description": "Food Security - Food Assistance",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2025-04-10T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": false,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2025-05-07T10:16:30.397Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "971",
+     "name": "UN Multi-Partner Trust Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Pooled Funds"
+     ],
+     "organizationSubTypes": [
+      "Global UN Pooled Funds"
+     ],
+     "organizationLevels": [
+      "Pooled Funds"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3049",
+     "name": "World Food Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7925",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "World Food Programme",
+     "reportChannel": "Email",
+     "date": "2025-04-10T00:00:00.000Z"
+    }
+   ],
+   "refCode": "70003061\t No \t MPTF ID 00140840 \t 001-C-02976-01 \t NP03.04.033.CAR1"
+  },
+  {
+   "id": "343202",
+   "amountUSD": 159475,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-05-07T10:17:12.889Z",
+   "date": "2025-05-07T00:00:00Z",
+   "decisionDate": "2024-08-29T00:00:00Z",
+   "description": "Food Security - Food Assistance",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2025-04-10T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": false,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2025-05-07T10:17:12.889Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "971",
+     "name": "UN Multi-Partner Trust Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Pooled Funds"
+     ],
+     "organizationSubTypes": [
+      "Global UN Pooled Funds"
+     ],
+     "organizationLevels": [
+      "Pooled Funds"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3049",
+     "name": "World Food Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7925",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "World Food Programme",
+     "reportChannel": "Email",
+     "date": "2025-04-10T00:00:00.000Z"
+    }
+   ],
+   "refCode": "70003068\t No \t UNDP 29.08.2024 UN TO UN \t 001-C-02819-02 \t NP03.02.022.SMP1"
+  },
+  {
+   "id": "343203",
+   "amountUSD": 499651,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-05-07T10:17:57.960Z",
+   "date": "2025-05-07T00:00:00Z",
+   "decisionDate": "2024-08-29T00:00:00Z",
+   "description": "Food Security - Food Assistance",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2025-04-10T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": false,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2025-05-07T10:17:57.960Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "971",
+     "name": "UN Multi-Partner Trust Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Pooled Funds"
+     ],
+     "organizationSubTypes": [
+      "Global UN Pooled Funds"
+     ],
+     "organizationLevels": [
+      "Pooled Funds"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "3049",
+     "name": "World Food Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Cluster",
+     "id": "7925",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "World Food Programme",
+     "reportChannel": "Email",
+     "date": "2025-04-10T00:00:00.000Z"
+    }
+   ],
+   "refCode": "70003068\t No \t UNDP 29.08.2024 UN TO UN \t 001-C-02819-02 \t NP03.02.022.SMP1"
+  },
+  {
+   "id": "343476",
+   "amountUSD": 242550,
+   "budgetYear": "2024",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-05-09T11:51:17.041Z",
+   "date": "2025-05-08T00:00:00Z",
+   "decisionDate": "2025-03-09T00:00:00Z",
+   "description": "Oxfam Canada\tNepal\t2024\tCHAF - Oxfam Canada - Nepal Floods - 2024",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 1.443,
+   "firstReportedDate": "2025-05-06T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 350000,
+   "originalCurrency": "CAD",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2025-05-09T11:51:17.041Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2928",
+     "name": "Canada, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "40",
+     "name": "Canada",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Plan",
+     "id": "1265",
+     "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+     "behavior": "single"
+    },
+    {
+     "type": "Organization",
+     "id": "8519",
+     "name": "Oxfam Canada",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "Internationally Affiliated Organizations"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Canada, Government of",
+     "reportChannel": "Email",
+     "date": "2025-05-06T00:00:00.000Z"
+    }
+   ]
+  }
+ ]
+}

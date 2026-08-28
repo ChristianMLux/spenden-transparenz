@@ -1,0 +1,319 @@
+{
+ "retrieved_at": "2026-08-28T13:00:55+00:00",
+ "source": "iati_datastore",
+ "params": {
+  "rows": 5,
+  "wt": "json",
+  "q": "transaction_recipient_country_code:NP AND transaction_transaction_date_iso_date:[2026-01-01T00:00:00Z TO *]",
+  "facet": "true",
+  "facet.field": [
+   "transaction_transaction_type_code",
+   "transaction_provider_org_ref",
+   "transaction_receiver_org_ref",
+   "transaction_humanitarian"
+  ],
+  "facet.limit": 40,
+  "fl": "iati_identifier,transaction_type,transaction_value,transaction_transaction_date_iso_date,transaction_provider_org_narrative,transaction_receiver_org_narrative"
+ },
+ "data": {
+  "responseHeader": {
+   "zkConnected": true,
+   "status": 0,
+   "QTime": 198,
+   "params": {
+    "q": "transaction_recipient_country_code:NP AND transaction_transaction_date_iso_date:[2026-01-01T00:00:00Z TO *]",
+    "facet.limit": "40",
+    "facet.field": [
+     "transaction_transaction_type_code",
+     "transaction_provider_org_ref",
+     "transaction_receiver_org_ref",
+     "transaction_humanitarian"
+    ],
+    "fl": "iati_identifier,transaction_type,transaction_value,transaction_transaction_date_iso_date,transaction_provider_org_narrative,transaction_receiver_org_narrative",
+    "rows": "5",
+    "_forwardedCount": "1",
+    "wt": "json",
+    "facet": "true"
+   }
+  },
+  "response": {
+   "numFound": 155,
+   "start": 0,
+   "numFoundExact": true,
+   "docs": [
+    {
+     "iati_identifier": "US-GOV-1-720202657295",
+     "transaction_value": [
+      0.0
+     ],
+     "transaction_receiver_org_narrative": [
+      "USAID redacted this field in accordance with the exceptions outlined in the Foreign Aid Transparency and Accountability Act of 2016."
+     ],
+     "transaction_transaction_date_iso_date": [
+      "2026-04-30T00:00:00Z"
+     ]
+    },
+    {
+     "iati_identifier": "US-GOV-1-720202657295",
+     "transaction_value": [
+      0.0
+     ],
+     "transaction_receiver_org_narrative": [
+      "USAID redacted this field in accordance with the exceptions outlined in the Foreign Aid Transparency and Accountability Act of 2016."
+     ],
+     "transaction_transaction_date_iso_date": [
+      "2026-04-30T00:00:00Z"
+     ]
+    },
+    {
+     "iati_identifier": "US-GOV-1-7200AA19CA00002",
+     "transaction_value": [
+      41535.0
+     ],
+     "transaction_receiver_org_narrative": [
+      "USAID redacted this field in accordance with the exceptions outlined in the Foreign Aid Transparency and Accountability Act of 2016."
+     ],
+     "transaction_transaction_date_iso_date": [
+      "2026-01-31T00:00:00Z"
+     ]
+    },
+    {
+     "iati_identifier": "US-GOV-1-7200AA19CA00002",
+     "transaction_value": [
+      36597.0
+     ],
+     "transaction_receiver_org_narrative": [
+      "USAID redacted this field in accordance with the exceptions outlined in the Foreign Aid Transparency and Accountability Act of 2016."
+     ],
+     "transaction_transaction_date_iso_date": [
+      "2026-01-31T00:00:00Z"
+     ]
+    },
+    {
+     "iati_identifier": "US-GOV-1-7200AA19CA00002",
+     "transaction_value": [
+      26153.0
+     ],
+     "transaction_receiver_org_narrative": [
+      "USAID redacted this field in accordance with the exceptions outlined in the Foreign Aid Transparency and Accountability Act of 2016."
+     ],
+     "transaction_transaction_date_iso_date": [
+      "2026-02-28T00:00:00Z"
+     ]
+    }
+   ]
+  },
+  "facet_counts": {
+   "facet_queries": {},
+   "facet_fields": {
+    "transaction_transaction_type_code": [
+     "3",
+     111,
+     "2",
+     27,
+     "1",
+     14,
+     "4",
+     3,
+     "0",
+     0,
+     "10",
+     0,
+     "11",
+     0,
+     "12",
+     0,
+     "13",
+     0,
+     "5",
+     0,
+     "6",
+     0,
+     "7",
+     0,
+     "8",
+     0,
+     "9",
+     0,
+     "C",
+     0,
+     "D",
+     0
+    ],
+    "transaction_provider_org_ref": [
+     "47122",
+     34,
+     "KR-GOV-030",
+     14,
+     "KR-GOV-090",
+     4,
+     "GB-CHC-287287",
+     3,
+     "KR-GOV-021",
+     3,
+     "KR-GOV-130",
+     2,
+     "KR-GOV-240",
+     2,
+     "KR-GOV-340",
+     2,
+     "US-EIN-13-5660870",
+     1,
+     "#N/A",
+     0,
+     "*******",
+     0,
+     "-",
+     0,
+     "-NL-KVK-40530953",
+     0,
+     ".",
+     0,
+     "0",
+     0,
+     "00000",
+     0,
+     "00000001",
+     0,
+     "00000017",
+     0,
+     "00000027",
+     0,
+     "000001",
+     0,
+     "00000379",
+     0,
+     "00000390",
+     0,
+     "00000395",
+     0,
+     "00000407",
+     0,
+     "00000734",
+     0,
+     "00001",
+     0,
+     "00001040",
+     0,
+     "000019",
+     0,
+     "00003",
+     0,
+     "00003203",
+     0,
+     "00004",
+     0,
+     "000045",
+     0,
+     "000046",
+     0,
+     "000049",
+     0,
+     "00005",
+     0,
+     "00005482",
+     0,
+     "00005672",
+     0,
+     "000058",
+     0,
+     "000060",
+     0,
+     "000062",
+     0
+    ],
+    "transaction_receiver_org_ref": [
+     "XM-DAC-21000",
+     27,
+     "XM-DAC-41122",
+     17,
+     "NP-COA-370",
+     10,
+     "XM-DAC-928",
+     5,
+     "XM-DAC-22000",
+     3,
+     "XM-DAC-47000",
+     3,
+     "XM-DAC-22502",
+     2,
+     "XM-DAC-41114",
+     2,
+     "XM-DAC-51000",
+     2,
+     "XM-DAC-23000",
+     1,
+     "XM-DAC-41111",
+     1,
+     "XM-DAC-47066",
+     1,
+     "\"Cerere Și Ofertǎ” S.R.L",
+     0,
+     "\"Kerala University of Fisheries and Ocean Studies \"",
+     0,
+     "0",
+     0,
+     "00",
+     0,
+     "000001",
+     0,
+     "00000395",
+     0,
+     "00000402",
+     0,
+     "00000425",
+     0,
+     "00001",
+     0,
+     "00001535",
+     0,
+     "00001677",
+     0,
+     "00001874",
+     0,
+     "00002047",
+     0,
+     "00002082",
+     0,
+     "00002246",
+     0,
+     "00002332",
+     0,
+     "000025",
+     0,
+     "00002955",
+     0,
+     "00003",
+     0,
+     "00003804",
+     0,
+     "00003995",
+     0,
+     "00004325",
+     0,
+     "00004702",
+     0,
+     "00005",
+     0,
+     "00005463",
+     0,
+     "00007",
+     0,
+     "00008",
+     0,
+     "00009188",
+     0
+    ],
+    "transaction_humanitarian": [
+     "true",
+     2,
+     "false",
+     0
+    ]
+   },
+   "facet_ranges": {},
+   "facet_intervals": {},
+   "facet_heatmaps": {}
+  }
+ }
+}

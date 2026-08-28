@@ -1,0 +1,126 @@
+{
+ "retrieved_at": "2026-08-28T12:09:27+00:00",
+ "source": "fts",
+ "data": [
+  {
+   "id": 629,
+   "name": "NEPAL - Earthquake - April 2015",
+   "glideId": "EQ-2015-000048-NPL",
+   "date": "2015-04-25T00:00:00.000Z",
+   "locations": [
+    {
+     "id": 156,
+     "iso3": "NPL",
+     "name": "Nepal",
+     "adminLevel": 0
+    }
+   ],
+   "categories": []
+  },
+  {
+   "id": 24,
+   "name": "NEPAL - Floods and Landslides - August 2000",
+   "glideId": "FL-2000-0476-NPL",
+   "date": "2000-01-01T00:00:00.000Z",
+   "locations": [
+    {
+     "id": 156,
+     "iso3": "NPL",
+     "name": "Nepal",
+     "adminLevel": 0
+    }
+   ],
+   "categories": []
+  },
+  {
+   "id": 150,
+   "name": "NEPAL - Floods and Landslides - July 2002",
+   "glideId": "SL-2002-0428-NPL",
+   "date": "2002-07-16T00:00:00.000Z",
+   "locations": [
+    {
+     "id": 156,
+     "iso3": "NPL",
+     "name": "Nepal",
+     "adminLevel": 0
+    }
+   ],
+   "categories": []
+  },
+  {
+   "id": 214,
+   "name": "NEPAL - Floods and Landslides - July 2003",
+   "glideId": "FL-2003-0341-NPL",
+   "date": "2003-07-01T00:00:00.000Z",
+   "locations": [
+    {
+     "id": 156,
+     "iso3": "NPL",
+     "name": "Nepal",
+     "adminLevel": 0
+    }
+   ],
+   "categories": []
+  },
+  {
+   "id": 249,
+   "name": "NEPAL - Floods and Landslides - July 2004",
+   "glideId": "FL-2004-000051-NPL",
+   "date": "2004-07-13T00:00:00.000Z",
+   "locations": [
+    {
+     "id": 156,
+     "iso3": "NPL",
+     "name": "Nepal",
+     "adminLevel": 0
+    }
+   ],
+   "categories": []
+  },
+  {
+   "id": 350,
+   "name": "NEPAL - Floods - August 2006",
+   "glideId": "FL-2006-000127-NPL",
+   "date": "2006-08-28T00:00:00.000Z",
+   "locations": [
+    {
+     "id": 156,
+     "iso3": "NPL",
+     "name": "Nepal",
+     "adminLevel": 0
+    }
+   ],
+   "categories": []
+  },
+  {
+   "id": 493,
+   "name": "NEPAL - Floods - February 2008",
+   "glideId": "FL-2008-000168-NPL",
+   "date": "2008-02-01T00:00:00.000Z",
+   "locations": [
+    {
+     "id": 156,
+     "iso3": "NPL",
+     "name": "Nepal",
+     "adminLevel": 0
+    }
+   ],
+   "categories": []
+  },
+  {
+   "id": 383,
+   "name": "SOUTH ASIA - Regional Floods - August 2007",
+   "glideId": null,
+   "date": "2007-01-01T00:00:00.000Z",
+   "locations": [
+    {
+     "id": 156,
+     "iso3": "NPL",
+     "name": "Nepal",
+     "adminLevel": 0
+    }
+   ],
+   "categories": []
+  }
+ ]
+}

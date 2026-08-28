@@ -1,0 +1,5028 @@
+{
+ "retrieved_at": "2026-08-28T12:16:11+00:00",
+ "source": "swc",
+ "data": [
+  {
+   "timestamp": "20220111091407",
+   "original": "https://swc.org.np/",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220518084041",
+   "original": "http://www.swc.org.np/?fbclid=IwAR3uxqaW7125GjuRoU8zg1d3lslkNEHI_FvlSoO4jDp-6yxSafnBljZCSqE",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240216152640",
+   "original": "http://www.swc.org.np/?p",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250430111118",
+   "original": "http://www.swc.org.np/?p=222",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220320083527",
+   "original": "http://www.swc.org.np/?p=228",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20231203134737",
+   "original": "http://www.swc.org.np/?p=456",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240216222206",
+   "original": "http://www.swc.org.np/?page_id=150",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240418045645",
+   "original": "https://www.swc.org.np/?page_id=193",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240805194442",
+   "original": "https://www.swc.org.np/?page_id=195",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240804071637",
+   "original": "http://www.swc.org.np/?page_id=195%EF%BC%88",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240803192250",
+   "original": "http://www.swc.org.np/?page_id=195%EF%BC%882016/12/19",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20231117032140",
+   "original": "https://www.swc.org.np/?page_id=203",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250816144219",
+   "original": "http://www.swc.org.np/?page_id=264",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240703093621",
+   "original": "https://www.swc.org.np/?page_id=264%E3%80%82%E4%BB%A5%E5%8A%A0%E5%BE%B7%E6%BB%A1%E9%83%BD",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240703102241",
+   "original": "http://www.swc.org.np/?page_id=264%E3%80%82%E4%BB%A5%E5%8A%A0%E5%BE%B7%E6%BB%A1%E9%83%BDDAO",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220211055053",
+   "original": "http://www.swc.org.np/?page_id=47",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220211055035",
+   "original": "http://www.swc.org.np/?page_id=47%EF%BC%882017/08/18%EF%BC%89Disability",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220705144816",
+   "original": "http://www.swc.org.np/?page_id=47Unrol",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220709050602",
+   "original": "https://swc.org.np/?q=filter/tips/",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220709050542",
+   "original": "https://swc.org.np/?q=user/login/",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220709050616",
+   "original": "https://swc.org.np/?q=user/password/",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127110737",
+   "original": "http://www.swc.org.np/board",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220709050644",
+   "original": "https://swc.org.np/CHANGELOG.txt",
+   "statuscode": "200",
+   "mimetype": "text/plain"
+  },
+  {
+   "timestamp": "20220127103209",
+   "original": "http://swc.org.np/contact",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123095925",
+   "original": "http://swc.org.np/council-members",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127105802",
+   "original": "http://swc.org.np/covid-updates",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123093830",
+   "original": "https://swc.org.np/covid-updates?page=1",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220120085641",
+   "original": "http://www.swc.org.np/downloads",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123094136",
+   "original": "https://swc.org.np/downloads?page=1",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20230127102602",
+   "original": "https://swc.org.np/downloads?page=2",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220709050629",
+   "original": "https://swc.org.np/filter/tips/",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127115429",
+   "original": "http://www.swc.org.np/gallery",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220625081040",
+   "original": "http://www.swc.org.np/index.php",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220709050602",
+   "original": "https://swc.org.np/INSTALL.mysql.txt",
+   "statuscode": "200",
+   "mimetype": "text/plain"
+  },
+  {
+   "timestamp": "20220709050620",
+   "original": "https://swc.org.np/INSTALL.pgsql.txt",
+   "statuscode": "200",
+   "mimetype": "text/plain"
+  },
+  {
+   "timestamp": "20220709050616",
+   "original": "https://swc.org.np/install.php",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220709050546",
+   "original": "https://swc.org.np/INSTALL.sqlite.txt",
+   "statuscode": "200",
+   "mimetype": "text/plain"
+  },
+  {
+   "timestamp": "20220709050644",
+   "original": "https://swc.org.np/INSTALL.txt",
+   "statuscode": "200",
+   "mimetype": "text/plain"
+  },
+  {
+   "timestamp": "20220127103237",
+   "original": "http://www.swc.org.np/jobs",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220709050620",
+   "original": "https://swc.org.np/LICENSE.txt",
+   "statuscode": "200",
+   "mimetype": "text/plain"
+  },
+  {
+   "timestamp": "20220709050917",
+   "original": "https://swc.org.np/MAINTAINERS.txt",
+   "statuscode": "200",
+   "mimetype": "text/plain"
+  },
+  {
+   "timestamp": "20220411040937",
+   "original": "http://swc.org.np/misc/ajax.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220301185508",
+   "original": "http://www.swc.org.np/misc/draggable.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220329155303",
+   "original": "http://swc.org.np/misc/drupal.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220709050914",
+   "original": "https://swc.org.np/misc/drupal.js?0",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220709050804",
+   "original": "https://swc.org.np/misc/favicon.ico",
+   "statuscode": "200",
+   "mimetype": "image/x-icon"
+  },
+  {
+   "timestamp": "20220301185506",
+   "original": "http://www.swc.org.np/misc/grippie.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220709050752",
+   "original": "https://swc.org.np/misc/jquery-extend-3.4.0.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220709050800",
+   "original": "https://swc.org.np/misc/jquery-extend-3.4.0.js?v=1.4.4",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220709050738",
+   "original": "https://swc.org.np/misc/jquery-html-prefilter-3.5.0-backport.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220709050816",
+   "original": "https://swc.org.np/misc/jquery-html-prefilter-3.5.0-backport.js?v=1.4.4",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20241119170105",
+   "original": "http://www.swc.org.np/misc/jquery.cookie.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220709050848",
+   "original": "https://swc.org.np/misc/jquery.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220709050721",
+   "original": "https://swc.org.np/misc/jquery.js?v=1.4.4",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220709050814",
+   "original": "https://swc.org.np/misc/jquery.once.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220709050807",
+   "original": "https://swc.org.np/misc/jquery.once.js?v=1.2",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220301185538",
+   "original": "http://www.swc.org.np/misc/throbber-active.gif",
+   "statuscode": "200",
+   "mimetype": "image/gif"
+  },
+  {
+   "timestamp": "20220301185506",
+   "original": "http://www.swc.org.np/misc/throbber-inactive.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220301185502",
+   "original": "http://www.swc.org.np/misc/tree-bottom.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220301185519",
+   "original": "http://www.swc.org.np/misc/tree.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220401092910",
+   "original": "http://swc.org.np/modules/field/theme/field.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709050456",
+   "original": "http://swc.org.np/modules/file/icons/application-pdf.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20241125131602",
+   "original": "http://www.swc.org.np/modules/file/icons/x-office-document.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220224083427",
+   "original": "https://www.swc.org.np/modules/file/icons/x-office-spreadsheet.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220329155301",
+   "original": "http://swc.org.np/modules/locale/locale.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220411040944",
+   "original": "http://swc.org.np/modules/node/node.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709051229",
+   "original": "https://swc.org.np/modules/system/system.admin.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709050813",
+   "original": "https://swc.org.np/modules/system/system.admin.css?0",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709050712",
+   "original": "https://swc.org.np/modules/system/system.base.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709050718",
+   "original": "https://swc.org.np/modules/system/system.base.css?0",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709051005",
+   "original": "https://swc.org.np/modules/system/system.maintenance.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709050812",
+   "original": "https://swc.org.np/modules/system/system.maintenance.css?0",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709050955",
+   "original": "https://swc.org.np/modules/system/system.menus.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709050820",
+   "original": "https://swc.org.np/modules/system/system.menus.css?0",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709050833",
+   "original": "https://swc.org.np/modules/system/system.messages.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709050739",
+   "original": "https://swc.org.np/modules/system/system.messages.css?0",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709050807",
+   "original": "https://swc.org.np/modules/system/system.theme.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709050818",
+   "original": "https://swc.org.np/modules/system/system.theme.css?0",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220111091455",
+   "original": "https://swc.org.np/ne/",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123085155",
+   "original": "http://swc.org.np/ne/board",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123095640",
+   "original": "http://swc.org.np/ne/contact",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123101148",
+   "original": "https://swc.org.np/ne/council-members",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123084404",
+   "original": "http://swc.org.np/ne/covid-updates",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123101031",
+   "original": "https://swc.org.np/ne/covid-updates?page=1",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123090254",
+   "original": "http://swc.org.np/ne/downloads",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123092906",
+   "original": "https://swc.org.np/ne/downloads?page=1",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250427223540",
+   "original": "http://www.swc.org.np/ne/downloads?page=2",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123100123",
+   "original": "http://swc.org.np/ne/gallery",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123081620",
+   "original": "http://swc.org.np/ne/jobs",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123100832",
+   "original": "http://swc.org.np/ne/node/375",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123084645",
+   "original": "http://swc.org.np/ne/node/377",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123092345",
+   "original": "http://swc.org.np/ne/node/379",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123084445",
+   "original": "http://swc.org.np/ne/node/381",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123091351",
+   "original": "http://swc.org.np/ne/node/393",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123095246",
+   "original": "http://swc.org.np/ne/node/395",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123083229",
+   "original": "http://swc.org.np/ne/node/444",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220518093739",
+   "original": "http://www.swc.org.np/ne/node/472",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123090537",
+   "original": "http://swc.org.np/ne/node/487",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250515220901",
+   "original": "https://www.swc.org.np/ne/node/599",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20230528132831",
+   "original": "http://swc.org.np/ne/node/613",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250515232843",
+   "original": "http://www.swc.org.np/ne/node/617",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622085909",
+   "original": "http://swc.org.np/ne/node/618",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622092210",
+   "original": "http://swc.org.np/ne/node/619",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622075035",
+   "original": "http://swc.org.np/ne/node/620",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622082137",
+   "original": "http://swc.org.np/ne/node/621",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241110161953",
+   "original": "http://www.swc.org.np/ne/node/622",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622090734",
+   "original": "http://swc.org.np/ne/node/623",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220518090249",
+   "original": "http://www.swc.org.np/ne/node?qt-homepagetabsnp=0",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220518090205",
+   "original": "http://www.swc.org.np/ne/node?qt-homepagetabsnp=1",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123090142",
+   "original": "http://swc.org.np/ne/notices",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123083306",
+   "original": "https://swc.org.np/ne/notices?page=1",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250520220703",
+   "original": "https://swc.org.np/ne/notices?page=10",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241203013829",
+   "original": "https://swc.org.np/ne/notices?page=11",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20260113181723",
+   "original": "https://swc.org.np/ne/notices?page=12",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123093058",
+   "original": "https://swc.org.np/ne/notices?page=2",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123082224",
+   "original": "https://swc.org.np/ne/notices?page=3",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123092152",
+   "original": "https://swc.org.np/ne/notices?page=4",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123101554",
+   "original": "https://swc.org.np/ne/notices?page=5",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123090935",
+   "original": "https://swc.org.np/ne/notices?page=6",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123100405",
+   "original": "https://swc.org.np/ne/notices?page=7",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001015708",
+   "original": "http://swc.org.np/ne/notices?page=8",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250520233000",
+   "original": "https://swc.org.np/ne/notices?page=9",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123100026",
+   "original": "https://swc.org.np/ne/pages/321",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123091009",
+   "original": "https://swc.org.np/ne/pages/398",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220517085009",
+   "original": "https://swc.org.np/ne/pages/401",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123081947",
+   "original": "http://swc.org.np/ne/pages/402",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123082039",
+   "original": "http://swc.org.np/ne/pages/403",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001012636",
+   "original": "https://swc.org.np/ne/pages/404",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001013518",
+   "original": "https://swc.org.np/ne/pages/405",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001014434",
+   "original": "https://swc.org.np/ne/pages/406",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001015123",
+   "original": "https://swc.org.np/ne/pages/407",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622091534",
+   "original": "https://swc.org.np/ne/pages/408",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001021344",
+   "original": "https://swc.org.np/ne/pages/409",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001025040",
+   "original": "https://swc.org.np/ne/pages/410",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001030242",
+   "original": "https://swc.org.np/ne/pages/411",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220927231120",
+   "original": "https://www.swc.org.np/ne/pages/412",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001011601",
+   "original": "https://swc.org.np/ne/pages/413",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241203022324",
+   "original": "http://swc.org.np/ne/pages/435",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123083744",
+   "original": "https://swc.org.np/ne/pages/443",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123100055",
+   "original": "http://swc.org.np/ne/pages/452",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127114435",
+   "original": "https://swc.org.np/ne/pages/458",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220517063656",
+   "original": "https://swc.org.np/ne/pages/461",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123082527",
+   "original": "https://swc.org.np/ne/pages/462",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123084121",
+   "original": "https://swc.org.np/ne/pages/463",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123085043",
+   "original": "https://swc.org.np/ne/pages/464",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123085901",
+   "original": "https://swc.org.np/ne/pages/465",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123090725",
+   "original": "https://swc.org.np/ne/pages/466",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220628060949",
+   "original": "https://swc.org.np/ne/pages/467",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220628061958",
+   "original": "https://swc.org.np/ne/pages/468",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220628063010",
+   "original": "https://swc.org.np/ne/pages/469",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220628070130",
+   "original": "https://swc.org.np/ne/pages/470",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220111020402",
+   "original": "https://swc.org.np/ne/pages/474/",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622081651",
+   "original": "https://swc.org.np/ne/pages/483",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220628053749",
+   "original": "https://swc.org.np/ne/pages/484",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123090804",
+   "original": "https://swc.org.np/ne/pages/486",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123090102",
+   "original": "http://swc.org.np/ne/pages/488",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123101056",
+   "original": "https://swc.org.np/ne/pages/490",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123081354",
+   "original": "https://swc.org.np/ne/pages/491",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20260612231210",
+   "original": "http://www.swc.org.np/ne/pages/493",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221203000444",
+   "original": "https://www.swc.org.np/ne/pages/494",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123090017",
+   "original": "https://swc.org.np/ne/pages/495",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123090853",
+   "original": "https://swc.org.np/ne/pages/496",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123091912",
+   "original": "https://swc.org.np/ne/pages/497",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123092822",
+   "original": "https://swc.org.np/ne/pages/498",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622100641",
+   "original": "https://swc.org.np/ne/pages/499",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622092735",
+   "original": "https://swc.org.np/ne/pages/507",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20251007153952",
+   "original": "https://swc.org.np/ne/pages/508",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123095434",
+   "original": "https://swc.org.np/ne/pages/509",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123082349",
+   "original": "https://swc.org.np/ne/pages/510",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123083423",
+   "original": "https://swc.org.np/ne/pages/511",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123084757",
+   "original": "https://swc.org.np/ne/pages/512",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622080743",
+   "original": "http://swc.org.np/ne/pages/513",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622085416",
+   "original": "https://swc.org.np/ne/pages/514",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123091456",
+   "original": "https://swc.org.np/ne/pages/515",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622081116",
+   "original": "http://swc.org.np/ne/pages/516",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622081224",
+   "original": "http://swc.org.np/ne/pages/517",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123083509",
+   "original": "http://swc.org.np/ne/pages/519",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622075524",
+   "original": "https://swc.org.np/ne/pages/520",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622081449",
+   "original": "https://swc.org.np/ne/pages/521",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622084526",
+   "original": "http://swc.org.np/ne/pages/524",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221205144422",
+   "original": "https://swc.org.np/ne/pages/525",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622084719",
+   "original": "http://swc.org.np/ne/pages/526",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622090201",
+   "original": "http://swc.org.np/ne/pages/537",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622090244",
+   "original": "http://swc.org.np/ne/pages/538",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622090346",
+   "original": "http://swc.org.np/ne/pages/539",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127112711",
+   "original": "http://www.swc.org.np/ne/pages/540",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221205134950",
+   "original": "https://swc.org.np/ne/pages/541",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127122630",
+   "original": "http://www.swc.org.np/ne/pages/542",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622085014",
+   "original": "https://swc.org.np/ne/pages/543",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622085553",
+   "original": "https://swc.org.np/ne/pages/544",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123093407",
+   "original": "http://swc.org.np/ne/pages/546",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622092607",
+   "original": "http://swc.org.np/ne/pages/547",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250520232249",
+   "original": "https://swc.org.np/ne/pages/548",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250520233252",
+   "original": "https://swc.org.np/ne/pages/549",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250520215937",
+   "original": "https://swc.org.np/ne/pages/550",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127104946",
+   "original": "http://www.swc.org.np/ne/pages/551",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123084928",
+   "original": "https://swc.org.np/ne/pages/552",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123085750",
+   "original": "https://swc.org.np/ne/pages/553",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123090614",
+   "original": "https://swc.org.np/ne/pages/554",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250520224755",
+   "original": "https://swc.org.np/ne/pages/555",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123094547",
+   "original": "https://swc.org.np/ne/pages/558",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123095709",
+   "original": "https://swc.org.np/ne/pages/559",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123082438",
+   "original": "https://swc.org.np/ne/pages/560",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123083956",
+   "original": "https://swc.org.np/ne/pages/561",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123085006",
+   "original": "https://swc.org.np/ne/pages/562",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123085825",
+   "original": "https://swc.org.np/ne/pages/563",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123090649",
+   "original": "https://swc.org.np/ne/pages/564",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123091654",
+   "original": "https://swc.org.np/ne/pages/565",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123092633",
+   "original": "https://swc.org.np/ne/pages/566",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123093752",
+   "original": "https://swc.org.np/ne/pages/567",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20251212103923",
+   "original": "http://swc.org.np/ne/pages/568",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123095739",
+   "original": "https://swc.org.np/ne/pages/569",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123082611",
+   "original": "https://swc.org.np/ne/pages/570",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123084210",
+   "original": "https://swc.org.np/ne/pages/571",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123091731",
+   "original": "https://swc.org.np/ne/pages/575",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123092707",
+   "original": "https://swc.org.np/ne/pages/576",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123082740",
+   "original": "https://swc.org.np/ne/pages/580",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220518085817",
+   "original": "http://www.swc.org.np/ne/pages/583",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220518092914",
+   "original": "http://www.swc.org.np/ne/pages/584",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001012958",
+   "original": "http://swc.org.np/ne/pages/585",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220625083424",
+   "original": "http://www.swc.org.np/ne/pages/586",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001013156",
+   "original": "http://swc.org.np/ne/pages/587",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001013238",
+   "original": "http://swc.org.np/ne/pages/588",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220625080021",
+   "original": "http://www.swc.org.np/ne/pages/589",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220628051609",
+   "original": "https://swc.org.np/ne/pages/590",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001012108",
+   "original": "https://swc.org.np/ne/pages/591",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001014824",
+   "original": "http://swc.org.np/ne/pages/592",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001014902",
+   "original": "http://swc.org.np/ne/pages/593",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20230209100403",
+   "original": "http://www.swc.org.np/ne/pages/594",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001015013",
+   "original": "http://swc.org.np/ne/pages/598",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240304235624",
+   "original": "https://www.swc.org.np/ne/pages/600",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305005720",
+   "original": "https://www.swc.org.np/ne/pages/601",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305015232",
+   "original": "https://www.swc.org.np/ne/pages/602",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240713062721",
+   "original": "https://swc.org.np/ne/pages/603",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250427231008",
+   "original": "http://www.swc.org.np/ne/pages/614",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305002925",
+   "original": "https://www.swc.org.np/ne/pages/615",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622082459",
+   "original": "http://swc.org.np/ne/pages/625",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622082531",
+   "original": "http://swc.org.np/ne/pages/626",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250209080059",
+   "original": "https://www.swc.org.np/ne/pages/627",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622082634",
+   "original": "http://swc.org.np/ne/pages/628",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241110225631",
+   "original": "https://swc.org.np/ne/pages/629",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305014046",
+   "original": "https://www.swc.org.np/ne/pages/630",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305011207",
+   "original": "https://www.swc.org.np/ne/pages/632",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240304051322",
+   "original": "https://swc.org.np/ne/pages/634",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240304053555",
+   "original": "https://swc.org.np/ne/pages/636",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305011310",
+   "original": "https://www.swc.org.np/ne/pages/637",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240304233613",
+   "original": "https://www.swc.org.np/ne/pages/638",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305004511",
+   "original": "https://www.swc.org.np/ne/pages/639",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240304042308",
+   "original": "https://swc.org.np/ne/pages/640",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240423173325",
+   "original": "http://www.swc.org.np/ne/pages/642",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622090558",
+   "original": "https://swc.org.np/ne/pages/643",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240713064404",
+   "original": "https://swc.org.np/ne/pages/644",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240713070116",
+   "original": "https://swc.org.np/ne/pages/645",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240713071134",
+   "original": "https://swc.org.np/ne/pages/646",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240713072621",
+   "original": "https://swc.org.np/ne/pages/647",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241012043302",
+   "original": "http://www.swc.org.np/ne/pages/648",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241012023021",
+   "original": "http://www.swc.org.np/ne/pages/649",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241012033048",
+   "original": "http://www.swc.org.np/ne/pages/650",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241012041214",
+   "original": "http://www.swc.org.np/ne/pages/651",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241012044009",
+   "original": "http://www.swc.org.np/ne/pages/652",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241110214617",
+   "original": "https://swc.org.np/ne/pages/653",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241110220606",
+   "original": "https://swc.org.np/ne/pages/654",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241110222237",
+   "original": "https://swc.org.np/ne/pages/655",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250209090711",
+   "original": "http://www.swc.org.np/ne/pages/656",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250209073118",
+   "original": "http://www.swc.org.np/ne/pages/657",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250321035528",
+   "original": "https://www.swc.org.np/ne/pages/658",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250321044334",
+   "original": "https://www.swc.org.np/ne/pages/659",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250427231559",
+   "original": "https://www.swc.org.np/ne/pages/660",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250622085104",
+   "original": "https://swc.org.np/ne/pages/661",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20251016090506",
+   "original": "https://www.swc.org.np/ne/pages/663",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250916170143",
+   "original": "https://swc.org.np/ne/pages/664",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20260113190718",
+   "original": "https://swc.org.np/ne/pages/665",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20260113191734",
+   "original": "https://swc.org.np/ne/pages/666",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20230701155600",
+   "original": "https://www.swc.org.np/ne/rss.xml",
+   "statuscode": "200",
+   "mimetype": "application/rss+xml"
+  },
+  {
+   "timestamp": "20251016173547",
+   "original": "http://www.swc.org.np/ngo/anna",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20230606155617",
+   "original": "http://www.swc.org.np/ngo/anna?ngoaff=34660",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305005622",
+   "original": "http://www.swc.org.np/node?page_id=47&qt-homepagetabs=0",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305011723",
+   "original": "http://www.swc.org.np/node?page_id=47&qt-homepagetabs=1",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123091424",
+   "original": "http://swc.org.np/node?qt-homepagetabs=0",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123095509",
+   "original": "http://swc.org.np/node?qt-homepagetabs=1",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127112416",
+   "original": "http://swc.org.np/notices",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123083150",
+   "original": "https://swc.org.np/notices?page=1",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241110155108",
+   "original": "https://www.swc.org.np/notices?page=10",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241110141104",
+   "original": "https://www.swc.org.np/notices?page=11",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20260120213622",
+   "original": "https://www.swc.org.np/notices?page=12",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123093519",
+   "original": "https://swc.org.np/notices?page=2",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123083022",
+   "original": "https://swc.org.np/notices?page=3",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123093244",
+   "original": "https://swc.org.np/notices?page=4",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123082941",
+   "original": "https://swc.org.np/notices?page=5",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123093130",
+   "original": "https://swc.org.np/notices?page=6",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123082905",
+   "original": "https://swc.org.np/notices?page=7",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220820054849",
+   "original": "https://www.swc.org.np/notices?page=8",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305012301",
+   "original": "https://www.swc.org.np/notices?page=9",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123094327",
+   "original": "https://swc.org.np/pages/321",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127105723",
+   "original": "http://swc.org.np/pages/345",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127112810",
+   "original": "http://swc.org.np/pages/346",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127114745",
+   "original": "http://www.swc.org.np/pages/347",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127115913",
+   "original": "http://www.swc.org.np/pages/348",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127110411",
+   "original": "http://www.swc.org.np/pages/353",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127110001",
+   "original": "http://swc.org.np/pages/375",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127114851",
+   "original": "http://www.swc.org.np/pages/377",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127104551",
+   "original": "http://swc.org.np/pages/379",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123090332",
+   "original": "http://swc.org.np/pages/381",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127104630",
+   "original": "http://swc.org.np/pages/389",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127104333",
+   "original": "http://www.swc.org.np/pages/391",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127104934",
+   "original": "https://swc.org.np/pages/393",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123085236",
+   "original": "http://swc.org.np/pages/395",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123092946",
+   "original": "http://swc.org.np/pages/400",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20230127102734",
+   "original": "https://swc.org.np/pages/417",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20230127101555",
+   "original": "https://swc.org.np/pages/419",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123091803",
+   "original": "http://swc.org.np/pages/424",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123091044",
+   "original": "https://swc.org.np/pages/426",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305004034",
+   "original": "https://www.swc.org.np/pages/427",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220518103143",
+   "original": "http://www.swc.org.np/pages/428",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220518104257",
+   "original": "http://www.swc.org.np/pages/429",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220518090332",
+   "original": "http://www.swc.org.np/pages/430",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123082306",
+   "original": "http://swc.org.np/pages/432",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20230127115649",
+   "original": "https://swc.org.np/pages/433",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123091947",
+   "original": "http://swc.org.np/pages/434",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20230127114230",
+   "original": "https://swc.org.np/pages/435",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127115804",
+   "original": "http://www.swc.org.np/pages/436",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20230127112721",
+   "original": "https://swc.org.np/pages/437",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127121723",
+   "original": "http://www.swc.org.np/pages/438",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20230127111109",
+   "original": "https://swc.org.np/pages/439",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20230127103128",
+   "original": "https://swc.org.np/pages/441",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127103453",
+   "original": "http://swc.org.np/pages/442",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123082133",
+   "original": "https://swc.org.np/pages/443",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127113654",
+   "original": "http://swc.org.np/pages/444",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123101505",
+   "original": "http://swc.org.np/pages/446",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123091240",
+   "original": "https://swc.org.np/pages/450",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123083701",
+   "original": "https://swc.org.np/pages/455",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127115310",
+   "original": "http://swc.org.np/pages/459",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220928011622",
+   "original": "https://www.swc.org.np/pages/460",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123093204",
+   "original": "https://swc.org.np/pages/461",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123082652",
+   "original": "http://swc.org.np/pages/472",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123092308",
+   "original": "http://swc.org.np/pages/474",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20260208204502",
+   "original": "https://www.swc.org.np/pages/475",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220928003740",
+   "original": "https://www.swc.org.np/pages/481",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220928004436",
+   "original": "https://www.swc.org.np/pages/483",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220517083936",
+   "original": "https://swc.org.np/pages/484",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123095038",
+   "original": "https://swc.org.np/pages/486",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127120939",
+   "original": "http://www.swc.org.np/pages/487",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123093707",
+   "original": "http://swc.org.np/pages/490",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123085435",
+   "original": "https://swc.org.np/pages/491",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220709050624",
+   "original": "https://swc.org.np/pages/493",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220927234651",
+   "original": "https://www.swc.org.np/pages/494",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123095112",
+   "original": "http://swc.org.np/pages/495",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123101822",
+   "original": "https://swc.org.np/pages/496",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123101238",
+   "original": "https://swc.org.np/pages/497",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123100433",
+   "original": "https://swc.org.np/pages/498",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001023705",
+   "original": "https://swc.org.np/pages/499",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220709050441",
+   "original": "https://swc.org.np/pages/506",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001025313",
+   "original": "https://swc.org.np/pages/507",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001024418",
+   "original": "https://swc.org.np/pages/508",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123095611",
+   "original": "https://swc.org.np/pages/509",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123092431",
+   "original": "https://swc.org.np/pages/510",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123092030",
+   "original": "https://swc.org.np/pages/511",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123091118",
+   "original": "https://swc.org.np/pages/512",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001014248",
+   "original": "https://swc.org.np/pages/513",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220709050414",
+   "original": "https://swc.org.np/pages/514",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123084720",
+   "original": "http://swc.org.np/pages/515",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241110160023",
+   "original": "https://www.swc.org.np/pages/516",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001011513",
+   "original": "https://swc.org.np/pages/517",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123100758",
+   "original": "http://swc.org.np/pages/518",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127103519",
+   "original": "http://www.swc.org.np/pages/519",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001023409",
+   "original": "https://swc.org.np/pages/520",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220709050416",
+   "original": "https://swc.org.np/pages/521",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001020133",
+   "original": "https://swc.org.np/pages/524",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001015405",
+   "original": "https://swc.org.np/pages/525",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001014938",
+   "original": "https://swc.org.np/pages/526",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001020831",
+   "original": "https://swc.org.np/pages/537",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001015904",
+   "original": "https://swc.org.np/pages/538",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001015258",
+   "original": "https://swc.org.np/pages/539",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220111011415",
+   "original": "https://www.swc.org.np/pages/540",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001012353",
+   "original": "https://swc.org.np/pages/541",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220518095035",
+   "original": "http://www.swc.org.np/pages/542",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220709050541",
+   "original": "http://swc.org.np/pages/543",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001004655",
+   "original": "https://swc.org.np/pages/544",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220127121753",
+   "original": "http://www.swc.org.np/pages/546",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001023849",
+   "original": "https://swc.org.np/pages/547",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220709050411",
+   "original": "http://swc.org.np/pages/548",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220709050440",
+   "original": "https://swc.org.np/pages/549",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220820051753",
+   "original": "http://www.swc.org.np/pages/550",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220518093934",
+   "original": "http://www.swc.org.np/pages/551",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123090219",
+   "original": "https://swc.org.np/pages/552",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123085402",
+   "original": "https://swc.org.np/pages/553",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123084609",
+   "original": "https://swc.org.np/pages/554",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221001011859",
+   "original": "https://swc.org.np/pages/555",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123101735",
+   "original": "https://swc.org.np/pages/558",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123101123",
+   "original": "https://swc.org.np/pages/559",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123093937",
+   "original": "https://swc.org.np/pages/560",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123093444",
+   "original": "https://swc.org.np/pages/561",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123092518",
+   "original": "https://swc.org.np/pages/562",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123092113",
+   "original": "https://swc.org.np/pages/563",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123091158",
+   "original": "https://swc.org.np/pages/564",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123090459",
+   "original": "https://swc.org.np/pages/565",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123085936",
+   "original": "https://swc.org.np/pages/566",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220517081433",
+   "original": "http://swc.org.np/pages/567",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123101329",
+   "original": "http://swc.org.np/pages/568",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123083915",
+   "original": "http://swc.org.np/pages/569",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123083549",
+   "original": "http://swc.org.np/pages/570",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123090415",
+   "original": "http://swc.org.np/pages/571",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123085322",
+   "original": "http://swc.org.np/pages/575",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123091841",
+   "original": "http://swc.org.np/pages/576",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123083106",
+   "original": "https://swc.org.np/pages/580",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123101441",
+   "original": "https://swc.org.np/pages/583",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220123100725",
+   "original": "https://swc.org.np/pages/584",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220820061017",
+   "original": "http://www.swc.org.np/pages/585",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220517082252",
+   "original": "https://swc.org.np/pages/586",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220517081511",
+   "original": "https://swc.org.np/pages/587",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220517080729",
+   "original": "https://swc.org.np/pages/588",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220517080208",
+   "original": "https://swc.org.np/pages/589",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220517072634",
+   "original": "https://swc.org.np/pages/590",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220517071810",
+   "original": "https://swc.org.np/pages/591",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220625075801",
+   "original": "http://www.swc.org.np/pages/592",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220625080718",
+   "original": "http://www.swc.org.np/pages/593",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221205134253",
+   "original": "https://swc.org.np/pages/594",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220816170315",
+   "original": "https://swc.org.np/pages/598",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221205153607",
+   "original": "https://swc.org.np/pages/599",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220928001018",
+   "original": "http://www.swc.org.np/pages/600",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220928002104",
+   "original": "http://www.swc.org.np/pages/601",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220928003322",
+   "original": "http://www.swc.org.np/pages/602",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220928004357",
+   "original": "http://www.swc.org.np/pages/603",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20221205143048",
+   "original": "https://swc.org.np/pages/613",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241203015703",
+   "original": "https://swc.org.np/pages/614",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20230528122641",
+   "original": "https://swc.org.np/pages/616",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240304235327",
+   "original": "http://www.swc.org.np/pages/617",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305000802",
+   "original": "http://www.swc.org.np/pages/618",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305002056",
+   "original": "http://www.swc.org.np/pages/619",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305010004",
+   "original": "http://www.swc.org.np/pages/620",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305011116",
+   "original": "http://www.swc.org.np/pages/621",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305012400",
+   "original": "http://www.swc.org.np/pages/622",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305013717",
+   "original": "http://www.swc.org.np/pages/623",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305014329",
+   "original": "http://www.swc.org.np/pages/624",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20230701143954",
+   "original": "https://www.swc.org.np/pages/625",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305015112",
+   "original": "https://www.swc.org.np/pages/626",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305004116",
+   "original": "https://www.swc.org.np/pages/627",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305015626",
+   "original": "https://www.swc.org.np/pages/628",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20231130071246",
+   "original": "https://swc.org.np/pages/629",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20231130063611",
+   "original": "https://swc.org.np/pages/630",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20231130084239",
+   "original": "https://swc.org.np/pages/632",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20231130082706",
+   "original": "https://swc.org.np/pages/634",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240305015506",
+   "original": "http://www.swc.org.np/pages/635",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20231130081222",
+   "original": "https://swc.org.np/pages/636",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20231130080245",
+   "original": "https://swc.org.np/pages/637",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20231130075509",
+   "original": "https://swc.org.np/pages/638",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240304050238",
+   "original": "https://swc.org.np/pages/639",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240304040300",
+   "original": "https://swc.org.np/pages/642",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240304035040",
+   "original": "https://swc.org.np/pages/643",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240304034025",
+   "original": "https://swc.org.np/pages/644",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20240304060608",
+   "original": "https://swc.org.np/pages/645",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250427220850",
+   "original": "https://www.swc.org.np/pages/646",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241203030151",
+   "original": "https://swc.org.np/pages/647",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241203025412",
+   "original": "https://swc.org.np/pages/648",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241203024803",
+   "original": "https://swc.org.np/pages/649",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241013164831",
+   "original": "https://swc.org.np/pages/650",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241013163950",
+   "original": "https://swc.org.np/pages/651",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241013163117",
+   "original": "https://swc.org.np/pages/652",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241013162250",
+   "original": "https://swc.org.np/pages/653",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241013161449",
+   "original": "https://swc.org.np/pages/654",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20241013160346",
+   "original": "https://swc.org.np/pages/655",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250209070459",
+   "original": "http://www.swc.org.np/pages/656",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250206115515",
+   "original": "https://swc.org.np/pages/657",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250206135919",
+   "original": "https://swc.org.np/pages/658",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250321032354",
+   "original": "http://www.swc.org.np/pages/659",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250324101107",
+   "original": "https://swc.org.np/pages/660",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250515225007",
+   "original": "https://www.swc.org.np/pages/661",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250812152634",
+   "original": "https://swc.org.np/pages/663",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20250812151837",
+   "original": "https://swc.org.np/pages/664",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20260120215805",
+   "original": "https://www.swc.org.np/pages/665",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20251016145703",
+   "original": "https://www.swc.org.np/pages/666",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20260612231419",
+   "original": "http://www.swc.org.np/pages/667",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20260613001055",
+   "original": "http://www.swc.org.np/pages/671",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20260613001933",
+   "original": "http://www.swc.org.np/pages/672",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20260613003041",
+   "original": "http://www.swc.org.np/pages/674",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20260613003747",
+   "original": "http://www.swc.org.np/pages/675",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20260612230443",
+   "original": "http://www.swc.org.np/pages/676",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20260612232154",
+   "original": "http://www.swc.org.np/pages/678",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220319224905",
+   "original": "http://www.swc.org.np/robots.txt",
+   "statuscode": "200",
+   "mimetype": "text/plain"
+  },
+  {
+   "timestamp": "20220404030426",
+   "original": "https://www.swc.org.np/rss.xml",
+   "statuscode": "200",
+   "mimetype": "application/rss+xml"
+  },
+  {
+   "timestamp": "20220111174105",
+   "original": "https://www.swc.org.np/sites/all/modules/admin_menu/admin_devel/admin_devel.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220301185514",
+   "original": "http://www.swc.org.np/sites/all/modules/back_to_top/backtotop.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220301185509",
+   "original": "http://www.swc.org.np/sites/all/modules/back_to_top/backtotop2x.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220111221540",
+   "original": "https://www.swc.org.np/sites/all/modules/back_to_top/css/back_to_top.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220111174116",
+   "original": "https://www.swc.org.np/sites/all/modules/back_to_top/js/back_to_top.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220301185621",
+   "original": "http://www.swc.org.np/sites/all/modules/ctools/images/status-active.gif",
+   "statuscode": "200",
+   "mimetype": "image/gif"
+  },
+  {
+   "timestamp": "20241119170059",
+   "original": "http://www.swc.org.np/sites/all/modules/fb_likebox/fb_likebox.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220111174053",
+   "original": "https://www.swc.org.np/sites/all/modules/jquery_update/js/jquery_update.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220119092004",
+   "original": "https://swc.org.np/sites/all/modules/jquery_update/replace/jquery-migrate/3/jquery-migrate.min.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20241119170103",
+   "original": "http://www.swc.org.np/sites/all/modules/jquery_update/replace/jquery.form/4/jquery.form.min.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220119041413",
+   "original": "https://swc.org.np/sites/all/modules/jquery_update/replace/jquery/3.1/jquery.min.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20241119170057",
+   "original": "http://www.swc.org.np/sites/all/modules/jquery_update/replace/ui/external/jquery.cookie.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220301185450",
+   "original": "http://www.swc.org.np/sites/all/modules/jquery_update/replace/ui/themes/base/minified/images/ui-bg_flat_0_aaaaaa_40x100.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220301185456",
+   "original": "http://www.swc.org.np/sites/all/modules/jquery_update/replace/ui/themes/base/minified/images/ui-bg_flat_75_ffffff_40x100.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220301185511",
+   "original": "http://www.swc.org.np/sites/all/modules/jquery_update/replace/ui/themes/base/minified/images/ui-bg_glass_55_fbf9ee_1x400.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220301185526",
+   "original": "http://www.swc.org.np/sites/all/modules/jquery_update/replace/ui/themes/base/minified/images/ui-bg_glass_65_ffffff_1x400.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220301185454",
+   "original": "http://www.swc.org.np/sites/all/modules/jquery_update/replace/ui/themes/base/minified/images/ui-bg_glass_75_dadada_1x400.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220301185512",
+   "original": "http://www.swc.org.np/sites/all/modules/jquery_update/replace/ui/themes/base/minified/images/ui-bg_glass_75_e6e6e6_1x400.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220301185526",
+   "original": "http://www.swc.org.np/sites/all/modules/jquery_update/replace/ui/themes/base/minified/images/ui-bg_glass_95_fef1ec_1x400.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220301185450",
+   "original": "http://www.swc.org.np/sites/all/modules/jquery_update/replace/ui/themes/base/minified/images/ui-bg_highlight-soft_75_cccccc_1x100.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220301185459",
+   "original": "http://www.swc.org.np/sites/all/modules/jquery_update/replace/ui/themes/base/minified/images/ui-icons_222222_256x240.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220301185451",
+   "original": "http://www.swc.org.np/sites/all/modules/jquery_update/replace/ui/themes/base/minified/images/ui-icons_2e83ff_256x240.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220301185527",
+   "original": "http://www.swc.org.np/sites/all/modules/jquery_update/replace/ui/themes/base/minified/images/ui-icons_454545_256x240.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220301185458",
+   "original": "http://www.swc.org.np/sites/all/modules/jquery_update/replace/ui/themes/base/minified/images/ui-icons_888888_256x240.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220301185450",
+   "original": "http://www.swc.org.np/sites/all/modules/jquery_update/replace/ui/themes/base/minified/images/ui-icons_cd0a0a_256x240.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220216093205",
+   "original": "http://swc.org.np/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery-ui.min.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220112055641",
+   "original": "https://www.swc.org.np/sites/all/modules/languageicons/flags/en.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220112055714",
+   "original": "https://www.swc.org.np/sites/all/modules/languageicons/flags/ne.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220119215809",
+   "original": "https://www.swc.org.np/sites/all/modules/popup_message/js/popup.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220120085136",
+   "original": "https://www.swc.org.np/sites/all/modules/popup_message/styles/default/popup.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220606182612",
+   "original": "http://swc.org.np/sites/all/modules/quicktabs/css/quicktabs.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20241119170102",
+   "original": "http://www.swc.org.np/sites/all/modules/quicktabs/js/quicktabs.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220318045622",
+   "original": "http://swc.org.np/sites/all/modules/quicktabs/quicktabs_tabstyles/tabstyles/garland/garland.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220301185612",
+   "original": "http://www.swc.org.np/sites/all/modules/quicktabs/quicktabs_tabstyles/tabstyles/garland/images/bg.gif",
+   "statuscode": "200",
+   "mimetype": "image/gif"
+  },
+  {
+   "timestamp": "20220301185636",
+   "original": "http://www.swc.org.np/sites/all/modules/quicktabs/quicktabs_tabstyles/tabstyles/garland/images/tab-left-sidebar.gif",
+   "statuscode": "200",
+   "mimetype": "image/gif"
+  },
+  {
+   "timestamp": "20220301185618",
+   "original": "http://www.swc.org.np/sites/all/modules/quicktabs/quicktabs_tabstyles/tabstyles/garland/images/tab-left.gif",
+   "statuscode": "200",
+   "mimetype": "image/gif"
+  },
+  {
+   "timestamp": "20220301185608",
+   "original": "http://www.swc.org.np/sites/all/modules/quicktabs/quicktabs_tabstyles/tabstyles/garland/images/tab-right-sidebar.gif",
+   "statuscode": "200",
+   "mimetype": "image/gif"
+  },
+  {
+   "timestamp": "20220301185605",
+   "original": "http://www.swc.org.np/sites/all/modules/quicktabs/quicktabs_tabstyles/tabstyles/garland/images/tab-right.gif",
+   "statuscode": "200",
+   "mimetype": "image/gif"
+  },
+  {
+   "timestamp": "20220112055607",
+   "original": "https://www.swc.org.np/sites/all/modules/responsive_menus/styles/responsive_menus_simple/css/responsive_menus_simple.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220111174211",
+   "original": "https://www.swc.org.np/sites/all/modules/responsive_menus/styles/responsive_menus_simple/js/responsive_menus_simple.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220903204514",
+   "original": "http://swc.org.np/sites/all/modules/views/css/views.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20241119170053",
+   "original": "http://www.swc.org.np/sites/all/modules/views/js/ajax_view.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20241119170058",
+   "original": "http://www.swc.org.np/sites/all/modules/views/js/base.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20241119170059",
+   "original": "http://www.swc.org.np/sites/all/modules/views_ticker/js/jquery.liscroller.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20241119170104",
+   "original": "http://www.swc.org.np/sites/all/themes/bootstrap/js/bootstrap.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20241119170108",
+   "original": "http://www.swc.org.np/sites/all/themes/bootstrap/js/misc/_progress.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220903203841",
+   "original": "http://swc.org.np/sites/all/themes/bootstrap/js/misc/ajax.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220903203842",
+   "original": "http://swc.org.np/sites/all/themes/bootstrap/js/modules/views/js/ajax_view.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220112055626",
+   "original": "https://www.swc.org.np/sites/all/themes/boss/css/style.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220301185511",
+   "original": "http://www.swc.org.np/sites/all/themes/boss/images/gradient-down.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220301185511",
+   "original": "http://www.swc.org.np/sites/all/themes/boss/images/gradient-up.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20240326235816",
+   "original": "http://swc.org.np/sites/default/files/19/%E0%A4%96%E0%A4%B8%E0%A5%80%20%E0%A4%AC%E0%A4%9C%E0%A4%BE%E0%A4%B0.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240327084712",
+   "original": "http://swc.org.np/sites/default/files/19/%E0%A4%AC%E0%A4%BE%E0%A4%B2%20%E0%A4%89%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A8.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20230417181605",
+   "original": "https://swc.org.np/sites/default/files/19/%E0%A4%B0%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%AF%20%E0%A4%A4%E0%A4%A5%E0%A4%BE%20%E0%A4%85%E0%A4%A8%E0%A5%8D%E0%A4%A4%E0%A4%B0%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%AF%20%E0%A4%97%E0%A5%88%E0%A4%B0%20%E0%A4%B8%E0%A4%B0%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80%20%E0%A4%B8%E0%A4%82%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A4%BE%E0%A4%B2%E0%A4%BE%E0%A4%88%20%E0%A4%9C%E0%A4%B0%E0%A5%81%E0%A4%B0%E0%A5%80%20%E0%A4%B8%E0%A5%82%E0%A4%9A%E0%A4%A8%E0%A4%BE%20%E0%A4%AE%E0%A4%BE%E0%A4%98%20%E0%A5%A7%E0%A5%A9.PNG",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20260122063753",
+   "original": "https://swc.org.np/sites/default/files/19/%E0%A4%B5%E0%A4%BF%E0%A4%AA%E0%A4%A6%20%E0%A4%89%E0%A4%A6%E0%A5%8D%E0%A4%A6%E0%A4%BE%E0%A4%B0%20%E0%A4%B8%E0%A5%82%E0%A4%9A%E0%A4%A8%E0%A4%BE.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20250914140733",
+   "original": "https://swc.org.np/sites/default/files/19/%E0%A4%B5%E0%A4%BF%E0%A4%AA%E0%A4%A6%E0%A5%8D%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A4%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF,%20%E0%A4%89%E0%A4%A6%E0%A5%8D%E0%A4%A6%E0%A4%BE%E0%A4%B0,%20%E0%A4%B0%E0%A4%BE%E0%A4%B9%E0%A4%A4%20%E0%A4%A4%E0%A4%A5%E0%A4%BE%20%E0%A4%AA%E0%A5%81%E0%A4%A8%E0%A4%B0%E0%A5%8D%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A4%BE%E0%A4%AA%E0%A4%A8%E0%A4%BE%20%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%AC%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A4%AE%E0%A4%BE%20%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D%E0%A4%95%E0%A5%8B%20%E0%A4%85%E0%A4%A8%E0%A5%81%E0%A4%B0%E0%A5%8B%E0%A4%A7%20%E0%A4%B8%E0%A4%95%E0%A4%AA%20%E0%A5%A8%E0%A5%A6%E0%A5%AE%E0%A5%A8.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20240304053408",
+   "original": "https://swc.org.np/sites/default/files/19/2080.04.17%20updated%20telephone%20list.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20251127214029",
+   "original": "https://swc.org.np/sites/default/files/19/Affilation%20Section%20Notice.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220307092305",
+   "original": "http://swc.org.np/sites/default/files/19/Asset%206.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220120083539",
+   "original": "https://swc.org.np/sites/default/files/19/bipad.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20230702055345",
+   "original": "https://www.swc.org.np/sites/default/files/19/bolpatra%202080-02-25.PNG",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20251016181301",
+   "original": "https://swc.org.np/sites/default/files/19/Fact%20Sheet_Expert_SWC.xlsx",
+   "statuscode": "200",
+   "mimetype": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+  },
+  {
+   "timestamp": "20240305002604",
+   "original": "https://www.swc.org.np/sites/default/files/19/Guideline%20for%20Quarterly%20Financial%20Report-INGO.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240305005340",
+   "original": "http://www.swc.org.np/sites/default/files/19/Guideline%20for%20Quarterly%20Financial%20Report-NGO.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20230417181907",
+   "original": "http://swc.org.np/sites/default/files/19/INVITATION%2043rd%20Social%20Service%20Day.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20260513102013",
+   "original": "https://swc.org.np/sites/default/files/19/iPact%20Notice%20Revised.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220224083254",
+   "original": "http://swc.org.np/sites/default/files/19/mental%20health_Nepali.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220224082642",
+   "original": "http://swc.org.np/sites/default/files/19/National%20Rehabilitation%20Conclave-2077_.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20240228132521",
+   "original": "http://swc.org.np/sites/default/files/19/NGOs-affiliated-with-SWC-%20upto%20F.Y.%202075_76.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20251127214157",
+   "original": "https://swc.org.np/sites/default/files/19/notice%20-swc-2080-03-05.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20260429095154",
+   "original": "https://www.swc.org.np/sites/default/files/19/notice%202079-12-17%20swc.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20230608074419",
+   "original": "https://swc.org.np/sites/default/files/19/notice%2080-%2001-10.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20230701162212",
+   "original": "https://swc.org.np/sites/default/files/19/notice%20for%20e-bidding.PNG",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20251008052409",
+   "original": "https://swc.org.np/sites/default/files/19/notice%20Nirnaye.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20230417181142",
+   "original": "https://www.swc.org.np/sites/default/files/19/notice%20swc%202079-08-08.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20250307230048",
+   "original": "https://swc.org.np/sites/default/files/19/Notice_SWC_Emergency.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20241126025823",
+   "original": "http://www.swc.org.np/sites/default/files/19/Quarterly%20Financial%20Report%E2%80%99s%20Format%20INGO.xlsx",
+   "statuscode": "200",
+   "mimetype": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+  },
+  {
+   "timestamp": "20241125120807",
+   "original": "https://www.swc.org.np/sites/default/files/19/Quarterly%20Financial%20Report%E2%80%99s%20Format%20NGO.xlsx",
+   "statuscode": "200",
+   "mimetype": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+  },
+  {
+   "timestamp": "20230702105243",
+   "original": "https://www.swc.org.np/sites/default/files/19/Staff%20updated%20telephone%20list%20079.06.26.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240423183414",
+   "original": "https://www.swc.org.np/sites/default/files/19/SWC%20Annual%20Report%202080.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20250622080310",
+   "original": "https://swc.org.np/sites/default/files/19/SWC%20contact%20details%202082.01.19.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240713054313",
+   "original": "https://swc.org.np/sites/default/files/19/SWC%20EoI%202081.02.24.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240715073456",
+   "original": "https://swc.org.np/sites/default/files/19/SWC%20Meeting%20Notice%202080-08-13.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20251030105134",
+   "original": "https://swc.org.np/sites/default/files/19/SWC%20notice.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20250504132344",
+   "original": "https://swc.org.np/sites/default/files/19/SWC%20Staff%20contact%20details%202081.01.31.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20250427094249",
+   "original": "https://swc.org.np/sites/default/files/19/SWC%20Staff%20Contact%20Details%202081.06.29.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20250812151049",
+   "original": "https://swc.org.np/sites/default/files/19/SWC%20Staff%20contact%20details%202082.03.17..pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123094400",
+   "original": "http://swc.org.np/sites/default/files/19/SWC%20Staff%20Contact%20Information%202078_06_24.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220517073859",
+   "original": "http://swc.org.np/sites/default/files/19/SWC%20Staff%20Contact%20Information%202078_08_22.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20221001024935",
+   "original": "http://swc.org.np/sites/default/files/19/SWC%20Staff%20Contact%20Information%202078_12_29.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220119032857",
+   "original": "http://swc.org.np/sites/default/files/articles/events.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220119023011",
+   "original": "https://swc.org.np/sites/default/files/articles/nagarik_badapatra.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220111050414",
+   "original": "https://swc.org.np/sites/default/files/css/css__LeQxW73LSYscb1O__H6f-j_jdAzhZBaesGL19KEB6U.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220119155349",
+   "original": "https://www.swc.org.np/sites/default/files/css/css_aZl1JBvE8zzVRzpX8F_CYngNKYh5a_gdaqbFYpYGyuw.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220119034812",
+   "original": "https://swc.org.np/sites/default/files/css/css_bWJcE5nQuC9ix65-iB5F_YYtI2HAzaHMFzvL6NhsTT4.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220111050503",
+   "original": "https://swc.org.np/sites/default/files/css/css_daNZvF6si2-Lh4C9t_dh7wQ5tUyHLwZ6wW_IWCI1G-k.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220111050429",
+   "original": "https://swc.org.np/sites/default/files/css/css_HaBmlkW5ZyqNvYUhTbMzxNlASiFII_jus-PvEuoAznM.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709050657",
+   "original": "https://swc.org.np/sites/default/files/css/css_iw_wg8Vi_phl_aqTR6OpTIByNR4dwfmyjcjeOD8k_K0.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220111050401",
+   "original": "https://swc.org.np/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220111050446",
+   "original": "https://swc.org.np/sites/default/files/css/css_pMG8B3CayV_dWLHz4xIJNNKcGflvDtHaTglgFoABHyw.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220119032909",
+   "original": "http://www.swc.org.np/sites/default/files/css/css_ulCcIDeyq7c4_Ik0pBePPdR_A8iwAhAvRI2hCuJcKVQ.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709050509",
+   "original": "http://swc.org.np/sites/default/files/default_images/default-image.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220123093905",
+   "original": "https://swc.org.np/sites/default/files/downloads/%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%9C%E0%A4%A8%E0%A4%BE%20%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%9D%E0%A5%88%E0%A4%BE%E0%A4%A4%E0%A4%BE%20%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%B5%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A4%BF%20%20%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%A6%E0%A5%87%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A4%BE%20%20%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%A7%20_%E0%A4%B8%E0%A4%82%E0%A4%B8%E0%A5%87%E0%A4%BE%E0%A4%A7%E0%A4%A8%20%E0%A4%B8%E0%A4%AE%E0%A5%87%E0%A4%A4.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240626055011",
+   "original": "https://swc.org.np/sites/default/files/downloads/%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%9C%E0%A4%A8%E0%A4%BE%20%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%9D%E0%A5%88%E0%A4%BE%E0%A4%A4%E0%A4%BE%20%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%B5%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A4%BF%20%20%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%A6%E0%A5%87%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A4%BE%20%20%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%A7%20_%E0%A4%B8%E0%A4%82%E0%A4%B8%E0%A5%87%E0%A4%BE%E0%A4%A7%E0%A4%A8%20%E0%A4%B8%E0%A4%AE%E0%A5%87%E0%A4%A4_0.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20250209081628",
+   "original": "http://www.swc.org.np/sites/default/files/downloads/%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%9C%E0%A4%A8%E0%A4%BE%20%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%9D%E0%A5%8C%E0%A4%A4%E0%A4%BE%20%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%AC%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A4%BF%20%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%A6%E0%A5%87%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A4%BE%2C%20%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%A7%20%28%E0%A4%AA%E0%A4%BE%E0%A4%81%E0%A4%9A%E0%A5%8C%E0%A4%82%20%E0%A4%B8%E0%A4%82%E0%A4%B6%E0%A5%8B%E0%A4%A7%E0%A4%A8%2C%20%E0%A5%A8%E0%A5%A6%E0%A5%AE%E0%A5%A7%20%29.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220517080130",
+   "original": "https://swc.org.np/sites/default/files/downloads/%E0%A4%AC%E0%A5%88%E0%A4%A6%E0%A5%87%E0%A4%B6%E0%A4%BF%E0%A4%95%20%E0%A4%B8%E0%A4%B9%E0%A4%AF%E0%A5%8B%E0%A4%97%20%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A5%80%E0%A4%95%E0%A5%83%E0%A4%A4%E0%A4%BF%20%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%B5%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A4%BF%20%20%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%A6%E0%A5%87%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A4%BE%20-%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%A7%20_%E0%A4%9A%E0%A5%88%E0%A4%BE%E0%A4%A5%E0%A5%88%E0%A4%BE%20%E0%A4%B8%E0%A4%82%E0%A4%B8%E0%A5%87%E0%A4%BE%E0%A4%A7%E0%A4%A8%20%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%AD%20%E0%A4%B8%E0%A4%AE%E0%A5%87%E0%A4%A4.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123101307",
+   "original": "https://swc.org.np/sites/default/files/downloads/%E0%A4%AC%E0%A5%88%E0%A4%A6%E0%A5%87%E0%A4%B6%E0%A4%BF%E0%A4%95-%E0%A4%B8%E0%A4%B9%E0%A4%AF%E0%A5%8B%E0%A4%97-%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A5%80%E0%A4%95%E0%A5%83%E0%A4%A4%E0%A4%BF-%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%B5%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A4%BF-%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%A6%E0%A5%87%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A4%BE-%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%A7-_%E0%A4%9A%E0%A5%88%E0%A4%BE%E0%A4%A5%E0%A5%88%E0%A4%BE-%E0%A4%B8%E0%A4%82%E0%A4%B8%E0%A5%87%E0%A4%BE%E0%A4%A7%E0%A4%A8-%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%AD-%E0%A4%B8%E0%A4%AE%E0%A5%87%E0%A4%A4.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240628102846",
+   "original": "https://swc.org.np/sites/default/files/downloads/%E0%A4%B8%E0%A4%98%E0%A4%B8%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A4%BE%20%E0%A4%86%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%A7%E0%A4%A4%E0%A4%BE%20%E0%A4%B0%20%E0%A4%A8%E0%A4%B5%E0%A4%BF%E0%A4%95%E0%A4%B0%E0%A4%A3%20%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%B5%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A4%BF%20%20%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%A6%E0%A5%87%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A4%BE%20%20%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%A7%20_%E0%A4%9A%E0%A5%88%E0%A4%BE%E0%A4%A5%E0%A5%88%E0%A4%BE%20%E0%A4%B8%E0%A4%82%E0%A4%B8%E0%A5%87%E0%A4%BE%E0%A4%A7%E0%A4%A8%20%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%AD%20%E0%A4%B8%E0%A4%AE%E0%A5%87%E0%A4%A4.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123092230",
+   "original": "http://swc.org.np/sites/default/files/downloads/%E0%A4%B8%E0%A4%98%E0%A4%B8%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A4%BE-%E0%A4%86%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%A7%E0%A4%A4%E0%A4%BE-%E0%A4%B0-%E0%A4%A8%E0%A4%B5%E0%A4%BF%E0%A4%95%E0%A4%B0%E0%A4%A3-%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%B5%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A4%BF-%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%A6%E0%A5%87%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A4%BE-%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%A7-_%E0%A4%9A%E0%A5%88%E0%A4%BE%E0%A4%A5%E0%A5%88%E0%A4%BE-%E0%A4%B8%E0%A4%82%E0%A4%B8%E0%A5%87%E0%A4%BE%E0%A4%A7%E0%A4%A8-%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%AD-%E0%A4%B8%E0%A4%AE%E0%A5%87%E0%A4%A4.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123101008",
+   "original": "https://swc.org.np/sites/default/files/downloads/%E0%A4%B8%E0%A4%AE%E0%A4%BE%E0%A4%9C-%E0%A4%95%E0%A4%B2%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A3-%E0%A4%90%E0%A4%A8-%E0%A5%A8%E0%A5%A6%E0%A5%AA%E0%A5%AF.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240626144234",
+   "original": "https://swc.org.np/sites/default/files/downloads/%E0%A4%B8%E0%A4%BE%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%A3%20%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%9D%E0%A5%8B%E0%A4%A4%E0%A4%BE%20%E0%A4%B0%20%E0%A4%B8%E0%A5%87%E0%A4%B5%E0%A4%BE%20%E0%A4%B8%E0%A5%81%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BE%20%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%B5%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A4%BF%20%20%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%A6%E0%A5%87%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A4%BE%20%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%A7%20_%E0%A4%A6%E0%A5%87%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%BE%20%E0%A4%B8%E0%A4%82%E0%A4%B8%E0%A5%87%E0%A4%BE%E0%A4%A7%E0%A4%A8%20%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%AD%20%E0%A4%B8%E0%A4%AE%E0%A5%87%E0%A4%A4.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123092559",
+   "original": "https://swc.org.np/sites/default/files/downloads/%E0%A4%B8%E0%A4%BE%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%A3-%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%9D%E0%A5%8B%E0%A4%A4%E0%A4%BE-%E0%A4%B0-%E0%A4%B8%E0%A5%87%E0%A4%B5%E0%A4%BE-%E0%A4%B8%E0%A5%81%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BE-%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%B5%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A4%BF-%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%A6%E0%A5%87%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A4%BE-%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%A7-_%E0%A4%A6%E0%A5%87%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%BE-%E0%A4%B8%E0%A4%82%E0%A4%B8%E0%A5%87%E0%A4%BE%E0%A4%A7%E0%A4%A8-%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%AD-%E0%A4%B8%E0%A4%AE%E0%A5%87%E0%A4%A4.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20241125122347",
+   "original": "https://www.swc.org.np/sites/default/files/downloads/(Monitoring%20Impact%20Evaluation%20Format%20Related%20to%20Custom%20Duty%20Exemption).docx",
+   "statuscode": "200",
+   "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  },
+  {
+   "timestamp": "20240220093412",
+   "original": "https://swc.org.np/sites/default/files/downloads/Active%20INGO%20FY%2079-80.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240630154504",
+   "original": "https://swc.org.np/sites/default/files/downloads/affilition_nirdesika_third_ammendment_0.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20241125122557",
+   "original": "https://www.swc.org.np/sites/default/files/downloads/Annex%20-1%20(Progress%20and%20Financial%20Reporting%20Format%20for%20NGO%20INGOs).docx",
+   "statuscode": "200",
+   "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  },
+  {
+   "timestamp": "20241125134755",
+   "original": "http://www.swc.org.np/sites/default/files/downloads/Annex%20-3%20(NGO%20INGOs%20Complains%20Investigation%20Guideline%20Format).docx",
+   "statuscode": "200",
+   "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  },
+  {
+   "timestamp": "20241125120530",
+   "original": "https://www.swc.org.np/sites/default/files/downloads/Annex%20-5%20(Guidelines%20for%20Project%20Advisory%20Committee)%20(PAC).docx",
+   "statuscode": "200",
+   "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  },
+  {
+   "timestamp": "20241125142012",
+   "original": "http://www.swc.org.np/sites/default/files/downloads/Annex%20-7%E2%80%99Ka%E2%80%99%20(Work%20Performance%20Sheet%20of%20Evaluation%20Team)%20(INGO).docx",
+   "statuscode": "200",
+   "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  },
+  {
+   "timestamp": "20241125214703",
+   "original": "https://www.swc.org.np/sites/default/files/downloads/Annex%20-7%E2%80%99Kha%E2%80%99%20(Work%20Performance%20Sheet%20of%20Evaluation%20Team)%20(NGO).docx",
+   "statuscode": "200",
+   "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  },
+  {
+   "timestamp": "20241206013150",
+   "original": "http://www.swc.org.np/sites/default/files/downloads/Annex%204%20(a)%20agreement%20between%20swc%20%26%20consultant.docx",
+   "statuscode": "200",
+   "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  },
+  {
+   "timestamp": "20241125162032",
+   "original": "https://www.swc.org.np/sites/default/files/downloads/Annex%204%20(c)%20outline%20for%20m%26e%20report.docx",
+   "statuscode": "200",
+   "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  },
+  {
+   "timestamp": "20241125121215",
+   "original": "https://www.swc.org.np/sites/default/files/downloads/Annex%204%20(d)%20code%20of%20conduct.docx",
+   "statuscode": "200",
+   "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  },
+  {
+   "timestamp": "20241125131051",
+   "original": "https://www.swc.org.np/sites/default/files/downloads/Annex%204%20(Kha)NGO%20Evaluation%20TOR_0.docx",
+   "statuscode": "200",
+   "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  },
+  {
+   "timestamp": "20241125144757",
+   "original": "http://www.swc.org.np/sites/default/files/downloads/annex%208%20(Fee).docx",
+   "statuscode": "200",
+   "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  },
+  {
+   "timestamp": "20220123095545",
+   "original": "https://swc.org.np/sites/default/files/downloads/Annual-Growth-Chart-of-NGOs.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20230605053658",
+   "original": "http://www.swc.org.np/sites/default/files/downloads/Approved%20Project%20Of%20NGO%20F.Y%202078-079%20latest.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20251016074924",
+   "original": "https://www.swc.org.np/sites/default/files/downloads/Approved%20Project%20Of%20NGO%20F.Y%202078-079.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123085631",
+   "original": "https://swc.org.np/sites/default/files/downloads/Approved%20Project_NGOs_%202076.077.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123091322",
+   "original": "https://swc.org.np/sites/default/files/downloads/Approved%20Project_NGOs_%202077.078.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220709050650",
+   "original": "https://swc.org.np/sites/default/files/downloads/Approved%20Project_NGOs_%202078.079%20(upto%20the%20end%20of%20baisakh).pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123100912",
+   "original": "https://swc.org.np/sites/default/files/downloads/Approved%20Project_NGOs_2075.076.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20250520215159",
+   "original": "https://swc.org.np/sites/default/files/downloads/Approved%20Projects%20NGOs%20F.Y.%202079.080.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20250520231629",
+   "original": "http://swc.org.np/sites/default/files/downloads/Approved%20Projects%20NGOs%20F.Y.%202080_081.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20241125123137",
+   "original": "https://www.swc.org.np/sites/default/files/downloads/Children%20home%20monitoring%20formate.doc",
+   "statuscode": "200",
+   "mimetype": "application/msword"
+  },
+  {
+   "timestamp": "20220709050630",
+   "original": "https://swc.org.np/sites/default/files/downloads/Covid%20Response%20Projects%20Approved%209_July_2021.xlsx",
+   "statuscode": "200",
+   "mimetype": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+  },
+  {
+   "timestamp": "20240630002139",
+   "original": "https://swc.org.np/sites/default/files/downloads/High_Level_Committee_for_Disaster_Management_and_Coordination.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123085550",
+   "original": "https://swc.org.np/sites/default/files/downloads/INGO-Chart.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123084329",
+   "original": "https://swc.org.np/sites/default/files/downloads/Monitoring%20and%20Evaluation%20Guideline%20%28with%20amendments%29.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20221228072309",
+   "original": "https://www.swc.org.np/sites/default/files/downloads/Nepali-Fact-Sheet.doc",
+   "statuscode": "200",
+   "mimetype": "application/msword"
+  },
+  {
+   "timestamp": "20220123084847",
+   "original": "https://swc.org.np/sites/default/files/downloads/NGOs%20affiliated%20with%20SWC%20on%20F.Y.%202076_77.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123084040",
+   "original": "https://swc.org.np/sites/default/files/downloads/NGOs-affiliated-with-SWC-%20upto%20F.Y.%202075_76.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123084253",
+   "original": "https://swc.org.np/sites/default/files/downloads/NGOs-By-Fiscal-Year.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123085715",
+   "original": "https://swc.org.np/sites/default/files/downloads/NGOs-Provincewise-Chart.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123095321",
+   "original": "https://swc.org.np/sites/default/files/downloads/NGOs-Provincewise-Chart_0.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240220020709",
+   "original": "https://swc.org.np/sites/default/files/downloads/PROJECT%20Agreement%2075-76.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240219232932",
+   "original": "https://swc.org.np/sites/default/files/downloads/PROJECT%20Agreement%2076-77.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240219215720",
+   "original": "https://swc.org.np/sites/default/files/downloads/PROJECT%20Agreement%2077-78_0.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240219232355",
+   "original": "https://swc.org.np/sites/default/files/downloads/PROJECT%20Agreement%2078-79.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240224002826",
+   "original": "https://swc.org.np/sites/default/files/downloads/PROJECT%20Agreement%2079-80%20till%20jesth%20end.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20250321030117",
+   "original": "https://www.swc.org.np/sites/default/files/downloads/PROVINCE%20WISE%20NGOs%202080.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20250321043852",
+   "original": "https://www.swc.org.np/sites/default/files/downloads/Province%20wise%20NGOs%20chart%202080.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123095958",
+   "original": "https://swc.org.np/sites/default/files/downloads/Province-1-Chart.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123100656",
+   "original": "https://swc.org.np/sites/default/files/downloads/Province-2-Chart.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123101534",
+   "original": "https://swc.org.np/sites/default/files/downloads/Province-3-Chart.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123081743",
+   "original": "https://swc.org.np/sites/default/files/downloads/Province-4-Chart.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123082829",
+   "original": "https://swc.org.np/sites/default/files/downloads/Province-5-Chart.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123083627",
+   "original": "https://swc.org.np/sites/default/files/downloads/Province-6-Chart.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123084532",
+   "original": "https://swc.org.np/sites/default/files/downloads/Province-7-Chart.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123101214",
+   "original": "https://swc.org.np/sites/default/files/downloads/Social-Welfare-Rule-2049.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20260120215633",
+   "original": "https://www.swc.org.np/sites/default/files/downloads/SWC%20Annual%20Report%202082.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20241122034304",
+   "original": "http://swc.org.np/sites/default/files/downloads/SWC%20COVID_19_reporting_4W_Final%204_MAY.xlsx",
+   "statuscode": "200",
+   "mimetype": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+  },
+  {
+   "timestamp": "20220123094921",
+   "original": "https://swc.org.np/sites/default/files/downloads/SWC%20Organizational%20Structure.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220121032602",
+   "original": "https://swc.org.np/sites/default/files/downloads/SWC-Act.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20230127112006",
+   "original": "https://swc.org.np/sites/default/files/downloads/SWC-Financial-Rule-2050.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240626133714",
+   "original": "https://swc.org.np/sites/default/files/downloads/SWC-Personnel-Rule-2050.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123095148",
+   "original": "https://swc.org.np/sites/default/files/downloads/SWC-Policy-and-Programme-2077-2078_15-SEP-Final-for-Publication_0.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20241122033646",
+   "original": "http://swc.org.np/sites/default/files/downloads/SWC_AMMENDED%20COVID%2019%20PROGRAMME%20PROPOSAL%20FORMAT_17%20MAY%202021.xlsx",
+   "statuscode": "200",
+   "mimetype": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+  },
+  {
+   "timestamp": "20250428000601",
+   "original": "http://www.swc.org.np/sites/default/files/downloads/SWC_Annual%20Report_2081.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20241125160931",
+   "original": "https://www.swc.org.np/sites/default/files/downloads/TOR%20for%20INGO%20nx%20(kha)_0.docx",
+   "statuscode": "200",
+   "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  },
+  {
+   "timestamp": "20240219232816",
+   "original": "https://swc.org.np/sites/default/files/downloads/total%20ingos%20FY%2079-80.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240219225311",
+   "original": "https://swc.org.np/sites/default/files/downloads/total%20INGOs%20list%20old.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123085514",
+   "original": "https://swc.org.np/sites/default/files/downloads/total%20INGOs%20list.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20230330041909",
+   "original": "https://www.swc.org.np/sites/default/files/field/image/NGO%20and%20INGO%20Details%20FY%2078-79.PNG",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220119033604",
+   "original": "http://www.swc.org.np/sites/default/files/field/image/NGOs%20Status%20at%20SWC.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220709050750",
+   "original": "https://swc.org.np/sites/default/files/js/js_27p4-I4znqt_PMak5-rAbSt5VEsKwRXZeLfHW7kZLpQ.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220111050529",
+   "original": "https://swc.org.np/sites/default/files/js/js_38VWQ3jjQx0wRFj7gkntZr077GgJoGn5nv3v05IeLLo.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220119022955",
+   "original": "http://www.swc.org.np/sites/default/files/js/js_8pCLb8iPqQ4cWfUiW3PqOIfaZ-Nj4-TNRbLqUHCFKlY.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20221122072217",
+   "original": "http://swc.org.np/sites/default/files/js/js_BZbOJ1EsRQVvZU3HzcwUXfP_oC-7ppi--qSkfORSR6I.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20221121115441",
+   "original": "https://swc.org.np/sites/default/files/js/js_e5XBmC3OHnfp09rzuwd6motV-TtpJ5lVUSYug9P2Q6o.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20230512014459",
+   "original": "https://www.swc.org.np/sites/default/files/js/js_eW0TJtUWdDl9sNrO3r3RZrmiyRZ9N-kqcRoTFgPA6Sg.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220111140606",
+   "original": "https://www.swc.org.np/sites/default/files/js/js_gFwrce6GGuH_dp8mOq3n1hy0WM8Ig6xcwa_6mrubeNM.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220111092153",
+   "original": "https://swc.org.np/sites/default/files/js/js_MRdvkC2u4oGsp5wVxBG1pGV5NrCPW3mssHxIn6G9tGE.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220111050608",
+   "original": "https://swc.org.np/sites/default/files/js/js_n47-GZNDrapD-xqFlCCAtXMBBWDUdddPtBXS91E0iGk.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220111050622",
+   "original": "https://swc.org.np/sites/default/files/js/js_nedP3XLEL9IhuPdi8Xalkhw0xaIm1T-alsbhsXPMgYU.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220111050555",
+   "original": "https://swc.org.np/sites/default/files/js/js_NGInUVLeSVDZKyI3gg6eBeZmzPXxqL_T29kXMbTIUD4.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220120134421",
+   "original": "https://swc.org.np/sites/default/files/js/js_NQZfEW0rfPEdg6Cu8RGVATG0mBAqUg2dk5WGY5ScgBI.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220111091354",
+   "original": "https://swc.org.np/sites/default/files/js/js_OLgr-593LYCzF1vZ05PpqLNjLgPEsdxeuLPiASPOib8.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220119024650",
+   "original": "http://www.swc.org.np/sites/default/files/js/js_pGxPUrGFOhUxSkRZJXNBJ08dGuJjtEwVNoOR8Gx5_pE.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220119031312",
+   "original": "https://swc.org.np/sites/default/files/js/js_R9UbiVw2xuTUI0GZoaqMDOdX0lrZtgX-ono8RVOUEVc.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220119215457",
+   "original": "https://www.swc.org.np/sites/default/files/js/js_zhEBhkiZ0xOmcRdfymZEIspzMvHyr54aOB75-9tJgeM.js",
+   "statuscode": "200",
+   "mimetype": "application/javascript"
+  },
+  {
+   "timestamp": "20220112055727",
+   "original": "https://www.swc.org.np/sites/default/files/logo_swc.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20251016145715",
+   "original": "https://www.swc.org.np/sites/default/files/notices/%E0%A4%B5%E0%A4%BF%E0%A4%AA%E0%A4%A6%20%E0%A4%89%E0%A4%A6%E0%A5%8D%E0%A4%A6%E0%A4%BE%E0%A4%B0%20%E0%A4%B8%E0%A5%82%E0%A4%9A%E0%A4%A8%E0%A4%BE.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20251016100131",
+   "original": "https://www.swc.org.np/sites/default/files/notices/%E0%A4%B5%E0%A4%BF%E0%A4%AA%E0%A4%A6%E0%A5%8D%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A4%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%2C%20%E0%A4%89%E0%A4%A6%E0%A5%8D%E0%A4%A6%E0%A4%BE%E0%A4%B0%2C%20%E0%A4%B0%E0%A4%BE%E0%A4%B9%E0%A4%A4%20%E0%A4%A4%E0%A4%A5%E0%A4%BE%20%E0%A4%AA%E0%A5%81%E0%A4%A8%E0%A4%B0%E0%A5%8D%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A4%BE%E0%A4%AA%E0%A4%A8%E0%A4%BE%20%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%AC%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A4%AE%E0%A4%BE%20%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D%E0%A4%95%E0%A5%8B%20%E0%A4%85%E0%A4%A8%E0%A5%81%E0%A4%B0%E0%A5%8B%E0%A4%A7%20%E0%A4%B8%E0%A4%95%E0%A4%AA%20%E0%A5%A8%E0%A5%A6%E0%A5%AE%E0%A5%A8.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220307092452",
+   "original": "http://swc.org.np/sites/default/files/notices/16%20days.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20250324043739",
+   "original": "https://swc.org.np/sites/default/files/notices/2nd%20Social%20Welfare%20Council_COVID%2019%20Distribution%20details%20poster-02_nep.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220119045749",
+   "original": "https://swc.org.np/sites/default/files/notices/6.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20251016054130",
+   "original": "https://www.swc.org.np/sites/default/files/notices/Affilation%20Section%20Notice.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220112055743",
+   "original": "https://www.swc.org.np/sites/default/files/notices/ammended%20covid%20project%20proposal%20format.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220709050830",
+   "original": "http://swc.org.np/sites/default/files/notices/Banner%20Templates%20for%20COVID%20Response%202021%20(2).jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20231224132741",
+   "original": "http://swc.org.np/sites/default/files/notices/contact%20person%20notice.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220709050554",
+   "original": "https://swc.org.np/sites/default/files/notices/directives%20notice.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20240402190812",
+   "original": "https://www.swc.org.np/sites/default/files/notices/notice%203_17_078.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220709050454",
+   "original": "https://swc.org.np/sites/default/files/notices/renew%20notice.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220307092453",
+   "original": "http://swc.org.np/sites/default/files/notices/service%20hold%20extended.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220709050521",
+   "original": "https://swc.org.np/sites/default/files/notices/service%20hold.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20251016054603",
+   "original": "https://www.swc.org.np/sites/default/files/notices/SWC_EoI_2082_01_22.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20221121115443",
+   "original": "http://swc.org.np/sites/default/files/notices/swc_pop.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20230701143957",
+   "original": "https://www.swc.org.np/sites/default/files/profile/IMG_3397_preview_rev_1.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20251016210556",
+   "original": "https://www.swc.org.np/sites/default/files/profile/IMG_3397_preview_rev_1_0.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20230702060934",
+   "original": "https://www.swc.org.np/sites/default/files/profile/IMG_3399%20-%20Copy_preview_rev_1.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20230701143959",
+   "original": "https://www.swc.org.np/sites/default/files/profile/IMG_3411%20-%20Copy_preview_rev_1.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20251016075210",
+   "original": "https://www.swc.org.np/sites/default/files/profile/IMG_3411%20-%20Copy_preview_rev_1_0.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20230707155543",
+   "original": "https://www.swc.org.np/sites/default/files/profile/mallik%20sir2.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20230702055346",
+   "original": "https://www.swc.org.np/sites/default/files/profile/mantri.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20251016084304",
+   "original": "https://www.swc.org.np/sites/default/files/profile/Nandalal%20Majhi_0.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220119022954",
+   "original": "http://www.swc.org.np/sites/default/files/slide/%E0%A4%B8%E0%A4%AE%E0%A4%BE%E0%A4%9C%20%E0%A4%95%E0%A4%B2%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A3%20%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D%20%E0%A4%B0%20%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%8D%E0%A4%B5%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%AF%E0%A4%B9%E0%A4%B0%E0%A5%82%20%E0%A4%AC%E0%A5%80%E0%A4%9A%E0%A4%95%E0%A5%8B%20%E0%A4%B9%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%B0%20%E0%A4%B8%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%8B%E0%A4%B9_Photo_Rajan_Kafle%20(10).jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220119061912",
+   "original": "http://www.swc.org.np/sites/default/files/slide/%E0%A4%B8%E0%A4%AE%E0%A4%BE%E0%A4%9C%20%E0%A4%95%E0%A4%B2%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A3%20%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D%20%E0%A4%B0%20%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%8D%E0%A4%B5%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%AF%E0%A4%B9%E0%A4%B0%E0%A5%82%20%E0%A4%AC%E0%A5%80%E0%A4%9A%E0%A4%95%E0%A5%8B%20%E0%A4%B9%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%B0%20%E0%A4%B8%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%8B%E0%A4%B9_Photo_Rajan_Kafle%20(15).jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220119030208",
+   "original": "https://swc.org.np/sites/default/files/slide/%E0%A4%B8%E0%A4%AE%E0%A4%BE%E0%A4%9C%20%E0%A4%95%E0%A4%B2%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A3%20%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D%20%E0%A4%B0%20%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%8D%E0%A4%B5%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%AF%E0%A4%B9%E0%A4%B0%E0%A5%82%20%E0%A4%AC%E0%A5%80%E0%A4%9A%E0%A4%95%E0%A5%8B%20%E0%A4%B9%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%B0%20%E0%A4%B8%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%8B%E0%A4%B9_Photo_Rajan_Kafle%20(8).jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20260428194124",
+   "original": "http://www.swc.org.np/sites/default/files/slide/17.jpg.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20241119170105",
+   "original": "http://www.swc.org.np/sites/default/files/slide/A460946917_1587248508803581_1296311747906837245_n.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20241119170108",
+   "original": "http://www.swc.org.np/sites/default/files/slide/B460524659_1563861787875074_4524155196994200308_n.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20241119170055",
+   "original": "http://www.swc.org.np/sites/default/files/slide/C460236159_1247849029993226_1739582847487316840_n.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20241119170100",
+   "original": "http://www.swc.org.np/sites/default/files/slide/D459236772_3884954718456202_8600399190704922669_n.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20221006211029",
+   "original": "https://www.swc.org.np/sites/default/files/slide/IMG_1262.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20221006195023",
+   "original": "https://www.swc.org.np/sites/default/files/slide/IMG_1363.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220119025221",
+   "original": "http://www.swc.org.np/sites/default/files/slide/IMG_3113_0.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220119022453",
+   "original": "http://www.swc.org.np/sites/default/files/slide/IMG_3159.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220119032621",
+   "original": "http://www.swc.org.np/sites/default/files/slide/IMG_3195.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220119041121",
+   "original": "https://swc.org.np/sites/default/files/slide/IMG_3203.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220119023031",
+   "original": "http://www.swc.org.np/sites/default/files/slide/IMG_3272.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220119034946",
+   "original": "http://www.swc.org.np/sites/default/files/slide/IMG_3378%20-%20Copy.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220119041353",
+   "original": "https://swc.org.np/sites/default/files/slide/IMG_3388%20-%20Copy.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20260428194124",
+   "original": "http://www.swc.org.np/sites/default/files/slide/IMG_5575.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20231117032258",
+   "original": "https://www.swc.org.np/sites/default/files/slide/IMG_9209.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20231117032535",
+   "original": "http://www.swc.org.np/sites/default/files/slide/IMG_9269.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20231117032403",
+   "original": "https://www.swc.org.np/sites/default/files/slide/IMG_9293.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20231117032357",
+   "original": "https://www.swc.org.np/sites/default/files/slide/IMG_9295_0.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20231117032350",
+   "original": "https://www.swc.org.np/sites/default/files/slide/IMG_9308.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20231117032323",
+   "original": "https://www.swc.org.np/sites/default/files/slide/IMG_9309.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20231117032353",
+   "original": "https://www.swc.org.np/sites/default/files/slide/IMG_9321.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20231117032421",
+   "original": "https://www.swc.org.np/sites/default/files/slide/IMG_9420.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20221006195148",
+   "original": "https://www.swc.org.np/sites/default/files/slide/sld.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20221006195825",
+   "original": "https://www.swc.org.np/sites/default/files/slide/slide5.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20221006214147",
+   "original": "https://www.swc.org.np/sites/default/files/slide/slide6.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20221006195309",
+   "original": "https://www.swc.org.np/sites/default/files/slide/slide7.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20221006195143",
+   "original": "https://www.swc.org.np/sites/default/files/slide/slide8.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20221006200042",
+   "original": "https://www.swc.org.np/sites/default/files/slide/slide9.JPG",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220119022723",
+   "original": "http://www.swc.org.np/sites/default/files/story/119125611_644059212917755_3374059441285060350_n.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220123091609",
+   "original": "https://swc.org.np/sites/default/files/story/Covid-19-Success-Story.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20230616215851",
+   "original": "http://www.swc.org.np/sites/default/files/styles/large/public/field/image/NGO%20and%20INGO%20Details%20FY%2078-79.PNG",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20230616130352",
+   "original": "http://www.swc.org.np/sites/default/files/styles/large/public/field/image/NGO%20and%20INGO%20Details%20FY%2078-79.PNG?itok=uJHZQJ2D",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220709050743",
+   "original": "https://swc.org.np/sites/default/files/styles/large/public/field/image/NGOs%20Status%20at%20SWC.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220709050758",
+   "original": "https://swc.org.np/sites/default/files/styles/large/public/field/image/NGOs%20Status%20at%20SWC.jpg?itok=fzpsoZRU",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20260522131631",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/%E0%A4%9A%E0%A4%95%E0%A5%8D%E0%A4%B0%20%E0%A4%B8%E0%A4%BF%E0%A4%B0_SBF7aRSOZj_zt3g5bp%20%281%29.png?itok=LHRubMVb",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20240804025704",
+   "original": "http://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/%E0%A4%A8%E0%A4%B5%E0%A4%B2%E0%A4%95%E0%A4%BF%E0%A4%B6%E0%A5%8B%E0%A4%B0-%E0%A4%B8%E0%A4%BE%E0%A4%B9-(%E0%A4%B8%E0%A5%81%E0%A4%A1%E0%A5%80)-1721042503.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20240805173523",
+   "original": "https://swc.org.np/sites/default/files/styles/thumbnail/public/profile/%E0%A4%A8%E0%A4%B5%E0%A4%B2%E0%A4%95%E0%A4%BF%E0%A4%B6%E0%A5%8B%E0%A4%B0-%E0%A4%B8%E0%A4%BE%E0%A4%B9-(%E0%A4%B8%E0%A5%81%E0%A4%A1%E0%A5%80)-1721042503.jpeg?itok=5AY8cEa7",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220119060320",
+   "original": "http://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/15_Uma_Regmi_copy_0.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220119034226",
+   "original": "https://swc.org.np/sites/default/files/styles/thumbnail/public/profile/15_Uma_Regmi_copy_0.jpg?itok=kznzJdlQ",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20221121115455",
+   "original": "https://swc.org.np/sites/default/files/styles/thumbnail/public/profile/210916065210saloni-pradhan.jpg?itok=OjPGPn5D",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20230701155602",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/230605103137Anita%20Mem.jpg?itok=_atJU-9v",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20240325233019",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/329333073_719432873221505_1922700368241230582_n_0.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20240325233009",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/329333073_719432873221505_1922700368241230582_n_0.jpg?itok=YiXjqEYg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20230117121641",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/bhagwati-chaudhary-_0.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20230117121644",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/bhagwati-chaudhary-_0.png?itok=z-6Qzg34",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20240620163820",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/d%20panta%20swc.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20240619192845",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/d%20panta%20swc.jpeg?itok=ZFGjW9Rg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20241122040043",
+   "original": "http://swc.org.np/sites/default/files/styles/thumbnail/public/profile/d%20panta%20swc_0.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20241122041305",
+   "original": "http://swc.org.np/sites/default/files/styles/thumbnail/public/profile/d%20panta%20swc_0.jpeg?itok=2wcNkIws",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220119025348",
+   "original": "http://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/Durga.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220112055759",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/Durga.png?itok=IVJrZfAC",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20260428194126",
+   "original": "http://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/final%20IMG_5659.JPG.jpg_1.jpeg?itok=SiYlq_Ur",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220119055341",
+   "original": "https://swc.org.np/sites/default/files/styles/thumbnail/public/profile/IMG_3397_preview_rev_1.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220119053140",
+   "original": "https://swc.org.np/sites/default/files/styles/thumbnail/public/profile/IMG_3397_preview_rev_1.png?itok=Yd_4sE5L",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20231117032341",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/IMG_3397_preview_rev_1_0.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20230707135449",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/IMG_3397_preview_rev_1_0.png?itok=7VqpOT3J",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220119040710",
+   "original": "http://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/IMG_3399%20-%20Copy_preview_rev_1.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220119031005",
+   "original": "http://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/IMG_3399%20-%20Copy_preview_rev_1.png?itok=KH4BB_i9",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20230701155559",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/IMG_3399%20-%20Copy_preview_rev_1_0.png?itok=bIKH-9Af",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220119085859",
+   "original": "http://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/IMG_3411%20-%20Copy_preview_rev_1.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220119022451",
+   "original": "http://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/IMG_3411%20-%20Copy_preview_rev_1.png?itok=A69yEYb3",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20230701155600",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/IMG_3411%20-%20Copy_preview_rev_1_0.png?itok=jzruKXJk",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20221122072628",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/IMG_3413%20-%20Copy_0.JPG?itok=ycF-KAfN",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20221122072603",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/IMG_3435%20-%20Copy.JPG?itok=1XbEa5gu",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20260428194126",
+   "original": "http://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/IMG_5432%20-%20Copy.JPG?itok=Wc-NZ__7",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20260326060315",
+   "original": "http://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/IMG_5432%20-%20Copy_0.JPG?itok=_waQyav0",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220901043336",
+   "original": "http://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/mallik%20sir2.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20220820031524",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/mallik%20sir2.png?itok=9etShJok",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20230701144023",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/mallik%20sir2_1.png?itok=uF66IaGK",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20230512012300",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/mantri.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20230512024143",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/mantri.jpeg?itok=yL18mgMX",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20230701155600",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/mantri_0.jpeg?itok=UCCGb1N9",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20251008052153",
+   "original": "http://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/Nandalal%20Majhi.jpeg?itok=ZDZKNb7L",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20240527075456",
+   "original": "https://swc.org.np/sites/default/files/styles/thumbnail/public/profile/Nandalal%20Majhi_0.jpeg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20240527075525",
+   "original": "https://swc.org.np/sites/default/files/styles/thumbnail/public/profile/Nandalal%20Majhi_0.jpeg?itok=O2A79fR8",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20221122072615",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/narayan%20sir_1.jpg?itok=uxafGGZg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20230105095528",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/parchanda-1%20PK.png",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20230105095616",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/parchanda-1%20PK.png?itok=2STdOPfN",
+   "statuscode": "200",
+   "mimetype": "image/png"
+  },
+  {
+   "timestamp": "20230330041859",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/PM_WEB_final-130x150.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20230330041847",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/PM_WEB_final-130x150.jpg?itok=Xqo7Pv2G",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20221122072539",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/shambhu%20sir_0.jpg?itok=f0H4vnsp",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20260326060317",
+   "original": "http://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/shradha%20shrestha%20images_0.jpg?itok=Mya6uHbD",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20260428194125",
+   "original": "http://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/sita-1774594472_0.jpg?itok=ESmsvV7-",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20251016112155",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/susila-karki.jpg?itok=PZkOsq_k",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20250917200432",
+   "original": "https://www.swc.org.np/sites/default/files/styles/thumbnail/public/profile/susila-karki_0.jpg?itok=CgmyPTNF",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20240615171115",
+   "original": "http://www.swc.org.np/sites/default/files/suchana/%E0%A4%85%E0%A4%B8%E0%A5%8B%E0%A4%9C%20%E0%A5%AD%20%E0%A4%97%E0%A4%A4%E0%A5%87%E0%A4%95%E0%A5%8B%20%E0%A4%B8%E0%A5%82%E0%A4%9A%E0%A4%A8%E0%A4%BE.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20241110143551",
+   "original": "http://www.swc.org.np/sites/default/files/suchana/%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A4%B5%20%E0%A4%85%E0%A4%A7%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%B0%20%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A4%BE%E0%A4%B0%20%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%AC%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A5%80%20%E0%A4%B8%E0%A5%82%E0%A4%9A%E0%A4%A8%E0%A4%BE.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20250427223628",
+   "original": "https://www.swc.org.np/sites/default/files/suchana/%E0%A4%B6%E0%A4%B0%E0%A5%8D%E0%A4%A4%E0%A4%B9%E0%A4%B0%E0%A5%81.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240616100231",
+   "original": "https://swc.org.np/sites/default/files/suchana/%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%BF%20%E0%A4%B5%E0%A4%BF%E0%A4%B5%E0%A4%B0%E0%A4%A3_2.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240616111205",
+   "original": "https://swc.org.np/sites/default/files/suchana/%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B2%20%E0%A4%B8%E0%A5%82%E0%A4%9A%E0%A4%A8%E0%A4%BE.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240305004357",
+   "original": "https://www.swc.org.np/sites/default/files/suchana/43rd%20swc%20day%20notice.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240718155258",
+   "original": "https://www.swc.org.np/sites/default/files/suchana/Anumodan%20notice.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20250916171854",
+   "original": "https://swc.org.np/sites/default/files/suchana/BID%20DOCUMENT.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20221001022844",
+   "original": "https://swc.org.np/sites/default/files/suchana/Call%20for%20EoI_24%20April%202022_0.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240718162155",
+   "original": "https://www.swc.org.np/sites/default/files/suchana/Call%20for%20Expression%20of%20Interest%20(Eol).pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20250427224105",
+   "original": "https://www.swc.org.np/sites/default/files/suchana/CamScanner%2001-30-2025%2016.40.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20250622091932",
+   "original": "http://swc.org.np/sites/default/files/suchana/CamScanner%2002-24-2025%2016.00.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240715190328",
+   "original": "https://swc.org.np/sites/default/files/suchana/CamScanner%2012-22-2023%2015.57.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220127121256",
+   "original": "http://www.swc.org.np/sites/default/files/suchana/Circular.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240305001314",
+   "original": "https://www.swc.org.np/sites/default/files/suchana/correted%20notice.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220709050526",
+   "original": "http://swc.org.np/sites/default/files/suchana/Covid%20Response%20Project%20by%20NGOs%2021%20May%202021.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20251007154841",
+   "original": "https://swc.org.np/sites/default/files/suchana/EoI%20attachment_2082_01_22.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240305014604",
+   "original": "https://www.swc.org.np/sites/default/files/suchana/EOI%20DOC.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220404030235",
+   "original": "https://www.swc.org.np/sites/default/files/suchana/FlashReport_infograph_4%20june.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240423170326",
+   "original": "https://www.swc.org.np/sites/default/files/suchana/FlashReport_infograph_4_june.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220517070935",
+   "original": "https://swc.org.np/sites/default/files/suchana/FlashReport_infograph_July%202.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220628054040",
+   "original": "http://swc.org.np/sites/default/files/suchana/FlashReport_infograph_July%2023.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20230329193413",
+   "original": "http://swc.org.np/sites/default/files/suchana/FlashReport_infograph_July%2030.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240420163317",
+   "original": "http://swc.org.np/sites/default/files/suchana/FlashReport_infograph_July%209.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240609014622",
+   "original": "http://swc.org.np/sites/default/files/suchana/FlashReport_infograph_June%2025.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240713053714",
+   "original": "https://swc.org.np/sites/default/files/suchana/Notice%20For%20Shortlisted%20Consulting%20FirmsCompanies.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240304045355",
+   "original": "https://swc.org.np/sites/default/files/suchana/Open%20Call%20for%20Fixed%20Deposit_0.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220517071607",
+   "original": "https://swc.org.np/sites/default/files/suchana/PA%20Format%20Revised.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240526121530",
+   "original": "https://swc.org.np/sites/default/files/suchana/prize%202077_0.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240616150748",
+   "original": "https://swc.org.np/sites/default/files/suchana/prize%20notice%20and%20conditions.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240518012050",
+   "original": "https://swc.org.np/sites/default/files/suchana/Province%20Team.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20241110213724",
+   "original": "https://swc.org.np/sites/default/files/suchana/secuty%20guard%20LOI.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240531075322",
+   "original": "https://www.swc.org.np/sites/default/files/suchana/ssd%20request.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240615214954",
+   "original": "https://swc.org.np/sites/default/files/suchana/Standing-list-in-details.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240718153530",
+   "original": "https://www.swc.org.np/sites/default/files/suchana/Suchi%20darta%20Notice.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240420072827",
+   "original": "http://swc.org.np/sites/default/files/suchana/SWC%20FlashReport_infograph_June%2018.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123095217",
+   "original": "https://swc.org.np/sites/default/files/suchana/SWC-1st-quarter-progress-information-FY-076-77.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20221001023925",
+   "original": "http://swc.org.np/sites/default/files/suchana/SWC-2nd-quarter-progress-information-2076.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20250427221602",
+   "original": "https://www.swc.org.np/sites/default/files/suchana/SWC_House%20Rent_Conditions_0.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220123101800",
+   "original": "https://swc.org.np/sites/default/files/suchana/SWC_Official_Letter_On_policy-framework_For_COVID19_Response.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220517073513",
+   "original": "https://swc.org.np/sites/default/files/suchana/SWC_Progress_in_brief_FY2077_078.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20240616140719",
+   "original": "https://swc.org.np/sites/default/files/suchana/tender%20details.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220709050541",
+   "original": "https://swc.org.np/sites/default/files/suchana/ToR%20Rapid%20Response%20Team(Covid-19)%20.pdf",
+   "statuscode": "200",
+   "mimetype": "application/pdf"
+  },
+  {
+   "timestamp": "20220111022435",
+   "original": "https://www.swc.org.np/sites/default/files/swc_icon.jpg",
+   "statuscode": "200",
+   "mimetype": "image/jpeg"
+  },
+  {
+   "timestamp": "20220709050910",
+   "original": "https://swc.org.np/themes/seven/reset.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709050741",
+   "original": "https://swc.org.np/themes/seven/reset.css?0",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709050732",
+   "original": "https://swc.org.np/themes/seven/style.css",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709050734",
+   "original": "https://swc.org.np/themes/seven/style.css?0",
+   "statuscode": "200",
+   "mimetype": "text/css"
+  },
+  {
+   "timestamp": "20220709050618",
+   "original": "https://swc.org.np/UPGRADE.txt",
+   "statuscode": "200",
+   "mimetype": "text/plain"
+  },
+  {
+   "timestamp": "20220709050609",
+   "original": "https://swc.org.np/user/login/",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220709070901",
+   "original": "https://swc.org.np/user/password/",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  },
+  {
+   "timestamp": "20220709050640",
+   "original": "https://swc.org.np/xmlrpc.php",
+   "statuscode": "200",
+   "mimetype": "text/html"
+  }
+ ]
+}

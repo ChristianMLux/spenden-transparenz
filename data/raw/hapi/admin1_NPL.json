@@ -1,0 +1,83 @@
+{
+ "retrieved_at": "2026-08-28T12:09:38+00:00",
+ "source": "hapi",
+ "data": [
+  {
+   "id": 1268,
+   "location_ref": 156,
+   "code": "NP01",
+   "name": "Koshi",
+   "from_cods": true,
+   "reference_period_start": "2024-03-14T00:00:00",
+   "reference_period_end": null,
+   "location_code": "NPL",
+   "location_name": "Nepal"
+  },
+  {
+   "id": 1269,
+   "location_ref": 156,
+   "code": "NP02",
+   "name": "Madhesh",
+   "from_cods": true,
+   "reference_period_start": "2024-03-14T00:00:00",
+   "reference_period_end": null,
+   "location_code": "NPL",
+   "location_name": "Nepal"
+  },
+  {
+   "id": 1270,
+   "location_ref": 156,
+   "code": "NP03",
+   "name": "Bagmati",
+   "from_cods": true,
+   "reference_period_start": "2024-03-14T00:00:00",
+   "reference_period_end": null,
+   "location_code": "NPL",
+   "location_name": "Nepal"
+  },
+  {
+   "id": 1271,
+   "location_ref": 156,
+   "code": "NP04",
+   "name": "Gandaki",
+   "from_cods": true,
+   "reference_period_start": "2024-03-14T00:00:00",
+   "reference_period_end": null,
+   "location_code": "NPL",
+   "location_name": "Nepal"
+  },
+  {
+   "id": 1272,
+   "location_ref": 156,
+   "code": "NP05",
+   "name": "Lumbini",
+   "from_cods": true,
+   "reference_period_start": "2024-03-14T00:00:00",
+   "reference_period_end": null,
+   "location_code": "NPL",
+   "location_name": "Nepal"
+  },
+  {
+   "id": 1273,
+   "location_ref": 156,
+   "code": "NP06",
+   "name": "Karnali",
+   "from_cods": true,
+   "reference_period_start": "2024-03-14T00:00:00",
+   "reference_period_end": null,
+   "location_code": "NPL",
+   "location_name": "Nepal"
+  },
+  {
+   "id": 1274,
+   "location_ref": 156,
+   "code": "NP07",
+   "name": "Sudur Paschim",
+   "from_cods": true,
+   "reference_period_start": "2024-03-14T00:00:00",
+   "reference_period_end": null,
+   "location_code": "NPL",
+   "location_name": "Nepal"
+  }
+ ]
+}

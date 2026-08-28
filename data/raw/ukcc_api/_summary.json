@@ -1,0 +1,1641 @@
+{
+ "retrieved_at": "2026-08-28T12:59:42+00:00",
+ "source": "ukcc_api",
+ "data": {
+  "endpoint_availability": {
+   "allcharitydetails": {
+    "200": 7
+   },
+   "charitydetails": {
+    "200": 7
+   },
+   "charityfinancialhistory": {
+    "200": 7
+   },
+   "charitytrusteeinformation": {
+    "200": 7
+   },
+   "charityareaofoperation": {
+    "200": 7
+   },
+   "charityaccountsandreturns": {
+    "404": 7
+   },
+   "charityaccountsandannualreturns": {
+    "404": 7
+   },
+   "charitypublishedreports": {
+    "404": 7
+   },
+   "charitypolicies": {
+    "404": 7
+   },
+   "charitygoverningdocument": {
+    "200": 7
+   },
+   "charityclassification": {
+    "404": 7
+   },
+   "charityregistrations": {
+    "404": 7
+   },
+   "charityeventhistory": {
+    "404": 7
+   },
+   "charityoverview": {
+    "200": 7
+   }
+  },
+  "per_charity": [
+   {
+    "name": "THE GURKHA WELFARE TRUST",
+    "number": 1103669,
+    "endpoints": {
+     "allcharitydetails": {
+      "keys": [
+       "CharityAoOCountryContinent",
+       "CharityAoOLocalAuthority",
+       "CharityAoORegion",
+       "address_line_five",
+       "address_line_four",
+       "address_line_one",
+       "address_line_three",
+       "address_line_two",
+       "address_post_code",
+       "charity_co_reg_number",
+       "charity_name",
+       "charity_type",
+       "cif_cdf_ind",
+       "cio_dissolution_ind",
+       "cio_ind",
+       "constituency_name",
+       "date_of_interim_manager_appt",
+       "date_of_registration",
+       "date_of_removal",
+       "email",
+       "group_subsid_suffix",
+       "in_administration",
+       "insolvent",
+       "interim_manager_ind",
+       "last_modified_time",
+       "latest_acc_fin_year_end_date",
+       "latest_acc_fin_year_start_date",
+       "latest_expenditure",
+       "latest_income",
+       "organisation_number",
+       "other_names",
+       "phone",
+       "prev_excepted_ind",
+       "reg_charity_number",
+       "reg_status",
+       "removal_reason",
+       "reporting_status",
+       "trustee_names",
+       "web",
+       "who_what_where"
+      ]
+     },
+     "charitydetails": {
+      "keys": [
+       "address_line_five",
+       "address_line_four",
+       "address_line_one",
+       "address_line_three",
+       "address_line_two",
+       "address_post_code",
+       "charity_co_reg_number",
+       "charity_name",
+       "charity_type",
+       "cif_cdf_ind",
+       "cio_dissolution_ind",
+       "cio_ind",
+       "date_of_interim_manager_appt",
+       "date_of_registration",
+       "date_of_removal",
+       "email",
+       "group_subsid_suffix",
+       "in_administration",
+       "insolvent",
+       "interim_manager_ind",
+       "last_modified_time",
+       "latest_acc_fin_year_end_date",
+       "latest_acc_fin_year_start_date",
+       "latest_expenditure",
+       "latest_income",
+       "organisation_number",
+       "phone",
+       "prev_excepted_ind",
+       "reg_charity_number",
+       "reg_status",
+       "removal_reason",
+       "reporting_status",
+       "web"
+      ]
+     },
+     "charityfinancialhistory": {
+      "rows": 5,
+      "keys": [
+       "ar_cycle_reference",
+       "charity_only_account",
+       "consolidated_account",
+       "exp_charitable_activities",
+       "exp_governance",
+       "exp_grants_institution",
+       "exp_investment_management",
+       "exp_other",
+       "exp_raising_funds",
+       "exp_total",
+       "expenditure",
+       "financial_period_end_date",
+       "inc_charitable_activities",
+       "inc_donations_and_legacies",
+       "inc_endowments",
+       "inc_investment",
+       "inc_legacies",
+       "inc_other",
+       "inc_other_trading_activities",
+       "inc_total",
+       "income",
+       "income_from_govt_contracts",
+       "income_from_govt_grants"
+      ]
+     },
+     "charitytrusteeinformation": {
+      "rows": 10,
+      "keys": [
+       "charity_name",
+       "date_of_appointment",
+       "is_chair",
+       "name",
+       "organisation_number",
+       "reg_charity_number",
+       "reporting_status"
+      ]
+     },
+     "charityareaofoperation": {
+      "rows": 3,
+      "keys": [
+       "area_of_operation",
+       "geographic_area_type"
+      ]
+     },
+     "charityaccountsandreturns": {
+      "http": 404
+     },
+     "charityaccountsandannualreturns": {
+      "http": 404
+     },
+     "charitypublishedreports": {
+      "http": 404
+     },
+     "charitypolicies": {
+      "http": 404
+     },
+     "charitygoverningdocument": {
+      "keys": [
+       "area_of_benefit",
+       "charitable_objects",
+       "governing_document_description"
+      ]
+     },
+     "charityclassification": {
+      "http": 404
+     },
+     "charityregistrations": {
+      "http": 404
+     },
+     "charityeventhistory": {
+      "http": 404
+     },
+     "charityoverview": {
+      "keys": [
+       "activities",
+       "agreement_commercial_participator",
+       "agreement_professional_fundraiser",
+       "any_trustee_benefit",
+       "band_100001_110000",
+       "band_110001_120000",
+       "band_120001_130000",
+       "band_130001_140000",
+       "band_140001_150000",
+       "band_150001_200000",
+       "band_200001_250000",
+       "band_250001_300000",
+       "band_300001_350000",
+       "band_350001_400000",
+       "band_400001_450000",
+       "band_450001_500000",
+       "band_60001_70000",
+       "band_70001_80000",
+       "band_80001_90000",
+       "band_90001_100000",
+       "band_over_500000",
+       "commercial_participator",
+       "employees",
+       "employees_over_60k",
+       "exp_charitable_activities",
+       "exp_other",
+       "exp_raising_funds",
+       "fin_period_end_date",
+       "grant_making_main_activity",
+       "inc_charitable_activities",
+       "inc_donations_legacies",
+       "inc_investments",
+       "inc_other",
+       "inc_other_trading_activities",
+       "income_from_govt_contracts",
+       "income_from_govt_grants",
+       "investment_gains_losses",
+       "latest_acc_fin_year_end_date",
+       "latest_expenditure",
+       "latest_income"
+      ]
+     }
+    }
+   },
+   {
+    "name": "THE GURKHA MUSEUM TRUST",
+    "number": 1169920,
+    "endpoints": {
+     "allcharitydetails": {
+      "keys": [
+       "CharityAoOCountryContinent",
+       "CharityAoOLocalAuthority",
+       "CharityAoORegion",
+       "address_line_five",
+       "address_line_four",
+       "address_line_one",
+       "address_line_three",
+       "address_line_two",
+       "address_post_code",
+       "charity_co_reg_number",
+       "charity_name",
+       "charity_type",
+       "cif_cdf_ind",
+       "cio_dissolution_ind",
+       "cio_ind",
+       "constituency_name",
+       "date_of_interim_manager_appt",
+       "date_of_registration",
+       "date_of_removal",
+       "email",
+       "group_subsid_suffix",
+       "in_administration",
+       "insolvent",
+       "interim_manager_ind",
+       "last_modified_time",
+       "latest_acc_fin_year_end_date",
+       "latest_acc_fin_year_start_date",
+       "latest_expenditure",
+       "latest_income",
+       "organisation_number",
+       "other_names",
+       "phone",
+       "prev_excepted_ind",
+       "reg_charity_number",
+       "reg_status",
+       "removal_reason",
+       "reporting_status",
+       "trustee_names",
+       "web",
+       "who_what_where"
+      ]
+     },
+     "charitydetails": {
+      "keys": [
+       "address_line_five",
+       "address_line_four",
+       "address_line_one",
+       "address_line_three",
+       "address_line_two",
+       "address_post_code",
+       "charity_co_reg_number",
+       "charity_name",
+       "charity_type",
+       "cif_cdf_ind",
+       "cio_dissolution_ind",
+       "cio_ind",
+       "date_of_interim_manager_appt",
+       "date_of_registration",
+       "date_of_removal",
+       "email",
+       "group_subsid_suffix",
+       "in_administration",
+       "insolvent",
+       "interim_manager_ind",
+       "last_modified_time",
+       "latest_acc_fin_year_end_date",
+       "latest_acc_fin_year_start_date",
+       "latest_expenditure",
+       "latest_income",
+       "organisation_number",
+       "phone",
+       "prev_excepted_ind",
+       "reg_charity_number",
+       "reg_status",
+       "removal_reason",
+       "reporting_status",
+       "web"
+      ]
+     },
+     "charityfinancialhistory": {
+      "rows": 5,
+      "keys": [
+       "ar_cycle_reference",
+       "charity_only_account",
+       "consolidated_account",
+       "exp_charitable_activities",
+       "exp_governance",
+       "exp_grants_institution",
+       "exp_investment_management",
+       "exp_other",
+       "exp_raising_funds",
+       "exp_total",
+       "expenditure",
+       "financial_period_end_date",
+       "inc_charitable_activities",
+       "inc_donations_and_legacies",
+       "inc_endowments",
+       "inc_investment",
+       "inc_legacies",
+       "inc_other",
+       "inc_other_trading_activities",
+       "inc_total",
+       "income",
+       "income_from_govt_contracts",
+       "income_from_govt_grants"
+      ]
+     },
+     "charitytrusteeinformation": {
+      "rows": 14,
+      "keys": [
+       "charity_name",
+       "date_of_appointment",
+       "is_chair",
+       "name",
+       "organisation_number",
+       "reg_charity_number",
+       "reporting_status"
+      ]
+     },
+     "charityareaofoperation": {
+      "rows": 1,
+      "keys": [
+       "area_of_operation",
+       "geographic_area_type"
+      ]
+     },
+     "charityaccountsandreturns": {
+      "http": 404
+     },
+     "charityaccountsandannualreturns": {
+      "http": 404
+     },
+     "charitypublishedreports": {
+      "http": 404
+     },
+     "charitypolicies": {
+      "http": 404
+     },
+     "charitygoverningdocument": {
+      "keys": [
+       "area_of_benefit",
+       "charitable_objects",
+       "governing_document_description"
+      ]
+     },
+     "charityclassification": {
+      "http": 404
+     },
+     "charityregistrations": {
+      "http": 404
+     },
+     "charityeventhistory": {
+      "http": 404
+     },
+     "charityoverview": {
+      "keys": [
+       "activities",
+       "agreement_commercial_participator",
+       "agreement_professional_fundraiser",
+       "any_trustee_benefit",
+       "band_100001_110000",
+       "band_110001_120000",
+       "band_120001_130000",
+       "band_130001_140000",
+       "band_140001_150000",
+       "band_150001_200000",
+       "band_200001_250000",
+       "band_250001_300000",
+       "band_300001_350000",
+       "band_350001_400000",
+       "band_400001_450000",
+       "band_450001_500000",
+       "band_60001_70000",
+       "band_70001_80000",
+       "band_80001_90000",
+       "band_90001_100000",
+       "band_over_500000",
+       "commercial_participator",
+       "employees",
+       "employees_over_60k",
+       "exp_charitable_activities",
+       "exp_other",
+       "exp_raising_funds",
+       "fin_period_end_date",
+       "grant_making_main_activity",
+       "inc_charitable_activities",
+       "inc_donations_legacies",
+       "inc_investments",
+       "inc_other",
+       "inc_other_trading_activities",
+       "income_from_govt_contracts",
+       "income_from_govt_grants",
+       "investment_gains_losses",
+       "latest_acc_fin_year_end_date",
+       "latest_expenditure",
+       "latest_income"
+      ]
+     }
+    }
+   },
+   {
+    "name": "CHILD EDUCATION NEPAL UK",
+    "number": 1122259,
+    "endpoints": {
+     "allcharitydetails": {
+      "keys": [
+       "CharityAoOCountryContinent",
+       "CharityAoOLocalAuthority",
+       "CharityAoORegion",
+       "address_line_five",
+       "address_line_four",
+       "address_line_one",
+       "address_line_three",
+       "address_line_two",
+       "address_post_code",
+       "charity_co_reg_number",
+       "charity_name",
+       "charity_type",
+       "cif_cdf_ind",
+       "cio_dissolution_ind",
+       "cio_ind",
+       "constituency_name",
+       "date_of_interim_manager_appt",
+       "date_of_registration",
+       "date_of_removal",
+       "email",
+       "group_subsid_suffix",
+       "in_administration",
+       "insolvent",
+       "interim_manager_ind",
+       "last_modified_time",
+       "latest_acc_fin_year_end_date",
+       "latest_acc_fin_year_start_date",
+       "latest_expenditure",
+       "latest_income",
+       "organisation_number",
+       "other_names",
+       "phone",
+       "prev_excepted_ind",
+       "reg_charity_number",
+       "reg_status",
+       "removal_reason",
+       "reporting_status",
+       "trustee_names",
+       "web",
+       "who_what_where"
+      ]
+     },
+     "charitydetails": {
+      "keys": [
+       "address_line_five",
+       "address_line_four",
+       "address_line_one",
+       "address_line_three",
+       "address_line_two",
+       "address_post_code",
+       "charity_co_reg_number",
+       "charity_name",
+       "charity_type",
+       "cif_cdf_ind",
+       "cio_dissolution_ind",
+       "cio_ind",
+       "date_of_interim_manager_appt",
+       "date_of_registration",
+       "date_of_removal",
+       "email",
+       "group_subsid_suffix",
+       "in_administration",
+       "insolvent",
+       "interim_manager_ind",
+       "last_modified_time",
+       "latest_acc_fin_year_end_date",
+       "latest_acc_fin_year_start_date",
+       "latest_expenditure",
+       "latest_income",
+       "organisation_number",
+       "phone",
+       "prev_excepted_ind",
+       "reg_charity_number",
+       "reg_status",
+       "removal_reason",
+       "reporting_status",
+       "web"
+      ]
+     },
+     "charityfinancialhistory": {
+      "rows": 5,
+      "keys": [
+       "ar_cycle_reference",
+       "charity_only_account",
+       "consolidated_account",
+       "exp_charitable_activities",
+       "exp_governance",
+       "exp_grants_institution",
+       "exp_investment_management",
+       "exp_other",
+       "exp_raising_funds",
+       "exp_total",
+       "expenditure",
+       "financial_period_end_date",
+       "inc_charitable_activities",
+       "inc_donations_and_legacies",
+       "inc_endowments",
+       "inc_investment",
+       "inc_legacies",
+       "inc_other",
+       "inc_other_trading_activities",
+       "inc_total",
+       "income",
+       "income_from_govt_contracts",
+       "income_from_govt_grants"
+      ]
+     },
+     "charitytrusteeinformation": {
+      "rows": 4,
+      "keys": [
+       "charity_name",
+       "date_of_appointment",
+       "is_chair",
+       "name",
+       "organisation_number",
+       "reg_charity_number",
+       "reporting_status"
+      ]
+     },
+     "charityareaofoperation": {
+      "rows": 1,
+      "keys": [
+       "area_of_operation",
+       "geographic_area_type"
+      ]
+     },
+     "charityaccountsandreturns": {
+      "http": 404
+     },
+     "charityaccountsandannualreturns": {
+      "http": 404
+     },
+     "charitypublishedreports": {
+      "http": 404
+     },
+     "charitypolicies": {
+      "http": 404
+     },
+     "charitygoverningdocument": {
+      "keys": [
+       "area_of_benefit",
+       "charitable_objects",
+       "governing_document_description"
+      ]
+     },
+     "charityclassification": {
+      "http": 404
+     },
+     "charityregistrations": {
+      "http": 404
+     },
+     "charityeventhistory": {
+      "http": 404
+     },
+     "charityoverview": {
+      "keys": [
+       "activities",
+       "agreement_commercial_participator",
+       "agreement_professional_fundraiser",
+       "any_trustee_benefit",
+       "band_100001_110000",
+       "band_110001_120000",
+       "band_120001_130000",
+       "band_130001_140000",
+       "band_140001_150000",
+       "band_150001_200000",
+       "band_200001_250000",
+       "band_250001_300000",
+       "band_300001_350000",
+       "band_350001_400000",
+       "band_400001_450000",
+       "band_450001_500000",
+       "band_60001_70000",
+       "band_70001_80000",
+       "band_80001_90000",
+       "band_90001_100000",
+       "band_over_500000",
+       "commercial_participator",
+       "employees",
+       "employees_over_60k",
+       "exp_charitable_activities",
+       "exp_other",
+       "exp_raising_funds",
+       "fin_period_end_date",
+       "grant_making_main_activity",
+       "inc_charitable_activities",
+       "inc_donations_legacies",
+       "inc_investments",
+       "inc_other",
+       "inc_other_trading_activities",
+       "income_from_govt_contracts",
+       "income_from_govt_grants",
+       "investment_gains_losses",
+       "latest_acc_fin_year_end_date",
+       "latest_expenditure",
+       "latest_income"
+      ]
+     }
+    }
+   },
+   {
+    "name": "INTERNATIONAL NEPAL FELLOWSHIP",
+    "number": 1047178,
+    "endpoints": {
+     "allcharitydetails": {
+      "keys": [
+       "CharityAoOCountryContinent",
+       "CharityAoOLocalAuthority",
+       "CharityAoORegion",
+       "address_line_five",
+       "address_line_four",
+       "address_line_one",
+       "address_line_three",
+       "address_line_two",
+       "address_post_code",
+       "charity_co_reg_number",
+       "charity_name",
+       "charity_type",
+       "cif_cdf_ind",
+       "cio_dissolution_ind",
+       "cio_ind",
+       "constituency_name",
+       "date_of_interim_manager_appt",
+       "date_of_registration",
+       "date_of_removal",
+       "email",
+       "group_subsid_suffix",
+       "in_administration",
+       "insolvent",
+       "interim_manager_ind",
+       "last_modified_time",
+       "latest_acc_fin_year_end_date",
+       "latest_acc_fin_year_start_date",
+       "latest_expenditure",
+       "latest_income",
+       "organisation_number",
+       "other_names",
+       "phone",
+       "prev_excepted_ind",
+       "reg_charity_number",
+       "reg_status",
+       "removal_reason",
+       "reporting_status",
+       "trustee_names",
+       "web",
+       "who_what_where"
+      ]
+     },
+     "charitydetails": {
+      "keys": [
+       "address_line_five",
+       "address_line_four",
+       "address_line_one",
+       "address_line_three",
+       "address_line_two",
+       "address_post_code",
+       "charity_co_reg_number",
+       "charity_name",
+       "charity_type",
+       "cif_cdf_ind",
+       "cio_dissolution_ind",
+       "cio_ind",
+       "date_of_interim_manager_appt",
+       "date_of_registration",
+       "date_of_removal",
+       "email",
+       "group_subsid_suffix",
+       "in_administration",
+       "insolvent",
+       "interim_manager_ind",
+       "last_modified_time",
+       "latest_acc_fin_year_end_date",
+       "latest_acc_fin_year_start_date",
+       "latest_expenditure",
+       "latest_income",
+       "organisation_number",
+       "phone",
+       "prev_excepted_ind",
+       "reg_charity_number",
+       "reg_status",
+       "removal_reason",
+       "reporting_status",
+       "web"
+      ]
+     },
+     "charityfinancialhistory": {
+      "rows": 5,
+      "keys": [
+       "ar_cycle_reference",
+       "charity_only_account",
+       "consolidated_account",
+       "exp_charitable_activities",
+       "exp_governance",
+       "exp_grants_institution",
+       "exp_investment_management",
+       "exp_other",
+       "exp_raising_funds",
+       "exp_total",
+       "expenditure",
+       "financial_period_end_date",
+       "inc_charitable_activities",
+       "inc_donations_and_legacies",
+       "inc_endowments",
+       "inc_investment",
+       "inc_legacies",
+       "inc_other",
+       "inc_other_trading_activities",
+       "inc_total",
+       "income",
+       "income_from_govt_contracts",
+       "income_from_govt_grants"
+      ]
+     },
+     "charitytrusteeinformation": {
+      "rows": 7,
+      "keys": [
+       "charity_name",
+       "date_of_appointment",
+       "is_chair",
+       "name",
+       "organisation_number",
+       "reg_charity_number",
+       "reporting_status"
+      ]
+     },
+     "charityareaofoperation": {
+      "rows": 1,
+      "keys": [
+       "area_of_operation",
+       "geographic_area_type"
+      ]
+     },
+     "charityaccountsandreturns": {
+      "http": 404
+     },
+     "charityaccountsandannualreturns": {
+      "http": 404
+     },
+     "charitypublishedreports": {
+      "http": 404
+     },
+     "charitypolicies": {
+      "http": 404
+     },
+     "charitygoverningdocument": {
+      "keys": [
+       "area_of_benefit",
+       "charitable_objects",
+       "governing_document_description"
+      ]
+     },
+     "charityclassification": {
+      "http": 404
+     },
+     "charityregistrations": {
+      "http": 404
+     },
+     "charityeventhistory": {
+      "http": 404
+     },
+     "charityoverview": {
+      "keys": [
+       "activities",
+       "agreement_commercial_participator",
+       "agreement_professional_fundraiser",
+       "any_trustee_benefit",
+       "band_100001_110000",
+       "band_110001_120000",
+       "band_120001_130000",
+       "band_130001_140000",
+       "band_140001_150000",
+       "band_150001_200000",
+       "band_200001_250000",
+       "band_250001_300000",
+       "band_300001_350000",
+       "band_350001_400000",
+       "band_400001_450000",
+       "band_450001_500000",
+       "band_60001_70000",
+       "band_70001_80000",
+       "band_80001_90000",
+       "band_90001_100000",
+       "band_over_500000",
+       "commercial_participator",
+       "employees",
+       "employees_over_60k",
+       "exp_charitable_activities",
+       "exp_other",
+       "exp_raising_funds",
+       "fin_period_end_date",
+       "grant_making_main_activity",
+       "inc_charitable_activities",
+       "inc_donations_legacies",
+       "inc_investments",
+       "inc_other",
+       "inc_other_trading_activities",
+       "income_from_govt_contracts",
+       "income_from_govt_grants",
+       "investment_gains_losses",
+       "latest_acc_fin_year_end_date",
+       "latest_expenditure",
+       "latest_income"
+      ]
+     }
+    }
+   },
+   {
+    "name": "CHILD RESCUE NEPAL",
+    "number": 1078187,
+    "endpoints": {
+     "allcharitydetails": {
+      "keys": [
+       "CharityAoOCountryContinent",
+       "CharityAoOLocalAuthority",
+       "CharityAoORegion",
+       "address_line_five",
+       "address_line_four",
+       "address_line_one",
+       "address_line_three",
+       "address_line_two",
+       "address_post_code",
+       "charity_co_reg_number",
+       "charity_name",
+       "charity_type",
+       "cif_cdf_ind",
+       "cio_dissolution_ind",
+       "cio_ind",
+       "constituency_name",
+       "date_of_interim_manager_appt",
+       "date_of_registration",
+       "date_of_removal",
+       "email",
+       "group_subsid_suffix",
+       "in_administration",
+       "insolvent",
+       "interim_manager_ind",
+       "last_modified_time",
+       "latest_acc_fin_year_end_date",
+       "latest_acc_fin_year_start_date",
+       "latest_expenditure",
+       "latest_income",
+       "organisation_number",
+       "other_names",
+       "phone",
+       "prev_excepted_ind",
+       "reg_charity_number",
+       "reg_status",
+       "removal_reason",
+       "reporting_status",
+       "trustee_names",
+       "web",
+       "who_what_where"
+      ]
+     },
+     "charitydetails": {
+      "keys": [
+       "address_line_five",
+       "address_line_four",
+       "address_line_one",
+       "address_line_three",
+       "address_line_two",
+       "address_post_code",
+       "charity_co_reg_number",
+       "charity_name",
+       "charity_type",
+       "cif_cdf_ind",
+       "cio_dissolution_ind",
+       "cio_ind",
+       "date_of_interim_manager_appt",
+       "date_of_registration",
+       "date_of_removal",
+       "email",
+       "group_subsid_suffix",
+       "in_administration",
+       "insolvent",
+       "interim_manager_ind",
+       "last_modified_time",
+       "latest_acc_fin_year_end_date",
+       "latest_acc_fin_year_start_date",
+       "latest_expenditure",
+       "latest_income",
+       "organisation_number",
+       "phone",
+       "prev_excepted_ind",
+       "reg_charity_number",
+       "reg_status",
+       "removal_reason",
+       "reporting_status",
+       "web"
+      ]
+     },
+     "charityfinancialhistory": {
+      "rows": 5,
+      "keys": [
+       "ar_cycle_reference",
+       "charity_only_account",
+       "consolidated_account",
+       "exp_charitable_activities",
+       "exp_governance",
+       "exp_grants_institution",
+       "exp_investment_management",
+       "exp_other",
+       "exp_raising_funds",
+       "exp_total",
+       "expenditure",
+       "financial_period_end_date",
+       "inc_charitable_activities",
+       "inc_donations_and_legacies",
+       "inc_endowments",
+       "inc_investment",
+       "inc_legacies",
+       "inc_other",
+       "inc_other_trading_activities",
+       "inc_total",
+       "income",
+       "income_from_govt_contracts",
+       "income_from_govt_grants"
+      ]
+     },
+     "charitytrusteeinformation": {
+      "rows": 1,
+      "keys": [
+       "charity_name",
+       "date_of_appointment",
+       "is_chair",
+       "name",
+       "organisation_number",
+       "reg_charity_number",
+       "reporting_status"
+      ]
+     },
+     "charityareaofoperation": {
+      "rows": 2,
+      "keys": [
+       "area_of_operation",
+       "geographic_area_type"
+      ]
+     },
+     "charityaccountsandreturns": {
+      "http": 404
+     },
+     "charityaccountsandannualreturns": {
+      "http": 404
+     },
+     "charitypublishedreports": {
+      "http": 404
+     },
+     "charitypolicies": {
+      "http": 404
+     },
+     "charitygoverningdocument": {
+      "keys": [
+       "area_of_benefit",
+       "charitable_objects",
+       "governing_document_description"
+      ]
+     },
+     "charityclassification": {
+      "http": 404
+     },
+     "charityregistrations": {
+      "http": 404
+     },
+     "charityeventhistory": {
+      "http": 404
+     },
+     "charityoverview": {
+      "keys": [
+       "activities",
+       "agreement_commercial_participator",
+       "agreement_professional_fundraiser",
+       "any_trustee_benefit",
+       "band_100001_110000",
+       "band_110001_120000",
+       "band_120001_130000",
+       "band_130001_140000",
+       "band_140001_150000",
+       "band_150001_200000",
+       "band_200001_250000",
+       "band_250001_300000",
+       "band_300001_350000",
+       "band_350001_400000",
+       "band_400001_450000",
+       "band_450001_500000",
+       "band_60001_70000",
+       "band_70001_80000",
+       "band_80001_90000",
+       "band_90001_100000",
+       "band_over_500000",
+       "commercial_participator",
+       "employees",
+       "employees_over_60k",
+       "exp_charitable_activities",
+       "exp_other",
+       "exp_raising_funds",
+       "fin_period_end_date",
+       "grant_making_main_activity",
+       "inc_charitable_activities",
+       "inc_donations_legacies",
+       "inc_investments",
+       "inc_other",
+       "inc_other_trading_activities",
+       "income_from_govt_contracts",
+       "income_from_govt_grants",
+       "investment_gains_losses",
+       "latest_acc_fin_year_end_date",
+       "latest_expenditure",
+       "latest_income"
+      ]
+     }
+    }
+   },
+   {
+    "name": "UPLIFTING NEPAL'S CHILDREN WITH LOVE AND EDUCATION",
+    "number": 1126515,
+    "endpoints": {
+     "allcharitydetails": {
+      "keys": [
+       "CharityAoOCountryContinent",
+       "CharityAoOLocalAuthority",
+       "CharityAoORegion",
+       "address_line_five",
+       "address_line_four",
+       "address_line_one",
+       "address_line_three",
+       "address_line_two",
+       "address_post_code",
+       "charity_co_reg_number",
+       "charity_name",
+       "charity_type",
+       "cif_cdf_ind",
+       "cio_dissolution_ind",
+       "cio_ind",
+       "constituency_name",
+       "date_of_interim_manager_appt",
+       "date_of_registration",
+       "date_of_removal",
+       "email",
+       "group_subsid_suffix",
+       "in_administration",
+       "insolvent",
+       "interim_manager_ind",
+       "last_modified_time",
+       "latest_acc_fin_year_end_date",
+       "latest_acc_fin_year_start_date",
+       "latest_expenditure",
+       "latest_income",
+       "organisation_number",
+       "other_names",
+       "phone",
+       "prev_excepted_ind",
+       "reg_charity_number",
+       "reg_status",
+       "removal_reason",
+       "reporting_status",
+       "trustee_names",
+       "web",
+       "who_what_where"
+      ]
+     },
+     "charitydetails": {
+      "keys": [
+       "address_line_five",
+       "address_line_four",
+       "address_line_one",
+       "address_line_three",
+       "address_line_two",
+       "address_post_code",
+       "charity_co_reg_number",
+       "charity_name",
+       "charity_type",
+       "cif_cdf_ind",
+       "cio_dissolution_ind",
+       "cio_ind",
+       "date_of_interim_manager_appt",
+       "date_of_registration",
+       "date_of_removal",
+       "email",
+       "group_subsid_suffix",
+       "in_administration",
+       "insolvent",
+       "interim_manager_ind",
+       "last_modified_time",
+       "latest_acc_fin_year_end_date",
+       "latest_acc_fin_year_start_date",
+       "latest_expenditure",
+       "latest_income",
+       "organisation_number",
+       "phone",
+       "prev_excepted_ind",
+       "reg_charity_number",
+       "reg_status",
+       "removal_reason",
+       "reporting_status",
+       "web"
+      ]
+     },
+     "charityfinancialhistory": {
+      "rows": 5,
+      "keys": [
+       "ar_cycle_reference",
+       "charity_only_account",
+       "consolidated_account",
+       "exp_charitable_activities",
+       "exp_governance",
+       "exp_grants_institution",
+       "exp_investment_management",
+       "exp_other",
+       "exp_raising_funds",
+       "exp_total",
+       "expenditure",
+       "financial_period_end_date",
+       "inc_charitable_activities",
+       "inc_donations_and_legacies",
+       "inc_endowments",
+       "inc_investment",
+       "inc_legacies",
+       "inc_other",
+       "inc_other_trading_activities",
+       "inc_total",
+       "income",
+       "income_from_govt_contracts",
+       "income_from_govt_grants"
+      ]
+     },
+     "charitytrusteeinformation": {
+      "rows": 11,
+      "keys": [
+       "charity_name",
+       "date_of_appointment",
+       "is_chair",
+       "name",
+       "organisation_number",
+       "reg_charity_number",
+       "reporting_status"
+      ]
+     },
+     "charityareaofoperation": {
+      "rows": 1,
+      "keys": [
+       "area_of_operation",
+       "geographic_area_type"
+      ]
+     },
+     "charityaccountsandreturns": {
+      "http": 404
+     },
+     "charityaccountsandannualreturns": {
+      "http": 404
+     },
+     "charitypublishedreports": {
+      "http": 404
+     },
+     "charitypolicies": {
+      "http": 404
+     },
+     "charitygoverningdocument": {
+      "keys": [
+       "area_of_benefit",
+       "charitable_objects",
+       "governing_document_description"
+      ]
+     },
+     "charityclassification": {
+      "http": 404
+     },
+     "charityregistrations": {
+      "http": 404
+     },
+     "charityeventhistory": {
+      "http": 404
+     },
+     "charityoverview": {
+      "keys": [
+       "activities",
+       "agreement_commercial_participator",
+       "agreement_professional_fundraiser",
+       "any_trustee_benefit",
+       "band_100001_110000",
+       "band_110001_120000",
+       "band_120001_130000",
+       "band_130001_140000",
+       "band_140001_150000",
+       "band_150001_200000",
+       "band_200001_250000",
+       "band_250001_300000",
+       "band_300001_350000",
+       "band_350001_400000",
+       "band_400001_450000",
+       "band_450001_500000",
+       "band_60001_70000",
+       "band_70001_80000",
+       "band_80001_90000",
+       "band_90001_100000",
+       "band_over_500000",
+       "commercial_participator",
+       "employees",
+       "employees_over_60k",
+       "exp_charitable_activities",
+       "exp_other",
+       "exp_raising_funds",
+       "fin_period_end_date",
+       "grant_making_main_activity",
+       "inc_charitable_activities",
+       "inc_donations_legacies",
+       "inc_investments",
+       "inc_other",
+       "inc_other_trading_activities",
+       "income_from_govt_contracts",
+       "income_from_govt_grants",
+       "investment_gains_losses",
+       "latest_acc_fin_year_end_date",
+       "latest_expenditure",
+       "latest_income"
+      ]
+     }
+    }
+   },
+   {
+    "name": "GURKHA NEPALESE WELFARE SOCIETY, UK",
+    "number": 1177281,
+    "endpoints": {
+     "allcharitydetails": {
+      "keys": [
+       "CharityAoOCountryContinent",
+       "CharityAoOLocalAuthority",
+       "CharityAoORegion",
+       "address_line_five",
+       "address_line_four",
+       "address_line_one",
+       "address_line_three",
+       "address_line_two",
+       "address_post_code",
+       "charity_co_reg_number",
+       "charity_name",
+       "charity_type",
+       "cif_cdf_ind",
+       "cio_dissolution_ind",
+       "cio_ind",
+       "constituency_name",
+       "date_of_interim_manager_appt",
+       "date_of_registration",
+       "date_of_removal",
+       "email",
+       "group_subsid_suffix",
+       "in_administration",
+       "insolvent",
+       "interim_manager_ind",
+       "last_modified_time",
+       "latest_acc_fin_year_end_date",
+       "latest_acc_fin_year_start_date",
+       "latest_expenditure",
+       "latest_income",
+       "organisation_number",
+       "other_names",
+       "phone",
+       "prev_excepted_ind",
+       "reg_charity_number",
+       "reg_status",
+       "removal_reason",
+       "reporting_status",
+       "trustee_names",
+       "web",
+       "who_what_where"
+      ]
+     },
+     "charitydetails": {
+      "keys": [
+       "address_line_five",
+       "address_line_four",
+       "address_line_one",
+       "address_line_three",
+       "address_line_two",
+       "address_post_code",
+       "charity_co_reg_number",
+       "charity_name",
+       "charity_type",
+       "cif_cdf_ind",
+       "cio_dissolution_ind",
+       "cio_ind",
+       "date_of_interim_manager_appt",
+       "date_of_registration",
+       "date_of_removal",
+       "email",
+       "group_subsid_suffix",
+       "in_administration",
+       "insolvent",
+       "interim_manager_ind",
+       "last_modified_time",
+       "latest_acc_fin_year_end_date",
+       "latest_acc_fin_year_start_date",
+       "latest_expenditure",
+       "latest_income",
+       "organisation_number",
+       "phone",
+       "prev_excepted_ind",
+       "reg_charity_number",
+       "reg_status",
+       "removal_reason",
+       "reporting_status",
+       "web"
+      ]
+     },
+     "charityfinancialhistory": {
+      "rows": 5,
+      "keys": [
+       "ar_cycle_reference",
+       "charity_only_account",
+       "consolidated_account",
+       "exp_charitable_activities",
+       "exp_governance",
+       "exp_grants_institution",
+       "exp_investment_management",
+       "exp_other",
+       "exp_raising_funds",
+       "exp_total",
+       "expenditure",
+       "financial_period_end_date",
+       "inc_charitable_activities",
+       "inc_donations_and_legacies",
+       "inc_endowments",
+       "inc_investment",
+       "inc_legacies",
+       "inc_other",
+       "inc_other_trading_activities",
+       "inc_total",
+       "income",
+       "income_from_govt_contracts",
+       "income_from_govt_grants"
+      ]
+     },
+     "charitytrusteeinformation": {
+      "rows": 5,
+      "keys": [
+       "charity_name",
+       "date_of_appointment",
+       "is_chair",
+       "name",
+       "organisation_number",
+       "reg_charity_number",
+       "reporting_status"
+      ]
+     },
+     "charityareaofoperation": {
+      "rows": 2,
+      "keys": [
+       "area_of_operation",
+       "geographic_area_type"
+      ]
+     },
+     "charityaccountsandreturns": {
+      "http": 404
+     },
+     "charityaccountsandannualreturns": {
+      "http": 404
+     },
+     "charitypublishedreports": {
+      "http": 404
+     },
+     "charitypolicies": {
+      "http": 404
+     },
+     "charitygoverningdocument": {
+      "keys": [
+       "area_of_benefit",
+       "charitable_objects",
+       "governing_document_description"
+      ]
+     },
+     "charityclassification": {
+      "http": 404
+     },
+     "charityregistrations": {
+      "http": 404
+     },
+     "charityeventhistory": {
+      "http": 404
+     },
+     "charityoverview": {
+      "keys": [
+       "activities",
+       "agreement_commercial_participator",
+       "agreement_professional_fundraiser",
+       "any_trustee_benefit",
+       "band_100001_110000",
+       "band_110001_120000",
+       "band_120001_130000",
+       "band_130001_140000",
+       "band_140001_150000",
+       "band_150001_200000",
+       "band_200001_250000",
+       "band_250001_300000",
+       "band_300001_350000",
+       "band_350001_400000",
+       "band_400001_450000",
+       "band_450001_500000",
+       "band_60001_70000",
+       "band_70001_80000",
+       "band_80001_90000",
+       "band_90001_100000",
+       "band_over_500000",
+       "commercial_participator",
+       "employees",
+       "employees_over_60k",
+       "exp_charitable_activities",
+       "exp_other",
+       "exp_raising_funds",
+       "fin_period_end_date",
+       "grant_making_main_activity",
+       "inc_charitable_activities",
+       "inc_donations_legacies",
+       "inc_investments",
+       "inc_other",
+       "inc_other_trading_activities",
+       "income_from_govt_contracts",
+       "income_from_govt_grants",
+       "investment_gains_losses",
+       "latest_acc_fin_year_end_date",
+       "latest_expenditure",
+       "latest_income"
+      ]
+     }
+    }
+   }
+  ],
+  "allcharitydetails_keys": [
+   "CharityAoOCountryContinent",
+   "CharityAoOLocalAuthority",
+   "CharityAoORegion",
+   "address_line_five",
+   "address_line_four",
+   "address_line_one",
+   "address_line_three",
+   "address_line_two",
+   "address_post_code",
+   "charity_co_reg_number",
+   "charity_name",
+   "charity_type",
+   "cif_cdf_ind",
+   "cio_dissolution_ind",
+   "cio_ind",
+   "constituency_name",
+   "date_of_interim_manager_appt",
+   "date_of_registration",
+   "date_of_removal",
+   "email",
+   "group_subsid_suffix",
+   "in_administration",
+   "insolvent",
+   "interim_manager_ind",
+   "last_modified_time",
+   "latest_acc_fin_year_end_date",
+   "latest_acc_fin_year_start_date",
+   "latest_expenditure",
+   "latest_income",
+   "organisation_number",
+   "other_names",
+   "phone",
+   "prev_excepted_ind",
+   "reg_charity_number",
+   "reg_status",
+   "removal_reason",
+   "reporting_status",
+   "trustee_names",
+   "web",
+   "who_what_where"
+  ],
+  "area_of_operation_sample": [
+   {
+    "area_of_operation": "India",
+    "geographic_area_type": "Country"
+   },
+   {
+    "area_of_operation": "Nepal",
+    "geographic_area_type": "Country"
+   },
+   {
+    "area_of_operation": "Scotland",
+    "geographic_area_type": "Country"
+   }
+  ],
+  "financial_history_sample": [
+   {
+    "ar_cycle_reference": "AR21",
+    "financial_period_end_date": "2021-06-30T00:00:00",
+    "income": 22046000.0,
+    "expenditure": 20554000.0,
+    "consolidated_account": true,
+    "charity_only_account": null,
+    "income_from_govt_contracts": 970000.0,
+    "income_from_govt_grants": 5880000.0,
+    "inc_donations_and_legacies": 16589000.0,
+    "inc_other_trading_activities": 182000.0,
+    "inc_charitable_activities": 3495000.0,
+    "inc_endowments": 0.0,
+    "inc_legacies": 5004000.0,
+    "inc_investment": 1780000.0,
+    "inc_other": 0.0,
+    "inc_total": 22046000.0,
+    "exp_charitable_activities": 18088000.0,
+    "exp_raising_funds": 2466000.0,
+    "exp_governance": 225000.0,
+    "exp_grants_institution": 250000.0,
+    "exp_investment_management": 347000.0,
+    "exp_other": 0.0,
+    "exp_total": 20554000.0
+   },
+   {
+    "ar_cycle_reference": "AR22",
+    "financial_period_end_date": "2022-06-30T00:00:00",
+    "income": 25512000.0,
+    "expenditure": 22705000.0,
+    "consolidated_account": true,
+    "charity_only_account": null,
+    "income_from_govt_contracts": 1933000.0,
+    "income_from_govt_grants": 5850000.0,
+    "inc_donations_and_legacies": 18315000.0,
+    "inc_other_trading_activities": 694000.0,
+    "inc_charitable_activities": 4458000.0,
+    "inc_endowments": 0.0,
+    "inc_legacies": 7997000.0,
+    "inc_investment": 2045000.0,
+    "inc_other": 0.0,
+    "inc_total": 25512000.0,
+    "exp_charitable_activities": 20071000.0,
+    "exp_raising_funds": 2634000.0,
+    "exp_governance": 230000.0,
+    "exp_grants_institution": 250000.0,
+    "exp_investment_management": 372000.0,
+    "exp_other": 0.0,
+    "exp_total": 22705000.0
+   },
+   {
+    "ar_cycle_reference": "AR23",
+    "financial_period_end_date": "2023-06-30T00:00:00",
+    "income": 24599000.0,
+    "expenditure": 24444000.0,
+    "consolidated_account": true,
+    "charity_only_account": null,
+    "income_from_govt_contracts": 1746000.0,
+    "income_from_govt_grants": 6085000.0,
+    "inc_donations_and_legacies": 16429000.0,
+    "inc_other_trading_activities": 576000.0,
+    "inc_charitable_activities": 4891000.0,
+    "inc_endowments": 0.0,
+    "inc_legacies": 6657000.0,
+    "inc_investment": 2703000.0,
+    "inc_other": 0.0,
+    "inc_total": 24599000.0,
+    "exp_charitable_activities": 21601000.0,
+    "exp_raising_funds": 2843000.0,
+    "exp_governance": 257000.0,
+    "exp_grants_institution": 250000.0,
+    "exp_investment_management": 355000.0,
+    "exp_other": 0.0,
+    "exp_total": 24444000.0
+   }
+  ],
+  "charitysearch_nepal": {
+   "http": 404,
+   "hits": null,
+   "first": {
+    "statusCode": 404,
+    "message": "Resource not found"
+   }
+  },
+  "verdict_inputs": {
+   "area_of_operation_works": true,
+   "financial_history_years": 5,
+   "trustees_available": true,
+   "accounts_docs_available": false
+  }
+ }
+}

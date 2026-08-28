@@ -1,0 +1,327 @@
+{
+ "retrieved_at": "2026-08-28T12:57:06+00:00",
+ "source": "reliefweb",
+ "disaster": {
+  "url": "https://reliefweb.int/disaster/ff-2026-000162-npl",
+  "title": "Nepal: Flash Floods - Aug 2026",
+  "disaster_id": "52684"
+ },
+ "listing_total": 38,
+ "data": [
+  {
+   "url": "https://reliefweb.int/report/nepal/nepal-floods-school-children-reunited-families-after-being-stranded-save-children",
+   "title": "Nepal Floods: School children reunited with families after being stranded – Save the Children",
+   "format": "News and Press Release",
+   "sources": [
+    "Save the Children"
+   ],
+   "date": "2026-08-28T12:19:02+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/wvi-nepal-declares-category-i-national-response-flash-floods-rasuwa-and-nuwakot",
+   "title": "WVI Nepal Declares Category I National Response to Flash Floods in Rasuwa and Nuwakot",
+   "format": "News and Press Release",
+   "sources": [
+    "World Vision"
+   ],
+   "date": "2026-08-28T12:08:19+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/irdr-data-brief-satellite-data-flash-flooddebris-flow-china-and-nepal-26-august-2026",
+   "title": "IRDR Data Brief - Satellite Data for Flash Flood/Debris Flow in China and Nepal on 26 August 2026",
+   "format": "Situation Report",
+   "sources": [
+    "IRDR"
+   ],
+   "date": "2026-08-28T10:02:26+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/nepal-landslides-flash-floods-situation-report-1-august-27-2026",
+   "title": "Nepal Landslides & Flash Floods: Situation Report #1 (August 27, 2026)",
+   "format": "Situation Report",
+   "sources": [
+    "HOPE"
+   ],
+   "date": "2026-08-28T09:46:23+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/nepal-catastrophic-flash-flood-rasuwa-trishuli-nepal-26-august-2026",
+   "title": "Nepal Catastrophic Flash Flood Rasuwa-Trishuli, Nepal (26 August 2026)",
+   "format": "Situation Report",
+   "sources": [
+    "PDC"
+   ],
+   "date": "2026-08-28T09:08:51+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/students-stranded-communities-isolated-after-devastating-nepal-floods",
+   "title": "Students stranded, communities isolated after devastating Nepal floods",
+   "format": "News and Press Release",
+   "sources": [
+    "Plan International"
+   ],
+   "date": "2026-08-28T09:03:07+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/statement-disaster-nepal-and-china-kamal-kishore-special-representative-un-secretary-general-disaster-risk-reduction-and-head-undrr",
+   "title": "Statement on the disaster in Nepal and China by Kamal Kishore, Special Representative of the UN Secretary-General for Disaster Risk Reduction and Head of UNDRR",
+   "format": "News and Press Release",
+   "sources": [
+    "UNDRR"
+   ],
+   "date": "2026-08-28T08:03:06+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/nepal-flood-response-situation-report-1-27-august-2026",
+   "title": "Nepal Flood Response Situation Report #1 | 27 August 2026",
+   "format": "Situation Report",
+   "sources": [
+    "IOM"
+   ],
+   "date": "2026-08-28T07:33:07+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/asia-pacific-humanitarian-logistics-working-group-ad-hoc-regional-call-nepal-flood-emergency-27-august-2026-presentation",
+   "title": "Asia-Pacific Humanitarian Logistics Working Group - Ad-Hoc Regional Call on Nepal Flood Emergency (27 August 2026) [Presentation]",
+   "format": "Other",
+   "sources": [
+    "Logistics Cluster    WFP"
+   ],
+   "date": "2026-08-28T01:41:19+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/asia-pacific-humanitarian-logistics-working-group-nepal-flood-emergency-coordination-meeting-minutes-27-august-2026",
+   "title": "Asia-Pacific Humanitarian Logistics Working Group - Nepal Flood Emergency Coordination Meeting Minutes (27 August 2026)",
+   "format": "Other",
+   "sources": [
+    "ETC    Logistics Cluster    WFP"
+   ],
+   "date": "2026-08-28T01:36:20+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/australias-response-nepal-china-floods-28-august-2026",
+   "title": "Australia’s response to Nepal-China floods (28 August 2026)",
+   "format": "News and Press Release",
+   "sources": [
+    "Govt. Australia"
+   ],
+   "date": "2026-08-28T00:36:13+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/en-nepal-las-inundaciones-repentinas-dejan-mas-de-17000-ninos-y-ninas-necesitados-de-asistencia-humanitaria-urgente",
+   "title": "En Nepal, las inundaciones repentinas dejan a más de 17.000 niños y niñas necesitados de asistencia humanitaria urgente",
+   "format": "News and Press Release",
+   "sources": [
+    "UNICEF"
+   ],
+   "date": "2026-08-27T19:03:08+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/au-nepal-17-000-enfants-ont-besoin-dune-aide-humanitaire-durgence-en-raison-des-crues-eclair-qui-ont-frappe-le-pays",
+   "title": "Au Népal, 17 000 enfants ont besoin d’une aide humanitaire d’urgence en raison des crues éclair qui ont frappé le pays",
+   "format": "News and Press Release",
+   "sources": [
+    "UNICEF"
+   ],
+   "date": "2026-08-27T19:03:07+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/ifrc-launches-chf-25-million-emergency-appeal-response-devastating-nepal-flash-floods",
+   "title": "IFRC launches CHF 25 million Emergency Appeal in response to devastating Nepal flash floods",
+   "format": "News and Press Release",
+   "sources": [
+    "IFRC"
+   ],
+   "date": "2026-08-27T17:33:05+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/qatar-charity-emergency-response-plan-erp-nepal-flash-flood-response-2026",
+   "title": "Qatar Charity – Emergency Response Plan (ERP) - Nepal Flash Flood Response 2026",
+   "format": "Situation Report",
+   "sources": [
+    "Qatar Charity"
+   ],
+   "date": "2026-08-27T14:37:41+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/flash-floods-nepal-leave-more-17000-children-need-urgent-humanitarian-assistance-enar",
+   "title": "Flash floods in Nepal leave more than 17,000 children in need of urgent humanitarian assistance [EN/AR]",
+   "format": "News and Press Release",
+   "sources": [
+    "UNICEF"
+   ],
+   "date": "2026-08-27T14:33:04+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/oxfam-intermon-responde-la-riada-de-nepal-en-rasuwa-y-nuwakot-donde-las-carreteras-y-los-puentes-destruidos-dificultan-las-labores-de-socorro",
+   "title": "Oxfam Intermón responde a la riada de Nepal en Rasuwa y Nuwakot, donde las carreteras y los puentes destruidos dificultan las labores de socorro.",
+   "format": "News and Press Release",
+   "sources": [
+    "Oxfam"
+   ],
+   "date": "2026-08-27T14:03:05+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/islamic-relief-sending-emergency-aid-nepal-flood-survivors",
+   "title": "Islamic Relief sending emergency aid to Nepal flood survivors",
+   "format": "News and Press Release",
+   "sources": [
+    "Islamic Relief"
+   ],
+   "date": "2026-08-27T14:03:04+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/nepal-lifrc-debloque-des-fonds-durgence-alors-que-les-inondations-soudaines-laissent-des-communautes-isolees",
+   "title": "Népal : l’IFRC débloque des fonds d’urgence alors que les inondations soudaines laissent des communautés isolées",
+   "format": "News and Press Release",
+   "sources": [
+    "IFRC"
+   ],
+   "date": "2026-08-27T13:03:07+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/oxfam-launches-nepal-flood-response-worst-hit-rasuwa-and-nuwakot-destroyed-roads-and-swept-away-bridges-block-relief-efforts",
+   "title": "Oxfam launches Nepal flood response in worst-hit Rasuwa and Nuwakot, as destroyed roads and swept-away bridges block relief efforts",
+   "format": "News and Press Release",
+   "sources": [
+    "Oxfam"
+   ],
+   "date": "2026-08-27T13:03:04+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/iom-spokesperson-statement-nepal-china-floods",
+   "title": "IOM Spokesperson Statement on the Nepal-China Floods",
+   "format": "News and Press Release",
+   "sources": [
+    "IOM"
+   ],
+   "date": "2026-08-27T12:03:05+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/nepal-floods-rescuers-race-find-survivors-areas-still-cut",
+   "title": "Nepal floods: Rescuers race to find survivors with areas still cut off",
+   "format": "News and Press Release",
+   "sources": [
+    "Save the Children"
+   ],
+   "date": "2026-08-27T11:33:05+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/nepal-floods-rescuers-race-find-survivors-areas-still-cut-save-children",
+   "title": "Nepal Floods: Rescuers race to find survivors with areas still cut off - Save the Children",
+   "format": "News and Press Release",
+   "sources": [
+    "Save the Children"
+   ],
+   "date": "2026-08-27T11:23:03+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/declaration-du-porte-parole-de-loim-sur-les-inondations-la-frontiere-nepal-chine",
+   "title": "Déclaration du porte-parole de l'OIM sur les inondations à la frontière Népal-Chine",
+   "format": "Situation Report",
+   "sources": [
+    "IOM"
+   ],
+   "date": "2026-08-27T11:03:10+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/declaracion-del-portavoz-de-la-oim-sobre-las-inundaciones-en-la-frontera-entre-nepal-y-china",
+   "title": "Declaración del Portavoz de la OIM sobre las inundaciones en la frontera entre Nepal y China",
+   "format": "News and Press Release",
+   "sources": [
+    "IOM"
+   ],
+   "date": "2026-08-27T11:03:08+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/msf-team-nepal",
+   "title": "MSF team in Nepal",
+   "format": "News and Press Release",
+   "sources": [
+    "MSF"
+   ],
+   "date": "2026-08-27T10:42:05+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/wfp-nepal-external-situation-report-27-august-2026",
+   "title": "WFP Nepal External Situation Report, 27 August 2026",
+   "format": "Situation Report",
+   "sources": [
+    "WFP"
+   ],
+   "date": "2026-08-27T09:48:39+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/oxfam-intermon-prepara-su-respuesta-ante-la-riada-en-nepal",
+   "title": "Oxfam Intermón prepara su respuesta ante la riada en Nepal",
+   "format": "News and Press Release",
+   "sources": [
+    "Oxfam"
+   ],
+   "date": "2026-08-27T09:33:06+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-rapid-situation-overview-27-august-2026",
+   "title": "Nepal Flash Floods: Rapid Situation Overview (27 August 2026)",
+   "format": "Situation Report",
+   "sources": [
+    "DFS"
+   ],
+   "date": "2026-08-27T09:22:22+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/floods-and-massive-landslide-devastate-communities-along-nepal-china-border",
+   "title": "Floods and massive landslide devastate communities along Nepal-China border",
+   "format": "News and Press Release",
+   "sources": [
+    "Plan International"
+   ],
+   "date": "2026-08-27T09:03:08+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/reaction-nepal-flash-floods",
+   "title": "Reaction: Nepal flash floods",
+   "format": "News and Press Release",
+   "sources": [
+    "Oxfam"
+   ],
+   "date": "2026-08-26T17:03:05+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/nepal-ifrc-releases-emergency-funds-flash-floods-leave-communities-isolated",
+   "title": "Nepal: IFRC releases emergency funds as flash floods leave communities isolated",
+   "format": "News and Press Release",
+   "sources": [
+    "IFRC"
+   ],
+   "date": "2026-08-26T15:03:03+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/care-nepal-stands-ready-support-communities-after-flash-flood",
+   "title": "CARE Nepal stands ready to support communities after flash flood",
+   "format": "News and Press Release",
+   "sources": [
+    "CARE"
+   ],
+   "date": "2026-08-26T14:33:06+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/flash-flood-rasuwa-and-nuwakot-leaves-18-missing-and-approximately-60-houses-swept-away",
+   "title": "Flash Flood in Rasuwa and Nuwakot Leaves 18 Missing and Approximately 60 Houses Swept Away",
+   "format": "News and Press Release",
+   "sources": [
+    "World Vision"
+   ],
+   "date": "2026-08-26T12:27:17+00:00"
+  },
+  {
+   "url": "https://reliefweb.int/report/nepal/npl-flood-08-2026-rasuwa-flood-2026-08-26",
+   "title": "NPL: Flood - 08-2026 - Rasuwa Flood (2026-08-26)",
+   "format": "Situation Report",
+   "sources": [
+    "IFRC    Nepal Red Cross"
+   ],
+   "date": "2026-08-26T06:13:19+00:00"
+  }
+ ]
+}

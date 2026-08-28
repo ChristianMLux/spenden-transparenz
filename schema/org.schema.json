@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://spenden-transparenz.local/schema/org.schema.json",
+  "title": "Organisation record (pilot v0.1, Nepal floods 2026)",
+  "description": "One organisation responding to (or active in) Nepal. Every fact is a `datum`: value + provenance. Missing = null value + entry in data_gaps. Nothing is invented.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["org_id", "names", "org_type", "hq", "registrations", "nepal_presence", "current_response", "financial_transparency", "warnings", "data_gaps", "last_updated"],
+  "properties": {
+    "org_id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "stable slug, e.g. nepal-red-cross-society" },
+    "names": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["common"],
+      "properties": {
+        "common": { "type": "string" },
+        "legal": { "$ref": "#/$defs/datum_string_nullable" },
+        "local_script": { "$ref": "#/$defs/datum_string_nullable", "description": "Devanagari name if it exists" },
+        "aliases": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "org_type": {
+      "type": "string",
+      "enum": ["un_agency", "red_cross_movement", "ingo", "national_ngo", "community_org", "diaspora_charity", "foundation", "government", "platform", "alliance", "unknown"]
+    },
+    "hq": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["country"],
+      "properties": {
+        "country": { "type": "string", "pattern": "^[A-Z]{2}$", "description": "ISO 3166-1 alpha-2 of the legal seat" },
+        "city": { "type": ["string", "null"] },
+        "source_url": { "type": ["string", "null"] }
+      }
+    },
+    "website": { "type": ["string", "null"] },
+    "registrations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["registry", "identifier", "url", "retrieved_at", "verification"],
+        "properties": {
+          "registry": { "type": "string", "enum": ["NP_SWC", "NP_DAO", "NP_CDO", "UK_CC", "UK_OSCR", "US_IRS", "DE_VEREINSREGISTER", "DE_DZI", "DE_ITZ", "CH_ZEWO", "AT_OSGS", "IATI", "UN", "OTHER"] },
+          "identifier": { "type": ["string", "null"], "description": "registry number / EIN / SWC affiliation no. / IATI publisher ref" },
+          "url": { "type": ["string", "null"], "description": "URL of the register entry itself" },
+          "status": { "type": ["string", "null"] },
+          "retrieved_at": { "type": "string", "format": "date" },
+          "verification": { "$ref": "#/$defs/verification" },
+          "note": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "nepal_presence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["since_year", "mode"],
+      "properties": {
+        "since_year": { "$ref": "#/$defs/datum_int_nullable" },
+        "mode": { "$ref": "#/$defs/datum_presence_mode" },
+        "staff_count": { "$ref": "#/$defs/datum_int_nullable" },
+        "partners": { "type": "array", "items": { "$ref": "#/$defs/datum_string" }, "description": "named local implementing partners" }
+      }
+    },
+    "current_response": {
+      "type": "array",
+      "description": "Response to the 26 Aug 2026 Trishuli flood. Empty array = no response found (that is information).",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["what", "where", "date", "source_url", "retrieved_at", "verification"],
+        "properties": {
+          "what": { "type": "string", "description": "concrete activity, e.g. 'distributed 500 tarpaulins', 'deployed medical team'" },
+          "where": { "type": "array", "items": { "type": "string" }, "description": "districts / municipalities / 'unspecified'" },
+          "date": { "type": ["string", "null"], "description": "date of the activity or of the statement (YYYY-MM-DD)" },
+          "amount": { "type": ["number", "null"] },
+          "currency": { "type": ["string", "null"] },
+          "source_url": { "type": "string" },
+          "quote": { "type": ["string", "null"], "description": "verbatim snippet (<= 40 words) that supports the claim" },
+          "retrieved_at": { "type": "string", "format": "date" },
+          "verification": { "$ref": "#/$defs/verification" },
+          "note": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "financial_transparency": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["annual_report", "audited_financials", "iati_publisher", "income", "expenditure", "program_ratio"],
+      "properties": {
+        "annual_report": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["available", "url", "fiscal_year", "retrieved_at"],
+          "properties": {
+            "available": { "type": "boolean" },
+            "url": { "type": ["string", "null"], "description": "must point at the document (PDF or report page), not the homepage" },
+            "fiscal_year": { "type": ["string", "null"], "description": "e.g. '2024' or '2024/25'" },
+            "fiscal_year_end": { "type": ["string", "null"], "description": "MM-DD, e.g. '12-31' or '07-15' (Nepali Ashad end)" },
+            "retrieved_at": { "type": "string", "format": "date" }
+          }
+        },
+        "audited_financials": { "$ref": "#/$defs/datum_bool_nullable", "description": "true if an external auditor's statement is published" },
+        "iati_publisher": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["is_publisher", "publisher_ref"],
+          "properties": {
+            "is_publisher": { "type": ["boolean", "null"] },
+            "publisher_ref": { "type": ["string", "null"], "description": "IATI org identifier, e.g. GB-CHC-1234567" },
+            "source_url": { "type": ["string", "null"] },
+            "retrieved_at": { "type": ["string", "null"] }
+          }
+        },
+        "income": { "$ref": "#/$defs/datum_money_nullable" },
+        "expenditure": { "$ref": "#/$defs/datum_money_nullable" },
+        "program_ratio": { "$ref": "#/$defs/datum_number_nullable", "description": "share of expenditure on programmes (0..1), ONLY if derivable from a published split; state the formula in note" },
+        "peer_group": { "type": ["string", "null"], "description": "sector + size bucket for later peer comparison; leave null in v0.1" }
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "description": "Public fraud/scam/regulatory warnings. Listed neutrally with source. Empty array = none found.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "source_url", "date", "note", "retrieved_at"],
+        "properties": {
+          "type": { "type": "string", "enum": ["regulator_inquiry", "fraud_allegation", "watchdog_alert", "delisting", "sanction", "media_report", "other"] },
+          "source_url": { "type": "string" },
+          "date": { "type": ["string", "null"] },
+          "note": { "type": "string" },
+          "retrieved_at": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "data_gaps": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "JSON paths that stayed empty after a real search, e.g. 'financial_transparency.income', 'registrations[NP_SWC]'"
+    },
+    "research_notes": { "type": ["string", "null"], "description": "free text for the researcher: what was searched, what was ambiguous" },
+    "last_updated": { "type": "string", "format": "date" }
+  },
+  "$defs": {
+    "verification": {
+      "type": "string",
+      "enum": ["self_reported", "register_confirmed", "externally_audited", "third_party_reported", "unverified"],
+      "description": "self_reported = org's own site/report; register_confirmed = official register (SWC, Charity Commission, IRS); externally_audited = auditor's statement / audited accounts; third_party_reported = media, OCHA, watchdog; unverified = found but source does not really support it"
+    },
+    "datum_base": {
+      "type": "object",
+      "required": ["value", "source_url", "retrieved_at", "verification"],
+      "properties": {
+        "source_url": { "type": ["string", "null"] },
+        "retrieved_at": { "type": ["string", "null"], "description": "YYYY-MM-DD" },
+        "verification": { "$ref": "#/$defs/verification" },
+        "quote": { "type": ["string", "null"] },
+        "note": { "type": ["string", "null"] }
+      }
+    },
+    "datum_string": {
+      "allOf": [{ "$ref": "#/$defs/datum_base" }, { "properties": { "value": { "type": "string" } } }]
+    },
+    "datum_string_nullable": {
+      "allOf": [{ "$ref": "#/$defs/datum_base" }, { "properties": { "value": { "type": ["string", "null"] } } }]
+    },
+    "datum_int_nullable": {
+      "allOf": [{ "$ref": "#/$defs/datum_base" }, { "properties": { "value": { "type": ["integer", "null"] } } }]
+    },
+    "datum_number_nullable": {
+      "allOf": [{ "$ref": "#/$defs/datum_base" }, { "properties": { "value": { "type": ["number", "null"] } } }]
+    },
+    "datum_bool_nullable": {
+      "allOf": [{ "$ref": "#/$defs/datum_base" }, { "properties": { "value": { "type": ["boolean", "null"] } } }]
+    },
+    "datum_presence_mode": {
+      "allOf": [{ "$ref": "#/$defs/datum_base" }, { "properties": { "value": { "type": "string", "enum": ["own_staff", "partners", "both", "none", "unknown"] } } }]
+    },
+    "datum_money_nullable": {
+      "allOf": [
+        { "$ref": "#/$defs/datum_base" },
+        {
+          "properties": {
+            "value": { "type": ["number", "null"] },
+            "currency": { "type": ["string", "null"] },
+            "fiscal_year": { "type": ["string", "null"] },
+            "scope": { "type": ["string", "null"], "enum": ["global", "nepal_only", "unknown", null], "description": "whether the figure is the global org or the Nepal entity" }
+          }
+        }
+      ]
+    }
+  }
+}

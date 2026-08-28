@@ -1,0 +1,503 @@
+{
+ "retrieved_at": "2026-08-28T12:16:44+00:00",
+ "source": "iati",
+ "data": {
+  "datastore_api": "needs free subscription key (401 without) - not used; d-portal + HDX cover the questions",
+  "dportal_active_np": {
+   "activities": 4494,
+   "publishers": 242,
+   "humanitarian_flagged": 0,
+   "publisher_local_share": {
+    "n": 242,
+    "np_prefixed": 17,
+    "share_np": 0.07
+   },
+   "top_publishers": [
+    [
+     "Ministry of Foreign Affairs, Finland",
+     "FI-3",
+     1060
+    ],
+    [
+     "Swiss Agency for Development and Cooperation (SDC)",
+     "CH-4",
+     880
+    ],
+    [
+     "AidData",
+     "US-501c3-522318905",
+     296
+    ],
+    [
+     "U.S. Agency for International Development",
+     "US-GOV-1",
+     212
+    ],
+    [
+     "GlobalGiving",
+     "US-EIN-300108263",
+     147
+    ],
+    [
+     "Sweden",
+     "SE-0",
+     117
+    ],
+    [
+     "United Nations Development Programme",
+     "XM-DAC-41114",
+     88
+    ],
+    [
+     "Norad - Norwegian Agency for Development Cooperation",
+     "NO-BRC-971277882",
+     82
+    ],
+    [
+     "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "DE-1",
+     79
+    ],
+    [
+     "UK - Foreign, Commonwealth and Development Office",
+     "GB-GOV-1",
+     78
+    ],
+    [
+     "European Commission - Directorate-General for International Partnerships",
+     "XI-IATI-EC_INTPA",
+     73
+    ],
+    [
+     "United Nations Educational, Scientific and Cultural Organization (UNESCO)",
+     "XM-DAC-41304",
+     66
+    ],
+    [
+     "Asian Development Bank",
+     "XM-DAC-46004",
+     51
+    ],
+    [
+     "Office for Government Policy Coordination",
+     "KR-GOV-010",
+     49
+    ],
+    [
+     "Australia Aid",
+     "AU-5",
+     44
+    ]
+   ],
+   "np_publishers": [
+    [
+     "<reporting-org ref=\"NP-IRD-201252183\" type=\"40\" secondary-reporter=\"0\">\n   <narrative>B. P. Koirala Institute of Health Sciences</narrative>\n  </reporting-org>",
+     "NP-IRD-201252183"
+    ],
+    [
+     "Aapasi Sahayog Kendra Syangja Nepal (ASK Nepal)",
+     "NP-SWC-8220"
+    ],
+    [
+     "Aassaman Nepal",
+     "NP-SWC-27693"
+    ],
+    [
+     "Accelerator Nepal",
+     "NP-SWC-46024"
+    ],
+    [
+     "ActionAid International Nepal",
+     "NP-IRD-301131441"
+    ],
+    [
+     "Backward Society Education (BASE)",
+     "NP-DAO-DANG-18-046/47"
+    ],
+    [
+     "CARE Nepal",
+     "NP-IRD-302274734"
+    ],
+    [
+     "CREHPA",
+     "NP-SWC-1844"
+    ],
+    [
+     "Global Action Nepal",
+     "NP-SWC-13712"
+    ],
+    [
+     "Institute for Integrated Development Studies",
+     "NP-SWC-17977"
+    ],
+    [
+     "International Nepal Fellowship Nepal",
+     "NP-SWC-19781"
+    ],
+    [
+     "Nagarik Aawaz",
+     "NP-SWC-15652"
+    ],
+    [
+     "Nepal Disabled Human Rights Center",
+     "NP-SWC-10136"
+    ],
+    [
+     "Nepal Netra Jyoti Sangh",
+     "NP-SWC-24"
+    ],
+    [
+     "South Asian Women Development Forum",
+     "NP-CRO-601371123"
+    ],
+    [
+     "The Leprosy Mission Nepal",
+     "NP-SWC-17775"
+    ],
+    [
+     "Young Innovations Pvt. Ltd",
+     "NP-CRO-45995/063/064"
+    ]
+   ],
+   "started_on_or_after_flood": 1,
+   "duplicate_title_groups": 23,
+   "duplicate_title_examples": [
+    [
+     "provincial and local governance support program (plgsp)",
+     [
+      "CH-4",
+      "NO-BRC-971277882"
+     ]
+    ],
+    [
+     "strengthening inclusive democratic governance and electoral process in nepal",
+     [
+      "GB-GOV-1",
+      "NO-BRC-971277882"
+     ]
+    ],
+    [
+     "momentum 2a - global technical leadership and targeted technical assistance for mnch/fp/rh",
+     [
+      "US-GOV-1",
+      "US-GOV-11"
+     ]
+    ],
+    [
+     "humanitarian assistance",
+     [
+      "US-GOV-1",
+      "US-GOV-11"
+     ]
+    ],
+    [
+     "core group polio project",
+     [
+      "US-GOV-1",
+      "US-GOV-11"
+     ]
+    ],
+    [
+     "strengthening infectious disease detection system (strides) activity",
+     [
+      "US-GOV-1",
+      "US-GOV-11"
+     ]
+    ],
+    [
+     "unicef pio",
+     [
+      "US-GOV-1",
+      "US-GOV-11"
+     ]
+    ],
+    [
+     "administrative costs",
+     [
+      "CH-4",
+      "US-GOV-1"
+     ]
+    ]
+   ],
+   "field_fill_rate": {
+    "title": 0.999,
+    "day_start": 0.98,
+    "day_end": 0.851,
+    "commitment": 1.0,
+    "spend": 1.0,
+    "funder_ref": 1.0
+   }
+  },
+  "dportal_started_since_flood_any_status": 4,
+  "hdx": {
+   "hdx_activities.csv": {
+    "resource_name": "IATI activities in Nepal (no location information)",
+    "last_modified": "2026-08-27T10:18:03.395585",
+    "rows": 15784,
+    "columns": [
+     "aid",
+     "reporting",
+     "reporting_ref",
+     "funder_ref",
+     "title",
+     "slug",
+     "status_code",
+     "day_start",
+     "day_end",
+     "day_length",
+     "description",
+     "commitment",
+     "spend",
+     "commitment_eur",
+     "spend_eur",
+     "commitment_gbp",
+     "spend_gbp",
+     "commitment_cad",
+     "spend_cad",
+     "flags",
+     "sector_group",
+     "sector_code",
+     "sector_percent",
+     "country_code",
+     "country_percent"
+    ],
+    "fill_rate": {
+     "aid": 1.0,
+     "reporting": 1.0,
+     "reporting_ref": 1.0,
+     "funder_ref": 1.0,
+     "title": 1.0,
+     "slug": 1.0,
+     "status_code": 1.0,
+     "day_start": 1.0,
+     "day_end": 1.0,
+     "day_length": 1.0,
+     "description": 0.998,
+     "commitment": 1.0,
+     "spend": 1.0,
+     "commitment_eur": 1.0,
+     "spend_eur": 1.0,
+     "commitment_gbp": 1.0,
+     "spend_gbp": 1.0,
+     "commitment_cad": 1.0,
+     "spend_cad": 1.0,
+     "flags": 1.0,
+     "sector_group": 0.972,
+     "sector_code": 0.945,
+     "sector_percent": 0.974,
+     "country_code": 1.0,
+     "country_percent": 1.0
+    },
+    "local_share_by_row": null,
+    "distinct_publishers": null
+   },
+   "hdx_locations.csv": {
+    "resource_name": "IATI activity locations in Nepal",
+    "last_modified": "2026-08-27T10:18:03.396314",
+    "rows": 21243,
+    "columns": [
+     "aid",
+     "reporting",
+     "reporting_ref",
+     "funder_ref",
+     "title",
+     "slug",
+     "status_code",
+     "day_start",
+     "day_end",
+     "day_length",
+     "description",
+     "commitment",
+     "spend",
+     "commitment_eur",
+     "spend_eur",
+     "commitment_gbp",
+     "spend_gbp",
+     "commitment_cad",
+     "spend_cad",
+     "flags",
+     "country_code",
+     "country_percent",
+     "location_code",
+     "location_gazetteer_ref",
+     "location_gazetteer",
+     "location_name",
+     "location_longitude",
+     "location_latitude",
+     "location_precision",
+     "location_percent"
+    ],
+    "fill_rate": {
+     "aid": 1.0,
+     "reporting": 1.0,
+     "reporting_ref": 1.0,
+     "funder_ref": 1.0,
+     "title": 1.0,
+     "slug": 1.0,
+     "status_code": 1.0,
+     "day_start": 1.0,
+     "day_end": 1.0,
+     "day_length": 1.0,
+     "description": 0.993,
+     "commitment": 1.0,
+     "spend": 1.0,
+     "commitment_eur": 1.0,
+     "spend_eur": 1.0,
+     "commitment_gbp": 1.0,
+     "spend_gbp": 1.0,
+     "commitment_cad": 1.0,
+     "spend_cad": 1.0,
+     "flags": 1.0,
+     "country_code": 1.0,
+     "country_percent": 1.0,
+     "location_code": 0.0,
+     "location_gazetteer_ref": 0.0,
+     "location_gazetteer": 0.0,
+     "location_name": 0.87,
+     "location_longitude": 1.0,
+     "location_latitude": 1.0,
+     "location_precision": 0.928,
+     "location_percent": 0.0
+    },
+    "local_share_by_row": null,
+    "distinct_publishers": null
+   }
+  },
+  "registry": {
+   "publishers_total": 2088,
+   "publishers_np": [
+    {
+     "name": "ActionAid International Nepal",
+     "id": "NP-IRD-301131441",
+     "org_type": "21"
+    },
+    {
+     "name": "Aasaman Nepal",
+     "id": "NP-SWC-27693",
+     "org_type": "22"
+    },
+    {
+     "name": "Accelerator Nepal",
+     "id": "NP-SWC-46024",
+     "org_type": "22"
+    },
+    {
+     "name": "Adventist Development and Relief Agency, Nepal",
+     "id": "NP-IRD-302113730",
+     "org_type": "21"
+    },
+    {
+     "name": "Aapasi Sahayog Kendra Syangja Nepal (ASK Nepal)",
+     "id": "NP-SWC-8220",
+     "org_type": "22"
+    },
+    {
+     "name": "Backward Society Education (BASE)",
+     "id": "NP-DAO-DANG-18-046/47",
+     "org_type": "22"
+    },
+    {
+     "name": "B. P. Koirala Institute of Health Sciences",
+     "id": "NP-IRD-201252183",
+     "org_type": "80"
+    },
+    {
+     "name": "Burns Violence Survivors - Nepal",
+     "id": "NP-SWC-27288",
+     "org_type": "22"
+    },
+    {
+     "name": "CARE Nepal",
+     "id": "NP-IRD-302274734",
+     "org_type": "21"
+    },
+    {
+     "name": "Center for Research on Environment Health and Population Activities (CREHPA)",
+     "id": "NP-SWC-1844",
+     "org_type": "22"
+    },
+    {
+     "name": "Nepal Disabled Human Rights Center",
+     "id": "NP-SWC-10136",
+     "org_type": "22"
+    },
+    {
+     "name": "Freedom Forum",
+     "id": "NP-DAO-27-127/062/063",
+     "org_type": "22"
+    },
+    {
+     "name": "Global Action Nepal",
+     "id": "NP-SWC-13712",
+     "org_type": "22"
+    },
+    {
+     "name": "Institute for Integrated Development Studies",
+     "id": "NP-SWC-17977",
+     "org_type": null
+    },
+    {
+     "name": "International Nepal Fellowship Nepal",
+     "id": "NP-SWC-19781",
+     "org_type": "22"
+    },
+    {
+     "name": "Kathmandu Medical College Public Limited",
+     "id": "NP-CRO-1158-065-066",
+     "org_type": "80"
+    },
+    {
+     "name": "Nagarik Aawaz",
+     "id": "NP-SWC-15652",
+     "org_type": "22"
+    },
+    {
+     "name": "NGO Federation of Nepal",
+     "id": "NP-DAO-27-689/063/064",
+     "org_type": "22"
+    },
+    {
+     "name": "Nepal Netra Jyoti Sangh",
+     "id": "NP-SWC-24",
+     "org_type": "22"
+    },
+    {
+     "name": "PHASE Nepal",
+     "id": "NP-SWC-19336",
+     "org_type": "22"
+    },
+    {
+     "name": "South Asian Women Development Forum",
+     "id": "NP-SWC-37725",
+     "org_type": "80"
+    },
+    {
+     "name": "Shtrii Shakti",
+     "id": "NP-SWC-00589",
+     "org_type": "22"
+    },
+    {
+     "name": "The Leprosy Mission Nepal",
+     "id": "NP-SWC-17775",
+     "org_type": "22"
+    },
+    {
+     "name": "United Mission to Nepal",
+     "id": "XI-IATI-1002",
+     "org_type": "21"
+    },
+    {
+     "name": "Young Innovations Pvt. Ltd",
+     "id": "NP-CRO-45995/063/064",
+     "org_type": "70"
+    },
+    {
+     "name": "young_innovation_production_test",
+     "id": "XI-WIKIDATA-2024",
+     "org_type": "70"
+    }
+   ],
+   "error": "KeyError: 'result'"
+  }
+ }
+}

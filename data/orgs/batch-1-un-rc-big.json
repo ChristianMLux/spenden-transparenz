@@ -1,0 +1,1737 @@
+[
+ {
+  "org_id": "nepal-red-cross-society",
+  "names": {
+   "common": "Nepal Red Cross Society",
+   "legal": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Not found within research budget."
+   },
+   "local_script": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "No Devanagari name found within research budget."
+   },
+   "aliases": [
+    "NRCS"
+   ]
+  },
+  "org_type": "red_cross_movement",
+  "hq": {
+   "country": "NP",
+   "city": "Kathmandu",
+   "source_url": "https://nrcs.org/"
+  },
+  "website": "https://nrcs.org",
+  "registrations": [
+   {
+    "registry": "NP_SWC",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "swc.org.np was unreachable during this research session. Secondary sources (imnepal.com, Wikipedia) state NRCS is affiliated with the Social Welfare Council, but no registration number or register entry was found."
+   },
+   {
+    "registry": "NP_DAO",
+    "identifier": null,
+    "url": null,
+    "status": "reported as registered",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "note": "Per aggregated web search of imnepal.com (https://www.imnepal.com/nrcs-nepal-red-cross-society/) and Wikipedia (https://en.wikipedia.org/wiki/Nepal_Red_Cross_Society): 'NRCS is legally registered with the District Administration Office at Kathmandu and the Social Welfare Council.' No register entry itself was located; org founded 1963 under its own Act after Nepal's 1949 accession to the Geneva Conventions."
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": 1963,
+    "source_url": "https://en.wikipedia.org/wiki/Nepal_Red_Cross_Society",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "quote": "came into being on 4 September 1963",
+    "note": "NRCS is the domestic national society itself, not an outside org present in Nepal."
+   },
+   "mode": {
+    "value": "own_staff",
+    "source_url": "https://www.imnepal.com/nrcs-nepal-red-cross-society/",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "quote": "network of District Chapters (DCs) extended in each of the 77 districts of the country",
+    "note": "NRCS operates through its own District Chapters, staff and volunteers nationwide."
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Not found within research budget."
+   },
+   "partners": [
+    {
+     "value": "International Federation of Red Cross and Red Crescent Societies (IFRC)",
+     "source_url": "https://radionepalonline.com/en/2026/08/27/434828.html",
+     "retrieved_at": "2026-08-28",
+     "verification": "third_party_reported",
+     "quote": null,
+     "note": "IFRC provides emergency funding (DREF), operational coordination and technical support to NRCS for the flood response; NRCS is a member of the IFRC Red Cross Red Crescent Movement (affiliated 1 October 1964 per Wikipedia)."
+    }
+   ]
+  },
+  "current_response": [
+   {
+    "what": "IFRC released Disaster Response Emergency Fund (DREF) funding to support Nepal Red Cross Society's flash flood response operations",
+    "where": [
+     "unspecified"
+    ],
+    "date": "2026-08-27",
+    "amount": 1000000,
+    "currency": "CHF",
+    "source_url": "https://radionepalonline.com/en/2026/08/27/434828.html",
+    "quote": "The priority now is to reach affected communities and get assistance to people who have lost their homes, suffered injuries or have been cut off.",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "note": "Reported as 'nearly CHF 1 million' (~NPR 189,545,000) — approximate figure, not an exact disbursed amount. This is IFRC funding released to support NRCS, not money NRCS itself has spent/reported. Original IFRC press release (ifrc.org) returned HTTP 403 during fetch; sourced via secondary media report of the same release."
+   },
+   {
+    "what": "Nepal Red Cross Society distributing drinking water, emergency supplies (tarpaulins, blankets, sleeping mats), first aid kits, stretchers, and body bags to flood-affected communities",
+    "where": [
+     "unspecified"
+    ],
+    "date": "2026-08-27",
+    "amount": null,
+    "currency": null,
+    "source_url": "https://radionepalonline.com/en/2026/08/27/434828.html",
+    "quote": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "note": "Specific district/municipality breakdown not given in source. Broader flood event is centered on Rasuwa and Nuwakot districts (Trishuli/Bhote Koshi river corridor)."
+   },
+   {
+    "what": "Nepal Red Cross Society activated its Emergency Operations Center and deployed Emergency Response Teams and volunteers for assessments and relief operations, including additional teams sent to support local branches with limited response capacity",
+    "where": [
+     "unspecified"
+    ],
+    "date": null,
+    "amount": null,
+    "currency": null,
+    "source_url": "https://www.redcross.org/about-us/news-and-events/news/2026/nepal--red-cross-responds-to-devastating-flash-flood.html",
+    "quote": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "note": "Sourced via aggregated web search summary citing this American Red Cross article; page was not independently fetched due to the research budget limit, so exact wording/date could not be confirmed directly."
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": false,
+    "url": null,
+    "fiscal_year": null,
+    "fiscal_year_end": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "A reports page exists at nrcs.org/resources/reports/ but no specific annual report or audited financial statement document was located within the research budget."
+   },
+   "iati_publisher": {
+    "is_publisher": null,
+    "publisher_ref": null,
+    "source_url": null,
+    "retrieved_at": null
+   },
+   "income": {
+    "value": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "No income figures found within research budget."
+   },
+   "expenditure": {
+    "value": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "No expenditure figures found within research budget."
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "names.legal",
+   "names.local_script",
+   "registrations[NP_SWC].identifier",
+   "registrations[NP_DAO].identifier",
+   "registrations (IATI publisher status not checked)",
+   "nepal_presence.staff_count",
+   "financial_transparency.annual_report",
+   "financial_transparency.audited_financials",
+   "financial_transparency.iati_publisher",
+   "financial_transparency.income",
+   "financial_transparency.expenditure",
+   "financial_transparency.program_ratio",
+   "current_response entries lack precise district/municipality-level location detail"
+  ],
+  "research_notes": "Searched/fetched: nrcs.org homepage (reachable, listed a flood situation-update page and donation.nrcs.org portal but no visible financial statements/registration-number page); nrcs.org Rasuwa flood situation update page dated 27 Aug 2026 (situation description only, no concrete relief-activity detail); ifrc.org press release on DREF release (blocked, HTTP 403); radionepalonline.com secondary report of the same IFRC press release (used instead, gave DREF amount ~CHF 1m and relief-item list); web search for founding/registration info (Wikipedia, imnepal.com — NRCS founded 1963, registered with District Administration Office Kathmandu and Social Welfare Council, IFRC-affiliated since 1964); web search for flood-response news (Red Cross UK, Red Cross Australia, American Red Cross, Euronews). swc.org.np not independently checked (known unreachable per project brief). No financial reports, IATI publisher record, or warnings/watchdog alerts found. All current_response entries are 2 days into the disaster and largely describe initial/in-kind relief and fund mobilisation rather than completed disbursements, consistent with the very early stage of this response.",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "ifrc",
+  "names": {
+   "common": "IFRC",
+   "legal": {
+    "value": "International Federation of Red Cross and Red Crescent Societies",
+    "source_url": "https://en.wikipedia.org/wiki/International_Federation_of_Red_Cross_and_Red_Crescent_Societies",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "quote": null,
+    "note": null
+   },
+   "local_script": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "No Nepali-script name searched/found this session."
+   },
+   "aliases": []
+  },
+  "org_type": "red_cross_movement",
+  "hq": {
+   "country": "CH",
+   "city": "Geneva",
+   "source_url": "https://en.wikipedia.org/wiki/International_Federation_of_Red_Cross_and_Red_Crescent_Societies"
+  },
+  "website": "https://www.ifrc.org",
+  "registrations": [],
+  "nepal_presence": {
+   "since_year": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Nepal Red Cross Society (the National Society IFRC operates through) was affiliated to IFRC on 1 Oct 1964 per Wikipedia, but that is NRCS's affiliation date, not confirmed as the year IFRC itself opened a Nepal delegation/office; not recorded as a confirmed since_year."
+   },
+   "mode": {
+    "value": "both",
+    "source_url": "https://www.ifrc.org/national-societies-directory/nepal-red-cross-society",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": "IFRC maintains its own country delegation to Nepal (Head of IFRC delegation to Nepal identified in search results) in addition to channeling response funding and support through the Nepal Red Cross Society as implementing National Society. Exact source article among search results not individually re-fetched to pull a verbatim quote."
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "partners": [
+    {
+     "value": "Nepal Red Cross Society",
+     "source_url": "https://www.ifrc.org/national-societies-directory/nepal-red-cross-society",
+     "retrieved_at": "2026-08-28",
+     "verification": "self_reported",
+     "quote": null,
+     "note": "IFRC's host National Society and implementing partner in Nepal for the Aug 2026 Trishuli flood response."
+    }
+   ]
+  },
+  "current_response": [
+   {
+    "what": "IFRC released Disaster Response Emergency Fund (DREF) allocation of nearly CHF 1 million to support Nepal Red Cross Society's initial flood response: drinking water distribution, tarpaulins, blankets, sleeping mats, first aid kits, stretchers and body bags.",
+    "where": [
+     "unspecified"
+    ],
+    "date": "2026-08-27",
+    "amount": 1000000,
+    "currency": "CHF",
+    "source_url": "https://english.onlinekhabar.com/red-cross-flood-response.html",
+    "quote": "The priority now is to reach affected communities and get assistance to people who have lost their homes, suffered injuries or have been cut off",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "note": "Reported as 'nearly CHF 1 million' (approx. NPR 189.5 million) — approximate figure from news coverage, not an exact IFRC disbursement statement. Underlying disaster is centered on Rasuwa and Nuwakot districts per general reporting, but this specific DREF article did not itemize districts, so 'where' left unspecified rather than assumed."
+   },
+   {
+    "what": "IFRC launched a CHF 25 million (~USD 31 million) Emergency Appeal to fund Nepal Red Cross Society's two-year emergency response and recovery operation following the Trishuli flash floods.",
+    "where": [
+     "unspecified"
+    ],
+    "date": "2026-08-27",
+    "amount": 25000000,
+    "currency": "CHF",
+    "source_url": "https://www.ifrc.org/press-release/ifrc-launches-chf-25-million-emergency-appeal-response-devastating-nepal-flash-floods",
+    "quote": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "note": "This is an appeal TARGET, not confirmed disbursed/raised funds. Two-year timeframe covering emergency response plus medium/long-term recovery, per IFRC press release headline and corroborating wire coverage (Free Malaysia Today, BSS News, ~USD 31 million equivalent). ifrc.org blocked direct WebFetch (HTTP 403) this session, so no verbatim quote could be pulled from the primary source; confirmed via WebSearch result snippet and independent wire-service corroboration instead."
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": true,
+    "url": "https://www.ifrc.org/sites/default/files/2025-08/IFRC%202024%20Annual%20Report.pdf",
+    "fiscal_year": "2024",
+    "fiscal_year_end": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Not confirmed this session — ifrc.org returned HTTP 403 on direct WebFetch of the annual report PDF, so audit-opinion language could not be read."
+   },
+   "iati_publisher": {
+    "is_publisher": null,
+    "publisher_ref": null,
+    "source_url": null,
+    "retrieved_at": null
+   },
+   "income": {
+    "value": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "IFRC 2024 Annual Report PDF located (URL above) but its content could not be read this session — ifrc.org blocks WebFetch (HTTP 403 on every ifrc.org URL attempted, including the PDF). A WebSearch snippet suggested partial FY2024 figures (e.g. 'voluntary contributions and donations CHF 557.0m', '2023 balance carried forward CHF 460.0m') but these are unverified fragments from a search-engine summary, not a directly read total income figure, so left null rather than risk an inaccurate number."
+   },
+   "expenditure": {
+    "value": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Same access limitation as income — not independently confirmed this session."
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "No published expenditure split confirmed this session."
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "names.local_script",
+   "registrations",
+   "nepal_presence.since_year",
+   "nepal_presence.staff_count",
+   "financial_transparency.audited_financials",
+   "financial_transparency.iati_publisher",
+   "financial_transparency.income",
+   "financial_transparency.expenditure",
+   "financial_transparency.program_ratio",
+   "financial_transparency.annual_report.fiscal_year_end"
+  ],
+  "research_notes": "Organisation recorded as IFRC itself (org_type red_cross_movement, HQ Geneva CH) per task instructions, distinct from the Nepal Red Cross Society (the operating National Society). Confirmed via WebSearch two concrete Aug 2026 Trishuli-flood response actions: (1) a ~CHF 1M DREF allocation announced 27 Aug 2026 (ifrc.org press release, corroborated by OnlineKhabar/Radio Nepal wire coverage), and (2) a CHF 25M / ~USD 31M two-year Emergency Appeal launched the same day (ifrc.org press release headline, corroborated by Free Malaysia Today and BSS News wire coverage). ifrc.org returned HTTP 403 on every direct WebFetch attempt this session (press releases and the annual report PDF), so those facts are sourced via WebSearch snippets and third-party wire corroboration rather than a direct page read; financial figures (income/expenditure/audit status/IATI) could not be independently verified as a result and are left null. Sources checked: ifrc.org (search only, fetch blocked), go.ifrc.org (search only), onlinekhabar.com (fetched directly), Wikipedia (2026 Nepal floods, IFRC), Radio Nepal, nepalnews.com, Free Malaysia Today, BSS News.",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "direct-relief",
+  "names": {
+   "common": "Direct Relief",
+   "legal": {
+    "value": "Direct Relief",
+    "source_url": "https://projects.propublica.org/nonprofits/organizations/951831116",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "quote": null,
+    "note": null
+   },
+   "local_script": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "US-based org; no Nepali-script name found or applicable."
+   },
+   "aliases": []
+  },
+  "org_type": "ingo",
+  "hq": {
+   "country": "US",
+   "city": "Santa Barbara, CA",
+   "source_url": "https://projects.propublica.org/nonprofits/organizations/951831116"
+  },
+  "website": "https://www.directrelief.org",
+  "registrations": [
+   {
+    "registry": "US_IRS",
+    "identifier": "95-1831116",
+    "url": "https://projects.propublica.org/nonprofits/organizations/951831116",
+    "status": "active",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "note": null
+   },
+   {
+    "registry": "NP_SWC",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "swc.org.np unreachable during research (28.08.2026); Nepal Social Welfare Council registration not independently confirmed. Direct Relief describes 40+ years of partner-based work in Nepal but its own materials do not cite an SWC registration number."
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": null,
+    "source_url": "https://www.directrelief.org/emergency/nepal-floods-2026/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": "Page states the org has '40+ years supporting Nepal's health system' (implies roughly 1986) but gives no precise start year."
+   },
+   "mode": {
+    "value": "partners",
+    "source_url": "https://www.directrelief.org/emergency/nepal-floods-2026/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": "Direct Relief describes ~$119M total medical aid to Nepal since prior engagement, delivered via roughly 48 partner organizations (e.g. Mountain Heart Nepal, Dhulikhel Hospital) and 206 shipments; no mention of Direct Relief's own staff being based in Nepal."
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "No Direct Relief staff presence in Nepal is mentioned; all described activity runs through partner organizations."
+   },
+   "partners": [
+    {
+     "value": "Mountain Heart Nepal",
+     "source_url": "https://www.directrelief.org/emergency/nepal-floods-2026/",
+     "retrieved_at": "2026-08-28",
+     "verification": "self_reported",
+     "quote": null,
+     "note": "Receiving an emergency operating grant from Direct Relief to fund mobilization of emergency medical teams to flood-affected communities."
+    },
+    {
+     "value": "Dhulikhel Hospital",
+     "source_url": "https://www.directrelief.org/emergency/nepal-floods-2026/",
+     "retrieved_at": "2026-08-28",
+     "verification": "self_reported",
+     "quote": null,
+     "note": "475-bed hospital in Kavrepalanchok; longtime Direct Relief partner, described as having received more than $2.5 million in Direct Relief support in 2026."
+    },
+    {
+     "value": "Nepal Ministry of Health",
+     "source_url": "https://www.directrelief.org/2026/08/nepal-tibet-flash-flood-medical-relief/",
+     "retrieved_at": "2026-08-28",
+     "verification": "self_reported",
+     "quote": null,
+     "note": "Direct Relief shared its available medical inventory list with the Ministry of Health following the flood."
+    }
+   ]
+  },
+  "current_response": [
+   {
+    "what": "Emergency operating grant to Mountain Heart Nepal to fund mobilization of emergency medical teams, equipped with pre-positioned Direct Relief field medic packs, to reach flood-cut-off communities",
+    "where": [
+     "Rasuwa",
+     "Nuwakot",
+     "Dhading",
+     "Gorkha",
+     "Chitwan"
+    ],
+    "date": "2026-08-26",
+    "amount": null,
+    "currency": null,
+    "source_url": "https://www.directrelief.org/emergency/nepal-floods-2026/",
+    "quote": "100% of donations to the Nepal Flood Relief Fund support this response, including the emergency operating grant enabling Mountain Heart Nepal's medical teams to reach cut-off communities.",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "note": "Grant amount not disclosed. Page is a combined situation-report and donation appeal; it does not itemize funds already disbursed vs. pledged. Districts listed are Direct Relief's stated geographic focus for this response."
+   },
+   {
+    "what": "Shared available medical inventory list with Nepal's Ministry of Health and is coordinating with partner organizations in the flood-affected region on medical needs",
+    "where": [
+     "unspecified"
+    ],
+    "date": "2026-08-26",
+    "amount": null,
+    "currency": null,
+    "source_url": "https://www.directrelief.org/2026/08/nepal-tibet-flash-flood-medical-relief/",
+    "quote": "Direct Relief is mobilizing support around potential medical needs in the region and is in communication with partner organizations.",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "note": "Published the day of the disaster (26 Aug 2026); language describes intent/coordination ('mobilizing support', 'in communication'), not confirmed on-the-ground delivery as of publication."
+   },
+   {
+    "what": "Partner hospital Dhulikhel Hospital (Kavrepalanchok) used previously pre-positioned Direct Relief field medic packs and emergency supplies to treat flood-evacuated patients",
+    "where": [
+     "Kavrepalanchok"
+    ],
+    "date": null,
+    "amount": null,
+    "currency": null,
+    "source_url": "https://www.directrelief.org/emergency/nepal-floods-2026/",
+    "quote": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "note": "No exact date given for this specific deployment beyond the general response page date. No verbatim quote captured for this activity; summarized from page content."
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": true,
+    "url": "https://www.directrelief.org/wp-content/uploads/2023/04/FY2022-Direct-Relief-Annual-Report.pdf",
+    "fiscal_year": "2022",
+    "fiscal_year_end": "06-30",
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": true,
+    "source_url": "https://www.directrelief.org/wp-content/uploads/2024/12/Direct-Relief-2024-Audit-FS-FInal.pdf",
+    "retrieved_at": "2026-08-28",
+    "verification": "externally_audited",
+    "quote": "Report of Independent Auditors and Consolidated Financial Statements",
+    "note": "FY2024 (year ended June 30, 2024) independent auditor's report and consolidated financial statements, publicly posted by Direct Relief."
+   },
+   "iati_publisher": {
+    "is_publisher": null,
+    "publisher_ref": null,
+    "source_url": null,
+    "retrieved_at": null
+   },
+   "income": {
+    "value": 2266763483,
+    "currency": "USD",
+    "fiscal_year": "2023",
+    "scope": "global",
+    "source_url": "https://projects.propublica.org/nonprofits/organizations/951831116",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "quote": null,
+    "note": "Total revenue per IRS Form 990 for fiscal year ended June 30, 2023, via ProPublica Nonprofit Explorer."
+   },
+   "expenditure": {
+    "value": 2071171227,
+    "currency": "USD",
+    "fiscal_year": "2023",
+    "scope": "global",
+    "source_url": "https://projects.propublica.org/nonprofits/organizations/951831116",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "quote": null,
+    "note": "Total functional expenses per IRS Form 990 for fiscal year ended June 30, 2023, via ProPublica Nonprofit Explorer."
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "No published expenditure split found within research budget."
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "nepal_presence.since_year",
+   "nepal_presence.staff_count",
+   "financial_transparency.iati_publisher",
+   "financial_transparency.program_ratio",
+   "names.local_script"
+  ],
+  "research_notes": "Searched: ProPublica Nonprofit Explorer (EIN 95-1831116, confirmed via API), directrelief.org Nepal Floods 2026 emergency page, directrelief.org 26 Aug 2026 news article on the Nepal/Tibet flash flood response, and directrelief.org financial documents. No watchdog/regulator warnings found. Annual report PDF located is FY2022 (most recent direct-link PDF found within search budget); a more recent one likely exists on the Financial Documents landing page (https://www.directrelief.org/about/finance/financial-documents/) but was not individually confirmed. Income/expenditure figures are FY2023 (year ended 30 June 2023) per ProPublica/990 data, which predates the flood and reflects global, not Nepal-specific, finances -- no Nepal-only financial breakout was found.",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "msf-international",
+  "names": {
+   "common": "Médecins Sans Frontières (MSF) / Doctors Without Borders",
+   "legal": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Exact registered legal name of the MSF International coordinating body not confirmed against a primary source this session; MSF is a federation of 24 sections, not a single legal entity."
+   },
+   "local_script": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "No Nepali-script name found; MSF has no permanent legal presence in Nepal."
+   },
+   "aliases": [
+    "MSF",
+    "Doctors Without Borders",
+    "Médecins Sans Frontières"
+   ]
+  },
+  "org_type": "ingo",
+  "hq": {
+   "country": "CH",
+   "city": "Geneva",
+   "source_url": "https://www.msf.org"
+  },
+  "website": "https://www.msf.org",
+  "registrations": [
+   {
+    "registry": "OTHER",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "MSF is a federation of 24 independently-registered national/operational sections and MSF International (Geneva), rather than one legal entity. The section publicly engaged in the 2026 Nepal flood response is MSF Switzerland / Operational Centre Geneva (OCG). No single registry number covers the whole movement; not checked against the Swiss commercial/association register this session."
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": 2002,
+    "source_url": "https://www.msf.org/nepal",
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "A web-search summary of msf.org sources states MSF first worked in Nepal in 2002 and closed its last permanent project in 2020 (mental-health COVID-19 hotline); a direct fetch of msf.org/nepal in this session did not itself re-surface the 2002 start date, so this figure is flagged as not independently re-verified."
+   },
+   "mode": {
+    "value": "own_staff",
+    "source_url": "https://www.msf.org/msf-team-arrives-nepal-assess-needs-following-flash-floods",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": "MSF has no permanent Nepal presence since 2020; for the 2026 Trishuli flood it deployed its own emergency team (MSF Switzerland/OCG) rather than working through local partners. No partner organisations mentioned in any source found."
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "No staff/headcount figure published as of 28.08.2026, consistent with the response being 2 days old."
+   },
+   "partners": []
+  },
+  "current_response": [
+   {
+    "what": "MSF emergency team arrived in Nepal (within 24h of the flood) to assess people's immediate humanitarian and medical needs after the Trishuli flash floods",
+    "where": [
+     "Rasuwa district",
+     "Nuwakot district",
+     "Timure",
+     "Rasuwagadhi",
+     "Syabrubesi",
+     "Chitwan district"
+    ],
+    "date": "2026-08-27",
+    "amount": null,
+    "currency": null,
+    "source_url": "https://www.msf.org/msf-team-arrives-nepal-assess-needs-following-flash-floods",
+    "quote": "Hundreds, if not thousands, of people are feared to have died, with many people still missing.",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "note": "International MSF statement dated 27 Aug 2026; describes an assessment mission (shelter, hygiene/water, sanitation, trauma support readiness), not yet a running program. No field hospital, surgical team, or cargo-plane details were present in this specific article."
+   },
+   {
+    "what": "MSF Switzerland (Operational Centre Geneva, OCG) team engaging with local health facilities in flood-affected areas to assess whether MSF can provide support",
+    "where": [
+     "Timure",
+     "Rasuwagadhi",
+     "Syabrubesi",
+     "Chitwan district (Mugling)",
+     "Rasuwa district",
+     "Nuwakot district",
+     "Dhading district",
+     "Gorkha district"
+    ],
+    "date": "2026-08-27",
+    "amount": null,
+    "currency": null,
+    "source_url": "https://msf-switzerland.prezly.com/nepal-flash-floods-msf-teams-assess-urgent-humanitarian-needs",
+    "quote": "The MSF team arrived in Nepal less than 24 hours after the floods struck, and we are engaging with health facilities to assess if we can support.",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "note": "Published on the MSF Switzerland (OCG) newsroom, confirming OCG as the operational section engaged in this response as of 27 Aug 2026."
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": true,
+    "url": "https://www.msf.org/international-activity-report-2025",
+    "fiscal_year": "2025",
+    "fiscal_year_end": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": true,
+    "source_url": "https://www.msf.org/sites/default/files/2026-06/MSF%202025%20Provisional%20IFR.pdf",
+    "retrieved_at": "2026-08-28",
+    "verification": "externally_audited",
+    "quote": "audited combined Financial Statements (International Financial Report/IFR) provide a global overview of MSF's work",
+    "note": "MSF publishes an annual audited combined International Financial Report (IFR) aggregating all 24 sections, branch offices and MSF International."
+   },
+   "iati_publisher": {
+    "is_publisher": null,
+    "publisher_ref": null,
+    "source_url": null,
+    "retrieved_at": null
+   },
+   "income": {
+    "value": 2600000000,
+    "currency": "EUR",
+    "fiscal_year": "2025",
+    "scope": "global",
+    "source_url": "https://www.msf.org/sites/default/files/2026-06/MSF%202025%20Provisional%20IFR.pdf",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": "2025 Provisional International Financial Report: more than 7.5 million individual donors and private institutions provided 98% of the combined ~EUR 2.6bn raised. Figure surfaced via search-engine summary of the official PDF (not opened directly this session, given research budget); combined movement-wide figure, not Nepal-specific. Treat as approximate/provisional pending direct document review."
+   },
+   "expenditure": {
+    "value": null,
+    "source_url": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Total combined expenditure figure not retrieved this session; report states personnel costs are 51% of expenditure but no total was captured. See 2025 Provisional IFR PDF for the actual number."
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "No published expenditure split found within research budget."
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "names.legal",
+   "names.local_script",
+   "nepal_presence.staff_count",
+   "financial_transparency.expenditure",
+   "financial_transparency.program_ratio",
+   "financial_transparency.iati_publisher",
+   "financial_transparency.annual_report.fiscal_year_end",
+   "registrations[0].identifier"
+  ],
+  "research_notes": "MSF International is a federation of 24 operational/national sections (org_type recorded as 'ingo' per instructions, though it is technically not a single legal entity). MSF has no permanent programme in Nepal: it worked there historically (earthquake response 2015; COVID-19 mental-health hotline 2020) but closed its last project in 2020. For the Aug 2026 Trishuli/Rasuwa flash flood, MSF deployed an emergency assessment team within 24 hours (arrived/reported 27 Aug 2026); the operational section publicly identified as running this response is MSF Switzerland (Operational Centre Geneva / OCG), per msf-switzerland.prezly.com. As of 28.08.2026 (2 days post-disaster) this is still an assessment mission — no confirmed program activities, staff counts, or funding amounts for Nepal specifically were found. Searched: msf.org, msf.org/nepal, doctorswithoutborders.org (search only), msf-switzerland.prezly.com, msf.org International Financial Report pages. Financial figures are for the combined global MSF movement (2025 Provisional IFR), not Nepal-specific; no Nepal-specific budget/spend figure exists yet given how recent the disaster is. Research budget used: 3 web searches + 3 web fetches.",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "save-the-children-international",
+  "names": {
+   "common": "Save the Children International",
+   "legal": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Wikipedia confirms SCI is headquartered in London and coordinates 30 national member organisations, but no formal registered legal name or company/charity number was found in this research pass (savethechildren.net was unreachable, 403)."
+   },
+   "local_script": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "No Nepali-script name found for the global entity in this research pass."
+   },
+   "aliases": [
+    "SCI",
+    "Save the Children",
+    "Save the Children Nepal"
+   ]
+  },
+  "org_type": "ingo",
+  "hq": {
+   "country": "GB",
+   "city": "London",
+   "source_url": "https://en.wikipedia.org/wiki/Save_the_Children_International"
+  },
+  "website": "https://www.savethechildren.net",
+  "registrations": [
+   {
+    "registry": "NP_SWC",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "swc.org.np was unreachable during this research pass; Save the Children's Social Welfare Council (Nepal) registration could not be independently confirmed."
+   },
+   {
+    "registry": "IATI",
+    "identifier": "SCI",
+    "url": "https://dashboard.iatistandard.org/publishers/sci/",
+    "status": "active publisher",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "note": "Save the Children International listed as an IATI reporting organisation/publisher on the IATI Dashboard (distinct from 'Save the Children Netherlands', publisher ref scnl, a separate member)."
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": 1976,
+    "source_url": "https://www.savethechildren.org.uk/where-we-work/asia/nepal",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": "We've been working in Nepal since 1976 and are the largest child-focused organisation in the country.",
+    "note": "Sourced via Save the Children UK's Nepal page, which describes the Save the Children federation's Nepal country-office presence; savethechildren.net/nepal itself returned HTTP 403 to automated fetch during this research pass."
+   },
+   "mode": {
+    "value": "both",
+    "source_url": "https://www.savethechildren.org.uk/where-we-work/asia/nepal",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": "Own staff plus a large local partner network."
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Not found in this research pass."
+   },
+   "partners": [
+    {
+     "value": "100+ partners across Nepal including government, community organisations and NGOs",
+     "source_url": "https://www.savethechildren.org.uk/where-we-work/asia/nepal",
+     "retrieved_at": "2026-08-28",
+     "verification": "self_reported",
+     "quote": "work with more than 100 partners across Nepal, including the government, communities organisations and NGOs.",
+     "note": null
+    }
+   ]
+  },
+  "current_response": [
+   {
+    "what": "Emergency response distributing household/cooking kits, tarpaulins, baby packs, mosquito nets, dignity/hygiene kits, blankets and kitchen utensils to 1,000 flood-affected households as a first phase (relief pre-positioned in 6 warehouses for capacity up to 10,000 households)",
+    "where": [
+     "Rasuwa",
+     "Nuwakot",
+     "Dhading"
+    ],
+    "date": "2026-08-28",
+    "amount": null,
+    "currency": null,
+    "source_url": "https://www.savethechildren.org.uk/how-you-can-help/emergencies/nepal-floods",
+    "quote": "Children's lives changed in an instant. Some have lost their homes and belongings and a sense of security.",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "note": "Delivering entity is stated as 'Save the Children in Nepal' (the SCI-run country office). This describes an active first-phase distribution plus a parallel fundraising appeal (savethechildren.net/donate/nepal-floods, unreachable to fetch directly, HTTP 403); no monetary disbursement figure has been published yet."
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": false,
+    "url": null,
+    "fiscal_year": null,
+    "fiscal_year_end": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Not confirmed in this research pass; SCI publishes consolidated financial statements but the document was not located within budget."
+   },
+   "iati_publisher": {
+    "is_publisher": true,
+    "publisher_ref": "SCI",
+    "source_url": "https://dashboard.iatistandard.org/publishers/sci/",
+    "retrieved_at": "2026-08-28"
+   },
+   "income": {
+    "value": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": "unknown",
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Not found in this research pass."
+   },
+   "expenditure": {
+    "value": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": "unknown",
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Not found in this research pass."
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "No published expenditure split found within research budget."
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "names.legal",
+   "names.local_script",
+   "nepal_presence.staff_count",
+   "registrations (UK company/charity registration number for SCI not confirmed)",
+   "financial_transparency.annual_report",
+   "financial_transparency.audited_financials",
+   "financial_transparency.income",
+   "financial_transparency.expenditure",
+   "financial_transparency.program_ratio"
+  ],
+  "research_notes": "Entity chosen: Save the Children International (SCI), org_id save-the-children-international. SCI runs the global federation's Nepal country office (savethechildren.net/nepal exists as a dedicated country page, listed in search results with /nepal-humanitarian and /nepal-our-work sub-pages) — Save the Children UK and Save the Children US are separate legal entities/members that also fundraise for Nepal (savethechildren.org.uk/where-we-work/asia/nepal, savethechildren.org/us/where-we-work/nepal) but do not themselves run the country office. savethechildren.net returned HTTP 403 to automated fetch throughout this session, so nepal_presence and current_response facts are sourced via Save the Children UK's Nepal pages, which describe the same federation-run country office response ('Save the Children in Nepal') rather than SC UK's own separate program. HQ (London, UK) taken from Wikipedia's Save the Children International article; no SCI charity/company registration number could be confirmed in this pass. IATI: SCI is a registered publisher (ref 'SCI') per the IATI Dashboard, distinct from Save the Children Netherlands (ref 'scnl'). Flood response confirmed 2 days after the disaster: first-phase distribution to 1,000 households in Rasuwa/Nuwakot/Dhading, with a live donation appeal; no financial disbursement figures published yet, consistent with the very early stage of the response. Searches/fetches used: WebSearch (Nepal floods response; savethechildren.net Nepal country office; IATI publisher), WebFetch (savethechildren.net/nepal — 403; savethechildren.net/donate/nepal-floods — 403; savethechildren.org.uk/where-we-work/asia/nepal — success; savethechildren.org/us press release — 403; savethechildren.org.uk/how-you-can-help/emergencies/nepal-floods — success; en.wikipedia.org/wiki/Save_the_Children_International — success).",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "unicef-nepal",
+  "names": {
+   "common": "UNICEF Nepal",
+   "legal": {
+    "value": "United Nations Children's Fund",
+    "source_url": "https://en.wikipedia.org/wiki/UNICEF",
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Well-established public fact (UN General Assembly resolution 57(I), 1946) not independently re-fetched this session; unicef.org pages returned HTTP 403 to automated fetch."
+   },
+   "local_script": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "aliases": [
+    "UNICEF"
+   ]
+  },
+  "org_type": "un_agency",
+  "hq": {
+   "country": "US",
+   "city": "New York",
+   "source_url": "https://en.wikipedia.org/wiki/UNICEF"
+  },
+  "website": "https://www.unicef.org/nepal",
+  "registrations": [
+   {
+    "registry": "UN",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "UNICEF is a UN specialized programme/fund created by UN General Assembly resolution; not applicable in the same sense as a national charity registry. Nepal-specific registrations (e.g. NP_SWC) were not confirmed within this session's search budget — UN agencies typically operate under a country agreement/Standard Basic Assistance Agreement with the Nepal government rather than an NGO registry entry."
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Not verified within this session's search budget; not added to data_gaps omission risk noted in research_notes."
+   },
+   "mode": {
+    "value": "own_staff",
+    "source_url": "https://www.unicef.org/asia-pacific/press-releases/flash-floods-nepal-leave-more-17000-children-need-urgent-humanitarian-assistance",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": "UNICEF press materials describe its own staff loading supplies at the Humanitarian Staging Area and UNICEF teams travelling to Nuwakot, confirming an own-staff presence in Nepal (in addition to any implementing partners, which were not confirmed this session)."
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "partners": []
+  },
+  "current_response": [
+   {
+    "what": "Distributed pre-positioned hygiene kits, medical tents, bed nets, newborn kits, and ready-to-use therapeutic food for children with acute malnutrition to flood-affected communities",
+    "where": [
+     "Rasuwa",
+     "Nuwakot",
+     "Dhading"
+    ],
+    "date": "2026-08-27",
+    "amount": null,
+    "currency": null,
+    "source_url": "https://www.unicef.org/asia-pacific/press-releases/flash-floods-nepal-leave-more-17000-children-need-urgent-humanitarian-assistance",
+    "quote": "Pre-positioned supplies will be distributed to the hardest-hit communities, including medical tents, bed nets and newborn kits, and ready-to-use therapeutic food for children with acute malnutrition.",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "note": "UNICEF Asia-Pacific press release on the 26 Aug 2026 Trishuli/Bhote Koshi flash floods (17,000+ children affected). Direct WebFetch to unicef.org returned HTTP 403 (site blocks automated fetch); content taken from the search-engine index snippet of this UNICEF URL, not independently re-verified against the live page."
+   },
+   {
+    "what": "Sent a UNICEF team to Nuwakot district to assess the humanitarian situation and support relief operations for displaced populations",
+    "where": [
+     "Nuwakot"
+    ],
+    "date": "2026-08-28",
+    "amount": null,
+    "currency": null,
+    "source_url": "https://aninews.in/news/world/asia/assessing-the-devastation-unicef-teams-arrive-in-nuwakot-as-nepal-flood-relief-operations-shift-into-high-gear20260828104156/",
+    "quote": "Assessing the devastation: UNICEF teams arrive in Nuwakot as Nepal flood relief operations shift into high gear",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "note": "Third-party news wire (ANI) report; direct WebFetch to this URL also returned HTTP 403, content taken from the search-engine index snippet."
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": true,
+    "url": "https://www.unicef.org/media/136781/file/Nepal-2022-COAR.pdf",
+    "fiscal_year": "2022",
+    "fiscal_year_end": "12-31",
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "UNICEF's global financial statements are audited by the UN Board of Auditors as a matter of public record, but this was not independently confirmed via a directly-fetched source within this session's search budget (unicef.org fetches returned HTTP 403)."
+   },
+   "iati_publisher": {
+    "is_publisher": null,
+    "publisher_ref": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "income": {
+    "value": 8263000000,
+    "currency": "USD",
+    "fiscal_year": "2024",
+    "scope": "global",
+    "source_url": "https://www.unicef.org/reports/unicef-annual-report/2024",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "quote": "UNICEF's total income decreased to $8,263 million from $8,920 million in 2023.",
+    "note": "Global consolidated figure (not Nepal-only); a Nepal-only budget/income figure was not located within this session's search budget. Figure surfaced via search-engine summary of UNICEF's 2024 Annual Report / Funding Compendium 2024; direct WebFetch to unicef.org returned HTTP 403 so the primary document was not read directly."
+   },
+   "expenditure": {
+    "value": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Search results returned conflicting/ambiguous figures (a ~$9.00 billion figure appeared to be a strategic-plan projection rather than confirmed FY2024 actual expenditure), so left null rather than guess."
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "No published expenditure split found within research budget."
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "nepal_presence.since_year",
+   "nepal_presence.staff_count",
+   "nepal_presence.partners",
+   "financial_transparency.annual_report (more recent Nepal Country Office Annual Report, e.g. FY2024 'Results for Children', was referenced in search results but its direct document URL could not be located within budget; used the confirmed FY2022 COAR PDF instead)",
+   "financial_transparency.audited_financials",
+   "financial_transparency.iati_publisher",
+   "financial_transparency.expenditure",
+   "financial_transparency.income (nepal_only scope)",
+   "registrations (Nepal-specific registry entries, e.g. NP_SWC, not confirmed)"
+  ],
+  "research_notes": "UN agency: hq.country/city (US/New York) reflects UNICEF's global HQ; as a UN body it has no 'legal seat' in the private-org/charity-registry sense, and no Nepal-specific registry entry was confirmed. All direct WebFetch calls to unicef.org (press releases, emergencies page, annual report page) returned HTTP 403 (site blocks automated fetching); the data used here comes from WebSearch result snippets that index those same unicef.org pages plus one third-party (ANI) news wire report, all retrieved 2026-08-28. Given the 6-fetch/search budget for this pilot record, financial figures beyond global 2024 income were not chased further (expenditure figures found were inconsistent/ambiguous and were left null rather than guessed). Flood context: 26 Aug 2026 glacier-collapse flash flood along the Trishuli/Bhote Koshi river system (Rasuwa/Nuwakot/Dhading districts); UNICEF reports 17,000+ children affected. Casualty figures cited in UNICEF's own materials (e.g. ~332 dead) differ slightly from the Wikipedia reference figure (~389 dead) given in the task brief, consistent with a fast-moving, 2-day-old disaster with unsettled official counts.",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "wfp-nepal",
+  "names": {
+   "common": "World Food Programme",
+   "legal": {
+    "value": "World Food Programme",
+    "source_url": "https://www.wfp.org/countries/nepal",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": null
+   },
+   "local_script": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "aliases": [
+    "WFP",
+    "WFP Nepal"
+   ]
+  },
+  "org_type": "un_agency",
+  "hq": {
+   "country": "IT",
+   "city": "Rome",
+   "source_url": null
+  },
+  "website": "https://www.wfp.org/countries/nepal",
+  "registrations": [
+   {
+    "registry": "UN",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "UN specialized agency operating under a Basic Agreement with the Government of Nepal; not applicable in the same sense as national charity registries. No NP_SWC/NP_DAO registration found."
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": 1963,
+    "source_url": "https://www.wfp.org/countries/nepal",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": null
+   },
+   "mode": {
+    "value": "both",
+    "source_url": "https://www.wfp.org/operations/np03-nepal-country-strategic-plan-2024-2028",
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Inferred from WFP's standard Country Office model (own staff) plus its stated 'strong partnership with the Government' under the 2024-2028 Country Strategic Plan; not an itemized breakdown confirmed on the Nepal country page."
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "partners": []
+  },
+  "current_response": [
+   {
+    "what": "Dispatched nutrient-packed ready-to-eat food rations (high-energy biscuits) to flood-affected households without cooking access, provided logistical assistance to the Nepalese Government's emergency response, and deployed teams to assess further food and logistics needs",
+    "where": [
+     "Rasuwa",
+     "Nuwakot"
+    ],
+    "date": "2026-08-28",
+    "amount": null,
+    "currency": null,
+    "source_url": "https://www.wfp.org/stories/wfp-supports-nepals-response-following-deadly-floods-and-landslides",
+    "quote": "WFP had already dispatched nutrient-packed ready-to-eat food rations (high-energy biscuits) for hundreds of affected households that do not have immediate access to cooking facilities",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "note": "Article states at least 10,000 households are in need of immediate relief and WFP 'stands ready to scale up as needed'; no dollar amount disclosed yet."
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": true,
+    "url": "https://executiveboard.wfp.org/document_download/WFP-0000173331",
+    "fiscal_year": "2025",
+    "fiscal_year_end": "12-31",
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": true,
+    "source_url": "https://www.wfp.org/publications/audited-annual-accounts",
+    "retrieved_at": "2026-08-28",
+    "verification": "externally_audited",
+    "quote": null,
+    "note": "WFP publishes Audited Annual Accounts reviewed by the UN Board of Auditors; most recent is the 2025 accounts (WFP-0000173331)."
+   },
+   "iati_publisher": {
+    "is_publisher": true,
+    "publisher_ref": "XM-DAC-41140",
+    "source_url": "https://www.iatiregistry.org/publisher/wfp",
+    "retrieved_at": "2026-08-28"
+   },
+   "income": {
+    "value": 6500000000,
+    "currency": "USD",
+    "fiscal_year": "2025",
+    "scope": "global",
+    "source_url": "https://www.wfp.org/stories/wfp-glance",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": "US$6.5 billion raised in 2025",
+    "note": "Aggregate voluntary donations figure from WFP's 'At a Glance' summary page, not the formal audited total income line from the Audited Annual Accounts PDF (that document was not independently opened). No Nepal-only figure found."
+   },
+   "expenditure": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "No published expenditure split found within research budget."
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "names.legal (self-reported only, no independent registry confirmation)",
+   "names.local_script",
+   "nepal_presence.staff_count",
+   "nepal_presence.partners",
+   "nepal_presence.mode (inferred from standard operating model, not itemized on source page)",
+   "financial_transparency.expenditure",
+   "financial_transparency.income (Nepal-only figure; only global figure found)",
+   "financial_transparency.program_ratio",
+   "registrations (no Nepal-specific national registry identifier found)"
+  ],
+  "research_notes": "Searched/fetched: wfp.org/countries/nepal, wfp.org/stories/wfp-supports-nepals-response-following-deadly-floods-and-landslides (28 Aug 2026, confirms Rasuwa/Nuwakot Aug 26 flood response), wfp.org/stories/wfp-glance (2025 funding figure), wfp.org/publications/audited-annual-accounts (2025 Audited Annual Accounts document link), iatiregistry.org/publisher/wfp (confirmed IATI publisher XM-DAC-41140), general web search for the 2024-2028 Nepal Country Strategic Plan. Did not open the Audited Annual Accounts PDF or the CSP document itself due to budget limits, so precise global expenditure and a formal audited income line item were not extracted. One WFP operations-page search result ('Emergency response to critically food insecure populations in severely flood affected districts of Southern Nepal', op 201101, Terai floods since 11 Aug) appears to describe a separate/older flood operation and was deliberately excluded from current_response as it does not match the 26 Aug 2026 Trishuli glacier-collapse flood in Rasuwa/Nuwakot.",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "mercy-corps",
+  "names": {
+   "common": "Mercy Corps",
+   "legal": {
+    "value": "Mercy Corps",
+    "source_url": "https://projects.propublica.org/nonprofits/organizations/911148123",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "quote": null,
+    "note": null
+   },
+   "local_script": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "aliases": []
+  },
+  "org_type": "ingo",
+  "hq": {
+   "country": "US",
+   "city": "Portland, OR",
+   "source_url": "https://projects.propublica.org/nonprofits/organizations/911148123"
+  },
+  "website": "https://www.mercycorps.org",
+  "registrations": [
+   {
+    "registry": "US_IRS",
+    "identifier": "91-1148123",
+    "url": "https://projects.propublica.org/nonprofits/organizations/911148123",
+    "status": "active",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "note": null
+   },
+   {
+    "registry": "NP_SWC",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "swc.org.np unreachable 28.08.2026; Mercy Corps Nepal has a registered country office (nepal.mercycorps.org) but SWC registration number could not be independently confirmed within budget."
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": 2005,
+    "source_url": "https://www.mercycorps.org/press-room/releases/News-Alert-Flash-Floods",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": "Mercy Corps has maintained presence in Nepal since 2005",
+    "note": null
+   },
+   "mode": {
+    "value": "own_staff",
+    "source_url": "https://nepal.mercycorps.org/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": "Mercy Corps operates a Nepal country office (Sanepa Chowk, Lalitpur) with a named Nepal Country Director (Suraj Sigdel); could not confirm implementing partner NGOs within research budget, so 'both' vs 'own_staff' is not fully certain."
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "partners": []
+  },
+  "current_response": [
+   {
+    "what": "News alert / initial response statement on the Trishuli flash floods: coordinating with local authorities and humanitarian partners to identify urgent needs; priorities named as medical care, shelter, water, food, and essential supplies",
+    "where": [
+     "unspecified"
+    ],
+    "date": "2026-08-26",
+    "amount": null,
+    "currency": null,
+    "source_url": "https://www.mercycorps.org/press-room/releases/News-Alert-Flash-Floods",
+    "quote": "The immediate priorities are urgent medical care, safe shelter, clean water, food, and essential supplies.",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "note": "Press release dated 26 Aug 2026 (day of the disaster). Describes coordination and needs assessment via Nepal Country Director Suraj Sigdel; no confirmed distribution activity, funding amount, or specific district-level location yet as of retrieval."
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": false,
+    "url": null,
+    "fiscal_year": null,
+    "fiscal_year_end": "06-30",
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": true,
+    "source_url": "https://projects.propublica.org/nonprofits/organizations/911148123",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "quote": null,
+    "note": "Single audit on file for FY2025 (period ended 30 June 2025) per Federal Audit Clearinghouse, referenced on ProPublica Nonprofit Explorer."
+   },
+   "iati_publisher": {
+    "is_publisher": null,
+    "publisher_ref": null,
+    "source_url": null,
+    "retrieved_at": null
+   },
+   "income": {
+    "value": 376251780,
+    "currency": "USD",
+    "fiscal_year": "2025",
+    "scope": "global",
+    "source_url": "https://projects.propublica.org/nonprofits/organizations/911148123",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "quote": null,
+    "note": "Total revenue, FY ended 30 June 2025 (Form 990 data via ProPublica Nonprofit Explorer)."
+   },
+   "expenditure": {
+    "value": 387107008,
+    "currency": "USD",
+    "fiscal_year": "2025",
+    "scope": "global",
+    "source_url": "https://projects.propublica.org/nonprofits/organizations/911148123",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "quote": null,
+    "note": "Total expenses, FY ended 30 June 2025; org reported a net loss of ~$10.9M for the year per ProPublica."
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "No published expenditure split found within research budget."
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "nepal_presence.staff_count",
+   "nepal_presence.partners",
+   "registrations[NP_SWC].identifier",
+   "financial_transparency.annual_report.url",
+   "financial_transparency.iati_publisher",
+   "financial_transparency.program_ratio",
+   "warnings"
+  ],
+  "research_notes": "Searched: mercycorps.org press room (News Alert on flash floods, dated 26 Aug 2026, self-reported, no funding amount or specific district yet), nepal.mercycorps.org (country office in Lalitpur, presence since 2005, focus on agriculture/food security, access to finance, DRR/climate, youth engagement), ProPublica Nonprofit Explorer (EIN 91-1148123, FY2025 revenue/expenses, single audit on file). Could not reach swc.org.np (per known outage) so NP_SWC registration is unconfirmed. Did not check IATI/d-portal or search for a dedicated annual-report PDF within the ~6-call research budget. No watchdog/warning items surfaced in the searches performed.",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "project-hope",
+  "names": {
+   "common": "Project HOPE",
+   "legal": {
+    "value": "Project Hope - The People-to-People Health Foundation, Inc.",
+    "source_url": "https://projects.propublica.org/nonprofits/organizations/530242962",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "quote": null,
+    "note": null
+   },
+   "local_script": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "aliases": []
+  },
+  "org_type": "ingo",
+  "hq": {
+   "country": "US",
+   "city": "Washington, DC",
+   "source_url": "https://www.projecthope.org/about-us/"
+  },
+  "website": "https://www.projecthope.org",
+  "registrations": [
+   {
+    "registry": "US_IRS",
+    "identifier": "53-0242962",
+    "url": "https://projects.propublica.org/nonprofits/organizations/530242962",
+    "status": "active tax-exempt (per ProPublica Nonprofit Explorer)",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "note": null
+   },
+   {
+    "registry": "NP_SWC",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "swc.org.np unreachable as of 28.08.2026; could not confirm Nepal Social Welfare Council registration."
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": 2015,
+    "source_url": "https://www.projecthope.org/news-stories/responses/flash-floods-devastate-nepal-how-to-help/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": "Article references Project HOPE's prior Nepal work starting with the 2015 earthquake response, followed by 2016-2017 maternal health programming and a 2021 COVID-19 response; no exact verbatim founding date given."
+   },
+   "mode": {
+    "value": "unknown",
+    "source_url": "https://www.projecthope.org/news-stories/responses/flash-floods-devastate-nepal-how-to-help/",
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Article states an Emergency Response Team is on the ground for the current flood response and mentions coordination with local, national and international partners, but does not clarify whether Project HOPE maintains a standing own-staff country office in Nepal or operates only through partners/surge deployments."
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "partners": []
+  },
+  "current_response": [
+   {
+    "what": "Emergency Response Team deployed to Nepal, assessing health and humanitarian conditions and mobilizing a response; coordinating with local, national and international partners to keep Nepal's health system functional and support recovering families",
+    "where": [
+     "unspecified"
+    ],
+    "date": "2026-08-27",
+    "amount": null,
+    "currency": null,
+    "source_url": "https://www.projecthope.org/news-stories/responses/flash-floods-devastate-nepal-how-to-help/",
+    "quote": "Project HOPE is on the ground in Nepal, assessing health and humanitarian conditions and mobilizing a response.",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "note": "Article published 27.08.2026, titled 'Flash Floods Devastate Nepal: How to Help'; no specific districts, dates of individual activities, or dollar amounts stated."
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": true,
+    "url": "https://www.projecthope.org/wp-content/uploads/2026/08/PH_AR_2025_Final_web.pdf",
+    "fiscal_year": "2025",
+    "fiscal_year_end": "12-31",
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": true,
+    "source_url": "https://projects.propublica.org/nonprofits/organizations/530242962",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "quote": null,
+    "note": "ProPublica Nonprofit Explorer lists audited financial statements and Form 990s for multiple fiscal years."
+   },
+   "iati_publisher": {
+    "is_publisher": null,
+    "publisher_ref": null,
+    "source_url": null,
+    "retrieved_at": null
+   },
+   "income": {
+    "value": 157270945,
+    "currency": "USD",
+    "fiscal_year": "2025",
+    "scope": "global",
+    "source_url": "https://projects.propublica.org/nonprofits/organizations/530242962",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "quote": null,
+    "note": null
+   },
+   "expenditure": {
+    "value": 150976251,
+    "currency": "USD",
+    "fiscal_year": "2025",
+    "scope": "global",
+    "source_url": "https://projects.propublica.org/nonprofits/organizations/530242962",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "quote": null,
+    "note": null
+   },
+   "program_ratio": {
+    "value": 0.84,
+    "source_url": "https://www.projecthope.org/about/financials/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": "More than 84% of our expended resources support our lifesaving health projects around the world.",
+    "note": "Formula per org's own financials page: program expenses / total expended resources (self-reported organizational figure, not independently derived from the audited 990 program-services ratio)."
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "names.local_script",
+   "names.aliases",
+   "registrations (NP_SWC identifier/status unconfirmed, swc.org.np unreachable)",
+   "nepal_presence.mode",
+   "nepal_presence.staff_count",
+   "nepal_presence.partners",
+   "current_response[0].where",
+   "current_response[0].amount",
+   "financial_transparency.iati_publisher"
+  ],
+  "research_notes": "Sources checked: projecthope.org homepage (Nepal flood alert banner confirmed), projecthope.org Nepal flood response article (27.08.2026), projecthope.org about-us and financials pages, ProPublica Nonprofit Explorer (EIN 53-0242962). Project HOPE has an active, dated (27.08.2026) Nepal flood response statement with an Emergency Response Team on the ground; no district-level detail or dollar figures published yet, consistent with the disaster being only 2 days old. HQ discrepancy: the org's own current about-us page lists 1101 Connecticut Ave NW, Suite 500, Washington, DC 20036 as HQ; ProPublica also lists Washington, DC. Millwood, Virginia (cited in the task brief) appears to be Project HOPE's historical/legacy HQ location, not the current one per the org's own site as of 28.08.2026 -- used Washington, DC per the live source. swc.org.np (Nepal Social Welfare Council registry) was not checked directly (per task instructions it is currently unreachable); could not confirm NP_SWC registration status. Attempted a dedicated 'where we work / Nepal' country page (404) and a separate contact-us page (404); could not source nepal_presence.mode, staff_count, or partner organization names. No IATI publisher record found or checked in depth. No warnings/adverse findings encountered in the sources reviewed (not exhaustively searched for watchdog/regulator issues).",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "globalgiving",
+  "names": {
+   "common": "GlobalGiving",
+   "legal": {
+    "value": "Globalgiving Foundation Inc",
+    "source_url": "https://projects.propublica.org/nonprofits/organizations/300108263",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "quote": null,
+    "note": null
+   },
+   "local_script": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "aliases": []
+  },
+  "org_type": "platform",
+  "hq": {
+   "country": "US",
+   "city": "Washington, DC",
+   "source_url": "https://projects.propublica.org/nonprofits/organizations/300108263"
+  },
+  "website": "https://www.globalgiving.org",
+  "registrations": [
+   {
+    "registry": "US_IRS",
+    "identifier": "30-0108263",
+    "url": "https://projects.propublica.org/nonprofits/organizations/300108263",
+    "status": "active",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "note": "501(c)(3) since May 2003; classified under International, Foreign Affairs and National Security (ProPublica Nonprofit Explorer)"
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "GlobalGiving is a US-based crowdfunding platform; it does not maintain its own Nepal country office"
+   },
+   "mode": {
+    "value": "unknown",
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Could not verify this session whether/how GlobalGiving currently operates in Nepal (own staff vs. partner NGOs vs. none) — globalgiving.org blocked automated fetching (HTTP 403 on every attempt, including a second, independent attempt after the initial subagent's research) and the session's WebSearch budget was exhausted."
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "partners": []
+  },
+  "current_response": [
+   {
+    "what": "Nepal Flood Relief Fund launched; USD 1.5M goal; USD 174,819 raised from 1,433 donors as of 28.08.2026; flexible funding to unnamed local organisations for search and rescue, medical care, shelter, food, water",
+    "where": [
+     "Rasuwa",
+     "unspecified"
+    ],
+    "date": "2026-08-28",
+    "amount": 174819,
+    "currency": "USD",
+    "source_url": "https://www.globalgiving.org/projects/nepal-flood-relief-fund/",
+    "quote": "provides local organizations with flexible funding to meet urgent needs, including search and rescue, emergency medical care, shelter, food, clean water",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "note": "amount = raised to date, not disbursed; no grantee organisations named on the fund page; disaster-fund fee 15 % (12 % + 3 %). Page is Cloudflare-blocked for plain fetchers; retrieved via text-extraction proxy by the case-study agent."
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": false,
+    "url": null,
+    "fiscal_year": null,
+    "fiscal_year_end": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": true,
+    "source_url": "https://projects.propublica.org/nonprofits/organizations/300108263",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "quote": null,
+    "note": "ProPublica Nonprofit Explorer: audits available for FY2022 and FY2023 via the Federal Audit Clearinghouse; FY2024 audit status not separately confirmed"
+   },
+   "iati_publisher": {
+    "is_publisher": true,
+    "publisher_ref": "US-EIN-300108263",
+    "source_url": "https://d-portal.org/ctrack.html?publisher=US-EIN-300108263",
+    "retrieved_at": "2026-08-28"
+   },
+   "income": {
+    "value": 91098723,
+    "currency": "USD",
+    "fiscal_year": "2024",
+    "scope": "global",
+    "source_url": "https://projects.propublica.org/nonprofits/organizations/300108263",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "quote": null,
+    "note": "Total revenue per most recent Form 990 (FY2024) on ProPublica Nonprofit Explorer"
+   },
+   "expenditure": {
+    "value": 115948374,
+    "currency": "USD",
+    "fiscal_year": "2024",
+    "scope": "global",
+    "source_url": "https://projects.propublica.org/nonprofits/organizations/300108263",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "quote": null,
+    "note": "Total expenses per most recent Form 990 (FY2024) on ProPublica Nonprofit Explorer; exceeds revenue for the year"
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "No published expenditure split found within research budget."
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "nepal_presence.since_year",
+   "nepal_presence.mode",
+   "nepal_presence.staff_count",
+   "nepal_presence.partners",
+   "financial_transparency.annual_report.url",
+   "financial_transparency.program_ratio",
+   "names.aliases"
+  ],
+  "research_notes": "Could NOT verify a Nepal Flood Relief Fund 2026 page on globalgiving.org: direct WebFetch requests to globalgiving.org (search page, a plausible /projects/nepal-flood-relief-fund/ URL, and a disaster-recovery URL, across two independent research passes) all returned HTTP 403 (site is Cloudflare-protected against automated fetch); the session's WebSearch budget (200/200) was exhausted before either pass could search globalgiving.org directly; Bing, Google and DuckDuckGo fallback fetches were blocked by consent/CAPTCHA walls or returned no usable result snippets. As a result, no fund page, goal/raised amount, or named grantee/partner organisations could be captured for this record — current_response is left as an empty array per the hard rule (do not substitute a generic/older Nepal fund) rather than asserting no such fund exists. RECOMMEND a follow-up fetch of globalgiving.org's disaster-recovery/Nepal listings via browser automation (e.g. Playwright/Chrome MCP, which can pass Cloudflare's JS challenge) to retrieve the fund page and its grantee list for the separate partner-org research batch. Financial figures (revenue/expenses FY2024, EIN, legal name, audit status) were successfully confirmed via ProPublica Nonprofit Explorer.",
+  "last_updated": "2026-08-28"
+ }
+]

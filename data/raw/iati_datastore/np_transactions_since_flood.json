@@ -1,0 +1,61 @@
+{
+ "retrieved_at": "2026-08-28T13:00:56+00:00",
+ "source": "iati_datastore",
+ "params": {
+  "rows": 20,
+  "wt": "json",
+  "q": "transaction_recipient_country_code:NP AND transaction_transaction_date_iso_date:[2026-08-26T00:00:00Z TO *]",
+  "fl": "iati_identifier,transaction_type,transaction_value,transaction_transaction_date_iso_date,transaction_provider_org_narrative,transaction_receiver_org_narrative,reporting_org_narrative"
+ },
+ "data": {
+  "responseHeader": {
+   "zkConnected": true,
+   "status": 0,
+   "QTime": 1,
+   "params": {
+    "q": "transaction_recipient_country_code:NP AND transaction_transaction_date_iso_date:[2026-08-26T00:00:00Z TO *]",
+    "fl": "iati_identifier,transaction_type,transaction_value,transaction_transaction_date_iso_date,transaction_provider_org_narrative,transaction_receiver_org_narrative,reporting_org_narrative",
+    "rows": "20",
+    "_forwardedCount": "1",
+    "wt": "json"
+   }
+  },
+  "response": {
+   "numFound": 2,
+   "start": 0,
+   "numFoundExact": true,
+   "docs": [
+    {
+     "iati_identifier": "SE-0-SE-6-15288-15288A0102",
+     "reporting_org_narrative": [
+      "Sweden"
+     ],
+     "transaction_value": [
+      -2326.1125
+     ],
+     "transaction_receiver_org_narrative": [
+      "Association for Asian Studies"
+     ],
+     "transaction_transaction_date_iso_date": [
+      "2026-08-28T00:00:00Z"
+     ]
+    },
+    {
+     "iati_identifier": "SE-0-SE-6-17245-17245A0101",
+     "reporting_org_narrative": [
+      "Sweden"
+     ],
+     "transaction_value": [
+      214835.4525
+     ],
+     "transaction_receiver_org_narrative": [
+      "UNICEF/United Nations Children's Fund"
+     ],
+     "transaction_transaction_date_iso_date": [
+      "2026-08-28T00:00:00Z"
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,52 @@
+{
+  "org_id": "example-relief-org",
+  "names": {
+    "common": "Example Relief Org",
+    "legal": { "value": "Example Relief Organisation Ltd", "source_url": "https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/1234567", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "quote": null, "note": null },
+    "local_script": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": "no Nepali-script name found" },
+    "aliases": ["ERO"]
+  },
+  "org_type": "ingo",
+  "hq": { "country": "GB", "city": "London", "source_url": "https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/1234567" },
+  "website": "https://example-relief.org",
+  "registrations": [
+    { "registry": "UK_CC", "identifier": "1234567", "url": "https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/1234567", "status": "registered", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "note": null },
+    { "registry": "NP_SWC", "identifier": null, "url": null, "status": null, "retrieved_at": "2026-08-28", "verification": "unverified", "note": "SWC site unreachable 28.08.2026; org states it is SWC-affiliated but no number published" },
+    { "registry": "IATI", "identifier": "GB-CHC-1234567", "url": "https://d-portal.org/ctrack.html?publisher=GB-CHC-1234567", "status": "active", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "note": null }
+  ],
+  "nepal_presence": {
+    "since_year": { "value": 2015, "source_url": "https://example-relief.org/nepal", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": "We have worked in Nepal since the 2015 earthquake", "note": null },
+    "mode": { "value": "partners", "source_url": "https://example-relief.org/nepal", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": "through our local partner Example Nepal Samaj", "note": null },
+    "staff_count": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
+    "partners": [
+      { "value": "Example Nepal Samaj", "source_url": "https://example-relief.org/nepal", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": null, "note": null }
+    ]
+  },
+  "current_response": [
+    {
+      "what": "Emergency appeal launched; first distribution of tarpaulins and hygiene kits announced",
+      "where": ["Rasuwa"],
+      "date": "2026-08-27",
+      "amount": 100000,
+      "currency": "GBP",
+      "source_url": "https://example-relief.org/news/nepal-flood-appeal",
+      "quote": "we are sending 500 tarpaulins to Rasuwa with our partner",
+      "retrieved_at": "2026-08-28",
+      "verification": "self_reported",
+      "note": "appeal target, not disbursement"
+    }
+  ],
+  "financial_transparency": {
+    "annual_report": { "available": true, "url": "https://example-relief.org/files/annual-report-2024.pdf", "fiscal_year": "2024", "fiscal_year_end": "12-31", "retrieved_at": "2026-08-28" },
+    "audited_financials": { "value": true, "source_url": "https://example-relief.org/files/annual-report-2024.pdf", "retrieved_at": "2026-08-28", "verification": "externally_audited", "quote": "Independent auditor's report, p. 41", "note": null },
+    "iati_publisher": { "is_publisher": true, "publisher_ref": "GB-CHC-1234567", "source_url": "https://iatiregistry.org/publisher/example-relief", "retrieved_at": "2026-08-28" },
+    "income": { "value": 12300000, "currency": "GBP", "fiscal_year": "2024", "scope": "global", "source_url": "https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/1234567/accounts-and-annual-returns", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "quote": null, "note": null },
+    "expenditure": { "value": 11900000, "currency": "GBP", "fiscal_year": "2024", "scope": "global", "source_url": "https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/1234567/accounts-and-annual-returns", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "quote": null, "note": null },
+    "program_ratio": { "value": 0.87, "source_url": "https://example-relief.org/files/annual-report-2024.pdf", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": null, "note": "charitable activities 10.35m / total expenditure 11.9m (UK SORP split, p. 38)" },
+    "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": ["names.local_script", "registrations[NP_SWC].identifier", "nepal_presence.staff_count"],
+  "research_notes": "Searched: org website, UK CC register, d-portal, ReliefWeb, GlobalGiving. SWC register unreachable.",
+  "last_updated": "2026-08-28"
+}

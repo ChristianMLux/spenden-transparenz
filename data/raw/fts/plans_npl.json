@@ -1,0 +1,1375 @@
+{
+ "retrieved_at": "2026-08-28T12:09:27+00:00",
+ "source": "fts",
+ "data": [
+  {
+   "id": 187,
+   "revisionState": null,
+   "isReleased": false,
+   "releasedDate": null,
+   "createdAt": "2017-01-14T00:52:55.036Z",
+   "updatedAt": "2017-02-22T17:18:19.924Z",
+   "planVersion": {
+    "id": 78,
+    "planId": 187,
+    "name": "Nepal 2005-2006",
+    "shortName": null,
+    "subtitle": null,
+    "startDate": "2005-10-01",
+    "endDate": "2006-12-31",
+    "comments": null,
+    "isForHPCProjects": false,
+    "isPartOfGHO": true,
+    "code": "CNPL0506",
+    "customLocationCode": null,
+    "currentReportingPeriodId": null,
+    "lastPublishedReportingPeriodId": null,
+    "clusterSelectionType": null,
+    "visibilityPreferences": {
+     "isForNewHPCProjects": false,
+     "isDisaggregationForCaseloads": true,
+     "isDisaggregationForIndicators": true
+    },
+    "pdfPublishDate": null,
+    "focusLocationId": 156,
+    "currentVersion": true,
+    "latestVersion": true,
+    "latestTaggedVersion": true,
+    "versionTags": [
+     "1.0"
+    ],
+    "createdAt": "2017-01-14T00:52:55.036Z",
+    "updatedAt": "2024-11-13T17:30:20.539Z",
+    "organizations": []
+   },
+   "categories": [
+    {
+     "id": 110,
+     "name": "Consolidated appeals process",
+     "description": null,
+     "parentID": null,
+     "code": "CAP",
+     "group": "planType",
+     "createdAt": "2017-01-13T22:18:01.773Z",
+     "updatedAt": "2025-04-16T07:19:15.081Z",
+     "categoryRef": {
+      "objectID": 187,
+      "versionID": 1,
+      "objectType": "plan",
+      "categoryID": 110,
+      "createdAt": "2017-01-14T00:53:16.505Z",
+      "updatedAt": "2017-01-14T00:53:16.505Z"
+     }
+    }
+   ],
+   "emergencies": [],
+   "locations": [
+    {
+     "id": 156,
+     "externalId": "336",
+     "name": "Nepal",
+     "adminLevel": 0,
+     "latitude": 28.253965068374,
+     "longitude": 83.931665698248,
+     "iso3": "NPL",
+     "pcode": "NP",
+     "validOn": null,
+     "status": "active",
+     "itosSync": true,
+     "isRegion": false,
+     "createdAt": "2015-09-10T20:25:10.812Z",
+     "updatedAt": "2023-05-21T00:05:07.479Z",
+     "parentId": null,
+     "planLocation": {
+      "id": 389,
+      "planId": 187,
+      "locationId": 156,
+      "currentVersion": true,
+      "latestVersion": true,
+      "latestTaggedVersion": true,
+      "versionTags": [
+       "1.0"
+      ],
+      "createdAt": "2017-01-14T00:53:16.473Z",
+      "updatedAt": "2017-01-14T00:53:16.473Z",
+      "deletedAt": null
+     }
+    }
+   ],
+   "years": [
+    {
+     "id": 27,
+     "year": "2006",
+     "createdAt": "2016-02-23T15:03:30.816Z",
+     "updatedAt": "2016-02-23T15:03:30.816Z",
+     "planYear": {
+      "id": 211,
+      "planId": 187,
+      "usageYearId": 27,
+      "currentVersion": true,
+      "latestVersion": true,
+      "latestTaggedVersion": true,
+      "versionTags": [
+       "1.0"
+      ],
+      "createdAt": "2017-01-14T00:53:16.481Z",
+      "updatedAt": "2017-01-14T00:53:16.481Z"
+     }
+    }
+   ],
+   "origRequirements": 64506025,
+   "revisedRequirements": 67588618
+  },
+  {
+   "id": 241,
+   "revisionState": null,
+   "isReleased": false,
+   "releasedDate": null,
+   "createdAt": "2017-01-14T00:52:55.195Z",
+   "updatedAt": "2017-02-22T17:18:20.628Z",
+   "planVersion": {
+    "id": 300,
+    "planId": 241,
+    "name": "Nepal Common Appeal for Transition Support 2007",
+    "shortName": null,
+    "subtitle": null,
+    "startDate": "2007-01-01",
+    "endDate": "2007-12-31",
+    "comments": null,
+    "isForHPCProjects": false,
+    "isPartOfGHO": false,
+    "code": "ONPL07",
+    "customLocationCode": null,
+    "currentReportingPeriodId": null,
+    "lastPublishedReportingPeriodId": null,
+    "clusterSelectionType": null,
+    "visibilityPreferences": {
+     "isForNewHPCProjects": false,
+     "isDisaggregationForCaseloads": true,
+     "isDisaggregationForIndicators": true
+    },
+    "pdfPublishDate": null,
+    "focusLocationId": 156,
+    "currentVersion": true,
+    "latestVersion": true,
+    "latestTaggedVersion": true,
+    "versionTags": [
+     "1.0"
+    ],
+    "createdAt": "2017-01-14T00:52:55.195Z",
+    "updatedAt": "2024-11-13T17:30:20.638Z",
+    "organizations": []
+   },
+   "categories": [
+    {
+     "id": 6,
+     "name": "Other",
+     "description": null,
+     "parentID": null,
+     "code": "Other",
+     "group": "planType",
+     "createdAt": "2015-11-12T23:03:39.961Z",
+     "updatedAt": "2025-05-22T11:45:57.541Z",
+     "categoryRef": {
+      "objectID": 241,
+      "versionID": 1,
+      "objectType": "plan",
+      "categoryID": 6,
+      "createdAt": "2017-01-17T10:19:14.289Z",
+      "updatedAt": "2017-01-17T10:19:14.289Z"
+     }
+    }
+   ],
+   "emergencies": [],
+   "locations": [
+    {
+     "id": 156,
+     "externalId": "336",
+     "name": "Nepal",
+     "adminLevel": 0,
+     "latitude": 28.253965068374,
+     "longitude": 83.931665698248,
+     "iso3": "NPL",
+     "pcode": "NP",
+     "validOn": null,
+     "status": "active",
+     "itosSync": true,
+     "isRegion": false,
+     "createdAt": "2015-09-10T20:25:10.812Z",
+     "updatedAt": "2023-05-21T00:05:07.479Z",
+     "parentId": null,
+     "planLocation": {
+      "id": 108,
+      "planId": 241,
+      "locationId": 156,
+      "currentVersion": true,
+      "latestVersion": true,
+      "latestTaggedVersion": true,
+      "versionTags": [
+       "1.0"
+      ],
+      "createdAt": "2017-01-14T00:53:17.037Z",
+      "updatedAt": "2017-01-14T00:53:17.037Z",
+      "deletedAt": null
+     }
+    }
+   ],
+   "years": [
+    {
+     "id": 28,
+     "year": "2007",
+     "createdAt": "2016-02-23T15:03:30.827Z",
+     "updatedAt": "2016-02-23T15:03:30.827Z",
+     "planYear": {
+      "id": 164,
+      "planId": 241,
+      "usageYearId": 28,
+      "currentVersion": true,
+      "latestVersion": true,
+      "latestTaggedVersion": true,
+      "versionTags": [
+       "1.0"
+      ],
+      "createdAt": "2017-01-14T00:53:17.037Z",
+      "updatedAt": "2017-01-14T00:53:17.037Z"
+     }
+    }
+   ],
+   "origRequirements": 60610934,
+   "revisedRequirements": 102949868
+  },
+  {
+   "id": 270,
+   "revisionState": null,
+   "isReleased": false,
+   "releasedDate": null,
+   "createdAt": "2017-01-14T00:52:55.282Z",
+   "updatedAt": "2017-02-22T17:18:21.103Z",
+   "planVersion": {
+    "id": 853,
+    "planId": 270,
+    "name": "Nepal Common Appeal for Transition Support 2008",
+    "shortName": null,
+    "subtitle": null,
+    "startDate": "2008-01-01",
+    "endDate": "2008-12-31",
+    "comments": null,
+    "isForHPCProjects": false,
+    "isPartOfGHO": false,
+    "code": "ONPL08",
+    "customLocationCode": null,
+    "currentReportingPeriodId": null,
+    "lastPublishedReportingPeriodId": null,
+    "clusterSelectionType": null,
+    "visibilityPreferences": {
+     "isForNewHPCProjects": false,
+     "isDisaggregationForCaseloads": true,
+     "isDisaggregationForIndicators": true
+    },
+    "pdfPublishDate": null,
+    "focusLocationId": 156,
+    "currentVersion": true,
+    "latestVersion": true,
+    "latestTaggedVersion": true,
+    "versionTags": [
+     "1.0"
+    ],
+    "createdAt": "2017-01-14T00:52:55.282Z",
+    "updatedAt": "2024-11-13T17:30:20.701Z",
+    "organizations": []
+   },
+   "categories": [
+    {
+     "id": 6,
+     "name": "Other",
+     "description": null,
+     "parentID": null,
+     "code": "Other",
+     "group": "planType",
+     "createdAt": "2015-11-12T23:03:39.961Z",
+     "updatedAt": "2025-05-22T11:45:57.541Z",
+     "categoryRef": {
+      "objectID": 270,
+      "versionID": 1,
+      "objectType": "plan",
+      "categoryID": 6,
+      "createdAt": "2017-01-17T10:19:06.160Z",
+      "updatedAt": "2017-01-17T10:19:06.160Z"
+     }
+    }
+   ],
+   "emergencies": [],
+   "locations": [
+    {
+     "id": 156,
+     "externalId": "336",
+     "name": "Nepal",
+     "adminLevel": 0,
+     "latitude": 28.253965068374,
+     "longitude": 83.931665698248,
+     "iso3": "NPL",
+     "pcode": "NP",
+     "validOn": null,
+     "status": "active",
+     "itosSync": true,
+     "isRegion": false,
+     "createdAt": "2015-09-10T20:25:10.812Z",
+     "updatedAt": "2023-05-21T00:05:07.479Z",
+     "parentId": null,
+     "planLocation": {
+      "id": 120,
+      "planId": 270,
+      "locationId": 156,
+      "currentVersion": true,
+      "latestVersion": true,
+      "latestTaggedVersion": true,
+      "versionTags": [
+       "1.0"
+      ],
+      "createdAt": "2017-01-14T00:53:17.293Z",
+      "updatedAt": "2017-01-14T00:53:17.293Z",
+      "deletedAt": null
+     }
+    }
+   ],
+   "years": [
+    {
+     "id": 29,
+     "year": "2008",
+     "createdAt": "2016-02-23T15:03:30.830Z",
+     "updatedAt": "2016-02-23T15:03:30.830Z",
+     "planYear": {
+      "id": 373,
+      "planId": 270,
+      "usageYearId": 29,
+      "currentVersion": true,
+      "latestVersion": true,
+      "latestTaggedVersion": true,
+      "versionTags": [
+       "1.0"
+      ],
+      "createdAt": "2017-01-14T00:53:17.308Z",
+      "updatedAt": "2017-01-14T00:53:17.308Z"
+     }
+    }
+   ],
+   "origRequirements": 104468713,
+   "revisedRequirements": 106437628
+  },
+  {
+   "id": 292,
+   "revisionState": "none",
+   "isReleased": false,
+   "releasedDate": null,
+   "createdAt": "2017-01-14T00:52:55.339Z",
+   "updatedAt": "2025-07-14T12:36:25.963Z",
+   "planVersion": {
+    "id": 7650,
+    "planId": 292,
+    "name": "Nepal Humanitarian Transition Appeal 2009",
+    "shortName": "Nepal",
+    "subtitle": "Humanitarian Transition Appeal",
+    "startDate": "2009-01-01",
+    "endDate": "2009-12-31",
+    "comments": null,
+    "isForHPCProjects": false,
+    "isPartOfGHO": true,
+    "code": "ONPL09",
+    "customLocationCode": null,
+    "currentReportingPeriodId": 3773,
+    "lastPublishedReportingPeriodId": null,
+    "clusterSelectionType": "single",
+    "visibilityPreferences": {
+     "isForNewHPCProjects": false,
+     "isDisaggregationForCaseloads": true,
+     "isDisaggregationForIndicators": true
+    },
+    "pdfPublishDate": null,
+    "focusLocationId": 156,
+    "currentVersion": true,
+    "latestVersion": true,
+    "latestTaggedVersion": true,
+    "versionTags": [
+     "1.1"
+    ],
+    "createdAt": "2025-07-11T16:16:42.689Z",
+    "updatedAt": "2025-07-14T12:36:26.172Z",
+    "organizations": [
+     {
+      "id": 4396,
+      "name": "Office for the Coordination of Humanitarian Affairs",
+      "nativeName": "Bureau de la coordination des affaires humanitaires, Oficina de Naciones Unidas para la Coordinación de Asuntos Humanitarios, Escritório das Nações Unidas para a Coordenação de Assuntos Humanitários, مكتب الأمم المتحدة لتنسيق الشؤون الإنسانية",
+      "abbreviation": "OCHA",
+      "url": "https://www.unocha.org/",
+      "parentID": null,
+      "comments": "History of OCHA\nIn December 1991, the General Assembly adopted resolution 46/182. It was designed to strengthen the United Nations response to complex emergencies and natural disasters, while improving the overall effectiveness of humanitarian operations in the field. \n\nSoon after the resolution was adopted, the Secretary-General established the Department of Humanitarian Affairs (DHA). He also assigned the ERC the status of Under-Secretary-General for Humanitarian Affairs, with offices in New York and Geneva to provide institutional support.\n\nIn 1998, as part of the Secretary-General's programme of reform, DHA was reorganized into the Office for the Coordination of Humanitarian Affairs (OCHA). Its mandate was expanded to include the coordination of humanitarian response, policy development and humanitarian advocacy.\n\nOCHA carries out its coordination function primarily through the IASC, which is chaired by the ERC. Participants include all humanitarian partners, from United Nations agencies, funds and programmes, to the Red Cross movement and NGOs. The IASC ensures inter-agency decision-making in response to complex emergencies. These responses include needs assessments, consolidated appeals, field coordination arrangements and the development of humanitarian policies.",
+      "verified": true,
+      "notes": "Added another language, website and description (NL-31/1/2023)",
+      "active": true,
+      "collectiveInd": false,
+      "newOrganizationId": null,
+      "createdAt": "2017-01-14T00:54:02.279Z",
+      "updatedAt": "2023-01-31T11:26:36.697Z",
+      "deletedAt": null,
+      "planVersionOrganization": {
+       "planVersionId": 7650,
+       "organizationI": 4396,
+       "createdAt": "2025-07-11T16:16:50.183Z",
+       "updatedAt": "2025-07-11T16:16:50.183Z"
+      }
+     }
+    ]
+   },
+   "categories": [
+    {
+     "id": 6,
+     "name": "Other",
+     "description": null,
+     "parentID": null,
+     "code": "Other",
+     "group": "planType",
+     "createdAt": "2015-11-12T23:03:39.961Z",
+     "updatedAt": "2025-05-22T11:45:57.541Z",
+     "categoryRef": {
+      "objectID": 292,
+      "versionID": 1,
+      "objectType": "plan",
+      "categoryID": 6,
+      "createdAt": "2017-01-17T10:19:06.640Z",
+      "updatedAt": "2017-01-17T10:19:06.640Z"
+     }
+    },
+    {
+     "id": 1874,
+     "name": "en",
+     "description": null,
+     "parentID": null,
+     "code": null,
+     "group": "planLanguage",
+     "createdAt": "2024-09-16T14:31:24.063Z",
+     "updatedAt": "2024-09-16T14:31:24.063Z",
+     "categoryRef": {
+      "objectID": 292,
+      "versionID": 1,
+      "objectType": "plan",
+      "categoryID": 1874,
+      "createdAt": "2025-07-11T16:16:39.404Z",
+      "updatedAt": "2025-07-11T16:16:39.404Z"
+     }
+    },
+    {
+     "id": 1878,
+     "name": "sector",
+     "description": null,
+     "parentID": null,
+     "code": null,
+     "group": "planClusterType",
+     "createdAt": "2024-09-16T14:31:24.224Z",
+     "updatedAt": "2024-09-16T14:31:24.224Z",
+     "categoryRef": {
+      "objectID": 292,
+      "versionID": 1,
+      "objectType": "plan",
+      "categoryID": 1878,
+      "createdAt": "2025-07-11T16:16:39.404Z",
+      "updatedAt": "2025-07-11T16:16:39.404Z"
+     }
+    }
+   ],
+   "emergencies": [],
+   "locations": [
+    {
+     "id": 156,
+     "externalId": "336",
+     "name": "Nepal",
+     "adminLevel": 0,
+     "latitude": 28.253965068374,
+     "longitude": 83.931665698248,
+     "iso3": "NPL",
+     "pcode": "NP",
+     "validOn": null,
+     "status": "active",
+     "itosSync": true,
+     "isRegion": false,
+     "createdAt": "2015-09-10T20:25:10.812Z",
+     "updatedAt": "2023-05-21T00:05:07.479Z",
+     "parentId": null,
+     "planLocation": {
+      "id": 450,
+      "planId": 292,
+      "locationId": 156,
+      "currentVersion": true,
+      "latestVersion": true,
+      "latestTaggedVersion": true,
+      "versionTags": [
+       "1.0",
+       "1.1"
+      ],
+      "createdAt": "2017-01-14T00:53:17.522Z",
+      "updatedAt": "2025-07-14T12:36:25.996Z",
+      "deletedAt": null
+     }
+    }
+   ],
+   "years": [
+    {
+     "id": 30,
+     "year": "2009",
+     "createdAt": "2016-02-23T15:03:30.832Z",
+     "updatedAt": "2016-02-23T15:03:30.832Z",
+     "planYear": {
+      "id": 380,
+      "planId": 292,
+      "usageYearId": 30,
+      "currentVersion": true,
+      "latestVersion": true,
+      "latestTaggedVersion": true,
+      "versionTags": [
+       "1.0",
+       "1.1"
+      ],
+      "createdAt": "2017-01-14T00:53:17.523Z",
+      "updatedAt": "2025-07-14T12:36:26.021Z"
+     }
+    }
+   ],
+   "origRequirements": 115026422,
+   "revisedRequirements": 129220163
+  },
+  {
+   "id": 299,
+   "revisionState": null,
+   "isReleased": false,
+   "releasedDate": null,
+   "createdAt": "2017-01-14T00:52:55.354Z",
+   "updatedAt": "2017-02-22T17:18:21.673Z",
+   "planVersion": {
+    "id": 197,
+    "planId": 299,
+    "name": "Nepal Floods Humanitarian Response Plan 2008",
+    "shortName": null,
+    "subtitle": null,
+    "startDate": "2008-10-01",
+    "endDate": "2009-03-31",
+    "comments": null,
+    "isForHPCProjects": false,
+    "isPartOfGHO": false,
+    "code": "ONPL0809",
+    "customLocationCode": null,
+    "currentReportingPeriodId": null,
+    "lastPublishedReportingPeriodId": null,
+    "clusterSelectionType": null,
+    "visibilityPreferences": {
+     "isForNewHPCProjects": false,
+     "isDisaggregationForCaseloads": true,
+     "isDisaggregationForIndicators": true
+    },
+    "pdfPublishDate": null,
+    "focusLocationId": 156,
+    "currentVersion": true,
+    "latestVersion": true,
+    "latestTaggedVersion": true,
+    "versionTags": [
+     "1.0"
+    ],
+    "createdAt": "2017-01-14T00:52:55.354Z",
+    "updatedAt": "2024-11-13T17:30:20.730Z",
+    "organizations": []
+   },
+   "categories": [
+    {
+     "id": 6,
+     "name": "Other",
+     "description": null,
+     "parentID": null,
+     "code": "Other",
+     "group": "planType",
+     "createdAt": "2015-11-12T23:03:39.961Z",
+     "updatedAt": "2025-05-22T11:45:57.541Z",
+     "categoryRef": {
+      "objectID": 299,
+      "versionID": 1,
+      "objectType": "plan",
+      "categoryID": 6,
+      "createdAt": "2017-01-17T10:19:06.729Z",
+      "updatedAt": "2017-01-17T10:19:06.729Z"
+     }
+    }
+   ],
+   "emergencies": [
+    {
+     "id": 493,
+     "name": "NEPAL - Floods - February 2008",
+     "description": "",
+     "date": "2008-02-01T00:00:00.000Z",
+     "glideId": "FL-2008-000168-NPL",
+     "levelThree": false,
+     "active": true,
+     "restricted": false,
+     "createdAt": "2017-01-14T00:52:09.774Z",
+     "updatedAt": "2017-01-14T00:52:09.774Z",
+     "planEmergency": {
+      "createdAt": "2017-01-14T00:53:17.610Z",
+      "updatedAt": "2017-01-14T00:53:17.610Z",
+      "planId": 299,
+      "emergencyId": 493
+     }
+    }
+   ],
+   "locations": [
+    {
+     "id": 156,
+     "externalId": "336",
+     "name": "Nepal",
+     "adminLevel": 0,
+     "latitude": 28.253965068374,
+     "longitude": 83.931665698248,
+     "iso3": "NPL",
+     "pcode": "NP",
+     "validOn": null,
+     "status": "active",
+     "itosSync": true,
+     "isRegion": false,
+     "createdAt": "2015-09-10T20:25:10.812Z",
+     "updatedAt": "2023-05-21T00:05:07.479Z",
+     "parentId": null,
+     "planLocation": {
+      "id": 207,
+      "planId": 299,
+      "locationId": 156,
+      "currentVersion": true,
+      "latestVersion": true,
+      "latestTaggedVersion": true,
+      "versionTags": [
+       "1.0"
+      ],
+      "createdAt": "2017-01-14T00:53:17.610Z",
+      "updatedAt": "2017-01-14T00:53:17.610Z",
+      "deletedAt": null
+     }
+    }
+   ],
+   "years": [
+    {
+     "id": 29,
+     "year": "2008",
+     "createdAt": "2016-02-23T15:03:30.830Z",
+     "updatedAt": "2016-02-23T15:03:30.830Z",
+     "planYear": {
+      "id": 231,
+      "planId": 299,
+      "usageYearId": 29,
+      "currentVersion": true,
+      "latestVersion": true,
+      "latestTaggedVersion": true,
+      "versionTags": [
+       "1.0"
+      ],
+      "createdAt": "2017-01-14T00:53:17.625Z",
+      "updatedAt": "2017-01-14T00:53:17.625Z"
+     }
+    }
+   ],
+   "origRequirements": 15518984,
+   "revisedRequirements": 16518984
+  },
+  {
+   "id": 327,
+   "revisionState": null,
+   "isReleased": false,
+   "releasedDate": null,
+   "createdAt": "2017-01-14T00:52:55.434Z",
+   "updatedAt": "2025-09-30T12:06:54.450Z",
+   "planVersion": {
+    "id": 348,
+    "planId": 327,
+    "name": "Nepal Humanitarian Transition Appeal 2010",
+    "shortName": "Nepal",
+    "subtitle": null,
+    "startDate": "2010-01-01",
+    "endDate": "2010-12-31",
+    "comments": null,
+    "isForHPCProjects": false,
+    "isPartOfGHO": true,
+    "code": "ONPL10",
+    "customLocationCode": null,
+    "currentReportingPeriodId": null,
+    "lastPublishedReportingPeriodId": null,
+    "clusterSelectionType": null,
+    "visibilityPreferences": {
+     "isForNewHPCProjects": false,
+     "isDisaggregationForCaseloads": true,
+     "isDisaggregationForIndicators": true
+    },
+    "pdfPublishDate": null,
+    "focusLocationId": 156,
+    "currentVersion": true,
+    "latestVersion": true,
+    "latestTaggedVersion": true,
+    "versionTags": [
+     "1.0"
+    ],
+    "createdAt": "2017-01-14T00:52:55.434Z",
+    "updatedAt": "2025-09-30T12:06:54.452Z",
+    "organizations": []
+   },
+   "categories": [
+    {
+     "id": 6,
+     "name": "Other",
+     "description": null,
+     "parentID": null,
+     "code": "Other",
+     "group": "planType",
+     "createdAt": "2015-11-12T23:03:39.961Z",
+     "updatedAt": "2025-05-22T11:45:57.541Z",
+     "categoryRef": {
+      "objectID": 327,
+      "versionID": 1,
+      "objectType": "plan",
+      "categoryID": 6,
+      "createdAt": "2017-01-17T10:19:07.125Z",
+      "updatedAt": "2017-01-17T10:19:07.125Z"
+     }
+    }
+   ],
+   "emergencies": [],
+   "locations": [
+    {
+     "id": 156,
+     "externalId": "336",
+     "name": "Nepal",
+     "adminLevel": 0,
+     "latitude": 28.253965068374,
+     "longitude": 83.931665698248,
+     "iso3": "NPL",
+     "pcode": "NP",
+     "validOn": null,
+     "status": "active",
+     "itosSync": true,
+     "isRegion": false,
+     "createdAt": "2015-09-10T20:25:10.812Z",
+     "updatedAt": "2023-05-21T00:05:07.479Z",
+     "parentId": null,
+     "planLocation": {
+      "id": 322,
+      "planId": 327,
+      "locationId": 156,
+      "currentVersion": true,
+      "latestVersion": true,
+      "latestTaggedVersion": true,
+      "versionTags": [
+       "1.0"
+      ],
+      "createdAt": "2017-01-14T00:53:17.891Z",
+      "updatedAt": "2017-01-14T00:53:17.891Z",
+      "deletedAt": null
+     }
+    }
+   ],
+   "years": [
+    {
+     "id": 31,
+     "year": "2010",
+     "createdAt": "2016-02-23T15:03:30.840Z",
+     "updatedAt": "2016-02-23T15:03:30.840Z",
+     "planYear": {
+      "id": 300,
+      "planId": 327,
+      "usageYearId": 31,
+      "currentVersion": true,
+      "latestVersion": true,
+      "latestTaggedVersion": true,
+      "versionTags": [
+       "1.0"
+      ],
+      "createdAt": "2017-01-14T00:53:17.891Z",
+      "updatedAt": "2017-01-14T00:53:17.891Z"
+     }
+    }
+   ],
+   "origRequirements": 123504597,
+   "revisedRequirements": 125049126
+  },
+  {
+   "id": 486,
+   "revisionState": "none",
+   "isReleased": false,
+   "releasedDate": null,
+   "createdAt": "2017-01-14T00:52:55.893Z",
+   "updatedAt": "2025-05-02T14:40:16.760Z",
+   "planVersion": {
+    "id": 7430,
+    "planId": 486,
+    "name": "Nepal Flash Appeal Earthquake 2015",
+    "shortName": "Nepal",
+    "subtitle": "Flash Appeal Earthquake",
+    "startDate": "2015-04-25",
+    "endDate": "2015-09-30",
+    "comments": null,
+    "isForHPCProjects": false,
+    "isPartOfGHO": true,
+    "code": "FNPL15",
+    "customLocationCode": null,
+    "currentReportingPeriodId": 3619,
+    "lastPublishedReportingPeriodId": null,
+    "clusterSelectionType": "single",
+    "visibilityPreferences": {
+     "isForNewHPCProjects": false,
+     "isDisaggregationForCaseloads": true,
+     "isDisaggregationForIndicators": true
+    },
+    "pdfPublishDate": null,
+    "focusLocationId": 156,
+    "currentVersion": true,
+    "latestVersion": true,
+    "latestTaggedVersion": true,
+    "versionTags": [
+     "1.1"
+    ],
+    "createdAt": "2025-05-02T14:39:04.146Z",
+    "updatedAt": "2025-05-02T14:40:16.822Z",
+    "organizations": [
+     {
+      "id": 4396,
+      "name": "Office for the Coordination of Humanitarian Affairs",
+      "nativeName": "Bureau de la coordination des affaires humanitaires, Oficina de Naciones Unidas para la Coordinación de Asuntos Humanitarios, Escritório das Nações Unidas para a Coordenação de Assuntos Humanitários, مكتب الأمم المتحدة لتنسيق الشؤون الإنسانية",
+      "abbreviation": "OCHA",
+      "url": "https://www.unocha.org/",
+      "parentID": null,
+      "comments": "History of OCHA\nIn December 1991, the General Assembly adopted resolution 46/182. It was designed to strengthen the United Nations response to complex emergencies and natural disasters, while improving the overall effectiveness of humanitarian operations in the field. \n\nSoon after the resolution was adopted, the Secretary-General established the Department of Humanitarian Affairs (DHA). He also assigned the ERC the status of Under-Secretary-General for Humanitarian Affairs, with offices in New York and Geneva to provide institutional support.\n\nIn 1998, as part of the Secretary-General's programme of reform, DHA was reorganized into the Office for the Coordination of Humanitarian Affairs (OCHA). Its mandate was expanded to include the coordination of humanitarian response, policy development and humanitarian advocacy.\n\nOCHA carries out its coordination function primarily through the IASC, which is chaired by the ERC. Participants include all humanitarian partners, from United Nations agencies, funds and programmes, to the Red Cross movement and NGOs. The IASC ensures inter-agency decision-making in response to complex emergencies. These responses include needs assessments, consolidated appeals, field coordination arrangements and the development of humanitarian policies.",
+      "verified": true,
+      "notes": "Added another language, website and description (NL-31/1/2023)",
+      "active": true,
+      "collectiveInd": false,
+      "newOrganizationId": null,
+      "createdAt": "2017-01-14T00:54:02.279Z",
+      "updatedAt": "2023-01-31T11:26:36.697Z",
+      "deletedAt": null,
+      "planVersionOrganization": {
+       "planVersionId": 7430,
+       "organizationI": 4396,
+       "createdAt": "2025-05-02T14:39:09.869Z",
+       "updatedAt": "2025-05-02T14:39:09.869Z"
+      }
+     }
+    ]
+   },
+   "categories": [
+    {
+     "id": 5,
+     "name": "Flash appeal",
+     "description": null,
+     "parentID": null,
+     "code": "FA",
+     "group": "planType",
+     "createdAt": "2015-11-12T23:03:39.946Z",
+     "updatedAt": "2025-03-20T17:11:26.165Z",
+     "categoryRef": {
+      "objectID": 486,
+      "versionID": 1,
+      "objectType": "plan",
+      "categoryID": 5,
+      "createdAt": "2017-01-17T10:19:09.912Z",
+      "updatedAt": "2017-01-17T10:19:09.912Z"
+     }
+    },
+    {
+     "id": 1874,
+     "name": "en",
+     "description": null,
+     "parentID": null,
+     "code": null,
+     "group": "planLanguage",
+     "createdAt": "2024-09-16T14:31:24.063Z",
+     "updatedAt": "2024-09-16T14:31:24.063Z",
+     "categoryRef": {
+      "objectID": 486,
+      "versionID": 1,
+      "objectType": "plan",
+      "categoryID": 1874,
+      "createdAt": "2025-05-02T11:31:53.828Z",
+      "updatedAt": "2025-05-02T11:31:53.828Z"
+     }
+    },
+    {
+     "id": 1878,
+     "name": "sector",
+     "description": null,
+     "parentID": null,
+     "code": null,
+     "group": "planClusterType",
+     "createdAt": "2024-09-16T14:31:24.224Z",
+     "updatedAt": "2024-09-16T14:31:24.224Z",
+     "categoryRef": {
+      "objectID": 486,
+      "versionID": 1,
+      "objectType": "plan",
+      "categoryID": 1878,
+      "createdAt": "2025-05-02T11:31:53.833Z",
+      "updatedAt": "2025-05-02T11:31:53.833Z"
+     }
+    }
+   ],
+   "emergencies": [
+    {
+     "id": 629,
+     "name": "NEPAL - Earthquake - April 2015",
+     "description": "A massive 7.8 magnitude earthquake struck 77 kilometres (48 miles) northwest of Nepal's capital Kathmandu at 0611 GMT on 25 Apr 2015, toppling office blocks and towers and killing hundreds of people. More than two dozen people were also reported killed in",
+     "date": "2015-04-25T00:00:00.000Z",
+     "glideId": "EQ-2015-000048-NPL",
+     "levelThree": false,
+     "active": true,
+     "restricted": false,
+     "createdAt": "2017-01-14T00:52:10.332Z",
+     "updatedAt": "2017-01-14T00:52:10.332Z",
+     "planEmergency": {
+      "createdAt": "2017-01-14T00:53:19.621Z",
+      "updatedAt": "2017-01-14T00:53:19.621Z",
+      "planId": 486,
+      "emergencyId": 629
+     }
+    }
+   ],
+   "locations": [
+    {
+     "id": 156,
+     "externalId": "336",
+     "name": "Nepal",
+     "adminLevel": 0,
+     "latitude": 28.253965068374,
+     "longitude": 83.931665698248,
+     "iso3": "NPL",
+     "pcode": "NP",
+     "validOn": null,
+     "status": "active",
+     "itosSync": true,
+     "isRegion": false,
+     "createdAt": "2015-09-10T20:25:10.812Z",
+     "updatedAt": "2023-05-21T00:05:07.479Z",
+     "parentId": null,
+     "planLocation": {
+      "id": 179,
+      "planId": 486,
+      "locationId": 156,
+      "currentVersion": true,
+      "latestVersion": true,
+      "latestTaggedVersion": true,
+      "versionTags": [
+       "1.0",
+       "1.1"
+      ],
+      "createdAt": "2017-01-14T00:53:19.621Z",
+      "updatedAt": "2025-05-02T14:40:16.769Z",
+      "deletedAt": null
+     }
+    }
+   ],
+   "years": [
+    {
+     "id": 37,
+     "year": "2015",
+     "createdAt": "2016-02-23T15:03:30.883Z",
+     "updatedAt": "2016-02-23T15:03:30.883Z",
+     "planYear": {
+      "id": 199,
+      "planId": 486,
+      "usageYearId": 37,
+      "currentVersion": true,
+      "latestVersion": true,
+      "latestTaggedVersion": true,
+      "versionTags": [
+       "1.0",
+       "1.1"
+      ],
+      "createdAt": "2017-01-14T00:53:19.621Z",
+      "updatedAt": "2025-05-02T14:40:16.776Z"
+     }
+    }
+   ],
+   "origRequirements": 437694000,
+   "revisedRequirements": 421862342
+  },
+  {
+   "id": 1048,
+   "revisionState": "none",
+   "isReleased": true,
+   "releasedDate": null,
+   "createdAt": "2021-05-26T14:34:55.906Z",
+   "updatedAt": "2024-11-20T10:05:04.275Z",
+   "planVersion": {
+    "id": 5865,
+    "planId": 1048,
+    "name": "Nepal Intersectoral COVID-19 Response Plan 2021",
+    "shortName": "Nepal (COVID)",
+    "subtitle": "COVID-19 Response Plan",
+    "startDate": "2021-05-01",
+    "endDate": "2021-12-31",
+    "comments": null,
+    "isForHPCProjects": true,
+    "isPartOfGHO": false,
+    "code": "ONPL21",
+    "customLocationCode": null,
+    "currentReportingPeriodId": 1714,
+    "lastPublishedReportingPeriodId": null,
+    "clusterSelectionType": "multi",
+    "visibilityPreferences": {
+     "isForNewHPCProjects": false,
+     "isDisaggregationForCaseloads": true,
+     "isDisaggregationForIndicators": true
+    },
+    "pdfPublishDate": "2021-05-20",
+    "focusLocationId": 156,
+    "currentVersion": true,
+    "latestVersion": true,
+    "latestTaggedVersion": true,
+    "versionTags": [
+     "2.4",
+     "2.5"
+    ],
+    "createdAt": "2024-08-12T09:26:19.385Z",
+    "updatedAt": "2024-11-20T10:05:04.459Z",
+    "organizations": [
+     {
+      "id": 4396,
+      "name": "Office for the Coordination of Humanitarian Affairs",
+      "nativeName": "Bureau de la coordination des affaires humanitaires, Oficina de Naciones Unidas para la Coordinación de Asuntos Humanitarios, Escritório das Nações Unidas para a Coordenação de Assuntos Humanitários, مكتب الأمم المتحدة لتنسيق الشؤون الإنسانية",
+      "abbreviation": "OCHA",
+      "url": "https://www.unocha.org/",
+      "parentID": null,
+      "comments": "History of OCHA\nIn December 1991, the General Assembly adopted resolution 46/182. It was designed to strengthen the United Nations response to complex emergencies and natural disasters, while improving the overall effectiveness of humanitarian operations in the field. \n\nSoon after the resolution was adopted, the Secretary-General established the Department of Humanitarian Affairs (DHA). He also assigned the ERC the status of Under-Secretary-General for Humanitarian Affairs, with offices in New York and Geneva to provide institutional support.\n\nIn 1998, as part of the Secretary-General's programme of reform, DHA was reorganized into the Office for the Coordination of Humanitarian Affairs (OCHA). Its mandate was expanded to include the coordination of humanitarian response, policy development and humanitarian advocacy.\n\nOCHA carries out its coordination function primarily through the IASC, which is chaired by the ERC. Participants include all humanitarian partners, from United Nations agencies, funds and programmes, to the Red Cross movement and NGOs. The IASC ensures inter-agency decision-making in response to complex emergencies. These responses include needs assessments, consolidated appeals, field coordination arrangements and the development of humanitarian policies.",
+      "verified": true,
+      "notes": "Added another language, website and description (NL-31/1/2023)",
+      "active": true,
+      "collectiveInd": false,
+      "newOrganizationId": null,
+      "createdAt": "2017-01-14T00:54:02.279Z",
+      "updatedAt": "2023-01-31T11:26:36.697Z",
+      "deletedAt": null,
+      "planVersionOrganization": {
+       "planVersionId": 5865,
+       "organizationI": 4396,
+       "createdAt": "2024-09-20T07:34:55.963Z",
+       "updatedAt": "2024-09-20T07:34:55.963Z"
+      }
+     }
+    ]
+   },
+   "categories": [
+    {
+     "id": 6,
+     "name": "Other",
+     "description": null,
+     "parentID": null,
+     "code": "Other",
+     "group": "planType",
+     "createdAt": "2015-11-12T23:03:39.961Z",
+     "updatedAt": "2025-05-22T11:45:57.541Z",
+     "categoryRef": {
+      "objectID": 1048,
+      "versionID": 1,
+      "objectType": "plan",
+      "categoryID": 6,
+      "createdAt": "2021-05-26T14:34:56.001Z",
+      "updatedAt": "2021-05-26T14:34:56.001Z"
+     }
+    },
+    {
+     "id": 1874,
+     "name": "en",
+     "description": null,
+     "parentID": null,
+     "code": null,
+     "group": "planLanguage",
+     "createdAt": "2024-09-16T14:31:24.063Z",
+     "updatedAt": "2024-09-16T14:31:24.063Z",
+     "categoryRef": {
+      "objectID": 1048,
+      "versionID": 1,
+      "objectType": "plan",
+      "categoryID": 1874,
+      "createdAt": "2024-09-20T07:34:55.956Z",
+      "updatedAt": "2024-09-20T07:34:55.956Z"
+     }
+    },
+    {
+     "id": 1878,
+     "name": "sector",
+     "description": null,
+     "parentID": null,
+     "code": null,
+     "group": "planClusterType",
+     "createdAt": "2024-09-16T14:31:24.224Z",
+     "updatedAt": "2024-09-16T14:31:24.224Z",
+     "categoryRef": {
+      "objectID": 1048,
+      "versionID": 1,
+      "objectType": "plan",
+      "categoryID": 1878,
+      "createdAt": "2024-09-20T07:34:55.957Z",
+      "updatedAt": "2024-09-20T07:34:55.957Z"
+     }
+    }
+   ],
+   "emergencies": [],
+   "locations": [
+    {
+     "id": 156,
+     "externalId": "336",
+     "name": "Nepal",
+     "adminLevel": 0,
+     "latitude": 28.253965068374,
+     "longitude": 83.931665698248,
+     "iso3": "NPL",
+     "pcode": "NP",
+     "validOn": null,
+     "status": "active",
+     "itosSync": true,
+     "isRegion": false,
+     "createdAt": "2015-09-10T20:25:10.812Z",
+     "updatedAt": "2023-05-21T00:05:07.479Z",
+     "parentId": null,
+     "planLocation": {
+      "id": 1272,
+      "planId": 1048,
+      "locationId": 156,
+      "currentVersion": true,
+      "latestVersion": true,
+      "latestTaggedVersion": true,
+      "versionTags": [
+       "1.0",
+       "2.0",
+       "2.1",
+       "2.2",
+       "2.3",
+       "2.4",
+       "2.5"
+      ],
+      "createdAt": "2021-05-26T14:41:16.597Z",
+      "updatedAt": "2024-11-20T10:05:04.293Z",
+      "deletedAt": null
+     }
+    }
+   ],
+   "years": [
+    {
+     "id": 42,
+     "year": "2021",
+     "createdAt": "2016-02-23T15:03:30.923Z",
+     "updatedAt": "2016-02-23T15:03:30.923Z",
+     "planYear": {
+      "id": 820,
+      "planId": 1048,
+      "usageYearId": 42,
+      "currentVersion": true,
+      "latestVersion": true,
+      "latestTaggedVersion": true,
+      "versionTags": [
+       "1.0",
+       "2.0",
+       "2.1",
+       "2.2",
+       "2.3",
+       "2.4",
+       "2.5"
+      ],
+      "createdAt": "2021-05-26T14:34:56.022Z",
+      "updatedAt": "2024-11-20T10:05:04.296Z"
+     }
+    }
+   ],
+   "origRequirements": 83624000,
+   "revisedRequirements": 83621252
+  },
+  {
+   "id": 1265,
+   "revisionState": "none",
+   "isReleased": true,
+   "releasedDate": "2024-10-11T06:58:03.769Z",
+   "createdAt": "2024-10-09T06:52:07.645Z",
+   "updatedAt": "2025-11-07T06:16:21.439Z",
+   "planVersion": {
+    "id": 6258,
+    "planId": 1265,
+    "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+    "shortName": "Nepal",
+    "subtitle": "Floods Response Plan",
+    "startDate": "2024-10-07",
+    "endDate": "2024-12-31",
+    "comments": null,
+    "isForHPCProjects": false,
+    "isPartOfGHO": true,
+    "code": "ONPL24",
+    "customLocationCode": null,
+    "currentReportingPeriodId": 3304,
+    "lastPublishedReportingPeriodId": 3304,
+    "clusterSelectionType": "multi",
+    "visibilityPreferences": {
+     "isForNewHPCProjects": false,
+     "isDisaggregationForCaseloads": true,
+     "isDisaggregationForIndicators": true
+    },
+    "pdfPublishDate": "2024-10-07",
+    "focusLocationId": 156,
+    "currentVersion": true,
+    "latestVersion": true,
+    "latestTaggedVersion": true,
+    "versionTags": [
+     "1.0",
+     "1.1",
+     "1.2",
+     "1.3",
+     "1.4"
+    ],
+    "createdAt": "2024-10-11T06:57:31.545Z",
+    "updatedAt": "2025-11-07T06:16:21.836Z",
+    "organizations": [
+     {
+      "id": 4396,
+      "name": "Office for the Coordination of Humanitarian Affairs",
+      "nativeName": "Bureau de la coordination des affaires humanitaires, Oficina de Naciones Unidas para la Coordinación de Asuntos Humanitarios, Escritório das Nações Unidas para a Coordenação de Assuntos Humanitários, مكتب الأمم المتحدة لتنسيق الشؤون الإنسانية",
+      "abbreviation": "OCHA",
+      "url": "https://www.unocha.org/",
+      "parentID": null,
+      "comments": "History of OCHA\nIn December 1991, the General Assembly adopted resolution 46/182. It was designed to strengthen the United Nations response to complex emergencies and natural disasters, while improving the overall effectiveness of humanitarian operations in the field. \n\nSoon after the resolution was adopted, the Secretary-General established the Department of Humanitarian Affairs (DHA). He also assigned the ERC the status of Under-Secretary-General for Humanitarian Affairs, with offices in New York and Geneva to provide institutional support.\n\nIn 1998, as part of the Secretary-General's programme of reform, DHA was reorganized into the Office for the Coordination of Humanitarian Affairs (OCHA). Its mandate was expanded to include the coordination of humanitarian response, policy development and humanitarian advocacy.\n\nOCHA carries out its coordination function primarily through the IASC, which is chaired by the ERC. Participants include all humanitarian partners, from United Nations agencies, funds and programmes, to the Red Cross movement and NGOs. The IASC ensures inter-agency decision-making in response to complex emergencies. These responses include needs assessments, consolidated appeals, field coordination arrangements and the development of humanitarian policies.",
+      "verified": true,
+      "notes": "Added another language, website and description (NL-31/1/2023)",
+      "active": true,
+      "collectiveInd": false,
+      "newOrganizationId": null,
+      "createdAt": "2017-01-14T00:54:02.279Z",
+      "updatedAt": "2023-01-31T11:26:36.697Z",
+      "deletedAt": null,
+      "planVersionOrganization": {
+       "planVersionId": 6258,
+       "organizationI": 4396,
+       "createdAt": "2024-10-11T06:57:31.780Z",
+       "updatedAt": "2024-10-11T06:57:31.780Z"
+      }
+     }
+    ]
+   },
+   "categories": [
+    {
+     "id": 6,
+     "name": "Other",
+     "description": null,
+     "parentID": null,
+     "code": "Other",
+     "group": "planType",
+     "createdAt": "2015-11-12T23:03:39.961Z",
+     "updatedAt": "2025-05-22T11:45:57.541Z",
+     "categoryRef": {
+      "objectID": 1265,
+      "versionID": 1,
+      "objectType": "plan",
+      "categoryID": 6,
+      "createdAt": "2025-05-22T08:22:58.271Z",
+      "updatedAt": "2025-05-22T08:22:58.271Z"
+     }
+    },
+    {
+     "id": 1874,
+     "name": "en",
+     "description": null,
+     "parentID": null,
+     "code": null,
+     "group": "planLanguage",
+     "createdAt": "2024-09-16T14:31:24.063Z",
+     "updatedAt": "2024-09-16T14:31:24.063Z",
+     "categoryRef": {
+      "objectID": 1265,
+      "versionID": 1,
+      "objectType": "plan",
+      "categoryID": 1874,
+      "createdAt": "2024-10-09T06:52:07.801Z",
+      "updatedAt": "2024-10-09T06:52:07.801Z"
+     }
+    },
+    {
+     "id": 1878,
+     "name": "sector",
+     "description": null,
+     "parentID": null,
+     "code": null,
+     "group": "planClusterType",
+     "createdAt": "2024-09-16T14:31:24.224Z",
+     "updatedAt": "2024-09-16T14:31:24.224Z",
+     "categoryRef": {
+      "objectID": 1265,
+      "versionID": 1,
+      "objectType": "plan",
+      "categoryID": 1878,
+      "createdAt": "2024-10-09T06:52:07.801Z",
+      "updatedAt": "2024-10-09T06:52:07.801Z"
+     }
+    }
+   ],
+   "emergencies": [],
+   "locations": [
+    {
+     "id": 156,
+     "externalId": "336",
+     "name": "Nepal",
+     "adminLevel": 0,
+     "latitude": 28.253965068374,
+     "longitude": 83.931665698248,
+     "iso3": "NPL",
+     "pcode": "NP",
+     "validOn": null,
+     "status": "active",
+     "itosSync": true,
+     "isRegion": false,
+     "createdAt": "2015-09-10T20:25:10.812Z",
+     "updatedAt": "2023-05-21T00:05:07.479Z",
+     "parentId": null,
+     "planLocation": {
+      "id": 1754,
+      "planId": 1265,
+      "locationId": 156,
+      "currentVersion": true,
+      "latestVersion": true,
+      "latestTaggedVersion": true,
+      "versionTags": [
+       "1.0",
+       "1.1",
+       "1.2",
+       "1.3",
+       "1.4"
+      ],
+      "createdAt": "2024-10-09T06:52:19.867Z",
+      "updatedAt": "2025-11-07T06:16:21.468Z",
+      "deletedAt": null
+     }
+    }
+   ],
+   "years": [
+    {
+     "id": 45,
+     "year": "2024",
+     "createdAt": "2016-02-23T15:03:30.953Z",
+     "updatedAt": "2016-02-23T15:03:30.953Z",
+     "planYear": {
+      "id": 1041,
+      "planId": 1265,
+      "usageYearId": 45,
+      "currentVersion": true,
+      "latestVersion": true,
+      "latestTaggedVersion": true,
+      "versionTags": [
+       "1.0",
+       "1.1",
+       "1.2",
+       "1.3",
+       "1.4"
+      ],
+      "createdAt": "2024-10-09T06:52:07.864Z",
+      "updatedAt": "2025-11-07T06:16:21.495Z"
+     }
+    }
+   ],
+   "origRequirements": 17530000,
+   "revisedRequirements": 17530000
+  }
+ ]
+}

@@ -1,0 +1,553 @@
+{
+ "retrieved_at": "2026-08-28T13:00:56+00:00",
+ "source": "iati_datastore",
+ "data": {
+  "np_active_activities": 4029,
+  "humanitarian_flag": {
+   "false": 566,
+   "true": 106
+  },
+  "reporting_org_type": {
+   "10": 2383,
+   "21": 676,
+   "40": 542,
+   "15": 127,
+   "22": 123,
+   "80": 68,
+   "70": 46,
+   "60": 37,
+   "72": 11,
+   "90": 5,
+   "71": 4,
+   "23": 3,
+   "24": 2,
+   "30": 2,
+   "73": 0,
+   "Academic, Training and Research": 0,
+   "Foundation": 0,
+   "International NGO": 0
+  },
+  "participating_org_type": {
+   "10": 2832,
+   "22": 1233,
+   "70": 682,
+   "40": 616,
+   "21": 425,
+   "15": 211,
+   "80": 143,
+   "60": 110,
+   "23": 102,
+   "24": 84,
+   "90": 77,
+   "30": 25,
+   "72": 22,
+   "71": 19,
+   "11": 14,
+   "": 6,
+   "73": 5,
+   "0": 0,
+   "00": 0,
+   "2": 0,
+   "Academic": 0,
+   "NaN": 0
+  },
+  "participating_org_role": {
+   "1": 3853,
+   "4": 2366,
+   "3": 1545,
+   "2": 926,
+   "Funding": 9,
+   "Implementing": 5,
+   "Accountable": 4
+  },
+  "org_type_codes": "10 Government, 15 Other public sector, 21 INGO, 22 National NGO, 23 Regional NGO, 24 Partner-country NGO, 30 PPP, 40 Multilateral, 60 Foundation, 70 Private sector, 80 Academic; roles 1 funding, 2 accountable, 3 extending, 4 implementing",
+  "participating_org_refs": {
+   "distinct": 1173,
+   "np_prefixed": 37,
+   "top_np": [
+    [
+     "NP-SWC-8220",
+     41
+    ],
+    [
+     "NP-COA-602",
+     17
+    ],
+    [
+     "NP-CRO-1158-065-066",
+     13
+    ],
+    [
+     "NP-COA-308",
+     8
+    ],
+    [
+     "NP-COA-347",
+     7
+    ],
+    [
+     "NP-COA-329",
+     5
+    ],
+    [
+     "NP-COA-305",
+     4
+    ],
+    [
+     "NP-COA-313",
+     4
+    ],
+    [
+     "NP-COA-337",
+     4
+    ],
+    [
+     "NP-SWC-19781",
+     4
+    ],
+    [
+     "NP-COA-312",
+     3
+    ],
+    [
+     "NP-COA-325",
+     3
+    ],
+    [
+     "NP-COA-392",
+     3
+    ],
+    [
+     "NP-SWC-24",
+     3
+    ],
+    [
+     "NP-COA-350",
+     2
+    ],
+    [
+     "NP-IRD-302274734",
+     2
+    ],
+    [
+     "NP-SWC-17775",
+     2
+    ],
+    [
+     "NP-COA-340",
+     1
+    ],
+    [
+     "NP-COA-370",
+     1
+    ],
+    [
+     "NP-CRO-133/047/048",
+     1
+    ],
+    [
+     "NP-CRO-45995-063-064",
+     1
+    ],
+    [
+     "NP-CRO-601371123",
+     1
+    ],
+    [
+     "NP-DAO-27-127-062-063",
+     1
+    ],
+    [
+     "NP-DAO-27-689/063/064",
+     1
+    ],
+    [
+     "NP-DAO-531-062-063",
+     1
+    ]
+   ]
+  },
+  "activities_with_national_ngo_participant": 1233,
+  "national_ngo_refs": {
+   "distinct_refs_on_those_activities": 580,
+   "np_prefixed": [
+    [
+     "NP-SWC-8220",
+     39
+    ],
+    [
+     "NP-SWC-19781",
+     4
+    ],
+    [
+     "NP-SWC-24",
+     3
+    ],
+    [
+     "NP-IRD-302274734",
+     2
+    ],
+    [
+     "NP-SWC-17775",
+     2
+    ],
+    [
+     "NP-CRO-133/047/048",
+     1
+    ],
+    [
+     "NP-DAO-27-127-062-063",
+     1
+    ],
+    [
+     "NP-DAO-531-062-063",
+     1
+    ],
+    [
+     "NP-SWC-10136",
+     1
+    ],
+    [
+     "NP-SWC-13640",
+     1
+    ],
+    [
+     "NP-SWC-13712",
+     1
+    ],
+    [
+     "NP-SWC-14190",
+     1
+    ],
+    [
+     "NP-SWC-15652",
+     1
+    ],
+    [
+     "NP-SWC-17977",
+     1
+    ],
+    [
+     "NP-SWC-24838",
+     1
+    ],
+    [
+     "NP-SWC-27693",
+     1
+    ],
+    [
+     "NP-SWC-46024",
+     1
+    ],
+    [
+     "NP-SWC-7056",
+     1
+    ],
+    [
+     "NP-SWC-7099",
+     1
+    ],
+    [
+     "NP-SWC-9353",
+     1
+    ]
+   ]
+  },
+  "updated_since_flood": {
+   "n": 955,
+   "sample": [
+    [
+     [
+      "Asian Development Bank"
+     ],
+     "Roads Connectivity Sector I",
+     "2026-08-26T13:23:28Z"
+    ],
+    [
+     [
+      "Asian Development Bank"
+     ],
+     "Rural Finance Sector Development Cluster Program I",
+     "2026-08-26T13:23:28Z"
+    ],
+    [
+     [
+      "Asian Development Bank"
+     ],
+     "Commercial Agriculture Development",
+     "2026-08-26T13:23:28Z"
+    ],
+    [
+     [
+      "Asian Development Bank"
+     ],
+     "Education Sector Program I (Capacity Development Grant)",
+     "2026-08-26T13:23:28Z"
+    ],
+    [
+     [
+      "Asian Development Bank"
+     ],
+     "Rural Reconstruction and Rehabilitation Sector Development Program (Pr",
+     "2026-08-26T13:23:29Z"
+    ],
+    [
+     [
+      "Asian Development Bank"
+     ],
+     "Rural Reconstruction and Rehabilitation Sector Development Program (Pr",
+     "2026-08-26T13:23:29Z"
+    ],
+    [
+     [
+      "Asian Development Bank"
+     ],
+     "South Asia Subregional Economic Cooperation (SASEC) Information Highwa",
+     "2026-08-26T13:23:29Z"
+    ],
+    [
+     [
+      "Asian Development Bank"
+     ],
+     "Education Sector Program Cluster (Subprogram II)",
+     "2026-08-26T13:23:29Z"
+    ],
+    [
+     [
+      "Asian Development Bank"
+     ],
+     "Information and Communications Technology (ICT) Development Project",
+     "2026-08-26T13:23:29Z"
+    ],
+    [
+     [
+      "Asian Development Bank"
+     ],
+     "Governance Support Program (Subprogram I)",
+     "2026-08-26T13:23:29Z"
+    ],
+    [
+     [
+      "Asian Development Bank"
+     ],
+     "Emergency Flood Damage Rehabilitation Project",
+     "2026-08-26T13:23:30Z"
+    ],
+    [
+     [
+      "Asian Development Bank"
+     ],
+     "Second Small Towns Water Supply and Sanitation Sector Project",
+     "2026-08-26T13:23:30Z"
+    ],
+    [
+     [
+      "Asian Development Bank"
+     ],
+     "Education Sector Program - Subprogram 3",
+     "2026-08-26T13:23:30Z"
+    ],
+    [
+     [
+      "Asian Development Bank"
+     ],
+     "South Asia Tourism Infrastructure Development Project (Bangladesh, Ind",
+     "2026-08-26T13:23:31Z"
+    ],
+    [
+     [
+      "Asian Development Bank"
+     ],
+     "Rural Finance Sector Development Cluster Program (Subprogram 2)",
+     "2026-08-26T13:23:31Z"
+    ]
+   ]
+  },
+  "updated_since_flood_humanitarian": 0,
+  "transactions_2026": {
+   "n": 155,
+   "by_type": {
+    "3": 111,
+    "2": 27,
+    "1": 14,
+    "4": 3,
+    "0": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "C": 0,
+    "D": 0
+   },
+   "humanitarian": {
+    "true": 2,
+    "false": 0
+   },
+   "top_receivers": [
+    [
+     "XM-DAC-21000",
+     27
+    ],
+    [
+     "XM-DAC-41122",
+     17
+    ],
+    [
+     "NP-COA-370",
+     10
+    ],
+    [
+     "XM-DAC-928",
+     5
+    ],
+    [
+     "XM-DAC-22000",
+     3
+    ],
+    [
+     "XM-DAC-47000",
+     3
+    ],
+    [
+     "XM-DAC-22502",
+     2
+    ],
+    [
+     "XM-DAC-41114",
+     2
+    ],
+    [
+     "XM-DAC-51000",
+     2
+    ],
+    [
+     "XM-DAC-23000",
+     1
+    ],
+    [
+     "XM-DAC-41111",
+     1
+    ],
+    [
+     "XM-DAC-47066",
+     1
+    ],
+    [
+     "\"Cerere Și Ofertǎ” S.R.L",
+     0
+    ],
+    [
+     "\"Kerala University of Fisheries and Ocean Studies \"",
+     0
+    ],
+    [
+     "0",
+     0
+    ]
+   ],
+   "sample": [
+    {
+     "iati_identifier": "US-GOV-1-720202657295",
+     "transaction_value": [
+      0.0
+     ],
+     "transaction_receiver_org_narrative": [
+      "USAID redacted this field in accordance with the exceptions outlined in the Foreign Aid Transparency and Accountability Act of 2016."
+     ],
+     "transaction_transaction_date_iso_date": [
+      "2026-04-30T00:00:00Z"
+     ]
+    },
+    {
+     "iati_identifier": "US-GOV-1-720202657295",
+     "transaction_value": [
+      0.0
+     ],
+     "transaction_receiver_org_narrative": [
+      "USAID redacted this field in accordance with the exceptions outlined in the Foreign Aid Transparency and Accountability Act of 2016."
+     ],
+     "transaction_transaction_date_iso_date": [
+      "2026-04-30T00:00:00Z"
+     ]
+    },
+    {
+     "iati_identifier": "US-GOV-1-7200AA19CA00002",
+     "transaction_value": [
+      41535.0
+     ],
+     "transaction_receiver_org_narrative": [
+      "USAID redacted this field in accordance with the exceptions outlined in the Foreign Aid Transparency and Accountability Act of 2016."
+     ],
+     "transaction_transaction_date_iso_date": [
+      "2026-01-31T00:00:00Z"
+     ]
+    },
+    {
+     "iati_identifier": "US-GOV-1-7200AA19CA00002",
+     "transaction_value": [
+      36597.0
+     ],
+     "transaction_receiver_org_narrative": [
+      "USAID redacted this field in accordance with the exceptions outlined in the Foreign Aid Transparency and Accountability Act of 2016."
+     ],
+     "transaction_transaction_date_iso_date": [
+      "2026-01-31T00:00:00Z"
+     ]
+    },
+    {
+     "iati_identifier": "US-GOV-1-7200AA19CA00002",
+     "transaction_value": [
+      26153.0
+     ],
+     "transaction_receiver_org_narrative": [
+      "USAID redacted this field in accordance with the exceptions outlined in the Foreign Aid Transparency and Accountability Act of 2016."
+     ],
+     "transaction_transaction_date_iso_date": [
+      "2026-02-28T00:00:00Z"
+     ]
+    }
+   ],
+   "type_codes": "1 incoming funds, 2 outgoing commitment, 3 disbursement, 4 expenditure, 11 incoming commitment"
+  },
+  "transactions_since_flood": {
+   "n": 2,
+   "sample": [
+    {
+     "iati_identifier": "SE-0-SE-6-15288-15288A0102",
+     "reporting_org_narrative": [
+      "Sweden"
+     ],
+     "transaction_value": [
+      -2326.1125
+     ],
+     "transaction_receiver_org_narrative": [
+      "Association for Asian Studies"
+     ],
+     "transaction_transaction_date_iso_date": [
+      "2026-08-28T00:00:00Z"
+     ]
+    },
+    {
+     "iati_identifier": "SE-0-SE-6-17245-17245A0101",
+     "reporting_org_narrative": [
+      "Sweden"
+     ],
+     "transaction_value": [
+      214835.4525
+     ],
+     "transaction_receiver_org_narrative": [
+      "UNICEF/United Nations Children's Fund"
+     ],
+     "transaction_transaction_date_iso_date": [
+      "2026-08-28T00:00:00Z"
+     ]
+    }
+   ]
+  }
+ }
+}

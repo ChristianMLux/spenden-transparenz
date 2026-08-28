@@ -1,0 +1,226 @@
+{
+ "retrieved_at": "2026-08-28T12:09:28+00:00",
+ "source": "fts",
+ "data": [
+  {
+   "id": "339596",
+   "amountUSD": 5116313,
+   "fullParkedAmountUSD": 18050000,
+   "budgetYear": "2024",
+   "childFlowIds": [
+    364730,
+    364731,
+    364732,
+    364733,
+    398846,
+    398850,
+    380038,
+    380039,
+    380040,
+    380041,
+    380042,
+    380043,
+    364883,
+    364884,
+    364221,
+    364223,
+    364224,
+    364225,
+    364227,
+    364228,
+    364229,
+    364230,
+    364235,
+    364236,
+    364237,
+    364240,
+    364238,
+    364239,
+    364241,
+    364242,
+    364243,
+    398847,
+    398851,
+    398853,
+    398854,
+    398857,
+    398858,
+    398859,
+    398860,
+    398861,
+    398862,
+    398863,
+    398864,
+    398865
+   ],
+   "contributionType": "financial",
+   "createdAt": "2025-03-21T06:54:39.818Z",
+   "date": "2025-03-21T00:00:00Z",
+   "decisionDate": "2025-01-10T00:00:00Z",
+   "description": "Addressing the maternal and reproductive health and protection life-saving needs of underserved and crisis-affected communities in Afghanistan; Saving the lives and Protecting the Dignity of Women and Girls in emergency affected communities in the Somali region in Ethiopia; Strengthening Community Resilience by Providing Sexual and Reproductive Health and GBV Support for Women and Youth including those living with disabilities impacted by Cholera and Floods in Comoros; The integrated project to address Sexual Reproductive Health and Gender Based Violence needs of vulnerable women in conflict-affected areas in Sudan; Responding to maternal/newborn mortality public health emergency in Liberia’s high burden Districts in Montserrado County; Restoring Health and Dignity amidst Unprecedented Crisis: Provision of Sexual & Reproductive Health and Protection Services in Gaza and the West Bank; Integrated Life-Saving SRH and GBV Services for Vulnerable Women and Girls in Underserved Southern Areas of Jordan; Improving Access of the Most Vulnerable Groups to Urgent SRH care and GBV Response in Adıyaman and Hatay (Türkiye); E-HEAL: Emergency Health and Empowerment for All women in Libya including Sudanese refugees featuring the MCH Handbook; Project for improvement of maternal and child health care services and adaptive capacity in Nepal; Strengthening the resilience of social protection and sexual and reproductive health systems for vulnerable women and girls in partnership with NEC in Nigeria and Madagascar; Digitalization of Integrated Diagnostic and Treatment System Optimised for Remote Healthcare to Reduce Perinatal Mortality in the Democratic Republic of the Congo (DRC); Uplifting Voices: Advancing the Dignity and Empowerment of Women and Girls in Ethiopia.",
+   "grandBargainEarmarkingType": [
+    "tightly earmarked"
+   ],
+   "exchangeRate": 139,
+   "firstReportedDate": "2025-03-20T00:00:00Z",
+   "flowType": "Parked",
+   "keywords": [
+    "Multiyear"
+   ],
+   "newMoney": true,
+   "originalAmount": 711167507,
+   "originalCurrency": "JPY",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2026-08-19T10:05:23.024Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "4537",
+     "name": "Japan, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "112",
+     "name": "Japan",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "4293",
+     "name": "United Nations Population Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "1",
+     "name": "Afghanistan",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "71",
+     "name": "Ethiopia",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "50",
+     "name": "Comoros",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "212",
+     "name": "Sudan",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "126",
+     "name": "Liberia",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "171",
+     "name": "Occupied Palestinian Territory",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "114",
+     "name": "Jordan",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "229",
+     "name": "Türkiye",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "127",
+     "name": "Libya",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "163",
+     "name": "Nigeria",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "133",
+     "name": "Madagascar",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "52",
+     "name": "Democratic Republic of the Congo",
+     "behavior": "shared"
+    },
+    {
+     "type": "UsageYear",
+     "id": "46",
+     "name": "2025",
+     "behavior": "shared"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "shared"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "shared",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Japan, Government of",
+     "reportChannel": "Email",
+     "date": "2025-03-20T00:00:00.000Z"
+    }
+   ]
+  }
+ ]
+}

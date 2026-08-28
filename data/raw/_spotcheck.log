@@ -1,0 +1,33 @@
+C:\Users\chris\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (6.0.0.post1)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+   duplicate org_id caritas-nepal: batch-3-local-nepal.json vs batch-2-ingos.json -> keeping first
+wrote orgs-nepal-2026.json with 44 orgs
+{
+ "schema_errors": 0,
+ "orgs": 44,
+ "local_np": 14,
+ "international": 30,
+ "fill_rate_all": {
+  "names.legal": 0.84,
+  "registrations[any identifier]": 0.39,
+  "registrations[NP_SWC identifier]": 0.02,
+  "nepal_presence.since_year": 0.45,
+  "nepal_presence.mode(known)": 0.82,
+  "current_response[>=1]": 0.77,
+  "financial.annual_report.available": 0.3,
+  "financial.audited": 0.14,
+  "financial.iati_publisher": 0.07,
+  "financial.income": 0.32,
+  "financial.expenditure": 0.14,
+  "financial.program_ratio": 0.02,
+  "warnings[>=1]": 0.0
+ },
+ "verification_distribution": {
+  "unverified": 266,
+  "self_reported": 98,
+  "register_confirmed": 35,
+  "third_party_reported": 18,
+  "externally_audited": 3
+ }
+}
+spotcheck: {'value_found': 11, 'http_error': 5, 'quote_found': 1}

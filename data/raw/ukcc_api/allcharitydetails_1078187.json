@@ -1,0 +1,114 @@
+{
+ "retrieved_at": "2026-08-28T12:59:38+00:00",
+ "source": "ukcc_api",
+ "data": {
+  "organisation_number": 3965835,
+  "reg_charity_number": 1078187,
+  "group_subsid_suffix": 0,
+  "charity_name": "CHILD RESCUE NEPAL",
+  "charity_type": "Trust",
+  "insolvent": false,
+  "in_administration": false,
+  "prev_excepted_ind": false,
+  "cif_cdf_ind": null,
+  "cio_dissolution_ind": false,
+  "interim_manager_ind": false,
+  "date_of_interim_manager_appt": null,
+  "reg_status": "R",
+  "date_of_registration": "1999-11-12T00:00:00",
+  "date_of_removal": null,
+  "latest_acc_fin_year_start_date": "2024-08-01T00:00:00",
+  "latest_acc_fin_year_end_date": "2025-07-31T00:00:00",
+  "latest_income": 488016.0,
+  "latest_expenditure": 505047.0,
+  "address_line_one": "All Saints Church",
+  "address_line_two": "46 Bridle Road",
+  "address_line_three": "CROYDON",
+  "address_line_four": null,
+  "address_line_five": null,
+  "address_post_code": "CR0 8HB",
+  "phone": "02071830353",
+  "email": "info@childrescuenepal.org",
+  "web": "www.childrescuenepal.org",
+  "charity_co_reg_number": "08098790",
+  "reporting_status": "Submission Received",
+  "removal_reason": null,
+  "cio_ind": false,
+  "last_modified_time": "2026-03-10T13:17:42.843",
+  "trustee_names": [
+   {
+    "organisation_number": 3965835,
+    "trustee_name": "Child Rescue Nepal Limited (08098790)"
+   }
+  ],
+  "who_what_where": [
+   {
+    "classification_code": "101",
+    "classification_type": "What",
+    "classification_desc": "General Charitable Purposes"
+   },
+   {
+    "classification_code": "102",
+    "classification_type": "What",
+    "classification_desc": "Education/training"
+   },
+   {
+    "classification_code": "105",
+    "classification_type": "What",
+    "classification_desc": "The Prevention Or Relief Of Poverty"
+   },
+   {
+    "classification_code": "106",
+    "classification_type": "What",
+    "classification_desc": "Overseas Aid/famine Relief"
+   },
+   {
+    "classification_code": "107",
+    "classification_type": "What",
+    "classification_desc": "Accommodation/housing"
+   },
+   {
+    "classification_code": "201",
+    "classification_type": "Who",
+    "classification_desc": "Children/young People"
+   },
+   {
+    "classification_code": "302",
+    "classification_type": "How",
+    "classification_desc": "Makes Grants To Organisations"
+   },
+   {
+    "classification_code": "307",
+    "classification_type": "How",
+    "classification_desc": "Provides Advocacy/advice/information"
+   }
+  ],
+  "CharityAoOCountryContinent": [
+   {
+    "country": "India",
+    "continent": "Asia"
+   },
+   {
+    "country": "Nepal",
+    "continent": "Asia"
+   }
+  ],
+  "CharityAoOLocalAuthority": [],
+  "CharityAoORegion": [],
+  "other_names": [
+   {
+    "other_name": "EBT",
+    "name_type": "W"
+   },
+   {
+    "other_name": "THE ESTHER BENJAMINS TRUST",
+    "name_type": "O"
+   }
+  ],
+  "constituency_name": [
+   {
+    "constituency_name": "Croydon East"
+   }
+  ]
+ }
+}

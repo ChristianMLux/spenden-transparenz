@@ -1,0 +1,350 @@
+{
+ "retrieved_at": "2026-08-28T12:34:34+00:00",
+ "source": "orgs",
+ "data": {
+  "schema_errors": 0,
+  "schema_error_samples": [],
+  "orgs": 44,
+  "by_org_type": {
+   "red_cross_movement": 3,
+   "ingo": 20,
+   "un_agency": 2,
+   "platform": 1,
+   "national_ngo": 5,
+   "alliance": 2,
+   "community_org": 5,
+   "foundation": 1,
+   "diaspora_charity": 5
+  },
+  "by_hq_country": {
+   "NP": 14,
+   "CH": 5,
+   "US": 8,
+   "GB": 4,
+   "IT": 1,
+   "FR": 1,
+   "CZ": 1,
+   "DE": 10
+  },
+  "local_np": 14,
+  "international": 30,
+  "fill_rate_all": {
+   "names.legal": 0.84,
+   "registrations[any identifier]": 0.41,
+   "registrations[NP_SWC identifier]": 0.02,
+   "nepal_presence.since_year": 0.45,
+   "nepal_presence.mode(known)": 0.82,
+   "current_response[>=1]": 0.8,
+   "financial.annual_report.available": 0.3,
+   "financial.audited": 0.14,
+   "financial.iati_publisher": 0.11,
+   "financial.income": 0.32,
+   "financial.expenditure": 0.14,
+   "financial.program_ratio": 0.02,
+   "warnings[>=1]": 0.0
+  },
+  "fill_rate_local_np": {
+   "names.legal": 0.64,
+   "registrations[any identifier]": 0.14,
+   "registrations[NP_SWC identifier]": 0.07,
+   "nepal_presence.since_year": 0.43,
+   "nepal_presence.mode(known)": 0.79,
+   "current_response[>=1]": 0.79,
+   "financial.annual_report.available": 0.14,
+   "financial.audited": 0.0,
+   "financial.iati_publisher": 0.07,
+   "financial.income": 0.0,
+   "financial.expenditure": 0.0,
+   "financial.program_ratio": 0.0,
+   "warnings[>=1]": 0.0
+  },
+  "fill_rate_international": {
+   "names.legal": 0.93,
+   "registrations[any identifier]": 0.53,
+   "registrations[NP_SWC identifier]": 0.0,
+   "nepal_presence.since_year": 0.47,
+   "nepal_presence.mode(known)": 0.83,
+   "current_response[>=1]": 0.8,
+   "financial.annual_report.available": 0.37,
+   "financial.audited": 0.2,
+   "financial.iati_publisher": 0.13,
+   "financial.income": 0.47,
+   "financial.expenditure": 0.2,
+   "financial.program_ratio": 0.03,
+   "warnings[>=1]": 0.0
+  },
+  "datums_total": 420,
+  "datums_with_value": 157,
+  "verification_distribution": {
+   "unverified": 266,
+   "self_reported": 98,
+   "register_confirmed": 35,
+   "third_party_reported": 18,
+   "externally_audited": 3
+  },
+  "top_data_gaps": [
+   [
+    "nepal_presence.staff_count",
+    42
+   ],
+   [
+    "names.local_script",
+    36
+   ],
+   [
+    "financial_transparency.program_ratio",
+    36
+   ],
+   [
+    "financial_transparency.audited_financials",
+    34
+   ],
+   [
+    "financial_transparency.expenditure",
+    34
+   ],
+   [
+    "financial_transparency.iati_publisher",
+    32
+   ],
+   [
+    "financial_transparency.income",
+    26
+   ],
+   [
+    "financial_transparency.annual_report",
+    24
+   ],
+   [
+    "nepal_presence.since_year",
+    23
+   ],
+   [
+    "registrations[NP_SWC].identifier",
+    22
+   ],
+   [
+    "nepal_presence.partners",
+    19
+   ],
+   [
+    "names.legal",
+    8
+   ]
+  ],
+  "orgs_with_response": [
+   "nepal-red-cross-society",
+   "ifrc",
+   "direct-relief",
+   "msf-international",
+   "save-the-children-international",
+   "unicef-nepal",
+   "wfp-nepal",
+   "mercy-corps",
+   "project-hope",
+   "globalgiving",
+   "oxfam-in-nepal",
+   "care-nepal",
+   "world-vision-nepal",
+   "plan-international-nepal",
+   "habitat-humanity-nepal",
+   "people-in-need-nepal",
+   "mountain-heart-nepal",
+   "community-self-reliance-centre",
+   "nepal-lions-md325",
+   "hindu-swayamsevak-sangh-nepal",
+   "vishwa-hindu-parishad-nepal",
+   "dhulikhel-hospital",
+   "worec-nepal",
+   "non-resident-nepali-association",
+   "kiwanis-club-rupandehi-lumbini",
+   "the-rising-youth-club",
+   "drk-generalsekretariat",
+   "welthungerhilfe",
+   "malteser-international",
+   "aktion-deutschland-hilft",
+   "caritas-international",
+   "diakonie-katastrophenhilfe",
+   "govinda-entwicklungshilfe",
+   "back-to-life",
+   "helvetas"
+  ],
+  "orgs_without_any_financial_figure": [
+   "nepal-red-cross-society",
+   "save-the-children-international",
+   "plan-international-nepal",
+   "actionaid-nepal",
+   "caritas-nepal",
+   "people-in-need-nepal",
+   "wateraid-nepal",
+   "mountain-heart-nepal",
+   "community-self-reliance-centre",
+   "nepal-lions-md325",
+   "hindu-swayamsevak-sangh-nepal",
+   "vishwa-hindu-parishad-nepal",
+   "dhulikhel-hospital",
+   "worec-nepal",
+   "kiwanis-club-rupandehi-lumbini",
+   "the-rising-youth-club",
+   "malteser-international",
+   "nepalhilfe-beilngries",
+   "nepalmed",
+   "govinda-entwicklungshilfe",
+   "back-to-life",
+   "helvetas"
+  ],
+  "spotcheck": {
+   "share": 0.12,
+   "pool": 144,
+   "checked": 17,
+   "counts": {
+    "value_found": 13,
+    "not_found": 3,
+    "quote_found": 1
+   },
+   "via": {
+    "direct": 12,
+    "firecrawl": 5
+   },
+   "results": [
+    {
+     "org": "project-hope",
+     "path": "financial_transparency.income",
+     "url": "https://projects.propublica.org/nonprofits/organizations/530242962",
+     "value": 157270945,
+     "result": "value_found",
+     "via": "direct"
+    },
+    {
+     "org": "wfp-nepal",
+     "path": "nepal_presence.since_year",
+     "url": "https://www.wfp.org/countries/nepal",
+     "value": 1963,
+     "result": "value_found",
+     "via": "direct"
+    },
+    {
+     "org": "ifrc",
+     "path": "nepal_presence.mode",
+     "url": "https://www.ifrc.org/national-societies-directory/nepal-red-cross-society",
+     "value": "both",
+     "result": "not_found",
+     "via": "firecrawl"
+    },
+    {
+     "org": "ngo-federation-of-nepal",
+     "path": "nepal_presence.since_year",
+     "url": "https://ngofederation.org/",
+     "value": 1991,
+     "result": "value_found",
+     "via": "direct"
+    },
+    {
+     "org": "practical-action-nepal",
+     "path": "names.legal",
+     "url": "https://practicalaction.org",
+     "value": "Practical Action",
+     "result": "value_found",
+     "via": "direct"
+    },
+    {
+     "org": "non-resident-nepali-association",
+     "path": "nepal_presence.since_year",
+     "url": "https://www.nrna.org.np/",
+     "value": 2003,
+     "result": "not_found",
+     "via": "firecrawl"
+    },
+    {
+     "org": "back-to-life",
+     "path": "names.legal",
+     "url": "https://www.back-to-life.org/impressum",
+     "value": "Back to Life e.V.",
+     "result": "value_found",
+     "via": "direct"
+    },
+    {
+     "org": "aktion-deutschland-hilft",
+     "path": "names.legal",
+     "url": "https://www.dzi.de/organisation/aktion-deutschland-hilft-e-v/",
+     "value": "Aktion Deutschland Hilft e.V.",
+     "result": "value_found",
+     "via": "direct"
+    },
+    {
+     "org": "govinda-entwicklungshilfe",
+     "path": "names.legal",
+     "url": "https://de.wikipedia.org/wiki/Govinda_Entwicklungshilfe",
+     "value": "Govinda Entwicklungshilfe e.V.",
+     "result": "value_found",
+     "via": "firecrawl"
+    },
+    {
+     "org": "caritas-international",
+     "path": "nepal_presence.partners[0]",
+     "url": "https://www.caritas-international.de/hilfeweltweit/asien/nepal/nepal-sturzflut",
+     "value": "Caritas Nepal",
+     "result": "value_found",
+     "via": "direct"
+    },
+    {
+     "org": "govinda-entwicklungshilfe",
+     "path": "nepal_presence.since_year",
+     "url": "https://de.wikipedia.org/wiki/Govinda_Entwicklungshilfe",
+     "value": 1998,
+     "result": "value_found",
+     "via": "firecrawl"
+    },
+    {
+     "org": "malteser-international",
+     "path": "nepal_presence.partners[1]",
+     "url": "https://www.malteser-international.org/de/hilfe-weltweit/asien/nepal.html",
+     "value": "KOSHISH",
+     "result": "value_found",
+     "via": "direct"
+    },
+    {
+     "org": "project-hope",
+     "path": "financial_transparency.expenditure",
+     "url": "https://projects.propublica.org/nonprofits/organizations/530242962",
+     "value": 150976251,
+     "result": "value_found",
+     "via": "direct"
+    },
+    {
+     "org": "unicef-nepal",
+     "path": "financial_transparency.income",
+     "url": "https://www.unicef.org/reports/unicef-annual-report/2024",
+     "value": 8263000000,
+     "result": "not_found",
+     "via": "firecrawl"
+    },
+    {
+     "org": "save-the-children-international",
+     "path": "nepal_presence.partners[0]",
+     "url": "https://www.savethechildren.org.uk/where-we-work/asia/nepal",
+     "value": "100+ partners across Nepal including government, community organisations and NGO",
+     "result": "quote_found",
+     "via": "direct"
+    },
+    {
+     "org": "mercy-corps",
+     "path": "financial_transparency.income",
+     "url": "https://projects.propublica.org/nonprofits/organizations/911148123",
+     "value": 376251780,
+     "result": "value_found",
+     "via": "direct"
+    },
+    {
+     "org": "malteser-international",
+     "path": "names.legal",
+     "url": "https://www.malteser-international.org/de/hilfe-weltweit/asien/nepal.html",
+     "value": "Malteser Hilfsdienst e.V.",
+     "result": "value_found",
+     "via": "direct"
+    }
+   ],
+   "note": "carried over from previous run"
+  }
+ }
+}

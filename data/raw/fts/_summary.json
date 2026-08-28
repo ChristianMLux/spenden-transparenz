@@ -1,0 +1,200 @@
+{
+ "retrieved_at": "2026-08-28T12:09:28+00:00",
+ "source": "fts",
+ "data": {
+  "flood_date": "2026-08-26",
+  "plans_npl": [
+   {
+    "id": 187,
+    "name": "Nepal 2005-2006",
+    "years": [
+     "2006"
+    ]
+   },
+   {
+    "id": 241,
+    "name": "Nepal Common Appeal for Transition Support 2007",
+    "years": [
+     "2007"
+    ]
+   },
+   {
+    "id": 270,
+    "name": "Nepal Common Appeal for Transition Support 2008",
+    "years": [
+     "2008"
+    ]
+   },
+   {
+    "id": 292,
+    "name": "Nepal Humanitarian Transition Appeal 2009",
+    "years": [
+     "2009"
+    ]
+   },
+   {
+    "id": 299,
+    "name": "Nepal Floods Humanitarian Response Plan 2008",
+    "years": [
+     "2008"
+    ]
+   },
+   {
+    "id": 327,
+    "name": "Nepal Humanitarian Transition Appeal 2010",
+    "years": [
+     "2010"
+    ]
+   },
+   {
+    "id": 486,
+    "name": "Nepal Flash Appeal Earthquake 2015",
+    "years": [
+     "2015"
+    ]
+   },
+   {
+    "id": 1048,
+    "name": "Nepal Intersectoral COVID-19 Response Plan 2021",
+    "years": [
+     "2021"
+    ]
+   },
+   {
+    "id": 1265,
+    "name": "Nepal Humanitarian Needs and Priorities Floods Response Plan 2024",
+    "years": [
+     "2024"
+    ]
+   }
+  ],
+  "emergencies_npl_latest": [
+   {
+    "id": 629,
+    "name": "NEPAL - Earthquake - April 2015",
+    "date": "2015-04-25",
+    "glide": "EQ-2015-000048-NPL"
+   },
+   {
+    "id": 493,
+    "name": "NEPAL - Floods - February 2008",
+    "date": "2008-02-01",
+    "glide": "FL-2008-000168-NPL"
+   },
+   {
+    "id": 383,
+    "name": "SOUTH ASIA - Regional Floods - August 2007",
+    "date": "2007-01-01",
+    "glide": null
+   }
+  ],
+  "emergencies_created_2026": [],
+  "flows_2026": {
+   "n_flows": 30,
+   "status_counts": {
+    "commitment": 12,
+    "paid": 14,
+    "pledge": 4
+   },
+   "usd_by_status": {
+    "commitment": 5521206,
+    "paid": 54044156,
+    "pledge": 78561
+   },
+   "reporting_lag_days": {
+    "n": 30,
+    "median": 95,
+    "p90": 419,
+    "max": 1171
+   },
+   "destination_org_types": {
+    "NGOs": 20,
+    "Multilateral Organizations": 7,
+    "Governments": 2,
+    "Pooled Funds": 1
+   },
+   "meta": {
+    "incoming": {
+     "flowCount": 29,
+     "fundingTotal": 3945598,
+     "pledgeTotal": 78561
+    },
+    "outgoing": {
+     "flowCount": 0,
+     "fundingTotal": 0,
+     "pledgeTotal": 0
+    },
+    "internal": {
+     "flowCount": 1
+    }
+   }
+  },
+  "flood_candidate_flows": [
+   {
+    "id": "339596",
+    "status": "paid",
+    "usd": 5116313,
+    "date": "2025-03-21",
+    "reported": "2025-03-20",
+    "desc": "Addressing the maternal and reproductive health and protection life-saving needs of underserved and crisis-affected comm",
+    "src": [
+     "Japan, Government of"
+    ],
+    "dst": [
+     "United Nations Population Fund"
+    ]
+   }
+  ],
+  "baseline_floods_2024_plan_1265": {
+   "n_flows": 39,
+   "status_counts": {
+    "commitment": 5,
+    "paid": 34
+   },
+   "usd_by_status": {
+    "commitment": 1165420,
+    "paid": 26008344
+   },
+   "reporting_lag_days": {
+    "n": 32,
+    "median": 142,
+    "p90": 352,
+    "max": 465
+   },
+   "destination_org_types": {
+    "Multilateral Organizations": 27,
+    "NGOs": 11,
+    "Private Organizations": 1
+   },
+   "meta": {
+    "incoming": {
+     "flowCount": 39,
+     "fundingTotal": 27173764,
+     "pledgeTotal": 0
+    },
+    "outgoing": {
+     "flowCount": 0,
+     "fundingTotal": 0,
+     "pledgeTotal": 0
+    },
+    "internal": {
+     "flowCount": 0
+    }
+   }
+  },
+  "field_fill_rates_2026": {
+   "id": 1.0,
+   "status": 1.0,
+   "amountUSD": 1.0,
+   "date": 1.0,
+   "decisionDate": 1.0,
+   "firstReportedDate": 1.0,
+   "description": 1.0,
+   "sourceObjects": 1.0,
+   "destinationObjects": 1.0,
+   "flowType": 1.0,
+   "method": 1.0,
+   "budgetYear": 0.833
+  }
+ }
+}

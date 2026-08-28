@@ -1,0 +1,5 @@
+.env*
+!.env.example
+__pycache__/
+data/raw/ukcc/*.zip
+data/raw/iati/*.csv

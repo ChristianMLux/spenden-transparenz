@@ -1,0 +1,580 @@
+{
+ "retrieved_at": "2026-08-28T13:00:54+00:00",
+ "source": "iati_datastore",
+ "params": {
+  "rows": 50,
+  "wt": "json",
+  "q": "recipient_country_code:NP AND last_updated_datetime:[2026-08-26T00:00:00Z TO *]",
+  "fl": "iati_identifier,reporting_org_narrative,title_narrative,last_updated_datetime,humanitarian,activity_status_code"
+ },
+ "data": {
+  "responseHeader": {
+   "zkConnected": true,
+   "status": 0,
+   "QTime": 13,
+   "params": {
+    "q": "recipient_country_code:NP AND last_updated_datetime:[2026-08-26T00:00:00Z TO *]",
+    "fl": "iati_identifier,reporting_org_narrative,title_narrative,last_updated_datetime,humanitarian,activity_status_code",
+    "rows": "50",
+    "wt": "json"
+   }
+  },
+  "response": {
+   "numFound": 955,
+   "start": 0,
+   "numFoundExact": true,
+   "docs": [
+    {
+     "iati_identifier": "XM-DAC-46004-37266-032-GRNT0051",
+     "title_narrative": [
+      "Roads Connectivity Sector I"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:28Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-36169-013-GRNT0059",
+     "title_narrative": [
+      "Rural Finance Sector Development Cluster Program I"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:28Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-34308-022-GRNT0063",
+     "title_narrative": [
+      "Commercial Agriculture Development"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:28Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-35174-022-GRNT0065",
+     "title_narrative": [
+      "Education Sector Program I (Capacity Development Grant)"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:28Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-40554-022-GRNT0093",
+     "title_narrative": [
+      "Rural Reconstruction and Rehabilitation Sector Development Program (Project grant)"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:29Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-40554-032-GRNT0094",
+     "title_narrative": [
+      "Rural Reconstruction and Rehabilitation Sector Development Program (Program grant)"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:29Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-40054-013-GRNT0099",
+     "title_narrative": [
+      "South Asia Subregional Economic Cooperation (SASEC) Information Highway Project (Bangladesh, Bhutan, India, Nepal) - Loan for Bangladesh"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:29Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-35174-032-GRNT0105",
+     "title_narrative": [
+      "Education Sector Program Cluster (Subprogram II)"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:29Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-38347-022-GRNT0106",
+     "title_narrative": [
+      "Information and Communications Technology (ICT) Development Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:29Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-36172-042-GRNT0118",
+     "title_narrative": [
+      "Governance Support Program (Subprogram I)"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:29Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-43001-012-GRNT0150",
+     "title_narrative": [
+      "Emergency Flood Damage Rehabilitation Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:30Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-41022-022-GRNT0157",
+     "title_narrative": [
+      "Second Small Towns Water Supply and Sanitation Sector Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:30Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-35174-023-GRNT0160",
+     "title_narrative": [
+      "Education Sector Program - Subprogram 3"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:30Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-39399-013-GRNT0179",
+     "title_narrative": [
+      "South Asia Tourism Infrastructure Development Project (Bangladesh, India, and Nepal) - India"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:31Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-36169-023-GRNT0208",
+     "title_narrative": [
+      "Rural Finance Sector Development Cluster Program (Subprogram 2)"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:31Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-44058-013-GRNT0212",
+     "title_narrative": [
+      "Kathmandu Sustainable Urban Transport Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:31Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-43281-022-GRNT0215",
+     "title_narrative": [
+      "Detailed Engineering Study for the Upper Seti Hydropower Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:31Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-38417-022-GRNT0219",
+     "title_narrative": [
+      "Community Irrigation Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:32Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-44143-013-GRNT0225",
+     "title_narrative": [
+      "Subregional Transport Enhancement Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:32Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-43216-012-GRNT0227",
+     "title_narrative": [
+      "Transport Project Preparatory Facility (formerly Transport Project Preparatory and Capacity Development Facility)"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:32Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-38423-022-GRNT0233",
+     "title_narrative": [
+      "Raising Incomes of Small and Medium Farmers Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:32Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-37292-042-GRNT0248",
+     "title_narrative": [
+      "High Mountain Agribusiness and Livelihood Improvement Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:33Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-43490-013-GRNT0252",
+     "title_narrative": [
+      "Capital Market and Infrastructure Capacity Support Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:33Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-38426-023-GRNT0267",
+     "title_narrative": [
+      "Decentralized Rural Infrastructure and Livelihood Project - Additional Financing"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:33Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-41155-013-GRNT0270",
+     "title_narrative": [
+      "Electricity Transmission Expansion and Supply Improvement Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:33Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-35174-082-GRNT0272",
+     "title_narrative": [
+      "School Sector Program"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:33Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-42161-013-GRNT0284",
+     "title_narrative": [
+      "Integrated Urban Development Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:33Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-45206-001-GRNT0299",
+     "title_narrative": [
+      "Water Resources Project Preparatory Facility"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:34Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-36172-063-GRNT0305",
+     "title_narrative": [
+      "Strengthening Public Management Program"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:34Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-45260-001-GRNT0322",
+     "title_narrative": [
+      "South Asia Subregional Economic Cooperation Trade Facilitation Program"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:34Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-38176-015-GRNT0345",
+     "title_narrative": [
+      "Skills Development Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:35Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-47036-001-GRNT0361",
+     "title_narrative": [
+      "Project Preparatory Facility for Energy"
+     ],
+     "activity_status_code": "2",
+     "last_updated_datetime": "2026-08-26T13:23:35Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-43448-013-GRNT0367",
+     "title_narrative": [
+      "Bagmati River Basin Improvement Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:36Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-34306-013-LN2143",
+     "title_narrative": [
+      "Gender Equality and Empowerment of Women"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:23:40Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-35174-023-LN2551",
+     "title_narrative": [
+      "Education Sector Program - Subprogram 3"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:24:38Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-39399-013-LN2579",
+     "title_narrative": [
+      "South Asia Tourism Infrastructure Development Project (Bangladesh, India, and Nepal) - India"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:24:43Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-38349-013-LN2581",
+     "title_narrative": [
+      "Air Transport Capacity Enhancement Project (formerly Civil Aviation Airport Development Project)"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:24:44Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-40553-013-LN2587",
+     "title_narrative": [
+      "Energy Access and Efficiency Improvement Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:24:45Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-36169-023-LN2641",
+     "title_narrative": [
+      "Rural Finance Sector Development Cluster Program (Subprogram 2)"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:24:54Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-36188-023-LN2650",
+     "title_narrative": [
+      "Secondary Towns Integrated Urban Environmental Improvement Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:24:56Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-44058-013-LN2656",
+     "title_narrative": [
+      "Kathmandu Sustainable Urban Transport Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:24:57Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-44143-013-LN2685",
+     "title_narrative": [
+      "Subregional Transport Enhancement Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:25:03Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-34304-043-LN2776",
+     "title_narrative": [
+      "Kathmandu Valley Water Supply Improvement Project"
+     ],
+     "activity_status_code": "2",
+     "last_updated_datetime": "2026-08-26T13:25:18Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-38426-023-LN2796",
+     "title_narrative": [
+      "Decentralized Rural Infrastructure and Livelihood Project - Additional Financing"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:25:22Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-41155-013-LN2808",
+     "title_narrative": [
+      "Electricity Transmission Expansion and Supply Improvement Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:25:24Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-42161-013-LN2851",
+     "title_narrative": [
+      "Integrated Urban Development Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:25:31Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-43281-013-LN2990",
+     "title_narrative": [
+      "Tanahu Hydropower Project"
+     ],
+     "activity_status_code": "2",
+     "last_updated_datetime": "2026-08-26T13:25:53Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-43281-013-LN2991",
+     "title_narrative": [
+      "Tanahu Hydropower Project"
+     ],
+     "activity_status_code": "2",
+     "last_updated_datetime": "2026-08-26T13:25:53Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-43524-014-LN3000",
+     "title_narrative": [
+      "Kathmandu Valley Wastewater Management Project"
+     ],
+     "activity_status_code": "2",
+     "last_updated_datetime": "2026-08-26T13:25:55Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    },
+    {
+     "iati_identifier": "XM-DAC-46004-38350-013-LN3012",
+     "title_narrative": [
+      "South Asia Subregional Economic Cooperation Road Connectivity Project"
+     ],
+     "activity_status_code": "3",
+     "last_updated_datetime": "2026-08-26T13:25:57Z",
+     "reporting_org_narrative": [
+      "Asian Development Bank"
+     ]
+    }
+   ]
+  }
+ }
+}

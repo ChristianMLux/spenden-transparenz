@@ -1,0 +1,1909 @@
+[
+ {
+  "org_id": "mountain-heart-nepal",
+  "names": {
+   "common": "Mountain Heart Nepal",
+   "legal": {
+    "value": "Mountain Heart Nepal",
+    "source_url": "https://mhn.org.np/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": null
+   },
+   "local_script": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "no Devanagari name found on org site"
+   },
+   "aliases": [
+    "MHN"
+   ]
+  },
+  "org_type": "national_ngo",
+  "hq": {
+   "country": "NP",
+   "city": "Kathmandu",
+   "source_url": "https://mhn.org.np/"
+  },
+  "website": "https://mhn.org.np/",
+  "registrations": [
+   {
+    "registry": "NP_DAO",
+    "identifier": null,
+    "url": null,
+    "status": "registered",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "note": "org site states District Administration Office (Kathmandu) registration but no number is published"
+   },
+   {
+    "registry": "NP_SWC",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "swc.org.np unreachable 28.08.2026; no SWC affiliation number published on org's own site"
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": 2015,
+    "source_url": "https://mhn.org.np/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": "established following the April 25, 2015 earthquake to serve remote victims",
+    "note": null
+   },
+   "mode": {
+    "value": "own_staff",
+    "source_url": "https://mhn.org.np/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": "non-profit volunteer-driven organization providing primary medical care",
+    "note": "operates own mobile clinics and a rural community hospital (Siddhasthali) rather than through named local implementing partners"
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "partners": []
+  },
+  "current_response": [
+   {
+    "what": "Received an emergency operating grant from Direct Relief; emergency medical teams deployed into flood-affected communities using pre-positioned field medic packs",
+    "where": [
+     "Rasuwa",
+     "Nuwakot"
+    ],
+    "date": null,
+    "amount": null,
+    "currency": null,
+    "source_url": "https://www.directrelief.org/emergency/nepal-floods-2026/",
+    "quote": "connects medical care and outreach to the country's hardest-to-reach areas",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "note": "described by funder (Direct Relief), not found on Mountain Heart Nepal's own site/social media"
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": false,
+    "url": null,
+    "fiscal_year": null,
+    "fiscal_year_end": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "iati_publisher": {
+    "is_publisher": null,
+    "publisher_ref": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "income": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "expenditure": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "names.legal",
+   "names.local_script",
+   "registrations[NP_DAO].identifier",
+   "registrations[NP_SWC].identifier",
+   "nepal_presence.staff_count",
+   "financial_transparency.annual_report",
+   "financial_transparency.audited_financials",
+   "financial_transparency.iati_publisher",
+   "financial_transparency.income",
+   "financial_transparency.expenditure",
+   "financial_transparency.program_ratio"
+  ],
+  "research_notes": "Searched: mhn.org.np (site, no annual report/financials/registration numbers visible), directrelief.org emergency page and partner descriptions (funder-reported flood response). No mention of the Aug 2026 flood found on MHN's own site/press pages; response is documented only through its funder Direct Relief.",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "ngo-federation-of-nepal",
+  "names": {
+   "common": "NGO Federation of Nepal",
+   "legal": {
+    "value": "NGO Federation of Nepal (NFN)",
+    "source_url": "https://ngofederation.org/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": null
+   },
+   "local_script": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "site shows Devanagari for unrelated legal-bill references (e.g. 'संघ संस्था ऐन') but no Devanagari org name was found"
+   },
+   "aliases": [
+    "NFN"
+   ]
+  },
+  "org_type": "alliance",
+  "hq": {
+   "country": "NP",
+   "city": "Kathmandu",
+   "source_url": "https://ngofederation.org/"
+  },
+  "website": "https://ngofederation.org/",
+  "registrations": [
+   {
+    "registry": "NP_SWC",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "swc.org.np unreachable 28.08.2026; no SWC number published on NFN's own site"
+   },
+   {
+    "registry": "IATI",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "d-portal.org did not render publisher data for this session; could not confirm a publisher ref despite being told NFN is an IATI publisher"
+   },
+   {
+    "registry": "IATI",
+    "identifier": "NP-DAO-27-689/063/064",
+    "url": "https://d-portal.org/ctrack.html?publisher=NP-DAO-27-689/063/064",
+    "status": "active",
+    "retrieved_at": "2026-08-28",
+    "verification": "register_confirmed",
+    "note": "IATI Registry organization_list (probe_iati.py, data/raw/iati/registry_publishers_np.json); the ref itself encodes a DAO registration number"
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": 1991,
+    "source_url": "https://ngofederation.org/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": "Established in 1991 for the promotion and protection of social justice, human rights, civic space and pro-poor development",
+    "note": null
+   },
+   "mode": {
+    "value": "own_staff",
+    "source_url": "https://ngofederation.org/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": "umbrella organization or national platform of 6781 NGOs",
+    "note": "operates its own secretariat as an umbrella body of 6,781 member NGOs; membership network itself not listed as named 'partners'"
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "partners": []
+  },
+  "current_response": [],
+  "financial_transparency": {
+   "annual_report": {
+    "available": true,
+    "url": "https://ngofederation.org/categories/5/Annual-Reports",
+    "fiscal_year": null,
+    "fiscal_year_end": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "annual report category page exists but individual documents/years could not be enumerated via fetch"
+   },
+   "iati_publisher": {
+    "is_publisher": true,
+    "publisher_ref": "NP-DAO-27-689/063/064",
+    "source_url": "https://iatiregistry.org/api/3/action/organization_list?all_fields=true",
+    "retrieved_at": "2026-08-28"
+   },
+   "income": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "expenditure": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "names.local_script",
+   "registrations[NP_SWC].identifier",
+   "nepal_presence.staff_count",
+   "current_response (none found despite NFN being the main national NGO umbrella body)",
+   "financial_transparency.annual_report.fiscal_year",
+   "financial_transparency.audited_financials",
+   "financial_transparency.income",
+   "financial_transparency.expenditure",
+   "financial_transparency.program_ratio"
+  ],
+  "research_notes": "Searched ngofederation.org (About, Annual Reports category, Press Release category, News category, homepage nav) — no Aug 2026 flood-specific statement was visible via fetch (category pages returned navigation but not enumerable list items, likely JS-rendered). Tried d-portal.org for IATI publisher data — page did not render usable content this session. As the country's largest NGO umbrella body (6,781 members, since 1991), the absence of a discoverable public flood statement is itself notable.",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "community-self-reliance-centre",
+  "names": {
+   "common": "Community Self Reliance Centre",
+   "legal": {
+    "value": "Community Self Reliance Centre (CSRC Nepal)",
+    "source_url": "https://csrcnepal.org/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": null
+   },
+   "local_script": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "no Devanagari name found on org site"
+   },
+   "aliases": [
+    "CSRC",
+    "CSRC Nepal"
+   ]
+  },
+  "org_type": "national_ngo",
+  "hq": {
+   "country": "NP",
+   "city": "Kathmandu",
+   "source_url": "https://csrcnepal.org/"
+  },
+  "website": "https://csrcnepal.org/",
+  "registrations": [
+   {
+    "registry": "NP_SWC",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "swc.org.np unreachable 28.08.2026; no SWC number published on org's own site"
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "founding year not stated on the pages fetched"
+   },
+   "mode": {
+    "value": "own_staff",
+    "source_url": "https://csrcnepal.org/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": "org site describes its own offices, staff contact lines and operating hours; inferred from that rather than an explicit statement"
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "partners": []
+  },
+  "current_response": [
+   {
+    "what": "Named by CARE Nepal as a local partner coordinating on the flood response and preparing emergency relief (shelter, hygiene, dignity kits) for affected families",
+    "where": [
+     "unspecified"
+    ],
+    "date": null,
+    "amount": null,
+    "currency": null,
+    "source_url": "https://www.care.org/media-and-press/care-nepal-stands-ready-to-support-communities-affected-by-bhote-koshi-river-flash-flood/",
+    "quote": "local partners including Community Self Reliance Centre (CSRC)",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "note": "role described by CARE Nepal, not confirmed on CSRC's own site; no CSRC-authored statement about the flood was found"
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": false,
+    "url": null,
+    "fiscal_year": null,
+    "fiscal_year_end": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "iati_publisher": {
+    "is_publisher": null,
+    "publisher_ref": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "income": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "expenditure": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "names.local_script",
+   "nepal_presence.since_year",
+   "nepal_presence.staff_count",
+   "registrations[NP_SWC].identifier",
+   "financial_transparency.annual_report",
+   "financial_transparency.audited_financials",
+   "financial_transparency.iati_publisher",
+   "financial_transparency.income",
+   "financial_transparency.expenditure",
+   "financial_transparency.program_ratio"
+  ],
+  "research_notes": "Searched csrcnepal.org (land rights/about pages, no annual report or financials found) and CARE Nepal's press release naming CSRC as a coordination partner. CSRC's own site/social presence shows no direct statement about the Aug 2026 flood — its only documented role comes via CARE Nepal's press release.",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "caritas-nepal",
+  "names": {
+   "common": "Caritas Nepal",
+   "legal": {
+    "value": "Caritas Nepal",
+    "source_url": "https://caritasnepal.org/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": null
+   },
+   "local_script": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "aliases": []
+  },
+  "org_type": "national_ngo",
+  "hq": {
+   "country": "NP",
+   "city": "Lalitpur",
+   "source_url": "https://caritasnepal.org/"
+  },
+  "website": "https://caritasnepal.org/",
+  "registrations": [
+   {
+    "registry": "NP_SWC",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "swc.org.np unreachable 28.08.2026; no SWC number published on org's own site"
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": 1990,
+    "source_url": "https://caritasnepal.org/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": "established to serve the poor, most disadvantaged and marginalized people... initially responding to devastating floods and natural disasters",
+    "note": null
+   },
+   "mode": {
+    "value": "own_staff",
+    "source_url": "https://caritasnepal.org/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": "national Catholic charity with own office in Dhobighat, Lalitpur"
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "partners": []
+  },
+  "current_response": [],
+  "financial_transparency": {
+   "annual_report": {
+    "available": true,
+    "url": null,
+    "fiscal_year": null,
+    "fiscal_year_end": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "homepage menu lists 'Annual Reports' and 'Reports & Case Studies' sections but a working direct document URL could not be confirmed via fetch"
+   },
+   "iati_publisher": {
+    "is_publisher": null,
+    "publisher_ref": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "income": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "expenditure": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "names.local_script",
+   "registrations[NP_SWC].identifier",
+   "nepal_presence.staff_count",
+   "current_response (org's own news page shows no flood item as of 28.08.2026 despite CRS press describing coordination with 'Caritas Nepal and local partners')",
+   "financial_transparency.annual_report.url",
+   "financial_transparency.audited_financials",
+   "financial_transparency.iati_publisher",
+   "financial_transparency.income",
+   "financial_transparency.expenditure",
+   "financial_transparency.program_ratio"
+  ],
+  "research_notes": "Searched caritasnepal.org (About, News page — most recent items from May 2026 and earlier, nothing on the Aug 2026 flood as of retrieval). Catholic Relief Services and Caritas Australia pages mention 'coordinating with Caritas Nepal and local partners' but no fetchable primary statement from Caritas Nepal itself was found, so no current_response entry was recorded — a real gap between third-party mentions and the org's own published channel.",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "nepal-lions-md325",
+  "names": {
+   "common": "Lions Clubs International Multiple District 325 (Nepal)",
+   "legal": {
+    "value": "Lions Clubs International Multiple District 325",
+    "source_url": "https://lionsclubs.org.np/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": null
+   },
+   "local_script": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Nepali-language news items exist on the site but no Devanagari organisation name was found"
+   },
+   "aliases": [
+    "Nepal Lions",
+    "MD 325 Nepal",
+    "Lions MD325"
+   ]
+  },
+  "org_type": "community_org",
+  "hq": {
+   "country": "NP",
+   "city": "Kathmandu",
+   "source_url": "https://lionsclubs.org.np/"
+  },
+  "website": "https://lionsclubs.org.np/",
+  "registrations": [
+   {
+    "registry": "NP_SWC",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "swc.org.np unreachable 28.08.2026; no SWC number published on org's own site"
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "site references a 'History of Lions 325 Nepal' page but the founding year was not visible via fetch"
+   },
+   "mode": {
+    "value": "own_staff",
+    "source_url": "https://lionsclubs.org.np/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": "43463 total members across 2253 clubs",
+    "note": "operates through its own network of member clubs rather than named local implementing partners"
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "partners": []
+  },
+  "current_response": [
+   {
+    "what": "Posted a flood appeal/news item titled 'Recent Flood in Rasuwa (Request for Appeal)'",
+    "where": [
+     "Rasuwa"
+    ],
+    "date": "2026-08-27",
+    "amount": null,
+    "currency": null,
+    "source_url": "https://lionsclubs.org.np/news/",
+    "quote": "A devastating flood originating from the China-Tibet border has caused significant loss of life and property across Rasuwa",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "note": "an appeal for support, not confirmation of a completed distribution"
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": false,
+    "url": null,
+    "fiscal_year": null,
+    "fiscal_year_end": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "iati_publisher": {
+    "is_publisher": null,
+    "publisher_ref": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "income": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "expenditure": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "names.local_script",
+   "nepal_presence.since_year",
+   "nepal_presence.staff_count",
+   "registrations[NP_SWC].identifier",
+   "financial_transparency.annual_report",
+   "financial_transparency.audited_financials",
+   "financial_transparency.iati_publisher",
+   "financial_transparency.income",
+   "financial_transparency.expenditure",
+   "financial_transparency.program_ratio"
+  ],
+  "research_notes": "Searched lionsclubs.org.np (homepage, news page) — found a self-published flood appeal dated 27 Aug 2026 but no financial documents, registration numbers, or founding year.",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "hindu-swayamsevak-sangh-nepal",
+  "names": {
+   "common": "Hindu Swayamsevak Sangh Nepal",
+   "legal": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "no official Nepal-registered legal name found; described in press as the Nepal chapter of the international Hindu Swayamsevak Sangh network"
+   },
+   "local_script": {
+    "value": "हिन्दू स्वयंसेवक संघ नेपाल",
+    "source_url": "https://dharananews.com/2026/08/27/%E0%A4%AC%E0%A4%BE%E0%A4%A2%E0%A5%80-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AD%E0%A4%BE%E0%A4%B5%E0%A4%BF%E0%A4%A4-%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%87%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A4%BE-2/",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "quote": "हिन्दू स्वयंसेवक संघ नेपालद्वारा उद्धार कार्य प्रारम्भ",
+    "note": null
+   },
+   "aliases": [
+    "HSS Nepal"
+   ]
+  },
+  "org_type": "community_org",
+  "hq": {
+   "country": "NP",
+   "city": null,
+   "source_url": "https://organiser.org/2026/08/27/377334/world/nepal-floods-sewa-international-and-hindu-swayamsevak-sangh-launch-relief-operations/"
+  },
+  "website": null,
+  "registrations": [
+   {
+    "registry": "NP_SWC",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "no evidence found of separate Nepal registration; may operate as a volunteer chapter of the international HSS network without distinct Nepali charity registration"
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "mode": {
+    "value": "own_staff",
+    "source_url": "https://organiser.org/2026/08/27/377334/world/nepal-floods-sewa-international-and-hindu-swayamsevak-sangh-launch-relief-operations/",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "quote": "A team of relief workers has already reached Nuwakot",
+    "note": "reported as operating with own volunteers rather than a named local implementing partner"
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "partners": [
+    {
+     "value": "Sewa International Nepal",
+     "source_url": "https://organiser.org/2026/08/27/377334/world/nepal-floods-sewa-international-and-hindu-swayamsevak-sangh-launch-relief-operations/",
+     "retrieved_at": "2026-08-28",
+     "verification": "third_party_reported",
+     "quote": "Sewa International Nepal, in collaboration with Hindu Swayamsevak Sangh Nepal, has launched a relief and service operation",
+     "note": null
+    }
+   ]
+  },
+  "current_response": [
+   {
+    "what": "Launched a joint relief and service operation with Sewa International Nepal; a team of relief workers reached Nuwakot to assess needs and coordinate assistance",
+    "where": [
+     "Nuwakot"
+    ],
+    "date": "2026-08-27",
+    "amount": null,
+    "currency": null,
+    "source_url": "https://organiser.org/2026/08/27/377334/world/nepal-floods-sewa-international-and-hindu-swayamsevak-sangh-launch-relief-operations/",
+    "quote": "A team of relief workers has already reached Nuwakot, where they are assessing the situation on the ground, identifying urgent needs",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "note": "source (organiser.org) is an RSS/HSS-affiliated Indian outlet; corroborated independently by Nepali outlet dharananews.com"
+   },
+   {
+    "what": "Began rescue work in a flood-affected area, per Nepali press",
+    "where": [
+     "unspecified"
+    ],
+    "date": "2026-08-27",
+    "amount": null,
+    "currency": null,
+    "source_url": "https://dharananews.com/2026/08/27/%E0%A4%AC%E0%A4%BE%E0%A4%A2%E0%A5%80-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AD%E0%A4%BE%E0%A4%B5%E0%A4%BF%E0%A4%A4-%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%87%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A4%BE-2/",
+    "quote": "बाढी प्रभावित क्षेत्रमा हिन्दू स्वयंसेवक संघ नेपालद्वारा उद्धार कार्य प्रारम्भ",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "note": null
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": false,
+    "url": null,
+    "fiscal_year": null,
+    "fiscal_year_end": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "iati_publisher": {
+    "is_publisher": null,
+    "publisher_ref": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "income": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "expenditure": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "names.legal",
+   "hq.city",
+   "website",
+   "nepal_presence.since_year",
+   "nepal_presence.staff_count",
+   "registrations[NP_SWC].identifier",
+   "financial_transparency.annual_report",
+   "financial_transparency.audited_financials",
+   "financial_transparency.iati_publisher",
+   "financial_transparency.income",
+   "financial_transparency.expenditure",
+   "financial_transparency.program_ratio"
+  ],
+  "research_notes": "No official Nepal-specific website found; all information comes from press coverage (one Indian RSS-affiliated outlet, one Nepali outlet) of a joint operation with Sewa International Nepal. No registration, financial, or governance data found anywhere.",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "vishwa-hindu-parishad-nepal",
+  "names": {
+   "common": "Vishwa Hindu Parishad Nepal",
+   "legal": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "local_script": {
+    "value": "विश्व हिन्दू परिषद् नेपाल",
+    "source_url": "https://dharananews.com/2026/08/27/%E0%A4%AC%E0%A4%BE%E0%A4%A2%E0%A5%80-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AD%E0%A4%BE%E0%A4%B5%E0%A4%BF%E0%A4%A4-%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%87%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A4%BE-2/",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "quote": "विश्व हिन्दू परिषद् नेपाल",
+    "note": null
+   },
+   "aliases": [
+    "VHP Nepal"
+   ]
+  },
+  "org_type": "community_org",
+  "hq": {
+   "country": "NP",
+   "city": null,
+   "source_url": "https://dharananews.com/2026/08/27/%E0%A4%AC%E0%A4%BE%E0%A4%A2%E0%A5%80-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AD%E0%A4%BE%E0%A4%B5%E0%A4%BF%E0%A4%A4-%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%87%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A4%BE-2/"
+  },
+  "website": null,
+  "registrations": [
+   {
+    "registry": "NP_SWC",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "no registration information found anywhere; only a press mention and an apparent social media handle (@vhpnepal, not independently fetched) were located"
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "mode": {
+    "value": "unknown",
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "partners": []
+  },
+  "current_response": [
+   {
+    "what": "Volunteers mobilised for rescue, service and relief work in flood-affected areas, alongside Hindu Swayamsevak Sangh Nepal and others",
+    "where": [
+     "unspecified"
+    ],
+    "date": "2026-08-27",
+    "amount": null,
+    "currency": null,
+    "source_url": "https://dharananews.com/2026/08/27/%E0%A4%AC%E0%A4%BE%E0%A4%A2%E0%A5%80-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AD%E0%A4%BE%E0%A4%B5%E0%A4%BF%E0%A4%A4-%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%87%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A4%BE-2/",
+    "quote": "हिन्दू स्वयंसेवक संघ नेपाल, विश्व हिन्दू परिषद् नेपाल लगायतका संस्थाका स्वयंसेवकहरू उद्धार, सेवा तथा राहत कार्यका लागि प्रभावित क्षेत्रमा परिचालित",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "note": null
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": false,
+    "url": null,
+    "fiscal_year": null,
+    "fiscal_year_end": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "iati_publisher": {
+    "is_publisher": null,
+    "publisher_ref": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "income": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "expenditure": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "names.legal",
+   "hq.city",
+   "website",
+   "nepal_presence.since_year",
+   "nepal_presence.mode",
+   "nepal_presence.staff_count",
+   "registrations[NP_SWC].identifier",
+   "financial_transparency.annual_report",
+   "financial_transparency.audited_financials",
+   "financial_transparency.iati_publisher",
+   "financial_transparency.income",
+   "financial_transparency.expenditure",
+   "financial_transparency.program_ratio"
+  ],
+  "research_notes": "Only a single Nepali press mention (one clause in a dharananews.com article about HSS Nepal) plus an apparent Twitter/X handle (@vhpnepal, not independently fetched) were found. No website, no registration, no financial data, no dedicated coverage of its own activities beyond being named alongside HSS Nepal. A textbook example of the findability problem for local responders.",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "dhulikhel-hospital",
+  "names": {
+   "common": "Dhulikhel Hospital",
+   "legal": {
+    "value": "Dhulikhel Hospital – Kathmandu University Hospital",
+    "source_url": "https://www.directrelief.org/emergency/nepal-floods-2026/",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "quote": "a 475-bed facility in Kavrepalanchok east of Kathmandu",
+    "note": null
+   },
+   "local_script": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "aliases": []
+  },
+  "org_type": "foundation",
+  "hq": {
+   "country": "NP",
+   "city": "Dhulikhel, Kavrepalanchok",
+   "source_url": "https://www.directrelief.org/emergency/nepal-floods-2026/"
+  },
+  "website": null,
+  "registrations": [
+   {
+    "registry": "NP_SWC",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "no registration information found; org's own website could not be reached this session (DNS lookup failures for dhulikhelhospital.org and kusms.edu.np)"
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "mode": {
+    "value": "own_staff",
+    "source_url": "https://www.directrelief.org/emergency/nepal-floods-2026/",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "quote": "deployed medical staff equipped with Direct Relief field medic packs and emergency supplies",
+    "note": null
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "partners": []
+  },
+  "current_response": [
+   {
+    "what": "Deployed medical staff equipped with Direct Relief field medic packs and emergency supplies into flood-affected areas; prepared to receive injured patients evacuated from the hardest-hit communities",
+    "where": [
+     "unspecified"
+    ],
+    "date": null,
+    "amount": null,
+    "currency": null,
+    "source_url": "https://www.directrelief.org/2026/08/nepal-floods-dhulikhel-hospital-direct-relief-aid/",
+    "quote": "preparing to receive injured patients evacuated from the hardest-hit communities",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "note": "described via funder Direct Relief; the hospital's own site could not be reached this session"
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": false,
+    "url": null,
+    "fiscal_year": null,
+    "fiscal_year_end": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "iati_publisher": {
+    "is_publisher": null,
+    "publisher_ref": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "income": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "Direct Relief states it gave Dhulikhel Hospital '$2.5 million in medical support in 2026' — this is aid received from one funder, not the hospital's total organisational income, so it is not recorded here as income",
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "expenditure": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "names.local_script",
+   "hq.city (precise)",
+   "website",
+   "nepal_presence.since_year",
+   "nepal_presence.staff_count",
+   "registrations[NP_SWC].identifier",
+   "financial_transparency.annual_report",
+   "financial_transparency.audited_financials",
+   "financial_transparency.iati_publisher",
+   "financial_transparency.income",
+   "financial_transparency.expenditure",
+   "financial_transparency.program_ratio"
+  ],
+  "research_notes": "Own website unreachable (DNS failures for dhulikhelhospital.org and kusms.edu.np during this session); all information comes from Direct Relief's description of it as a funded partner hospital.",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "worec-nepal",
+  "names": {
+   "common": "WOREC Nepal",
+   "legal": {
+    "value": "Women's Rehabilitation Centre (WOREC Nepal)",
+    "source_url": "https://worecnepal.org/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": null
+   },
+   "local_script": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "aliases": [
+    "WOREC"
+   ]
+  },
+  "org_type": "national_ngo",
+  "hq": {
+   "country": "NP",
+   "city": "Lalitpur",
+   "source_url": "https://worecnepal.org/"
+  },
+  "website": "https://worecnepal.org/",
+  "registrations": [
+   {
+    "registry": "NP_SWC",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "swc.org.np unreachable 28.08.2026; no SWC number published on org's own site"
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": null,
+    "source_url": "https://worecnepal.org/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": "over 34 years",
+    "note": "site states 'over 34 years' of operation (self-reported), implying founding around the early 1990s, but no exact year is stated so value left null"
+   },
+   "mode": {
+    "value": "own_staff",
+    "source_url": "https://worecnepal.org/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": "a movement based organization that functions with the premise of women rights and social justice",
+    "note": null
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "partners": []
+  },
+  "current_response": [
+   {
+    "what": "Published a public appeal calling on the government and all stakeholders to unite for rescue, relief and rehabilitation in Rasuwa; committed to cooperate and coordinate on relief",
+    "where": [
+     "Rasuwa"
+    ],
+    "date": null,
+    "amount": null,
+    "currency": null,
+    "source_url": "https://worecnepal.org/united_for-response-during-disaster_in_rasuwa/",
+    "quote": "सहयोग तथा राहतका लागि हरसम्भव सहयोग, समन्वय र सहकार्यका लागि ओरेक प्रतिवद्धता व्यक्त गर्दछ",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "note": "an appeal/commitment statement calling on others to unite, not confirmation of a completed distribution — no items distributed or people reached are stated"
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": false,
+    "url": null,
+    "fiscal_year": null,
+    "fiscal_year_end": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "iati_publisher": {
+    "is_publisher": null,
+    "publisher_ref": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "income": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "expenditure": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "names.local_script",
+   "nepal_presence.since_year (exact)",
+   "nepal_presence.staff_count",
+   "registrations[NP_SWC].identifier",
+   "current_response[0].date",
+   "financial_transparency.annual_report",
+   "financial_transparency.audited_financials",
+   "financial_transparency.iati_publisher",
+   "financial_transparency.income",
+   "financial_transparency.expenditure",
+   "financial_transparency.program_ratio"
+  ],
+  "research_notes": "Searched worecnepal.org homepage and the specific Rasuwa flood press release. No annual report/financials/registration numbers were found; the flood-response page is an appeal to other stakeholders plus a general commitment to cooperate, not a record of WOREC's own direct relief activity.",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "non-resident-nepali-association",
+  "names": {
+   "common": "Non-Resident Nepali Association",
+   "legal": {
+    "value": "Non-Resident Nepali Association (NRNA)",
+    "source_url": "https://www.nrna.org.np/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": null,
+    "note": null
+   },
+   "local_script": {
+    "value": "गैरआवासीय नेपाली संघ",
+    "source_url": "https://www.nrna.org.np/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": "गैरआवासीय नेपाली संघ",
+    "note": null
+   },
+   "aliases": [
+    "NRNA",
+    "NRN Association"
+   ]
+  },
+  "org_type": "diaspora_charity",
+  "hq": {
+   "country": "NP",
+   "city": "Kathmandu",
+   "source_url": "https://www.nrna.org.np/"
+  },
+  "website": "https://www.nrna.org.np/",
+  "registrations": [
+   {
+    "registry": "NP_SWC",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "swc.org.np unreachable 28.08.2026; no SWC number published on org's own site"
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": 2003,
+    "source_url": "https://www.nrna.org.np/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": "established October 11, 2003",
+    "note": null
+   },
+   "mode": {
+    "value": "own_staff",
+    "source_url": "https://www.nrna.org.np/",
+    "retrieved_at": "2026-08-28",
+    "verification": "self_reported",
+    "quote": "a non-governmental global organization and a network of Nepali origin by establishing National Coordination Council (NCC) in 86 countries",
+    "note": "Nepal HQ (International Coordination Council) is self-operated; global reach is via its own diaspora chapters, not named local Nepal-based implementing partners"
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "partners": []
+  },
+  "current_response": [
+   {
+    "what": "Announced NPR 50 million (5 crore) in immediate support for flood-affected areas",
+    "where": [
+     "Rasuwa",
+     "Nuwakot"
+    ],
+    "date": "2026-08-26",
+    "amount": 50000000,
+    "currency": "NPR",
+    "source_url": "https://www.nepalilink.com/2026/08/26/124174.html",
+    "quote": "गैरआवासीय नेपाली संघ (एनआरएनए)ले तत्काल ५ करोड रुपैयाँ सहयोग गर्ने घोषणा गरेको थियो",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "note": "amount is a pledge/announcement, not confirmed disbursement"
+   },
+   {
+    "what": "Sent a team with relief materials (food, health supplies, medicine) to affected areas",
+    "where": [
+     "Rasuwa",
+     "Nuwakot"
+    ],
+    "date": "2026-08-26",
+    "amount": null,
+    "currency": null,
+    "source_url": "https://www.dcnepal.com/2026/08/790745/",
+    "quote": "रसुवा बाढी : एनआरएनए टोली राहत लिएर जाने",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "note": null
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": true,
+    "url": null,
+    "fiscal_year": null,
+    "fiscal_year_end": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": "org's Resources page lists items titled 'Financial Report 23-25', 'GS Progress Report 2024' and audit reports, but the resources sub-page returned 404 when fetched directly so no working document URL could be captured"
+   },
+   "iati_publisher": {
+    "is_publisher": null,
+    "publisher_ref": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "income": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "expenditure": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "registrations[NP_SWC].identifier",
+   "nepal_presence.staff_count",
+   "financial_transparency.annual_report.url",
+   "financial_transparency.audited_financials",
+   "financial_transparency.iati_publisher",
+   "financial_transparency.income",
+   "financial_transparency.expenditure",
+   "financial_transparency.program_ratio"
+  ],
+  "research_notes": "Searched nrna.org.np homepage (found founding date, HQ, and a 'Resources' menu referencing financial/audit report titles) and Nepali press (nepalilink.com, dcnepal.com) for the flood pledge/team deployment. Direct link to the Resources/reports sub-page 404'd during this session.",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "kiwanis-club-rupandehi-lumbini",
+  "names": {
+   "common": "Kiwanis Club of Rupandehi Lumbini",
+   "legal": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "local_script": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "aliases": []
+  },
+  "org_type": "community_org",
+  "hq": {
+   "country": "NP",
+   "city": null,
+   "source_url": "https://www.lumbinionline.com/41277/"
+  },
+  "website": null,
+  "registrations": [
+   {
+    "registry": "NP_SWC",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "no registration information found; only a single local-press mention exists"
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "mode": {
+    "value": "unknown",
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "partners": []
+  },
+  "current_response": [
+   {
+    "what": "Announced a NPR 50,000 contribution toward the Prime Minister's Disaster Relief Fund for flood relief and rehabilitation",
+    "where": [
+     "unspecified"
+    ],
+    "date": "2026-08-27",
+    "amount": 50000,
+    "currency": "NPR",
+    "source_url": "https://www.lumbinionline.com/41277/",
+    "quote": "to support relief and rehabilitation efforts for citizens affected by natural disasters",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "note": "club president Govindhprasad Bhusal quoted; club is based in Rupandehi district, outside the flood zone itself"
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": false,
+    "url": null,
+    "fiscal_year": null,
+    "fiscal_year_end": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "iati_publisher": {
+    "is_publisher": null,
+    "publisher_ref": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "income": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "expenditure": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "names.legal",
+   "names.local_script",
+   "hq.city",
+   "website",
+   "nepal_presence.since_year",
+   "nepal_presence.mode",
+   "nepal_presence.staff_count",
+   "registrations[NP_SWC].identifier",
+   "financial_transparency.annual_report",
+   "financial_transparency.audited_financials",
+   "financial_transparency.iati_publisher",
+   "financial_transparency.income",
+   "financial_transparency.expenditure",
+   "financial_transparency.program_ratio"
+  ],
+  "research_notes": "Found only through a single local Nepali news article (Lumbini Online, Rupandehi district). No website, no registration, no other coverage found. Illustrates the findability problem for small local service clubs.",
+  "last_updated": "2026-08-28"
+ },
+ {
+  "org_id": "the-rising-youth-club",
+  "names": {
+   "common": "The Rising Youth Club",
+   "legal": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "local_script": {
+    "value": "द राइजिङ युवा क्लब",
+    "source_url": "https://himalpress.com/2026/08/the-rising-youth-club-will-be-deployed-in-the-field-to-rescue-and-provide-relief-to-the-flood-victims/",
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "quote": "द राइजिङ युवा क्लब",
+    "note": null
+   },
+   "aliases": []
+  },
+  "org_type": "community_org",
+  "hq": {
+   "country": "NP",
+   "city": null,
+   "source_url": "https://himalpress.com/2026/08/the-rising-youth-club-will-be-deployed-in-the-field-to-rescue-and-provide-relief-to-the-flood-victims/"
+  },
+  "website": null,
+  "registrations": [
+   {
+    "registry": "NP_SWC",
+    "identifier": null,
+    "url": null,
+    "status": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "note": "no registration/legal status mentioned in the single press article found"
+   }
+  ],
+  "nepal_presence": {
+   "since_year": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "mode": {
+    "value": "unknown",
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "staff_count": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "partners": []
+  },
+  "current_response": [
+   {
+    "what": "President Suresh Dangol announced the club would deploy to flood-affected areas in Rasuwa to directly take part in rescue, relief distribution and necessary assistance",
+    "where": [
+     "Rasuwa"
+    ],
+    "date": "2026-08-26",
+    "amount": null,
+    "currency": null,
+    "source_url": "https://himalpress.com/2026/08/the-rising-youth-club-will-be-deployed-in-the-field-to-rescue-and-provide-relief-to-the-flood-victims/",
+    "quote": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "third_party_reported",
+    "note": "the fetch tool returned an English paraphrase ('reach flood-affected areas and directly participate in rescue, relief distribution and necessary assistance') rather than an extracted verbatim Nepali sentence, so no quote field is recorded; only a phone contact (9851269100) was given, no website or social media, no registration status"
+   }
+  ],
+  "financial_transparency": {
+   "annual_report": {
+    "available": false,
+    "url": null,
+    "fiscal_year": null,
+    "fiscal_year_end": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "audited_financials": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "iati_publisher": {
+    "is_publisher": null,
+    "publisher_ref": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28"
+   },
+   "income": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "expenditure": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null,
+    "currency": null,
+    "fiscal_year": null,
+    "scope": null
+   },
+   "program_ratio": {
+    "value": null,
+    "source_url": null,
+    "retrieved_at": "2026-08-28",
+    "verification": "unverified",
+    "quote": null,
+    "note": null
+   },
+   "peer_group": null
+  },
+  "warnings": [],
+  "data_gaps": [
+   "names.legal",
+   "hq.city",
+   "website",
+   "nepal_presence.since_year",
+   "nepal_presence.mode",
+   "nepal_presence.staff_count",
+   "registrations[NP_SWC].identifier",
+   "current_response[0].quote",
+   "financial_transparency.annual_report",
+   "financial_transparency.audited_financials",
+   "financial_transparency.iati_publisher",
+   "financial_transparency.income",
+   "financial_transparency.expenditure",
+   "financial_transparency.program_ratio"
+  ],
+  "research_notes": "Found through a single Nepali press article (Himal Press). No website, no social media, no registration, no financial data — only a club name, a president's name, a phone number, and a stated intention to help. A clear example of a local first-responder group with almost no public footprint.",
+  "last_updated": "2026-08-28"
+ }
+]

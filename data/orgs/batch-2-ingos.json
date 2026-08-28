@@ -1,0 +1,2053 @@
+[
+  {
+    "org_id": "oxfam-in-nepal",
+    "names": {
+      "common": "Oxfam in Nepal",
+      "legal": {
+        "value": "Oxfam (trading as Oxfam GB); registered charity No. 202918 (England & Wales) and SC039042 (Scotland), company limited by guarantee No. 612172",
+        "source_url": "https://www.oxfam.org.uk/terms-and-conditions/",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": null,
+        "note": "Nepal country programme (nepal.oxfam.org) is run by Oxfam GB, not a separate Nepali legal entity or the Nairobi-based Oxfam International secretariat. The 2026 flood appeal for Nepal is hosted on oxfam.org.uk (Oxfam GB's own donation domain), and nepal.oxfam.org does not name a distinct local legal entity."
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "no Nepali-script name found on nepal.oxfam.org pages fetched"
+      },
+      "aliases": [
+        "Oxfam GB",
+        "Oxfam Great Britain",
+        "Oxfam"
+      ]
+    },
+    "org_type": "ingo",
+    "hq": {
+      "country": "GB",
+      "city": "Oxford",
+      "source_url": "https://www.oxfam.org.uk/terms-and-conditions/"
+    },
+    "website": "https://nepal.oxfam.org",
+    "registrations": [
+      {
+        "registry": "UK_CC",
+        "identifier": "202918",
+        "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/202918",
+        "status": "registered",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "note": "Charity Commission register page returned HTTP 403 to automated fetch on 2026-08-28 (bot protection); number 202918 corroborated on Oxfam's own terms-and-conditions page. Not directly register-confirmed in this session."
+      },
+      {
+        "registry": "NP_SWC",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "SWC site (swc.org.np) unreachable 2026-08-28. Oxfam's own Nepal 'Accountability' page states work is regularly audited and details made available to the Social Welfare Council of the Government of Nepal, but publishes no SWC registration number."
+      }
+    ],
+    "nepal_presence": {
+      "since_year": {
+        "value": null,
+        "source_url": "https://nepal.oxfam.org/who-we-are",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "Oxfam has been working in Nepal since the early 1980s",
+        "note": "org states only 'early 1980s', no exact year given, so value left null rather than guessed"
+      },
+      "mode": {
+        "value": "both",
+        "source_url": "https://nepal.oxfam.org/who-we-are",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "works in partnership with local civil society organisations and the government authorities",
+        "note": "Normalized to the 'both' enum value: page also references Oxfam staff loading supplies for earthquake-affected families, indicating both a direct-staff and partner-delivery model; no specific partner names given."
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "not found on pages checked"
+      },
+      "partners": []
+    },
+    "current_response": [
+      {
+        "what": "Emergency appeal launched; Oxfam says it is following the situation and in contact with partners on the ground, with initial priorities identified as WASH, food, and protection/shelter support",
+        "where": [
+          "Rasuwa",
+          "Dhading",
+          "Nuwakot"
+        ],
+        "date": "2026-08-27",
+        "amount": null,
+        "currency": null,
+        "source_url": "https://www.oxfam.org.uk/oxfam-in-action/current-emergencies/nepal-floods/",
+        "quote": "Oxfam is closely following the situation and is in contact with our partners on the ground to support the emerging humanitarian needs.",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "note": "This is an appeal/fundraising page describing intended response priorities, not a report of completed distributions or a disbursed amount. No monetary commitment or delivered-aid figure is stated for this flood."
+      }
+    ],
+    "financial_transparency": {
+      "annual_report": {
+        "available": true,
+        "url": "https://www.oxfam.org.uk/documents/1077/Oxfam__GB_Annual_Report_2024-2025.pdf",
+        "fiscal_year": "2024/25",
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "PDF not opened/read in this session; UK charities of this size are legally required to have independently audited accounts but this was not directly confirmed against the document"
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "income": {
+        "value": null,
+        "currency": "GBP",
+        "fiscal_year": null,
+        "scope": "global",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Charity Commission financial-history page returned HTTP 403 to automated fetch; figures not retrieved"
+      },
+      "expenditure": {
+        "value": null,
+        "currency": "GBP",
+        "fiscal_year": null,
+        "scope": "global",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "same 403 block as income"
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No published expenditure split found for this organisation within the research budget."
+      },
+      "peer_group": null
+    },
+    "warnings": [],
+    "data_gaps": [
+      "names.local_script",
+      "nepal_presence.since_year",
+      "nepal_presence.staff_count",
+      "nepal_presence.partners",
+      "registrations[NP_SWC].identifier",
+      "financial_transparency.audited_financials",
+      "financial_transparency.iati_publisher",
+      "financial_transparency.income",
+      "financial_transparency.expenditure",
+      "financial_transparency.annual_report.fiscal_year_end",
+      "financial_transparency.program_ratio"
+    ],
+    "research_notes": "Entity determination: the Nepal country programme site (nepal.oxfam.org) is operated by Oxfam GB (legal name 'Oxfam', UK charity 202918/SC039042, company 612172, HQ Oxford) — the flood appeal is hosted on Oxfam GB's own donation domain (oxfam.org.uk); no separate Nepali legal entity or Oxfam International Secretariat branding was found. UK Charity Commission register (202918) and its financial-history page returned HTTP 403 to automated fetch, so income/expenditure/audit status could not be confirmed register-side. SWC (swc.org.np) not queried (known unreachable). Did not check historical safeguarding/scandal record within this session's budget — warnings left empty rather than assert unverified prior knowledge.",
+    "last_updated": "2026-08-28"
+  },
+  {
+    "org_id": "care-nepal",
+    "names": {
+      "common": "CARE Nepal",
+      "legal": {
+        "value": "Cooperative for Assistance and Relief Everywhere, Inc. (CARE USA) — the CARE International confederation member that appears to operate/support the Nepal country programme; CARE Nepal itself is not separately incorporated under any distinct legal name found in the sources checked",
+        "source_url": "https://projects.propublica.org/nonprofits/organizations/131685039",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": null,
+        "note": "carenepal.org's own About page discloses no legal entity name or registration number for CARE Nepal — only a copyright line and a Lalitpur office address. CARE Nepal's email domain (npl.carenepal@care.org) and the fact that CARE Nepal's flood press release is hosted on care.org (CARE USA's own site) point to CARE USA — legal name 'Cooperative For Assistance And Relief Everywhere Inc', EIN 13-1685039, Atlanta GA. This is inferred, not an explicit legal disclosure, hence verification is self_reported rather than register_confirmed for the Nepal-specific link (the EIN identity itself IS register-confirmed, see registrations)."
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No Nepali-script (Devanagari) name found within research budget."
+      },
+      "aliases": []
+    },
+    "org_type": "ingo",
+    "hq": {
+      "country": "US",
+      "city": "Atlanta",
+      "source_url": "https://projects.propublica.org/nonprofits/organizations/131685039"
+    },
+    "website": "https://carenepal.org",
+    "registrations": [
+      {
+        "registry": "US_IRS",
+        "identifier": "13-1685039",
+        "url": "https://projects.propublica.org/nonprofits/organizations/131685039",
+        "status": "registered (501(c)(3))",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "note": "Filed as 'Cooperative For Assistance And Relief Everywhere Inc' (CARE USA). Registration of the parent/lead confederation member confirmed via ProPublica Nonprofit Explorer (IRS Form 990 data); its specific role vis-à-vis the Nepal country programme is inferred, not registry-stated — see names.legal note."
+      },
+      {
+        "registry": "NP_SWC",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "SWC site (swc.org.np) unreachable 2026-08-28. CARE Nepal's flood press release states it is coordinating with the Government of Nepal and NDRRMA, but no SWC registration/affiliation number was found."
+      },
+      {
+        "registry": "IATI",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "Not checked within the 6-call research budget for this pilot entry. CARE International is known to publish some data to IATI at confederation level, but a Nepal-specific IATI publisher record was not verified."
+      }
+    ],
+    "nepal_presence": {
+      "since_year": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "carenepal.org/history/ likely states a founding year (search-result snippet suggested 1978) but the page was not directly fetched/verified within budget, so left null."
+      },
+      "mode": {
+        "value": "unknown",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "CARE Nepal's about page did not state direct-implementation vs. partner mode with sufficient confidence to map to a specific enum value."
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": null
+      },
+      "partners": []
+    },
+    "current_response": [
+      {
+        "what": "Preparing to mobilise emergency relief (shelter, hygiene kits, dignity kits) and conducting needs assessments in flood-affected communities following the 26 Aug 2026 Bhote Koshi/Trishuli flash flood",
+        "where": [
+          "Rasuwa"
+        ],
+        "date": "2026-08-26",
+        "amount": null,
+        "currency": null,
+        "source_url": "https://www.care.org/media-and-press/care-nepal-stands-ready-to-support-communities-affected-by-bhote-koshi-river-flash-flood/",
+        "quote": "CARE Nepal stands ready to support the government and our partners with immediate relief as well as long-term support for recovery.",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "note": "Statement attributed to Mona Sherpa, CARE Nepal Country Director. Preparedness-stage language ('stands ready', 'preparing to mobilise') — no confirmed disbursement of aid, cash, or funds and no monetary amount given."
+      }
+    ],
+    "financial_transparency": {
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not confirmed within research budget."
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "income": {
+        "value": 909100000,
+        "currency": "USD",
+        "fiscal_year": "2024",
+        "scope": "global",
+        "source_url": "https://projects.propublica.org/nonprofits/organizations/131685039",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": null,
+        "note": "Total revenue for CARE USA, FY ending June 2024, per IRS Form 990 data aggregated by ProPublica. Global consolidated figure, not Nepal-specific."
+      },
+      "expenditure": {
+        "value": 929400000,
+        "currency": "USD",
+        "fiscal_year": "2024",
+        "scope": "global",
+        "source_url": "https://projects.propublica.org/nonprofits/organizations/131685039",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": null,
+        "note": "Total functional expenses for CARE USA, FY ending June 2024, per ProPublica. Global consolidated figure, not Nepal-specific."
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No published expenditure split found for this organisation within the research budget."
+      },
+      "peer_group": null
+    },
+    "warnings": [],
+    "data_gaps": [
+      "names.local_script",
+      "nepal_presence.since_year",
+      "nepal_presence.mode",
+      "nepal_presence.staff_count",
+      "nepal_presence.partners",
+      "financial_transparency.annual_report",
+      "financial_transparency.audited_financials",
+      "financial_transparency.iati_publisher",
+      "financial_transparency.program_ratio",
+      "registrations[NP_SWC].identifier",
+      "registrations[IATI].identifier"
+    ],
+    "research_notes": "Legal-entity determination is inferred (care.org email domain + press hosting), not an explicit statement naming CARE USA as operator of the Nepal programme — flagged clearly. Searched carenepal.org/about-care-nepal (no legal entity disclosed), care.org flood press release (dated 2026-08-26, preparedness-stage only), and ProPublica Nonprofit Explorer for CARE USA's EIN and FY2024 Form 990 financials. NP Social Welfare Council not queried (unreachable). IATI registry, CARE's own annual-report/financials page, and CARE Nepal's founding year/staff/partner mode were not reached within budget.",
+    "last_updated": "2026-08-28"
+  },
+  {
+    "org_id": "world-vision-nepal",
+    "names": {
+      "common": "World Vision International Nepal",
+      "legal": {
+        "value": "World Vision International",
+        "source_url": "https://www.wvi.org/nepal/about-us",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "World Vision International (WVI) Nepal is a part of the World Vision International global partnership operating in nearly 100 countries.",
+        "note": "The Nepal field office is not a separately incorporated Nepali charity; it operates as a field/country office of the global entity 'World Vision International', an association registered in Geneva, Switzerland since 1950 per the Geneva international-organisations directory (geneve-int.ch) — not independently confirmed against the Swiss commercial/association register itself. Distinct from 'World Vision UK' and from the separate Swiss fundraising foundation 'World Vision Switzerland'. IMPORTANT: worldvision.org.np is NOT this organisation — it resolves to an unrelated small Nepali NGO ('WARM Nepal') that coincidentally shares part of the name; the correct site is wvi.org/nepal."
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No Nepali-script (Devanagari) name found on wvi.org/nepal"
+      },
+      "aliases": [
+        "World Vision Nepal",
+        "WVI Nepal",
+        "World Vision International (WVI) Nepal"
+      ]
+    },
+    "org_type": "ingo",
+    "hq": {
+      "country": "CH",
+      "city": "Geneva",
+      "source_url": "https://www.geneve-int.ch/whoswho/association-world-vision-international-wvi"
+    },
+    "website": "https://www.wvi.org",
+    "registrations": [
+      {
+        "registry": "OTHER",
+        "identifier": null,
+        "url": "https://www.geneve-int.ch/whoswho/association-world-vision-international-wvi",
+        "status": "listed",
+        "retrieved_at": "2026-08-28",
+        "verification": "third_party_reported",
+        "note": "Listed as 'Association World Vision International (WVI)' in Geneva's official international-organisations directory (geneve-int.ch) — a directory, not the Swiss commercial/association register (Handelsregister); no registration number obtained."
+      },
+      {
+        "registry": "NP_SWC",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "SWC site (swc.org.np) unreachable 2026-08-28. WVI Nepal almost certainly holds an SWC/project-agreement registration (standard for INGO field offices in Nepal) but no registration number could be sourced."
+      },
+      {
+        "registry": "IATI",
+        "identifier": "wvi",
+        "url": "https://dashboard.iatistandard.org/publishers/wvi/",
+        "status": "active",
+        "retrieved_at": "2026-08-28",
+        "verification": "third_party_reported",
+        "note": "Publisher slug 'wvi' seen on the IATI Dashboard (built on IATI Registry data), not confirmed directly against iatiregistry.org itself."
+      }
+    ],
+    "nepal_presence": {
+      "since_year": {
+        "value": 2001,
+        "source_url": "https://www.wvi.org/nepal/about-us",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "WVI started its long-term development programme in Nepal since 2001 to contribute for well-being of children.",
+        "note": null
+      },
+      "mode": {
+        "value": "both",
+        "source_url": "https://www.wvi.org/nepal/about-us",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "WVI Nepal partners with government, community groups, local NGOs, and the private sector.",
+        "note": "WVI Nepal also runs its own National Office (KC Tower, Kusunti, Lalitpur) implementing programmes directly in 17 districts, per the site's contact page — hence 'both' rather than 'partners' alone."
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": null
+      },
+      "partners": []
+    },
+    "current_response": [
+      {
+        "what": "Preparing emergency assistance: food, emergency shelter kits, safe drinking water, hygiene supplies, child protection services, psychosocial support, community infrastructure restoration",
+        "where": [
+          "Rasuwa",
+          "Nuwakot"
+        ],
+        "date": "2026-08-26",
+        "amount": null,
+        "currency": null,
+        "source_url": "https://www.wvi.org/newsroom/nepal/flash-flood-devastates-rasuwa-and-nuwakot-leaving-162-dead-and-over-400-missing",
+        "quote": "Our hearts are with those who have lost loved ones, those who remain missing, and communities whose homes and livelihoods have been affected.",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "note": "Readiness/appeal announcement, not confirmed disbursement. Published same day as the disaster; article's casualty count (162 dead, 400+ missing) is an early figure since superseded by the ~389 dead/900+ missing toll — no more-current WVI-specific update was found within this session's budget."
+      }
+    ],
+    "financial_transparency": {
+      "annual_report": {
+        "available": true,
+        "url": "https://www.wvi.org/annual-report-2024",
+        "fiscal_year": "2024",
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Annual report landing page did not surface audit statement text within budget; underlying PDF not opened."
+      },
+      "iati_publisher": {
+        "is_publisher": true,
+        "publisher_ref": "wvi",
+        "source_url": "https://dashboard.iatistandard.org/publishers/wvi/",
+        "retrieved_at": "2026-08-28"
+      },
+      "income": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": "2024",
+        "scope": "global",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "An unattributed search-engine summary figure ('$3.14 billion') was excluded per the no-invented-values rule since it wasn't confirmed against a primary source page."
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": "2024",
+        "scope": "global",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": null
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No published expenditure split found for this organisation within the research budget."
+      },
+      "peer_group": null
+    },
+    "warnings": [],
+    "data_gaps": [
+      "names.local_script",
+      "registrations[OTHER geneve-int.ch listing].identifier",
+      "registrations[NP_SWC].identifier",
+      "registrations[NP_SWC].url",
+      "registrations[IATI].identifier (dashboard slug not registry-confirmed)",
+      "nepal_presence.staff_count",
+      "nepal_presence.partners",
+      "financial_transparency.audited_financials",
+      "financial_transparency.annual_report.fiscal_year_end",
+      "financial_transparency.income",
+      "financial_transparency.expenditure",
+      "financial_transparency.program_ratio"
+    ],
+    "research_notes": "Domain trap found and excluded: worldvision.org.np is an unrelated Nepali NGO ('World Vision Nationl [sic] Research and Resource Management Nepal' / WARM Nepal), not World Vision International — the correct Nepal country-programme site is wvi.org/nepal. Confirmed World Vision International is registered as an association in Geneva, Switzerland (distinct from World Vision UK and the separate Swiss fundraising foundation 'World Vision Switzerland'). Found one dated readiness statement (26 Aug 2026) for the Trishuli flood but no disbursement report. Financial figures could not be pinned to a primary-source page within budget. swc.org.np not queried (unreachable).",
+    "last_updated": "2026-08-28"
+  },
+  {
+    "org_id": "plan-international-nepal",
+    "names": {
+      "common": "Plan International Nepal",
+      "legal": {
+        "value": "Plan International, Inc.",
+        "source_url": "https://plan-international.org/our-terms-and-conditions/",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "Plan International, Inc. (a not-for-profit corporation registered in New York State, USA)",
+        "note": "Direct WebFetch of this page returned HTTP 403; text reproduced from search-engine extraction, not independently confirmed by a raw fetch. IMPORTANT CORRECTION to research brief: Plan International, Inc. is a NEW YORK State non-profit, NOT UK-registered. 'Plan Limited' (UK Companies House No. 03001663, Woking) is a wholly-owned SUBSIDIARY that merely houses the International Headquarters — a company, not the global charity. 'Plan International UK' (Charity Commission England & Wales No. 276035) is a THIRD, separate national fundraising charity, also not the entity running Nepal's programme. Neither of the two UK entities was used as this record's legal entity."
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No Devanagari/Nepali-script name found within research budget"
+      },
+      "aliases": []
+    },
+    "org_type": "ingo",
+    "hq": {
+      "country": "US",
+      "city": null,
+      "source_url": "https://plan-international.org/our-terms-and-conditions/"
+    },
+    "website": "https://plan-international.org/nepal/",
+    "registrations": [
+      {
+        "registry": "NP_SWC",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "swc.org.np unreachable 2026-08-28; not attempted. Org's Nepal page states presence since 1978 but no SWC registration number was located."
+      },
+      {
+        "registry": "IATI",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "IATI Registry / d-portal lookup not completed within the 6-call research budget for this org"
+      }
+    ],
+    "nepal_presence": {
+      "since_year": {
+        "value": 1978,
+        "source_url": "https://plan-international.org/nepal/",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": null,
+        "note": "Search-engine summary states org 'has been working in Nepal since 1978'; direct WebFetch of the page was not attempted (budget), so exact wording is not independently confirmed — quote left null rather than risk a non-verbatim string."
+      },
+      "mode": {
+        "value": "both",
+        "source_url": "https://plan-international.org/nepal/",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": null,
+        "note": "Search summary: active in 13 districts directly, and via local partners in 42 districts total. Not independently verified by direct fetch."
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": null
+      },
+      "partners": []
+    },
+    "current_response": [
+      {
+        "what": "Public statement acknowledging the Trishuli flood/landslide and describing which communities Plan International is 'responding to'; no specific relief items, disbursement amounts, or delivery details found in the available excerpt",
+        "where": [
+          "Rasuwa",
+          "Nuwakot",
+          "Dhading"
+        ],
+        "date": "2026-08-27",
+        "amount": null,
+        "currency": null,
+        "source_url": "https://plan-international.org/news/2026/08/27/floods-and-massive-landslide-devastate-communities-along-nepal-china-border/",
+        "quote": "Plan International is responding to the disaster affecting communities across Timure, Rasuwagadhi and Syabrubesi in Rasuwa, Nuwakot and Dhading",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "note": "Solidarity/situation statement, not confirmation of an appeal amount or disbursement. Quote relayed via search-engine extraction; direct WebFetch of this URL returned HTTP 403, so exact verbatim wording is not independently confirmed — treat with caution."
+      }
+    ],
+    "financial_transparency": {
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not researched within the 6-call budget for this org"
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "income": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": null
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": null
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No published expenditure split found for this organisation within the research budget."
+      },
+      "peer_group": null
+    },
+    "warnings": [],
+    "data_gaps": [
+      "names.local_script",
+      "names.aliases",
+      "hq.city",
+      "registrations[NP_SWC].identifier",
+      "registrations[IATI].identifier",
+      "nepal_presence.staff_count",
+      "nepal_presence.partners",
+      "financial_transparency.annual_report",
+      "financial_transparency.audited_financials",
+      "financial_transparency.iati_publisher",
+      "financial_transparency.income",
+      "financial_transparency.expenditure",
+      "financial_transparency.program_ratio"
+    ],
+    "research_notes": "ENTITY DECISION: the research brief's premise that Plan International, Inc. is UK-registered in Woking was checked and NOT confirmed — it is contradicted by plan-international.org's own Terms & Conditions page, which states Plan International, Inc. is a New York State non-profit corporation. Woking houses a separate UK subsidiary company ('Plan Limited'), and 'Plan International UK' (Charity Commission 276035) is a third, distinct national fundraising charity — neither was used as this record's legal entity. Two WebFetch attempts (terms page, flood news article) both returned HTTP 403 and were evidenced only via search-engine text extraction, flagged in each relevant datum's note. IATI, financials, and SWC/staff/partner details unresolved within budget. No disbursement evidence for the 26 Aug 2026 flood was found, only a dated solidarity statement.",
+    "last_updated": "2026-08-28"
+  },
+  {
+    "org_id": "actionaid-nepal",
+    "names": {
+      "common": "ActionAid Nepal",
+      "legal": {
+        "value": "ActionAid Nepal",
+        "source_url": "https://nepal.actionaid.org/about-us",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "ActionAid Nepal ... is a non-governmental national social justice organisation rooted and working locally in different parts and regions of Nepal",
+        "note": "No formal registration number or distinct statutory legal name (e.g. from Nepal's District Administration Office) was found; only the self-description on the org's own About page."
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No Nepali-script (Devanagari) name found in the sources checked"
+      },
+      "aliases": [
+        "Action Aid Nepal"
+      ]
+    },
+    "org_type": "national_ngo",
+    "hq": {
+      "country": "NP",
+      "city": "Kathmandu",
+      "source_url": "https://nepal.actionaid.org/contact"
+    },
+    "website": "https://nepal.actionaid.org",
+    "registrations": [
+      {
+        "registry": "NP_SWC",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "swc.org.np unreachable 2026-08-28 (not fetched). ActionAid Nepal publishes its own 'Brochure - SWC' document implying SWC affiliation, but no specific affiliation number could be verified."
+      }
+    ],
+    "nepal_presence": {
+      "since_year": {
+        "value": 1982,
+        "source_url": "https://nepal.actionaid.org/about-us",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "established in 1982",
+        "note": null
+      },
+      "mode": {
+        "value": "own_staff",
+        "source_url": "https://nepal.actionaid.org/about-us",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "a non-governmental national social justice organisation rooted and working locally in different parts and regions of Nepal",
+        "note": "Describes itself as a distinct national member organisation of the ActionAid International Federation (not a branch office), operating directly in-country rather than solely through named partners."
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": null
+      },
+      "partners": []
+    },
+    "current_response": [],
+    "financial_transparency": {
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": null
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "income": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": "nepal_only",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": null
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": "nepal_only",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": null
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No published expenditure split found for this organisation within the research budget."
+      },
+      "peer_group": null
+    },
+    "warnings": [],
+    "data_gaps": [
+      "names.legal (no register-quality number found)",
+      "registrations[NP_SWC].identifier",
+      "nepal_presence.staff_count",
+      "nepal_presence.partners",
+      "financial_transparency.annual_report",
+      "financial_transparency.audited_financials",
+      "financial_transparency.iati_publisher",
+      "financial_transparency.income",
+      "financial_transparency.expenditure",
+      "current_response"
+    ],
+    "research_notes": "Entity determination: ActionAid Nepal's own About page explicitly self-describes as a national NGO 'member of the ActionAid International Federation' — distinguishing it as a Nepal-based national member, not a branch office. Established 1982, HQ Apsara Marga, Lazimpat, Kathmandu. On this basis org_type=national_ngo and hq.country=NP. NOTE: the site footer attributes copyright to 'Vereniging ActionAid International' (a DUTCH association, RSIN 813342211) — NOT South Africa as the research brief hypothesized. This was judged to be the federation secretariat's shared publishing/holding entity across country sites, not ActionAid Nepal's own registration, so it was not used for this record's hq/registrations — flagged as a correction to the brief. No formal Nepali registration number could be verified (SWC unreachable, no register-quality source found). No coverage of ActionAid activity for the 26 Aug 2026 Trishuli flood was found across ReliefWeb, Nepali press, or the org's own site — current_response is empty.",
+    "last_updated": "2026-08-28"
+  },
+  {
+    "org_id": "habitat-humanity-nepal",
+    "names": {
+      "common": "Habitat for Humanity Nepal",
+      "legal": {
+        "value": "Habitat For Humanity International, Inc.",
+        "source_url": "https://projects.propublica.org/nonprofits/organizations/911914868",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": null,
+        "note": "This is the register-confirmed legal name of the GLOBAL parent (US 501(c)(3), EIN 91-1914868, Americus, GA) that owns the Habitat for Humanity brand. No separately incorporated Nepali legal entity, SWC registration, or distinct legal name for 'Habitat for Humanity Nepal' could be found on habitatnepal.org or elsewhere; habitatnepal.org self-brands as 'Habitat for Humanity Nepal' and has run programs through local partners since 2005, but presents no evidence of separate incorporation."
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No Nepali-script (Devanagari) name found on habitatnepal.org"
+      },
+      "aliases": [
+        "Habitat Nepal",
+        "Habitat for Humanity International Inc"
+      ]
+    },
+    "org_type": "ingo",
+    "hq": {
+      "country": "US",
+      "city": "Americus",
+      "source_url": "https://projects.propublica.org/nonprofits/organizations/911914868"
+    },
+    "website": "https://habitatnepal.org",
+    "registrations": [
+      {
+        "registry": "US_IRS",
+        "identifier": "91-1914868",
+        "url": "https://projects.propublica.org/nonprofits/organizations/911914868",
+        "status": "tax-exempt (501(c)(3))",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "note": "Registration of the global parent entity, Habitat For Humanity International, Inc.; not Nepal-specific."
+      },
+      {
+        "registry": "NP_SWC",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "swc.org.np unreachable 2026-08-28. No SWC registration number is published on habitatnepal.org."
+      },
+      {
+        "registry": "IATI",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "No IATI registry publisher entry found for Habitat for Humanity International (US) or Habitat for Humanity Nepal. Only 'Habitat for Humanity Great Britain' (a separate UK charity, publisher ref hfhgb / GB-CHC-1043641) is a confirmed IATI publisher — a different legal entity, not used here."
+      }
+    ],
+    "nepal_presence": {
+      "since_year": {
+        "value": 1997,
+        "source_url": "https://habitatnepal.org/",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "Since 1997, Habitat for Humanity has worked with more than 200,000 families to build or improve the place they call home.",
+        "note": null
+      },
+      "mode": {
+        "value": "partners",
+        "source_url": "https://www.habitat.org/where-we-build/nepal",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "Since 2005 Habitat Nepal has been implementing its programs through local partners who share the vision of safe, decent shelter for all Nepali families.",
+        "note": "Office also listed at Dhobighat, Lalitpur, so some direct presence/coordination exists alongside partner-delivered programs."
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": null
+      },
+      "partners": []
+    },
+    "current_response": [
+      {
+        "what": "Emergency flood response — needs assessment and coordination with government and humanitarian partners for communities affected by the Rasuwa/Trishuli floods",
+        "where": [
+          "Rasuwa"
+        ],
+        "date": null,
+        "amount": null,
+        "currency": null,
+        "source_url": "https://habitatnepal.org/",
+        "quote": "We are assessing urgent needs and coordinating with government and humanitarian partners to support affected communities.",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "note": "Appeal/assessment-stage statement from a 'RASUWA FLOOD RESPONSE' banner on the org's homepage — no amounts, dates, or beneficiary numbers given. The dedicated flood page linked from this banner (habitatnepal.org/rasuwa-flood-2026) returned HTTP 404. Banner carries no visible publish date; presumed post-26 Aug 2026 based on context but not independently confirmed."
+      }
+    ],
+    "financial_transparency": {
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": "https://projects.propublica.org/nonprofits/organizations/911914868",
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "IRS Form 990 filing confirmed via ProPublica (register-confirmed filing), but an independent/external audit statement was not verified."
+      },
+      "iati_publisher": {
+        "is_publisher": false,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "income": {
+        "value": 329195153,
+        "currency": "USD",
+        "fiscal_year": "2023",
+        "scope": "global",
+        "source_url": "https://projects.propublica.org/nonprofits/organizations/911914868",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": null,
+        "note": "Total revenue from most recent filing (FY ending 2023-06-30) for Habitat For Humanity International, Inc.; global consolidated figure, not Nepal-specific."
+      },
+      "expenditure": {
+        "value": 330613285,
+        "currency": "USD",
+        "fiscal_year": "2023",
+        "scope": "global",
+        "source_url": "https://projects.propublica.org/nonprofits/organizations/911914868",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": null,
+        "note": "Total expenses from most recent filing (FY ending 2023-06-30) for Habitat For Humanity International, Inc.; global consolidated figure, not Nepal-specific."
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No published expenditure split found for this organisation within the research budget."
+      },
+      "peer_group": null
+    },
+    "warnings": [],
+    "data_gaps": [
+      "names.legal (no separate Nepali legal entity found)",
+      "names.local_script",
+      "registrations[NP_SWC].identifier",
+      "registrations[IATI].identifier",
+      "nepal_presence.staff_count",
+      "nepal_presence.partners",
+      "current_response[0].date",
+      "financial_transparency.annual_report",
+      "financial_transparency.audited_financials",
+      "financial_transparency.program_ratio"
+    ],
+    "research_notes": "No separate Nepali incorporation or SWC number found for 'Habitat for Humanity Nepal' despite targeted searches, so legal identity/financials are recorded against the only register-confirmed entity, the US global parent (Habitat For Humanity International, Inc.), flagged throughout as global-scope, not Nepal-only. No dated flood-specific press release found (only an undated homepage banner, since the linked flood page 404'd). swc.org.np not queried (unreachable).",
+    "last_updated": "2026-08-28"
+  },
+  {
+    "org_id": "caritas-nepal",
+    "names": {
+      "common": "Caritas Nepal",
+      "legal": {
+        "value": "Caritas Nepal",
+        "source_url": "https://www.caritasnepal.org/who-we-are/",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": null,
+        "note": "No separate 'legal entity' name found beyond 'Caritas Nepal'; registered as an NGO under Nepal's District Administration Office, Lalitpur under the Society Registration Act 2034 B.S."
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No Nepali/Devanagari-script name found on caritasnepal.org"
+      },
+      "aliases": []
+    },
+    "org_type": "national_ngo",
+    "hq": {
+      "country": "NP",
+      "city": "Lalitpur",
+      "source_url": "https://www.caritasnepal.org/who-we-are/"
+    },
+    "website": "https://www.caritasnepal.org",
+    "registrations": [
+      {
+        "registry": "NP_DAO",
+        "identifier": "85/047/48",
+        "url": null,
+        "status": "registered",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "note": "Registered as an NGO under Nepal's District Administration Office, Lalitpur, under the Society Registration Act 2034 B.S., per Caritas Nepal's own 'Who We Are' page. Register itself not checked (no public online lookup found)."
+      },
+      {
+        "registry": "NP_SWC",
+        "identifier": "248-356",
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "note": "SWC affiliation number 248-356 as stated on caritasnepal.org's own 'Who We Are' page. swc.org.np was unreachable on 2026-08-28 so this could not be cross-checked against the register itself."
+      },
+      {
+        "registry": "IATI",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "Search results reference an IATI Registry publisher page with slug 'cnepal', but direct fetches of iatiregistry.org/publisher/cnepal (with and without www) both returned 404, so this could not be independently confirmed."
+      }
+    ],
+    "nepal_presence": {
+      "since_year": {
+        "value": 1990,
+        "source_url": "https://www.caritasnepal.org/who-we-are/",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": null,
+        "note": "Founded 1990 by Anthony Francis Sharma; established by the Catholic Church in Nepal, originally to address natural disasters and floods."
+      },
+      "mode": {
+        "value": "own_staff",
+        "source_url": "https://www.caritasnepal.org/who-we-are/",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "member of the Caritas International confederation and Caritas Asia",
+        "note": "Caritas Nepal IS the Nepal-registered national entity (social arm of the Catholic Church in Nepal), an autonomous national member of the Caritas Internationalis confederation, not a country office of an international entity — operates directly rather than through named external partners, per its own page."
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": null
+      },
+      "partners": []
+    },
+    "current_response": [],
+    "financial_transparency": {
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "caritasnepal.org's navigation menu references 'Annual Reports' and 'Audit Report' sections, but the actual documents/listing page were not fetched, so availability and content could not be confirmed within the research budget."
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "income": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": "nepal_only",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": null
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": "nepal_only",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": null
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No published expenditure split found for this organisation within the research budget."
+      },
+      "peer_group": null
+    },
+    "warnings": [],
+    "data_gaps": [
+      "names.local_script",
+      "registrations[NP_DAO].url",
+      "registrations[NP_SWC].url",
+      "registrations[IATI].identifier",
+      "registrations[IATI].url",
+      "nepal_presence.staff_count",
+      "nepal_presence.partners",
+      "current_response",
+      "financial_transparency.annual_report",
+      "financial_transparency.audited_financials",
+      "financial_transparency.iati_publisher",
+      "financial_transparency.income",
+      "financial_transparency.expenditure",
+      "financial_transparency.program_ratio"
+    ],
+    "research_notes": "Judgment call: Caritas Nepal is a Nepal-registered national Catholic charity (District Administration Office, Lalitpur, reg. no. 85/047/48, Society Registration Act 2034 B.S.; founded 1990). caritas.org describes national Caritas bodies as 'distinct and autonomous entities' that are members of Caritas Internationalis — i.e. Caritas Nepal is a MEMBER, not a country office. org_type set to national_ngo accordingly, hq.country=NP. No dated, quotable source specifically documenting Caritas Nepal's activities for the 26 Aug 2026 Trishuli flood was found within budget (Caritas Australia appeal page and a CharityWatch blog both failed to fetch), so current_response is empty rather than sourced from unverifiable search snippets. swc.org.np not attempted (unreachable).",
+    "last_updated": "2026-08-28"
+  },
+  {
+    "org_id": "lutheran-world-federation-nepal",
+    "names": {
+      "common": "Lutheran World Federation Nepal (LWF Nepal)",
+      "legal": {
+        "value": "The Lutheran World Federation (Fédération Luthérienne Mondiale)",
+        "source_url": "https://zewo.ch/fr/npo-detail/?relief_organization=federation-lutherienne-mondiale",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": "Legal Name: Fédération Luthérienne Mondiale (Lutheran World Federation); Organization Type: Association",
+        "note": "Zewo (Swiss charity quality-seal registry) lists LWF as a Swiss 'Association' headquartered at Chemin du Pavillon 2, 1218 Le Grand-Saconnex. No separate Nepal-incorporated legal entity was found; LWF Nepal appears to operate as a country programme of the single global Swiss association, not its own legal person. Note: historic references to 'Lutheran World Relief' opening a Nepal office refer to a DIFFERENT US-based sister organization (LWR), not LWF."
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No Nepali-script org name found within search budget"
+      },
+      "aliases": [
+        "LWF",
+        "LWF Nepal",
+        "LWF World Service",
+        "Department for World Service (DWS)",
+        "Fédération Luthérienne Mondiale"
+      ]
+    },
+    "org_type": "ingo",
+    "hq": {
+      "country": "CH",
+      "city": "Le Grand-Saconnex (Geneva)",
+      "source_url": "https://zewo.ch/fr/npo-detail/?relief_organization=federation-lutherienne-mondiale"
+    },
+    "website": "https://lutheranworld.org",
+    "registrations": [
+      {
+        "registry": "CH_ZEWO",
+        "identifier": null,
+        "url": "https://zewo.ch/fr/npo-detail/?relief_organization=federation-lutherienne-mondiale",
+        "status": "certified",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "note": "Zewo-certified since 2019; page shows most recent recertification 2024. No certificate/registration number displayed on the page itself."
+      },
+      {
+        "registry": "NP_SWC",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "swc.org.np unreachable 2026-08-28 (not fetched). LWF Nepal is widely described as operating in Nepal since 1984 as an INGO country programme, which would typically require SWC affiliation, but no registration number could be confirmed."
+      },
+      {
+        "registry": "IATI",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "No IATI Registry publisher page for Lutheran World Federation found via search within the call budget."
+      }
+    ],
+    "nepal_presence": {
+      "since_year": {
+        "value": 1984,
+        "source_url": "https://www.collegenp.com/institute/the-lutheran-world-federation-lwf-nepal",
+        "retrieved_at": "2026-08-28",
+        "verification": "third_party_reported",
+        "quote": null,
+        "note": "Multiple third-party listings describe LWF Nepal as established in 1984 as a country programme of LWF/Department for World Service. Could not independently confirm on lutheranworld.org or worldservice.lutheranworld.org — both blocked automated fetch (HTTP 403) throughout this session."
+      },
+      "mode": {
+        "value": "unknown",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "A LWF World Service Nepal country fact sheet referencing a Kathmandu country office plus Dhanighat/Jhapa field offices was located via search, suggesting direct implementation, but the page/PDF itself could not be fetched (403) to confirm."
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": null
+      },
+      "partners": []
+    },
+    "current_response": [],
+    "financial_transparency": {
+      "annual_report": {
+        "available": true,
+        "url": "https://zewo.ch/wp-content/uploads/charity-documents/the-lutheran-world-federation_annual_review_document_de.pdf",
+        "fiscal_year": "2024",
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": "https://zewo.ch/fr/npo-detail/?relief_organization=federation-lutherienne-mondiale",
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Zewo Gütesiegel certification generally requires externally audited annual accounts as a standing criterion, and LWF is Zewo-certified (recertified 2024), but the audit statement itself was not directly located/verified (PDF not text-extractable with available tools) so left null rather than asserted."
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "income": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": "global",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "PDF titled 'For Hope and a Future — LWF World Service 2024 Annual Report' was located on zewo.ch but could not be parsed for figures (binary PDF, no text extraction tool available)."
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": "global",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Same PDF as income; not extractable within available tools."
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No published expenditure split found for this organisation within the research budget."
+      },
+      "peer_group": null
+    },
+    "warnings": [],
+    "data_gaps": [
+      "names.local_script",
+      "registrations[NP_SWC].identifier",
+      "registrations[IATI].identifier",
+      "nepal_presence.mode",
+      "nepal_presence.staff_count",
+      "nepal_presence.partners",
+      "current_response",
+      "financial_transparency.annual_report.fiscal_year_end",
+      "financial_transparency.audited_financials",
+      "financial_transparency.iati_publisher",
+      "financial_transparency.income",
+      "financial_transparency.expenditure"
+    ],
+    "research_notes": "Entity determination: settled on 'The Lutheran World Federation' — a Swiss Association per the Zewo registry, HQ Le Grand-Saconnex, Geneva. lutheranworld.org and worldservice.lutheranworld.org returned HTTP 403 to every WebFetch attempt (site-wide block against this fetch tool), so several facts rely only on WebSearch snippets or were left null. org_type chosen as 'ingo' over 'alliance' because the entity actually running country programmes and disbursing humanitarian aid (LWF World Service) is functionally classified as an international NGO (e.g. one of UNHCR's largest implementing partners across 24 countries). Because lutheranworld.org itself was unreachable, no dated, quote-verifiable content specific to the 26 Aug 2026 Trishuli flood could be confirmed — current_response left empty rather than guessed from unconfirmed search snippets that appear to conflate earlier flood/earthquake response content. swc.org.np not queried (unreachable).",
+    "last_updated": "2026-08-28"
+  },
+  {
+    "org_id": "humanity-inclusion-nepal",
+    "names": {
+      "common": "Humanity & Inclusion (Handicap International)",
+      "legal": {
+        "value": "Fédération Handicap International",
+        "source_url": "https://www.hi.org/en/legal-notices",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "Fédération Handicap International",
+        "note": "Legal notices page on hi.org (the same domain that publishes the Nepal country page) identifies the publishing/legal entity as 'Fédération Handicap International', SIRET 519 655 997 00038, registered address Lyon Cedex 08, France; registered as an association under the French law of 1 July 1901, recognized as a public utility organisation (Decree of the Council of State, 24 March 1997). hi.org/en/country/nepal is published under this same legal entity — not HI UK, HI US, or another national affiliate."
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No Nepali/Devanagari-script organisation name found in the sources checked."
+      },
+      "aliases": [
+        "Handicap International",
+        "HI",
+        "HI Federation",
+        "Fédération Handicap International"
+      ]
+    },
+    "org_type": "ingo",
+    "hq": {
+      "country": "FR",
+      "city": "Lyon",
+      "source_url": "https://www.hi.org/en/legal-notices"
+    },
+    "website": "https://www.hi.org",
+    "registrations": [
+      {
+        "registry": "OTHER",
+        "identifier": "519 655 997 00038 (SIRET)",
+        "url": "https://www.hi.org/en/legal-notices",
+        "status": "registered",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "note": "France is not in the registry enum. SIRET/SIREN is the French national business/association identifier (INSEE system); entity is a loi-1901 association recognized as 'reconnue d'utilité publique'. Confirmed only from HI's own legal-notices page, not fetched directly from France's INSEE/RNA/data.gouv.fr registry."
+      },
+      {
+        "registry": "NP_SWC",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "swc.org.np unreachable 2026-08-28; could not confirm whether HI's Nepal country programme holds an SWC registration/affiliation number."
+      },
+      {
+        "registry": "IATI",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "Attempted to locate a Handicap International / HI IATI publisher record via d-portal; could not confirm a publisher reference within the research budget."
+      }
+    ],
+    "nepal_presence": {
+      "since_year": {
+        "value": 1996,
+        "source_url": "https://www.hi.org/en/country/nepal",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "HI has been present in Nepal since 1996, initially implementing a regional project in Bangladesh, India and Nepal.",
+        "note": null
+      },
+      "mode": {
+        "value": "own_staff",
+        "source_url": "https://www.hi.org/en/country/nepal",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": null,
+        "note": "Page states HI operates a South Asian Regional Office based in Kathmandu with local staff (paraphrase; exact verbatim sentence not captured)."
+      },
+      "staff_count": {
+        "value": 59,
+        "source_url": "https://www.hi.org/en/country/nepal",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "Number of HI employees: 59",
+        "note": "Page also states 8 current projects in Nepal; project-level detail not captured."
+      },
+      "partners": []
+    },
+    "current_response": [],
+    "financial_transparency": {
+      "annual_report": {
+        "available": true,
+        "url": "https://www.hi.org/sn_uploads/document/2024-HI-ANNUAL-REPORT_1.pdf",
+        "fiscal_year": "2024",
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Search results referenced an 'IDEAS label' governance/financial evaluation with independent audit, but no specific page was fetched to confirm this claim, so left null rather than asserted."
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "income": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": "global",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "The 2024 network annual report PDF exists (see annual_report.url) but was not opened within the research budget. A third-party estimator (RocketReach, non-primary) claimed $236.1M revenue for 2025 — excluded here as unverifiable."
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": "global",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Same as income — not opened within research budget."
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No published expenditure split found for this organisation within the research budget."
+      },
+      "peer_group": null
+    },
+    "warnings": [],
+    "data_gaps": [
+      "names.local_script",
+      "registrations[NP_SWC].identifier",
+      "registrations[IATI].identifier",
+      "nepal_presence.partners",
+      "current_response",
+      "financial_transparency.audited_financials",
+      "financial_transparency.iati_publisher",
+      "financial_transparency.income",
+      "financial_transparency.expenditure",
+      "financial_transparency.program_ratio"
+    ],
+    "research_notes": "Legal entity and Nepal presence confirmed via direct fetches of hi.org/en/legal-notices and hi.org/en/country/nepal (both self_reported, not register-fetched). No HI/Humanity & Inclusion statement specifically about the 26 Aug 2026 Trishuli/Rasuwa flood was found among general disaster-response coverage (Oxfam, CARE, IFRC, UNICEF, ICIMOD surfaced instead). Could not confirm IATI publisher status or open the 2024 annual-report PDF for income/expenditure. A separate UK charity entry ('Handicap International UK', charity 3959476) was found but not used since it wasn't fetched/confirmed and the Nepal programme appears to run directly under the Federation. SWC register skipped (unreachable).",
+    "last_updated": "2026-08-28"
+  },
+  {
+    "org_id": "people-in-need-nepal",
+    "names": {
+      "common": "People in Need",
+      "legal": {
+        "value": "Člověk v tísni, o.p.s.",
+        "source_url": "https://www.peopleinneed.net/who-we-are/about-us",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": null,
+        "note": "Org's own About Us page gives the Czech legal name 'Člověk v tísni, o.p.s.' (English: People in Need) and legal form 'o.p.s.' (obecně prospěšná společnost / public-benefit corporation under Czech law), founded 1992. Not cross-checked against the Czech public register (justice.cz / Register of Institutes) — no IČO company number was visible on the pages fetched."
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "HQ entity is Czech (Latin script). No Nepali-script name found for the Nepal country programme within research budget."
+      },
+      "aliases": [
+        "PIN",
+        "Člověk v tísni"
+      ]
+    },
+    "org_type": "ingo",
+    "hq": {
+      "country": "CZ",
+      "city": "Prague",
+      "source_url": "https://www.peopleinneed.net/what-we-do/humanitarian-aid-and-development/nepal"
+    },
+    "website": "https://www.peopleinneed.net",
+    "registrations": [
+      {
+        "registry": "OTHER",
+        "identifier": null,
+        "url": null,
+        "status": "registered",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "note": "Czech Republic is not in the registry enum. Legal entity 'Člověk v tísni, o.p.s.' is a Czech 'obecně prospěšná společnost' (public-benefit corporation) HQ'd at Šafaříkova 635/24, Praha 2 — self-reported via the org's own about-us page. It would be registered in a Czech public register (likely with a Czech IČO business ID) but no register entry or IČO number was located within the research budget."
+      },
+      {
+        "registry": "NP_SWC",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "swc.org.np unreachable 2026-08-28; not fetched. No SWC registration number found on People in Need's own pages either."
+      },
+      {
+        "registry": "IATI",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "Org's About Us page loosely references participation in 'the IATI system' for transparency reporting, but this was a paraphrase from a fetch summary, not a verbatim confirmation; iatiregistry.org / d-portal.org were not checked directly. Publisher ref not confirmed."
+      }
+    ],
+    "nepal_presence": {
+      "since_year": {
+        "value": 2015,
+        "source_url": "https://nepal.peopleinneed.net/en/",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": null,
+        "note": "Nepal country page states PIN has operated in Nepal since 2015, following the April 2015 earthquake."
+      },
+      "mode": {
+        "value": "both",
+        "source_url": "https://www.peopleinneed.net/what-we-do/humanitarian-aid-and-development/nepal",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": null,
+        "note": "Nepal programme page describes both direct implementation (trail repair, shelter assistance; 125km of mountain trails repaired, 3,900+ employment opportunities created) and a partnership model with local organisations."
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not found on pages fetched."
+      },
+      "partners": [
+        {
+          "value": "Phase Nepal",
+          "source_url": "https://nepal.peopleinneed.net/en/",
+          "retrieved_at": "2026-08-28",
+          "verification": "self_reported",
+          "quote": null,
+          "note": "One of 28+ local partners listed on the Nepal country microsite."
+        },
+        {
+          "value": "NSET (National Society for Earthquake Technology-Nepal)",
+          "source_url": "https://nepal.peopleinneed.net/en/",
+          "retrieved_at": "2026-08-28",
+          "verification": "self_reported",
+          "quote": null,
+          "note": null
+        },
+        {
+          "value": "SSDC",
+          "source_url": "https://nepal.peopleinneed.net/en/",
+          "retrieved_at": "2026-08-28",
+          "verification": "self_reported",
+          "quote": null,
+          "note": "Full name not expanded on page as fetched."
+        },
+        {
+          "value": "Accountability Lab Nepal",
+          "source_url": "https://nepal.peopleinneed.net/en/",
+          "retrieved_at": "2026-08-28",
+          "verification": "self_reported",
+          "quote": null,
+          "note": null
+        },
+        {
+          "value": "CSRC",
+          "source_url": "https://nepal.peopleinneed.net/en/",
+          "retrieved_at": "2026-08-28",
+          "verification": "self_reported",
+          "quote": null,
+          "note": "Full name not expanded on page as fetched."
+        },
+        {
+          "value": "NHSRP",
+          "source_url": "https://nepal.peopleinneed.net/en/",
+          "retrieved_at": "2026-08-28",
+          "verification": "self_reported",
+          "quote": null,
+          "note": "Full name not expanded on page as fetched."
+        },
+        {
+          "value": "Save the Children (Nepal)",
+          "source_url": "https://nepal.peopleinneed.net/en/",
+          "retrieved_at": "2026-08-28",
+          "verification": "self_reported",
+          "quote": null,
+          "note": null
+        },
+        {
+          "value": "Helvetas Nepal",
+          "source_url": "https://nepal.peopleinneed.net/en/",
+          "retrieved_at": "2026-08-28",
+          "verification": "self_reported",
+          "quote": null,
+          "note": null
+        }
+      ]
+    },
+    "current_response": [
+      {
+        "what": "Launch of 'SOS Nepal' fundraising appeal for people affected by the floods",
+        "where": [
+          "Nepal"
+        ],
+        "date": "2026-08-26",
+        "amount": null,
+        "currency": null,
+        "source_url": "https://www.peopleinneed.net",
+        "quote": "We are launching SOS Nepal, a fundraiser to help those affected by devastating floods",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "note": "Appeal launch (fundraiser) dated 26 Aug 2026 shown on the org's homepage news feed — not confirmed evidence of funds disbursed or district-level activity. The direct article permalink (/sos-nepal) returned 404; only the homepage listing was accessible, so source_url is a homepage news-feed reference rather than a stable article link."
+      }
+    ],
+    "financial_transparency": {
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "About Us page referenced an 'Annual Report 2025' by title but no direct document link or listing page was located within budget."
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "income": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": "global",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not located within research budget."
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": "global",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not located within research budget."
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No published expenditure split found for this organisation within the research budget."
+      },
+      "peer_group": null
+    },
+    "warnings": [],
+    "data_gaps": [
+      "names.local_script",
+      "registrations[OTHER/CZ].identifier",
+      "registrations[NP_SWC].identifier",
+      "registrations[NP_SWC].url",
+      "registrations[IATI].identifier",
+      "nepal_presence.staff_count",
+      "financial_transparency.annual_report.url",
+      "financial_transparency.audited_financials",
+      "financial_transparency.iati_publisher.is_publisher",
+      "financial_transparency.income",
+      "financial_transparency.expenditure",
+      "financial_transparency.program_ratio",
+      "current_response[0].source_url (homepage feed, not a stable permalink)"
+    ],
+    "research_notes": "Legal entity settled on: 'Člověk v tísni, o.p.s.' (People in Need), HQ Prague, Czech Republic — no separate Nepal-registered legal entity name was found, only local partner NGOs. Fetched peopleinneed.net homepage, Nepal programme page, Nepal microsite, About Us page. reliefweb.int/organization/pin and the /sos-nepal permalink both failed (403/404). This org's WebSearch calls were constrained by the session's shared WebSearch quota being exhausted by concurrent research agents, so findings relied mostly on WebFetch against known/guessed URLs. swc.org.np intentionally skipped (unreachable).",
+    "last_updated": "2026-08-28"
+  },
+  {
+    "org_id": "wateraid-nepal",
+    "names": {
+      "common": "WaterAid Nepal",
+      "legal": {
+        "value": "WaterAid",
+        "source_url": "https://en.wikipedia.org/wiki/WaterAid",
+        "retrieved_at": "2026-08-28",
+        "verification": "third_party_reported",
+        "quote": "registered charity no. 288701",
+        "note": "Direct fetch of wateraid.org (including /np and /where-we-work/nepal) and the UK Charity Commission register both returned HTTP 403 to WebFetch (bot protection). Value relayed via Wikipedia's citation of the Charity Commission record, not confirmed against the primary register or the org's own imprint/legal page. Could not determine whether WaterAid Nepal operates as a distinct SWC-registered legal entity or purely as WaterAid UK's country programme — the single biggest unresolved question for this org."
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "wateraid.org/np blocked (403) to WebFetch; no Nepali-script name found elsewhere"
+      },
+      "aliases": [
+        "WaterAid"
+      ]
+    },
+    "org_type": "ingo",
+    "hq": {
+      "country": "GB",
+      "city": "London",
+      "source_url": "https://en.wikipedia.org/wiki/WaterAid"
+    },
+    "website": "https://www.wateraid.org/np/",
+    "registrations": [
+      {
+        "registry": "UK_CC",
+        "identifier": "288701",
+        "url": "https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/288701/charity-overview",
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "third_party_reported",
+        "note": "Charity Commission register returned HTTP 403 to direct WebFetch (two URL variants tried). Number and 1981 registration year per Wikipedia's citation of the Charity Commission record; not independently register-confirmed within this session."
+      },
+      {
+        "registry": "NP_SWC",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "SWC site (swc.org.np) unreachable 2026-08-28; org's own Nepal-specific pages also blocked (403) to WebFetch, so no Nepal registration number could be located at all."
+      },
+      {
+        "registry": "IATI",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "d-portal.org/ctrack.html?publisher=GB-CHC-288701 was fetched but is JS-rendered and returned no data via static HTML conversion; iatiregistry.org publisher page not fetched within budget. Publisher status genuinely unconfirmed."
+      }
+    ],
+    "nepal_presence": {
+      "since_year": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "wateraid.org/np and wateraid.org/where-we-work/nepal both returned 403"
+      },
+      "mode": {
+        "value": "unknown",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Could not access Nepal-specific pages to determine direct implementation vs. local-partner model."
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": null
+      },
+      "partners": []
+    },
+    "current_response": [],
+    "financial_transparency": {
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Charity Commission accounts-and-annual-returns page and wateraid.org financials/reports pages both inaccessible (403) to WebFetch this session"
+      },
+      "iati_publisher": {
+        "is_publisher": false,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "income": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": "global",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Charity Commission accounts page returned 403 to WebFetch"
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": "global",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Charity Commission accounts page returned 403 to WebFetch"
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No published expenditure split found for this organisation within the research budget."
+      },
+      "peer_group": null
+    },
+    "warnings": [],
+    "data_gaps": [
+      "names.legal (third-party sourced only, not register-confirmed)",
+      "names.local_script",
+      "registrations[UK_CC].status",
+      "registrations[NP_SWC]",
+      "registrations[IATI]",
+      "nepal_presence.since_year",
+      "nepal_presence.mode",
+      "nepal_presence.staff_count",
+      "nepal_presence.partners",
+      "current_response (org's own news pages and ReliefWeb inaccessible; absence in Nepali press is not conclusive)",
+      "financial_transparency.annual_report",
+      "financial_transparency.audited_financials",
+      "financial_transparency.income",
+      "financial_transparency.expenditure",
+      "financial_transparency.program_ratio"
+    ],
+    "research_notes": "wateraid.org (root, /np, /where-we-work/nepal, /np/about-us) and the UK Charity Commission register both returned HTTP 403 to every WebFetch attempt, as did reliefweb.int/organization/wateraid — bot-protection blocks the static-HTML fetch tool. d-portal.org loaded but is JS-rendered so no IATI data came through. This org's WebSearch budget was also exhausted by concurrent research agents, so discovery ran through WebFetch on hand-picked URLs plus Wikipedia (the only source that loaded cleanly, giving baseline UK-charity facts: est. 21 July 1981, charity no. 288701, HQ London). Checked kathmandupost.com and onlinekhabar.com site-search directly — both show extensive coverage of the Aug 2026 Rasuwa/Trishuli flood but zero WaterAid mentions (weak evidence, since org's own channels couldn't be checked). Could not confirm which exact legal entity runs the Nepal programme — flagged as the top gap.",
+    "last_updated": "2026-08-28"
+  },
+  {
+    "org_id": "practical-action-nepal",
+    "names": {
+      "common": "Practical Action",
+      "legal": {
+        "value": "Practical Action",
+        "source_url": "https://practicalaction.org",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "Reg Charity No 247257",
+        "note": "Org's own homepage footer pairs the name 'Practical Action' with charity number 247257 and the registered office address, but does not display a separate formal/legal name (e.g. any historic 'Intermediate Technology Development Group' trading name). UK Charity Commission register itself returned HTTP 403 on every fetch attempt this session, so this could not be register-confirmed."
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No Nepali-script name found on practicalaction.org/nepal"
+      },
+      "aliases": []
+    },
+    "org_type": "ingo",
+    "hq": {
+      "country": "GB",
+      "city": "Rugby",
+      "source_url": "https://practicalaction.org"
+    },
+    "website": "https://practicalaction.org",
+    "registrations": [
+      {
+        "registry": "UK_CC",
+        "identifier": "247257",
+        "url": "https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/247257",
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "note": "Number taken from Practical Action's own homepage footer ('Reg Charity No 247257', registered office The Robbins Building, 25 Albert Street, Rugby, CV21 2SD). The Charity Commission register itself was unreachable (HTTP 403) on repeated WebFetch attempts, so status/entity name could not be register-confirmed this session."
+      },
+      {
+        "registry": "NP_SWC",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "SWC (swc.org.np) site was unreachable 2026-08-28; no SWC affiliation number is published on practicalaction.org/nepal either."
+      },
+      {
+        "registry": "IATI",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "Attempted iatiregistry.org/publisher/practical_action and /practicalaction — both returned 404. Could not confirm whether Practical Action publishes to IATI or under what publisher slug/ref within the call budget available."
+      }
+    ],
+    "nepal_presence": {
+      "since_year": {
+        "value": 1979,
+        "source_url": "https://practicalaction.org/nepal/",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "Practical Action has worked closely with communities in Nepal since 1979.",
+        "note": null
+      },
+      "mode": {
+        "value": "both",
+        "source_url": "https://practicalaction.org/nepal/",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "we also work in partnership with the private sector, government institutions, civil society and community groups",
+        "note": "Page lists a physical Kathmandu office (House No. 1114, Panipokhari, Lazimpat) alongside explicit partnership language — hence 'both' rather than a single mode."
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": null
+      },
+      "partners": []
+    },
+    "current_response": [],
+    "financial_transparency": {
+      "annual_report": {
+        "available": true,
+        "url": "https://practicalaction.org/practical_action_annual_report_2024-25_final_v2_online/",
+        "fiscal_year": "2024-25",
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Annual report page states 'Read our 2024-25 annual report and financial accounts' and notes registration with the Fundraising Regulator, but the linked PDF returned only binary/encoded content to WebFetch and could not be parsed for an auditor's statement."
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "income": {
+        "value": null,
+        "currency": "GBP",
+        "fiscal_year": "2024-25",
+        "scope": "global",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "UK Charity Commission accounts-and-annual-returns page returned HTTP 403 on every attempt; the org's own 2024-25 annual report PDF could not be parsed for figures by WebFetch (binary/compressed content only)."
+      },
+      "expenditure": {
+        "value": null,
+        "currency": "GBP",
+        "fiscal_year": "2024-25",
+        "scope": "global",
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Same access failure as income above."
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No published expenditure split found for this organisation within the research budget."
+      },
+      "peer_group": null
+    },
+    "warnings": [],
+    "data_gaps": [
+      "names.legal (register not directly confirmed, 403)",
+      "names.local_script",
+      "names.aliases",
+      "registrations[UK_CC].status",
+      "registrations[NP_SWC]",
+      "registrations[IATI]",
+      "nepal_presence.staff_count",
+      "nepal_presence.partners",
+      "current_response",
+      "financial_transparency.annual_report.fiscal_year_end",
+      "financial_transparency.audited_financials",
+      "financial_transparency.iati_publisher",
+      "financial_transparency.income",
+      "financial_transparency.expenditure",
+      "financial_transparency.program_ratio"
+    ],
+    "research_notes": "UK Charity Commission register pages returned HTTP 403 on every attempt (direct and via web.archive.org), and the session's shared WebSearch budget was exhausted by concurrent agents, so this was WebFetch-only research against practicalaction.org (homepage/footer, /nepal/, /media/, /news-stories/, annual report page + PDF), findthatcharity.uk (failed), iatiregistry.org (two slug attempts, both 404), and Kathmandu Post's site search. Confirmed self-reported: charity no. 247257, Rugby HQ, Nepal presence since 1979 with an own Kathmandu office. Could not verify register-confirmed financials, audit status, IATI publisher status, or any Practical Action-specific activity tied to the 26 Aug 2026 Trishuli/Rasuwa flood — nothing on this flood surfaced from either the org's own site or Kathmandu Post as of 2026-08-28. swc.org.np not attempted (unreachable).",
+    "last_updated": "2026-08-28"
+  }
+]

@@ -1,0 +1,160 @@
+{
+ "retrieved_at": "2026-08-28T12:59:34+00:00",
+ "source": "ukcc_api",
+ "data": {
+  "organisation_number": 4007581,
+  "reg_charity_number": 1103669,
+  "group_subsid_suffix": 0,
+  "charity_name": "THE GURKHA WELFARE TRUST",
+  "charity_type": "Charitable company",
+  "insolvent": false,
+  "in_administration": false,
+  "prev_excepted_ind": false,
+  "cif_cdf_ind": null,
+  "cio_dissolution_ind": false,
+  "interim_manager_ind": false,
+  "date_of_interim_manager_appt": null,
+  "reg_status": "R",
+  "date_of_registration": "2004-05-10T00:00:00",
+  "date_of_removal": null,
+  "latest_acc_fin_year_start_date": "2024-07-01T00:00:00",
+  "latest_acc_fin_year_end_date": "2025-06-30T00:00:00",
+  "latest_income": 26571000.0,
+  "latest_expenditure": 24788000.0,
+  "address_line_one": "THE GURKHA WELFARE TRUST",
+  "address_line_two": "PO BOX 2170",
+  "address_line_three": "22 QUEEN STREET",
+  "address_line_four": "SALISBURY",
+  "address_line_five": null,
+  "address_post_code": "SP2 2EX ",
+  "phone": "01722323955",
+  "email": "info@gwt.org.uk",
+  "web": "www.gwt.org.uk",
+  "charity_co_reg_number": "5098581",
+  "reporting_status": "Submission Received",
+  "removal_reason": null,
+  "cio_ind": false,
+  "last_modified_time": "2026-01-22T13:07:34.183",
+  "trustee_names": [
+   {
+    "organisation_number": 4007581,
+    "trustee_name": "Stephen Cooper"
+   },
+   {
+    "organisation_number": 4007581,
+    "trustee_name": "Ann Levin"
+   },
+   {
+    "organisation_number": 4007581,
+    "trustee_name": "Hemchandra Rai MBE BEM"
+   },
+   {
+    "organisation_number": 4007581,
+    "trustee_name": "Patrick Mark Allan Grant"
+   },
+   {
+    "organisation_number": 4007581,
+    "trustee_name": "John Geoffrey Rupert David"
+   },
+   {
+    "organisation_number": 4007581,
+    "trustee_name": "Colonel David John Robinson"
+   },
+   {
+    "organisation_number": 4007581,
+    "trustee_name": "Ranjani Kearsley"
+   },
+   {
+    "organisation_number": 4007581,
+    "trustee_name": "Brigadier Jody Davies MBE"
+   },
+   {
+    "organisation_number": 4007581,
+    "trustee_name": "Major General Gerald Mark Strickland DSO MBE"
+   },
+   {
+    "organisation_number": 4007581,
+    "trustee_name": "Dr Alison Jane Everest"
+   }
+  ],
+  "who_what_where": [
+   {
+    "classification_code": "102",
+    "classification_type": "What",
+    "classification_desc": "Education/training"
+   },
+   {
+    "classification_code": "103",
+    "classification_type": "What",
+    "classification_desc": "The Advancement Of Health Or Saving Of Lives"
+   },
+   {
+    "classification_code": "105",
+    "classification_type": "What",
+    "classification_desc": "The Prevention Or Relief Of Poverty"
+   },
+   {
+    "classification_code": "106",
+    "classification_type": "What",
+    "classification_desc": "Overseas Aid/famine Relief"
+   },
+   {
+    "classification_code": "107",
+    "classification_type": "What",
+    "classification_desc": "Accommodation/housing"
+   },
+   {
+    "classification_code": "201",
+    "classification_type": "Who",
+    "classification_desc": "Children/young People"
+   },
+   {
+    "classification_code": "202",
+    "classification_type": "Who",
+    "classification_desc": "Elderly/old People"
+   },
+   {
+    "classification_code": "203",
+    "classification_type": "Who",
+    "classification_desc": "People With Disabilities"
+   },
+   {
+    "classification_code": "204",
+    "classification_type": "Who",
+    "classification_desc": "People Of A Particular Ethnic Or Racial Origin"
+   },
+   {
+    "classification_code": "301",
+    "classification_type": "How",
+    "classification_desc": "Makes Grants To Individuals"
+   },
+   {
+    "classification_code": "305",
+    "classification_type": "How",
+    "classification_desc": "Provides Buildings/facilities/open Space"
+   }
+  ],
+  "CharityAoOCountryContinent": [
+   {
+    "country": "Nepal",
+    "continent": "Asia"
+   },
+   {
+    "country": "India",
+    "continent": "Asia"
+   },
+   {
+    "country": "Scotland",
+    "continent": "Europe"
+   }
+  ],
+  "CharityAoOLocalAuthority": [],
+  "CharityAoORegion": [],
+  "other_names": [],
+  "constituency_name": [
+   {
+    "constituency_name": "Salisbury"
+   }
+  ]
+ }
+}

@@ -1,0 +1,3284 @@
+{
+ "retrieved_at": "2026-08-28T12:09:28+00:00",
+ "source": "fts",
+ "meta": {
+  "incoming": {
+   "flowCount": 29,
+   "fundingTotal": 3945598,
+   "pledgeTotal": 78561
+  },
+  "outgoing": {
+   "flowCount": 0,
+   "fundingTotal": 0,
+   "pledgeTotal": 0
+  },
+  "internal": {
+   "flowCount": 1
+  }
+ },
+ "data": [
+  {
+   "id": "300048",
+   "amountUSD": 102881,
+   "budgetYear": "2026",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-01-22T10:53:24.925Z",
+   "date": "2024-01-12T00:00:00Z",
+   "decisionDate": "2024-01-12T00:00:00Z",
+   "description": "Humanitarian efficiency",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 0.972,
+   "firstReportedDate": "2024-01-12T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 100000,
+   "originalCurrency": "CHF",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "commitment",
+   "updatedAt": "2024-01-22T10:53:24.925Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2924",
+     "name": "Switzerland, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "217",
+     "name": "Switzerland",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "2646",
+     "name": "Swiss Development Cooperation/Swiss Humanitarian Aid",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "International Government Entities"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "26480",
+     "name": "Coordination and support services",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Switzerland, Government of",
+     "reportChannel": "Email",
+     "date": "2024-01-12T00:00:00.000Z"
+    }
+   ],
+   "refCode": "7F-04334.08"
+  },
+  {
+   "id": "313405",
+   "amountUSD": 3258352,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2024-06-20T16:05:40.987Z",
+   "date": "2021-03-29T00:00:00Z",
+   "decisionDate": "2021-03-29T00:00:00Z",
+   "description": "Enroll OOSC Project: Break the Cycle of Poverty",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2024-06-12T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "commitment",
+   "updatedAt": "2024-06-20T16:05:40.987Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "7173",
+     "name": "Education Above All Foundation",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "181",
+     "name": "Qatar",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "42",
+     "name": "2021",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "14297",
+     "name": "BuildOn",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "3",
+     "name": "Education",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "36",
+     "name": "Burkina Faso",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "91",
+     "name": "Guatemala",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "96",
+     "name": "Haiti",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "134",
+     "name": "Malawi",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "137",
+     "name": "Mali",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "197",
+     "name": "Senegal",
+     "behavior": "shared"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "shared",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Education Above All Foundation",
+     "reportChannel": "Email",
+     "date": "2024-06-12T00:00:00.000Z"
+    }
+   ]
+  },
+  {
+   "id": "339596",
+   "amountUSD": 5116313,
+   "fullParkedAmountUSD": 18050000,
+   "budgetYear": "2024",
+   "childFlowIds": [
+    364730,
+    364731,
+    364732,
+    364733,
+    398846,
+    398850,
+    380038,
+    380039,
+    380040,
+    380041,
+    380042,
+    380043,
+    364883,
+    364884,
+    364221,
+    364223,
+    364224,
+    364225,
+    364227,
+    364228,
+    364229,
+    364230,
+    364235,
+    364236,
+    364237,
+    364240,
+    364238,
+    364239,
+    364241,
+    364242,
+    364243,
+    398847,
+    398851,
+    398853,
+    398854,
+    398857,
+    398858,
+    398859,
+    398860,
+    398861,
+    398862,
+    398863,
+    398864,
+    398865
+   ],
+   "contributionType": "financial",
+   "createdAt": "2025-03-21T06:54:39.818Z",
+   "date": "2025-03-21T00:00:00Z",
+   "decisionDate": "2025-01-10T00:00:00Z",
+   "description": "Addressing the maternal and reproductive health and protection life-saving needs of underserved and crisis-affected communities in Afghanistan; Saving the lives and Protecting the Dignity of Women and Girls in emergency affected communities in the Somali region in Ethiopia; Strengthening Community Resilience by Providing Sexual and Reproductive Health and GBV Support for Women and Youth including those living with disabilities impacted by Cholera and Floods in Comoros; The integrated project to address Sexual Reproductive Health and Gender Based Violence needs of vulnerable women in conflict-affected areas in Sudan; Responding to maternal/newborn mortality public health emergency in Liberia’s high burden Districts in Montserrado County; Restoring Health and Dignity amidst Unprecedented Crisis: Provision of Sexual & Reproductive Health and Protection Services in Gaza and the West Bank; Integrated Life-Saving SRH and GBV Services for Vulnerable Women and Girls in Underserved Southern Areas of Jordan; Improving Access of the Most Vulnerable Groups to Urgent SRH care and GBV Response in Adıyaman and Hatay (Türkiye); E-HEAL: Emergency Health and Empowerment for All women in Libya including Sudanese refugees featuring the MCH Handbook; Project for improvement of maternal and child health care services and adaptive capacity in Nepal; Strengthening the resilience of social protection and sexual and reproductive health systems for vulnerable women and girls in partnership with NEC in Nigeria and Madagascar; Digitalization of Integrated Diagnostic and Treatment System Optimised for Remote Healthcare to Reduce Perinatal Mortality in the Democratic Republic of the Congo (DRC); Uplifting Voices: Advancing the Dignity and Empowerment of Women and Girls in Ethiopia.",
+   "grandBargainEarmarkingType": [
+    "tightly earmarked"
+   ],
+   "exchangeRate": 139,
+   "firstReportedDate": "2025-03-20T00:00:00Z",
+   "flowType": "Parked",
+   "keywords": [
+    "Multiyear"
+   ],
+   "newMoney": true,
+   "originalAmount": 711167507,
+   "originalCurrency": "JPY",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2026-08-19T10:05:23.024Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "4537",
+     "name": "Japan, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "112",
+     "name": "Japan",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "4293",
+     "name": "United Nations Population Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "1",
+     "name": "Afghanistan",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "71",
+     "name": "Ethiopia",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "50",
+     "name": "Comoros",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "212",
+     "name": "Sudan",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "126",
+     "name": "Liberia",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "171",
+     "name": "Occupied Palestinian Territory",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "114",
+     "name": "Jordan",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "229",
+     "name": "Türkiye",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "127",
+     "name": "Libya",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "163",
+     "name": "Nigeria",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "133",
+     "name": "Madagascar",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "52",
+     "name": "Democratic Republic of the Congo",
+     "behavior": "shared"
+    },
+    {
+     "type": "UsageYear",
+     "id": "46",
+     "name": "2025",
+     "behavior": "shared"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "shared"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "shared",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Japan, Government of",
+     "reportChannel": "Email",
+     "date": "2025-03-20T00:00:00.000Z"
+    }
+   ]
+  },
+  {
+   "id": "342316",
+   "amountUSD": 249600,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-04-28T12:28:56.606Z",
+   "date": "2025-04-28T00:00:00Z",
+   "decisionDate": "2025-02-01T00:00:00Z",
+   "description": "Nepal: Strengthening urban preparedness and earthquake response in Western Region",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 0.9,
+   "firstReportedDate": "2025-04-10T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": false,
+   "originalAmount": 224640,
+   "originalCurrency": "EUR",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2026-03-08T05:15:37.843Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "5294",
+     "name": "United Nations Development Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "26481",
+     "name": "Other",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "2915",
+     "name": "United Nations Children's Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "12",
+     "name": "Protection - Child Protection",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "internal",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "United Nations Children's Fund",
+     "reportChannel": "Email",
+     "date": "2025-04-10T00:00:00.000Z"
+    }
+   ],
+   "refCode": "SM240527\tECHO/-XA/BUD/2024/91016"
+  },
+  {
+   "id": "344001",
+   "amountUSD": 75611,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-05-21T11:49:16.717Z",
+   "date": "2025-05-21T00:00:00Z",
+   "decisionDate": "2024-11-05T00:00:00Z",
+   "description": "Multi-Sector - GBV Programming\nViolence against women remains a significant challenge in Nepal as it is deeply intertwined with cultural, social and economic factors. These acts of violence deny women their basic\nrights to safety, dignity and equality. Among the various forms of VAW prevalent in Nepal, the proposed project wants to focus on ending harmful practices of Taani Bibaha\n(force/abduction marriage), child marriage and dowry, practices that are sustained and maintained by outdated social and cultural norms. These harmful cultural practices have\nnegative impact on women’s physical and mental health. Survivors often face long-term health problems, including physical injuries, chronic pain, mental health disorders and\nreproductive health issues. The trauma can lead to anxiety, depression, and post-traumatic stress disorder significantly affecting their overall well-being and quality of life. According to\nNDHS 2022, 11% and 22% of population exhibits symptoms of anxiety depression respectively, with a significant number of these individual being women. Despite being outlawed, these practices persist in many rural and conservative communities in Nepal. These harmful practices perpetuate gender inequality, hinder economic development and violate basic\nhuman rights. Addressing these issues requires a comprehensive approach that include not only legal reforms but also education and awareness, community engagement and the\nempowerment of women and girls. Currently local government are mandated to address GBV and support survivors of GBV. They are also influenced by strong ties with their local\ncommunity into not enforcing it. Rather in many incidences, they have been known to strengthen traditional values and discriminatory socio-cultural norms and practices such as by\ncoercing survivors into compromising with or shielding the perpetrators in the name of protecting tradition. This leaves the survivors and other women and girls vulnerable to\ncontinued threat of violence, exploitation and abuse. Our proposed project goal will be to ensure “Women and girls in targeted district enjoy and live improved and peaceful lives free\nfrom violence, particularly forced (abduction) marriage, early and child marriage and dowry related violence.” For this proposed project, Mahila Bikash Sewa Kendra from Dhanusha,\nRauta Samudayik Bikash Kendra from Udayapur and Holistic Development Service from Rukum East will be our partner organizations. All three selected districts are known for high\nnumber of cases of VAW/G. We plan to work with 120 women and girls (between 15 and 50 years of age) who are survivors of violence, especially of forced/abduction marriage\n(Taani Bibaha), child marriage, and dowry related violence. We also intend to reach about 500 secondary beneficiaries (including family members, WHRDs, local CBOs, local\ngovernment representatives, Provincial Parliamentarians, traditional healers/leaders, priest etc.) to increase awareness on consequences of harmful cultural practices and mobilize\nthem as critical opinion makers to challenge harmful traditional practices responsible for VAW. Our proposed project will work for Madheshi women and girls from Dhanusha district,\nIndigenous women and girls from Udayapur and Rukum East districts. Focus will be on women from the lowest income groups. We will cover Five municipalities in the three districts.\nThe proposed survivor-centric interventions aims to work with women and girls in the community. All measures to enable a safe and confidential environment for the survivors will be\nadopted and ensured. We will reach out to stakeholders such as front-line/WHRDs, local CBOs, young men and boys by strengthening their capacities to prevent GBV by challenging\nharmful traditional practices and effectively respond to cases of GBV. Similarly, engagement with the local government in municipality councils, especially judicial committees within\nthese councils will be another component of this project. Local government and their existing protection clusters will be strengthened by developing standard operating procedures,\nmapping of services for response mechanism, advocacy for gender friendly budgeting, and resource mobilization. The set of proposed actions to change their situation (project’s\ninterventions, the how) • Enhance the capacity of women and young girls at the community to prevent and respond to GBV • Strengthen the GBV response, referral mechanism and\nprotection cluster at local level • Provide need-based support including Psychosocial counselling support, financial incentives, safe-house for rehabilitation, and skill training with\nlivelihood opportunities • Create and strengthen Men and boys’ network, capacity strengthening and conceptual clarity workshops to the network to take lead to address GBV and\ncreate environment for social transformation. Overall, the planned interventions will bring together different actors creating environment for women to take lead in a Humanitarian\nPartnership Platforms model which will better position their voice for collective action against GBV in local emergency response, preparedness and long-term planning. Our proposed\nproject costs are estimated at $ 290,000 USD.",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2025-04-01T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2025-05-21T11:49:16.717Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "15182",
+     "name": "UN Trust Fund to End Violence against Women",
+     "behavior": "single",
+     "organizationTypes": [
+      "Pooled Funds"
+     ],
+     "organizationSubTypes": [
+      "Global UN Pooled Funds"
+     ],
+     "organizationLevels": [
+      "Pooled Funds"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "15289",
+     "name": "Tarangini Foundation",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "National NGOs/CSOs"
+     ],
+     "organizationLevels": [
+      "Local and National Non-State Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "13",
+     "name": "Protection - Gender-Based Violence",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "UN Trust Fund to End Violence against Women",
+     "reportChannel": "Email",
+     "date": "2025-04-01T00:00:00.000Z"
+    }
+   ],
+   "refCode": "27_43138"
+  },
+  {
+   "id": "344005",
+   "amountUSD": 240351,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-05-21T11:53:29.201Z",
+   "date": "2025-05-21T00:00:00Z",
+   "decisionDate": "2024-11-04T00:00:00Z",
+   "description": "Multi-Sector - GBV Programming\nNepal ranked 106th in the Gender Inequality Index 2021 and 116th in the Gender Global Gap Index 2023. Women, particularly those in socially and economically marginalized and\nremote areas, endure high rates of gender-based violence (GBV), with 57.7% reporting emotional (55.2%), physical (34%), and sexual (21.5%) violence over their lifetime (Puri et al.,\n2015). Madhesh Province in Nepal has the highest Multi-Dimensional Poverty Index and the lowest Human Development Index where alarmingly, 41% of married women aged 15-49\nexperience physical, sexual, or emotional violence from their husbands, surpassing the national average of 29% (Nepal MICS 2019). Around 2.2% of Nepal's total population has\ndisabilities, with 2% of females and 2.5% of males experiencing some form of disability (CBS 2021). However, actual figures are likely to be higher considering that the WHO\nestimates that 16% of the global population experiences significant disability (WHO 2023). Two out of three women and girls with disabilities (WGDs) in Nepal face a heightened risk of GBV. The lack of disability-inclusive GBV policies and services puts them at further risk of physical, verbal, and psychological abuse (NFDN 2019). NDWA research in 2020 found\nwomen and girls with intellectual disabilities, autism, psychosocial disabilities, visual impairment, hearing impairment, severe physical disabilities, and multiple disabilities particularly\nvulnerable to GVB. They face additional challenges in accessing justice and government services. A stakeholder consultation conducted by the NDWA in 2024 highlighted the existing\ngovernment services, including healthcare, security, the justice system, and policies, as inaccessible and insensitive to respond to the specific needs of WGDs and their access to\njustice. Minors amongst WGDs are particularly vulnerable to violence and face further challenges when reporting and accessing services and justice, as they are not heard within their\nfamilies, communities, and governments due to age-based discrimination, lack of capacity, and discriminatory culture. The human rights capacity, particularly the rights of WGDs, is\nlimited among civil society organizations (CSOs), organizations of people with disabilities (OPDs), media, women human rights defenders (WHRDs), WGDs, and violence against\nwomen and girls (VAWG) survivors with disabilities. Consequently, their advocacy against VAWG is marginal and less effective. In addition, the longstanding human rights issues,\nincluding intersecting, and discrimination against WGDs in the private and public spheres make them more vulnerable to violence. The local policies, plans, programs, and\ninfrastructure are not inclusive from the perspectives of human rights and gender equality, disability, and social inclusion (GEDSI) due to the lack of capacity, resources, and\naccountability of the local, provincial, and federal governments. The Inclusive Governance, Nurturing Independence, and Transforming Environments for Women and Girls with\nDisabilities WGDs in Nepal (IGNITE) project aims to achieve the following goal and results. a. Goal: Women and girls with disabilities and VAWG survivors with disabilities live a\ndignified life free from all forms of VAWG in the project municipalities of Madhesh Province by the end of the project. b. Targets: WGDs and VAWG survivors with disabilities among\nWGDs. c. Results (i) Enhance the capacity of the governments and justice mechanisms, WHRDs, OPDs, media, community groups and networks, and other stakeholders, (ii) Make\nthe policies, programs, infrastructure, and services of the local governments and justice mechanisms GEDSI-inclusive and accessible for WGDs, and (iii) Increase access to justice\nfor VAWG survivors with disabilities. d. Main activities Capacity development, campaign, advocacy and lobbying, GEDSI/Accessibility Audits, laws and policy review, legal aid, logistic\nand infrastructural support to the VAWG survivors with disabilities and the government and justice mechanisms, research and survey, information dissemination and awareness,\ncounseling, education & sensitization, knowledge management, and organizational capacity development. The priority focus of the project is on the access of WGDs to government\nservices and justice and protection. Thus, the main duty bearers for the project are municipalities, wards, and One-stop Crisis Management Centers (OCMCs) and justice\nmechanisms such as judicial committees at the municipality and Women, Children and Senior Citizen Service Center (women cell) at the district police offices (DPOs). In addition, the\nproject’s collaboration with the local governments and justice mechanisms contributes to achieving the government’s commitments under the Sustainable Development Goals (SDGs)\nmainly Goal 5, and the UN Convention on the Rights of Persons with Disabilities (CRPD) and the Convention of the Elimination of All Forms of Discrimination against Women\n(CEDAW). Project strategies: Community engagement, intersectional-driven, policy advocacy and negotiation, men and boys engagement strategy, community-to-international\nlinkage, and wider collaboration with stakeholders. Geographic coverage: 32 municipalities of all eight districts of Madhesh Province. Project cost: 751,497 USD",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2025-04-01T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2025-05-21T11:53:29.201Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "15182",
+     "name": "UN Trust Fund to End Violence against Women",
+     "behavior": "single",
+     "organizationTypes": [
+      "Pooled Funds"
+     ],
+     "organizationSubTypes": [
+      "Global UN Pooled Funds"
+     ],
+     "organizationLevels": [
+      "Pooled Funds"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "15274",
+     "name": "Nepal Disabled Women Association",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "National NGOs/CSOs"
+     ],
+     "organizationLevels": [
+      "Local and National Non-State Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "13",
+     "name": "Protection - Gender-Based Violence",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "UN Trust Fund to End Violence against Women",
+     "reportChannel": "Email",
+     "date": "2025-04-01T00:00:00.000Z"
+    }
+   ],
+   "refCode": "27_44455"
+  },
+  {
+   "id": "344086",
+   "amountUSD": 36417,
+   "budgetYear": "1980",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-05-21T14:52:13.318Z",
+   "date": "2025-05-21T00:00:00Z",
+   "decisionDate": "2023-12-19T00:00:00Z",
+   "description": "Multi-Sector - GBV Programming\nEmpowering women living with HIV (WLHIV) and relevant duty bearers to prevent gender-based violence (GBV) and challenge stigma and discrimination in community and healthcare settings in Nepal",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2025-04-01T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2025-05-21T14:52:13.318Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "15182",
+     "name": "UN Trust Fund to End Violence against Women",
+     "behavior": "single",
+     "organizationTypes": [
+      "Pooled Funds"
+     ],
+     "organizationSubTypes": [
+      "Global UN Pooled Funds"
+     ],
+     "organizationLevels": [
+      "Pooled Funds"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "44",
+     "name": "2023",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "15281",
+     "name": "SETU Nepal",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "National NGOs/CSOs"
+     ],
+     "organizationLevels": [
+      "Local and National Non-State Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "13",
+     "name": "Protection - Gender-Based Violence",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "UN Trust Fund to End Violence against Women",
+     "reportChannel": "Email",
+     "date": "2025-04-01T00:00:00.000Z"
+    }
+   ],
+   "refCode": "26-3159"
+  },
+  {
+   "id": "344089",
+   "amountUSD": 41649,
+   "budgetYear": "1980",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-05-21T14:53:50.646Z",
+   "date": "2025-05-21T00:00:00Z",
+   "decisionDate": "2024-02-08T00:00:00Z",
+   "description": "Multi-Sector - GBV Programming\nPrevention of violence against Women Living with HIV and women survivors of sex-trafficking",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2025-04-01T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2025-05-21T14:53:50.646Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "15182",
+     "name": "UN Trust Fund to End Violence against Women",
+     "behavior": "single",
+     "organizationTypes": [
+      "Pooled Funds"
+     ],
+     "organizationSubTypes": [
+      "Global UN Pooled Funds"
+     ],
+     "organizationLevels": [
+      "Pooled Funds"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "44",
+     "name": "2023",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "15282",
+     "name": "Shakti Milan Samaj",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "National NGOs/CSOs"
+     ],
+     "organizationLevels": [
+      "Local and National Non-State Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "13",
+     "name": "Protection - Gender-Based Violence",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "UN Trust Fund to End Violence against Women",
+     "reportChannel": "Email",
+     "date": "2025-04-01T00:00:00.000Z"
+    }
+   ],
+   "refCode": "26-3698"
+  },
+  {
+   "id": "350420",
+   "amountUSD": 518736,
+   "budgetYear": "2024",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2026-02-25T06:25:25.689Z",
+   "date": "2026-02-25T00:00:00Z",
+   "decisionDate": "2024-05-09T00:00:00Z",
+   "description": "Pratibaddha III: Whole of Society Approach for Increased Risk Ownership, Multi-Hazard Preparedness and Early Action in Hill Areas of western Nepal",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 0.935,
+   "firstReportedDate": "2025-07-02T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 485018,
+   "originalCurrency": "EUR",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "commitment",
+   "updatedAt": "2026-02-25T10:12:27.123Z",
+   "versionId": 2,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "8523",
+     "name": "European Commission's Humanitarian Aid and Civil Protection Department",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "Other Multilateral Organizations"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "141",
+     "name": "People in Need",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "26481",
+     "name": "Other",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "European Commission's Humanitarian Aid and Civil Protection Department",
+     "reportChannel": "From Excel",
+     "date": "2026-02-25T00:00:00.000Z"
+    }
+   ],
+   "refCode": "ECHO/-XA/BUD/2024/91011"
+  },
+  {
+   "id": "357818",
+   "amountUSD": 564514,
+   "budgetYear": "2024",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-08-26T06:13:31.368Z",
+   "date": "2025-08-27T00:00:00Z",
+   "decisionDate": "2024-05-21T00:00:00Z",
+   "description": "Strengthening Urban Preparedness and Earthquake Response in Western region of Nepal (SUPER-II)",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 0.926,
+   "firstReportedDate": "2025-07-02T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 522740,
+   "originalCurrency": "EUR",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "commitment",
+   "updatedAt": "2025-08-27T04:47:51.081Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "8523",
+     "name": "European Commission's Humanitarian Aid and Civil Protection Department",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "Other Multilateral Organizations"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "5294",
+     "name": "United Nations Development Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "26481",
+     "name": "Other",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "European Commission's Humanitarian Aid and Civil Protection Department",
+     "reportChannel": "From Excel",
+     "date": "2025-08-26T00:00:00.000Z"
+    }
+   ],
+   "refCode": "ECHO/-XA/BUD/2024/91016"
+  },
+  {
+   "id": "364884",
+   "amountUSD": 550000,
+   "budgetYear": "2025",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-10-20T11:07:16.755Z",
+   "date": "2025-10-13T00:00:00Z",
+   "decisionDate": "2025-02-13T00:00:00Z",
+   "description": "Care and Continuity in Crisis (CCC) in Nepal\tNot applicable to a specific appeal",
+   "grandBargainEarmarkingType": [
+    "tightly earmarked"
+   ],
+   "exchangeRate": 139,
+   "firstReportedDate": "2025-10-13T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "Multiyear"
+   ],
+   "newMoney": true,
+   "originalAmount": 76450000,
+   "originalCurrency": "JPY",
+   "method": "Traditional aid",
+   "parentFlowId": 339596,
+   "status": "paid",
+   "updatedAt": "2025-10-20T11:07:16.755Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "4537",
+     "name": "Japan, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "112",
+     "name": "Japan",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "45",
+     "name": "2024",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "4293",
+     "name": "United Nations Population Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "7",
+     "name": "Health",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "United Nations Population Fund",
+     "reportChannel": "Email",
+     "date": "2025-10-13T00:00:00.000Z"
+    }
+   ],
+   "refCode": "JPD87       SC/24/125"
+  },
+  {
+   "id": "368139",
+   "amountUSD": 71597,
+   "budgetYear": "2025",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2026-02-24T10:38:28.710Z",
+   "date": "2025-11-18T00:00:00Z",
+   "decisionDate": "2025-05-14T00:00:00Z",
+   "description": "Flexible humanitarian funding from Save the Children International's Humanitarian Fund",
+   "grandBargainEarmarkingType": [
+    "unearmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2025-11-14T00:00:00Z",
+   "flowType": "Pass through",
+   "keywords": null,
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "commitment",
+   "updatedAt": "2026-02-24T10:38:28.710Z",
+   "versionId": 2,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2849",
+     "name": "Save the Children",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "46",
+     "name": "2025",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "2849",
+     "name": "Save the Children",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "26481",
+     "name": "Other",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "26",
+     "name": "Bhutan",
+     "behavior": "shared"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "shared",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Save the Children",
+     "reportChannel": "Email",
+     "date": "2026-02-24T00:00:00.000Z"
+    }
+   ],
+   "refCode": "99701403"
+  },
+  {
+   "id": "370898",
+   "amountUSD": 111106,
+   "budgetYear": "2025",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2025-12-12T06:47:18.526Z",
+   "date": "2026-03-23T00:00:00Z",
+   "decisionDate": "2025-10-01T00:00:00Z",
+   "description": "Part of localisation programme - setting up pooled funds",
+   "grandBargainEarmarkingType": [
+    "softly earmarked"
+   ],
+   "exchangeRate": 6.355,
+   "firstReportedDate": "2025-12-09T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": [
+    "Multiyear"
+   ],
+   "newMoney": true,
+   "originalAmount": 706077,
+   "originalCurrency": "DKK",
+   "method": "Traditional aid",
+   "parentFlowId": 362471,
+   "status": "commitment",
+   "updatedAt": "2026-04-30T10:07:12.587Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "3776",
+     "name": "Denmark, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "61",
+     "name": "Denmark",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "2849",
+     "name": "Save the Children",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "26479",
+     "name": "Multi-sector",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Save the Children",
+     "reportChannel": "From Excel",
+     "date": "2025-12-12T00:00:00.000Z"
+    },
+    {
+     "sourceType": "Primary",
+     "organization": "Save the Children",
+     "reportChannel": "Email",
+     "date": "2026-03-09T00:00:00.000Z"
+    }
+   ],
+   "refCode": "DK-CVR-63407216-2080090NEP         XM-DAC-3-1-286703-35480"
+  },
+  {
+   "id": "373272",
+   "amountUSD": 72070,
+   "budgetYear": "2025",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2026-01-08T09:07:33.647Z",
+   "date": "2026-01-08T00:00:00Z",
+   "decisionDate": "2025-01-04T00:00:00Z",
+   "description": "Education support Projects",
+   "grandBargainEarmarkingType": [
+    "tightly earmarked"
+   ],
+   "exchangeRate": 3.649771,
+   "firstReportedDate": "2026-01-08T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 263039,
+   "originalCurrency": "QAR",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2026-04-14T13:58:56.928Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "1418",
+     "name": "Qatar Charity",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "181",
+     "name": "Qatar",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "46",
+     "name": "2025",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "1418",
+     "name": "Qatar Charity",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "3",
+     "name": "Education",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Qatar Charity",
+     "reportChannel": "From Excel",
+     "date": "2026-01-08T00:00:00.000Z"
+    }
+   ],
+   "refCode": "345205"
+  },
+  {
+   "id": "376674",
+   "amountUSD": 43604,
+   "budgetYear": "2026",
+   "childFlowIds": null,
+   "contributionType": "in kind",
+   "createdAt": "2026-02-11T13:24:59.828Z",
+   "date": "2026-02-11T00:00:00Z",
+   "decisionDate": "2026-01-01T00:00:00Z",
+   "description": "Provision of food assistance to the most needy people in Nepal",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 3.749954,
+   "firstReportedDate": "2026-02-04T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 163513,
+   "originalCurrency": "SAR",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2026-02-11T13:59:19.773Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2998",
+     "name": "Saudi Arabia (Kingdom of), Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "196",
+     "name": "Saudi Arabia",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "4861",
+     "name": "Nepal, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Saudi Arabia (Kingdom of), Government of",
+     "reportChannel": "From Excel",
+     "date": "2026-02-11T00:00:00.000Z"
+    }
+   ],
+   "refCode": "18332"
+  },
+  {
+   "id": "379554",
+   "amountUSD": 50000,
+   "budgetYear": "2025",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2026-02-24T10:38:50.807Z",
+   "date": "2026-02-24T00:00:00Z",
+   "decisionDate": "2025-10-11T00:00:00Z",
+   "description": "Flexible humanitarian funding from Save the Children International's Humanitarian Fund",
+   "grandBargainEarmarkingType": [
+    "unearmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2026-02-24T00:00:00Z",
+   "flowType": "Pass through",
+   "keywords": null,
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "commitment",
+   "updatedAt": "2026-02-24T10:38:50.807Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2849",
+     "name": "Save the Children",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "46",
+     "name": "2025",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "2849",
+     "name": "Save the Children",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "26479",
+     "name": "Multi-sector",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "26",
+     "name": "Bhutan",
+     "behavior": "shared"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "shared",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Save the Children",
+     "reportChannel": "Email",
+     "date": "2026-02-24T00:00:00.000Z"
+    }
+   ],
+   "refCode": "99701403"
+  },
+  {
+   "id": "379555",
+   "amountUSD": 50000,
+   "budgetYear": "2025",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2026-02-24T10:39:22.103Z",
+   "date": "2026-02-24T00:00:00Z",
+   "decisionDate": "2025-10-11T00:00:00Z",
+   "description": "Flexible humanitarian funding from Save the Children International's Humanitarian Fund",
+   "grandBargainEarmarkingType": [
+    "unearmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2026-02-24T00:00:00Z",
+   "flowType": "Pass through",
+   "keywords": null,
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "commitment",
+   "updatedAt": "2026-02-24T10:39:22.103Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2849",
+     "name": "Save the Children",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "46",
+     "name": "2025",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "2849",
+     "name": "Save the Children",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "12",
+     "name": "Protection - Child Protection",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "26",
+     "name": "Bhutan",
+     "behavior": "shared"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "shared",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Save the Children",
+     "reportChannel": "Email",
+     "date": "2026-02-24T00:00:00.000Z"
+    }
+   ],
+   "refCode": "99701403"
+  },
+  {
+   "id": "380008",
+   "amountUSD": 497925,
+   "budgetYear": "2026",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2026-02-27T07:40:30.630Z",
+   "date": "2026-02-27T00:00:00Z",
+   "decisionDate": "2026-02-10T00:00:00Z",
+   "description": "HAC-ROSA\nEducation in Emergencies (EiE)",
+   "grandBargainEarmarkingType": [
+    "unearmarked"
+   ],
+   "exchangeRate": 0.723,
+   "firstReportedDate": "2026-02-27T00:00:00Z",
+   "flowType": "Pass through",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 360000,
+   "originalCurrency": "GBP",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2026-02-27T07:40:30.630Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "5315",
+     "name": "UNICEF National Committee/United Kingdom",
+     "behavior": "single",
+     "organizationTypes": [
+      "Private Organizations"
+     ],
+     "organizationSubTypes": [
+      "Local/National Private Organizations"
+     ],
+     "organizationLevels": [
+      "Local and National Non-State Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "2915",
+     "name": "United Nations Children's Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "3",
+     "name": "Education",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "United Nations Children's Fund",
+     "reportChannel": "Email",
+     "date": "2026-02-27T00:00:00.000Z"
+    }
+   ],
+   "refCode": "SM250208"
+  },
+  {
+   "id": "385022",
+   "amountUSD": 25564,
+   "budgetYear": "2026",
+   "childFlowIds": null,
+   "contributionType": "in kind",
+   "createdAt": "2026-04-14T13:25:17.565Z",
+   "date": "2026-04-14T00:00:00Z",
+   "decisionDate": "2026-01-02T00:00:00Z",
+   "description": "Distributing food to poor children",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 3.650055,
+   "firstReportedDate": "2026-04-07T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 93310,
+   "originalCurrency": "QAR",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2026-04-14T14:20:27.270Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "1418",
+     "name": "Qatar Charity",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "181",
+     "name": "Qatar",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "1418",
+     "name": "Qatar Charity",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Qatar Charity",
+     "reportChannel": "From Excel",
+     "date": "2026-04-14T00:00:00.000Z"
+    }
+   ],
+   "refCode": "360058"
+  },
+  {
+   "id": "385041",
+   "amountUSD": 15527,
+   "budgetYear": "2026",
+   "childFlowIds": null,
+   "contributionType": "in kind",
+   "createdAt": "2026-04-14T13:25:21.865Z",
+   "date": "2026-04-14T00:00:00Z",
+   "decisionDate": "2026-04-02T00:00:00Z",
+   "description": "Distributing food to poor children",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 3.650029,
+   "firstReportedDate": "2026-04-07T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 56674,
+   "originalCurrency": "QAR",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2026-04-14T14:16:03.427Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "1418",
+     "name": "Qatar Charity",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "181",
+     "name": "Qatar",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "1418",
+     "name": "Qatar Charity",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Qatar Charity",
+     "reportChannel": "From Excel",
+     "date": "2026-04-14T00:00:00.000Z"
+    }
+   ],
+   "refCode": "360291"
+  },
+  {
+   "id": "385106",
+   "amountUSD": 44979,
+   "budgetYear": "2026",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2026-04-14T13:25:42.133Z",
+   "date": "2026-04-14T00:00:00Z",
+   "decisionDate": "2026-01-02T00:00:00Z",
+   "description": "Projects focused on animal‑based food production and agriculture",
+   "grandBargainEarmarkingType": [
+    "tightly earmarked"
+   ],
+   "exchangeRate": 3.650037,
+   "firstReportedDate": "2026-04-07T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 164175,
+   "originalCurrency": "QAR",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "pledge",
+   "updatedAt": "2026-04-14T14:07:20.045Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "1418",
+     "name": "Qatar Charity",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "181",
+     "name": "Qatar",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "1418",
+     "name": "Qatar Charity",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Qatar Charity",
+     "reportChannel": "From Excel",
+     "date": "2026-04-14T00:00:00.000Z"
+    }
+   ],
+   "refCode": "360400"
+  },
+  {
+   "id": "385195",
+   "amountUSD": 255623,
+   "budgetYear": "2026",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2026-04-14T13:26:07.535Z",
+   "date": "2026-04-14T00:00:00Z",
+   "decisionDate": "2026-02-26T00:00:00Z",
+   "description": "Sponsorship of orphans and poor families",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 3.649996,
+   "firstReportedDate": "2026-04-07T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 933023,
+   "originalCurrency": "QAR",
+   "method": "Cash transfer programming (CTP)",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2026-04-14T13:48:28.508Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "1418",
+     "name": "Qatar Charity",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "181",
+     "name": "Qatar",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "1418",
+     "name": "Qatar Charity",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "12",
+     "name": "Protection - Child Protection",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Qatar Charity",
+     "reportChannel": "From Excel",
+     "date": "2026-04-14T00:00:00.000Z"
+    }
+   ],
+   "refCode": "17773"
+  },
+  {
+   "id": "385486",
+   "amountUSD": 46823902,
+   "budgetYear": "2025",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2026-04-15T08:04:11.975Z",
+   "date": "2026-04-15T00:00:00Z",
+   "decisionDate": "2026-02-17T00:00:00Z",
+   "description": "Ukraine, Afghanistan, Palestine & Region, Iraq, Middle East and Northern Africa regional, Libya, Lebanon, Eritrea, The Gambia, Sudan, Nigeria, Mali, Sub-Sahara Africa Regional, Ghana, Sierra Leone, Ethiopia, Angola, Lesotho, Djibouti, Egypt, Togo, Eswatini, Algeria, Mali, Tanzania, Myanmar, Sri Lanka, Asia, Europe, Latin American and Caribbean countries regional, Nepal.",
+   "grandBargainEarmarkingType": [
+    "tightly earmarked"
+   ],
+   "exchangeRate": 150,
+   "firstReportedDate": "2026-04-14T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 7023585300,
+   "originalCurrency": "JPY",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "paid",
+   "updatedAt": "2026-04-15T08:04:11.975Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "4537",
+     "name": "Japan, Government of",
+     "behavior": "single",
+     "organizationTypes": [
+      "Governments"
+     ],
+     "organizationSubTypes": [
+      "National Governments"
+     ],
+     "organizationLevels": [
+      "National and Sub-National State Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "112",
+     "name": "Japan",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "46",
+     "name": "2025",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "5294",
+     "name": "United Nations Development Programme",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "2",
+     "name": "Early Recovery",
+     "behavior": "shared"
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "10",
+     "name": "Protection",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "234",
+     "name": "Ukraine",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "1",
+     "name": "Afghanistan",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "171",
+     "name": "Occupied Palestinian Territory",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "25928038",
+     "name": "Region - Middle East and Northern Africa",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "124",
+     "name": "Lebanon",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "127",
+     "name": "Libya",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "69",
+     "name": "Eritrea",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "81",
+     "name": "Gambia",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "212",
+     "name": "Sudan",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "137",
+     "name": "Mali",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "163",
+     "name": "Nigeria",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "84",
+     "name": "Ghana",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "200",
+     "name": "Sierra Leone",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "71",
+     "name": "Ethiopia",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "7",
+     "name": "Angola",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "125",
+     "name": "Lesotho",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "62",
+     "name": "Djibouti",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "224",
+     "name": "Togo",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "215",
+     "name": "Eswatini",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "4",
+     "name": "Algeria",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "221",
+     "name": "Tanzania, United Republic of",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "153",
+     "name": "Myanmar",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "210",
+     "name": "Sri Lanka",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "25928035",
+     "name": "Region - Asia and the Pacific",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "25928036",
+     "name": "Region - Europe",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "25928037",
+     "name": "Region - Latin America and the Caribbean",
+     "behavior": "shared"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "shared"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "shared",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Japan, Government of",
+     "reportChannel": "Email",
+     "date": "2026-04-14T00:00:00.000Z"
+    }
+   ]
+  },
+  {
+   "id": "390439",
+   "amountUSD": 40000,
+   "budgetYear": null,
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2026-05-29T02:03:37.196Z",
+   "date": "2026-05-29T00:00:00Z",
+   "decisionDate": "2026-03-23T00:00:00Z",
+   "description": "Flexible humanitarian funding from Save the Children International's Humanitarian Fund",
+   "grandBargainEarmarkingType": [
+    "unearmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2026-05-13T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "commitment",
+   "updatedAt": "2026-05-29T02:03:37.196Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "2849",
+     "name": "Save the Children",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "2849",
+     "name": "Save the Children",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Save the Children",
+     "reportChannel": "Email",
+     "date": "2026-05-13T00:00:00.000Z"
+    }
+   ],
+   "refCode": "99701455"
+  },
+  {
+   "id": "390925",
+   "amountUSD": 483996,
+   "budgetYear": "2026",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2026-06-02T08:27:05.568Z",
+   "date": "2026-06-02T00:00:00Z",
+   "decisionDate": "2026-05-11T00:00:00Z",
+   "description": "Pratibaddha IV: Whole of Society Approach to Strengthening and Scaling Shock Responsive and Anticipatory Multi Hazard Preparedness and Response in Western Nepal",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 0.855,
+   "firstReportedDate": "2026-05-26T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 413817,
+   "originalCurrency": "EUR",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "commitment",
+   "updatedAt": "2026-06-02T12:24:36.842Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "8523",
+     "name": "European Commission's Humanitarian Aid and Civil Protection Department",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "Other Multilateral Organizations"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "141",
+     "name": "People in Need",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "26481",
+     "name": "Other",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "European Commission's Humanitarian Aid and Civil Protection Department",
+     "reportChannel": "From Excel",
+     "date": "2026-06-02T00:00:00.000Z"
+    }
+   ],
+   "refCode": "ECHO/-XA/BUD/2026/91017"
+  },
+  {
+   "id": "392167",
+   "amountUSD": 269594,
+   "budgetYear": "2026",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2026-06-09T13:35:25.634Z",
+   "date": "2026-06-09T00:00:00Z",
+   "decisionDate": "2026-05-29T00:00:00Z",
+   "description": "Strengthening Urban Preparedness and Earthquake Response in Western region of Nepal (SUPER-III)",
+   "grandBargainEarmarkingType": [
+    "earmarked"
+   ],
+   "exchangeRate": 0.854,
+   "firstReportedDate": "2026-06-09T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 230233,
+   "originalCurrency": "EUR",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "commitment",
+   "updatedAt": "2026-06-16T16:26:29.914Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "8523",
+     "name": "European Commission's Humanitarian Aid and Civil Protection Department",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "Other Multilateral Organizations"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "971",
+     "name": "UN Multi-Partner Trust Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Pooled Funds"
+     ],
+     "organizationSubTypes": [
+      "Global UN Pooled Funds"
+     ],
+     "organizationLevels": [
+      "Pooled Funds"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "26481",
+     "name": "Other",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "European Commission's Humanitarian Aid and Civil Protection Department",
+     "reportChannel": "From Excel",
+     "date": "2026-06-09T00:00:00.000Z"
+    }
+   ],
+   "refCode": "ECHO/-XA/BUD/2026/91015"
+  },
+  {
+   "id": "393759",
+   "amountUSD": 430,
+   "budgetYear": "2026",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2026-06-23T12:01:55.260Z",
+   "date": "2026-06-23T00:00:00Z",
+   "decisionDate": "2026-03-01T00:00:00Z",
+   "description": "UNICEF-China\tROSA, Nepal",
+   "grandBargainEarmarkingType": [
+    "softly earmarked"
+   ],
+   "exchangeRate": null,
+   "firstReportedDate": "2026-06-23T00:00:00Z",
+   "flowType": "Pass through",
+   "keywords": null,
+   "newMoney": true,
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "commitment",
+   "updatedAt": "2026-06-23T12:01:55.260Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "3274",
+     "name": "UNICEF National Committees",
+     "behavior": "single",
+     "organizationTypes": [
+      "Private Organizations"
+     ],
+     "organizationSubTypes": [
+      "Local/National Private Organizations"
+     ],
+     "organizationLevels": [
+      "Local and National Non-State Actors"
+     ]
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "2915",
+     "name": "United Nations Children's Fund",
+     "behavior": "single",
+     "organizationTypes": [
+      "Multilateral Organizations"
+     ],
+     "organizationSubTypes": [
+      "UN Agencies"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "United Nations Children's Fund",
+     "reportChannel": "Email",
+     "date": "2026-06-23T00:00:00.000Z"
+    }
+   ],
+   "refCode": "SM2699200010"
+  },
+  {
+   "id": "397819",
+   "amountUSD": 16123,
+   "budgetYear": "2026",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2026-08-06T13:40:55.925Z",
+   "date": "2026-08-06T00:00:00Z",
+   "decisionDate": "2026-05-23T00:00:00Z",
+   "description": "Integrated Health Services Project (Non-Communicable Diseases Treatment Program)",
+   "grandBargainEarmarkingType": [
+    "tightly earmarked"
+   ],
+   "exchangeRate": 3.650065,
+   "firstReportedDate": "2026-07-02T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 58850,
+   "originalCurrency": "QAR",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "pledge",
+   "updatedAt": "2026-08-06T13:53:05.433Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "1418",
+     "name": "Qatar Charity",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "181",
+     "name": "Qatar",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "1418",
+     "name": "Qatar Charity",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "7",
+     "name": "Health",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Qatar Charity",
+     "reportChannel": "From Excel",
+     "date": "2026-08-06T00:00:00.000Z"
+    }
+   ],
+   "refCode": "366067"
+  },
+  {
+   "id": "397820",
+   "amountUSD": 7911,
+   "budgetYear": "2026",
+   "childFlowIds": null,
+   "contributionType": "in kind",
+   "createdAt": "2026-08-06T13:40:56.168Z",
+   "date": "2026-08-06T00:00:00Z",
+   "decisionDate": "2026-05-01T00:00:00Z",
+   "description": "Food security projects, animal ownership",
+   "grandBargainEarmarkingType": [
+    "tightly earmarked"
+   ],
+   "exchangeRate": 3.649981,
+   "firstReportedDate": "2026-07-02T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 28875,
+   "originalCurrency": "QAR",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "pledge",
+   "updatedAt": "2026-08-06T13:53:04.799Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "1418",
+     "name": "Qatar Charity",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "181",
+     "name": "Qatar",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "1418",
+     "name": "Qatar Charity",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "6",
+     "name": "Food Security",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Qatar Charity",
+     "reportChannel": "From Excel",
+     "date": "2026-08-06T00:00:00.000Z"
+    }
+   ],
+   "refCode": "364675"
+  },
+  {
+   "id": "397822",
+   "amountUSD": 9548,
+   "budgetYear": "2026",
+   "childFlowIds": null,
+   "contributionType": "financial",
+   "createdAt": "2026-08-06T13:40:56.619Z",
+   "date": "2026-08-06T00:00:00Z",
+   "decisionDate": "2026-04-08T00:00:00Z",
+   "description": "Educational Scholarship Support Program",
+   "grandBargainEarmarkingType": [
+    "tightly earmarked"
+   ],
+   "exchangeRate": 3.649979,
+   "firstReportedDate": "2026-07-02T00:00:00Z",
+   "flowType": "Standard",
+   "keywords": null,
+   "newMoney": true,
+   "originalAmount": 34850,
+   "originalCurrency": "QAR",
+   "method": "Traditional aid",
+   "parentFlowId": null,
+   "status": "pledge",
+   "updatedAt": "2026-08-06T13:53:03.468Z",
+   "versionId": 1,
+   "sourceObjects": [
+    {
+     "type": "Organization",
+     "id": "1418",
+     "name": "Qatar Charity",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "Location",
+     "id": "181",
+     "name": "Qatar",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "destinationObjects": [
+    {
+     "type": "Organization",
+     "id": "1418",
+     "name": "Qatar Charity",
+     "behavior": "single",
+     "organizationTypes": [
+      "NGOs"
+     ],
+     "organizationSubTypes": [
+      "International NGOs"
+     ],
+     "organizationLevels": [
+      "International Actors"
+     ]
+    },
+    {
+     "type": "GlobalCluster",
+     "id": "3",
+     "name": "Education",
+     "behavior": "single"
+    },
+    {
+     "type": "Location",
+     "id": "156",
+     "name": "Nepal",
+     "behavior": "single"
+    },
+    {
+     "type": "UsageYear",
+     "id": "47",
+     "name": "2026",
+     "behavior": "single"
+    }
+   ],
+   "boundary": "incoming",
+   "onBoundary": "single",
+   "reportDetails": [
+    {
+     "sourceType": "Primary",
+     "organization": "Qatar Charity",
+     "reportChannel": "From Excel",
+     "date": "2026-08-06T00:00:00.000Z"
+    }
+   ],
+   "refCode": "361482"
+  }
+ ]
+}

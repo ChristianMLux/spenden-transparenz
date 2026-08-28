@@ -1,0 +1,132 @@
+{
+ "retrieved_at": "2026-08-28T12:59:35+00:00",
+ "source": "ukcc_api",
+ "data": [
+  {
+   "name": "MARTIN RICHARD BROOKS MA",
+   "is_chair": true,
+   "date_of_appointment": "2016-10-26T00:00:00",
+   "organisation_number": null,
+   "charity_name": null,
+   "reporting_status": null,
+   "reg_charity_number": null
+  },
+  {
+   "name": "Emile Simpson",
+   "is_chair": false,
+   "date_of_appointment": "2026-01-12T00:00:00",
+   "organisation_number": null,
+   "charity_name": null,
+   "reporting_status": null,
+   "reg_charity_number": null
+  },
+  {
+   "name": "Brigadier Jody Davies MBE",
+   "is_chair": false,
+   "date_of_appointment": "2025-05-20T00:00:00",
+   "organisation_number": 4007581,
+   "charity_name": "THE GURKHA WELFARE TRUST",
+   "reporting_status": "Submission Received",
+   "reg_charity_number": 1103669
+  },
+  {
+   "name": "Garfield Smith",
+   "is_chair": false,
+   "date_of_appointment": "2025-01-20T00:00:00",
+   "organisation_number": null,
+   "charity_name": null,
+   "reporting_status": null,
+   "reg_charity_number": null
+  },
+  {
+   "name": "Major Sanjip Rai",
+   "is_chair": false,
+   "date_of_appointment": "2024-08-08T00:00:00",
+   "organisation_number": null,
+   "charity_name": null,
+   "reporting_status": null,
+   "reg_charity_number": null
+  },
+  {
+   "name": "Major Michael Frederick Barney",
+   "is_chair": false,
+   "date_of_appointment": "2022-12-19T00:00:00",
+   "organisation_number": null,
+   "charity_name": null,
+   "reporting_status": null,
+   "reg_charity_number": null
+  },
+  {
+   "name": "Colonel David John Robinson",
+   "is_chair": false,
+   "date_of_appointment": "2021-11-15T00:00:00",
+   "organisation_number": 1036834,
+   "charity_name": "THE ROYAL GURKHA RIFLES TRUST",
+   "reporting_status": "Submission Received",
+   "reg_charity_number": 1036834
+  },
+  {
+   "name": "Lt Gen Sir David Robert Bill KCB",
+   "is_chair": false,
+   "date_of_appointment": "2019-05-13T00:00:00",
+   "organisation_number": 1056185,
+   "charity_name": "THE GURKHA BRIGADE ASSOCIATION TRUST",
+   "reporting_status": "Submission Received",
+   "reg_charity_number": 1056185
+  },
+  {
+   "name": "MAJOR JOHN REDFERN HARROP",
+   "is_chair": false,
+   "date_of_appointment": "2019-05-13T00:00:00",
+   "organisation_number": null,
+   "charity_name": null,
+   "reporting_status": null,
+   "reg_charity_number": null
+  },
+  {
+   "name": "SUDHA RAI",
+   "is_chair": false,
+   "date_of_appointment": "2019-05-13T00:00:00",
+   "organisation_number": null,
+   "charity_name": null,
+   "reporting_status": null,
+   "reg_charity_number": null
+  },
+  {
+   "name": "STEPHEN MASLIN",
+   "is_chair": false,
+   "date_of_appointment": "2017-01-01T00:00:00",
+   "organisation_number": null,
+   "charity_name": null,
+   "reporting_status": null,
+   "reg_charity_number": null
+  },
+  {
+   "name": "John Walter Bulbeck",
+   "is_chair": false,
+   "date_of_appointment": "2017-01-01T00:00:00",
+   "organisation_number": null,
+   "charity_name": null,
+   "reporting_status": null,
+   "reg_charity_number": null
+  },
+  {
+   "name": "COLONEL WILLIAM FRANCIS SHUTTLEWOOD OBE",
+   "is_chair": false,
+   "date_of_appointment": "2017-01-01T00:00:00",
+   "organisation_number": null,
+   "charity_name": null,
+   "reporting_status": null,
+   "reg_charity_number": null
+  },
+  {
+   "name": "COLONEL CHARLES MATTHEW JOHN BARNETT MBE",
+   "is_chair": false,
+   "date_of_appointment": "2016-10-26T00:00:00",
+   "organisation_number": null,
+   "charity_name": null,
+   "reporting_status": null,
+   "reg_charity_number": null
+  }
+ ]
+}

@@ -1,0 +1,320 @@
+{
+ "retrieved_at": "2026-08-28T12:57:21+00:00",
+ "source": "reliefweb",
+ "data": {
+  "api_v2": {
+   "status": 403,
+   "body": "{\"status\":403,\"time\":27,\"error\":{\"type\":\"AccessDeniedHttpException\",\"message\":\"You are not using an approved appname. Kindly request an appname from ReliefWeb here: https:\\/\\/apidoc.reliefweb.int\\/par"
+  },
+  "no_api_path": "country page -> disaster page -> D<id> -> /updates?advanced-search=(D<id>)&page=N (20/page) -> report pages",
+  "rss": {
+   "http": 200,
+   "items": 20,
+   "cap": 20
+  },
+  "disasters_current": [
+   {
+    "url": "https://reliefweb.int/disaster/ff-2026-000162-npl",
+    "title": "Nepal: Flash Floods - Aug 2026",
+    "disaster_id": "52684"
+   }
+  ],
+  "flood_disaster": {
+   "url": "https://reliefweb.int/disaster/ff-2026-000162-npl",
+   "title": "Nepal: Flash Floods - Aug 2026",
+   "disaster_id": "52684"
+  },
+  "flood_updates": {
+   "listing_total": 38,
+   "distinct": 35,
+   "by_format": {
+    "News and Press Release": 24,
+    "Situation Report": 9,
+    "Other": 2
+   },
+   "by_source": {
+    "IOM": 4,
+    "Oxfam": 4,
+    "Save the Children": 3,
+    "UNICEF": 3,
+    "IFRC": 3,
+    "World Vision": 2,
+    "Plan International": 2,
+    "IRDR": 1,
+    "HOPE": 1,
+    "PDC": 1,
+    "UNDRR": 1,
+    "Logistics Cluster    WFP": 1,
+    "ETC    Logistics Cluster    WFP": 1,
+    "Govt. Australia": 1,
+    "Qatar Charity": 1,
+    "Islamic Relief": 1,
+    "MSF": 1,
+    "WFP": 1,
+    "DFS": 1,
+    "CARE": 1,
+    "IFRC    Nepal Red Cross": 1
+   },
+   "date_range": [
+    "2026-08-26T06:13:19+00:00",
+    "2026-08-28T12:19:02+00:00"
+   ]
+  },
+  "country_listing_total": 12950,
+  "reports_fetched": 35,
+  "reports_failed": 0,
+  "field_fill_listing": {
+   "title": 1.0,
+   "format": 1.0,
+   "sources": 1.0,
+   "date": 1.0
+  },
+  "sample_titles": [
+   [
+    "2026-08-28",
+    [
+     "Save the Children"
+    ],
+    "Nepal Floods: School children reunited with families after being stranded – Save the Children"
+   ],
+   [
+    "2026-08-28",
+    [
+     "World Vision"
+    ],
+    "WVI Nepal Declares Category I National Response to Flash Floods in Rasuwa and Nuwakot"
+   ],
+   [
+    "2026-08-28",
+    [
+     "IRDR"
+    ],
+    "IRDR Data Brief - Satellite Data for Flash Flood/Debris Flow in China and Nepal on 26 August 2026"
+   ],
+   [
+    "2026-08-28",
+    [
+     "HOPE"
+    ],
+    "Nepal Landslides & Flash Floods: Situation Report #1 (August 27, 2026)"
+   ],
+   [
+    "2026-08-28",
+    [
+     "PDC"
+    ],
+    "Nepal Catastrophic Flash Flood Rasuwa-Trishuli, Nepal (26 August 2026)"
+   ],
+   [
+    "2026-08-28",
+    [
+     "Plan International"
+    ],
+    "Students stranded, communities isolated after devastating Nepal floods"
+   ],
+   [
+    "2026-08-28",
+    [
+     "UNDRR"
+    ],
+    "Statement on the disaster in Nepal and China by Kamal Kishore, Special Representative of the UN Secretary-General for Disaster Risk Reduction and Head of UNDRR"
+   ],
+   [
+    "2026-08-28",
+    [
+     "IOM"
+    ],
+    "Nepal Flood Response Situation Report #1 | 27 August 2026"
+   ],
+   [
+    "2026-08-28",
+    [
+     "Logistics Cluster    WFP"
+    ],
+    "Asia-Pacific Humanitarian Logistics Working Group - Ad-Hoc Regional Call on Nepal Flood Emergency (27 August 2026) [Presentation]"
+   ],
+   [
+    "2026-08-28",
+    [
+     "ETC    Logistics Cluster    WFP"
+    ],
+    "Asia-Pacific Humanitarian Logistics Working Group - Nepal Flood Emergency Coordination Meeting Minutes (27 August 2026)"
+   ],
+   [
+    "2026-08-28",
+    [
+     "Govt. Australia"
+    ],
+    "Australia’s response to Nepal-China floods (28 August 2026)"
+   ],
+   [
+    "2026-08-27",
+    [
+     "UNICEF"
+    ],
+    "En Nepal, las inundaciones repentinas dejan a más de 17.000 niños y niñas necesitados de asistencia humanitaria urgente"
+   ],
+   [
+    "2026-08-27",
+    [
+     "UNICEF"
+    ],
+    "Au Népal, 17 000 enfants ont besoin d’une aide humanitaire d’urgence en raison des crues éclair qui ont frappé le pays"
+   ],
+   [
+    "2026-08-27",
+    [
+     "IFRC"
+    ],
+    "IFRC launches CHF 25 million Emergency Appeal in response to devastating Nepal flash floods"
+   ],
+   [
+    "2026-08-27",
+    [
+     "Qatar Charity"
+    ],
+    "Qatar Charity – Emergency Response Plan (ERP) - Nepal Flash Flood Response 2026"
+   ],
+   [
+    "2026-08-27",
+    [
+     "UNICEF"
+    ],
+    "Flash floods in Nepal leave more than 17,000 children in need of urgent humanitarian assistance [EN/AR]"
+   ],
+   [
+    "2026-08-27",
+    [
+     "Oxfam"
+    ],
+    "Oxfam Intermón responde a la riada de Nepal en Rasuwa y Nuwakot, donde las carreteras y los puentes destruidos dificultan las labores de socorro."
+   ],
+   [
+    "2026-08-27",
+    [
+     "Islamic Relief"
+    ],
+    "Islamic Relief sending emergency aid to Nepal flood survivors"
+   ],
+   [
+    "2026-08-27",
+    [
+     "IFRC"
+    ],
+    "Népal : l’IFRC débloque des fonds d’urgence alors que les inondations soudaines laissent des communautés isolées"
+   ],
+   [
+    "2026-08-27",
+    [
+     "Oxfam"
+    ],
+    "Oxfam launches Nepal flood response in worst-hit Rasuwa and Nuwakot, as destroyed roads and swept-away bridges block relief efforts"
+   ],
+   [
+    "2026-08-27",
+    [
+     "IOM"
+    ],
+    "IOM Spokesperson Statement on the Nepal-China Floods"
+   ],
+   [
+    "2026-08-27",
+    [
+     "Save the Children"
+    ],
+    "Nepal floods: Rescuers race to find survivors with areas still cut off"
+   ],
+   [
+    "2026-08-27",
+    [
+     "Save the Children"
+    ],
+    "Nepal Floods: Rescuers race to find survivors with areas still cut off - Save the Children"
+   ],
+   [
+    "2026-08-27",
+    [
+     "IOM"
+    ],
+    "Déclaration du porte-parole de l'OIM sur les inondations à la frontière Népal-Chine"
+   ],
+   [
+    "2026-08-27",
+    [
+     "IOM"
+    ],
+    "Declaración del Portavoz de la OIM sobre las inundaciones en la frontera entre Nepal y China"
+   ],
+   [
+    "2026-08-27",
+    [
+     "MSF"
+    ],
+    "MSF team in Nepal"
+   ],
+   [
+    "2026-08-27",
+    [
+     "WFP"
+    ],
+    "WFP Nepal External Situation Report, 27 August 2026"
+   ],
+   [
+    "2026-08-27",
+    [
+     "Oxfam"
+    ],
+    "Oxfam Intermón prepara su respuesta ante la riada en Nepal"
+   ],
+   [
+    "2026-08-27",
+    [
+     "DFS"
+    ],
+    "Nepal Flash Floods: Rapid Situation Overview (27 August 2026)"
+   ],
+   [
+    "2026-08-27",
+    [
+     "Plan International"
+    ],
+    "Floods and massive landslide devastate communities along Nepal-China border"
+   ],
+   [
+    "2026-08-26",
+    [
+     "Oxfam"
+    ],
+    "Reaction: Nepal flash floods"
+   ],
+   [
+    "2026-08-26",
+    [
+     "IFRC"
+    ],
+    "Nepal: IFRC releases emergency funds as flash floods leave communities isolated"
+   ],
+   [
+    "2026-08-26",
+    [
+     "CARE"
+    ],
+    "CARE Nepal stands ready to support communities after flash flood"
+   ],
+   [
+    "2026-08-26",
+    [
+     "World Vision"
+    ],
+    "Flash Flood in Rasuwa and Nuwakot Leaves 18 Missing and Approximately 60 Houses Swept Away"
+   ],
+   [
+    "2026-08-26",
+    [
+     "IFRC    Nepal Red Cross"
+    ],
+    "NPL: Flood - 08-2026 - Rasuwa Flood (2026-08-26)"
+   ]
+  ]
+ }
+}
