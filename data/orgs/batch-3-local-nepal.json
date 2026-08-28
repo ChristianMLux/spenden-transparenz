@@ -17,7 +17,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": "no Devanagari name found on org site"
+    "note": "no Devanagari name found on org site",
+    "gap_reason": "searched_not_found"
    },
    "aliases": [
     "MHN"
@@ -38,7 +39,8 @@
     "status": "registered",
     "retrieved_at": "2026-08-28",
     "verification": "self_reported",
-    "note": "org site states District Administration Office (Kathmandu) registration but no number is published"
+    "note": "org site states District Administration Office (Kathmandu) registration but no number is published",
+    "gap_reason": "searched_not_found"
    },
    {
     "registry": "NP_SWC",
@@ -47,7 +49,8 @@
     "status": null,
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
-    "note": "swc.org.np unreachable 28.08.2026; no SWC affiliation number published on org's own site"
+    "note": "swc.org.np unreachable 28.08.2026; no SWC affiliation number published on org's own site",
+    "gap_reason": "source_unreachable"
    }
   ],
   "nepal_presence": {
@@ -73,7 +76,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "partners": []
   },
@@ -108,7 +112,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "iati_publisher": {
     "is_publisher": null,
@@ -122,10 +127,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "expenditure": {
     "value": null,
@@ -133,10 +139,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "program_ratio": {
     "value": null,
@@ -144,7 +151,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "peer_group": null
   },
@@ -183,7 +191,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": "site shows Devanagari for unrelated legal-bill references (e.g. 'संघ संस्था ऐन') but no Devanagari org name was found"
+    "note": "site shows Devanagari for unrelated legal-bill references (e.g. 'संघ संस्था ऐन') but no Devanagari org name was found",
+    "gap_reason": "searched_not_found"
    },
    "aliases": [
     "NFN"
@@ -204,7 +213,8 @@
     "status": null,
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
-    "note": "swc.org.np unreachable 28.08.2026; no SWC number published on NFN's own site"
+    "note": "swc.org.np unreachable 28.08.2026; no SWC number published on NFN's own site",
+    "gap_reason": "source_unreachable"
    },
    {
     "registry": "IATI",
@@ -213,7 +223,8 @@
     "status": null,
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
-    "note": "d-portal.org did not render publisher data for this session; could not confirm a publisher ref despite being told NFN is an IATI publisher"
+    "note": "d-portal.org did not render publisher data for this session; could not confirm a publisher ref despite being told NFN is an IATI publisher",
+    "gap_reason": "searched_not_found"
    },
    {
     "registry": "IATI",
@@ -248,7 +259,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "partners": []
   },
@@ -267,7 +279,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": "annual report category page exists but individual documents/years could not be enumerated via fetch"
+    "note": "annual report category page exists but individual documents/years could not be enumerated via fetch",
+    "gap_reason": "searched_not_found"
    },
    "iati_publisher": {
     "is_publisher": true,
@@ -281,10 +294,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "expenditure": {
     "value": null,
@@ -292,10 +306,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "program_ratio": {
     "value": null,
@@ -303,7 +318,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "peer_group": null
   },
@@ -340,7 +356,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": "no Devanagari name found on org site"
+    "note": "no Devanagari name found on org site",
+    "gap_reason": "searched_not_found"
    },
    "aliases": [
     "CSRC",
@@ -362,7 +379,8 @@
     "status": null,
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
-    "note": "swc.org.np unreachable 28.08.2026; no SWC number published on org's own site"
+    "note": "swc.org.np unreachable 28.08.2026; no SWC number published on org's own site",
+    "gap_reason": "source_unreachable"
    }
   ],
   "nepal_presence": {
@@ -372,7 +390,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": "founding year not stated on the pages fetched"
+    "note": "founding year not stated on the pages fetched",
+    "gap_reason": "searched_not_found"
    },
    "mode": {
     "value": "own_staff",
@@ -388,7 +407,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "partners": []
   },
@@ -422,7 +442,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "iati_publisher": {
     "is_publisher": null,
@@ -436,10 +457,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "expenditure": {
     "value": null,
@@ -447,10 +469,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "program_ratio": {
     "value": null,
@@ -458,7 +481,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "peer_group": null
   },
@@ -496,7 +520,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "aliases": []
   },
@@ -515,7 +540,8 @@
     "status": null,
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
-    "note": "swc.org.np unreachable 28.08.2026; no SWC number published on org's own site"
+    "note": "swc.org.np unreachable 28.08.2026; no SWC number published on org's own site",
+    "gap_reason": "source_unreachable"
    }
   ],
   "nepal_presence": {
@@ -541,7 +567,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "partners": []
   },
@@ -560,7 +587,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": "homepage menu lists 'Annual Reports' and 'Reports & Case Studies' sections but a working direct document URL could not be confirmed via fetch"
+    "note": "homepage menu lists 'Annual Reports' and 'Reports & Case Studies' sections but a working direct document URL could not be confirmed via fetch",
+    "gap_reason": "searched_not_found"
    },
    "iati_publisher": {
     "is_publisher": null,
@@ -574,10 +602,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "expenditure": {
     "value": null,
@@ -585,10 +614,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "program_ratio": {
     "value": null,
@@ -596,7 +626,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "peer_group": null
   },
@@ -634,7 +665,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": "Nepali-language news items exist on the site but no Devanagari organisation name was found"
+    "note": "Nepali-language news items exist on the site but no Devanagari organisation name was found",
+    "gap_reason": "searched_not_found"
    },
    "aliases": [
     "Nepal Lions",
@@ -657,7 +689,8 @@
     "status": null,
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
-    "note": "swc.org.np unreachable 28.08.2026; no SWC number published on org's own site"
+    "note": "swc.org.np unreachable 28.08.2026; no SWC number published on org's own site",
+    "gap_reason": "source_unreachable"
    }
   ],
   "nepal_presence": {
@@ -667,7 +700,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": "site references a 'History of Lions 325 Nepal' page but the founding year was not visible via fetch"
+    "note": "site references a 'History of Lions 325 Nepal' page but the founding year was not visible via fetch",
+    "gap_reason": "searched_not_found"
    },
    "mode": {
     "value": "own_staff",
@@ -683,7 +717,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "partners": []
   },
@@ -717,7 +752,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "iati_publisher": {
     "is_publisher": null,
@@ -731,10 +767,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "expenditure": {
     "value": null,
@@ -742,10 +779,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "program_ratio": {
     "value": null,
@@ -753,7 +791,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "peer_group": null
   },
@@ -783,7 +822,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": "no official Nepal-registered legal name found; described in press as the Nepal chapter of the international Hindu Swayamsevak Sangh network"
+    "note": "no official Nepal-registered legal name found; described in press as the Nepal chapter of the international Hindu Swayamsevak Sangh network",
+    "gap_reason": "searched_not_found"
    },
    "local_script": {
     "value": "हिन्दू स्वयंसेवक संघ नेपाल",
@@ -812,7 +852,8 @@
     "status": null,
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
-    "note": "no evidence found of separate Nepal registration; may operate as a volunteer chapter of the international HSS network without distinct Nepali charity registration"
+    "note": "no evidence found of separate Nepal registration; may operate as a volunteer chapter of the international HSS network without distinct Nepali charity registration",
+    "gap_reason": "searched_not_found"
    }
   ],
   "nepal_presence": {
@@ -822,7 +863,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "mode": {
     "value": "own_staff",
@@ -838,7 +880,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "partners": [
     {
@@ -895,7 +938,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "iati_publisher": {
     "is_publisher": null,
@@ -909,10 +953,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "expenditure": {
     "value": null,
@@ -920,10 +965,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "program_ratio": {
     "value": null,
@@ -931,7 +977,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "peer_group": null
   },
@@ -963,7 +1010,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "local_script": {
     "value": "विश्व हिन्दू परिषद् नेपाल",
@@ -992,7 +1040,8 @@
     "status": null,
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
-    "note": "no registration information found anywhere; only a press mention and an apparent social media handle (@vhpnepal, not independently fetched) were located"
+    "note": "no registration information found anywhere; only a press mention and an apparent social media handle (@vhpnepal, not independently fetched) were located",
+    "gap_reason": "searched_not_found"
    }
   ],
   "nepal_presence": {
@@ -1002,7 +1051,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "mode": {
     "value": "unknown",
@@ -1018,7 +1068,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "partners": []
   },
@@ -1052,7 +1103,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "iati_publisher": {
     "is_publisher": null,
@@ -1066,10 +1118,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "expenditure": {
     "value": null,
@@ -1077,10 +1130,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "program_ratio": {
     "value": null,
@@ -1088,7 +1142,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "peer_group": null
   },
@@ -1129,7 +1184,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "aliases": []
   },
@@ -1148,7 +1204,8 @@
     "status": null,
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
-    "note": "no registration information found; org's own website could not be reached this session (DNS lookup failures for dhulikhelhospital.org and kusms.edu.np)"
+    "note": "no registration information found; org's own website could not be reached this session (DNS lookup failures for dhulikhelhospital.org and kusms.edu.np)",
+    "gap_reason": "searched_not_found"
    }
   ],
   "nepal_presence": {
@@ -1158,7 +1215,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "mode": {
     "value": "own_staff",
@@ -1174,7 +1232,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "partners": []
   },
@@ -1208,7 +1267,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "iati_publisher": {
     "is_publisher": null,
@@ -1225,7 +1285,8 @@
     "note": "Direct Relief states it gave Dhulikhel Hospital '$2.5 million in medical support in 2026' — this is aid received from one funder, not the hospital's total organisational income, so it is not recorded here as income",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "expenditure": {
     "value": null,
@@ -1233,10 +1294,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "program_ratio": {
     "value": null,
@@ -1244,7 +1306,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "peer_group": null
   },
@@ -1284,7 +1347,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "aliases": [
     "WOREC"
@@ -1305,7 +1369,8 @@
     "status": null,
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
-    "note": "swc.org.np unreachable 28.08.2026; no SWC number published on org's own site"
+    "note": "swc.org.np unreachable 28.08.2026; no SWC number published on org's own site",
+    "gap_reason": "source_unreachable"
    }
   ],
   "nepal_presence": {
@@ -1315,7 +1380,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "self_reported",
     "quote": "over 34 years",
-    "note": "site states 'over 34 years' of operation (self-reported), implying founding around the early 1990s, but no exact year is stated so value left null"
+    "note": "site states 'over 34 years' of operation (self-reported), implying founding around the early 1990s, but no exact year is stated so value left null",
+    "gap_reason": "searched_not_found"
    },
    "mode": {
     "value": "own_staff",
@@ -1331,7 +1397,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "partners": []
   },
@@ -1365,7 +1432,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "iati_publisher": {
     "is_publisher": null,
@@ -1379,10 +1447,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "expenditure": {
     "value": null,
@@ -1390,10 +1459,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "program_ratio": {
     "value": null,
@@ -1401,7 +1471,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "peer_group": null
   },
@@ -1462,7 +1533,8 @@
     "status": null,
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
-    "note": "swc.org.np unreachable 28.08.2026; no SWC number published on org's own site"
+    "note": "swc.org.np unreachable 28.08.2026; no SWC number published on org's own site",
+    "gap_reason": "source_unreachable"
    }
   ],
   "nepal_presence": {
@@ -1488,7 +1560,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "partners": []
   },
@@ -1538,7 +1611,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": "org's Resources page lists items titled 'Financial Report 23-25', 'GS Progress Report 2024' and audit reports, but the resources sub-page returned 404 when fetched directly so no working document URL could be captured"
+    "note": "org's Resources page lists items titled 'Financial Report 23-25', 'GS Progress Report 2024' and audit reports, but the resources sub-page returned 404 when fetched directly so no working document URL could be captured",
+    "gap_reason": "searched_not_found"
    },
    "iati_publisher": {
     "is_publisher": null,
@@ -1552,10 +1626,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "expenditure": {
     "value": null,
@@ -1563,10 +1638,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "program_ratio": {
     "value": null,
@@ -1574,7 +1650,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "peer_group": null
   },
@@ -1602,7 +1679,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "local_script": {
     "value": null,
@@ -1610,7 +1688,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "aliases": []
   },
@@ -1629,7 +1708,8 @@
     "status": null,
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
-    "note": "no registration information found; only a single local-press mention exists"
+    "note": "no registration information found; only a single local-press mention exists",
+    "gap_reason": "searched_not_found"
    }
   ],
   "nepal_presence": {
@@ -1639,7 +1719,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "mode": {
     "value": "unknown",
@@ -1655,7 +1736,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "partners": []
   },
@@ -1689,7 +1771,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "iati_publisher": {
     "is_publisher": null,
@@ -1703,10 +1786,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "expenditure": {
     "value": null,
@@ -1714,10 +1798,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "program_ratio": {
     "value": null,
@@ -1725,7 +1810,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "peer_group": null
   },
@@ -1759,7 +1845,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "local_script": {
     "value": "द राइजिङ युवा क्लब",
@@ -1786,7 +1873,8 @@
     "status": null,
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
-    "note": "no registration/legal status mentioned in the single press article found"
+    "note": "no registration/legal status mentioned in the single press article found",
+    "gap_reason": "searched_not_found"
    }
   ],
   "nepal_presence": {
@@ -1796,7 +1884,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "mode": {
     "value": "unknown",
@@ -1812,7 +1901,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "partners": []
   },
@@ -1846,7 +1936,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "iati_publisher": {
     "is_publisher": null,
@@ -1860,10 +1951,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "expenditure": {
     "value": null,
@@ -1871,10 +1963,11 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null,
+    "note": "Searched in the 2026-08-28 research pass; not found.",
     "currency": null,
     "fiscal_year": null,
-    "scope": null
+    "scope": null,
+    "gap_reason": "searched_not_found"
    },
    "program_ratio": {
     "value": null,
@@ -1882,7 +1975,8 @@
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "peer_group": null
   },
