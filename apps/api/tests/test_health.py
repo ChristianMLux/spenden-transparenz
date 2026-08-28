@@ -96,3 +96,61 @@ async def test_docs_stay_public(client: AsyncClient):
     """This is an open-data API. /docs is a feature, not an oversight."""
     assert (await client.get("/docs")).status_code == 200
     assert (await client.get("/openapi.json")).status_code == 200
+
+
+def test_the_code_head_revision_is_the_one_migration_nothing_supersedes():
+    """Parsed from the versions directory rather than imported through Alembic, because this runs
+    at start-up on every boot and must not need alembic.ini, a database, or a working directory."""
+    from app.main import _code_head_revision
+
+    assert _code_head_revision() == "0006"
+
+
+async def test_a_matching_schema_is_reported_at_startup(seeded_app, monkeypatch):
+    """The check that would have turned a stack trace into one log line: code at 0006 against a
+    database at 0005 answered /health with 200 while every board request failed with
+    `column org_datum.channel_type does not exist`."""
+    import app.main as main_module
+
+    events: list[tuple[str, dict]] = []
+
+    class _StubLog:
+        def info(self, message, extra=None):
+            events.append((message, extra or {}))
+
+        def error(self, message, extra=None):
+            events.append((message, extra or {}))
+
+        def warning(self, message, extra=None):
+            events.append((message, extra or {}))
+
+    monkeypatch.setattr(main_module, "log", _StubLog())
+    await main_module._warn_if_schema_is_behind_the_code(seeded_app)
+
+    assert [name for name, _ in events] == ["schema_revision_ok"]
+
+
+async def test_a_schema_behind_the_code_is_reported_at_error_level(seeded_app, monkeypatch):
+    import app.main as main_module
+
+    events: list[tuple[str, dict]] = []
+
+    class _StubLog:
+        def info(self, message, extra=None):
+            events.append((message, extra or {}))
+
+        def error(self, message, extra=None):
+            events.append((message, extra or {}))
+
+        def warning(self, message, extra=None):
+            events.append((message, extra or {}))
+
+    monkeypatch.setattr(main_module, "log", _StubLog())
+    monkeypatch.setattr(main_module, "_code_head_revision", lambda: "9999")
+    await main_module._warn_if_schema_is_behind_the_code(seeded_app)
+
+    assert len(events) == 1
+    name, extra = events[0]
+    assert name == "schema_behind_code"
+    assert extra["code_revision"] == "9999"
+    assert extra["database_revision"] == "0006"

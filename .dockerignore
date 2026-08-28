@@ -1,0 +1,33 @@
+# Build context for both service images is the repository root, because packages/core is a
+# workspace member both services import and a Railway Root Directory would cut it out of the
+# context ("Railway will only pull down files from that directory").
+#
+# What is excluded is everything neither service reads at runtime. data/ is NOT excluded
+# wholesale: seed_reference reads data/raw/hapi/admin2_NPL.json and data/sources-catalog.json,
+# and ingest_orgs reads data/orgs/. The research archives underneath data/raw are excluded by
+# name instead - 7.9 MB of them, none read by any job.
+.git
+.gitignore
+.venv
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+**/.ruff_cache
+.env
+.env.*
+apps/web
+node_modules
+docs
+tests
+**/tests
+data/raw/ukcc
+data/raw/ukcc_api
+data/raw/ukcc_bulk_extra
+data/raw/iati
+data/raw/swc
+data/raw/de_watchdogs
+data/raw/us_watchdogs
+data/raw/fts
+data/case-studies
+*.md
+!README.md

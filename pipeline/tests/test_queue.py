@@ -21,6 +21,17 @@ from pipeline.runs import run_context
 pytestmark = pytest.mark.anyio
 
 
+def _factory_cm(factory):
+    """cli.tick opens the session factory as an async context manager; the test already has one."""
+    from contextlib import asynccontextmanager
+
+    @asynccontextmanager
+    async def _cm(database_url=None):
+        yield factory
+
+    return _cm
+
+
 async def _queue(session, job: str) -> uuid.UUID:
     run = IngestionRun(job=job, status="queued")
     session.add(run)
@@ -172,3 +183,87 @@ async def test_a_running_or_finished_run_is_never_claimed(job_sessionmaker, sess
     await session.commit()
 
     assert await claim_next_queued_run(job_sessionmaker) is None
+
+
+# --- the cron tick -------------------------------------------------------------------------------
+
+
+def test_the_tick_sequence_is_in_dependency_order():
+    """A report has to exist before its body can be fetched, a body before it can be extracted, a
+    statement before it can be matched or resolved. seed_reference and ingest_orgs are absent on
+    purpose: they load files from the repository, so running them every 30 minutes is work
+    guaranteed to write nothing."""
+    from pipeline.cli import JOBS, TICK_SEQUENCE
+
+    assert TICK_SEQUENCE == (
+        "ingest_reliefweb_listing",
+        "fetch_report_bodies",
+        "extract_statements",
+        "match_orgs",
+        "resolve_districts",
+    )
+    assert set(TICK_SEQUENCE) <= set(JOBS)
+    assert "seed_reference" not in TICK_SEQUENCE
+    assert "ingest_orgs" not in TICK_SEQUENCE
+
+
+async def test_the_tick_drains_before_it_runs_the_schedule(job_sessionmaker, session, monkeypatch):
+    """Someone pressing the admin trigger is asking for something now. Making them wait behind a
+    full scheduled sequence would defeat the point of the endpoint."""
+    import pipeline.cli as cli_module
+
+    order: list[str] = []
+
+    async def queued_job(session_factory, handle=None):
+        order.append("drained")
+
+    async def scheduled(name):
+        async def job(session_factory, handle=None):
+            order.append(name)
+            if handle is None:
+                async with run_context(session_factory, name):
+                    pass
+
+        return job
+
+    await _queue(session, "seed_reference")
+    jobs = {"seed_reference": queued_job}
+    for name in cli_module.TICK_SEQUENCE:
+        jobs[name] = await scheduled(name)
+    monkeypatch.setattr(cli_module, "JOBS", jobs)
+
+    async with job_sessionmaker() as _:
+        pass
+    monkeypatch.setattr(cli_module, "session_factory", _factory_cm(job_sessionmaker))
+
+    await cli_module.tick()
+
+    assert order[0] == "drained"
+    assert order[1:] == list(cli_module.TICK_SEQUENCE)
+
+
+async def test_one_failing_job_does_not_abort_the_tick(job_sessionmaker, session, monkeypatch):
+    """The sequence is ordered by dependency, not by transaction. If the listing fetch fails,
+    extracting the bodies already in the database is still the right thing to do."""
+    import pipeline.cli as cli_module
+
+    ran: list[str] = []
+
+    def make(name, fail=False):
+        async def job(session_factory, handle=None):
+            if fail:
+                raise RuntimeError(f"{name} exploded")
+            ran.append(name)
+            async with run_context(session_factory, name):
+                pass
+
+        return job
+
+    jobs = {name: make(name, fail=(name == "fetch_report_bodies")) for name in cli_module.TICK_SEQUENCE}
+    monkeypatch.setattr(cli_module, "JOBS", jobs)
+    monkeypatch.setattr(cli_module, "session_factory", _factory_cm(job_sessionmaker))
+
+    await cli_module.tick()
+
+    assert "fetch_report_bodies" not in ran
+    assert ran == [n for n in cli_module.TICK_SEQUENCE if n != "fetch_report_bodies"]
