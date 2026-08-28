@@ -121,6 +121,12 @@ export default async function BoardPage() {
     optionLabel,
     removeChipLabel,
     districtsLabel: t("districtsLabel"),
+    columns: {
+      organisation: t("columns.organisation"),
+      reaktion: t("columns.reaktion"),
+      ort: t("columns.ort"),
+      quelleUndStand: t("columns.quelleUndStand"),
+    },
   };
 
   // ---------------------------------------------------------------------
@@ -137,24 +143,30 @@ export default async function BoardPage() {
 
   const crisisName = locale === "de" ? board.crisis.name_de : board.crisis.name_en;
 
-  return (
-    <div>
+  // Server-rendered (next-intl only works through hooks on the server, see
+  // board-explorer.tsx) and handed to the client island as a slot, so it can be placed
+  // AFTER the chrome's figure strip in the DOM: the masthead and the figures are one
+  // navy block, the crisis heading is the canvas's own first thing below it.
+  const intro = (
+    <>
       <h1 className="text-2xl">{crisisName}</h1>
       <p className="mt-1 font-mono text-xs text-muted">{board.crisis.glide_id}</p>
-
-      <p className="mt-4 max-w-[68ch] text-base text-ink">
+      <p className="mt-2 max-w-[68ch] text-base text-ink">
         {t("scopeLine1")} {t("scopeLine2")}
       </p>
+    </>
+  );
 
-      <div className="mt-6">
-        <BoardExplorer
-          board={board}
-          rowNodes={rowNodes}
-          chronoNodes={chronoNodes}
-          dayLabels={dayLabels}
-          labels={labels}
-        />
-      </div>
+  return (
+    <div>
+      <BoardExplorer
+        board={board}
+        rowNodes={rowNodes}
+        chronoNodes={chronoNodes}
+        dayLabels={dayLabels}
+        labels={labels}
+        intro={intro}
+      />
     </div>
   );
 }

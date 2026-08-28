@@ -60,9 +60,9 @@ export function FilterGroup({
 
   return (
     <fieldset className="m-0 min-w-0 border-0 p-0">
-      <legend className="text-sm text-ink">{legend}</legend>
+      <legend className="text-sm text-chrome-ink">{legend}</legend>
       {hint && (
-        <p id={hintId} className="mt-1 text-xs text-muted">
+        <p id={hintId} className="mt-1 text-xs text-chrome-muted">
           {hint}
         </p>
       )}
@@ -74,7 +74,7 @@ export function FilterGroup({
             <label
               key={opt.key}
               className={`flex min-h-9 cursor-pointer items-center gap-2 py-0.5 text-sm ${
-                disabled ? "cursor-not-allowed text-muted" : "text-ink"
+                disabled ? "cursor-not-allowed text-chrome-muted" : "text-chrome-ink"
               }`}
             >
               <input
@@ -88,11 +88,11 @@ export function FilterGroup({
                   else next.delete(opt.key);
                   onChange(next);
                 }}
-                className="h-4 w-4 shrink-0 accent-accent"
+                className="chrome-checkbox"
                 data-testid={`${idPrefix}-${opt.key}`}
               />
               <span>
-                {opt.label} <span className="text-muted">({opt.count})</span>
+                {opt.label} <span className="text-chrome-muted">({opt.count})</span>
               </span>
             </label>
           );
@@ -103,7 +103,7 @@ export function FilterGroup({
           type="button"
           onClick={() => setExpanded(!expanded)}
           aria-expanded={expanded}
-          className="mt-1 flex min-h-9 items-center text-sm text-accent underline underline-offset-2"
+          className="mt-1 flex min-h-9 items-center text-sm text-chrome-ink underline underline-offset-2"
         >
           {expanded ? lessLabel : moreLabel(hiddenCount)}
         </button>

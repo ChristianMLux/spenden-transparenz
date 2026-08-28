@@ -29,6 +29,45 @@ function readFiltersFromLocation(): FilterState {
 }
 
 /**
+ * Splits an already-translated, already-pluralised string like "44 Organisationen" into
+ * its leading number and the word that follows, purely for a visual size split (a large
+ * numeral over a small label). Neither locale's copy changes: the same characters render,
+ * only inside two spans instead of one, with a real space text node between them so the
+ * combined accessible name is unchanged ("44 Organisationen", not "44Organisationen").
+ * Falls back to rendering the whole string as the numeral if the shape is ever
+ * unexpected, rather than losing text.
+ */
+function splitNumberLabel(text: string): [string, string] {
+  const m = text.match(/^(\S+)\s+(.*)$/);
+  return m ? [m[1] ?? text, m[2] ?? ""] : [text, ""];
+}
+
+function FigureTile({
+  href,
+  text,
+  onClick,
+}: {
+  href: string;
+  text: string;
+  onClick: () => void;
+}) {
+  const [number, label] = splitNumberLabel(text);
+  return (
+    <a
+      href={href}
+      onClick={(e) => {
+        e.preventDefault();
+        onClick();
+      }}
+      className="figure-tile flex min-h-11 flex-col justify-center gap-0.5 px-4 py-2 text-chrome-ink no-underline sm:px-5"
+    >
+      <span className="block text-2xl font-semibold text-chrome-ink">{number}</span>{" "}
+      <span className="block text-xs text-chrome-muted">{label}</span>
+    </a>
+  );
+}
+
+/**
  * The four number-line destinations. Every number in board.counts becomes a distinct,
  * meaningful FilterState, not just a decorative statistic:
  *  - org count            -> tab A, every filter cleared
@@ -62,12 +101,17 @@ export function BoardExplorer({
   chronoNodes,
   dayLabels,
   labels,
+  intro,
 }: {
   board: BoardData;
   rowNodes: Record<string, ReactNode>;
   chronoNodes: Record<string, ReactNode>;
   dayLabels: Record<string, string>;
   labels: BoardLabels;
+  /** The server-rendered h1 + GLIDE id + scope sentence. Rendered after the chrome's
+   * figure strip: the masthead and the figures are one navy block, this heading is the
+   * canvas's own first thing below it. */
+  intro: ReactNode;
 }) {
   const [filters, setFiltersState] = useState<FilterState>(EMPTY);
   const [hydrated, setHydrated] = useState(false);
@@ -215,25 +259,25 @@ export function BoardExplorer({
 
   return (
     <div>
-      <p className="flex flex-wrap gap-x-2 gap-y-1 text-base text-ink">
-        {numberLine.map((n, i) => (
-          <span key={n.key}>
-            <a
+      {/* The chrome: figure tiles directly under the masthead's wordmark, full-bleed to
+          the viewport edge so the navy band reads as one continuous shape with the
+          header above it. Each tile is still the same filter link it was as a sentence. */}
+      <div className="chrome-bleed bg-chrome">
+        <div className="figure-strip mx-auto max-w-[80rem]">
+          {numberLine.map((n) => (
+            <FigureTile
+              key={n.key}
               href={`?${serializeFilters(targets[n.key]).toString()}`}
-              onClick={(e) => {
-                e.preventDefault();
-                setFilters(targets[n.key]);
-              }}
-              className="text-accent underline-offset-2 hover:underline"
-            >
-              {n.text}
-            </a>
-            {i < numberLine.length - 1 && <span className="text-muted"> · </span>}
-          </span>
-        ))}
-      </p>
+              text={n.text}
+              onClick={() => setFilters(targets[n.key])}
+            />
+          ))}
+        </div>
+      </div>
 
-      <p className="mt-2 text-xs text-muted">
+      <div className="mt-3">{intro}</div>
+
+      <p className="mt-1 text-xs text-muted">
         {labels.dataStand}
         {" · "}
         {/* A plain anchor with a server-precomputed href, not @/i18n/navigation's
@@ -272,13 +316,13 @@ export function BoardExplorer({
         ))}
       </p>
 
-      <hr className="my-4 border-rule" />
+      <hr className="my-2 border-rule" />
 
       {/* Rail on the left, results beside it. Before this the filters ran the full width
           and the list began underneath them, so the first screen held no organisation at
           all. */}
-      <div className="grid gap-6 xl:grid-cols-[16rem_1fr]">
-        <div className="xl:sticky xl:top-4 xl:self-start">
+      <div className="grid gap-4 xl:grid-cols-[16rem_1fr] xl:gap-8">
+        <div className="bg-chrome px-4 py-6 xl:sticky xl:top-4 xl:self-start xl:px-5">
         <FilterBar
           groups={groups}
           selected={selected}
@@ -327,7 +371,7 @@ export function BoardExplorer({
         chronologicalLabel={labels.tabs.chronological}
       />
 
-      <div className="mt-4 space-y-2">
+      <div className="mt-3 space-y-1">
         <FilterChips
           heading={labels.filters.selectedHeading}
           clearAllLabel={labels.filters.clearAll}
@@ -338,13 +382,20 @@ export function BoardExplorer({
         <ResultCount text={resultCountText} />
       </div>
 
-      <div className="mt-4">
+      <div className="mt-3">
         {filters.tab === "orgs" ? (
           <div>
+            {/* Column headers, table-like: the same fixed-fraction grid every row below
+                uses, so the labels line up with the cells without a literal <table>
+                (each organisation stays an <article>, which a table row cannot hold). */}
+            <div className="board-row-grid hidden border-b border-l-2 border-rule border-l-transparent px-2 pb-1 text-xs text-muted md:grid">
+              <span>{labels.columns.organisation}</span>
+              <span>{labels.columns.reaktion}</span>
+              <span>{labels.columns.ort}</span>
+              <span>{labels.columns.quelleUndStand}</span>
+            </div>
             {filteredResponders.map((r) => (
-              <div key={rowKey(r)} className="border-b border-rule py-4 first:pt-0 last:border-b-0">
-                {rowNodes[rowKey(r)]}
-              </div>
+              <div key={rowKey(r)}>{rowNodes[rowKey(r)]}</div>
             ))}
           </div>
         ) : (

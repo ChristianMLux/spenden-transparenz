@@ -83,7 +83,10 @@ export function SourceToggleButton({
       type="button"
       onClick={ctx.toggle}
       aria-pressed={ctx.expanded}
-      className="min-h-11 border border-rule px-3 text-sm text-ink underline-offset-2 hover:underline print:hidden"
+      // The only place this button renders is OrgHeader, which is on the chrome band in
+      // this variant (Variant C, "Kontor"), so it takes the chrome tokens rather than
+      // the canvas ones every other bordered control on the page uses.
+      className="min-h-11 border border-chrome-rule px-3 text-sm text-chrome-ink underline-offset-2 hover:underline print:hidden"
     >
       {ctx.expanded ? hideLabel : showLabel}
     </button>

@@ -8,6 +8,12 @@
     "noResponse": "{count, plural, one {# ohne gefundene Reaktion} other {# ohne gefundene Reaktion}}"
   },
   "dataStand": "Daten-Stand {date}",
+  "columns": {
+    "organisation": "Organisation",
+    "reaktion": "Reaktion",
+    "ort": "Ort",
+    "quelleUndStand": "Quelle und Stand"
+  },
   "sourcesLink": "Quellen und Lizenzen",
   "tabs": {
     "orgs": "Nach Organisation",

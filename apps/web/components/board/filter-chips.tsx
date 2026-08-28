@@ -33,8 +33,7 @@ export function FilterChips({
           type="button"
           onClick={() => onRemove(c.key)}
           aria-label={c.removeLabel}
-          className="inline-flex min-h-11 items-center gap-1 border border-rule px-3 text-sm text-ink"
-          style={{ borderRadius: 2 }}
+          className="rounded-chip inline-flex min-h-11 items-center gap-1 border border-accent/30 bg-accent/10 px-3 text-sm text-accent"
         >
           <span>{c.label}</span>
           <span aria-hidden="true">×</span>

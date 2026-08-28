@@ -69,7 +69,11 @@ export function FinancialsSection({ financials }: { financials: OrgDetail["finan
     <OrgSection headingId="financial-heading" heading={t("heading")}>
       {!hasFigures ? (
         <div className="flex flex-col gap-4">
-          <div className="flex max-w-[68ch] flex-col gap-2">
+          {/* The financial "nothing published" paragraph: the empty case IS the designed
+              case (DESIGN.md 8.3), so it gets a tinted callout with an accent left rule
+              rather than sitting as plain paragraphs, without becoming a card: no border
+              on the other three sides, no shadow. */}
+          <div className="callout flex max-w-[68ch] flex-col gap-2">
             <p className="text-base text-ink">{t("emptyIntro")}</p>
             <p className="text-base text-ink">{t("emptySearched")}</p>
             <p className="text-base text-ink">{t("emptyNormal")}</p>

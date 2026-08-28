@@ -42,16 +42,16 @@ export function MobileFilterSheet({
         if (e.target === e.currentTarget) onOpenChange(false);
       }}
       aria-labelledby="mobile-filter-title"
-      className="fixed inset-x-0 bottom-0 top-auto m-0 max-h-[85dvh] w-full max-w-full border-t border-rule bg-surface p-4 [&::backdrop]:bg-ink/40"
+      className="fixed inset-x-0 bottom-0 top-auto m-0 max-h-[85dvh] w-full max-w-full border-t border-chrome-rule bg-chrome p-4 text-chrome-ink [&::backdrop]:bg-ink/40"
     >
-      <div className="flex items-center justify-between gap-4 border-b border-rule pb-3">
-        <p id="mobile-filter-title" className="text-lg">
+      <div className="flex items-center justify-between gap-4 border-b border-chrome-rule pb-3">
+        <p id="mobile-filter-title" className="text-lg text-chrome-ink">
           {title}
         </p>
         <button
           type="button"
           onClick={() => onOpenChange(false)}
-          className="min-h-11 min-w-11 px-2 text-sm text-ink"
+          className="min-h-11 min-w-11 px-2 text-sm text-chrome-ink"
         >
           {closeLabel}
         </button>

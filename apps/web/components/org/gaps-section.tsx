@@ -56,9 +56,13 @@ export function GapsSection({ org }: { org: OrgDetail }) {
       {org.data_gaps.length === 0 ? (
         <p className="text-base text-ink">{t("empty")}</p>
       ) : (
-        <div className="flex flex-col gap-4">
+        // Two columns (DESIGN.md 8.3, "Was wir nicht wissen"): a CSS multi-column flow
+        // rather than a fixed 2-item grid, so it balances any number of gap-reason
+        // groups without a manual split, and break-inside:avoid on each group keeps a
+        // heading with its own list rather than splitting a list across the column gap.
+        <div className="gap-8 md:columns-2">
           {GAP_REASON_ORDER.filter((reason) => groups[reason].length > 0).map((reason) => (
-            <div key={reason}>
+            <div key={reason} className="mb-4 break-inside-avoid">
               <h3 className="text-base text-ink">{t(`groupHeading.${reason}`)}</h3>
               <ul className="mt-1 flex list-disc flex-col gap-1 pl-5">
                 {groups[reason].map((gap) => {

@@ -51,4 +51,6 @@ export interface BoardLabels {
   /** Facet key to the full localised "remove this filter" sentence. */
   removeChipLabel: Record<string, string>;
   districtsLabel: string;
+  /** Variant C ("Kontor"): the four table-like column headers over the board list. */
+  columns: { organisation: string; reaktion: string; ort: string; quelleUndStand: string };
 }

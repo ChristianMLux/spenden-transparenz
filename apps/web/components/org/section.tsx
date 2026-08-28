@@ -31,7 +31,7 @@ export function OrgSection({
   return (
     <section
       aria-labelledby={headingId}
-      className={`break-inside-avoid ${first ? "" : "mt-8 border-t border-rule pt-8"}`}
+      className={`break-inside-avoid ${first ? "" : "org-section-rule mt-8 pt-8"}`}
     >
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <h2 id={headingId} className={`${headingClassName} text-ink`}>

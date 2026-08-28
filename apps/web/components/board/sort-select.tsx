@@ -27,14 +27,14 @@ export function SortSelect({
 }) {
   return (
     <div className="flex min-h-11 items-center gap-2">
-      <label htmlFor={id} className="text-sm text-ink">
+      <label htmlFor={id} className="text-sm text-chrome-ink">
         {label}
       </label>
       <select
         id={id}
         value={value}
         onChange={(e) => onChange(e.target.value as FilterState["sort"])}
-        className="min-h-11 border border-rule bg-surface px-2 text-sm text-ink"
+        className="min-h-11 border border-chrome-rule bg-transparent px-2 text-sm text-chrome-ink [color-scheme:dark]"
       >
         <option value="latest">{latestLabel}</option>
         <option value="name">{nameLabel}</option>

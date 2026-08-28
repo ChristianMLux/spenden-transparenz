@@ -61,9 +61,9 @@ export function FilterBar({
   onMobileOpenChange: (open: boolean) => void;
 }) {
   const fieldsets = (idPrefix: string) => (
-    <div className="space-y-6">
+    <div className="divide-y divide-chrome-rule space-y-6 [&>*]:pt-6 [&>*:first-child]:pt-0">
       <div>
-        <label htmlFor={`${idPrefix}-q`} className="text-sm text-ink">
+        <label htmlFor={`${idPrefix}-q`} className="text-sm text-chrome-ink">
           {labels.searchLegend}
         </label>
         <input
@@ -72,7 +72,7 @@ export function FilterBar({
           value={q}
           onChange={(e) => onQChange(e.target.value)}
           placeholder={labels.searchLabel}
-          className="mt-2 min-h-11 w-full border border-rule bg-surface px-3 text-sm text-ink"
+          className="mt-2 min-h-11 w-full border border-chrome-rule bg-transparent px-3 text-sm text-chrome-ink placeholder:text-chrome-muted"
         />
       </div>
       <FilterGroup
@@ -124,7 +124,7 @@ export function FilterBar({
         <button
           type="button"
           onClick={() => onMobileOpenChange(true)}
-          className="min-h-11 border border-rule px-3 text-sm text-ink"
+          className="min-h-11 border border-chrome-rule px-3 text-sm text-chrome-ink"
         >
           {labels.mobileOpen}
         </button>

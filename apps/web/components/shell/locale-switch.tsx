@@ -53,10 +53,14 @@ export function LocaleSwitch({
           href={`/${locale}${suffix}`}
           hrefLang={locale}
           aria-current={locale === current ? "true" : undefined}
+          // The only place this renders is SiteHeader, which is on the chrome band in
+          // this variant (Variant C, "Kontor"), so both states take the chrome tokens
+          // rather than the canvas ones (the current locale in text-ink measured 1.51:1
+          // against --chrome, an axe color-contrast failure caught by e2e/axe.spec.ts).
           className={
             locale === current
-              ? "flex min-h-11 items-center text-ink no-underline"
-              : "flex min-h-11 items-center underline"
+              ? "flex min-h-11 items-center text-chrome-ink no-underline"
+              : "flex min-h-11 items-center text-chrome-muted underline"
           }
         >
           {labels[locale]}

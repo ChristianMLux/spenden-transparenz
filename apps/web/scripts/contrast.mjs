@@ -42,6 +42,13 @@ const REQUIRED = [
   "mark-open",
   "mark-open-tint",
   "warn",
+  // Variant C, "Kontor": the dark navy chrome shared by the masthead, figure strip and
+  // filter rail, plus its own ink/muted/rule triad and the structural row-hover tint.
+  "chrome",
+  "chrome-ink",
+  "chrome-muted",
+  "chrome-rule",
+  "row-hover",
 ];
 
 const light = tokens("light :root/.light", /^:root,\n\.light \{\n([\s\S]*?)^\}/m);
@@ -72,6 +79,11 @@ for (const [theme, t] of [
   check(`${theme}: muted on bg`, ratio(t.muted, t.bg), 4.5);
   check(`${theme}: accent on bg (focus)`, ratio(t.accent, t.bg), 3);
   check(`${theme}: warn on bg`, ratio(t.warn, t.bg), 4.5);
+
+  // Variant C, "Kontor": the wordmark, figure numerals and filter-rail labels all sit
+  // directly on --chrome, so these two are load-bearing the same way ink-on-bg is.
+  check(`${theme}: chrome-ink on chrome`, ratio(t["chrome-ink"], t.chrome), 7);
+  check(`${theme}: chrome-muted on chrome`, ratio(t["chrome-muted"], t.chrome), 4.5);
 
   const doc = ratio(t["mark-doc"], t["mark-doc-tint"]);
   const open = ratio(t["mark-open"], t["mark-open-tint"]);

@@ -5,20 +5,25 @@ import type { Crisis } from "@/lib/types";
 import { LocaleSwitch } from "./locale-switch";
 
 /**
- * Not sticky: it would cost vertical space at 360px and buy nothing on a reading page.
- * No logo, no search, no menu. The crisis and its GLIDE id are the identity.
+ * Not sticky: it would cost vertical space at 360px and buy nothing on a reading page
+ * (DESIGN.md 8.1). This is Variant C's one structural move: a full-bleed dark navy band,
+ * the same chrome surface the figure strip and filter rail continue below it. The
+ * wordmark is white; the crisis name and GLIDE id sit in the chrome's muted tone so the
+ * wordmark stays the loudest thing in the band.
  */
 export function SiteHeader({ crisis, siteName }: { crisis: Crisis; siteName: string }) {
   const locale = useLocale() as Locale;
   const t = useTranslations("common");
 
   return (
-    <header className="border-b border-rule print:hidden">
-      <div className="mx-auto flex max-w-[80rem] flex-wrap items-baseline justify-between gap-2 px-4 py-3">
-        <p className="text-sm">{siteName}</p>
+    <header className="bg-chrome text-chrome-ink print:hidden">
+      <div className="mx-auto flex min-h-16 max-w-[80rem] flex-wrap items-center justify-between gap-x-6 gap-y-1 px-4 py-3">
+        <p className="text-sm font-semibold text-chrome-ink">{siteName}</p>
         <p className="flex flex-wrap items-baseline gap-2">
-          <span className="text-sm">{locale === "de" ? crisis.name_de : crisis.name_en}</span>
-          <code className="font-mono text-xs text-muted">{crisis.glide_id}</code>
+          <span className="text-sm text-chrome-muted">
+            {locale === "de" ? crisis.name_de : crisis.name_en}
+          </span>
+          <code className="font-mono text-xs text-chrome-muted">{crisis.glide_id}</code>
         </p>
         <LocaleSwitch
           current={locale}
