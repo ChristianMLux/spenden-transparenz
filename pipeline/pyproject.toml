@@ -8,7 +8,9 @@ dependencies = [
     "asyncpg>=0.30",
     "psycopg[binary]>=3.2",
     "requests>=2.32",
-    "anthropic>=0.40",
+    # OpenRouter exposes an OpenAI-compatible API; extraction goes through it, not a direct
+    # provider SDK (PO decision, 2026-08-28).
+    "openai>=1.60",
     "jsonschema>=4.23",
     "python-json-logger>=3.1",
     "pydantic-settings>=2.6",

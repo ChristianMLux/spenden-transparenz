@@ -7,11 +7,16 @@ even when it raises, and writes zero rows on a second identical run.
 from __future__ import annotations
 
 import pytest
-from core.models import District, IngestionRun, Source
+from core.models import District, DistrictAlias, IngestionRun, Source
+from core.normalise import alias_norm
 from sqlalchemy import func, select
 
-from pipeline.jobs.seed_reference import seed_reference
+from pipeline.jobs.seed_reference import UNRESOLVABLE, seed_reference
+from pipeline.migrations.add_gap_reason import load_orgs
 from pipeline.runs import run_context
+
+# 77 district names + 77 "<name> district" forms + 6 settlement variants, no collisions.
+EXPECTED_ALIASES = 160
 
 
 async def _count(session, model) -> int:
@@ -104,16 +109,86 @@ async def test_every_source_either_states_a_licence_or_says_why_not(job_sessionm
         assert source.licence is not None or (source.licence_note or "").strip(), source.id
 
 
+# --- district aliases -------------------------------------------------------------------------
+
+
+async def test_every_district_name_is_an_alias(job_sessionmaker, session):
+    await seed_reference(job_sessionmaker)
+    rasuwa = await session.get(DistrictAlias, "rasuwa")
+    assert rasuwa.district_code == "NP0329"
+
+
+async def test_the_district_suffix_form_resolves(job_sessionmaker, session):
+    """The extraction output says "Rasuwa district" as often as "Rasuwa"."""
+    await seed_reference(job_sessionmaker)
+    assert (await session.get(DistrictAlias, "rasuwa district")).district_code == "NP0329"
+
+
+@pytest.mark.parametrize(
+    ("alias", "expected"),
+    [
+        ("timure", "NP0329"),
+        ("syabrubesi", "NP0329"),
+        ("rasuwagadhi", "NP0329"),
+        ("nuwakot district", "NP0328"),
+        ("dhading district", "NP0330"),
+        ("chitwan", "NP0335"),
+        ("chitwan district", "NP0335"),
+        ("chitwan district mugling", "NP0335"),
+        ("gorkha district", "NP0436"),
+        ("kavrepalanchok", "NP0324"),
+    ],
+)
+async def test_the_settlement_aliases_the_pilot_data_needs(job_sessionmaker, session, alias, expected):
+    await seed_reference(job_sessionmaker)
+    row = await session.get(DistrictAlias, alias)
+    assert row is not None, f"{alias} does not resolve"
+    assert row.district_code == expected
+
+
+@pytest.mark.parametrize(
+    "phrase",
+    [
+        "unspecified",
+        "unspecified (remote flood-affected areas)",
+        "Nepal",
+        "northern Nepal",
+        "along Bhote Koshi and Trishuli rivers",
+        "along the Bhotekoshi and Trishuli rivers",
+    ],
+)
+async def test_these_phrases_must_resolve_to_no_district(job_sessionmaker, session, phrase):
+    """A river corridor crosses districts and "Nepal" is the whole country. Guessing a district
+    here would invent a location, so the statement keeps where_raw and gets no district row."""
+    await seed_reference(job_sessionmaker)
+    assert await session.get(DistrictAlias, alias_norm(phrase)) is None
+
+
+async def test_every_where_raw_value_in_the_pilot_data_is_accounted_for(job_sessionmaker, session):
+    """Either it resolves to a district, or it is on the deliberate unresolvable list. Nothing may
+    silently fall through, because a silent miss looks the same as "no response in that district"."""
+    await seed_reference(job_sessionmaker)
+    unaccounted = []
+    for org in load_orgs():
+        for response in org["current_response"]:
+            for raw in response.get("where") or []:
+                norm = alias_norm(raw)
+                resolved = await session.get(DistrictAlias, norm) is not None
+                if not resolved and norm not in {alias_norm(p) for p in UNRESOLVABLE}:
+                    unaccounted.append(raw)
+    assert unaccounted == [], f"where_raw values with no decision: {sorted(set(unaccounted))}"
+
+
 async def test_the_second_run_writes_zero_rows(job_sessionmaker, session):
     await seed_reference(job_sessionmaker)
     first = await _latest_run(session)
-    assert first.rows_written == 77 + 10
+    assert first.rows_written == 77 + 10 + EXPECTED_ALIASES
 
     await seed_reference(job_sessionmaker)
     second = await _latest_run(session)
     assert second.status == "succeeded"
     assert second.rows_written == 0
-    assert second.rows_skipped == 77 + 10
+    assert second.rows_skipped == 77 + 10 + EXPECTED_ALIASES
 
 
 async def test_the_second_run_deletes_nothing(job_sessionmaker, session):

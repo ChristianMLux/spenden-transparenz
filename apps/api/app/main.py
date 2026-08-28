@@ -48,7 +48,7 @@ def create_app(database_url: str | None = None) -> FastAPI:
     configure_logging(
         level=settings.log_level,
         service="api",
-        secrets=[s.get_secret_value() for s in (settings.admin_token, settings.anthropic_api_key) if s is not None],
+        secrets=[s.get_secret_value() for s in (settings.admin_token, settings.openrouter_api_key) if s is not None],
         capture_uvicorn=True,
     )
 

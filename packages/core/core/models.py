@@ -370,6 +370,9 @@ class ResponseStatement(Base):
     happened_on: Mapped[date | None]
     amount: Mapped[Decimal | None] = mapped_column(Numeric(18, 2))
     currency: Mapped[str | None] = mapped_column(String(3))
+    # What the amount is: an appeal target, a pledge, money released, or money actually paid
+    # out. Defaults to "reported", which claims nothing.
+    amount_basis: Mapped[str] = mapped_column(nullable=False, server_default=text("'reported'"))
 
     quote: Mapped[str] = mapped_column(nullable=False)
     quote_offset: Mapped[int | None] = mapped_column(Integer)
@@ -386,6 +389,7 @@ class ResponseStatement(Base):
     __table_args__ = (
         _enum_check("activity_type", enums.ACTIVITY_TYPE, "response_statement"),
         _enum_check("verification", enums.VERIFICATION, "response_statement"),
+        _enum_check("amount_basis", enums.AMOUNT_BASIS, "response_statement"),
         _enum_check("status", enums.STATEMENT_STATUS, "response_statement"),
         UniqueConstraint("report_id", "content_hash", name="uq_response_statement_content"),
         # The 40-word rule is a copyright boundary, so the database keeps it too.

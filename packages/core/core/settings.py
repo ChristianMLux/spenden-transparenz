@@ -40,7 +40,13 @@ class Settings(BaseSettings):
     database_url_sync: str | None = None
 
     admin_token: SecretStr | None = None
-    anthropic_api_key: SecretStr | None = None
+
+    # Extraction runs through OpenRouter's OpenAI-compatible endpoint (PO decision, 2026-08-28).
+    # The model is a setting, not a constant, so switching it needs no code change. Nothing in
+    # this project reads a direct provider key.
+    openrouter_api_key: SecretStr | None = None
+    llm_base_url: str = "https://openrouter.ai/api/v1"
+    llm_model: str = "anthropic/claude-sonnet-5"
 
     # Exact origins only. The API is public and read-only, but "*" would also allow a page that
     # impersonates this one to read it as if it were first-party.
