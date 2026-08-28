@@ -577,6 +577,23 @@ https://reliefweb.int/report/nepal/...        <- 13px --muted, overflow-wrap:any
 Fehlt ein Block, entfällt er ersatzlos; es bleibt keine leere Zeile stehen. Reihenfolge ist
 fest und wird nicht pro Feld variiert. Breite: `min(320px, var(--radix-popover-content-available-width))`.
 
+### 7.6a Radix wird erst bei der ersten Interaktion geladen
+
+Der Popover kostet 30,6 KB gz, und nur die Org-Seite zieht ihn über
+`<Datum variant="inline">` überhaupt herein. Ein Popover ist per Definition etwas, das eine
+Leserin bewusst öffnet, also gehört nichts davon in den ersten Ladevorgang.
+
+`datum-trigger.tsx` rendert bis zur Aktivierung einen einfachen `<button>` mit eigenem
+`aria-haspopup="dialog"` und `aria-expanded="false"`; erst beim Klick wird
+`datum-popover.tsx` per `lazy()` nachgeladen. Ergebnis: Org-Seiten von 177,6 auf 147,4 KB gz.
+
+Die nachgeladene Komponente klickt beim Mounten einmal ihren eigenen Trigger. Das sieht
+seltsam aus, und die naheliegende Alternative, gleich mit `open={true}` zu rendern, war der
+erste Versuch: Radix sieht dann keinen Übergang von geschlossen auf offen, führt seine
+Fokus-Verwaltung nicht aus, und der Fokus bleibt auf einem gerade entfernten Button liegen.
+Ein Playwright-Test hat das gefunden. Über den echten Trigger macht Radix alles wie sonst,
+inklusive Fokus in den Inhalt und Fokus-Rückgabe bei Escape.
+
 ### 7.6 Barrierefreiheits-Vertrag
 
 - Trigger ist ein echtes `<button type="button">` über `Popover.Trigger asChild`. Radix folgt
@@ -871,7 +888,7 @@ Nachrichtenobjekt. Alles andere wird serverseitig gerendert.
 | Größe | Grenze | Wie geprüft |
 |---|---|---|
 | Board-Datenprojektion | ≤ 60 KB roh, ≤ 12 KB brotli | Vitest-Test serialisiert die Projektion und misst; heute 40,0 KB / ~11,7 KB gzip |
-| First Load JS | ≤ 110 KB gz | Skript liest `.next/build-manifest` bzw. die `next build`-Ausgabe und schlägt bei Überschreitung fehl |
+| First Load JS | ≤ 155 KB gz (öffentliche Seiten) | `scripts/check-bundle.mjs` summiert die Modul-Skripte jeder vorgerenderten Seite. **Korrigiert am 28.08.:** die 110 KB aus dem Spec sind auf diesem Stack nicht erreichbar. Gemessen kostet Next 16 mit `cacheComponents` plus next-intl rund 127 KB auf einer reinen Weiterleitung und 145,9 KB auf einer Vertrauensseite, die nur die Shell und Prosa rendert. Der PO hat 155 KB gesetzt. Board 151,2, Org-Seiten 147,4. `/dev/*` zählt nicht mit. |
 | Drittanbieter-Requests | **0** | Playwright zählt `page.on('request')` nach Host; jeder Host außer `localhost` ist ein Fehler |
 | Clientseitiges Daten-Fetching | **0** | dito: kein `fetch` nach `load` |
 | LCP mobil | ≤ 1,5 s | Lighthouse CI |

@@ -99,3 +99,50 @@ test.describe("keyboard path", () => {
     expect(styles.notFound).toEqual(styles.value);
   });
 });
+
+test.describe("deferred popover", () => {
+  // The Radix Popover module is 30.6 KB gz and only this chip needs it. It must not be in
+  // first load, and deferring it must cost none of the accessibility the chip had before.
+  test("the popover module is not loaded until a chip is activated", async ({ page }) => {
+    const scripts: string[] = [];
+    page.on("request", (r) => {
+      if (r.resourceType() === "script") scripts.push(r.url());
+    });
+
+    await page.goto("/de/dev/datum");
+    await page.waitForLoadState("networkidle");
+    const beforeCount = scripts.length;
+
+    // Before activation the chip is a plain button that still describes itself correctly.
+    const chip = page.getByRole("button", { name: /Beleg für Einnahmen: Register/ }).first();
+    await expect(chip).toHaveAttribute("aria-haspopup", "dialog");
+    await expect(chip).toHaveAttribute("aria-expanded", "false");
+
+    await chip.click();
+
+    // Activation pulls in exactly the chunk that was withheld.
+    await expect(page.getByRole("dialog")).toBeVisible();
+    expect(scripts.length).toBeGreaterThan(beforeCount);
+  });
+
+  test("the deferred popover still moves focus in and returns it on Escape", async ({ page }) => {
+    await page.goto("/de/dev/datum");
+    const chip = page.getByRole("button", { name: /Beleg für Einnahmen: Register/ }).first();
+
+    await chip.focus();
+    await page.keyboard.press("Enter");
+
+    const dialog = page.getByRole("dialog");
+    await expect(dialog).toBeVisible();
+    await expect(dialog).toHaveAccessibleName(/Beleg: Einnahmen/);
+    // Focus has to be in the popover, not left behind on the button that was replaced.
+    // Radix focuses the content element itself, so this asserts the dialog IS the active
+    // element rather than looking for a focused descendant, which is what an earlier
+    // version of this test got wrong.
+    await expect(dialog).toBeFocused();
+
+    await page.keyboard.press("Escape");
+    await expect(page.getByRole("dialog")).toHaveCount(0);
+    await expect(chip).toBeFocused();
+  });
+});
