@@ -1,12 +1,14 @@
 """Load the 44-organisation pilot dataset into organisations, org_datum, org_alias,
-org_registration and org_warning.
+org_registration, org_warning, and the 44 hand-researched current_response[] entries into report
+and response_statement.
 
-Five bulk passes for the whole batch, not 44 x 5 round trips: organisations and the alias table
-each get one upsert statement, registrations and warnings each get one insert-or-skip statement,
-and org_datum - the one table with append-only, supersede-on-change history rather than a mutable
-row per key - gets one SELECT of current state plus one UPDATE to close out changed rows plus one
-INSERT for new-or-changed rows. See pipeline/jobs/seed_reference.py:_upsert for the pattern the
-mutable tables copy, and _upsert_org_datum_rows below for the versioned one.
+Five-then-two bulk passes for the whole batch, not hundreds of round trips: organisations and the
+alias table each get one upsert statement, registrations and warnings each get one insert-or-skip
+statement, org_datum - the one table with append-only, supersede-on-change history rather than a
+mutable row per key - gets one SELECT of current state plus one UPDATE to close out changed rows
+plus one INSERT for new-or-changed rows, and report/response_statement follow the same shapes.
+See pipeline/jobs/seed_reference.py:_upsert for the pattern the mutable tables copy, and
+_upsert_org_datum_rows below for the versioned one.
 
 Fixed at the source, not here (2026-08-28): 7 nepal_presence.mode nodes used to carry
 value="unknown" with source_url null, because datum_presence_mode was the only datum type in the
@@ -17,17 +19,34 @@ gaps with a gap_reason. ingest_orgs does not reclassify anything: rewriting rese
 way into the database is exactly the kind of silent correction this product exists not to make.
 If a value ever arrives here without a source_url, that is a data bug - _datum_row raises rather
 than reinterpreting it, and the whole run fails loudly through run_context's exception handling.
+
+response_statement (added 2026-08-28, per the backend lead): without this, the 44 responses the
+whole Response Board was designed around are not in the database until WP-B's extraction pipeline
+has run against live ReliefWeb reports. These are hand-researched, not model-extracted - model =
+core.models.HAND_RESEARCH_MODEL, status "approved" - and where_raw is written as-is; district
+resolution is WP-B's resolve_districts job, not this one.
 """
 
 from __future__ import annotations
 
 import hashlib
 import json
-from datetime import date
+from datetime import UTC, date, datetime
+from decimal import Decimal
 from typing import Any
 
 from core.logging import get_logger
-from core.models import OrgAlias, Organisation, OrgDatum, OrgRegistration, OrgWarning
+from core.models import (
+    HAND_RESEARCH_MODEL,
+    Disaster,
+    OrgAlias,
+    Organisation,
+    OrgDatum,
+    OrgRegistration,
+    OrgWarning,
+    Report,
+    ResponseStatement,
+)
 from core.normalise import alias_norm
 from sqlalchemy import func, or_, select, tuple_, update
 from sqlalchemy.dialects.postgresql import insert
@@ -397,6 +416,214 @@ def _partition_aliases(
     return rows, collisions
 
 
+# --- report and response_statement: the 44 hand-researched current_response entries -------------
+#
+# Hot path check (performance-spotter): still a bounded batch job, not a request path. 44 entries
+# across 39 distinct source_urls is one report upsert, one bulk SELECT for the resulting ids, and
+# one insert-or-skip for the statements - never one round trip per entry.
+
+# This pilot is scoped to a single disaster; the glide_id is the disaster page's own URL slug
+# (measured, see pipeline/jobs/reliefweb.py:glide_id_from_disaster_url), not invented here.
+FLOOD_GLIDE_ID = "ff-2026-000162-npl"
+FLOOD_RELIEFWEB_ID = "D52684"
+FLOOD_NAME = "Nepal: Flash Floods - Aug 2026"
+FLOOD_COUNTRY_ISO3 = "NPL"
+FLOOD_SOURCE_URL = "https://reliefweb.int/disaster/ff-2026-000162-npl"
+
+RESPONSE_PROMPT_VERSION = "research-2026-08-28"
+RESPONSE_STATUS = "approved"
+
+DISASTER_COLUMNS = ("reliefweb_id", "name", "country_iso3", "started_on", "is_active", "source_url")
+HAND_RESEARCH_REPORT_COLUMNS = ("title", "format", "published_at", "disaster_glide_id")
+
+
+def derive_activity_type(what: str) -> str:
+    """A best-effort keyword classification of the free-text activity sentence, checked from the
+    most specific/unambiguous signal to the most general.
+
+    Order is load-bearing, not incidental. An appeal or rescue mention anywhere in the sentence
+    outranks a single relief item named in passing: a fund whose stated use includes "search and
+    rescue" is an appeal, not a rescue operation (globalgiving), and a multi-item distribution
+    that happens to include a hygiene kit is a distribution, not narrowly wash (unicef-nepal,
+    save-the-children-international). Two entries describing the same underlying IFRC/NRCS DREF
+    release differ only in how much of the fund's intended use they spell out, and both must
+    still land on funding_pledged - which is why "released"/"allocat" are checked before any
+    item-specific keyword, not after.
+
+    Checked against all 44 current_response entries in the pilot dataset (see
+    test_ingest_orgs.py); a documented heuristic, not a general-purpose NLP classifier. No board
+    filter depends on this field today (the spec's Response Board filters are district, hq,
+    org_type, verification and name search), so precision here matters less than never landing on
+    something actively misleading.
+    """
+    text = what.lower()
+    if any(k in text for k in ("appeal", "fundrais", "donat", "raised", " goal")):
+        return "appeal_launched"
+    if "rescue" in text:
+        return "search_and_rescue"
+    if any(k in text for k in ("released", "allocat", "grant", "announc")):
+        return "funding_pledged"
+    if any(k in text for k in ("distribut", "dispatch", "provision of", "relief materials", "sent a team with relief")):
+        return "relief_distribution"
+    if "assess" in text:
+        return "assessment"
+    if any(
+        k in text
+        for k in ("medical", "medic pack", "hospital", "health facilit", "treat ", "patients", "clinic", "surgical")
+    ):
+        return "medical"
+    if any(k in text for k in ("drinking water", "hygiene kit", "hygiene article", "hygiene supplies", "sanitation")):
+        return "wash"
+    if any(k in text for k in ("food ration", "ready-to-eat", "nutrient-packed", "cooking kit")):
+        return "food"
+    if any(k in text for k in ("shelter kit", "emergency shelter", "temporary shelter")):
+        return "shelter"
+    if any(k in text for k in ("deployed", "dispatched a team", "sent a team", "team reached", "team arrived")):
+        return "staff_deployed"
+    needs_statement_keywords = (
+        "priorities named",
+        "identified needs",
+        "preparing emergency",
+        "identify urgent needs",
+        "preparing to mobilise",
+    )
+    if any(k in text for k in needs_statement_keywords):
+        return "needs_statement"
+    if any(k in text for k in ("responding to", "coordinating with", "named as", "engaging with")):
+        return "presence_declared"
+    return "other"
+
+
+def derive_amount_basis(what: str) -> str:
+    """What an amount actually is, from the activity sentence, never from the note - the same
+    rule WP-B follows for extracted statements. A note routinely reads "not confirmed disbursed"
+    or "amount is a pledge, not a confirmed disbursement", so matching against the note would
+    label pledges and appeal targets as payments: the exact inversion this column exists to
+    prevent. Checked against all 9 amount-carrying entries in the pilot dataset; none classify as
+    disbursed, which matches the plan's own measurement of zero disbursed amounts in this data.
+    """
+    text = what.lower()
+    if "raised" in text:
+        return "raised"
+    if "appeal" in text:
+        return "appeal"
+    if any(k in text for k in ("pledge", "announc", "committed")):
+        return "pledged"
+    if any(k in text for k in ("released", "allocat", "provided")):
+        return "released"
+    if "disburs" in text:
+        return "disbursed"
+    return "reported"
+
+
+def _parse_response_datetime(value: str | None) -> datetime | None:
+    """current_response[].date is a bare YYYY-MM-DD string; report.published_at is timezone-aware."""
+    if not value:
+        return None
+    return datetime.fromisoformat(value).replace(tzinfo=UTC)
+
+
+def _flood_disaster_row(run_id: Any) -> dict[str, Any]:
+    """Ensures the FK target for every hand-researched report exists regardless of whether
+    ingest_reliefweb_listing has run yet - the two jobs are otherwise independent, and a
+    report.disaster_glide_id set to a disaster row that does not exist would fail the FK on the
+    very first insert. Same shape as pipeline/jobs/reliefweb.py's disaster rows, using values this
+    project already measured (see that module), not invented here."""
+    return {
+        "glide_id": FLOOD_GLIDE_ID,
+        "reliefweb_id": FLOOD_RELIEFWEB_ID,
+        "name": FLOOD_NAME,
+        "country_iso3": FLOOD_COUNTRY_ISO3,
+        "started_on": None,
+        "is_active": True,
+        "source_url": FLOOD_SOURCE_URL,
+        "ingestion_run_id": run_id,
+    }
+
+
+def _hand_research_report_rows(orgs: list[dict[str, Any]], run_id: Any) -> list[dict[str, Any]]:
+    """One row per distinct current_response[].source_url (39 across the 44 entries), keeping the
+    first date seen for a url shared by more than one entry - deterministic, since load_orgs()'s
+    order is stable.
+
+    body_text stays NULL: these pages were read by a person during research, never fetched and
+    stored by this job, and pretending otherwise would be exactly the dishonest provenance this
+    product exists to avoid. title and format stay NULL for the same reason - no page was
+    actually parsed to produce them.
+    """
+    rows: dict[str, dict[str, Any]] = {}
+    for org in orgs:
+        for entry in org.get("current_response", []):
+            url = entry["source_url"]
+            if url in rows:
+                continue
+            rows[url] = {
+                "url": url,
+                "title": None,
+                "format": None,
+                "published_at": _parse_response_datetime(entry.get("date")),
+                "disaster_glide_id": FLOOD_GLIDE_ID,
+                "body_text": None,
+                "body_sha256": None,
+                "body_fetched_at": None,
+                "ingestion_run_id": run_id,
+            }
+    return list(rows.values())
+
+
+def _response_statement_row(org: dict[str, Any], entry: dict[str, Any], report_id: int, run_id: Any) -> dict[str, Any]:
+    """One current_response[] entry. org_id is never null here - unlike WP-B's extraction, every
+    hand-researched entry is already attributed to the organisation whose record it lives in."""
+    what = entry["what"]
+    amount_raw = entry.get("amount")
+    currency = entry.get("currency")
+    where_raw = entry.get("where") or []
+    happened_on_raw = entry.get("date")
+    quote = entry.get("quote")
+    verification = entry["verification"]
+    activity_type = derive_activity_type(what)
+    amount_basis = derive_amount_basis(what)
+
+    content_hash = _content_hash(
+        org["org_id"],
+        what,
+        activity_type,
+        where_raw,
+        happened_on_raw,
+        amount_raw,
+        currency,
+        amount_basis,
+        quote,
+        verification,
+    )
+
+    return {
+        "report_id": report_id,
+        "org_id": org["org_id"],
+        "org_name_raw": org["names"]["common"],
+        "activity": what,
+        "activity_type": activity_type,
+        "where_raw": where_raw,
+        "happened_on": _parse_date(happened_on_raw),
+        "amount": Decimal(str(amount_raw)) if amount_raw is not None else None,
+        "currency": currency,
+        "amount_basis": amount_basis,
+        # quote may be None: 5 of the 44 entries have no quote because the fact came from a
+        # structured page rather than a sentence. core.models.ResponseStatement's
+        # ck_response_statement_quote_required_for_extracted CHECK permits this only when
+        # model == HAND_RESEARCH_MODEL, which is exactly what this row always sets.
+        "quote": quote,
+        "quote_offset": None,
+        "confidence": None,
+        "verification": verification,
+        "model": HAND_RESEARCH_MODEL,
+        "prompt_version": RESPONSE_PROMPT_VERSION,
+        "status": RESPONSE_STATUS,
+        "content_hash": content_hash,
+        "ingestion_run_id": run_id,
+    }
+
+
 # --- the job -----------------------------------------------------------------------------------
 
 
@@ -405,7 +632,8 @@ async def ingest_orgs(
     handle: RunHandle | None = None,
 ) -> None:
     """Idempotent. Loads the deduplicated 44-organisation pilot dataset and upserts
-    organisations, org_datum, org_alias, org_registration and org_warning."""
+    organisations, org_datum, org_alias, org_registration, org_warning, and the 44
+    hand-researched current_response entries into report and response_statement."""
     if handle is None:
         async with run_context(session_factory, "ingest_orgs") as run:
             await ingest_orgs(session_factory, run)
@@ -429,6 +657,9 @@ async def ingest_orgs(
     ]
     warning_rows = [_warning_row(org["org_id"], warning, run_id) for org in orgs for warning in org.get("warnings", [])]
     alias_candidates = [(norm, org["org_id"], kind) for org in orgs for norm, kind in _alias_candidates(org)]
+
+    disaster_rows = [_flood_disaster_row(run_id)]
+    report_rows = _hand_research_report_rows(orgs, run_id)
 
     written = 0
     skipped = 0
@@ -469,6 +700,33 @@ async def ingest_orgs(
         written += alias_written
         skipped += len(alias_candidates) - alias_written
 
+        # Disaster before report: report.disaster_glide_id is a foreign key, and ingest_orgs must
+        # not depend on ingest_reliefweb_listing having run first.
+        disaster_written = await _upsert(session, Disaster, disaster_rows, "glide_id", DISASTER_COLUMNS)
+        written += disaster_written
+        skipped += len(disaster_rows) - disaster_written
+
+        report_written = await _upsert(session, Report, report_rows, "url", HAND_RESEARCH_REPORT_COLUMNS)
+        written += report_written
+        skipped += len(report_rows) - report_written
+
+        report_ids: dict[str, int] = {}
+        if report_rows:
+            urls = [row["url"] for row in report_rows]
+            id_rows = await session.execute(select(Report.id, Report.url).where(Report.url.in_(urls)))
+            report_ids = {url: report_id for report_id, url in id_rows}
+
+        statement_rows = [
+            _response_statement_row(org, entry, report_ids[entry["source_url"]], run_id)
+            for org in orgs
+            for entry in org.get("current_response", [])
+        ]
+        statement_written = await _insert_ignore_conflicts(
+            session, ResponseStatement, statement_rows, ["report_id", "content_hash"]
+        )
+        written += statement_written
+        skipped += len(statement_rows) - statement_written
+
         await session.commit()
 
     handle.count(written=written, skipped=skipped)
@@ -481,6 +739,8 @@ async def ingest_orgs(
             "warnings": len(warning_rows),
             "aliases": len(alias_candidates),
             "alias_collisions": len(collisions),
+            "reports": len(report_rows),
+            "response_statements": len(statement_rows),
             "written": written,
             "skipped": skipped,
         },

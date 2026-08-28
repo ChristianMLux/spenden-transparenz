@@ -13,6 +13,13 @@ not one it silently reclassifies (see test_a_value_without_a_source_url_fails_lo
 56 registration rows carry a null identifier (22 source_unreachable, 34 searched_not_found) -
 also measured directly, per the backend lead's PO-0 correction: the WP-A brief's original 57/23
 came from a gap_reason distribution measured before load_orgs deduplicated caritas-nepal.
+
+response_statement (added 2026-08-28, per the backend lead): the 44 current_response entries
+across 39 distinct source_urls (also measured directly), loaded as hand-researched statements so
+the Response Board has real data before WP-B's extraction pipeline has run. See
+pipeline/jobs/orgs.py's module docstring for why body_text/title/format stay NULL on these
+reports, and derive_activity_type/derive_amount_basis's own docstrings for how those two fields
+are derived from the activity sentence.
 """
 
 from __future__ import annotations
@@ -20,10 +27,28 @@ from __future__ import annotations
 from datetime import date
 
 import pytest
-from core.models import IngestionRun, OrgAlias, Organisation, OrgDatum, OrgRegistration
+from core.models import (
+    Disaster,
+    IngestionRun,
+    OrgAlias,
+    Organisation,
+    OrgDatum,
+    OrgRegistration,
+    Report,
+    ResponseStatement,
+)
 from sqlalchemy import func, select, text
 
-from pipeline.jobs.orgs import _datum_row, _partition_aliases, _value_type_and_extra, ingest_orgs, upsert_datum
+from pipeline.jobs.orgs import (
+    FLOOD_GLIDE_ID,
+    _datum_row,
+    _partition_aliases,
+    _value_type_and_extra,
+    derive_activity_type,
+    derive_amount_basis,
+    ingest_orgs,
+    upsert_datum,
+)
 from pipeline.jobs.seed_reference import seed_reference
 from pipeline.runs import run_context
 
@@ -34,6 +59,8 @@ EXPECTED_VALUES = 150
 EXPECTED_GAPS = 270
 EXPECTED_ALIASES = 100
 EXPECTED_REGISTRATIONS_NULL_IDENTIFIER = 56
+EXPECTED_REPORTS = 39
+EXPECTED_STATEMENTS = 44
 
 
 async def _count(session, model) -> int:
@@ -73,7 +100,11 @@ async def test_the_run_closes_with_the_counts_it_wrote(job_sessionmaker, session
     await ingest_orgs(job_sessionmaker)
     run = await _latest_run(session)
     # organisations + datums + registrations + aliases (warnings: dataset has none today)
-    assert run.rows_written == EXPECTED_ORGS + EXPECTED_DATUMS + 75 + EXPECTED_ALIASES
+    # + 1 disaster + reports + response_statements
+    assert (
+        run.rows_written
+        == EXPECTED_ORGS + EXPECTED_DATUMS + 75 + EXPECTED_ALIASES + 1 + EXPECTED_REPORTS + EXPECTED_STATEMENTS
+    )
     assert run.rows_written > 0
     assert run.status == "succeeded"
 
@@ -306,6 +337,147 @@ def test_money_extra_carries_currency_fiscal_year_and_scope():
     value_type, extra = _value_type_and_extra(datum, 8263000000)
     assert value_type == "money"
     assert extra == {"currency": "USD", "fiscal_year": "2024", "scope": "global"}
+
+
+# --- report and response_statement: the 44 hand-researched current_response entries --------------
+
+
+async def test_ingest_writes_44_response_statements_across_39_reports(job_sessionmaker, session):
+    await ingest_orgs(job_sessionmaker)
+    assert await _count(session, Report) == EXPECTED_REPORTS
+    assert await _count(session, ResponseStatement) == EXPECTED_STATEMENTS
+
+
+async def test_response_statements_are_idempotent_on_a_second_run(job_sessionmaker, session):
+    await ingest_orgs(job_sessionmaker)
+    await ingest_orgs(job_sessionmaker)
+    assert await _count(session, Report) == EXPECTED_REPORTS
+    assert await _count(session, ResponseStatement) == EXPECTED_STATEMENTS
+    run = await _latest_run(session)
+    assert run.rows_written == 0
+
+
+async def test_every_hand_researched_statement_uses_the_hand_research_model_and_is_approved(job_sessionmaker, session):
+    await ingest_orgs(job_sessionmaker)
+    rows = (await session.execute(select(ResponseStatement))).scalars().all()
+    assert len(rows) == EXPECTED_STATEMENTS
+    for row in rows:
+        assert row.model == "hand_research"
+        assert row.prompt_version == "research-2026-08-28"
+        assert row.status == "approved"
+        assert row.org_id is not None, "every hand-researched entry is already attributed to its org"
+
+
+async def test_five_statements_have_no_quote_and_the_database_accepts_them(job_sessionmaker, session):
+    """A quote-less row is only legal for model='hand_research' - core.models.ResponseStatement's
+    ck_response_statement_quote_required_for_extracted CHECK enforces it. This test is really a
+    check that the insert did not silently fail or get rejected by that constraint."""
+    await ingest_orgs(job_sessionmaker)
+    no_quote = await _count_where(session, ResponseStatement, ResponseStatement.quote.is_(None))
+    assert no_quote == 5
+
+
+async def test_every_report_disaster_glide_id_is_the_flood_and_body_text_is_never_set(job_sessionmaker, session):
+    """These pages were read by a person, never fetched by this job - pretending otherwise would
+    be exactly the dishonest provenance CLAUDE.md's Global Constraint 3 exists to prevent."""
+    await ingest_orgs(job_sessionmaker)
+    reports = (await session.execute(select(Report).where(Report.disaster_glide_id.is_not(None)))).scalars().all()
+    hand_research_reports = [r for r in reports if r.body_text is None and r.body_sha256 is None]
+    assert len(hand_research_reports) == EXPECTED_REPORTS
+    for report in hand_research_reports:
+        assert report.disaster_glide_id == FLOOD_GLIDE_ID
+        assert report.body_text is None
+        assert report.body_fetched_at is None
+
+
+async def test_the_flood_disaster_row_exists_even_if_ingest_reliefweb_listing_never_ran(job_sessionmaker, session):
+    """report.disaster_glide_id is a foreign key; ingest_orgs must not depend on
+    ingest_reliefweb_listing having created the disaster row first."""
+    await ingest_orgs(job_sessionmaker)
+    disaster = await session.get(Disaster, FLOOD_GLIDE_ID)
+    assert disaster is not None
+    assert disaster.is_active is True
+
+
+async def test_a_report_shared_by_two_organisations_gets_two_statements(job_sessionmaker, session):
+    """care-nepal and community-self-reliance-centre both cite the same care.org press release
+    (CARE Nepal names CSRC as a local partner in that release). One report row, two statements,
+    each attributed to its own org - the report_id + content_hash unique key has to allow this."""
+    await ingest_orgs(job_sessionmaker)
+    url = "https://www.care.org/media-and-press/care-nepal-stands-ready-to-support-communities-affected-by-bhote-koshi-river-flash-flood/"
+    report = await session.scalar(select(Report).where(Report.url == url))
+    assert report is not None
+    statements = (
+        (await session.execute(select(ResponseStatement).where(ResponseStatement.report_id == report.id)))
+        .scalars()
+        .all()
+    )
+    org_ids = {s.org_id for s in statements}
+    assert org_ids == {"care-nepal", "community-self-reliance-centre"}
+
+
+async def test_response_statements_never_get_deleted(job_sessionmaker, session):
+    await ingest_orgs(job_sessionmaker)
+    before = await _count(session, ResponseStatement)
+    await ingest_orgs(job_sessionmaker)
+    after = await _count(session, ResponseStatement)
+    assert after == before
+
+
+# --- activity_type and amount_basis derivation --------------------------------------------------
+
+
+@pytest.mark.parametrize(
+    ("what", "expected"),
+    [
+        ("Began rescue work in a flood-affected area, per Nepali press", "search_and_rescue"),
+        (
+            "Distributed pre-positioned hygiene kits, medical tents, bed nets, newborn kits, and "
+            "ready-to-use therapeutic food for children with acute malnutrition",
+            "relief_distribution",
+        ),
+        ("IFRC launched a CHF 25 million Emergency Appeal to fund the response", "appeal_launched"),
+        ("IFRC released Disaster Response Emergency Fund (DREF) funding to support NRCS", "funding_pledged"),
+        ("MSF emergency team arrived in Nepal to assess people's immediate needs", "assessment"),
+        (
+            "Partner hospital used pre-positioned field medic packs to treat flood-evacuated patients",
+            "medical",
+        ),
+        (
+            # The classic trap this heuristic exists to avoid: "rescue" appears only as a listed
+            # use-case of a fund, not as a described rescue operation.
+            "Nepal Flood Relief Fund launched; USD 174,819 raised; flexible funding for search "
+            "and rescue, medical care, shelter, food, water",
+            "appeal_launched",
+        ),
+    ],
+)
+def test_derive_activity_type(what, expected):
+    assert derive_activity_type(what) == expected
+
+
+@pytest.mark.parametrize(
+    ("what", "expected"),
+    [
+        ("USD 174,819 raised from 1,433 donors", "raised"),
+        ("IFRC launched a CHF 25 million Emergency Appeal", "appeal"),
+        ("Announced NPR 50 million in immediate support", "pledged"),
+        ("100,000 euros allocated from the emergency relief fund", "released"),
+        ("IFRC released DREF funding to support NRCS", "released"),
+        ("A statement with no amount language at all", "reported"),
+    ],
+)
+def test_derive_amount_basis(what, expected):
+    assert derive_amount_basis(what) == expected
+
+
+def test_derive_amount_basis_never_reads_the_note():
+    """The same rule WP-B follows: a note reading "not confirmed disbursed" must never turn a
+    pledge into a payment. derive_amount_basis takes only the activity sentence as an argument -
+    there is no note parameter to accidentally wire in."""
+    import inspect
+
+    assert list(inspect.signature(derive_amount_basis).parameters) == ["what"]
 
 
 # --- runs the whole pipeline once as a sanity check on the run contract itself -------------------
