@@ -89,9 +89,12 @@ was wrong in all three. The fix is the rightmost entry — the one the trusted p
 which is correct whether a proxy appends to the header or replaces it. The plan is corrected; the
 spec needs the same correction from the PO.
 
-The accompanying test also needs to change: it currently proves a spoofed *second* entry cannot
-change the key, which passes under both the broken and the fixed implementation. The spoofed
-*first* entry is the case that matters.
+**Correction to this finding.** I wrote above that the accompanying test "proves a spoofed second
+entry cannot change the key, which passes under both implementations". WP-C checked and told me no
+such test existed at all - I had asserted something about their code without verifying it, which
+is the exact failure this file keeps recording in other people's work. The test WP-C then wrote is
+the one that matters: rotating the spoofed entry per request still yields the same key, which is
+the attack rather than a proxy for it.
 
 **Minor — `q` allows LIKE wildcards.** Correctly parameterised and not an injection risk, but `%`
 and `_` still act as wildcards. Harmless at 44 organisations.
@@ -102,6 +105,18 @@ deployed Railway service is a deployment-topology question. It goes to the secur
 PO-5 decision.
 
 ---
+
+## What the workers caught in my work
+
+Three of the findings in this file are mine, and all three were found by someone else:
+
+- The rate-limit key instruction, wrong in the spec, the plan and WP-C's brief.
+- The gap_reason distribution I reported at PO-0 as 237, which WP-A measured as 231.
+- A test I claimed existed in WP-C's PR and described the behaviour of. It did not exist.
+
+The pattern in the third one is worth naming, because it is the one I have least excuse for: I
+reviewed a diff and reported what a test proved without opening it. A reviewer who does that is
+doing the same thing as an implementer who claims a suite is green without running it.
 
 ## The same bug, a second time, in my own file
 
