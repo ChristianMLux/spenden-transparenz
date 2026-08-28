@@ -316,6 +316,25 @@ const ApiDatumSchema = z.object({
   currency: z.string().nullable().optional(),
   fiscal_year: z.string().nullable().optional(),
   scope: z.string().nullable().optional(),
+  // Sibling facts of a donation_channel datum, null on every other path.
+  channel_type: z.enum(CHANNEL_TYPES).nullable().optional(),
+  flood_specific: z.boolean().nullable().optional(),
+});
+
+/**
+ * The compact object a board row carries, from components.schemas.DonationChannel.
+ * `url` is required and non-null inside the object: the API models a missing channel as
+ * the whole field being null, and its own description fixes what that means, which is
+ * the part this product cannot afford to guess at. "Null on a row means no official
+ * channel was found, which the board states rather than hides." So null maps to
+ * searched_not_found, never to not_searched.
+ */
+const ApiDonationChannelSchema = z.object({
+  url: z.string(),
+  channel_type: z.enum(CHANNEL_TYPES).nullable(),
+  verification: ApiVerificationSchema,
+  retrieved_at: z.string().nullable(),
+  flood_specific: z.boolean().nullable(),
 });
 
 const ApiSourceRefSchema = z.object({
@@ -349,6 +368,7 @@ const ApiOrgRefSchema = z.object({
 });
 
 const ApiResponderItemSchema = z.object({
+  donation_channel: ApiDonationChannelSchema.nullable().optional(),
   org: ApiOrgRefSchema.nullable().optional(),
   org_name_raw: z.string(),
   statements: z.array(ApiStatementSchema).optional(),
@@ -738,6 +758,74 @@ function toOrgDetail(raw: RawOrg): OrgDetail {
 // Mapping: live API -> the app's types
 // ---------------------------------------------------------------------------
 
+/**
+ * A board row's channel, from the API rather than the JSON file.
+ *
+ * The absent case is the interesting one. The row object carries no gap_reason, so the
+ * distinction this product makes everywhere else - we did not look, against we looked
+ * and found nothing - cannot be read off the field itself. The API contract settles it
+ * in the DonationChannel description quoted above: a null row means searched and not
+ * found. Mapping it to not_searched would tell the reader we never looked, which would
+ * be a lie about work that was done.
+ */
+function apiDonationLink(
+  raw: z.infer<typeof ApiDonationChannelSchema> | null | undefined,
+): DonationLink {
+  if (!raw) {
+    return {
+      url: null,
+      // No date travels with an absent channel, so none is shown. The JSON path has
+      // one and shows it; neither invents one.
+      retrieved_at: null,
+      verification: "unverified",
+      gap_reason: "searched_not_found",
+    };
+  }
+  return {
+    url: raw.url,
+    retrieved_at: raw.retrieved_at,
+    verification: verificationOf(raw.verification),
+    gap_reason: null,
+  };
+}
+
+/** The organisation page's channel: the full datum at data["donation_channel"]. */
+function apiDonationChannel(
+  raw: z.infer<typeof ApiDatumSchema> | undefined,
+): DonationChannel {
+  if (!raw) {
+    return {
+      url: null,
+      channel_type: null,
+      flood_specific: null,
+      source_url: null,
+      publisher: null,
+      retrieved_at: null,
+      verification: "unverified",
+      quote: null,
+      note: null,
+      gap_reason: "not_searched",
+    };
+  }
+  const url = typeof raw.value === "string" ? raw.value : null;
+  return {
+    url,
+    channel_type: (raw.channel_type ?? null) as DonationChannelType | null,
+    flood_specific: raw.flood_specific ?? null,
+    source_url: raw.source_url ?? null,
+    publisher: publisherOf(url ?? raw.source_url ?? null),
+    retrieved_at: raw.retrieved_at ?? null,
+    verification: verificationOf(raw.verification),
+    quote: raw.quote ?? null,
+    note: raw.note ?? null,
+    gap_reason: isGapReason(raw.gap_reason)
+      ? raw.gap_reason
+      : url
+        ? null
+        : "searched_not_found",
+  };
+}
+
 function apiDatumToLocal<T>(raw: z.infer<typeof ApiDatumSchema> | undefined): Datum<T> {
   if (!raw) {
     return {
@@ -807,8 +895,9 @@ function apiResponderToLocal(raw: z.infer<typeof ApiResponderItemSchema>): Respo
     is_local: org?.hq_country === "NP",
     search_key: fold(name),
     statements: (raw.statements ?? []).map(apiStatementToLocal),
-    // Until the API carries the field (schema v0.5) both paths read the same file.
-    donation: donationLinkFor(org?.org_id ?? null),
+    // Schema v0.5 carries this on the row; the JSON file is only the fallback for a
+    // deployment with no SPENDEN_API_URL, and that path never reaches this function.
+    donation: apiDonationLink(raw.donation_channel),
   };
 }
 
@@ -821,8 +910,7 @@ function apiOrgDetailToLocal(raw: z.infer<typeof ApiOrgDetailSchema>): OrgDetail
   return {
     org_id: raw.org_id,
     name: raw.name_common,
-    // Same seam as the board: the API carries the field from schema v0.5.
-    donation: donationFor(raw.org_id),
+    donation: apiDonationChannel(data["donation_channel"]),
     local_script: pick<string>("names.local_script"),
     legal_name: pick<string>("names.legal"),
     aliases: raw.aliases ?? [],
