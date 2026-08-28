@@ -315,6 +315,10 @@
     grid-column: 1;
   }
 
+  .board-cell-donation {
+    grid-column: 1;
+  }
+
   .board-cell-empty {
     grid-column: 1;
   }
@@ -345,8 +349,17 @@
       grid-row: var(--row, auto);
     }
 
+    /* The "view organisation" link now shares its row with the donation cell (action
+       path, item b): three columns for the link, the fourth (Quelle-und-Stand's own
+       column) for the official channel, so a reader scanning that column meets it in
+       the same place a statement's own provenance chip would be. */
     .board-cell-link {
-      grid-column: 1 / -1;
+      grid-column: 1 / 4;
+      grid-row: var(--row, auto);
+    }
+
+    .board-cell-donation {
+      grid-column: 4;
       grid-row: var(--row, auto);
     }
 
@@ -357,6 +370,19 @@
 }
 
 @layer utilities {
+  /* Drops the redundant crisis name from the masthead sub-strip specifically on the
+     board, where the page's own <h1> already names it a few dozen pixels below (see
+     site-header.tsx and app/[locale]/krise/[crisis]/page.tsx's #board-page marker).
+     :has() resolves against the server-rendered DOM at first paint, so this costs no
+     client JavaScript and causes no post-hydration shift either way. Lives in the
+     utilities layer, not components: .masthead-crisis-name also carries Tailwind's
+     `flex` utility (also `display`), and the components layer always loses to
+     utilities regardless of selector specificity, so a components-layer `display:none`
+     here would silently never win. */
+  body:has(#board-page) .masthead-crisis-name {
+    display: none;
+  }
+
   /* Provenance bodies are always in the DOM so that Ctrl+P prints sources without
      anyone having to find the "Alle Quellen anzeigen" switch first. */
   .datum-expanded {

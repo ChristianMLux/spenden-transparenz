@@ -1,6 +1,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import type { CSSProperties } from "react";
+import { DonationLine } from "@/components/shared/donation-line";
 import type { Locale } from "@/i18n/routing";
 import { formatDate } from "@/lib/format";
 import type { Responder } from "@/lib/types";
@@ -48,7 +49,10 @@ export function ResponderRow({ responder, generatedAt }: { responder: Responder;
   const headingId = `org-${(responder.org_id ?? responder.org_name_raw).replace(/[^a-zA-Z0-9_-]/g, "-")}`;
   const rowCount = Math.max(responder.statements.length, 1);
   const nameStyle = { "--rows": rowCount } as CSSProperties;
-  const linkStyle = { "--row": rowCount + 1 } as CSSProperties;
+  // The donation channel and the "view organisation" link share one row, after every
+  // statement: see globals.css's .board-cell-link/.board-cell-donation and the note
+  // below on why the donation cell comes first in document order.
+  const actionStyle = { "--row": rowCount + 1 } as CSSProperties;
 
   return (
     <article aria-labelledby={headingId} className="board-row border-b border-rule hover:bg-tint">
@@ -79,8 +83,18 @@ export function ResponderRow({ responder, generatedAt }: { responder: Responder;
         </div>
       )}
 
+      {/* The official donation channel (action path, item b/d): its own cell, in the
+          Quelle-und-Stand column at md and up, identical DonationLine treatment for
+          every one of the 44 organisations regardless of state. Placed before the
+          "view organisation" link in document order, same reasoning as the statements
+          above it: e2e/board.spec.ts's keyboard-order test wants a Datum-shaped
+          provenance link before the org link, and this is one. */}
+      <div style={actionStyle} className="board-cell-donation min-w-0 py-3 pt-1 pb-3">
+        <DonationLine channel={responder.donation} />
+      </div>
+
       {responder.org_id && (
-        <div style={linkStyle} className="board-cell-link pt-1 pb-3">
+        <div style={actionStyle} className="board-cell-link pt-1 pb-3">
           {/* next/link's Link, not @/i18n/navigation's wrapped one: SiteFooter (every
               page's layout) already pays for Link's own runtime and for next-intl's
               pathname-translation chunk, so reusing plain next/link here with a

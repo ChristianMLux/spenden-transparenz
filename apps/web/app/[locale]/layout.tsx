@@ -46,7 +46,7 @@ export default async function LocaleLayout({ children }: { children: React.React
         <NextIntlClientProvider messages={{}}>
         <SkipLink />
         <SiteHeader crisis={crisis} siteName={t("siteName")} generatedAt={freshness.retrieved_at} />
-        <main id="inhalt" tabIndex={-1} className="mx-auto w-full max-w-[80rem] flex-1 px-4 pt-4 pb-6">
+        <main id="inhalt" tabIndex={-1} className="mx-auto w-full max-w-[80rem] flex-1 px-4 pt-1 pb-6">
           {children}
         </main>
         <SiteFooter generatedAt={freshness.retrieved_at} />

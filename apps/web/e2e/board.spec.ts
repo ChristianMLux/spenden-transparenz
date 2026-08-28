@@ -114,7 +114,13 @@ test.describe("keyboard order", () => {
     }
 
     const filterIndex = stops.findIndex((s) => s.tag === "INPUT" && s.type === "checkbox");
-    const datumIndex = stops.findIndex((s) => s.rel === "noopener");
+    // The action path's "Ich möchte helfen" section (masthead nav link, then the
+    // government fund's own donation channel) sits above the filter rail by design and
+    // carries a legitimate rel="noopener" link of its own, so the first such link on the
+    // page is no longer necessarily a statement's provenance link. The chain this test
+    // actually cares about — filter, then a content provenance link, then the org link —
+    // only needs the first one reachable *after* the filter.
+    const datumIndex = stops.findIndex((s, i) => i > filterIndex && s.rel === "noopener");
     const orgLinkIndex = stops.findIndex((s) => s.href?.includes("/organisation/"));
 
     expect(filterIndex).toBeGreaterThan(-1);

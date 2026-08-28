@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { CorrectionsLink } from "@/components/org/corrections-link";
+import { DonationSection } from "@/components/org/donation-section";
 import { FinancialsSection } from "@/components/org/financials-section";
 import { GapsSection } from "@/components/org/gaps-section";
 import { OrgHeader } from "@/components/org/org-header";
@@ -51,6 +52,7 @@ export default async function OrgDetailPage({
   return (
     <SourceVisibilityScope className={printScope.printScope}>
       <OrgHeader org={org} />
+      <DonationSection donation={org.donation} />
       <ResponseSection
         statements={org.statements}
         researchNotes={org.research_notes}

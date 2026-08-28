@@ -40,7 +40,7 @@ export function FigureStrip({ tiles }: { tiles: FigureTile[] }) {
                 e.preventDefault();
                 tile.onSelect();
               }}
-              className="group flex min-h-11 flex-col gap-1 px-4 py-2 no-underline focus-visible:relative focus-visible:z-10"
+              className="group flex min-h-11 flex-col justify-center gap-1 px-4 py-0.5 no-underline focus-visible:relative focus-visible:z-10"
             >
               <span className="text-2xl leading-none text-ink">{numeral || tile.text}</span>
               {numeral ? (

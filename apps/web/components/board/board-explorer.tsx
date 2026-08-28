@@ -236,7 +236,7 @@ export function BoardExplorer({
           attributable geometry in the repo, so rather than redraw one from memory the
           names carry the same information and can be sourced. A real outline is
           post-v1, from Natural Earth or GADM with its licence. */}
-      <p className="mt-2 flex flex-wrap gap-x-2 gap-y-1 px-4 text-sm">
+      <p className="mt-1 flex flex-wrap gap-x-2 gap-y-1 border-b border-rule px-4 pb-0.5 text-sm">
         <span className="text-muted">{labels.districtsLabel}</span>
         {districtLinks.map((d) => (
           <span key={d.key}>
@@ -258,14 +258,14 @@ export function BoardExplorer({
         </a>
       </p>
 
-      <hr className="my-2 border-rule" />
-
       {/* Rail on the left, results beside it. Before this the filters ran the full width
           and the list began underneath them, so the first screen held no organisation at
           all. The rail's own warm-tint fill and right rule are the "filter rail" the
           BRIEF specifies; xl:top-16 clears the 64px sticky band exactly, so the rail
-          settles flush under it rather than under empty space. */}
-      <div className="grid gap-6 xl:grid-cols-[15rem_1fr]">
+          settles flush under it rather than under empty space. The border on the
+          district/sources line above now does the job the standalone <hr> used to: one
+          rule instead of a rule plus its own margin on both sides. */}
+      <div className="mt-2 grid gap-6 xl:grid-cols-[15rem_1fr]">
         <div className="xl:sticky xl:top-16 xl:self-start xl:border-r xl:border-rule xl:bg-tint xl:p-4">
         <FilterBar
           groups={groups}
@@ -315,7 +315,7 @@ export function BoardExplorer({
         chronologicalLabel={labels.tabs.chronological}
       />
 
-      <div className="mt-2 space-y-2">
+      <div className="mt-1 space-y-1">
         <FilterChips
           heading={labels.filters.selectedHeading}
           clearAllLabel={labels.filters.clearAll}
@@ -326,14 +326,14 @@ export function BoardExplorer({
         <ResultCount text={resultCountText} />
       </div>
 
-      <div className="mt-2">
+      <div className="mt-1">
         {filters.tab === "orgs" ? (
           <div>
             {/* The grid's persistent header row (BRIEF, "Amtsblatt"): 13px muted labels
                 over the same 4fr/5fr/2fr/3fr template every organisation row below it
                 uses, so the column edges line up exactly. md and up only, matching the
                 breakpoint responder-row.tsx switches its own layout at. */}
-            <div className="hidden border-b border-rule md:grid md:grid-cols-[4fr_5fr_2fr_3fr] md:gap-x-4 md:px-4 md:pb-2">
+            <div className="hidden border-b border-rule md:grid md:grid-cols-[4fr_5fr_2fr_3fr] md:gap-x-4 md:px-4">
               <span className="text-xs text-muted">{labels.columns.organisation}</span>
               <span className="text-xs text-muted">{labels.columns.reaction}</span>
               <span className="text-xs text-muted">{labels.columns.location}</span>
