@@ -69,15 +69,19 @@ export function FinancialsSection({ financials }: { financials: OrgDetail["finan
     <OrgSection headingId="financial-heading" heading={t("heading")}>
       {!hasFigures ? (
         <div className="flex flex-col gap-4">
-          <div className="flex max-w-[68ch] flex-col gap-2">
-            <p className="text-base text-ink">{t("emptyIntro")}</p>
-            <p className="text-base text-ink">{t("emptySearched")}</p>
-            <p className="text-base text-ink">{t("emptyNormal")}</p>
-            <p className="text-sm">
-              <Link href="/methodik" className="underline">
-                {t("methodikLink")}
-              </Link>
-            </p>
+          {/* The empty case is the designed case (DESIGN.md 1): a tinted callout with an
+              accent left rule, not a card and with no shadow (BRIEF, "Amtsblatt"). */}
+          <div className="max-w-[68ch] border-l-[3px] border-accent bg-tint p-4">
+            <div className="flex flex-col gap-2">
+              <p className="text-base text-ink">{t("emptyIntro")}</p>
+              <p className="text-base text-ink">{t("emptySearched")}</p>
+              <p className="text-base text-ink">{t("emptyNormal")}</p>
+              <p className="text-sm">
+                <Link href="/methodik" className="underline">
+                  {t("methodikLink")}
+                </Link>
+              </p>
+            </div>
           </div>
           {documents}
         </div>

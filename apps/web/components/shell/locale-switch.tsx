@@ -45,6 +45,9 @@ export function LocaleSwitch({
   );
   const suffix = stripped === pathname ? "" : stripped;
 
+  // This component only ever renders inside the masthead band (bg-band, DESIGN.md's
+  // ink-blue), so its colours are literal white rather than the --ink/--accent tokens
+  // those tokens mean "dark text on a light surface" and would be unreadable here.
   return (
     <nav aria-label={navLabel} className="flex items-center gap-3 text-sm">
       {locales.map((locale) => (
@@ -55,8 +58,8 @@ export function LocaleSwitch({
           aria-current={locale === current ? "true" : undefined}
           className={
             locale === current
-              ? "flex min-h-11 items-center text-ink no-underline"
-              : "flex min-h-11 items-center underline"
+              ? "flex min-h-11 items-center text-white no-underline"
+              : "flex min-h-11 items-center text-white/75 underline hover:text-white"
           }
         >
           {labels[locale]}

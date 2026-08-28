@@ -10,7 +10,11 @@
     "seatCountryOnly": "Based in: {country}",
     "website": "Website",
     "lastUpdated": "Last updated: {date}",
-    "legalNameLabel": "Registered name"
+    "legalNameLabel": "Registered name",
+    "typeLabel": "Organisation type",
+    "seatLabel": "Based in",
+    "websiteLabel": "Website",
+    "lastUpdatedLabel": "Last updated"
   },
   "response": {
     "heading": "Response to the flood",
@@ -138,5 +142,9 @@
     "linkLabel": "Go to corrections",
     "mailLabel": "Report an error by email",
     "mailSubject": "Correction: {orgId} ({date})"
+  },
+  "donation": {
+    "heading": "Donating to this organisation",
+    "empty": "No official donation page on this organisation's own domain was found for this organisation."
   }
 }

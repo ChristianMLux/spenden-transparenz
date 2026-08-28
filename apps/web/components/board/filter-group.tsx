@@ -60,7 +60,7 @@ export function FilterGroup({
 
   return (
     <fieldset className="m-0 min-w-0 border-0 p-0">
-      <legend className="text-sm text-ink">{legend}</legend>
+      <legend className="text-xs text-muted">{legend}</legend>
       {hint && (
         <p id={hintId} className="mt-1 text-xs text-muted">
           {hint}
@@ -73,27 +73,28 @@ export function FilterGroup({
           return (
             <label
               key={opt.key}
-              className={`flex min-h-9 cursor-pointer items-center gap-2 py-0.5 text-sm ${
+              className={`flex min-h-9 cursor-pointer items-center justify-between gap-2 py-0.5 text-sm ${
                 disabled ? "cursor-not-allowed text-muted" : "text-ink"
               }`}
             >
-              <input
-                type="checkbox"
-                checked={checked}
-                disabled={disabled}
-                aria-describedby={hint ? hintId : undefined}
-                onChange={(e) => {
-                  const next = new Set(selected);
-                  if (e.target.checked) next.add(opt.key);
-                  else next.delete(opt.key);
-                  onChange(next);
-                }}
-                className="h-4 w-4 shrink-0 accent-accent"
-                data-testid={`${idPrefix}-${opt.key}`}
-              />
-              <span>
-                {opt.label} <span className="text-muted">({opt.count})</span>
+              <span className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={checked}
+                  disabled={disabled}
+                  aria-describedby={hint ? hintId : undefined}
+                  onChange={(e) => {
+                    const next = new Set(selected);
+                    if (e.target.checked) next.add(opt.key);
+                    else next.delete(opt.key);
+                    onChange(next);
+                  }}
+                  className="filter-checkbox"
+                  data-testid={`${idPrefix}-${opt.key}`}
+                />
+                <span>{opt.label}</span>
               </span>
+              <span className="text-xs text-muted">{opt.count}</span>
             </label>
           );
         })}

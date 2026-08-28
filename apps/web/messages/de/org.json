@@ -10,7 +10,11 @@
     "seatCountryOnly": "Sitz: {country}",
     "website": "Website",
     "lastUpdated": "Zuletzt aktualisiert: {date}",
-    "legalNameLabel": "Eingetragener Name"
+    "legalNameLabel": "Eingetragener Name",
+    "typeLabel": "Organisationstyp",
+    "seatLabel": "Sitz",
+    "websiteLabel": "Website",
+    "lastUpdatedLabel": "Zuletzt aktualisiert"
   },
   "response": {
     "heading": "Reaktion auf die Flut",
@@ -138,5 +142,9 @@
     "linkLabel": "Zur Korrekturen-Seite",
     "mailLabel": "Fehler per E-Mail melden",
     "mailSubject": "Korrektur: {orgId} ({date})"
+  },
+  "donation": {
+    "heading": "Spenden an diese Organisation",
+    "empty": "Für diese Organisation wurde keine offizielle Spendenseite auf ihrer eigenen Domain gefunden."
   }
 }

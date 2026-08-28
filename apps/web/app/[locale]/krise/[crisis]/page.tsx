@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { BoardExplorer } from "@/components/board/board-explorer";
 import type { BoardLabels } from "@/components/board/board-labels";
 import { buildChronoNodes, buildDayLabels } from "@/components/board/chronological";
+import { HelpSection } from "@/components/board/help-section";
 import { ResponderRow } from "@/components/board/responder-row";
 import type { Locale } from "@/i18n/routing";
 import { ACTIVE_CRISIS, routing } from "@/i18n/routing";
@@ -121,6 +122,12 @@ export default async function BoardPage() {
     optionLabel,
     removeChipLabel,
     districtsLabel: t("districtsLabel"),
+    columns: {
+      organisation: t("columns.organisation"),
+      reaction: t("columns.reaction"),
+      location: t("columns.location"),
+      source: t("columns.source"),
+    },
   };
 
   // ---------------------------------------------------------------------
@@ -138,15 +145,20 @@ export default async function BoardPage() {
   const crisisName = locale === "de" ? board.crisis.name_de : board.crisis.name_en;
 
   return (
-    <div>
+    // #board-page: read by globals.css's `body:has(#board-page) .masthead-crisis-name`
+    // rule, which drops the crisis name from the masthead sub-strip on this page only
+    // (it stays on every other page, where there is no h1 already naming the crisis).
+    <div id="board-page">
+      {/* The GLIDE id and data stand still carry full visual weight in the masthead
+          sub-strip (SiteHeader, on every page); this h1 is the page's own required
+          heading and, on the board, the only place the crisis name itself appears. */}
       <h1 className="text-2xl">{crisisName}</h1>
-      <p className="mt-1 font-mono text-xs text-muted">{board.crisis.glide_id}</p>
 
-      <p className="mt-4 max-w-[68ch] text-base text-ink">
-        {t("scopeLine1")} {t("scopeLine2")}
-      </p>
+      <div className="mt-0.5">
+        <HelpSection governmentFunds={board.government_funds} />
+      </div>
 
-      <div className="mt-6">
+      <div className="mt-2">
         <BoardExplorer
           board={board}
           rowNodes={rowNodes}
