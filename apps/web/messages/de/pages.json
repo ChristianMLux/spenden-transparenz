@@ -1,1 +1,63 @@
-{}
+{
+  "methodik": {
+    "title": "Methodik",
+    "intro": "Diese Seite erklärt, wie aus einer Angabe ein Beleggrad wird, was „nicht gefunden“ bedeutet und wo die Grenzen dieser Datenerhebung liegen.",
+    "gradesHeading": "Die fünf Beleggrade",
+    "gradesIntro": "Jeder Wert auf dieser Website trägt einen dieser fünf Grade. Der Wortlaut ist derselbe, der auch neben dem Wert selbst steht.",
+    "notFoundHeading": "Was „nicht gefunden“ bedeutet, und was nicht",
+    "notFoundBody1": "Nicht gefunden bedeutet: In unserer Recherche gab es keinen öffentlich zugänglichen Beleg für diesen Wert. Es bedeutet nicht, dass der Wert falsch ist, dass die Organisation etwas verschweigt, oder dass etwas Auffälliges vorliegt.",
+    "notFoundBody2": "Bei den meisten kleinen und lokalen Organisationen ist eine öffentliche Finanzzahl schlicht nicht vorhanden oder nicht auffindbar. Das ist der Normalfall, kein Mangel der einzelnen Organisation: Von den 14 nepalesischen Organisationen in diesem Register hat keine eine öffentliche Einnahmenzahl.",
+    "notFoundBody3": "Ein nicht gefundener Wert wird deshalb genauso dargestellt wie ein gefundener: gleiche Farbe, gleiche Größe, gleiche Schriftstärke. Nichts an der Gestaltung soll eine fehlende Angabe wie einen Mangel wirken lassen.",
+    "reasonsHeading": "Die vier Gründe für eine Lücke",
+    "reasonsIntro": "Ein leeres Feld allein sagt nicht, warum es leer ist. Deshalb trägt jede Lücke einen von vier Gründen.",
+    "limitsHeading": "Grenzen dieser Datenerhebung",
+    "limitsBody1": "Der Katastrophenmodus zeigt, wer öffentlich eine Reaktion gemeldet hat, wo und mit welcher Quelle. Er zeigt nicht, wie viel Geld tatsächlich ausgezahlt wurde. Systeme wie OCHA FTS oder IATI melden Auszahlungen typischerweise erst Monate später (im Mittel 95 bis 142 Tage Meldeverzug); in der ersten Woche nach einer Katastrophe stehen dort strukturell keine Daten.",
+    "limitsBody2": "Lokale nepalesische Organisationen werden in den Quellen oft genannt, aber nicht eindeutig identifiziert. Das amtliche Register für nepalesische NGOs (Social Welfare Council) war während der Recherche von Deutschland aus nicht erreichbar und veröffentlicht ohnehin keine Finanzdaten.",
+    "limitsBody3": "Bei einer Stichprobenprüfung von 17 Werten (rund 12 % des Pilotdatensatzes) waren 15 direkt auf der Quellseite belegt, einer war an der zitierten Quelle nicht maschinell nachprüfbar, und einer trug einen echten Provenienz-Fehler, also rund 6 %. Das ist ungefähr die Fehlerrate, mit der bei der Erstbefüllung zu rechnen ist. Gefundene Fehler werden auf der Korrekturen-Seite dokumentiert, nicht verschwiegen.",
+    "noRatingHeading": "Was diese Seite nicht tut",
+    "noRatingBody": "Wir bewerten nicht und empfehlen nicht. Es gibt keine Rangliste, keine Punktzahl und keine Kategorisierung von Organisationen nach Vertrauenswürdigkeit. Jede Angabe steht für sich, mit ihrer eigenen Quelle."
+  },
+  "quellen": {
+    "title": "Quellen",
+    "intro": "Jede Quelle, aus der Daten in dieses Register einfließen, mit Lizenz und letztem Abruf. Der vollständige Datensatz steht darunter zum Download.",
+    "tableName": "Quelle",
+    "tableLicence": "Lizenz",
+    "tableRetrieved": "Letzter Abruf",
+    "tableLink": "Link",
+    "licenceUnknown": "nicht ausgewiesen",
+    "downloadHeading": "Datensatz-Download",
+    "downloadBody": "Der Pilotdatensatz für die Nepal-Flutreaktion 2026 als JSON-Datei, derselbe, aus dem diese Website ihre Angaben liest.",
+    "downloadLink": "orgs-nepal-2026.json herunterladen"
+  },
+  "korrekturen": {
+    "title": "Korrekturen",
+    "intro": "Fehler, die wir in unseren eigenen Daten gefunden und korrigiert haben. Eine leere Korrekturen-Seite wäre die unglaubwürdigste Seite einer Transparenz-Website, deshalb steht hier jeder bekannte Fehler.",
+    "tableDate": "Datum",
+    "tableOrg": "Organisation",
+    "tableField": "Feld",
+    "tableBefore": "Vorher",
+    "tableAfter": "Nachher",
+    "tableSource": "Quelle",
+    "sourceLinkLabel": "Beleg ansehen"
+  },
+  "impressum": {
+    "title": "Impressum",
+    "placeholderHeading": "Angaben werden vor der Veröffentlichung ergänzt",
+    "placeholderBody": "Die gesetzlich vorgeschriebenen Angaben zum Betreiber dieser Website (Name, Anschrift, Kontakt) stehen hier, sobald sie vorliegen. Diese Seite ist bis dahin von der Suche ausgeschlossen und geht nicht live, bevor die Angaben vollständig sind."
+  },
+  "datenschutz": {
+    "title": "Datenschutz",
+    "placeholderHeading": "Wird vor der Veröffentlichung ergänzt",
+    "placeholderBody": "Die vollständige Datenschutzerklärung steht hier, sobald sie vorliegt. Diese Seite ist bis dahin von der Suche ausgeschlossen und geht nicht live, bevor der Text vollständig ist.",
+    "factsHeading": "Was schon jetzt gilt, technisch nachprüfbar",
+    "factsBody": "Diese Website lädt keine Inhalte von Drittanbietern: keine externen Schriftarten, keine Analyse- oder Tracking-Dienste, keine eingebetteten Karten oder Videos. Es werden keine Cookies gesetzt und keine Nutzungsdaten an Dritte übertragen."
+  },
+  "og": {
+    "siteName": "Spenden-Transparenz",
+    "orgsLabel": "Organisationen",
+    "statementsLabel": "belegte Meldungen",
+    "districtsLabel": "Distrikte",
+    "noResponseLabel": "ohne gefundene Reaktion",
+    "dataStand": "Daten-Stand: {date}"
+  }
+}
