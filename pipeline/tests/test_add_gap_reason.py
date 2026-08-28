@@ -208,10 +208,10 @@ def test_generated_notes_are_actually_used_in_the_dataset(orgs):
     assert used, "no generated notes present - did the migration run?"
 
 
-def test_the_dataset_still_validates_and_still_has_45_orgs():
+def test_the_dataset_still_validates_and_still_has_44_orgs():
     report = json.loads((REPO / "data" / "raw" / "orgs" / "_validation.json").read_text(encoding="utf-8"))["data"]
     assert report["schema_errors"] == 0
-    assert report["orgs"] == 45  # v0.5 added the Prime Minister Disaster Relief Fund
+    assert report["orgs"] == 44
 
 
 def test_the_gap_reason_distribution_is_recorded(orgs):
@@ -223,8 +223,7 @@ def test_the_gap_reason_distribution_is_recorded(orgs):
             reason = datum.get("gap_reason")
             if reason:
                 counts[reason] = counts.get(reason, 0) + 1
-    # 270 since schema v0.3, when seven unsourced nepal_presence.mode values became real gaps;
-    # 276 since v0.5 added the government fund record and its six unpublished figures.
-    assert sum(counts.values()) == 276, counts
+    # 270 since schema v0.3: seven unsourced nepal_presence.mode values became real gaps.
+    assert sum(counts.values()) == 270, counts
     assert counts["searched_not_found"] > counts.get("not_searched", 0)
     assert counts.get("source_unreachable", 0) >= 5

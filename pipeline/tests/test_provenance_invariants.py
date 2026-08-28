@@ -56,24 +56,24 @@ def _load_sources() -> dict[str, list[dict]]:
 SOURCES = _load_sources()
 
 
-# --- the counts the product promises (over the deduplicated 45) --------------------------------
+# --- the counts the product promises (over the deduplicated 44) --------------------------------
 
 
 def test_the_counts_the_product_promises():
-    """45, not 44: schema v0.5 added the Prime Minister Disaster Relief Fund so the state fund
-    appears on the board like any other recipient. It is a Nepali entity (15 NP) and carries 10
-    datums of its own, 430 in total.
+    """These counts walk the files on disk, so they do NOT include the donation_channel datums
+    merged in from donation-channels.json at load time. test_ingest_orgs.py counts what actually
+    reaches the database: 464 there, 420 here.
 
-    These counts walk the files on disk, so they do NOT include the donation_channel datums merged
-    in from donation-channels.json at load time - only the one written inline on the government
-    record. test_ingest_orgs.py counts what actually reaches the database.
+    Still 44, not 45: the Prime Minister Disaster Relief Fund was an organisation record for part
+    of one evening in v0.5 and was taken out again. A state fund is not a responder, and counting
+    it as one moves these very numbers.
     """
-    assert len(ORGS) == 45
-    assert sum(1 for o in ORGS if o["hq"]["country"] == "NP") == 15
-    assert sum(1 for o in ORGS for _ in walk_datums(o)) == 430
+    assert len(ORGS) == 44
+    assert sum(1 for o in ORGS if o["hq"]["country"] == "NP") == 14
+    assert sum(1 for o in ORGS for _ in walk_datums(o)) == 420
 
 
-# --- the provenance invariants (over the deduplicated 45) ---------------------------------------
+# --- the provenance invariants (over the deduplicated 44) ---------------------------------------
 
 
 def test_every_value_carrying_datum_has_a_source_url():
@@ -130,15 +130,10 @@ def test_the_org_datum_gap_reason_distribution():
     Schema v0.3 (commit ec94db3) converted 7 nepal_presence.mode nodes from value="unknown" with
     no source into real gaps, all classified searched_not_found by
     pipeline/migrations/nullable_presence_mode.py (each was already listed in its record's
-    data_gaps). That moved this distribution from 231/20/12 (WP-A's own pre-migration
-    measurement, itself a correction of the brief's 237) to 238/20/12, 270 gaps in total.
+    data_gaps). That moves this distribution from 231/20/12 (WP-A's own pre-migration
+    measurement, itself a correction of the brief's 237) to 238/20/12 - 270 gaps in total.
 
-    Schema v0.5 then added the Prime Minister Disaster Relief Fund, whose record carries six gaps
-    of its own: five searched_not_found (founding year, audited financials, income, expenditure,
-    programme ratio - none published on opmcm.gov.np) and one not_public (staff count, which does
-    not apply to a relief fund). 243/20/12/1, 276 in total.
-
-    test_ingest_orgs.py's EXPECTED_GAPS is 287, not 276: it counts what reaches the database,
+    test_ingest_orgs.py's EXPECTED_GAPS is 281, not 270: it counts what reaches the database,
     which includes the 11 donation_channel gaps merged in from donation-channels.json.
     """
     counts: dict[str, int] = {}
@@ -146,7 +141,7 @@ def test_the_org_datum_gap_reason_distribution():
         for _, d in walk_datums(o):
             if d.get("value") is None:
                 counts[d["gap_reason"]] = counts.get(d["gap_reason"], 0) + 1
-    assert counts == {"searched_not_found": 243, "not_searched": 20, "source_unreachable": 12, "not_public": 1}
+    assert counts == {"searched_not_found": 238, "not_searched": 20, "source_unreachable": 12}
 
 
 # --- the same shape invariants, run against every individual source file on disk ----------------

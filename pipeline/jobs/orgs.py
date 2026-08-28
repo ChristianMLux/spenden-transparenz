@@ -709,6 +709,12 @@ async def ingest_orgs(
             org[DONATION_CHANNEL_PATH] = vet_donation_channel(org["org_id"], org.get("website"), dict(inline))
     log.info("donation_channels_attached", extra={"orgs": len(orgs), "with_channel": attached})
 
+    # government_funds is deliberately NOT loaded here. The Prime Minister Disaster Relief Fund
+    # was an organisation record for one evening, and as one it moved the 44/44 counts and put a
+    # row under "no response found" for a state fund that never claimed to have responded. It is
+    # read straight from donation-channels.json by the help section instead, where it is a way to
+    # give rather than a responder.
+
     run_id = handle.id
 
     org_rows = [_organisation_row(org, run_id) for org in orgs]

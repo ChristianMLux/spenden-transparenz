@@ -69,15 +69,18 @@ prüft das gegen jedes Feld jedes Datums.
 | `flood_specific` | `true` = Kampagne zu genau dieser Katastrophe, `false` = laufende Spendenseite |
 | `verification` | immer `self_reported` — es ist die eigene Seite der Organisation |
 
-34 der 45 Records tragen eine URL. Die übrigen 11 sind Lücken mit `gap_reason`, und sie stehen auf
+33 der 44 Records tragen eine URL. Die übrigen 11 sind Lücken mit `gap_reason`, und sie stehen auf
 dem Board an derselben Stelle und mit demselben Gewicht wie ein Link. Es gibt keine Sortierung und
 keine Reihung danach, ob eine Organisation einen Spendenweg hat: das Feld ist ein Weg zum Handeln,
 keine Empfehlung.
 
-Neu als Record: der **Prime Minister Disaster Relief Fund** (`org_type: government`, HQ NP). Der
-staatliche Fonds war das offensichtlichste Ziel überhaupt und das einzige, das diese Seite nie
-genannt hat. Er steht jetzt als Record wie jeder andere da — mit denselben Lücken, derselben
-Provenienz, ohne Sonderbehandlung.
+**Der Prime Minister Disaster Relief Fund ist kein Org-Record.** Er war einen Abend lang einer, und
+das war falsch: ein staatlicher Fonds ist kein Responder. Als Record hätte er die Zählungen 44/44
+verschoben und wäre unter „keine Reaktion gefunden" aufgetaucht — für eine Stelle, die nie
+behauptet hat, reagiert zu haben. Er steht in `donation-channels.json` unter `government_funds[]`
+und wird im Abschnitt „Ich möchte helfen" gerendert, mit derselben Provenienz wie jeder andere
+Spendenweg. Die Domain-Regel für ihn ist die des Staates (`gov.np`), nicht die einer
+Organisations-Website — die einzige Ausnahme, und sie ist getestet.
 
 ### Warum die Klassifikation im Record steht (v0.4)
 
