@@ -3,29 +3,101 @@
     "org_id": "drk-generalsekretariat",
     "names": {
       "common": "Deutsches Rotes Kreuz (DRK)",
-      "legal": { "value": "Deutsches Rotes Kreuz e.V.", "source_url": "https://www.dzi.de/organisation/deutsches-rotes-kreuz-e-v/", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "quote": "Dem Deutschen Roten Kreuz e.V., Berlin, wurde das DZI Spenden-Siegel zuerkannt.", "note": "Seal covers only the Bundesverband (federal association), not legally independent Landes-/Kreisverbände" },
-      "local_script": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": "no Devanagari name applicable; German org" },
-      "aliases": ["DRK"]
+      "legal": {
+        "value": "Deutsches Rotes Kreuz e.V.",
+        "source_url": "https://www.dzi.de/organisation/deutsches-rotes-kreuz-e-v/",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": "Dem Deutschen Roten Kreuz e.V., Berlin, wurde das DZI Spenden-Siegel zuerkannt.",
+        "note": "Seal covers only the Bundesverband (federal association), not legally independent Landes-/Kreisverbände"
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "no Devanagari name applicable; German org",
+        "gap_reason": "searched_not_found"
+      },
+      "aliases": [
+        "DRK"
+      ]
     },
     "org_type": "red_cross_movement",
-    "hq": { "country": "DE", "city": "Berlin", "source_url": "https://www.dzi.de/organisation/deutsches-rotes-kreuz-e-v/" },
+    "hq": {
+      "country": "DE",
+      "city": "Berlin",
+      "source_url": "https://www.dzi.de/organisation/deutsches-rotes-kreuz-e-v/"
+    },
     "website": "https://www.drk.de/",
     "registrations": [
-      { "registry": "DE_DZI", "identifier": null, "url": "https://www.dzi.de/organisation/deutsches-rotes-kreuz-e-v/", "status": "Spenden-Siegel zuerkannt (seit 21.11.2002)", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "note": "Werbe-/Verwaltungsausgaben von DZI als \"angemessen\" (10 bis unter 20%) eingestuft, kein exakter Prozentsatz veröffentlicht" },
-      { "registry": "DE_ITZ", "identifier": null, "url": "https://www.drk.de/spenden/spenderservice/spenderservice-und-spendentransparenz/", "status": "signatory", "retrieved_at": "2026-08-28", "verification": "self_reported", "note": "DRK folgt der Selbstverpflichtung der Initiative Transparente Zivilgesellschaft; regionale Gliederungen (z.B. KV Segeberg, KV Schwerin) nennen 17.07.2017 als Beitrittsdatum, konnte für den Bundesverband nicht direkt auf transparente-zivilgesellschaft.de verifiziert werden" }
+      {
+        "registry": "DE_DZI",
+        "identifier": null,
+        "url": "https://www.dzi.de/organisation/deutsches-rotes-kreuz-e-v/",
+        "status": "Spenden-Siegel zuerkannt (seit 21.11.2002)",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "note": "Werbe-/Verwaltungsausgaben von DZI als \"angemessen\" (10 bis unter 20%) eingestuft, kein exakter Prozentsatz veröffentlicht",
+        "gap_reason": "searched_not_found"
+      },
+      {
+        "registry": "DE_ITZ",
+        "identifier": null,
+        "url": "https://www.drk.de/spenden/spenderservice/spenderservice-und-spendentransparenz/",
+        "status": "signatory",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "note": "DRK folgt der Selbstverpflichtung der Initiative Transparente Zivilgesellschaft; regionale Gliederungen (z.B. KV Segeberg, KV Schwerin) nennen 17.07.2017 als Beitrittsdatum, konnte für den Bundesverband nicht direkt auf transparente-zivilgesellschaft.de verifiziert werden",
+        "gap_reason": "searched_not_found"
+      }
     ],
     "nepal_presence": {
-      "since_year": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": "DRK page references disaster-preparedness work in Nepal but no start year found" },
-      "mode": { "value": "partners", "source_url": "https://www.drk.de/hilfe-weltweit/wo-wir-helfen/asien/sturzflut-in-nepal/", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": "Das Nepalesische Rote Kreuz (NRCS) hat seine Notfallteams in die betroffenen Gebiete entsandt", "note": "DRK works through the Nepal Red Cross Society (NRCS), the Movement's national society" },
-      "staff_count": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
+      "since_year": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "DRK page references disaster-preparedness work in Nepal but no start year found",
+        "gap_reason": "searched_not_found"
+      },
+      "mode": {
+        "value": "partners",
+        "source_url": "https://www.drk.de/hilfe-weltweit/wo-wir-helfen/asien/sturzflut-in-nepal/",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "Das Nepalesische Rote Kreuz (NRCS) hat seine Notfallteams in die betroffenen Gebiete entsandt",
+        "note": "DRK works through the Nepal Red Cross Society (NRCS), the Movement's national society"
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
       "partners": [
-        { "value": "Nepalesisches Rotes Kreuz (Nepal Red Cross Society, NRCS)", "source_url": "https://www.drk.de/hilfe-weltweit/wo-wir-helfen/asien/sturzflut-in-nepal/", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": "Das Nepalesische Rote Kreuz (NRCS) hat seine Notfallteams in die betroffenen Gebiete entsandt und arbeitet eng mit dem nationalen Katastrophenschutz zusammen.", "note": null }
+        {
+          "value": "Nepalesisches Rotes Kreuz (Nepal Red Cross Society, NRCS)",
+          "source_url": "https://www.drk.de/hilfe-weltweit/wo-wir-helfen/asien/sturzflut-in-nepal/",
+          "retrieved_at": "2026-08-28",
+          "verification": "self_reported",
+          "quote": "Das Nepalesische Rote Kreuz (NRCS) hat seine Notfallteams in die betroffenen Gebiete entsandt und arbeitet eng mit dem nationalen Katastrophenschutz zusammen.",
+          "note": null
+        }
       ]
     },
     "current_response": [
       {
         "what": "NRCS emergency teams dispatched; provision of drinking water, tarpaulins, blankets and sleeping mats; medical first aid; shelter and information points being set up; DRK issuing donation appeal",
-        "where": ["unspecified", "along Bhote Koshi and Trishuli rivers"],
+        "where": [
+          "unspecified",
+          "along Bhote Koshi and Trishuli rivers"
+        ],
         "date": null,
         "amount": null,
         "currency": null,
@@ -37,12 +109,60 @@
       }
     ],
     "financial_transparency": {
-      "annual_report": { "available": false, "url": null, "fiscal_year": null, "fiscal_year_end": null, "retrieved_at": "2026-08-28" },
-      "audited_financials": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": "DZI seal implies audited accounts underlie the review but no direct annual-report PDF located within budget" },
-      "iati_publisher": { "is_publisher": null, "publisher_ref": null, "source_url": null, "retrieved_at": null },
-      "income": { "value": 223661833.10, "currency": "EUR", "fiscal_year": "2022", "scope": "global", "source_url": "https://www.dzi.de/organisation/deutsches-rotes-kreuz-e-v/", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "quote": null, "note": "Figure is for the DRK Bundesverband (federal association) only, per DZI; most recent year in DZI profile is 2022" },
-      "expenditure": { "value": null, "currency": null, "fiscal_year": null, "scope": null, "source_url": "https://www.dzi.de/organisation/deutsches-rotes-kreuz-e-v/", "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": "Total expenditure figure not extracted from DZI profile; only income and cost-category rating (\"angemessen\") were retrieved" },
-      "program_ratio": { "value": null, "source_url": "https://www.dzi.de/organisation/deutsches-rotes-kreuz-e-v/", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "quote": null, "note": "DZI rates advertising/admin expenses as \"angemessen\" (10 to under 20% of total expenditure) — a bound, not an exact figure, so program_ratio left null per instructions" },
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "DZI seal implies audited accounts underlie the review but no direct annual-report PDF located within budget",
+        "gap_reason": "searched_not_found"
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": null
+      },
+      "income": {
+        "value": 223661833.1,
+        "currency": "EUR",
+        "fiscal_year": "2022",
+        "scope": "global",
+        "source_url": "https://www.dzi.de/organisation/deutsches-rotes-kreuz-e-v/",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": null,
+        "note": "Figure is for the DRK Bundesverband (federal association) only, per DZI; most recent year in DZI profile is 2022"
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": "https://www.dzi.de/organisation/deutsches-rotes-kreuz-e-v/",
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Total expenditure figure not extracted from DZI profile; only income and cost-category rating (\"angemessen\") were retrieved",
+        "gap_reason": "searched_not_found"
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": "https://www.dzi.de/organisation/deutsches-rotes-kreuz-e-v/",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": null,
+        "note": "DZI rates advertising/admin expenses as \"angemessen\" (10 to under 20% of total expenditure) — a bound, not an exact figure, so program_ratio left null per instructions",
+        "gap_reason": "searched_not_found"
+      },
       "peer_group": null
     },
     "warnings": [],
@@ -66,27 +186,91 @@
     "org_id": "welthungerhilfe",
     "names": {
       "common": "Welthungerhilfe",
-      "legal": { "value": "Deutsche Welthungerhilfe e.V.", "source_url": "https://www.dzi.de/organisation/deutsche-welthungerhilfe-e-v/", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "quote": null, "note": null },
-      "local_script": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": "no Devanagari name found; German org" },
-      "aliases": ["WHH", "Welthungerhilfe"]
+      "legal": {
+        "value": "Deutsche Welthungerhilfe e.V.",
+        "source_url": "https://www.dzi.de/organisation/deutsche-welthungerhilfe-e-v/",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": null,
+        "note": null
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "no Devanagari name found; German org",
+        "gap_reason": "searched_not_found"
+      },
+      "aliases": [
+        "WHH",
+        "Welthungerhilfe"
+      ]
     },
     "org_type": "ingo",
-    "hq": { "country": "DE", "city": "Bonn", "source_url": "https://www.dzi.de/organisation/deutsche-welthungerhilfe-e-v/" },
+    "hq": {
+      "country": "DE",
+      "city": "Bonn",
+      "source_url": "https://www.dzi.de/organisation/deutsche-welthungerhilfe-e-v/"
+    },
     "website": "https://www.welthungerhilfe.de/",
     "registrations": [
-      { "registry": "DE_DZI", "identifier": null, "url": "https://www.dzi.de/organisation/deutsche-welthungerhilfe-e-v/", "status": "Spenden-Siegel zuerkannt (seit 15.09.1992)", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "note": "Werbe-/Verwaltungsausgaben von DZI als \"niedrig\" (unter 10%) eingestuft" },
-      { "registry": "DE_ITZ", "identifier": null, "url": "https://www.welthungerhilfe.de/ueber-uns/transparenz-qualitaet/initiative-transparente-zivilgesellschaft", "status": "signatory", "retrieved_at": "2026-08-28", "verification": "self_reported", "note": "Welthungerhilfe's own transparency page confirms membership in the Initiative Transparente Zivilgesellschaft" }
+      {
+        "registry": "DE_DZI",
+        "identifier": null,
+        "url": "https://www.dzi.de/organisation/deutsche-welthungerhilfe-e-v/",
+        "status": "Spenden-Siegel zuerkannt (seit 15.09.1992)",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "note": "Werbe-/Verwaltungsausgaben von DZI als \"niedrig\" (unter 10%) eingestuft",
+        "gap_reason": "searched_not_found"
+      },
+      {
+        "registry": "DE_ITZ",
+        "identifier": null,
+        "url": "https://www.welthungerhilfe.de/ueber-uns/transparenz-qualitaet/initiative-transparente-zivilgesellschaft",
+        "status": "signatory",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "note": "Welthungerhilfe's own transparency page confirms membership in the Initiative Transparente Zivilgesellschaft",
+        "gap_reason": "searched_not_found"
+      }
     ],
     "nepal_presence": {
-      "since_year": { "value": 1972, "source_url": "https://en.wikipedia.org/wiki/2026_Nepal_floods", "retrieved_at": "2026-08-28", "verification": "third_party_reported", "quote": "Welthungerhilfe has been active in Nepal with national and international partner organizations since 1972", "note": "cited via Wikipedia summary of Welthungerhilfe statement; not yet verified directly on welthungerhilfe.de" },
-      "mode": { "value": "both", "source_url": "https://www.welthungerhilfe.org/what-we-do/countries/nepal", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": null, "note": "Welthungerhilfe country page lists Nepal programme; mode inferred as both own staff and partners, typical of WHH country offices — not confirmed with exact quote" },
-      "staff_count": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
+      "since_year": {
+        "value": 1972,
+        "source_url": "https://en.wikipedia.org/wiki/2026_Nepal_floods",
+        "retrieved_at": "2026-08-28",
+        "verification": "third_party_reported",
+        "quote": "Welthungerhilfe has been active in Nepal with national and international partner organizations since 1972",
+        "note": "cited via Wikipedia summary of Welthungerhilfe statement; not yet verified directly on welthungerhilfe.de"
+      },
+      "mode": {
+        "value": "both",
+        "source_url": "https://www.welthungerhilfe.org/what-we-do/countries/nepal",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": null,
+        "note": "Welthungerhilfe country page lists Nepal programme; mode inferred as both own staff and partners, typical of WHH country offices — not confirmed with exact quote"
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
       "partners": []
     },
     "current_response": [
       {
         "what": "100,000 euros allocated from the emergency relief fund as a first step for flood relief measures",
-        "where": ["Rasuwa"],
+        "where": [
+          "Rasuwa"
+        ],
         "date": "2026-08-28",
         "amount": 100000,
         "currency": "EUR",
@@ -98,12 +282,60 @@
       }
     ],
     "financial_transparency": {
-      "annual_report": { "available": false, "url": null, "fiscal_year": null, "fiscal_year_end": null, "retrieved_at": "2026-08-28" },
-      "audited_financials": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": "not located within budget; DZI seal implies audit review underlies figures" },
-      "iati_publisher": { "is_publisher": null, "publisher_ref": null, "source_url": null, "retrieved_at": null },
-      "income": { "value": 383479373.60, "currency": "EUR", "fiscal_year": "2024", "scope": "global", "source_url": "https://www.dzi.de/organisation/deutsche-welthungerhilfe-e-v/", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "quote": null, "note": "\"Gesamteinnahmen\" per DZI profile; separate \"Sammlungseinnahmen\" (collection income) of EUR 72,910,862.52 also published but not used here (that is the donations-only subset)" },
-      "expenditure": { "value": null, "currency": null, "fiscal_year": null, "scope": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": "total expenditure figure not extracted within budget" },
-      "program_ratio": { "value": null, "source_url": "https://www.dzi.de/organisation/deutsche-welthungerhilfe-e-v/", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "quote": null, "note": "DZI category \"niedrig\" (under 10% Werbe-/Verwaltungsausgaben) is a bound, not an exact figure — left null per instructions" },
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "not located within budget; DZI seal implies audit review underlies figures",
+        "gap_reason": "searched_not_found"
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": null
+      },
+      "income": {
+        "value": 383479373.6,
+        "currency": "EUR",
+        "fiscal_year": "2024",
+        "scope": "global",
+        "source_url": "https://www.dzi.de/organisation/deutsche-welthungerhilfe-e-v/",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": null,
+        "note": "\"Gesamteinnahmen\" per DZI profile; separate \"Sammlungseinnahmen\" (collection income) of EUR 72,910,862.52 also published but not used here (that is the donations-only subset)"
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "total expenditure figure not extracted within budget",
+        "gap_reason": "searched_not_found"
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": "https://www.dzi.de/organisation/deutsche-welthungerhilfe-e-v/",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": null,
+        "note": "DZI category \"niedrig\" (under 10% Werbe-/Verwaltungsausgaben) is a bound, not an exact figure — left null per instructions",
+        "gap_reason": "searched_not_found"
+      },
       "peer_group": null
     },
     "warnings": [],
@@ -126,29 +358,99 @@
     "org_id": "malteser-international",
     "names": {
       "common": "Malteser International",
-      "legal": { "value": "Malteser Hilfsdienst e.V.", "source_url": "https://www.malteser-international.org/de/hilfe-weltweit/asien/nepal.html", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": null, "note": "Malteser International is the international relief service (Auslandsdienst) of Malteser Hilfsdienst e.V.; donation IBAN and tax-exemption number shown on the Nepal page belong to Malteser Hilfsdienst e.V." },
-      "local_script": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
-      "aliases": ["Malteser International Auslandsdienst"]
+      "legal": {
+        "value": "Malteser Hilfsdienst e.V.",
+        "source_url": "https://www.malteser-international.org/de/hilfe-weltweit/asien/nepal.html",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": null,
+        "note": "Malteser International is the international relief service (Auslandsdienst) of Malteser Hilfsdienst e.V.; donation IBAN and tax-exemption number shown on the Nepal page belong to Malteser Hilfsdienst e.V."
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "aliases": [
+        "Malteser International Auslandsdienst"
+      ]
     },
     "org_type": "ingo",
-    "hq": { "country": "DE", "city": "Köln", "source_url": "https://www.malteser-international.org/de.html" },
+    "hq": {
+      "country": "DE",
+      "city": "Köln",
+      "source_url": "https://www.malteser-international.org/de.html"
+    },
     "website": "https://www.malteser-international.org/",
     "registrations": [
-      { "registry": "DE_DZI", "identifier": null, "url": null, "status": null, "retrieved_at": "2026-08-28", "verification": "unverified", "note": "Could not confirm a DZI Spenden-Siegel entry for Malteser Hilfsdienst e.V. / Malteser International itself; only the separate legal entity \"Malteser Stiftung\" (Munich) was found holding the DZI seal (https://www.dzi.de/organisation/malteser-stiftung/) — a different organisation, so not recorded here as a match" }
+      {
+        "registry": "DE_DZI",
+        "identifier": null,
+        "url": null,
+        "status": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "note": "Could not confirm a DZI Spenden-Siegel entry for Malteser Hilfsdienst e.V. / Malteser International itself; only the separate legal entity \"Malteser Stiftung\" (Munich) was found holding the DZI seal (https://www.dzi.de/organisation/malteser-stiftung/) — a different organisation, so not recorded here as a match",
+        "gap_reason": "searched_not_found"
+      }
     ],
     "nepal_presence": {
-      "since_year": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": "page states \"seit vielen Jahren\" (for many years) without a start year" },
-      "mode": { "value": "partners", "source_url": "https://www.malteser-international.org/de/hilfe-weltweit/asien/nepal.html", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": "Gemeinsam mit unseren Partnerorganisationen RSDC und KOSHISH unterstützen wir seit vielen Jahren ländliche Gemeinden dabei, ihre Widerstandsfähigkeit gegenüber Krisen zu stärken.", "note": null },
-      "staff_count": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
+      "since_year": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "page states \"seit vielen Jahren\" (for many years) without a start year",
+        "gap_reason": "searched_not_found"
+      },
+      "mode": {
+        "value": "partners",
+        "source_url": "https://www.malteser-international.org/de/hilfe-weltweit/asien/nepal.html",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "Gemeinsam mit unseren Partnerorganisationen RSDC und KOSHISH unterstützen wir seit vielen Jahren ländliche Gemeinden dabei, ihre Widerstandsfähigkeit gegenüber Krisen zu stärken.",
+        "note": null
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
       "partners": [
-        { "value": "RSDC", "source_url": "https://www.malteser-international.org/de/hilfe-weltweit/asien/nepal.html", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": null, "note": "acronym not expanded on page" },
-        { "value": "KOSHISH", "source_url": "https://www.malteser-international.org/de/hilfe-weltweit/asien/nepal.html", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": null, "note": null }
+        {
+          "value": "RSDC",
+          "source_url": "https://www.malteser-international.org/de/hilfe-weltweit/asien/nepal.html",
+          "retrieved_at": "2026-08-28",
+          "verification": "self_reported",
+          "quote": null,
+          "note": "acronym not expanded on page"
+        },
+        {
+          "value": "KOSHISH",
+          "source_url": "https://www.malteser-international.org/de/hilfe-weltweit/asien/nepal.html",
+          "retrieved_at": "2026-08-28",
+          "verification": "self_reported",
+          "quote": null,
+          "note": null
+        }
       ]
     },
     "current_response": [
       {
         "what": "Activities in project regions (Nuwakot and Rasuwa districts) temporarily paused for safety reasons after the flood; donation appeal issued",
-        "where": ["Nuwakot", "Rasuwa"],
+        "where": [
+          "Nuwakot",
+          "Rasuwa"
+        ],
         "date": null,
         "amount": null,
         "currency": null,
@@ -160,12 +462,61 @@
       }
     ],
     "financial_transparency": {
-      "annual_report": { "available": false, "url": null, "fiscal_year": null, "fiscal_year_end": null, "retrieved_at": "2026-08-28" },
-      "audited_financials": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
-      "iati_publisher": { "is_publisher": null, "publisher_ref": null, "source_url": null, "retrieved_at": null },
-      "income": { "value": null, "currency": null, "fiscal_year": null, "scope": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
-      "expenditure": { "value": null, "currency": null, "fiscal_year": null, "scope": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
-      "program_ratio": { "value": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": null
+      },
+      "income": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
       "peer_group": null
     },
     "warnings": [],
@@ -189,26 +540,81 @@
     "org_id": "aktion-deutschland-hilft",
     "names": {
       "common": "Aktion Deutschland Hilft",
-      "legal": { "value": "Aktion Deutschland Hilft e.V.", "source_url": "https://www.dzi.de/organisation/aktion-deutschland-hilft-e-v/", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "quote": null, "note": null },
-      "local_script": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
-      "aliases": ["ADH"]
+      "legal": {
+        "value": "Aktion Deutschland Hilft e.V.",
+        "source_url": "https://www.dzi.de/organisation/aktion-deutschland-hilft-e-v/",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": null,
+        "note": null
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "aliases": [
+        "ADH"
+      ]
     },
     "org_type": "alliance",
-    "hq": { "country": "DE", "city": "Bonn", "source_url": "https://www.dzi.de/organisation/aktion-deutschland-hilft-e-v/" },
+    "hq": {
+      "country": "DE",
+      "city": "Bonn",
+      "source_url": "https://www.dzi.de/organisation/aktion-deutschland-hilft-e-v/"
+    },
     "website": "https://www.aktion-deutschland-hilft.de/",
     "registrations": [
-      { "registry": "DE_DZI", "identifier": null, "url": "https://www.dzi.de/organisation/aktion-deutschland-hilft-e-v/", "status": "neutral (no Spenden-Siegel)", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "note": "DZI explicitly does NOT award the Spenden-Siegel to Aktion Deutschland Hilft e.V. itself; DZI notes the alliance's disclosure practices as \"offen\" (open/transparent) but rates it \"neutral\", not sealed. Individual member organisations (e.g. Malteser, Welthungerhilfe) may separately hold the seal." }
+      {
+        "registry": "DE_DZI",
+        "identifier": null,
+        "url": "https://www.dzi.de/organisation/aktion-deutschland-hilft-e-v/",
+        "status": "neutral (no Spenden-Siegel)",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "note": "DZI explicitly does NOT award the Spenden-Siegel to Aktion Deutschland Hilft e.V. itself; DZI notes the alliance's disclosure practices as \"offen\" (open/transparent) but rates it \"neutral\", not sealed. Individual member organisations (e.g. Malteser, Welthungerhilfe) may separately hold the seal.",
+        "gap_reason": "searched_not_found"
+      }
     ],
     "nepal_presence": {
-      "since_year": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": "as an alliance/fundraising vehicle, ADH itself has no field presence; presence runs through member organisations" },
-      "mode": { "value": "partners", "source_url": "https://www.aktion-deutschland-hilft.de/de/hilfseinsaetze/spenden-erdbeben-nepal/", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": null, "note": "ADH is a fundraising and coordination alliance of 12 German aid organisations (incl. action medeor, ASB, ADRA, AWO International, CARE, HELP, Johanniter, Malteser, Paritätischer Wohlfahrtsverband, World Vision) that implement through member orgs' own partners" },
-      "staff_count": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
+      "since_year": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "as an alliance/fundraising vehicle, ADH itself has no field presence; presence runs through member organisations",
+        "gap_reason": "searched_not_found"
+      },
+      "mode": {
+        "value": "partners",
+        "source_url": "https://www.aktion-deutschland-hilft.de/de/hilfseinsaetze/spenden-erdbeben-nepal/",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": null,
+        "note": "ADH is a fundraising and coordination alliance of 12 German aid organisations (incl. action medeor, ASB, ADRA, AWO International, CARE, HELP, Johanniter, Malteser, Paritätischer Wohlfahrtsverband, World Vision) that implement through member orgs' own partners"
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not searched in this research pass.",
+        "gap_reason": "not_searched"
+      },
       "partners": []
     },
     "current_response": [
       {
         "what": "Joint donation account opened for Nepal flood relief; alliance member organisations starting aid measures",
-        "where": ["unspecified"],
+        "where": [
+          "unspecified"
+        ],
         "date": null,
         "amount": null,
         "currency": null,
@@ -220,12 +626,60 @@
       }
     ],
     "financial_transparency": {
-      "annual_report": { "available": false, "url": null, "fiscal_year": null, "fiscal_year_end": null, "retrieved_at": "2026-08-28" },
-      "audited_financials": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
-      "iati_publisher": { "is_publisher": null, "publisher_ref": null, "source_url": null, "retrieved_at": null },
-      "income": { "value": 317673274.70, "currency": "EUR", "fiscal_year": "2022", "scope": "global", "source_url": "https://www.dzi.de/organisation/aktion-deutschland-hilft-e-v/", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "quote": null, "note": "This is total income of the alliance vehicle (funds collected then redistributed to the 12 member organisations), not spending by ADH itself" },
-      "expenditure": { "value": null, "currency": null, "fiscal_year": null, "scope": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
-      "program_ratio": { "value": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": "DZI does not rate ADH's admin/advertising cost category since it withholds the Spenden-Siegel from the alliance" },
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": null
+      },
+      "income": {
+        "value": 317673274.7,
+        "currency": "EUR",
+        "fiscal_year": "2022",
+        "scope": "global",
+        "source_url": "https://www.dzi.de/organisation/aktion-deutschland-hilft-e-v/",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": null,
+        "note": "This is total income of the alliance vehicle (funds collected then redistributed to the 12 member organisations), not spending by ADH itself"
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "DZI does not rate ADH's admin/advertising cost category since it withholds the Spenden-Siegel from the alliance",
+        "gap_reason": "searched_not_found"
+      },
       "peer_group": null
     },
     "warnings": [],
@@ -247,30 +701,110 @@
     "org_id": "caritas-international",
     "names": {
       "common": "Caritas international",
-      "legal": { "value": "Deutscher Caritasverband e.V.", "source_url": "https://www.dzi.de/organisation/deutscher-caritasverband-e-v/", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "quote": "Caritas international, das Hilfswerk des Deutschen Caritasverbandes", "note": "Caritas international is the international-relief arm (Hilfswerk) of Deutscher Caritasverband e.V.; DZI's seal and financial profile cover the parent association as a whole, not a separately DZI-listed Caritas international entity" },
-      "local_script": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
-      "aliases": ["Caritas int.", "Deutscher Caritasverband"]
+      "legal": {
+        "value": "Deutscher Caritasverband e.V.",
+        "source_url": "https://www.dzi.de/organisation/deutscher-caritasverband-e-v/",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": "Caritas international, das Hilfswerk des Deutschen Caritasverbandes",
+        "note": "Caritas international is the international-relief arm (Hilfswerk) of Deutscher Caritasverband e.V.; DZI's seal and financial profile cover the parent association as a whole, not a separately DZI-listed Caritas international entity"
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "aliases": [
+        "Caritas int.",
+        "Deutscher Caritasverband"
+      ]
     },
     "org_type": "ingo",
-    "hq": { "country": "DE", "city": "Freiburg im Breisgau", "source_url": "https://www.dzi.de/organisation/deutscher-caritasverband-e-v/" },
+    "hq": {
+      "country": "DE",
+      "city": "Freiburg im Breisgau",
+      "source_url": "https://www.dzi.de/organisation/deutscher-caritasverband-e-v/"
+    },
     "website": "https://www.caritas-international.de/",
     "registrations": [
-      { "registry": "DE_DZI", "identifier": null, "url": "https://www.dzi.de/organisation/deutscher-caritasverband-e-v/", "status": "Spenden-Siegel zuerkannt (seit 07.04.2000)", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "note": "Werbe-/Verwaltungsausgaben als \"niedrig\" (unter 10%) eingestuft; profile is for Deutscher Caritasverband e.V. as a whole" },
-      { "registry": "DE_ITZ", "identifier": null, "url": "https://www.caritas.de/diecaritas/wir-ueber-uns/transparenz/transparenz/initiative-transparente-zivilgesellschaf", "status": "signatory", "retrieved_at": "2026-08-28", "verification": "self_reported", "note": "\"Die Bundesgeschäftsstelle des Deutschen Caritasverbandes e. V. sowie sein weltweites Hilfswerk Caritas international sind der Initiative Transparente Zivilgesellschaft beigetreten.\"" }
+      {
+        "registry": "DE_DZI",
+        "identifier": null,
+        "url": "https://www.dzi.de/organisation/deutscher-caritasverband-e-v/",
+        "status": "Spenden-Siegel zuerkannt (seit 07.04.2000)",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "note": "Werbe-/Verwaltungsausgaben als \"niedrig\" (unter 10%) eingestuft; profile is for Deutscher Caritasverband e.V. as a whole",
+        "gap_reason": "searched_not_found"
+      },
+      {
+        "registry": "DE_ITZ",
+        "identifier": null,
+        "url": "https://www.caritas.de/diecaritas/wir-ueber-uns/transparenz/transparenz/initiative-transparente-zivilgesellschaf",
+        "status": "signatory",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "note": "\"Die Bundesgeschäftsstelle des Deutschen Caritasverbandes e. V. sowie sein weltweites Hilfswerk Caritas international sind der Initiative Transparente Zivilgesellschaft beigetreten.\"",
+        "gap_reason": "searched_not_found"
+      }
     ],
     "nepal_presence": {
-      "since_year": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
-      "mode": { "value": "partners", "source_url": "https://www.caritas-international.de/hilfeweltweit/asien/nepal/nepal-sturzflut", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": "Nepalesische Caritas-Partner evaluieren Ausmaß der Zerstörung und bereiten Hilfe vor", "note": "Local partner named as JCYCN (Jesuit-affiliated per naming convention, not independently confirmed) plus Caritas Nepal" },
-      "staff_count": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
+      "since_year": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "mode": {
+        "value": "partners",
+        "source_url": "https://www.caritas-international.de/hilfeweltweit/asien/nepal/nepal-sturzflut",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "Nepalesische Caritas-Partner evaluieren Ausmaß der Zerstörung und bereiten Hilfe vor",
+        "note": "Local partner named as JCYCN (Jesuit-affiliated per naming convention, not independently confirmed) plus Caritas Nepal"
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
       "partners": [
-        { "value": "Caritas Nepal", "source_url": "https://www.caritas-international.de/hilfeweltweit/asien/nepal/nepal-sturzflut", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": null, "note": null },
-        { "value": "JCYCN", "source_url": "https://www.caritas-international.de/hilfeweltweit/asien/nepal/nepal-sturzflut", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": null, "note": "acronym not expanded on page" }
+        {
+          "value": "Caritas Nepal",
+          "source_url": "https://www.caritas-international.de/hilfeweltweit/asien/nepal/nepal-sturzflut",
+          "retrieved_at": "2026-08-28",
+          "verification": "self_reported",
+          "quote": null,
+          "note": null
+        },
+        {
+          "value": "JCYCN",
+          "source_url": "https://www.caritas-international.de/hilfeweltweit/asien/nepal/nepal-sturzflut",
+          "retrieved_at": "2026-08-28",
+          "verification": "self_reported",
+          "quote": null,
+          "note": "acronym not expanded on page"
+        }
       ]
     },
     "current_response": [
       {
         "what": "50,000 euros emergency aid provided; Caritas Nepal planning food/community kitchens, household items, temporary shelters, solar lamps, temporary learning centers, psychosocial support; JCYCN providing on-site emergency/psychosocial support",
-        "where": ["Rasuwa", "Nuwakot"],
+        "where": [
+          "Rasuwa",
+          "Nuwakot"
+        ],
         "date": "2026-08-28",
         "amount": 50000,
         "currency": "EUR",
@@ -282,12 +816,60 @@
       }
     ],
     "financial_transparency": {
-      "annual_report": { "available": false, "url": null, "fiscal_year": null, "fiscal_year_end": null, "retrieved_at": "2026-08-28" },
-      "audited_financials": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
-      "iati_publisher": { "is_publisher": null, "publisher_ref": null, "source_url": null, "retrieved_at": null },
-      "income": { "value": 237393905.50, "currency": "EUR", "fiscal_year": "2024", "scope": "global", "source_url": "https://www.dzi.de/organisation/deutscher-caritasverband-e-v/", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "quote": null, "note": "Figure is for Deutscher Caritasverband e.V. as a whole (parent), not isolated to Caritas international's own relief budget; \"Sammlungseinnahmen\" of EUR 77,437,511.29 also published separately" },
-      "expenditure": { "value": null, "currency": null, "fiscal_year": null, "scope": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
-      "program_ratio": { "value": null, "source_url": "https://www.dzi.de/organisation/deutscher-caritasverband-e-v/", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "quote": null, "note": "DZI category \"niedrig\" (under 10%) is a bound, not an exact figure — left null per instructions" },
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": null
+      },
+      "income": {
+        "value": 237393905.5,
+        "currency": "EUR",
+        "fiscal_year": "2024",
+        "scope": "global",
+        "source_url": "https://www.dzi.de/organisation/deutscher-caritasverband-e-v/",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": null,
+        "note": "Figure is for Deutscher Caritasverband e.V. as a whole (parent), not isolated to Caritas international's own relief budget; \"Sammlungseinnahmen\" of EUR 77,437,511.29 also published separately"
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": "https://www.dzi.de/organisation/deutscher-caritasverband-e-v/",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": null,
+        "note": "DZI category \"niedrig\" (under 10%) is a bound, not an exact figure — left null per instructions",
+        "gap_reason": "searched_not_found"
+      },
       "peer_group": null
     },
     "warnings": [],
@@ -309,29 +891,100 @@
     "org_id": "diakonie-katastrophenhilfe",
     "names": {
       "common": "Diakonie Katastrophenhilfe",
-      "legal": { "value": "Diakonie Katastrophenhilfe (Evangelisches Werk für Diakonie und Entwicklung e.V.)", "source_url": "https://www.diakonie-katastrophenhilfe.de/ueber-uns/initiative-transparente-zivilgesellschaft", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": "Diakonie Katastrophenhilfe ist eine Abteilung von Brot für die Welt im Evangelischen Werk für Diakonie und Entwicklung e. V.", "note": "Diakonie Katastrophenhilfe is a department (Abteilung) within Evangelisches Werk für Diakonie und Entwicklung e.V., not a separately registered legal entity" },
-      "local_script": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
-      "aliases": ["DKH"]
+      "legal": {
+        "value": "Diakonie Katastrophenhilfe (Evangelisches Werk für Diakonie und Entwicklung e.V.)",
+        "source_url": "https://www.diakonie-katastrophenhilfe.de/ueber-uns/initiative-transparente-zivilgesellschaft",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "Diakonie Katastrophenhilfe ist eine Abteilung von Brot für die Welt im Evangelischen Werk für Diakonie und Entwicklung e. V.",
+        "note": "Diakonie Katastrophenhilfe is a department (Abteilung) within Evangelisches Werk für Diakonie und Entwicklung e.V., not a separately registered legal entity"
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "aliases": [
+        "DKH"
+      ]
     },
     "org_type": "ingo",
-    "hq": { "country": "DE", "city": "Berlin", "source_url": "https://www.dzi.de/organisation/diakonie-katastrophenhilfe/" },
+    "hq": {
+      "country": "DE",
+      "city": "Berlin",
+      "source_url": "https://www.dzi.de/organisation/diakonie-katastrophenhilfe/"
+    },
     "website": "https://www.diakonie-katastrophenhilfe.de/",
     "registrations": [
-      { "registry": "DE_DZI", "identifier": null, "url": "https://www.dzi.de/organisation/diakonie-katastrophenhilfe/", "status": "Spenden-Siegel zuerkannt (seit 06.07.1993)", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "note": "Werbe-/Verwaltungsausgaben als \"niedrig\" (unter 10%) eingestuft" },
-      { "registry": "DE_ITZ", "identifier": null, "url": "https://www.diakonie-katastrophenhilfe.de/ueber-uns/initiative-transparente-zivilgesellschaft", "status": "signatory", "retrieved_at": "2026-08-28", "verification": "self_reported", "note": "Diakonie Katastrophenhilfe folgt der Empfehlung der Initiative Transparente Zivilgesellschaft und veröffentlicht die geforderten Informationen" }
+      {
+        "registry": "DE_DZI",
+        "identifier": null,
+        "url": "https://www.dzi.de/organisation/diakonie-katastrophenhilfe/",
+        "status": "Spenden-Siegel zuerkannt (seit 06.07.1993)",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "note": "Werbe-/Verwaltungsausgaben als \"niedrig\" (unter 10%) eingestuft",
+        "gap_reason": "searched_not_found"
+      },
+      {
+        "registry": "DE_ITZ",
+        "identifier": null,
+        "url": "https://www.diakonie-katastrophenhilfe.de/ueber-uns/initiative-transparente-zivilgesellschaft",
+        "status": "signatory",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "note": "Diakonie Katastrophenhilfe folgt der Empfehlung der Initiative Transparente Zivilgesellschaft und veröffentlicht die geforderten Informationen",
+        "gap_reason": "searched_not_found"
+      }
     ],
     "nepal_presence": {
-      "since_year": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
-      "mode": { "value": "partners", "source_url": "https://www.diakonie-katastrophenhilfe.de/projekte/nepal", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": "Wir stehen in engem Kontakt mit unseren Partnerorganisationen vor Ort", "note": null },
-      "staff_count": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
+      "since_year": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "mode": {
+        "value": "partners",
+        "source_url": "https://www.diakonie-katastrophenhilfe.de/projekte/nepal",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "Wir stehen in engem Kontakt mit unseren Partnerorganisationen vor Ort",
+        "note": null
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
       "partners": [
-        { "value": "ACT Alliance member organisations in Nepal (unnamed)", "source_url": "https://www.diakonie-katastrophenhilfe.de/projekte/nepal-sturzflut", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": "Diakonie Katastrophenhilfe unterstützt Partnerorganisationen vor Ort über die ACT Alliance", "note": "specific local partner names not published on the page" }
+        {
+          "value": "ACT Alliance member organisations in Nepal (unnamed)",
+          "source_url": "https://www.diakonie-katastrophenhilfe.de/projekte/nepal-sturzflut",
+          "retrieved_at": "2026-08-28",
+          "verification": "self_reported",
+          "quote": "Diakonie Katastrophenhilfe unterstützt Partnerorganisationen vor Ort über die ACT Alliance",
+          "note": "specific local partner names not published on the page"
+        }
       ]
     },
     "current_response": [
       {
         "what": "Emergency aid being prepared; in contact with local ACT Alliance partners; assessing initial relief measures; identified needs are medical care, emergency shelter, clean water; donation appeal issued",
-        "where": ["unspecified"],
+        "where": [
+          "unspecified"
+        ],
         "date": "2026-08-28",
         "amount": null,
         "currency": null,
@@ -343,12 +996,60 @@
       }
     ],
     "financial_transparency": {
-      "annual_report": { "available": false, "url": null, "fiscal_year": null, "fiscal_year_end": null, "retrieved_at": "2026-08-28" },
-      "audited_financials": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
-      "iati_publisher": { "is_publisher": null, "publisher_ref": null, "source_url": null, "retrieved_at": null },
-      "income": { "value": 69092683.17, "currency": "EUR", "fiscal_year": "2024", "scope": "global", "source_url": "https://www.dzi.de/organisation/diakonie-katastrophenhilfe/", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "quote": null, "note": "\"Sammlungseinnahmen\" (collection income) of EUR 31,209,978.87 also published separately" },
-      "expenditure": { "value": null, "currency": null, "fiscal_year": null, "scope": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
-      "program_ratio": { "value": null, "source_url": "https://www.dzi.de/organisation/diakonie-katastrophenhilfe/", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "quote": null, "note": "DZI category \"niedrig\" (under 10%) is a bound, not an exact figure — left null per instructions" },
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": null
+      },
+      "income": {
+        "value": 69092683.17,
+        "currency": "EUR",
+        "fiscal_year": "2024",
+        "scope": "global",
+        "source_url": "https://www.dzi.de/organisation/diakonie-katastrophenhilfe/",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": null,
+        "note": "\"Sammlungseinnahmen\" (collection income) of EUR 31,209,978.87 also published separately"
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": "https://www.dzi.de/organisation/diakonie-katastrophenhilfe/",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": null,
+        "note": "DZI category \"niedrig\" (under 10%) is a bound, not an exact figure — left null per instructions",
+        "gap_reason": "searched_not_found"
+      },
       "peer_group": null
     },
     "warnings": [],
@@ -371,32 +1072,138 @@
     "org_id": "nepalhilfe-beilngries",
     "names": {
       "common": "Nepalhilfe Beilngries",
-      "legal": { "value": "Nepalhilfe Beilngries e.V.", "source_url": "https://firmeneintrag.creditreform.de/92339/8130100334/NEPALHILFE_BEILNGRIES_E_V", "retrieved_at": "2026-08-28", "verification": "third_party_reported", "quote": null, "note": "Creditreform commercial listing; not the primary Vereinsregister source itself" },
-      "local_script": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
+      "legal": {
+        "value": "Nepalhilfe Beilngries e.V.",
+        "source_url": "https://firmeneintrag.creditreform.de/92339/8130100334/NEPALHILFE_BEILNGRIES_E_V",
+        "retrieved_at": "2026-08-28",
+        "verification": "third_party_reported",
+        "quote": null,
+        "note": "Creditreform commercial listing; not the primary Vereinsregister source itself"
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
       "aliases": []
     },
     "org_type": "diaspora_charity",
-    "hq": { "country": "DE", "city": "Beilngries", "source_url": "https://www.nepalhilfe-beilngries.de/spenden/" },
+    "hq": {
+      "country": "DE",
+      "city": "Beilngries",
+      "source_url": "https://www.nepalhilfe-beilngries.de/spenden/"
+    },
     "website": "https://www.nepalhilfe.org/?lang=en",
     "registrations": [
-      { "registry": "DE_VEREINSREGISTER", "identifier": "VerR 1175", "url": null, "status": "registered", "retrieved_at": "2026-08-28", "verification": "third_party_reported", "note": "Amtsgericht Ingolstadt; number and court found via web search summary of the organisation's own Impressum, not fetched directly (direct Impressum fetch returned 404 for the URL tried) — treat identifier as unverified-primary-source until the Impressum page itself is confirmed" }
+      {
+        "registry": "DE_VEREINSREGISTER",
+        "identifier": "VerR 1175",
+        "url": null,
+        "status": "registered",
+        "retrieved_at": "2026-08-28",
+        "verification": "third_party_reported",
+        "note": "Amtsgericht Ingolstadt; number and court found via web search summary of the organisation's own Impressum, not fetched directly (direct Impressum fetch returned 404 for the URL tried) — treat identifier as unverified-primary-source until the Impressum page itself is confirmed"
+      }
     ],
     "nepal_presence": {
-      "since_year": { "value": null, "source_url": "https://www.nepalhilfe-beilngries.de/en/home/", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": null, "note": "site states \"over 20 years of social engagement in Nepal\" without a specific founding/start year located" },
-      "mode": { "value": "own_staff", "source_url": "https://www.nepalhilfe-beilngries.de/en/home/", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": null, "note": "org runs its own projects (Siddhi Memorial Hospital support, Shaligram children's home) — inferred own_staff/both, not a direct quote confirming staffing model" },
-      "staff_count": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
+      "since_year": {
+        "value": null,
+        "source_url": "https://www.nepalhilfe-beilngries.de/en/home/",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": null,
+        "note": "site states \"over 20 years of social engagement in Nepal\" without a specific founding/start year located",
+        "gap_reason": "searched_not_found"
+      },
+      "mode": {
+        "value": "own_staff",
+        "source_url": "https://www.nepalhilfe-beilngries.de/en/home/",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": null,
+        "note": "org runs its own projects (Siddhi Memorial Hospital support, Shaligram children's home) — inferred own_staff/both, not a direct quote confirming staffing model"
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
       "partners": [
-        { "value": "Siddhi Memorial Hospital", "source_url": "https://www.nepalhilfe-beilngries.de/en/home/", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": null, "note": null }
+        {
+          "value": "Siddhi Memorial Hospital",
+          "source_url": "https://www.nepalhilfe-beilngries.de/en/home/",
+          "retrieved_at": "2026-08-28",
+          "verification": "self_reported",
+          "quote": null,
+          "note": null
+        }
       ]
     },
     "current_response": [],
     "financial_transparency": {
-      "annual_report": { "available": false, "url": null, "fiscal_year": null, "fiscal_year_end": null, "retrieved_at": "2026-08-28" },
-      "audited_financials": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
-      "iati_publisher": { "is_publisher": null, "publisher_ref": null, "source_url": null, "retrieved_at": null },
-      "income": { "value": null, "currency": null, "fiscal_year": null, "scope": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
-      "expenditure": { "value": null, "currency": null, "fiscal_year": null, "scope": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
-      "program_ratio": { "value": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not searched in this research pass.",
+        "gap_reason": "not_searched"
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": null
+      },
+      "income": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not searched in this research pass.",
+        "gap_reason": "not_searched"
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not searched in this research pass.",
+        "gap_reason": "not_searched"
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not searched in this research pass.",
+        "gap_reason": "not_searched"
+      },
       "peer_group": null
     },
     "warnings": [],
@@ -415,30 +1222,129 @@
     "org_id": "nepalmed",
     "names": {
       "common": "Nepalmed",
-      "legal": { "value": "Nepalmed e.V.", "source_url": "https://nepalmed.de/?lang=en", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": "registered in the association register at the Leipzig District Court (VR 20768) and is recognized as a non-profit organization", "note": null },
-      "local_script": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
+      "legal": {
+        "value": "Nepalmed e.V.",
+        "source_url": "https://nepalmed.de/?lang=en",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "registered in the association register at the Leipzig District Court (VR 20768) and is recognized as a non-profit organization",
+        "note": null
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
       "aliases": []
     },
     "org_type": "diaspora_charity",
-    "hq": { "country": "DE", "city": "Leipzig", "source_url": "https://nepalmed.de/?lang=en" },
+    "hq": {
+      "country": "DE",
+      "city": "Leipzig",
+      "source_url": "https://nepalmed.de/?lang=en"
+    },
     "website": "https://nepalmed.de/?lang=en",
     "registrations": [
-      { "registry": "DE_VEREINSREGISTER", "identifier": "VR 20768", "url": null, "status": "registered", "retrieved_at": "2026-08-28", "verification": "self_reported", "note": "Amtsgericht Leipzig, per org's own homepage text" }
+      {
+        "registry": "DE_VEREINSREGISTER",
+        "identifier": "VR 20768",
+        "url": null,
+        "status": "registered",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "note": "Amtsgericht Leipzig, per org's own homepage text"
+      }
     ],
     "nepal_presence": {
-      "since_year": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
-      "mode": { "value": "partners", "source_url": "https://nepalmed.de/?lang=en", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": "promotes Nepalese initiatives in the field of medicine and healthcare", "note": "org supports training of medical staff and hospital maintenance financing in Nepal; exact staffing model not confirmed" },
-      "staff_count": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
+      "since_year": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "mode": {
+        "value": "partners",
+        "source_url": "https://nepalmed.de/?lang=en",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "promotes Nepalese initiatives in the field of medicine and healthcare",
+        "note": "org supports training of medical staff and hospital maintenance financing in Nepal; exact staffing model not confirmed"
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
       "partners": []
     },
     "current_response": [],
     "financial_transparency": {
-      "annual_report": { "available": false, "url": null, "fiscal_year": null, "fiscal_year_end": null, "retrieved_at": "2026-08-28" },
-      "audited_financials": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
-      "iati_publisher": { "is_publisher": null, "publisher_ref": null, "source_url": null, "retrieved_at": null },
-      "income": { "value": null, "currency": null, "fiscal_year": null, "scope": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
-      "expenditure": { "value": null, "currency": null, "fiscal_year": null, "scope": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
-      "program_ratio": { "value": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not searched in this research pass.",
+        "gap_reason": "not_searched"
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": null
+      },
+      "income": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not searched in this research pass.",
+        "gap_reason": "not_searched"
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not searched in this research pass.",
+        "gap_reason": "not_searched"
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not searched in this research pass.",
+        "gap_reason": "not_searched"
+      },
       "peer_group": null
     },
     "warnings": [],
@@ -457,29 +1363,99 @@
     "org_id": "govinda-entwicklungshilfe",
     "names": {
       "common": "Govinda Entwicklungshilfe (Gemeinsam für Nepal)",
-      "legal": { "value": "Govinda Entwicklungshilfe e.V.", "source_url": "https://de.wikipedia.org/wiki/Govinda_Entwicklungshilfe", "retrieved_at": "2026-08-28", "verification": "third_party_reported", "quote": null, "note": "Registered at Amtsgericht Aalen under no. 649, founded 07.06.1998 in Elchingen, now based in Aalen — per Wikipedia/search summary, not a directly fetched Impressum page" },
-      "local_script": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
-      "aliases": ["Govinda e.V.", "Gemeinsam für Nepal"]
+      "legal": {
+        "value": "Govinda Entwicklungshilfe e.V.",
+        "source_url": "https://de.wikipedia.org/wiki/Govinda_Entwicklungshilfe",
+        "retrieved_at": "2026-08-28",
+        "verification": "third_party_reported",
+        "quote": null,
+        "note": "Registered at Amtsgericht Aalen under no. 649, founded 07.06.1998 in Elchingen, now based in Aalen — per Wikipedia/search summary, not a directly fetched Impressum page"
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "aliases": [
+        "Govinda e.V.",
+        "Gemeinsam für Nepal"
+      ]
     },
     "org_type": "diaspora_charity",
-    "hq": { "country": "DE", "city": "Aalen", "source_url": "https://gemeinsamfuernepal.org/" },
+    "hq": {
+      "country": "DE",
+      "city": "Aalen",
+      "source_url": "https://gemeinsamfuernepal.org/"
+    },
     "website": "https://gemeinsamfuernepal.org/",
     "registrations": [
-      { "registry": "DE_VEREINSREGISTER", "identifier": "649", "url": null, "status": "registered", "retrieved_at": "2026-08-28", "verification": "third_party_reported", "note": "Amtsgericht Aalen; from search-engine summary, not a directly fetched primary Impressum/register page" }
+      {
+        "registry": "DE_VEREINSREGISTER",
+        "identifier": "649",
+        "url": null,
+        "status": "registered",
+        "retrieved_at": "2026-08-28",
+        "verification": "third_party_reported",
+        "note": "Amtsgericht Aalen; from search-engine summary, not a directly fetched primary Impressum/register page"
+      }
     ],
     "nepal_presence": {
-      "since_year": { "value": 1998, "source_url": "https://de.wikipedia.org/wiki/Govinda_Entwicklungshilfe", "retrieved_at": "2026-08-28", "verification": "third_party_reported", "quote": null, "note": "founding year of the association, taken as proxy for start of Nepal engagement" },
-      "mode": { "value": "partners", "source_url": "https://gemeinsamfuernepal.org/", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": null, "note": "works through Shangri-La Development Association (SDA) in Nepal and Shangrila Entwicklungshilfe in Switzerland" },
-      "staff_count": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
+      "since_year": {
+        "value": 1998,
+        "source_url": "https://de.wikipedia.org/wiki/Govinda_Entwicklungshilfe",
+        "retrieved_at": "2026-08-28",
+        "verification": "third_party_reported",
+        "quote": null,
+        "note": "founding year of the association, taken as proxy for start of Nepal engagement"
+      },
+      "mode": {
+        "value": "partners",
+        "source_url": "https://gemeinsamfuernepal.org/",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": null,
+        "note": "works through Shangri-La Development Association (SDA) in Nepal and Shangrila Entwicklungshilfe in Switzerland"
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
       "partners": [
-        { "value": "Shangri-La Development Association (SDA)", "source_url": "https://gemeinsamfuernepal.org/", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": null, "note": "coordinated relief efforts on the ground per org statement" },
-        { "value": "Shangrila Entwicklungshilfe (Switzerland)", "source_url": "https://gemeinsamfuernepal.org/", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": null, "note": "Rigistrasse 60, 8006 Zürich" }
+        {
+          "value": "Shangri-La Development Association (SDA)",
+          "source_url": "https://gemeinsamfuernepal.org/",
+          "retrieved_at": "2026-08-28",
+          "verification": "self_reported",
+          "quote": null,
+          "note": "coordinated relief efforts on the ground per org statement"
+        },
+        {
+          "value": "Shangrila Entwicklungshilfe (Switzerland)",
+          "source_url": "https://gemeinsamfuernepal.org/",
+          "retrieved_at": "2026-08-28",
+          "verification": "self_reported",
+          "quote": null,
+          "note": "Rigistrasse 60, 8006 Zürich"
+        }
       ]
     },
     "current_response": [
       {
         "what": "Confirmed no direct casualties among project participants as of the statement date; collecting donations for clean drinking water, food, medications, hygiene items, clothing, blankets, emergency shelter, and logistics for hard-to-reach areas, designated \"Fluthilfe Nepal\"",
-        "where": ["Rasuwa", "Nuwakot", "Dhading"],
+        "where": [
+          "Rasuwa",
+          "Nuwakot",
+          "Dhading"
+        ],
         "date": null,
         "amount": null,
         "currency": null,
@@ -491,12 +1467,61 @@
       }
     ],
     "financial_transparency": {
-      "annual_report": { "available": false, "url": null, "fiscal_year": null, "fiscal_year_end": null, "retrieved_at": "2026-08-28" },
-      "audited_financials": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
-      "iati_publisher": { "is_publisher": null, "publisher_ref": null, "source_url": null, "retrieved_at": null },
-      "income": { "value": null, "currency": null, "fiscal_year": null, "scope": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
-      "expenditure": { "value": null, "currency": null, "fiscal_year": null, "scope": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
-      "program_ratio": { "value": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not searched in this research pass.",
+        "gap_reason": "not_searched"
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": null
+      },
+      "income": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not searched in this research pass.",
+        "gap_reason": "not_searched"
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not searched in this research pass.",
+        "gap_reason": "not_searched"
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not searched in this research pass.",
+        "gap_reason": "not_searched"
+      },
       "peer_group": null
     },
     "warnings": [],
@@ -515,26 +1540,78 @@
     "org_id": "back-to-life",
     "names": {
       "common": "Back to Life",
-      "legal": { "value": "Back to Life e.V.", "source_url": "https://www.back-to-life.org/impressum", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": null, "note": null },
-      "local_script": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
+      "legal": {
+        "value": "Back to Life e.V.",
+        "source_url": "https://www.back-to-life.org/impressum",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": null,
+        "note": null
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
       "aliases": []
     },
     "org_type": "diaspora_charity",
-    "hq": { "country": "DE", "city": "Bad Homburg v.d.H.", "source_url": "https://www.back-to-life.org/impressum" },
+    "hq": {
+      "country": "DE",
+      "city": "Bad Homburg v.d.H.",
+      "source_url": "https://www.back-to-life.org/impressum"
+    },
     "website": "https://www.back-to-life.org/",
     "registrations": [
-      { "registry": "DE_VEREINSREGISTER", "identifier": "VR 1898", "url": null, "status": "registered", "retrieved_at": "2026-08-28", "verification": "self_reported", "note": "Amtsgericht Bad Homburg vor der Höhe, per org's own Impressum page" }
+      {
+        "registry": "DE_VEREINSREGISTER",
+        "identifier": "VR 1898",
+        "url": null,
+        "status": "registered",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "note": "Amtsgericht Bad Homburg vor der Höhe, per org's own Impressum page"
+      }
     ],
     "nepal_presence": {
-      "since_year": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
-      "mode": { "value": "own_staff", "source_url": "https://www.back-to-life.org/", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": null, "note": "org runs birthing centers, schools, drinking-water and health projects reaching \"over 45,000 needy people\" — mode inferred, not a direct quote on staffing model" },
-      "staff_count": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
+      "since_year": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "mode": {
+        "value": "own_staff",
+        "source_url": "https://www.back-to-life.org/",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": null,
+        "note": "org runs birthing centers, schools, drinking-water and health projects reaching \"over 45,000 needy people\" — mode inferred, not a direct quote on staffing model"
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
       "partners": []
     },
     "current_response": [
       {
         "what": "Chairwoman Stella Deetjen states doctors are being flown into affected, road-cut-off areas to provide medical assistance on site; org signals plans for drinking-water pipelines, school support (uniforms, textbooks, reconstruction) and solar power as reconstruction follows",
-        "where": ["unspecified (remote flood-affected areas)"],
+        "where": [
+          "unspecified (remote flood-affected areas)"
+        ],
         "date": "2026-08-27",
         "amount": null,
         "currency": null,
@@ -546,12 +1623,61 @@
       }
     ],
     "financial_transparency": {
-      "annual_report": { "available": false, "url": null, "fiscal_year": null, "fiscal_year_end": null, "retrieved_at": "2026-08-28" },
-      "audited_financials": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
-      "iati_publisher": { "is_publisher": null, "publisher_ref": null, "source_url": null, "retrieved_at": null },
-      "income": { "value": null, "currency": null, "fiscal_year": null, "scope": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
-      "expenditure": { "value": null, "currency": null, "fiscal_year": null, "scope": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
-      "program_ratio": { "value": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not searched in this research pass.",
+        "gap_reason": "not_searched"
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": null
+      },
+      "income": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not searched in this research pass.",
+        "gap_reason": "not_searched"
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not searched in this research pass.",
+        "gap_reason": "not_searched"
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not searched in this research pass.",
+        "gap_reason": "not_searched"
+      },
       "peer_group": null
     },
     "warnings": [],
@@ -571,26 +1697,80 @@
     "org_id": "helvetas",
     "names": {
       "common": "Helvetas",
-      "legal": { "value": "Helvetas Swiss Intercooperation", "source_url": "https://zewo.ch/de/npo-detail/?relief_organization=helvetas", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "quote": null, "note": "Verein (association) under Swiss law" },
-      "local_script": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
+      "legal": {
+        "value": "Helvetas Swiss Intercooperation",
+        "source_url": "https://zewo.ch/de/npo-detail/?relief_organization=helvetas",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "quote": null,
+        "note": "Verein (association) under Swiss law"
+      },
+      "local_script": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
       "aliases": []
     },
     "org_type": "ingo",
-    "hq": { "country": "CH", "city": "Zürich", "source_url": "https://zewo.ch/de/npo-detail/?relief_organization=helvetas" },
+    "hq": {
+      "country": "CH",
+      "city": "Zürich",
+      "source_url": "https://zewo.ch/de/npo-detail/?relief_organization=helvetas"
+    },
     "website": "https://www.helvetas.org/",
     "registrations": [
-      { "registry": "CH_ZEWO", "identifier": null, "url": "https://zewo.ch/de/npo-detail/?relief_organization=helvetas", "status": "certified", "retrieved_at": "2026-08-28", "verification": "register_confirmed", "note": "Zewo-zertifiziert seit 1957; two searches gave slightly conflicting \"most recent recertification\" years (2023 vs 2024) — exact current certification date not resolved, recorded as a gap" }
+      {
+        "registry": "CH_ZEWO",
+        "identifier": null,
+        "url": "https://zewo.ch/de/npo-detail/?relief_organization=helvetas",
+        "status": "certified",
+        "retrieved_at": "2026-08-28",
+        "verification": "register_confirmed",
+        "note": "Zewo-zertifiziert seit 1957; two searches gave slightly conflicting \"most recent recertification\" years (2023 vs 2024) — exact current certification date not resolved, recorded as a gap",
+        "gap_reason": "searched_not_found"
+      }
     ],
     "nepal_presence": {
-      "since_year": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": "Helvetas describes itself as having \"langjährige Präsenz in Nepal\" (long-standing presence) without a specific start year located" },
-      "mode": { "value": "both", "source_url": "https://www.presseportal.ch/de/pm/100000432/100941839", "retrieved_at": "2026-08-28", "verification": "self_reported", "quote": "Dank unserer langjährigen Präsenz in Nepal und der Zusammenarbeit mit lokalen Partnerorganisationen können wir rasch abklären", "note": "Statement implies both own presence and local partner organisations, hence \"both\"" },
-      "staff_count": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": null },
+      "since_year": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Helvetas describes itself as having \"langjährige Präsenz in Nepal\" (long-standing presence) without a specific start year located",
+        "gap_reason": "searched_not_found"
+      },
+      "mode": {
+        "value": "both",
+        "source_url": "https://www.presseportal.ch/de/pm/100000432/100941839",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "Dank unserer langjährigen Präsenz in Nepal und der Zusammenarbeit mit lokalen Partnerorganisationen können wir rasch abklären",
+        "note": "Statement implies both own presence and local partner organisations, hence \"both\""
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
       "partners": []
     },
     "current_response": [
       {
         "what": "Team of local staff dispatched to the disaster area to assess damage; CHF 100,000 already allocated for emergency aid; planned supply of emergency shelters, hygiene articles, drinking water and other vital goods to especially vulnerable households",
-        "where": ["Rasuwa", "along the Bhotekoshi and Trishuli rivers"],
+        "where": [
+          "Rasuwa",
+          "along the Bhotekoshi and Trishuli rivers"
+        ],
         "date": "2026-08-27",
         "amount": 100000,
         "currency": "CHF",
@@ -602,12 +1782,61 @@
       }
     ],
     "financial_transparency": {
-      "annual_report": { "available": false, "url": null, "fiscal_year": null, "fiscal_year_end": null, "retrieved_at": "2026-08-28" },
-      "audited_financials": { "value": null, "source_url": null, "retrieved_at": "2026-08-28", "verification": "unverified", "quote": null, "note": "Zewo certification implies audited-accounts review, but no annual report PDF or specific income/expenditure figures were located within budget; the Zewo detail page links to annual reports but figures were not extracted" },
-      "iati_publisher": { "is_publisher": null, "publisher_ref": null, "source_url": null, "retrieved_at": null },
-      "income": { "value": null, "currency": null, "fiscal_year": null, "scope": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
-      "expenditure": { "value": null, "currency": null, "fiscal_year": null, "scope": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
-      "program_ratio": { "value": null, "source_url": null, "retrieved_at": null, "verification": "unverified", "quote": null, "note": null },
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Zewo certification implies audited-accounts review, but no annual report PDF or specific income/expenditure figures were located within budget; the Zewo detail page links to annual reports but figures were not extracted",
+        "gap_reason": "searched_not_found"
+      },
+      "iati_publisher": {
+        "is_publisher": null,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": null
+      },
+      "income": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": null,
+        "verification": "unverified",
+        "quote": null,
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
+      },
       "peer_group": null
     },
     "warnings": [],
