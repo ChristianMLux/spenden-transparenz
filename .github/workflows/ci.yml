@@ -23,7 +23,7 @@ jobs:
       - uses: astral-sh/setup-uv@v3
         with:
           enable-cache: true
-      - run: uv sync --all-packages
+      - run: uv sync
       - name: ruff check
         run: uv run ruff check .
       - name: ruff format
@@ -58,7 +58,7 @@ jobs:
       - uses: astral-sh/setup-uv@v3
         with:
           enable-cache: true
-      - run: uv sync --all-packages
+      - run: uv sync
       - name: alembic upgrade head
         working-directory: apps/api
         run: uv run alembic upgrade head
@@ -79,6 +79,10 @@ jobs:
         uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # .gitleaks.toml allowlists data/raw (verbatim captures of third-party pages, which
+          # carry those sites' own browser keys) and .venv. Without it the scan reports 17
+          # findings on every run, and a scan that always fails is a scan nobody reads.
+          GITLEAKS_CONFIG: .gitleaks.toml
 
       - name: pip-audit
         # --python 3.13 is required, not cosmetic: pip-audit builds an ephemeral venv, and on a
@@ -96,10 +100,10 @@ jobs:
 
       - name: no AthenaRun branding or dependencies
         run: |
-          # Matches usage, not the word: the settings module and its tests explain this rule in
-          # prose, and a check that fails on its own documentation teaches people to delete the
-          # documentation.
-          if grep -riE "FF6131|athenarun-uikit|@athenarun/|from athenarun|import athenarun" apps packages pipeline; then
+          # Matches usage in code, not the word in prose. Two things learned the hard way:
+          # the settings module and apps/web/DESIGN.md both document this very rule, and a gate
+          # that fails on its own documentation teaches people to delete the documentation.
+          if grep -riE "FF6131|athenarun-uikit|@athenarun/|from athenarun|import athenarun"                apps packages pipeline --include="*.py" --include="*.ts" --include="*.tsx"                --include="*.js" --include="*.jsx" --include="*.css" --include="*.json"                --include="*.toml" --include="*.yml"; then
             echo "this is not an AthenaRun product: no brand colour, no UIKit, no AthenaRun imports"
             exit 1
           fi

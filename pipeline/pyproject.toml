@@ -17,5 +17,9 @@ dependencies = [
     "spenden-core",
 ]
 
+# No build-system on purpose: this is a virtual project. The directory is itself the `pipeline`
+# package (flat layout), which hatchling cannot package without moving every file. It is run
+# from the repository root and shipped to Railway via pipeline/requirements.txt.
+
 [tool.uv.sources]
 spenden-core = { workspace = true }

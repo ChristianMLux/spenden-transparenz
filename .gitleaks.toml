@@ -1,0 +1,28 @@
+title = "spenden-transparenz"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = """
+Saved third-party web pages from the research phase.
+
+data/raw/**/*.html are verbatim captures of pages published by dzi.de, give.org and swc.org.np.
+They contain those sites' own browser-side keys - analytics identifiers and a Google Maps style
+widget key that give.org serves to every visitor of the page. They are not our credentials and
+nothing here was ever ours to leak; the captures exist so the research can be reproduced.
+
+Without this allowlist the secret scan fails on every run, and a scan that always fails is a scan
+nobody reads. If a real credential of ours ever lands in data/raw, that is a data-collection bug
+to fix at the source, not something to hide here - the probes write only public pages to disk.
+"""
+# Not anchored: gitleaks matches this against the path as it reports it, which is absolute
+# (/repo/data/raw/... under the Docker mount) rather than repository-relative.
+paths = ['''data/raw/''']
+
+[[allowlists]]
+description = """
+The local virtual environment. Third-party package source, never committed: .venv carries its own
+.gitignore with a single '*', so git never sees it. It only appears in a --no-git filesystem scan.
+"""
+paths = ['''\.venv/''']
