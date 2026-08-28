@@ -1,4 +1,4 @@
-# Datenmodell v0.3 — Organisations-Record (Pilot „Nepal Flut 2026")
+# Datenmodell v0.4 — Organisations-Record (Pilot „Nepal Flut 2026")
 
 **Stand:** 2026-08-28 · **Status:** Entwurf, entstanden aus dem Pilot-Datensatz. Feldnamen EN (Handoff-Entscheidung 4, als Annahme übernommen). Maschinenlesbar: `schema/org.schema.json` (JSON Schema 2020-12), Beispiel: `schema/example-org.json`.
 
@@ -36,6 +36,33 @@ deshalb gewinnt `source_unreachable` gegen `not_public`, wenn beides auf eine No
 `gap_reason` ist **nicht** required. Ein Datum mit Wert trägt keinen Grund, und ein Pflichtfeld
 hätte jeden bestehenden Record ungültig gemacht. Erzwungen wird es dort, wo es zählt: die
 Datenbank (`org_datum`) lässt eine Lücke ohne `note` **und** `gap_reason` nicht zu.
+
+### Warum die Klassifikation im Record steht (v0.4)
+
+`current_response`-Einträge tragen jetzt optional `activity_type` und `amount_basis` — dieselben
+Enums wie die Datenbank. Vorher leitete der Loader beides aus Stichwörtern im Aktivitätssatz ab.
+Beim Gegenlesen aller 44 Einträge waren **14 falsch**, und drei davon erfanden Geld:
+
+| Record | Satz | abgeleitet | richtig |
+|---|---|---|---|
+| malteser-international | „Aktivitäten vorübergehend eingestellt" | `appeal_launched` | `presence_declared` |
+| mercy-corps | „koordiniert mit Behörden" | `medical` | `coordination` |
+| world-vision-nepal | „bereitet Hilfe vor" | `wash` | `presence_declared` |
+| plan-international-nepal | öffentliches Statement, **kein Betrag** | `amount_basis: disbursed` | `reported` |
+| wfp-nepal | Lebensmittel verteilt, **kein Betrag** | `amount_basis: released` | `reported` |
+| the-rising-youth-club | „würde ausrücken", **kein Betrag** | `amount_basis: pledged` | `reported` |
+
+`amount_basis` steht auf dem Board neben der Zahl. „disbursed" bei einer Aussage ohne Betrag ist
+also die Behauptung einer Zahlung, die niemand gemeldet hat — genau die Sorte Aussage, die dieses
+Produkt drei Dateien weiter im Verbatim-Gate der KI verweigert. Kein Stichwort-Mapping ist dieses
+Risiko wert.
+
+Deshalb ist die Klassifikation jetzt Daten: ein Mensch liest den Satz, der Wert steht neben dem
+Satz, aus dem er stammt, und der Loader nimmt was dasteht oder fällt auf `other` / `reported`
+zurück — beides behauptet nichts. Er rät nie.
+
+Neu in `ACTIVITY_TYPE`: `coordination`. Zwei Records beschreiben Koordination mit Behörden oder
+Partnern; das ist weder `logistics` noch ein Achselzucken Richtung `other`.
 
 ### Warum `nepal_presence.mode` null sein darf (v0.3)
 
