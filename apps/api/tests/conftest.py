@@ -30,6 +30,7 @@ from core.models import (
     Disaster,
     District,
     IngestionRun,
+    OrgAlias,
     Organisation,
     OrgDatum,
     OrgRegistration,
@@ -230,6 +231,26 @@ async def _seed(session_factory) -> None:
                 content_hash=_hash(),
             )
         )
+        # The Devanagari name, rendered by the frontend in a lang="ne" span, and the acronyms the
+        # board's name search has to match even though neither is a substring of the common name.
+        session.add(
+            OrgDatum(
+                org_id=NRCS_ORG_ID,
+                path="names.local_script",
+                value="नेपाल रेड क्रस सोसाइटी",
+                value_type="string",
+                source_url="https://www.nrcs.org",
+                retrieved_at=date(2026, 8, 20),
+                verification="self_reported",
+                content_hash=_hash(),
+            )
+        )
+        session.add_all(
+            [
+                OrgAlias(alias_norm="nrcs", org_id=NRCS_ORG_ID, kind="acronym"),
+                OrgAlias(alias_norm="nepal red cross", org_id=NRCS_ORG_ID, kind="former_name"),
+            ]
+        )
         session.add(
             OrgRegistration(
                 org_id=NRCS_ORG_ID,
@@ -379,8 +400,35 @@ async def _seed(session_factory) -> None:
             status="auto",
             content_hash=_hash(),
         )
+        # Schema v0.3: one of the 44 hand-researched responses with no quotable sentence - the
+        # fact came from a structured registration page, not a sentence an LLM could extract.
+        # quote stays null; the CHECK only allows that when model = 'hand_research'. The board and
+        # the statement stream both have to render this, not filter it out - it is a real, sourced
+        # response, and dropping it would lose exactly the evidence the board exists to show.
+        statement_nrcs_hand_research = ResponseStatement(
+            report_id=report_nrcs.id,
+            org_id=NRCS_ORG_ID,
+            org_name_raw="Nepal Red Cross Society",
+            activity="registered as WFP's implementing partner for the Rasuwa cash programme",
+            activity_type="cash_assistance",
+            where_raw=["Rasuwa"],
+            happened_on=date(2026, 8, 21),
+            quote=None,
+            verification="third_party_reported",
+            model="hand_research",
+            prompt_version="n/a",
+            status="approved",
+            content_hash=_hash(),
+        )
         session.add_all(
-            [statement_nrcs, statement_wv, statement_unicef_ok, statement_unicef_rejected, statement_unmatched]
+            [
+                statement_nrcs,
+                statement_wv,
+                statement_unicef_ok,
+                statement_unicef_rejected,
+                statement_unmatched,
+                statement_nrcs_hand_research,
+            ]
         )
         await session.flush()
 
@@ -391,6 +439,9 @@ async def _seed(session_factory) -> None:
                 # UNICEF's statement names no place; it inherits the report's district context.
                 StatementDistrict(
                     statement_id=statement_unicef_ok.id, district_code="NP0329", resolution="inherited_from_report"
+                ),
+                StatementDistrict(
+                    statement_id=statement_nrcs_hand_research.id, district_code="NP0329", resolution="stated"
                 ),
                 StatementDistrict(statement_id=statement_unmatched.id, district_code="NP0329", resolution="stated"),
             ]

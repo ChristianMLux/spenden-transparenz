@@ -12,23 +12,14 @@ endpoint with wrong tokens would never trip the rate limit at all. Checking the 
 body puts the 401 after the rate-limit check, so brute-forcing the token is throttled like
 everything else here.
 
-Triggering a job starts it via BackgroundTasks and returns immediately; it does not await
-completion. `extract_statements` is capped at 25 reports and makes one LLM call each, so a run can
-take minutes - long enough that Railway's proxy would time the connection out before an in-process
-`await run_job(job)` returned, either handing the caller a 502 for a job that is still running, or
-killing it mid-run, which is exactly the state ingestion_run bookkeeping exists to avoid.
-`accepted` means "the job was started," not "the job finished"; the caller learns the outcome from
-GET /v1/admin/runs, which is what that route is for. The 404 for an unknown job name still happens
-synchronously, before anything is scheduled.
-
-The `pipeline.cli` import is deliberately deferred to inside trigger_ingest(), not at module level.
-`pipeline/pyproject.toml` documents pipeline as a virtual project with no build-system, run from
-the repository root as its own Railway service - it is not installed as a library and is not a
-dependency of apps/api/requirements.txt. Importing it eagerly here breaks anything that only needs
-to introspect this module (apps/api/scripts/export_openapi.py adds only apps/api to sys.path, not
-the repo root, so `import pipeline` fails there today) and is unverified to resolve at all under
-however the api service ends up deployed on Railway. Flagged to the backend lead; see the WP-C
-report for the open question this leaves for PO-5.
+The admin endpoint QUEUES; it does not run. It validates the job name against core.jobs.JOB_NAMES,
+inserts one ingestion_run row with status="queued", and returns. Nothing pipeline-related is
+imported here at all: the API and the pipeline are separate Railway services with separate deploy
+artefacts, and the pipeline carries the LLM credentials and the network fetchers - none of which
+belong in a read-only public API's image. The pipeline service drains queued runs on its own next
+tick. `accepted` means "recorded, and the pipeline will drain it", not "finished"; the caller
+learns the outcome from GET /v1/admin/runs. This also means nothing long-running ever happens
+inside a web request, so there is no Railway proxy timeout to worry about either.
 """
 
 from __future__ import annotations
@@ -37,53 +28,45 @@ from typing import Annotated
 
 from app.deps import ADMIN_LIMIT, get_session, limiter, no_store, require_admin_token
 from app.schemas import AcceptedOut, RunOut
-from core.logging import get_logger
+from core.jobs import JOB_NAMES
 from core.models import IngestionRun
-from fastapi import APIRouter, BackgroundTasks, Depends, Header, HTTPException, Query, Request
+from fastapi import APIRouter, Depends, Header, HTTPException, Query, Request
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 router = APIRouter(prefix="/v1/admin", tags=["admin"])
-log = get_logger("admin")
 
 LimitQuery = Annotated[int, Query(ge=1, le=100, description="page size, at most 100")]
-
-
-async def _run_and_log(job: str) -> None:
-    """Runs after the response is already sent. Errors cannot reach the caller from here - they
-    would only vanish into the ASGI server's logs - so pipeline.runs.run_context's own failure
-    bookkeeping in ingestion_run is the record of truth, and this just makes sure the failure is
-    visible in this process's logs too."""
-    from pipeline.cli import run_job  # see module docstring for why this import is deferred
-
-    try:
-        await run_job(job)
-    except Exception:
-        log.warning("admin_triggered_job_failed", extra={"job": job})
 
 
 @router.post(
     "/ingest/{job}",
     response_model=AcceptedOut,
-    summary="Trigger one ingestion job.",
+    summary="Queue one ingestion job. The pipeline service drains it; this does not run it.",
     dependencies=[Depends(no_store)],
 )
 @limiter.limit(ADMIN_LIMIT)
 async def trigger_ingest(
     request: Request,
     job: str,
-    background_tasks: BackgroundTasks,
+    session: Annotated[AsyncSession, Depends(get_session)],
     x_admin_token: Annotated[str | None, Header()] = None,
 ) -> AcceptedOut:
     require_admin_token(x_admin_token)
 
-    from pipeline.cli import JOBS  # see module docstring for why this import is deferred
-
-    if job not in JOBS:
+    if job not in JOB_NAMES:
         raise HTTPException(status_code=404, detail=f"unknown job: {job}")
 
-    background_tasks.add_task(_run_and_log, job)
-    return AcceptedOut(accepted=True, job=job, run_id=None)
+    run = IngestionRun(job=job, status="queued")
+    session.add(run)
+    await session.flush()
+    run_id = str(run.id)
+    # get_session() rolls back in its own finally block on the way out, so the write has to be
+    # committed here or it would vanish - the rollback after an already-committed transaction is
+    # a harmless no-op, but skipping the commit is not.
+    await session.commit()
+
+    return AcceptedOut(accepted=True, job=job, run_id=run_id)
 
 
 @router.get(

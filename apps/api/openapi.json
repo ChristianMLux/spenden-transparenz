@@ -1353,7 +1353,7 @@
             "description": "Validation Error"
           }
         },
-        "summary": "Trigger one ingestion job.",
+        "summary": "Queue one ingestion job. The pipeline service drains it; this does not run it.",
         "tags": [
           "admin"
         ]

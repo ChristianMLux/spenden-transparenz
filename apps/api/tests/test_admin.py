@@ -89,10 +89,11 @@ async def test_admin_ingest_limit_is_five_per_minute_and_counts_failed_auth_atte
     assert statuses[5] == 429
 
 
-async def test_ingest_with_a_valid_token_starts_the_job_and_returns_immediately(client: AsyncClient, monkeypatch):
-    """accepted=true means "we started it", not "it finished": the job runs via BackgroundTasks
-    after the response is sent, so run_id is always null here - the caller learns the outcome
-    from GET /v1/admin/runs, not from this response."""
+async def test_ingest_with_a_valid_token_queues_a_run_and_does_not_run_it(client: AsyncClient, monkeypatch):
+    """accepted=true means "recorded, and the pipeline will drain it" - not "finished", and not
+    even "started". The endpoint writes one ingestion_run row with status="queued" and returns its
+    id; nothing pipeline-related runs inside this request. GET /v1/admin/runs is where the queued
+    row - and later its outcome - actually shows up."""
     from core.settings import get_settings
 
     monkeypatch.setenv("ADMIN_TOKEN", "a" * 32)
@@ -101,14 +102,22 @@ async def test_ingest_with_a_valid_token_starts_the_job_and_returns_immediately(
         r = await client.post("/v1/admin/ingest/seed_reference", headers={"X-Admin-Token": "a" * 32})
         assert r.status_code == 200, r.text
         body = r.json()
-        assert body == {"accepted": True, "job": "seed_reference", "run_id": None}
+        assert body["accepted"] is True
+        assert body["job"] == "seed_reference"
+        assert body["run_id"], "a queued run must be a real, retrievable id, not null"
+
+        runs = (await client.get("/v1/admin/runs", headers={"X-Admin-Token": "a" * 32})).json()
+        queued = next(run for run in runs if run["id"] == body["run_id"])
+        assert queued["status"] == "queued"
+        assert queued["job"] == "seed_reference"
+        assert queued["rows_written"] == 0
     finally:
         get_settings.cache_clear()
 
 
 async def test_ingest_with_a_valid_token_but_an_unknown_job_is_404(client: AsyncClient, monkeypatch):
-    """The 404 for an unknown job name is still synchronous - checked against pipeline.cli.JOBS
-    before anything is scheduled - so a typo'd job name never even starts a background task."""
+    """The 404 for an unknown job name is checked against core.jobs.JOB_NAMES before anything is
+    written, so a typo'd job name never queues a run nothing will ever drain."""
     from core.settings import get_settings
 
     monkeypatch.setenv("ADMIN_TOKEN", "a" * 32)

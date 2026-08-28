@@ -76,9 +76,13 @@ async def test_get_org_registration_row_stays_visible_with_a_null_identifier(cli
 
 
 async def test_get_org_includes_its_statements(client: AsyncClient):
+    """NRCS carries two: one auto-extracted (a real quote) and one hand-researched (quote null).
+    Both must render - dropping the quote-less one would lose exactly the evidence this product
+    exists to show."""
     body = (await client.get(f"/v1/orgs/{NRCS_ORG_ID}")).json()
-    assert len(body["statements"]) == 1
-    assert body["statements"][0]["quote"] == "distributed 500 tarpaulins"
+    quotes = {s["quote"] for s in body["statements"]}
+    assert quotes == {"distributed 500 tarpaulins", None}
+    assert len(body["statements"]) == 2
 
 
 async def test_get_org_includes_warnings(client: AsyncClient):

@@ -8,9 +8,10 @@ in tests/test_contract.py:
 3. districts for those statements
 4. publishers for those statements' reports
 
-The has_register_confirmed / has_audited_financials / has_warnings flags do NOT cost extra queries:
-they are correlated EXISTS subqueries embedded directly in queries 1 and 2, computed by Postgres
-in the same round trip rather than fetched with a loop over organisations.
+The has_register_confirmed / has_audited_financials / has_warnings flags, and the aliases /
+local_script fields on OrgRef, do NOT cost extra queries: they are correlated EXISTS/array_agg
+subqueries embedded directly in queries 1 and 2, computed by Postgres in the same round trip
+rather than fetched with a loop over organisations.
 
 Organisations with no statement are included by default - their absence of a reported response is
 information, not a failure state - unless has_response=true is passed. When a district or
@@ -32,10 +33,19 @@ from typing import Annotated, Literal
 from app.deps import ILIKE_ESCAPE, get_session, ilike_pattern, list_cache
 from app.routers.statements import NOT_REJECTED, hydrate_statements
 from app.schemas import OrgRef, ResponderCounts, ResponderFlags, ResponderItem
-from core.models import Organisation, OrgRegistration, OrgWarning, Report, ResponseStatement, StatementDistrict
+from core.models import (
+    OrgAlias,
+    Organisation,
+    OrgDatum,
+    OrgRegistration,
+    OrgWarning,
+    Report,
+    ResponseStatement,
+    StatementDistrict,
+)
 from fastapi import APIRouter, Depends, Path, Query, Response
 from pydantic import StringConstraints
-from sqlalchemy import literal, select
+from sqlalchemy import func, literal, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 router = APIRouter(prefix="/v1/disasters", tags=["disasters"])
@@ -87,13 +97,38 @@ def _flag_columns():
     )
 
 
-def _org_ref(org: Organisation) -> OrgRef:
+def _org_extra_columns():
+    """aliases and local_script, the same way: correlated subqueries embedded as extra SELECT
+    columns, not a second round trip. array_agg over zero org_alias rows is NULL in Postgres, not
+    an empty array - _org_extras() below is where that gets turned into []."""
+    aliases_agg = (
+        select(func.array_agg(OrgAlias.alias_norm))
+        .where(OrgAlias.org_id == Organisation.org_id)
+        .correlate(Organisation)
+        .scalar_subquery()
+    )
+    local_script = (
+        select(OrgDatum.value)
+        .where(
+            OrgDatum.org_id == Organisation.org_id,
+            OrgDatum.path == "names.local_script",
+            OrgDatum.superseded_at.is_(None),
+        )
+        .correlate(Organisation)
+        .scalar_subquery()
+    )
+    return aliases_agg.label("aliases_agg"), local_script.label("local_script")
+
+
+def _org_ref(org: Organisation, aliases: list[str], local_script: str | None) -> OrgRef:
     return OrgRef(
         org_id=org.org_id,
         name_common=org.name_common,
         org_type=org.org_type,
         hq_country=org.hq_country,
         website=org.website,
+        aliases=aliases,
+        local_script=local_script,
     )
 
 
@@ -105,13 +140,26 @@ def _flags(row) -> ResponderFlags:
     )
 
 
-class _Group:
-    __slots__ = ("flags", "org", "org_name_raw", "pairs")
+def _org_extras(row) -> tuple[list[str], str | None]:
+    return list(row.aliases_agg or []), row.local_script
 
-    def __init__(self, org: Organisation | None, flags: ResponderFlags, org_name_raw: str) -> None:
+
+class _Group:
+    __slots__ = ("aliases", "flags", "local_script", "org", "org_name_raw", "pairs")
+
+    def __init__(
+        self,
+        org: Organisation | None,
+        flags: ResponderFlags,
+        org_name_raw: str,
+        aliases: list[str],
+        local_script: str | None,
+    ) -> None:
         self.org = org
         self.flags = flags
         self.org_name_raw = org_name_raw
+        self.aliases = aliases
+        self.local_script = local_script
         self.pairs: list[tuple[ResponseStatement, Report]] = []
 
 
@@ -119,7 +167,8 @@ async def _fetch_candidate_orgs(
     session: AsyncSession, *, org_type: list[str], hq: str | None, q: str | None
 ) -> list[tuple[Organisation, object]]:
     reg_flag, audit_flag, warn_flag = _flag_columns()
-    query = select(Organisation, reg_flag, audit_flag, warn_flag)
+    aliases_col, local_script_col = _org_extra_columns()
+    query = select(Organisation, reg_flag, audit_flag, warn_flag, aliases_col, local_script_col)
     if org_type:
         query = query.where(Organisation.org_type.in_(org_type))
     if hq == "local":
@@ -142,8 +191,9 @@ async def _fetch_statements(
     q: str | None,
 ) -> list:
     reg_flag, audit_flag, warn_flag = _flag_columns()
+    aliases_col, local_script_col = _org_extra_columns()
     query = (
-        select(ResponseStatement, Report, Organisation, reg_flag, audit_flag, warn_flag)
+        select(ResponseStatement, Report, Organisation, reg_flag, audit_flag, warn_flag, aliases_col, local_script_col)
         .join(Report, ResponseStatement.report_id == Report.id)
         .outerjoin(Organisation, ResponseStatement.org_id == Organisation.org_id)
         .where(NOT_REJECTED, Report.disaster_glide_id == glide_id)
@@ -219,7 +269,8 @@ async def list_responders(
             org = row.Organisation
             if org.org_id in responded_ids:
                 continue
-            groups[org.org_id] = _Group(org, _flags(row), org.name_common)
+            aliases, local_script = _org_extras(row)
+            groups[org.org_id] = _Group(org, _flags(row), org.name_common, aliases, local_script)
         statements_by_group: dict[str, list] = {key: [] for key in groups}
     else:
         rows = await _fetch_statements(
@@ -229,7 +280,8 @@ async def list_responders(
             statement, report, org = row.ResponseStatement, row.Report, row.Organisation
             key = org.org_id if org is not None else f"raw:{statement.org_name_raw}"
             if key not in groups:
-                groups[key] = _Group(org, _flags(row), statement.org_name_raw)
+                aliases, local_script = _org_extras(row)
+                groups[key] = _Group(org, _flags(row), statement.org_name_raw, aliases, local_script)
             groups[key].pairs.append((statement, report))
 
         board_is_unfiltered = not district and not verification and has_response is not True
@@ -239,7 +291,8 @@ async def list_responders(
                 org = row.Organisation
                 if org.org_id in groups:
                     continue
-                groups[org.org_id] = _Group(org, _flags(row), org.name_common)
+                aliases, local_script = _org_extras(row)
+                groups[org.org_id] = _Group(org, _flags(row), org.name_common, aliases, local_script)
 
         all_pairs = [pair for group in groups.values() for pair in group.pairs]
         statement_outs = await hydrate_statements(session, all_pairs)
@@ -256,6 +309,8 @@ async def list_responders(
             {
                 "org": group.org,
                 "org_name_raw": group.org_name_raw,
+                "aliases": group.aliases,
+                "local_script": group.local_script,
                 "outs": outs,
                 "flags": group.flags,
                 "sort_latest": latest,
@@ -276,7 +331,7 @@ async def list_responders(
 
     return [
         ResponderItem(
-            org=_org_ref(item["org"]) if item["org"] else None,
+            org=_org_ref(item["org"], item["aliases"], item["local_script"]) if item["org"] else None,
             org_name_raw=item["org_name_raw"],
             statements=item["outs"],
             counts=ResponderCounts(

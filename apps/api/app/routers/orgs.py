@@ -14,7 +14,6 @@ from app.routers.statements import hydrate_statements, statement_query
 from app.schemas import (
     DatumHistoryEntry,
     OrgDetail,
-    OrgRef,
     RegistrationOut,
     WarningOut,
     serialise_datum,
@@ -38,16 +37,6 @@ OrgTypeQuery = Annotated[list[str], Query(description="repeatable")]
 
 
 CURRENT_VALUE = (OrgDatum.superseded_at.is_(None)) & (OrgDatum.value.isnot(None))
-
-
-def _org_ref(row: Organisation) -> OrgRef:
-    return OrgRef(
-        org_id=row.org_id,
-        name_common=row.name_common,
-        org_type=row.org_type,
-        hq_country=row.hq_country,
-        website=row.website,
-    )
 
 
 def _org_detail_base(row: Organisation) -> dict:

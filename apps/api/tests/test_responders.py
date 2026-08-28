@@ -155,3 +155,44 @@ async def test_no_response_ever_contains_body_text(client: AsyncClient):
 async def test_board_is_cached_for_a_minute_with_stale_while_revalidate(client: AsyncClient):
     r = await client.get(f"/v1/disasters/{DISASTER_GLIDE_ID}/responders")
     assert r.headers["cache-control"] == "public, max-age=60, stale-while-revalidate=600"
+
+
+async def test_org_ref_carries_aliases_and_local_script(client: AsyncClient):
+    """The board's name search is useless without these: people type NRCS, not "Nepal Red Cross
+    Society". Fetched as correlated subqueries, not a query-per-org loop - see the responders.py
+    module docstring's query budget."""
+    r = await client.get(f"/v1/disasters/{DISASTER_GLIDE_ID}/responders")
+    nrcs = next(item for item in r.json() if item["org"] and item["org"]["org_id"] == NRCS_ORG_ID)
+    assert set(nrcs["org"]["aliases"]) == {"nrcs", "nepal red cross"}
+    assert nrcs["org"]["local_script"] == "नेपाल रेड क्रस सोसाइटी"
+
+
+async def test_org_ref_aliases_are_empty_not_null_when_an_organisation_has_none(client: AsyncClient):
+    """A zero-statement organisation with no org_alias rows: the array_agg subquery returns
+    Postgres NULL, which must become [], not surface as null in the response."""
+    r = await client.get(f"/v1/disasters/{DISASTER_GLIDE_ID}/responders")
+    no_alias_org = next(item for item in r.json() if item["org"] and item["org"]["org_id"] == WORLD_VISION_ORG_ID)
+    assert no_alias_org["org"]["aliases"] == []
+    assert no_alias_org["org"]["local_script"] is None
+
+
+async def test_unmatched_organisation_has_no_alias_data(client: AsyncClient):
+    """org is null for an unidentified statement, so there is no organisation to look aliases up
+    against - the correlated subqueries naturally return nothing rather than needing a special case."""
+    r = await client.get(f"/v1/disasters/{DISASTER_GLIDE_ID}/responders")
+    unmatched = next(item for item in r.json() if item["org"] is None)
+    assert unmatched["org"] is None
+
+
+async def test_a_hand_researched_statement_with_no_quote_is_rendered_not_filtered(client: AsyncClient):
+    """5 of the 44 hand-researched responses have no quotable sentence. quote is null on the
+    StatementOut, not a missing statement: this is a real, sourced response, and dropping it would
+    lose exactly the evidence the board exists to show."""
+    r = await client.get(f"/v1/disasters/{DISASTER_GLIDE_ID}/responders")
+    nrcs = next(item for item in r.json() if item["org"] and item["org"]["org_id"] == NRCS_ORG_ID)
+    quotes = {s["quote"] for s in nrcs["statements"]}
+    assert None in quotes
+    hand_researched = next(s for s in nrcs["statements"] if s["quote"] is None)
+    assert hand_researched["activity_type"] == "cash_assistance"
+    assert hand_researched["source"]["verification"] == "third_party_reported"
+    assert nrcs["counts"]["statements"] == 2

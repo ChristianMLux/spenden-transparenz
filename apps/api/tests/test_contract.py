@@ -14,6 +14,7 @@ import pytest
 from app.schemas import Datum, serialise_datum
 from core.models import OrgDatum
 from httpx import ASGITransport, AsyncClient
+from pydantic import ValidationError
 from sqlalchemy import event
 from tests.conftest import DISASTER_GLIDE_ID, NRCS_ORG_ID
 
@@ -66,7 +67,9 @@ def test_serialise_datum_value_has_no_gap_reason():
 
 
 def test_datum_model_dump_always_has_the_full_key_set():
-    """Regression guard for the shape itself, independent of the serialiser."""
+    """Regression guard for the shape itself, independent of the serialiser. Every field is
+    required-but-nullable now (no default), so an OpenAPI client cannot read "may be absent" out
+    of the schema - every field has to be passed explicitly to construct one at all."""
     expected = {
         "value",
         "is_gap",
@@ -81,7 +84,30 @@ def test_datum_model_dump_always_has_the_full_key_set():
         "verification",
         "gap_reason",
     }
-    assert set(Datum(is_gap=True, verification="unverified").model_dump()) == expected
+    datum = Datum(
+        value=None,
+        is_gap=True,
+        value_type=None,
+        currency=None,
+        fiscal_year=None,
+        scope=None,
+        source_url=None,
+        retrieved_at=None,
+        quote=None,
+        note="not found",
+        verification="unverified",
+        gap_reason="searched_not_found",
+    )
+    assert set(datum.model_dump()) == expected
+
+
+def test_datum_fields_are_required_not_defaulted():
+    """A default makes a field optional in the generated OpenAPI schema, which tells a client the
+    key may be absent - and a missing key and a null value render differently. Constructing a
+    Datum without every field must fail, proving the contract promises the key rather than merely
+    happening to satisfy it."""
+    with pytest.raises(ValidationError):
+        Datum(is_gap=True, verification="unverified")
 
 
 # --- Task C-8: the contract tests that carry the product, run against the seeded database -----
@@ -118,6 +144,20 @@ async def test_a_known_gap_is_explicit(client: AsyncClient):
     assert income["is_gap"] is True
     assert income["note"]
     assert income["gap_reason"]
+
+
+async def test_statements_stream_renders_a_hand_researched_statement_with_no_quote(client: AsyncClient):
+    """The same rule holds on /v1/statements, not just the board: a hand-researched response with
+    no quotable sentence is a real, sourced response and must appear with quote: null, never be
+    dropped for lacking one."""
+    r = await client.get(f"/v1/statements?glide_id={DISASTER_GLIDE_ID}&org_id={NRCS_ORG_ID}")
+    assert r.status_code == 200
+    statements = r.json()
+    assert len(statements) == 2
+    quotes = {s["quote"] for s in statements}
+    assert None in quotes
+    hand_researched = next(s for s in statements if s["quote"] is None)
+    assert "quote" in hand_researched  # the key stays present even when the value is null
 
 
 ALL_GET_PATHS = [
