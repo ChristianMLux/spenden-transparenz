@@ -455,3 +455,89 @@ async def test_a_write_the_database_refuses_costs_that_report_not_the_whole_run(
     assert run.status == "succeeded"
     assert run.rows_written == 1
     assert run.rows_rejected == 2
+
+
+async def test_a_quote_too_long_for_the_table_never_becomes_a_row(job_sessionmaker, session, monkeypatch):
+    """The table forbids a quote over 40 words on EVERY row, whatever its status, and gate() marks
+    an over-long quote rejected rather than dropping it - so the row gate() hands back is one the
+    table refuses. A live run hit this on a 55-word French UNICEF sentence and lost the rest of the
+    batch to a CheckViolationError.
+
+    A claim the table cannot store does not become a row at all. It is counted as rejected, the
+    same way a claim with no organisation name is: invisible in the rejection rate is the one place
+    it must not be.
+    """
+    long_quote = " ".join(["mot"] * 41)
+    body = f"Prefix. {long_quote} Suffix."
+    async with job_sessionmaker() as write:
+        await _make_report(write, url="https://example.org/1", body=body)
+
+    stub = _StubExtract([ExtractionResult(claims=[_claim(quote=long_quote)])])
+    monkeypatch.setattr(llm_client, "extract", stub)
+
+    await extract_statements(job_sessionmaker)
+
+    assert (await session.execute(select(func.count(ResponseStatement.id)))).scalar() == 0
+    run = await _latest_run(session)
+    assert run.status == "succeeded"
+    assert run.rows_rejected == 1
+
+
+async def test_a_forty_word_quote_is_still_stored(job_sessionmaker, session, monkeypatch):
+    """The guard against over-long quotes must not shorten what the gate accepts. Forty words is
+    the limit, not one word under it."""
+    quote = " ".join(["mot"] * 40)
+    async with job_sessionmaker() as write:
+        await _make_report(write, url="https://example.org/1", body=f"Prefix. {quote} Suffix.")
+
+    stub = _StubExtract([ExtractionResult(claims=[_claim(quote=quote)])])
+    monkeypatch.setattr(llm_client, "extract", stub)
+
+    await extract_statements(job_sessionmaker)
+
+    rows = (await session.execute(select(ResponseStatement))).scalars().all()
+    assert len(rows) == 1 and rows[0].status == "auto"
+
+
+async def test_a_refused_write_does_not_poison_the_reports_that_follow_it(job_sessionmaker, session, monkeypatch):
+    """Rolling back expires every ORM object in the session, so touching one afterwards - even
+    just to read report.id for a log line - emits a SELECT from a synchronous context and raises
+    MissingGreenlet. That is how the recovery path added for a refused write ended a live run two
+    reports later, having already paid for both LLM calls.
+
+    Nothing after a rollback may touch an ORM attribute. The loop carries plain values.
+    """
+    body_one = "IFRC released emergency funding for the response."
+    body_two = "Nepal Red Cross distributed 500 tarpaulins in Rasuwa."
+    async with job_sessionmaker() as write:
+        await _make_report(write, url="https://example.org/1", body=body_one)
+        await _make_report(write, url="https://example.org/2", body=body_two)
+
+    stub = _StubExtract(
+        [
+            ExtractionResult(claims=[_claim(quote=body_one)]),
+            ExtractionResult(claims=[_claim(org_name_raw="Nepal Red Cross", quote=body_two)]),
+        ]
+    )
+    monkeypatch.setattr(llm_client, "extract", stub)
+
+    real_upsert = extract_module._upsert_statements
+    calls = {"n": 0}
+
+    async def refuse_the_first_write(session_, rows):
+        calls["n"] += 1
+        if calls["n"] == 1:
+            raise IntegrityError("INSERT ...", {}, Exception("violates check constraint"))
+        return await real_upsert(session_, rows)
+
+    monkeypatch.setattr(extract_module, "_upsert_statements", refuse_the_first_write)
+
+    await extract_statements(job_sessionmaker)
+
+    run = await _latest_run(session)
+    assert run.status == "succeeded"
+    rows = (await session.execute(select(ResponseStatement))).scalars().all()
+    assert [r.org_name_raw for r in rows] == ["Nepal Red Cross"]
+
+    attempts = (await session.execute(select(Report.extraction_attempts).order_by(Report.id))).scalars().all()
+    assert attempts == [1, 1]
