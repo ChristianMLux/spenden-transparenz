@@ -1,8 +1,16 @@
-"""Prompt v2 and the tool schema for extraction.
+"""Prompt v3 and the response schema for extraction.
 
 The model reads one report's body text and returns zero or more statements: an organisation did
-something, somewhere, on some date, for some amount. The tool schema mirrors response_statement so
-a claim never needs reshaping before it reaches gate() and the database.
+something, somewhere, on some date, for some amount. The schema mirrors response_statement so a
+claim never needs reshaping before it reaches gate() and the database.
+
+The schema is delivered as a structured output (`response_format`), not as a tool. Both were
+measured against this model on this route: asked for the same body three times each, tool calling
+returned `statements` as a JSON *string* on 3 of 3 calls - the array type in the schema was not
+honoured, and neither was `required`, so the "strict" flag bought nothing and claims arrived with
+fields missing. `response_format` returned a real list on 3 of 3 calls with all nine properties
+present on every item. Enforcement is the whole point of declaring a schema; the delivery mechanism
+that actually enforces it is the one to use.
 """
 
 from __future__ import annotations
@@ -18,7 +26,7 @@ from core import enums
 # labelled with a prompt that no longer exists and never re-extract them.
 PROMPT_VERSION = "v3"
 
-STATEMENT_TOOL_NAME = "record_response_statements"
+RESPONSE_SCHEMA_NAME = "response_statements"
 
 SYSTEM_PROMPT = """You extract organisational disaster-response statements from a single ReliefWeb \
 report for a donor-transparency product. You are not writing a summary; you are recording claims \
@@ -61,7 +69,7 @@ Published: {published_at}
 
 {body}"""
 
-_STATEMENT_SCHEMA = {
+STATEMENT_SCHEMA = {
     "type": "object",
     "properties": {
         "org_name_raw": {
@@ -111,9 +119,10 @@ _STATEMENT_SCHEMA = {
     # being absent - which is also the honest encoding: "the text states no date" is a fact about
     # the report, not a missing key.
     #
-    # This exists because a live run returned 18 of 41 claims missing a required field. The schema
-    # already listed `required`; nothing enforced it. A claim with no quote is a claim with no
-    # evidence, and the pipeline should never have to decide what to do with one.
+    # This exists because a live run returned 18 of 41 claims missing a required field, and a
+    # second returned 13 of 57. The schema already listed `required` both times; advertising it
+    # through a tool call did not enforce it. A claim with no quote is a claim with no evidence,
+    # and the pipeline should never have to decide what to do with one.
     "required": [
         "org_name_raw",
         "activity",
@@ -128,24 +137,26 @@ _STATEMENT_SCHEMA = {
     "additionalProperties": False,
 }
 
-STATEMENT_TOOL = {
-    "type": "function",
-    "function": {
-        "name": STATEMENT_TOOL_NAME,
-        "description": "Record every organisational disaster-response statement found in this report.",
-        # strict makes the provider enforce the schema instead of merely advertising it.
+STATEMENTS_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "statements": {
+            "type": "array",
+            "items": STATEMENT_SCHEMA,
+        }
+    },
+    "required": ["statements"],
+    "additionalProperties": False,
+}
+
+RESPONSE_FORMAT = {
+    "type": "json_schema",
+    "json_schema": {
+        # strict makes the provider enforce the schema instead of merely advertising it - see the
+        # module docstring for what happened when the same schema was advertised through a tool.
+        "name": RESPONSE_SCHEMA_NAME,
         "strict": True,
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "statements": {
-                    "type": "array",
-                    "items": _STATEMENT_SCHEMA,
-                }
-            },
-            "required": ["statements"],
-            "additionalProperties": False,
-        },
+        "schema": STATEMENTS_SCHEMA,
     },
 }
 
