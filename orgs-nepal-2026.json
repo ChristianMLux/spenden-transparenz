@@ -108,7 +108,9 @@
      "quote": "The priority now is to reach affected communities and get assistance to people who have lost their homes, suffered injuries or have been cut off.",
      "retrieved_at": "2026-08-28",
      "verification": "third_party_reported",
-     "note": "Reported as 'nearly CHF 1 million' (~NPR 189,545,000) — approximate figure, not an exact disbursed amount. This is IFRC funding released to support NRCS, not money NRCS itself has spent/reported. Original IFRC press release (ifrc.org) returned HTTP 403 during fetch; sourced via secondary media report of the same release."
+     "note": "Reported as 'nearly CHF 1 million' (~NPR 189,545,000) — approximate figure, not an exact disbursed amount. This is IFRC funding released to support NRCS, not money NRCS itself has spent/reported. Original IFRC press release (ifrc.org) returned HTTP 403 during fetch; sourced via secondary media report of the same release.",
+     "activity_type": "funding_pledged",
+     "amount_basis": "released"
     },
     {
      "what": "Nepal Red Cross Society distributing drinking water, emergency supplies (tarpaulins, blankets, sleeping mats), first aid kits, stretchers, and body bags to flood-affected communities",
@@ -122,7 +124,9 @@
      "quote": null,
      "retrieved_at": "2026-08-28",
      "verification": "third_party_reported",
-     "note": "Specific district/municipality breakdown not given in source. Broader flood event is centered on Rasuwa and Nuwakot districts (Trishuli/Bhote Koshi river corridor)."
+     "note": "Specific district/municipality breakdown not given in source. Broader flood event is centered on Rasuwa and Nuwakot districts (Trishuli/Bhote Koshi river corridor).",
+     "activity_type": "relief_distribution",
+     "amount_basis": "reported"
     },
     {
      "what": "Nepal Red Cross Society activated its Emergency Operations Center and deployed Emergency Response Teams and volunteers for assessments and relief operations, including additional teams sent to support local branches with limited response capacity",
@@ -136,7 +140,9 @@
      "quote": null,
      "retrieved_at": "2026-08-28",
      "verification": "third_party_reported",
-     "note": "Sourced via aggregated web search summary citing this American Red Cross article; page was not independently fetched due to the research budget limit, so exact wording/date could not be confirmed directly."
+     "note": "Sourced via aggregated web search summary citing this American Red Cross article; page was not independently fetched due to the research budget limit, so exact wording/date could not be confirmed directly.",
+     "activity_type": "assessment",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -298,7 +304,9 @@
      "quote": "The priority now is to reach affected communities and get assistance to people who have lost their homes, suffered injuries or have been cut off",
      "retrieved_at": "2026-08-28",
      "verification": "third_party_reported",
-     "note": "Reported as 'nearly CHF 1 million' (approx. NPR 189.5 million) — approximate figure from news coverage, not an exact IFRC disbursement statement. Underlying disaster is centered on Rasuwa and Nuwakot districts per general reporting, but this specific DREF article did not itemize districts, so 'where' left unspecified rather than assumed."
+     "note": "Reported as 'nearly CHF 1 million' (approx. NPR 189.5 million) — approximate figure from news coverage, not an exact IFRC disbursement statement. Underlying disaster is centered on Rasuwa and Nuwakot districts per general reporting, but this specific DREF article did not itemize districts, so 'where' left unspecified rather than assumed.",
+     "activity_type": "appeal_launched",
+     "amount_basis": "appeal"
     },
     {
      "what": "IFRC launched a CHF 25 million (~USD 31 million) Emergency Appeal to fund Nepal Red Cross Society's two-year emergency response and recovery operation following the Trishuli flash floods.",
@@ -312,7 +320,9 @@
      "quote": null,
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "This is an appeal TARGET, not confirmed disbursed/raised funds. Two-year timeframe covering emergency response plus medium/long-term recovery, per IFRC press release headline and corroborating wire coverage (Free Malaysia Today, BSS News, ~USD 31 million equivalent). ifrc.org blocked direct WebFetch (HTTP 403) this session, so no verbatim quote could be pulled from the primary source; confirmed via WebSearch result snippet and independent wire-service corroboration instead."
+     "note": "This is an appeal TARGET, not confirmed disbursed/raised funds. Two-year timeframe covering emergency response plus medium/long-term recovery, per IFRC press release headline and corroborating wire coverage (Free Malaysia Today, BSS News, ~USD 31 million equivalent). ifrc.org blocked direct WebFetch (HTTP 403) this session, so no verbatim quote could be pulled from the primary source; confirmed via WebSearch result snippet and independent wire-service corroboration instead.",
+     "activity_type": "funding_pledged",
+     "amount_basis": "released"
     }
    ],
    "financial_transparency": {
@@ -511,7 +521,9 @@
      "quote": "100% of donations to the Nepal Flood Relief Fund support this response, including the emergency operating grant enabling Mountain Heart Nepal's medical teams to reach cut-off communities.",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "Grant amount not disclosed. Page is a combined situation-report and donation appeal; it does not itemize funds already disbursed vs. pledged. Districts listed are Direct Relief's stated geographic focus for this response."
+     "note": "Grant amount not disclosed. Page is a combined situation-report and donation appeal; it does not itemize funds already disbursed vs. pledged. Districts listed are Direct Relief's stated geographic focus for this response.",
+     "activity_type": "medical",
+     "amount_basis": "reported"
     },
     {
      "what": "Shared available medical inventory list with Nepal's Ministry of Health and is coordinating with partner organizations in the flood-affected region on medical needs",
@@ -525,7 +537,9 @@
      "quote": "Direct Relief is mobilizing support around potential medical needs in the region and is in communication with partner organizations.",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "Published the day of the disaster (26 Aug 2026); language describes intent/coordination ('mobilizing support', 'in communication'), not confirmed on-the-ground delivery as of publication."
+     "note": "Published the day of the disaster (26 Aug 2026); language describes intent/coordination ('mobilizing support', 'in communication'), not confirmed on-the-ground delivery as of publication.",
+     "activity_type": "funding_pledged",
+     "amount_basis": "reported"
     },
     {
      "what": "Partner hospital Dhulikhel Hospital (Kavrepalanchok) used previously pre-positioned Direct Relief field medic packs and emergency supplies to treat flood-evacuated patients",
@@ -539,7 +553,9 @@
      "quote": null,
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "No exact date given for this specific deployment beyond the general response page date. No verbatim quote captured for this activity; summarized from page content."
+     "note": "No exact date given for this specific deployment beyond the general response page date. No verbatim quote captured for this activity; summarized from page content.",
+     "activity_type": "medical",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -701,7 +717,9 @@
      "quote": "Hundreds, if not thousands, of people are feared to have died, with many people still missing.",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "International MSF statement dated 27 Aug 2026; describes an assessment mission (shelter, hygiene/water, sanitation, trauma support readiness), not yet a running program. No field hospital, surgical team, or cargo-plane details were present in this specific article."
+     "note": "International MSF statement dated 27 Aug 2026; describes an assessment mission (shelter, hygiene/water, sanitation, trauma support readiness), not yet a running program. No field hospital, surgical team, or cargo-plane details were present in this specific article.",
+     "activity_type": "assessment",
+     "amount_basis": "reported"
     },
     {
      "what": "MSF Switzerland (Operational Centre Geneva, OCG) team engaging with local health facilities in flood-affected areas to assess whether MSF can provide support",
@@ -722,7 +740,9 @@
      "quote": "The MSF team arrived in Nepal less than 24 hours after the floods struck, and we are engaging with health facilities to assess if we can support.",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "Published on the MSF Switzerland (OCG) newsroom, confirming OCG as the operational section engaged in this response as of 27 Aug 2026."
+     "note": "Published on the MSF Switzerland (OCG) newsroom, confirming OCG as the operational section engaged in this response as of 27 Aug 2026.",
+     "activity_type": "assessment",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -903,7 +923,9 @@
      "quote": "Children's lives changed in an instant. Some have lost their homes and belongings and a sense of security.",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "Delivering entity is stated as 'Save the Children in Nepal' (the SCI-run country office). This describes an active first-phase distribution plus a parallel fundraising appeal (savethechildren.net/donate/nepal-floods, unreachable to fetch directly, HTTP 403); no monetary disbursement figure has been published yet."
+     "note": "Delivering entity is stated as 'Save the Children in Nepal' (the SCI-run country office). This describes an active first-phase distribution plus a parallel fundraising appeal (savethechildren.net/donate/nepal-floods, unreachable to fetch directly, HTTP 403); no monetary disbursement figure has been published yet.",
+     "activity_type": "relief_distribution",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -1067,7 +1089,9 @@
      "quote": "Pre-positioned supplies will be distributed to the hardest-hit communities, including medical tents, bed nets and newborn kits, and ready-to-use therapeutic food for children with acute malnutrition.",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "UNICEF Asia-Pacific press release on the 26 Aug 2026 Trishuli/Bhote Koshi flash floods (17,000+ children affected). Direct WebFetch to unicef.org returned HTTP 403 (site blocks automated fetch); content taken from the search-engine index snippet of this UNICEF URL, not independently re-verified against the live page."
+     "note": "UNICEF Asia-Pacific press release on the 26 Aug 2026 Trishuli/Bhote Koshi flash floods (17,000+ children affected). Direct WebFetch to unicef.org returned HTTP 403 (site blocks automated fetch); content taken from the search-engine index snippet of this UNICEF URL, not independently re-verified against the live page.",
+     "activity_type": "relief_distribution",
+     "amount_basis": "reported"
     },
     {
      "what": "Sent a UNICEF team to Nuwakot district to assess the humanitarian situation and support relief operations for displaced populations",
@@ -1081,7 +1105,9 @@
      "quote": "Assessing the devastation: UNICEF teams arrive in Nuwakot as Nepal flood relief operations shift into high gear",
      "retrieved_at": "2026-08-28",
      "verification": "third_party_reported",
-     "note": "Third-party news wire (ANI) report; direct WebFetch to this URL also returned HTTP 403, content taken from the search-engine index snippet."
+     "note": "Third-party news wire (ANI) report; direct WebFetch to this URL also returned HTTP 403, content taken from the search-engine index snippet.",
+     "activity_type": "assessment",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -1244,7 +1270,9 @@
      "quote": "WFP had already dispatched nutrient-packed ready-to-eat food rations (high-energy biscuits) for hundreds of affected households that do not have immediate access to cooking facilities",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "Article states at least 10,000 households are in need of immediate relief and WFP 'stands ready to scale up as needed'; no dollar amount disclosed yet."
+     "note": "Article states at least 10,000 households are in need of immediate relief and WFP 'stands ready to scale up as needed'; no dollar amount disclosed yet.",
+     "activity_type": "relief_distribution",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -1407,7 +1435,9 @@
      "quote": "The immediate priorities are urgent medical care, safe shelter, clean water, food, and essential supplies.",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "Press release dated 26 Aug 2026 (day of the disaster). Describes coordination and needs assessment via Nepal Country Director Suraj Sigdel; no confirmed distribution activity, funding amount, or specific district-level location yet as of retrieval."
+     "note": "Press release dated 26 Aug 2026 (day of the disaster). Describes coordination and needs assessment via Nepal Country Director Suraj Sigdel; no confirmed distribution activity, funding amount, or specific district-level location yet as of retrieval.",
+     "activity_type": "coordination",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -1570,7 +1600,9 @@
      "quote": "Project HOPE is on the ground in Nepal, assessing health and humanitarian conditions and mobilizing a response.",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "Article published 27.08.2026, titled 'Flash Floods Devastate Nepal: How to Help'; no specific districts, dates of individual activities, or dollar amounts stated."
+     "note": "Article published 27.08.2026, titled 'Flash Floods Devastate Nepal: How to Help'; no specific districts, dates of individual activities, or dollar amounts stated.",
+     "activity_type": "assessment",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -1727,7 +1759,9 @@
      "quote": "provides local organizations with flexible funding to meet urgent needs, including search and rescue, emergency medical care, shelter, food, clean water",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "amount = raised to date, not disbursed; no grantee organisations named on the fund page; disaster-fund fee 15 % (12 % + 3 %). Page is Cloudflare-blocked for plain fetchers; retrieved via text-extraction proxy by the case-study agent."
+     "note": "amount = raised to date, not disbursed; no grantee organisations named on the fund page; disaster-fund fee 15 % (12 % + 3 %). Page is Cloudflare-blocked for plain fetchers; retrieved via text-extraction proxy by the case-study agent.",
+     "activity_type": "appeal_launched",
+     "amount_basis": "raised"
     }
    ],
    "financial_transparency": {
@@ -1897,7 +1931,9 @@
      "quote": "Oxfam is closely following the situation and is in contact with our partners on the ground to support the emerging humanitarian needs.",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "This is an appeal/fundraising page describing intended response priorities, not a report of completed distributions or a disbursed amount. No monetary commitment or delivered-aid figure is stated for this flood."
+     "note": "This is an appeal/fundraising page describing intended response priorities, not a report of completed distributions or a disbursed amount. No monetary commitment or delivered-aid figure is stated for this flood.",
+     "activity_type": "appeal_launched",
+     "amount_basis": "appeal"
     }
    ],
    "financial_transparency": {
@@ -2079,7 +2115,9 @@
      "quote": "CARE Nepal stands ready to support the government and our partners with immediate relief as well as long-term support for recovery.",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "Statement attributed to Mona Sherpa, CARE Nepal Country Director. Preparedness-stage language ('stands ready', 'preparing to mobilise') — no confirmed disbursement of aid, cash, or funds and no monetary amount given."
+     "note": "Statement attributed to Mona Sherpa, CARE Nepal Country Director. Preparedness-stage language ('stands ready', 'preparing to mobilise') — no confirmed disbursement of aid, cash, or funds and no monetary amount given.",
+     "activity_type": "assessment",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -2262,7 +2300,9 @@
      "quote": "Our hearts are with those who have lost loved ones, those who remain missing, and communities whose homes and livelihoods have been affected.",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "Readiness/appeal announcement, not confirmed disbursement. Published same day as the disaster; article's casualty count (162 dead, 400+ missing) is an early figure since superseded by the ~389 dead/900+ missing toll — no more-current WVI-specific update was found within this session's budget."
+     "note": "Readiness/appeal announcement, not confirmed disbursement. Published same day as the disaster; article's casualty count (162 dead, 400+ missing) is an early figure since superseded by the ~389 dead/900+ missing toll — no more-current WVI-specific update was found within this session's budget.",
+     "activity_type": "presence_declared",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -2436,7 +2476,9 @@
      "quote": "Plan International is responding to the disaster affecting communities across Timure, Rasuwagadhi and Syabrubesi in Rasuwa, Nuwakot and Dhading",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "Solidarity/situation statement, not confirmation of an appeal amount or disbursement. Quote relayed via search-engine extraction; direct WebFetch of this URL returned HTTP 403, so exact verbatim wording is not independently confirmed — treat with caution."
+     "note": "Solidarity/situation statement, not confirmation of an appeal amount or disbursement. Quote relayed via search-engine extraction; direct WebFetch of this URL returned HTTP 403, so exact verbatim wording is not independently confirmed — treat with caution.",
+     "activity_type": "presence_declared",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -2770,7 +2812,9 @@
      "quote": "We are assessing urgent needs and coordinating with government and humanitarian partners to support affected communities.",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "Appeal/assessment-stage statement from a 'RASUWA FLOOD RESPONSE' banner on the org's homepage — no amounts, dates, or beneficiary numbers given. The dedicated flood page linked from this banner (habitatnepal.org/rasuwa-flood-2026) returned HTTP 404. Banner carries no visible publish date; presumed post-26 Aug 2026 based on context but not independently confirmed."
+     "note": "Appeal/assessment-stage statement from a 'RASUWA FLOOD RESPONSE' banner on the org's homepage — no amounts, dates, or beneficiary numbers given. The dedicated flood page linked from this banner (habitatnepal.org/rasuwa-flood-2026) returned HTTP 404. Banner carries no visible publish date; presumed post-26 Aug 2026 based on context but not independently confirmed.",
+     "activity_type": "assessment",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -3526,7 +3570,9 @@
      "quote": "We are launching SOS Nepal, a fundraiser to help those affected by devastating floods",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "Appeal launch (fundraiser) dated 26 Aug 2026 shown on the org's homepage news feed — not confirmed evidence of funds disbursed or district-level activity. The direct article permalink (/sos-nepal) returned 404; only the homepage listing was accessible, so source_url is a homepage news-feed reference rather than a stable article link."
+     "note": "Appeal launch (fundraiser) dated 26 Aug 2026 shown on the org's homepage news feed — not confirmed evidence of funds disbursed or district-level activity. The direct article permalink (/sos-nepal) returned 404; only the homepage listing was accessible, so source_url is a homepage news-feed reference rather than a stable article link.",
+     "activity_type": "appeal_launched",
+     "amount_basis": "appeal"
     }
    ],
    "financial_transparency": {
@@ -4044,7 +4090,9 @@
      "quote": "connects medical care and outreach to the country's hardest-to-reach areas",
      "retrieved_at": "2026-08-28",
      "verification": "third_party_reported",
-     "note": "described by funder (Direct Relief), not found on Mountain Heart Nepal's own site/social media"
+     "note": "described by funder (Direct Relief), not found on Mountain Heart Nepal's own site/social media",
+     "activity_type": "medical",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -4374,7 +4422,9 @@
      "quote": "local partners including Community Self Reliance Centre (CSRC)",
      "retrieved_at": "2026-08-28",
      "verification": "third_party_reported",
-     "note": "role described by CARE Nepal, not confirmed on CSRC's own site; no CSRC-authored statement about the flood was found"
+     "note": "role described by CARE Nepal, not confirmed on CSRC's own site; no CSRC-authored statement about the flood was found",
+     "activity_type": "coordination",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -4539,7 +4589,9 @@
      "quote": "A devastating flood originating from the China-Tibet border has caused significant loss of life and property across Rasuwa",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "an appeal for support, not confirmation of a completed distribution"
+     "note": "an appeal for support, not confirmation of a completed distribution",
+     "activity_type": "appeal_launched",
+     "amount_basis": "appeal"
     }
    ],
    "financial_transparency": {
@@ -4711,7 +4763,9 @@
      "quote": "A team of relief workers has already reached Nuwakot, where they are assessing the situation on the ground, identifying urgent needs",
      "retrieved_at": "2026-08-28",
      "verification": "third_party_reported",
-     "note": "source (organiser.org) is an RSS/HSS-affiliated Indian outlet; corroborated independently by Nepali outlet dharananews.com"
+     "note": "source (organiser.org) is an RSS/HSS-affiliated Indian outlet; corroborated independently by Nepali outlet dharananews.com",
+     "activity_type": "relief_distribution",
+     "amount_basis": "reported"
     },
     {
      "what": "Began rescue work in a flood-affected area, per Nepali press",
@@ -4725,7 +4779,9 @@
      "quote": "बाढी प्रभावित क्षेत्रमा हिन्दू स्वयंसेवक संघ नेपालद्वारा उद्धार कार्य प्रारम्भ",
      "retrieved_at": "2026-08-28",
      "verification": "third_party_reported",
-     "note": null
+     "note": null,
+     "activity_type": "search_and_rescue",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -4891,7 +4947,9 @@
      "quote": "हिन्दू स्वयंसेवक संघ नेपाल, विश्व हिन्दू परिषद् नेपाल लगायतका संस्थाका स्वयंसेवकहरू उद्धार, सेवा तथा राहत कार्यका लागि प्रभावित क्षेत्रमा परिचालित",
      "retrieved_at": "2026-08-28",
      "verification": "third_party_reported",
-     "note": null
+     "note": null,
+     "activity_type": "search_and_rescue",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -5055,7 +5113,9 @@
      "quote": "preparing to receive injured patients evacuated from the hardest-hit communities",
      "retrieved_at": "2026-08-28",
      "verification": "third_party_reported",
-     "note": "described via funder Direct Relief; the hospital's own site could not be reached this session"
+     "note": "described via funder Direct Relief; the hospital's own site could not be reached this session",
+     "activity_type": "medical",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -5220,7 +5280,9 @@
      "quote": "सहयोग तथा राहतका लागि हरसम्भव सहयोग, समन्वय र सहकार्यका लागि ओरेक प्रतिवद्धता व्यक्त गर्दछ",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "an appeal/commitment statement calling on others to unite, not confirmation of a completed distribution — no items distributed or people reached are stated"
+     "note": "an appeal/commitment statement calling on others to unite, not confirmation of a completed distribution — no items distributed or people reached are stated",
+     "activity_type": "appeal_launched",
+     "amount_basis": "appeal"
     }
    ],
    "financial_transparency": {
@@ -5385,7 +5447,9 @@
      "quote": "गैरआवासीय नेपाली संघ (एनआरएनए)ले तत्काल ५ करोड रुपैयाँ सहयोग गर्ने घोषणा गरेको थियो",
      "retrieved_at": "2026-08-28",
      "verification": "third_party_reported",
-     "note": "amount is a pledge/announcement, not confirmed disbursement"
+     "note": "amount is a pledge/announcement, not confirmed disbursement",
+     "activity_type": "funding_pledged",
+     "amount_basis": "pledged"
     },
     {
      "what": "Sent a team with relief materials (food, health supplies, medicine) to affected areas",
@@ -5400,7 +5464,9 @@
      "quote": "रसुवा बाढी : एनआरएनए टोली राहत लिएर जाने",
      "retrieved_at": "2026-08-28",
      "verification": "third_party_reported",
-     "note": null
+     "note": null,
+     "activity_type": "relief_distribution",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -5561,7 +5627,9 @@
      "quote": "to support relief and rehabilitation efforts for citizens affected by natural disasters",
      "retrieved_at": "2026-08-28",
      "verification": "third_party_reported",
-     "note": "club president Govindhprasad Bhusal quoted; club is based in Rupandehi district, outside the flood zone itself"
+     "note": "club president Govindhprasad Bhusal quoted; club is based in Rupandehi district, outside the flood zone itself",
+     "activity_type": "funding_pledged",
+     "amount_basis": "pledged"
     }
    ],
    "financial_transparency": {
@@ -5727,7 +5795,9 @@
      "quote": null,
      "retrieved_at": "2026-08-28",
      "verification": "third_party_reported",
-     "note": "the fetch tool returned an English paraphrase ('reach flood-affected areas and directly participate in rescue, relief distribution and necessary assistance') rather than an extracted verbatim Nepali sentence, so no quote field is recorded; only a phone contact (9851269100) was given, no website or social media, no registration status"
+     "note": "the fetch tool returned an English paraphrase ('reach flood-affected areas and directly participate in rescue, relief distribution and necessary assistance') rather than an extracted verbatim Nepali sentence, so no quote field is recorded; only a phone contact (9851269100) was given, no website or social media, no registration status",
+     "activity_type": "presence_declared",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -5914,7 +5984,9 @@
      "quote": "Menschen, die ihr Zuhause durch die Fluten verloren haben, erhalten dringend benötigte Hilfsgüter wie Trinkwasser, Planen, Decken und Schlafmatten.",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "No page date/timestamp; no distribution quantities or disbursed amounts published; donation account given (IBAN DE63 3702 0500 0005 0233 07) but that is a call, not a disbursement"
+     "note": "No page date/timestamp; no distribution quantities or disbursed amounts published; donation account given (IBAN DE63 3702 0500 0005 0233 07) but that is a call, not a disbursement",
+     "activity_type": "relief_distribution",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -6087,7 +6159,9 @@
      "quote": "100.000 Euro aus unserem Nothilfefonds",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "Described as \"in einem ersten Schritt\" (as a first step) — a fund allocation, not confirmed on-the-ground distribution; page gives no distribution details"
+     "note": "Described as \"in einem ersten Schritt\" (as a first step) — a fund allocation, not confirmed on-the-ground distribution; page gives no distribution details",
+     "activity_type": "funding_pledged",
+     "amount_basis": "released"
     }
    ],
    "financial_transparency": {
@@ -6267,7 +6341,9 @@
      "quote": "Aus Sicherheitsgründen mussten wir unsere Aktivitäten dort vorübergehend pausieren.",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "This is a pause of existing programming, not yet a described emergency-response activity; no relief distribution described on the page as of retrieval"
+     "note": "This is a pause of existing programming, not yet a described emergency-response activity; no relief distribution described on the page as of retrieval",
+     "activity_type": "presence_declared",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -6431,7 +6507,9 @@
      "quote": "Sturzflut in Nepal: \"Aktion Deutschland Hilft\" stellt 100.000 Euro bereit / Hilfsorganisationen im Bündnis starten Nothilfe und verschaffen sich Zugang zu der betroffenen Region",
      "retrieved_at": "2026-08-28",
      "verification": "third_party_reported",
-     "note": "Donation account: IBAN DE62 3702 0500 0000 1020 30, keyword \"Flut Nepal\" (per aktion-deutschland-hilft.de). Headline figure of 100,000 euros is from a press-portal release title, not yet cross-checked against ADH's own site copy for this specific Trishuli flood (2026); ADH's own flood page fetched returned older 2015 South Asia content, so this claim rests on the press-release headline only"
+     "note": "Donation account: IBAN DE62 3702 0500 0000 1020 30, keyword \"Flut Nepal\" (per aktion-deutschland-hilft.de). Headline figure of 100,000 euros is from a press-portal release title, not yet cross-checked against ADH's own site copy for this specific Trishuli flood (2026); ADH's own flood page fetched returned older 2015 South Asia content, so this claim rests on the press-release headline only",
+     "activity_type": "appeal_launched",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -6621,7 +6699,9 @@
      "quote": "Caritas international stellt 50.000 Euro Soforthilfe bereit.",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "Second quote: \"Caritas Nepal plant Unterstützung mit Lebensmitteln und den Betrieb von Gemeinschaftsküchen, Haushaltwaren, provisorischen Unterkünften, Solarlampen, temporären Lernzentren sowie psychosozialer Unterstützung.\" — this is a plan (\"plant\"), not yet confirmed disbursement; access to some areas remains restricted per the page"
+     "note": "Second quote: \"Caritas Nepal plant Unterstützung mit Lebensmitteln und den Betrieb von Gemeinschaftsküchen, Haushaltwaren, provisorischen Unterkünften, Solarlampen, temporären Lernzentren sowie psychosozialer Unterstützung.\" — this is a plan (\"plant\"), not yet confirmed disbursement; access to some areas remains restricted per the page",
+     "activity_type": "funding_pledged",
+     "amount_basis": "released"
     }
    ],
    "financial_transparency": {
@@ -6801,7 +6881,9 @@
      "quote": "Nothilfe wird vorbereitet",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "Page explicitly frames this as preparatory (\"Nothilfe wird vorbereitet\", \"prüfen erste Hilfsmaßnahmen\") — no distribution or amount confirmed yet; page last-updated date 28.08.2026"
+     "note": "Page explicitly frames this as preparatory (\"Nothilfe wird vorbereitet\", \"prüfen erste Hilfsmaßnahmen\") — no distribution or amount confirmed yet; page last-updated date 28.08.2026",
+     "activity_type": "assessment",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -7272,7 +7354,9 @@
      "quote": "nach bisherigem Stand niemand aus unseren Projekten unmittelbar von der Katastrophe betroffen ist",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "This is a donation-collection appeal (\"Fluthilfe Nepal\") coordinated via partner SDA; no confirmed distribution or amount collected/disbursed found"
+     "note": "This is a donation-collection appeal (\"Fluthilfe Nepal\") coordinated via partner SDA; no confirmed distribution or amount collected/disbursed found",
+     "activity_type": "presence_declared",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -7428,7 +7512,9 @@
      "quote": "Hilfe von außen sehr, sehr notwendig",
      "retrieved_at": "2026-08-28",
      "verification": "third_party_reported",
-     "note": "Interview quote via ZDF, not the org's own site; the doctor-airlift detail was described by Deetjen but ZDF's summary does not specify which organisation coordinates the flights, so this is reported cautiously as Back to Life's stated involvement, not a fully independent confirmation. No amount or precise location given."
+     "note": "Interview quote via ZDF, not the org's own site; the doctor-airlift detail was described by Deetjen but ZDF's summary does not specify which organisation coordinates the flights, so this is reported cautiously as Back to Life's stated involvement, not a fully independent confirmation. No amount or precise location given.",
+     "activity_type": "medical",
+     "amount_basis": "reported"
     }
    ],
    "financial_transparency": {
@@ -7587,7 +7673,9 @@
      "quote": "Versorgung besonders verletzlicher Haushalte mit Notunterkünften, Hygieneartikeln, Trinkwasser und anderen lebenswichtigen Gütern",
      "retrieved_at": "2026-08-28",
      "verification": "self_reported",
-     "note": "Press release dated 27.08.2026, 11:02. Working with local partner organisations and Alliance2015 network partners. This is a fund allocation plus assessment-team deployment, described by Helvetas as preparing (\"bereitet ... vor\") emergency aid, not yet a confirmed completed distribution"
+     "note": "Press release dated 27.08.2026, 11:02. Working with local partner organisations and Alliance2015 network partners. This is a fund allocation plus assessment-team deployment, described by Helvetas as preparing (\"bereitet ... vor\") emergency aid, not yet a confirmed completed distribution",
+     "activity_type": "funding_pledged",
+     "amount_basis": "released"
     }
    ],
    "financial_transparency": {

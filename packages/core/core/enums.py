@@ -78,6 +78,7 @@ ACTIVITY_TYPE = (
     "cash_assistance",
     "food",
     "logistics",
+    "coordination",
     "assessment",
     "appeal_launched",
     "funding_pledged",

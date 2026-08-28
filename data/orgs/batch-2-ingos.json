@@ -98,7 +98,9 @@
         "quote": "Oxfam is closely following the situation and is in contact with our partners on the ground to support the emerging humanitarian needs.",
         "retrieved_at": "2026-08-28",
         "verification": "self_reported",
-        "note": "This is an appeal/fundraising page describing intended response priorities, not a report of completed distributions or a disbursed amount. No monetary commitment or delivered-aid figure is stated for this flood."
+        "note": "This is an appeal/fundraising page describing intended response priorities, not a report of completed distributions or a disbursed amount. No monetary commitment or delivered-aid figure is stated for this flood.",
+        "activity_type": "appeal_launched",
+        "amount_basis": "appeal"
       }
     ],
     "financial_transparency": {
@@ -280,7 +282,9 @@
         "quote": "CARE Nepal stands ready to support the government and our partners with immediate relief as well as long-term support for recovery.",
         "retrieved_at": "2026-08-28",
         "verification": "self_reported",
-        "note": "Statement attributed to Mona Sherpa, CARE Nepal Country Director. Preparedness-stage language ('stands ready', 'preparing to mobilise') — no confirmed disbursement of aid, cash, or funds and no monetary amount given."
+        "note": "Statement attributed to Mona Sherpa, CARE Nepal Country Director. Preparedness-stage language ('stands ready', 'preparing to mobilise') — no confirmed disbursement of aid, cash, or funds and no monetary amount given.",
+        "activity_type": "assessment",
+        "amount_basis": "reported"
       }
     ],
     "financial_transparency": {
@@ -463,7 +467,9 @@
         "quote": "Our hearts are with those who have lost loved ones, those who remain missing, and communities whose homes and livelihoods have been affected.",
         "retrieved_at": "2026-08-28",
         "verification": "self_reported",
-        "note": "Readiness/appeal announcement, not confirmed disbursement. Published same day as the disaster; article's casualty count (162 dead, 400+ missing) is an early figure since superseded by the ~389 dead/900+ missing toll — no more-current WVI-specific update was found within this session's budget."
+        "note": "Readiness/appeal announcement, not confirmed disbursement. Published same day as the disaster; article's casualty count (162 dead, 400+ missing) is an early figure since superseded by the ~389 dead/900+ missing toll — no more-current WVI-specific update was found within this session's budget.",
+        "activity_type": "presence_declared",
+        "amount_basis": "reported"
       }
     ],
     "financial_transparency": {
@@ -637,7 +643,9 @@
         "quote": "Plan International is responding to the disaster affecting communities across Timure, Rasuwagadhi and Syabrubesi in Rasuwa, Nuwakot and Dhading",
         "retrieved_at": "2026-08-28",
         "verification": "self_reported",
-        "note": "Solidarity/situation statement, not confirmation of an appeal amount or disbursement. Quote relayed via search-engine extraction; direct WebFetch of this URL returned HTTP 403, so exact verbatim wording is not independently confirmed — treat with caution."
+        "note": "Solidarity/situation statement, not confirmation of an appeal amount or disbursement. Quote relayed via search-engine extraction; direct WebFetch of this URL returned HTTP 403, so exact verbatim wording is not independently confirmed — treat with caution.",
+        "activity_type": "presence_declared",
+        "amount_basis": "reported"
       }
     ],
     "financial_transparency": {
@@ -971,7 +979,9 @@
         "quote": "We are assessing urgent needs and coordinating with government and humanitarian partners to support affected communities.",
         "retrieved_at": "2026-08-28",
         "verification": "self_reported",
-        "note": "Appeal/assessment-stage statement from a 'RASUWA FLOOD RESPONSE' banner on the org's homepage — no amounts, dates, or beneficiary numbers given. The dedicated flood page linked from this banner (habitatnepal.org/rasuwa-flood-2026) returned HTTP 404. Banner carries no visible publish date; presumed post-26 Aug 2026 based on context but not independently confirmed."
+        "note": "Appeal/assessment-stage statement from a 'RASUWA FLOOD RESPONSE' banner on the org's homepage — no amounts, dates, or beneficiary numbers given. The dedicated flood page linked from this banner (habitatnepal.org/rasuwa-flood-2026) returned HTTP 404. Banner carries no visible publish date; presumed post-26 Aug 2026 based on context but not independently confirmed.",
+        "activity_type": "assessment",
+        "amount_basis": "reported"
       }
     ],
     "financial_transparency": {
@@ -1727,7 +1737,9 @@
         "quote": "We are launching SOS Nepal, a fundraiser to help those affected by devastating floods",
         "retrieved_at": "2026-08-28",
         "verification": "self_reported",
-        "note": "Appeal launch (fundraiser) dated 26 Aug 2026 shown on the org's homepage news feed — not confirmed evidence of funds disbursed or district-level activity. The direct article permalink (/sos-nepal) returned 404; only the homepage listing was accessible, so source_url is a homepage news-feed reference rather than a stable article link."
+        "note": "Appeal launch (fundraiser) dated 26 Aug 2026 shown on the org's homepage news feed — not confirmed evidence of funds disbursed or district-level activity. The direct article permalink (/sos-nepal) returned 404; only the homepage listing was accessible, so source_url is a homepage news-feed reference rather than a stable article link.",
+        "activity_type": "appeal_launched",
+        "amount_basis": "appeal"
       }
     ],
     "financial_transparency": {

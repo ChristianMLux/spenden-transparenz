@@ -6,6 +6,7 @@ claims collapsing into one is the failure this whole product exists to avoid.
 """
 
 import json
+import re
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
@@ -39,9 +40,11 @@ def test_registration_items_may_also_carry_gap_reason():
 
 
 def test_the_schema_announces_its_version():
-    """gap_reason arrived in v0.2 and a nullable presence mode in v0.3; this asserts the contract
-    keeps announcing a version at all, not one particular number."""
-    assert "v0.3" in SCHEMA["title"]
+    """gap_reason arrived in v0.2, a nullable presence mode in v0.3, explicit classification in
+    v0.4. This asserts the contract keeps announcing a version at all, not one particular number -
+    the previous version of this test said exactly that in its docstring and then hardcoded v0.3,
+    so every schema change since has had to edit it."""
+    assert re.search(r"v[0-9]+[.][0-9]+", SCHEMA["title"]), SCHEMA["title"]
 
 
 def test_schema_md_documents_gap_reason():
