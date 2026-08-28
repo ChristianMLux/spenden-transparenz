@@ -1,0 +1,25 @@
+[project]
+name = "spenden-transparenz"
+version = "0.1.0"
+description = "Workspace root. Not a distributable package - it only ties the three services together."
+requires-python = ">=3.13"
+dependencies = []
+
+[tool.uv.workspace]
+members = ["packages/core", "apps/api", "pipeline"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "pytest-asyncio>=0.24",
+    "pytest-httpserver>=1.1",
+    "httpx>=0.28",
+    "jsonschema>=4.23",
+    "ruff>=0.8",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+pythonpath = [".", "apps/api"]
+testpaths = ["packages/core/tests", "apps/api/tests", "pipeline/tests"]
+filterwarnings = ["ignore::DeprecationWarning:jsonschema"]

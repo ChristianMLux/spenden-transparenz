@@ -1,0 +1,16 @@
+# Local development database. Production is Railway Postgres in EU-West.
+# Port 55432 on the host so it cannot collide with a system Postgres on 5432.
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: spenden
+      POSTGRES_PASSWORD: spenden
+      POSTGRES_DB: spenden
+    ports:
+      - "55432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U spenden"]
+      interval: 3s
+      timeout: 3s
+      retries: 20

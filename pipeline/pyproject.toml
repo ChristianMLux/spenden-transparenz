@@ -1,0 +1,19 @@
+[project]
+name = "spenden-pipeline"
+version = "0.1.0"
+description = "Idempotent ingestion jobs. Each run opens an ingestion_run and upserts on natural keys."
+requires-python = ">=3.13"
+dependencies = [
+    "sqlalchemy[asyncio]>=2.0.36",
+    "asyncpg>=0.30",
+    "psycopg[binary]>=3.2",
+    "requests>=2.32",
+    "anthropic>=0.40",
+    "jsonschema>=4.23",
+    "python-json-logger>=3.1",
+    "pydantic-settings>=2.6",
+    "spenden-core",
+]
+
+[tool.uv.sources]
+spenden-core = { workspace = true }
