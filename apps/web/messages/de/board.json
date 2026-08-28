@@ -1,1 +1,52 @@
-{}
+{
+  "scopeLine1": "Diese Seite zeigt, wer öffentlich eine Reaktion gemeldet hat.",
+  "scopeLine2": "Sie bewertet keine Organisation und empfiehlt keine Spende.",
+  "numbers": {
+    "orgs": "{count, plural, one {# Organisation} other {# Organisationen}}",
+    "statements": "{count, plural, one {# belegte Meldung} other {# belegte Meldungen}}",
+    "districts": "{count, plural, one {# Distrikt} other {# Distrikte}}",
+    "noResponse": "{count, plural, one {# ohne gefundene Reaktion} other {# ohne gefundene Reaktion}}"
+  },
+  "dataStand": "Daten-Stand {date}",
+  "sourcesLink": "Quellen und Lizenzen",
+  "tabs": {
+    "orgs": "Nach Organisation",
+    "chronological": "Chronologisch"
+  },
+  "resultCount": "{count, plural, one {# von {total} Organisation} other {# von {total} Organisationen}}",
+  "resultCountStatements": "{count, plural, one {# von {total} Meldung} other {# von {total} Meldungen}}",
+  "filters": {
+    "hint": "Alle zutreffenden auswählen",
+    "district": { "legend": "Distrikt" },
+    "hq": { "legend": "Sitz" },
+    "orgType": { "legend": "Organisationstyp" },
+    "verification": { "legend": "Beleggrad der Meldung" },
+    "search": { "legend": "Namenssuche", "label": "Name oder Kürzel suchen", "chipPrefix": "Suche" },
+    "removeSearch": "Namenssuche entfernen",
+    "sort": {
+      "label": "Sortierung",
+      "latest": "Zuletzt gemeldet",
+      "name": "A bis Z",
+      "fewestData": "Zuerst mit den wenigsten Daten"
+    },
+    "selectedHeading": "Gewählt",
+    "clearAll": "Alle Filter löschen",
+    "removeChip": "{label} entfernen",
+    "mobileOpen": "Filter ({count})",
+    "mobileClose": "Filter schließen",
+    "mobileTitle": "Filter"
+  },
+  "empty": {
+    "heading": "Keine öffentliche Reaktionsmeldung gefunden (Stand {date}).",
+    "searchedLabel": "Gesucht wurde:",
+    "searchedText": "ReliefWeb-Meldungen zur Flut, die eigene Website und nepalesische Presse."
+  },
+  "viewOrg": "Alle Angaben zu dieser Organisation ansehen",
+  "locator": {
+    "caption": "Schematischer Umriss, kein Nachweis vollständiger Abdeckung. Getönt sind die Distrikte, denen mindestens eine Aussage zugeordnet werden konnte."
+  },
+  "chronological": {
+    "reportedBy": "gemeldet von",
+    "noDate": "Ohne Datum"
+  }
+}
