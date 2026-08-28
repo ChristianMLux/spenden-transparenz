@@ -17,11 +17,23 @@
   "resultCountStatements": "{count, plural, one {# of {total} statement} other {# of {total} statements}}",
   "filters": {
     "hint": "Select all that apply",
-    "district": { "legend": "District" },
-    "hq": { "legend": "Seat" },
-    "orgType": { "legend": "Organisation type" },
-    "verification": { "legend": "Evidence grade of the statement" },
-    "search": { "legend": "Name search", "label": "Search name or acronym", "chipPrefix": "Search" },
+    "district": {
+      "legend": "District"
+    },
+    "hq": {
+      "legend": "Seat"
+    },
+    "orgType": {
+      "legend": "Organisation type"
+    },
+    "verification": {
+      "legend": "Evidence grade of the statement"
+    },
+    "search": {
+      "legend": "Name search",
+      "label": "Search name or acronym",
+      "chipPrefix": "Search"
+    },
     "removeSearch": "Remove name search",
     "sort": {
       "label": "Sort",
@@ -34,7 +46,9 @@
     "removeChip": "Remove {label}",
     "mobileOpen": "Filter ({count})",
     "mobileClose": "Close filters",
-    "mobileTitle": "Filter"
+    "mobileTitle": "Filter",
+    "more": "show {n} more",
+    "less": "show fewer"
   },
   "empty": {
     "heading": "No public response report found (as of {date}).",
@@ -42,11 +56,9 @@
     "searchedText": "ReliefWeb reports on the flood, the organisation's own website, and Nepalese press."
   },
   "viewOrg": "View all information on this organisation",
-  "locator": {
-    "caption": "A schematic outline, not proof of complete coverage. Tinted are the districts to which at least one statement could be assigned."
-  },
   "chronological": {
     "reportedBy": "reported by",
     "noDate": "No date"
-  }
+  },
+  "districtsLabel": "Districts with at least one statement:"
 }

@@ -104,10 +104,17 @@ export default async function BoardPage() {
       mobileTitle: t("filters.mobileTitle"),
       searchChipPrefix: t("filters.search.chipPrefix"),
       removeSearchLabel: t("filters.removeSearch"),
+      // Pre-formatted server-side for every count a group can hide, so the client
+      // component never needs the message catalogue.
+      moreLabels: Object.fromEntries(
+        Array.from({ length: 12 }, (_, n) => [n, t("filters.more", { n })]),
+      ),
+      moreLabelFallback: t("filters.more", { n: 1 }),
+      lessLabel: t("filters.less"),
     },
     optionLabel,
     removeChipLabel,
-    locatorCaption: t("locator.caption"),
+    districtsLabel: t("districtsLabel"),
   };
 
   // ---------------------------------------------------------------------

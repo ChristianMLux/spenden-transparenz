@@ -93,3 +93,41 @@ describe("applyFilters", () => {
     expect(elapsed).toBeLessThan(16);
   });
 });
+
+describe("hasResponse", () => {
+  it("shows exactly the organisations with no found response", () => {
+    const only = applyFilters(all, { ...EMPTY, hasResponse: false });
+    expect(only).toHaveLength(9);
+    expect(only.every((r) => r.statements.length === 0)).toBe(true);
+  });
+
+  it("shows exactly the organisations that reported something", () => {
+    const only = applyFilters(all, { ...EMPTY, hasResponse: true });
+    expect(only).toHaveLength(35);
+    expect(only.every((r) => r.statements.length > 0)).toBe(true);
+  });
+
+  it("is off by default, so nothing is hidden for lacking a response", () => {
+    expect(EMPTY.hasResponse).toBeNull();
+    const unfiltered = applyFilters(all, EMPTY);
+    expect(unfiltered).toHaveLength(44);
+    expect(unfiltered.filter((r) => r.statements.length === 0)).toHaveLength(9);
+  });
+
+  // The guard that matters. Every other filter group is statement-level, so it can
+  // legitimately exclude an organisation that reported nothing. hasResponse is the one
+  // control aimed at those organisations, and it must only ever be able to SHOW them.
+  it("can never hide an organisation for having no response", () => {
+    for (const value of [null, false] as const) {
+      const shown = applyFilters(all, { ...EMPTY, hasResponse: value });
+      expect(shown.filter((r) => r.statements.length === 0)).toHaveLength(9);
+    }
+  });
+
+  it("round-trips through search params", () => {
+    for (const value of [null, true, false] as const) {
+      const f = { ...EMPTY, hasResponse: value };
+      expect(parseFilters(serializeFilters(f)).hasResponse).toBe(value);
+    }
+  });
+});

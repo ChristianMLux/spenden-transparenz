@@ -4,29 +4,40 @@ import { expect, test } from "@playwright/test";
 const BOARD = { de: "/de/krise/nepal-flut-2026", en: "/en/crisis/nepal-flut-2026" };
 
 test.describe("number line", () => {
-  test('"without a found response" applies a filter that surfaces those organisations, never hides the rest', async ({
-    page,
-  }) => {
+  test('"without a found response" filters to exactly those organisations', async ({ page }) => {
     await page.goto(BOARD.de);
     await page.waitForLoadState("networkidle");
 
     const resultCount = page.locator('[aria-live="polite"]').first();
 
-    // The rule this product cannot break: an organisation with no statement is a
-    // permanent row, never a filtered-out one. "9 ohne gefundene Reaktion" therefore
-    // does not shrink the result count (it stays 44 of 44); it sorts those 9 to the
-    // top, which is a distinct, meaningful FilterState (sort=fewest-data) that this
-    // link applies.
+    // This figure used to apply sort=fewest-data rather than a filter, on the reasoning
+    // that a "has no statement" filter could be used to hide the very organisations this
+    // product insists on always showing. The instinct was right; the conclusion was not.
+    // Every other figure in the row filters, and a reader who clicks a count of nine
+    // expects nine rows, not forty-four reordered.
+    //
+    // The instinct is preserved as a property instead, asserted here and in
+    // lib/filter.test.ts: the control can SHOW the organisations without a response, and
+    // there is no state in which it hides one for lacking a response.
     const numberLine = page.getByRole("link", { name: /Organisationen|belegte Meldung|Distrikt|ohne gefundene Reaktion/ });
     const noResponseLink = numberLine.filter({ hasText: "ohne gefundene Reaktion" }).first();
-    await expect(noResponseLink).toHaveAttribute("href", /sort=fewest-data/);
+    await expect(noResponseLink).toHaveAttribute("href", /hasResponse=0/);
     await noResponseLink.click();
 
-    await expect(page).toHaveURL(/sort=fewest-data/);
+    await expect(page).toHaveURL(/hasResponse=0/);
+    await expect(resultCount).toHaveText(/9 von 44 Organisation/);
+    await expect(page.locator("article")).toHaveCount(9);
+
+    // Every row shown is one without a response, and each is a full row rather than a
+    // greyed-out or abbreviated one.
+    const articles = page.locator("article");
+    for (let i = 0; i < 9; i++) {
+      await expect(articles.nth(i).getByText("Keine öffentliche Reaktionsmeldung gefunden")).toBeVisible();
+    }
+
+    // Clearing brings all 44 back, so nothing was lost.
+    await page.getByRole("link", { name: /44 Organisationen/ }).click();
     await expect(resultCount).toHaveText(/44 von 44 Organisation/);
-    // Sorted to the very top, not merely present somewhere on the page.
-    const firstArticle = page.locator("article").first();
-    await expect(firstArticle.getByText("Keine öffentliche Reaktionsmeldung gefunden")).toBeVisible();
   });
 
   test("the statements number switches to the chronological tab", async ({ page }) => {

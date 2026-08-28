@@ -41,11 +41,14 @@ export interface BoardLabels {
     mobileTitle: string;
     searchChipPrefix: string;
     removeSearchLabel: string;
+    moreLabels: Record<number, string>;
+    moreLabelFallback: string;
+    lessLabel: string;
   };
   /** Facet key (district code, "local"/"international", an OrgType, a Verification) to
    * its display word. One flat map: the four key namespaces never collide. */
   optionLabel: Record<string, string>;
   /** Facet key to the full localised "remove this filter" sentence. */
   removeChipLabel: Record<string, string>;
-  locatorCaption: string;
+  districtsLabel: string;
 }

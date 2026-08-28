@@ -18,7 +18,6 @@ import type { Chip } from "./filter-chips";
 import { FilterChips } from "./filter-chips";
 import type { FilterOption } from "./filter-group";
 import { FilterBar } from "./filter-bar";
-import { Locator } from "./locator";
 import { ResultCount } from "./result-count";
 import { SortSelect } from "./sort-select";
 
@@ -38,12 +37,14 @@ function readFiltersFromLocation(): FilterState {
  *  - district count        -> tab A, every named district selected (the complement of
  *                             "no location stated"), showing exactly the responders
  *                             that have a stated place
- *  - orgs without response -> tab A, sorted "fewest data first", which surfaces those
- *                             organisations at the very top rather than filtering the
- *                             rest away (there is no FilterState field for "has no
- *                             statement": inventing a hidden one would let a filter
- *                             silently remove the very organisations this product
- *                             insists on always showing)
+ *  - orgs without response -> tab A, hasResponse: false, showing exactly those nine.
+ *                             This started as a sort, on the reasoning that a hidden
+ *                             "has no statement" field could let a filter remove the very
+ *                             organisations the product insists on always showing. The
+ *                             instinct was right and is now encoded as a test instead: the
+ *                             filter can SHOW the organisations without a response and can
+ *                             never hide one for lacking a response. A reader who clicks a
+ *                             count of nine should get nine rows, not forty-four reordered.
  */
 function numberLineTargets(board: BoardData): Record<"orgs" | "statements" | "districts" | "noResponse", FilterState> {
   const realDistricts = board.facets.districts.filter((f) => f.key !== "none").map((f) => f.key);
@@ -51,7 +52,7 @@ function numberLineTargets(board: BoardData): Record<"orgs" | "statements" | "di
     orgs: { ...EMPTY },
     statements: { ...EMPTY, tab: "chronological" },
     districts: { ...EMPTY, districts: realDistricts },
-    noResponse: { ...EMPTY, sort: "fewest-data" },
+    noResponse: { ...EMPTY, hasResponse: false },
   };
 }
 
@@ -114,7 +115,8 @@ export function BoardExplorer({
     filters.hq.length +
     filters.orgTypes.length +
     filters.verification.length +
-    (filters.q.trim() ? 1 : 0);
+    (filters.q.trim() ? 1 : 0) +
+    (filters.hasResponse !== null ? 1 : 0);
 
   // Every option in board.facets is shown even at zero (the canonical, exhaustive key
   // list); the count shown next to it narrows live as other filters are applied.
@@ -193,6 +195,17 @@ export function BoardExplorer({
       : (labels.resultCountStatements[flattenStatements(filteredResponders).length] ??
          String(flattenStatements(filteredResponders).length));
 
+  // The named districts, each a link that selects exactly that district. Same
+  // destinations the "6 Distrikte" figure covers, spelled out. "none" is left out: it is
+  // a filter value, not a place, and listing it among place names would read as one.
+  const districtLinks = board.facets.districts
+    .filter((d) => d.key !== "none" && d.count > 0)
+    .map((d) => ({
+      key: d.key,
+      label: labels.optionLabel[d.key] ?? d.key,
+      filters: { ...EMPTY, districts: [d.key] } as FilterState,
+    }));
+
   const numberLine: { key: keyof typeof targets; text: string }[] = [
     { key: "orgs", text: labels.numberLine.orgs },
     { key: "statements", text: labels.numberLine.statements },
@@ -233,12 +246,39 @@ export function BoardExplorer({
         </a>
       </p>
 
-      <div className="mt-6 grid gap-6 xl:grid-cols-[180px_1fr]">
-        <div>
-          <Locator />
-          <p className="mt-2 max-w-[40ch] text-xs text-muted">{labels.locatorCaption}</p>
-        </div>
+      {/* The districts as plain links, where the locator drawing used to be. The drawing
+          was an invented outline of Nepal with district marks placed roughly, and on a
+          product whose whole claim is that nothing is invented, a fabricated map is the
+          worst possible first graphic. There is no attributable geometry in the repo, so
+          rather than redraw one from memory the names carry the same information and can
+          be sourced. A real outline is post-v1, from Natural Earth or GADM with its
+          licence. */}
+      <p className="mt-2 flex flex-wrap gap-x-2 gap-y-1 text-sm">
+        <span className="text-muted">{labels.districtsLabel}</span>
+        {districtLinks.map((d, i) => (
+          <span key={d.key}>
+            <a
+              href={`?${serializeFilters(d.filters).toString()}`}
+              onClick={(e) => {
+                e.preventDefault();
+                setFilters(d.filters);
+              }}
+              className="text-accent underline-offset-2 hover:underline"
+            >
+              {d.label}
+            </a>
+            {i < districtLinks.length - 1 && <span className="text-muted"> · </span>}
+          </span>
+        ))}
+      </p>
 
+      <hr className="my-4 border-rule" />
+
+      {/* Rail on the left, results beside it. Before this the filters ran the full width
+          and the list began underneath them, so the first screen held no organisation at
+          all. */}
+      <div className="grid gap-6 xl:grid-cols-[16rem_1fr]">
+        <div className="xl:sticky xl:top-4 xl:self-start">
         <FilterBar
           groups={groups}
           selected={selected}
@@ -270,14 +310,16 @@ export function BoardExplorer({
             mobileClose: labels.filters.mobileClose,
             mobileOpen:
               labels.filters.mobileOpenLabels[activeFilterCount] ?? labels.filters.mobileOpenLabels[0] ?? "",
+            moreLabels: labels.filters.moreLabels,
+            moreLabelFallback: labels.filters.moreLabelFallback,
+            lessLabel: labels.filters.lessLabel,
           }}
           mobileOpen={mobileOpen}
           onMobileOpenChange={setMobileOpen}
         />
-      </div>
+        </div>
 
-      <hr className="my-6 border-rule" />
-
+        <div className="min-w-0">
       <BoardTabs
         active={filters.tab}
         onChange={(next) => setFilters({ ...filters, tab: next })}
@@ -296,11 +338,11 @@ export function BoardExplorer({
         <ResultCount text={resultCountText} />
       </div>
 
-      <div className="mt-6">
+      <div className="mt-4">
         {filters.tab === "orgs" ? (
           <div>
             {filteredResponders.map((r) => (
-              <div key={rowKey(r)} className="border-b border-rule py-6 first:pt-0 last:border-b-0">
+              <div key={rowKey(r)} className="border-b border-rule py-4 first:pt-0 last:border-b-0">
                 {rowNodes[rowKey(r)]}
               </div>
             ))}
@@ -312,6 +354,8 @@ export function BoardExplorer({
             dayLabels={dayLabels}
           />
         )}
+      </div>
+        </div>
       </div>
     </div>
   );
@@ -337,7 +381,7 @@ function ChronologicalList({
   return (
     <div>
       {groups.map((g) => (
-        <div key={g.key} className="border-b border-rule py-6 first:pt-0 last:border-b-0">
+        <div key={g.key} className="border-b border-rule py-4 first:pt-0 last:border-b-0">
           <h3 className="text-lg">{dayLabels[g.key] ?? g.key}</h3>
           <div className="mt-3">
             {g.items.map((s) => (

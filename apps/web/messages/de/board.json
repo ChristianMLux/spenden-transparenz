@@ -17,11 +17,23 @@
   "resultCountStatements": "{count, plural, one {# von {total} Meldung} other {# von {total} Meldungen}}",
   "filters": {
     "hint": "Alle zutreffenden auswählen",
-    "district": { "legend": "Distrikt" },
-    "hq": { "legend": "Sitz" },
-    "orgType": { "legend": "Organisationstyp" },
-    "verification": { "legend": "Beleggrad der Meldung" },
-    "search": { "legend": "Namenssuche", "label": "Name oder Kürzel suchen", "chipPrefix": "Suche" },
+    "district": {
+      "legend": "Distrikt"
+    },
+    "hq": {
+      "legend": "Sitz"
+    },
+    "orgType": {
+      "legend": "Organisationstyp"
+    },
+    "verification": {
+      "legend": "Beleggrad der Meldung"
+    },
+    "search": {
+      "legend": "Namenssuche",
+      "label": "Name oder Kürzel suchen",
+      "chipPrefix": "Suche"
+    },
     "removeSearch": "Namenssuche entfernen",
     "sort": {
       "label": "Sortierung",
@@ -34,7 +46,9 @@
     "removeChip": "{label} entfernen",
     "mobileOpen": "Filter ({count})",
     "mobileClose": "Filter schließen",
-    "mobileTitle": "Filter"
+    "mobileTitle": "Filter",
+    "more": "noch {n} anzeigen",
+    "less": "weniger anzeigen"
   },
   "empty": {
     "heading": "Keine öffentliche Reaktionsmeldung gefunden (Stand {date}).",
@@ -42,11 +56,9 @@
     "searchedText": "ReliefWeb-Meldungen zur Flut, die eigene Website und nepalesische Presse."
   },
   "viewOrg": "Alle Angaben zu dieser Organisation ansehen",
-  "locator": {
-    "caption": "Schematischer Umriss, kein Nachweis vollständiger Abdeckung. Getönt sind die Distrikte, denen mindestens eine Aussage zugeordnet werden konnte."
-  },
   "chronological": {
     "reportedBy": "gemeldet von",
     "noDate": "Ohne Datum"
-  }
+  },
+  "districtsLabel": "Distrikte mit mindestens einer Meldung:"
 }

@@ -13,6 +13,18 @@ export interface FilterState {
   orgTypes: string[];
   verification: string[];
   q: string;
+  /**
+   * true  = only organisations with no found response
+   * false = only organisations that have one
+   * null  = no opinion, the default
+   *
+   * Deliberately three-valued. The figure "9 ohne gefundene Reaktion" has to be a real
+   * filter like every other figure in that row, and a reader who clicks a count of nine
+   * expects nine rows. What this must never become is a way to hide an organisation for
+   * having no response: that is the one thing the product refuses to do, so the true case
+   * SHOWS those organisations and there is a test for it.
+   */
+  hasResponse: boolean | null;
   sort: "latest" | "name" | "fewest-data";
   tab: "orgs" | "chronological";
 }
@@ -23,6 +35,7 @@ export const EMPTY: FilterState = {
   orgTypes: [],
   verification: [],
   q: "",
+  hasResponse: null,
   sort: "latest",
   tab: "orgs",
 };
@@ -58,6 +71,7 @@ export function parseFilters(sp: URLSearchParams): FilterState {
     orgTypes: list("orgTypes"),
     verification: list("verification"),
     q: sp.get("q") ?? "",
+    hasResponse: sp.get("hasResponse") === "1" ? true : sp.get("hasResponse") === "0" ? false : null,
     sort: (SORTS as readonly string[]).includes(sort ?? "") ? (sort as FilterState["sort"]) : "latest",
     tab: (TABS as readonly string[]).includes(tab ?? "") ? (tab as FilterState["tab"]) : "orgs",
   };
@@ -70,6 +84,7 @@ export function serializeFilters(f: FilterState): URLSearchParams {
     if (values.length > 0) sp.set(key, values.join(","));
   }
   if (f.q) sp.set("q", f.q);
+  if (f.hasResponse !== null) sp.set("hasResponse", f.hasResponse ? "1" : "0");
   if (f.sort !== "latest") sp.set("sort", f.sort);
   if (f.tab !== "orgs") sp.set("tab", f.tab);
   return sp;
@@ -108,6 +123,7 @@ export function applyFilters(responders: Responder[], f: FilterState): Responder
   const q = f.q.trim() ? fold(f.q) : "";
 
   let result = responders.filter((r) => {
+    if (f.hasResponse !== null && r.statements.length > 0 !== f.hasResponse) return false;
     if (hq.size > 0 && !responderMatchesHq(r, hq)) return false;
     if (orgTypes.size > 0 && !orgTypes.has(r.org_type)) return false;
     if (q && !r.search_key.includes(q)) return false;

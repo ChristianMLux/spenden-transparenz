@@ -15,6 +15,10 @@ export interface FilterBarLabels {
   mobileTitle: string;
   mobileClose: string;
   mobileOpen: string; // already formatted, e.g. "Filter (2)"
+  /** Already-formatted "mehr" labels, indexed by how many options are hidden. */
+  moreLabels: Record<number, string>;
+  moreLabelFallback: string;
+  lessLabel: string;
 }
 
 interface Groups {
@@ -72,6 +76,8 @@ export function FilterBar({
         />
       </div>
       <FilterGroup
+        moreLabel={(n) => labels.moreLabels[n] ?? labels.moreLabelFallback}
+        lessLabel={labels.lessLabel}
         legend={labels.districtLegend}
         options={groups.district}
         selected={selected.district}
@@ -79,6 +85,8 @@ export function FilterBar({
         idPrefix={`${idPrefix}-district`}
       />
       <FilterGroup
+        moreLabel={(n) => labels.moreLabels[n] ?? labels.moreLabelFallback}
+        lessLabel={labels.lessLabel}
         legend={labels.hqLegend}
         options={groups.hq}
         selected={selected.hq}
@@ -86,6 +94,8 @@ export function FilterBar({
         idPrefix={`${idPrefix}-hq`}
       />
       <FilterGroup
+        moreLabel={(n) => labels.moreLabels[n] ?? labels.moreLabelFallback}
+        lessLabel={labels.lessLabel}
         legend={labels.orgTypeLegend}
         options={groups.orgType}
         selected={selected.orgType}
@@ -93,6 +103,8 @@ export function FilterBar({
         idPrefix={`${idPrefix}-orgtype`}
       />
       <FilterGroup
+        moreLabel={(n) => labels.moreLabels[n] ?? labels.moreLabelFallback}
+        lessLabel={labels.lessLabel}
         legend={labels.verificationLegend}
         hint={labels.hint}
         hintId={`${idPrefix}-verification-hint`}
