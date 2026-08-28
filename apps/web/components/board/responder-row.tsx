@@ -1,8 +1,10 @@
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { Amount } from "@/components/datum/amount";
+import { DonationLine } from "@/components/donation/donation-line";
 import type { Locale } from "@/i18n/routing";
 import { formatDate } from "@/lib/format";
+import { donationView } from "@/lib/donation";
 import type { Responder, Statement } from "@/lib/types";
 import { ProvenanceLine } from "./provenance-line";
 
@@ -16,8 +18,9 @@ function countryName(code: string, locale: Locale): string {
 }
 
 /**
- * One line of the Organisation | Reaktion | Ort | Quelle und Stand grid (DESIGN.md-style
- * table-like row, Variant C). first controls whether the leftmost cell carries the
+ * One line of the Organisation | Reaktion | Ort | Quelle und Stand | Spenden grid
+ * (DESIGN.md-style table-like row, Variant C). first controls whether the leftmost cell
+ * carries the
  * organisation's name, or stays an empty spacer: a multi-statement organisation only
  * names itself once, in the first line, exactly the way a spreadsheet leaves a repeated
  * group cell blank rather than rowspanning it. The empty spacer is skipped entirely on
@@ -99,6 +102,22 @@ function QuelleCell({ statement, locale }: { statement: Statement; locale: Local
 }
 
 /**
+ * The action-path column: the official donation channel, org-level rather than
+ * per-statement, so (like OrgCell) it only renders on the row's first line and stays an
+ * empty spacer after it. Identical component, identical tone rules, for every
+ * organisation and (in the help section, not here) the government fund: nothing about
+ * this cell may read as a recommendation.
+ */
+function DonationCell({ first, donation, locale }: { first: boolean; donation: Responder["donation"]; locale: Locale }) {
+  if (!first) return <div aria-hidden="true" className="hidden min-w-0 md:block" />;
+  return (
+    <div className="min-w-0 flex items-center py-1 md:py-1">
+      <DonationLine view={donationView(donation)} locale={locale} />
+    </div>
+  );
+}
+
+/**
  * One row of Tab A, restyled as a table-like grid: Organisation | Reaktion | Ort |
  * Quelle und Stand. Server-rendered for the same reason the old Statement piece was:
  * <Datum>/ProvenanceLine read next-intl through hooks, which only works on the server in
@@ -131,6 +150,7 @@ export function ResponderRow({ responder, generatedAt }: { responder: Responder;
             <ReaktionCell statement={statement} locale={locale} />
             <OrtCell statement={statement} tCommon={tCommon} />
             <QuelleCell statement={statement} locale={locale} />
+            <DonationCell first={i === 0} donation={responder.donation} locale={locale} />
           </div>
         ))
       ) : (
@@ -144,6 +164,7 @@ export function ResponderRow({ responder, generatedAt }: { responder: Responder;
               {t("empty.searchedLabel")} {t("empty.searchedText")}
             </p>
           </div>
+          <DonationCell first donation={responder.donation} locale={locale} />
         </div>
       )}
 

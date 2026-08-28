@@ -262,7 +262,7 @@ export function BoardExplorer({
       {/* The chrome: figure tiles directly under the masthead's wordmark, full-bleed to
           the viewport edge so the navy band reads as one continuous shape with the
           header above it. Each tile is still the same filter link it was as a sentence. */}
-      <div className="chrome-bleed bg-chrome">
+      <div className="chrome-bleed chrome-bleed-flush-top bg-chrome">
         <div className="figure-strip mx-auto max-w-[80rem]">
           {numberLine.map((n) => (
             <FigureTile
@@ -322,7 +322,7 @@ export function BoardExplorer({
           and the list began underneath them, so the first screen held no organisation at
           all. */}
       <div className="grid gap-4 xl:grid-cols-[16rem_1fr] xl:gap-8">
-        <div className="bg-chrome px-4 py-6 xl:sticky xl:top-4 xl:self-start xl:px-5">
+        <div className="filter-rail-bleed bg-chrome px-4 py-6 xl:sticky xl:top-4 xl:self-start xl:px-5">
         <FilterBar
           groups={groups}
           selected={selected}
@@ -393,6 +393,7 @@ export function BoardExplorer({
               <span>{labels.columns.reaktion}</span>
               <span>{labels.columns.ort}</span>
               <span>{labels.columns.quelleUndStand}</span>
+              <span>{labels.columns.spenden}</span>
             </div>
             {filteredResponders.map((r) => (
               <div key={rowKey(r)}>{rowNodes[rowKey(r)]}</div>

@@ -5,9 +5,11 @@ import { BoardExplorer } from "@/components/board/board-explorer";
 import type { BoardLabels } from "@/components/board/board-labels";
 import { buildChronoNodes, buildDayLabels } from "@/components/board/chronological";
 import { ResponderRow } from "@/components/board/responder-row";
+import { DonationLine } from "@/components/donation/donation-line";
 import type { Locale } from "@/i18n/routing";
 import { ACTIVE_CRISIS, routing } from "@/i18n/routing";
 import { getBoard } from "@/lib/api";
+import { donationView } from "@/lib/donation";
 import type { Responder } from "@/lib/types";
 
 export function generateStaticParams() {
@@ -126,6 +128,9 @@ export default async function BoardPage() {
       reaktion: t("columns.reaktion"),
       ort: t("columns.ort"),
       quelleUndStand: t("columns.quelleUndStand"),
+      // Reused verbatim, not invented: the action path's copy is authored once for all
+      // three variants, and a column header is still donation copy.
+      spenden: tCommon("donation.label"),
     },
   };
 
@@ -147,13 +152,34 @@ export default async function BoardPage() {
   // board-explorer.tsx) and handed to the client island as a slot, so it can be placed
   // AFTER the chrome's figure strip in the DOM: the masthead and the figures are one
   // navy block, the crisis heading is the canvas's own first thing below it.
+  //
+  // The old scopeLine1/scopeLine2 paragraph is gone from here on purpose: help.line1
+  // and help.line2 say almost the same thing, so this is a fold, not an addition. The
+  // metadata description below still uses scopeLine1/2 (an OG description is not a
+  // second on-page paragraph). "Ich möchte helfen" is a real landmark (#helfen), jumped
+  // to from a link in the masthead in every locale, so it needs a heading of its own.
+  const fundLines = board.government_funds.map((fund) => (
+    <p key={fund.name} className="mt-1 max-w-[68ch] text-sm text-ink">
+      <span className="text-muted">{t("help.governmentHeading")}: </span>
+      <span className="font-semibold">{fund.name}</span>
+      <span className="text-muted"> — {t("help.governmentNote")} </span>
+      <DonationLine view={donationView(fund)} locale={locale} />
+    </p>
+  ));
+
   const intro = (
     <>
       <h1 className="text-2xl">{crisisName}</h1>
       <p className="mt-1 font-mono text-xs text-muted">{board.crisis.glide_id}</p>
-      <p className="mt-2 max-w-[68ch] text-base text-ink">
-        {t("scopeLine1")} {t("scopeLine2")}
-      </p>
+      <section id="helfen" aria-labelledby="helfen-heading" className="mt-2">
+        <h2 id="helfen-heading" className="text-lg">
+          {t("help.heading")}
+        </h2>
+        <p className="mt-1 max-w-[68ch] text-sm text-ink">
+          {t("help.line1")} {t("help.line2")} {t("help.line3")}
+        </p>
+        {fundLines}
+      </section>
     </>
   );
 

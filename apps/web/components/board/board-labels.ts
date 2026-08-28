@@ -51,6 +51,15 @@ export interface BoardLabels {
   /** Facet key to the full localised "remove this filter" sentence. */
   removeChipLabel: Record<string, string>;
   districtsLabel: string;
-  /** Variant C ("Kontor"): the four table-like column headers over the board list. */
-  columns: { organisation: string; reaktion: string; ort: string; quelleUndStand: string };
+  /** Variant C ("Kontor"): the five table-like column headers over the board list.
+   * `spenden` is common.donation.label reused verbatim as the header, rather than an
+   * invented word: the action path's copy is authored once, centrally, for all three
+   * variants, and a column header is still donation copy. */
+  columns: {
+    organisation: string;
+    reaktion: string;
+    ort: string;
+    quelleUndStand: string;
+    spenden: string;
+  };
 }

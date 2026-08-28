@@ -10,10 +10,18 @@ import { LocaleSwitch } from "./locale-switch";
  * the same chrome surface the figure strip and filter rail continue below it. The
  * wordmark is white; the crisis name and GLIDE id sit in the chrome's muted tone so the
  * wordmark stays the loudest thing in the band.
+ *
+ * "Ich möchte helfen" (board.help.navLabel) is a plain link to the board's own #helfen
+ * landmark, never a same-page anchor computed differently per route: from the board
+ * page it is a same-document jump, from every other page (including an organisation
+ * page, which carries its own per-org donation section) it is a normal navigation. Both
+ * are the same href, so this header needs no per-route branching.
  */
 export function SiteHeader({ crisis, siteName }: { crisis: Crisis; siteName: string }) {
   const locale = useLocale() as Locale;
   const t = useTranslations("common");
+  const tBoard = useTranslations("board");
+  const helpHref = `/${locale}${routing.pathnames["/krise/[crisis]"][locale].replace("[crisis]", crisis.slug)}#helfen`;
 
   return (
     <header className="bg-chrome text-chrome-ink print:hidden">
@@ -25,12 +33,20 @@ export function SiteHeader({ crisis, siteName }: { crisis: Crisis; siteName: str
           </span>
           <code className="font-mono text-xs text-chrome-muted">{crisis.glide_id}</code>
         </p>
-        <LocaleSwitch
-          current={locale}
-          locales={routing.locales}
-          navLabel={t("locale.label")}
-          labels={Object.fromEntries(routing.locales.map((l) => [l, t(`locale.${l}`)]))}
-        />
+        <div className="flex flex-wrap items-center gap-4">
+          <a
+            href={helpHref}
+            className="flex min-h-11 items-center text-sm text-chrome-ink underline underline-offset-2"
+          >
+            {tBoard("help.navLabel")}
+          </a>
+          <LocaleSwitch
+            current={locale}
+            locales={routing.locales}
+            navLabel={t("locale.label")}
+            labels={Object.fromEntries(routing.locales.map((l) => [l, t(`locale.${l}`)]))}
+          />
+        </div>
       </div>
     </header>
   );

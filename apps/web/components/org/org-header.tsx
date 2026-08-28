@@ -48,7 +48,7 @@ export function OrgHeader({ org }: { org: OrgDetail }) {
 
   return (
     <section aria-labelledby="org-name" className="break-inside-avoid">
-      <div className="chrome-bleed bg-chrome text-chrome-ink">
+      <div className="chrome-bleed chrome-bleed-flush-top bg-chrome text-chrome-ink">
         <div className="mx-auto max-w-[80rem] px-4 py-6 sm:py-8">
           <div className="flex flex-wrap items-baseline justify-between gap-4">
             <h2 id="org-name" className="text-xl text-chrome-ink">

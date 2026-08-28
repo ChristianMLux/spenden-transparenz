@@ -288,6 +288,39 @@
     margin-inline: calc(50% - 50vw);
   }
 
+  /* The board's figure strip and the org page's identity header are meant to touch the
+     masthead above them with zero gap, but both are the first child inside <main>, which
+     carries py-6 (24px) for every other page. Pulling up by exactly that amount cancels
+     main's top padding for these two elements only, without touching the shared layout
+     shell (main is used by every route, including the trust pages, where the padding is
+     correct and stays). Defect fix: a visible page-coloured band was showing between the
+     masthead and the figure strip until this was added. */
+  .chrome-bleed-flush-top {
+    margin-top: -24px;
+  }
+
+  /* The filter rail is a narrow grid column (16rem), not the full content width, so the
+     symmetric .chrome-bleed trick above (which relies on the element being exactly as
+     wide as the centred column) does not apply to it. Instead this paints a background
+     rectangle that starts at the rail's own left edge and extends 100vw further left,
+     guaranteed to reach past the true viewport edge on any monitor without needing to
+     compute the actual centring offset. overflow-x:clip on <html> keeps the overshoot
+     from ever creating a horizontal scrollbar. This does not touch the rail's own box, so
+     nothing about its padding or the checkboxes inside it needs to compensate. */
+  .filter-rail-bleed {
+    position: relative;
+  }
+
+  .filter-rail-bleed::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    width: 100vw;
+    background-color: var(--chrome);
+  }
+
   /* The figure row: four typographic tiles directly on the chrome, under the wordmark.
      Two columns on narrow screens, four in one line from md up, hairline dividers in
      --chrome-rule between tiles (and between the two mobile rows), never a border
@@ -366,9 +399,10 @@
     outline-offset: 2px;
   }
 
-  /* The board list, table-like on desktop: four fixed fractional columns shared by the
+  /* The board list, table-like on desktop: five fixed fractional columns shared by the
      header labels and every row so they align without a literal <table> (each
-     organisation stays an <article>, which a table row cannot contain). */
+     organisation stays an <article>, which a table row cannot contain). Organisation |
+     Reaktion | Ort | Quelle und Stand | Spenden (the action-path column, WP4 base). */
   .board-row-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -377,8 +411,9 @@
 
   @media (width >= 48rem) {
     .board-row-grid {
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 0.6fr) minmax(0, 1fr);
-      column-gap: 24px;
+      grid-template-columns:
+        minmax(0, 1fr) minmax(0, 1.3fr) minmax(0, 0.5fr) minmax(0, 0.9fr) minmax(0, 0.9fr);
+      column-gap: 20px;
     }
   }
 
