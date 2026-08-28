@@ -13,19 +13,33 @@ from __future__ import annotations
 import os
 from collections.abc import AsyncIterator
 
+import psycopg
 import pytest
 from core.models import Base
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 
-DEFAULT_TEST_URL = "postgresql+asyncpg://spenden:spenden@localhost:55432/spenden"
+# Locally the model tests get their own database: `spenden` is the Alembic-managed dev database,
+# and create_all/drop_all here would fight the migration for it. In CI the service container is
+# empty, so TEST_DATABASE_URL can point straight at it.
+DEFAULT_TEST_URL = "postgresql+asyncpg://spenden:spenden@localhost:55432/spenden_test"
 
 
 def test_database_url() -> str:
     return os.environ.get("TEST_DATABASE_URL", DEFAULT_TEST_URL)
 
 
+def _ensure_database_exists(url: str) -> None:
+    libpq = "postgresql://" + url.partition("://")[2]
+    head, _, database = libpq.rpartition("/")
+    with psycopg.connect(f"{head}/postgres", autocommit=True) as conn:
+        exists = conn.execute("select 1 from pg_database where datname = %s", (database,)).fetchone()
+        if not exists:
+            conn.execute(f'CREATE DATABASE "{database}"')
+
+
 @pytest.fixture(scope="session")
 async def engine() -> AsyncIterator:
+    _ensure_database_exists(test_database_url())
     engine = create_async_engine(test_database_url(), poolclass=None)
     try:
         async with engine.begin() as conn:

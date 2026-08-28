@@ -1125,6 +1125,7 @@ source = { virtual = "." }
 dev = [
     { name = "httpx" },
     { name = "jsonschema" },
+    { name = "psycopg", extra = ["binary"] },
     { name = "pytest" },
     { name = "pytest-asyncio" },
     { name = "pytest-httpserver" },
@@ -1137,6 +1138,7 @@ dev = [
 dev = [
     { name = "httpx", specifier = ">=0.28" },
     { name = "jsonschema", specifier = ">=4.23" },
+    { name = "psycopg", extras = ["binary"], specifier = ">=3.2" },
     { name = "pytest", specifier = ">=8.3" },
     { name = "pytest-asyncio", specifier = ">=0.24" },
     { name = "pytest-httpserver", specifier = ">=1.1" },
