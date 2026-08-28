@@ -1,0 +1,129 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  UV_FROZEN: "1"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+      - run: uv sync
+      - name: ruff check
+        run: uv run ruff check .
+      - name: ruff format
+        run: uv run ruff format --check .
+
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        # The test suite needs a real Postgres: CHECK constraints, generated columns and partial
+        # unique indexes are where the product rules actually live, and SQLite would pass every
+        # one of those tests for the wrong reason.
+        image: postgres:16
+        env:
+          POSTGRES_USER: spenden
+          POSTGRES_PASSWORD: spenden
+          POSTGRES_DB: spenden
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      TEST_DATABASE_URL: postgresql+asyncpg://spenden:spenden@localhost:5432/spenden_test
+      TEST_DATABASE_URL_SYNC: postgresql+psycopg://spenden:spenden@localhost:5432/spenden
+      DATABASE_URL: postgresql+asyncpg://spenden:spenden@localhost:5432/spenden
+      DATABASE_URL_SYNC: postgresql+psycopg://spenden:spenden@localhost:5432/spenden
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+      - run: uv sync
+      - name: alembic upgrade head
+        working-directory: apps/api
+        run: uv run alembic upgrade head
+      - name: pytest
+        run: uv run pytest -q
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # .gitleaks.toml allowlists data/raw (verbatim captures of third-party pages, which
+          # carry those sites' own browser keys) and .venv. Without it the scan reports 17
+          # findings on every run, and a scan that always fails is a scan nobody reads.
+          GITLEAKS_CONFIG: .gitleaks.toml
+
+      - name: pip-audit
+        # --python 3.13 is required, not cosmetic: pip-audit builds an ephemeral venv, and on a
+        # different minor version pip picks the cp312 wheels, whose hashes are not in a lock
+        # resolved for 3.13. The run then fails as a hash mismatch and reads like tampering.
+        run: |
+          uvx --python 3.13 pip-audit --requirement apps/api/requirements.txt --requirement pipeline/requirements.txt
+
+      - name: no third-party report text in the published contract
+        run: |
+          if grep -q "body_text" apps/api/openapi.json; then
+            echo "body_text appears in the OpenAPI contract; it is third-party copyright and must never be served"
+            exit 1
+          fi
+
+      - name: no AthenaRun branding or dependencies
+        run: |
+          # Matches usage in code, not the word in prose. Two things learned the hard way:
+          # the settings module and apps/web/DESIGN.md both document this very rule, and a gate
+          # that fails on its own documentation teaches people to delete the documentation.
+          if grep -riE "FF6131|athenarun-uikit|@athenarun/|from athenarun|import athenarun"                apps packages pipeline --include="*.py" --include="*.ts" --include="*.tsx"                --include="*.js" --include="*.jsx" --include="*.css" --include="*.json"                --include="*.toml" --include="*.yml"; then
+            echo "this is not an AthenaRun product: no brand colour, no UIKit, no AthenaRun imports"
+            exit 1
+          fi
+
+      # "core.settings never reads a neighbouring project's secrets" is enforced by
+      # packages/core/tests/test_settings.py, which parses the module and checks its string
+      # literals. That runs in the test job. A grep here would only match the comments that
+      # explain the rule, and a check that fails on its own documentation teaches people to
+      # delete the documentation.
+
+      - name: no natural persons ingested
+        run: |
+          if git ls-files | grep -i "charitytrusteeinformation"; then
+            echo "trustee files are personal data and must not be in the public repository"
+            exit 1
+          fi
+
+      - name: the shared package stays out of the pinned requirements
+        run: |
+          if grep -qE "^spenden-core" apps/api/requirements.txt pipeline/requirements.txt; then
+            echo "spenden-core is a path dependency installed separately; it cannot be hash-pinned"
+            exit 1
+          fi

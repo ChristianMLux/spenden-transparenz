@@ -1,0 +1,106 @@
+{
+  "generated_at": "2026-08-28",
+  "note": "Sources the pilot dataset actually cites, with their licence. Loaded into the `source` table by the seed_reference job and rendered on the sources page. A licence that could not be read from the source's own terms page in this session is recorded as null with a note saying so - never as a guessed licence string. Two terms pages (reliefweb.int/terms-conditions and data.humdata.org/faqs/licenses) returned HTTP 403 to an automated fetch on 2026-08-28; where the project research had already established the licence, that is stated as the origin of the claim.",
+  "sources": [
+    {
+      "id": "reliefweb",
+      "name": "ReliefWeb (OCHA)",
+      "url": "https://reliefweb.int/",
+      "licence": null,
+      "licence_url": "https://reliefweb.int/terms-conditions",
+      "licence_note": "Report texts stay under the copyright of the publishing organisation named on each update. We store the body text for extraction only and publish a quote of at most 40 words plus the link. The terms page returned HTTP 403 to an automated fetch on 2026-08-28, so no licence string is asserted here.",
+      "default_verification": "third_party_reported",
+      "retrieved_at": "2026-08-28"
+    },
+    {
+      "id": "hdx_hapi",
+      "name": "OCHA HDX / Humanitarian API - Nepal administrative boundaries",
+      "url": "https://data.humdata.org/",
+      "licence": "CC BY",
+      "licence_url": "https://data.humdata.org/faqs/licenses",
+      "licence_note": "Creative Commons Attribution, established during the project research phase and recorded in README.md. The version number is deliberately not stated: the HDX licence FAQ returned HTTP 403 to an automated fetch on 2026-08-28, so it could not be confirmed. Source of the 77 district codes and names.",
+      "default_verification": "third_party_reported",
+      "retrieved_at": "2026-08-28"
+    },
+    {
+      "id": "iati",
+      "name": "IATI Registry and d-portal",
+      "url": "https://iatiregistry.org/",
+      "licence": null,
+      "licence_url": "https://iatistandard.org/en/about/iati-tools-and-resources/",
+      "licence_note": "There is no single licence: each publisher chooses its own. The Nepal publisher list in data/raw/iati/registry_publishers_np.json carries cc-by, cc-zero, odc-by, odc-pddl, gfdl, other-open and notspecified. Reuse has to be checked per publisher.",
+      "default_verification": "self_reported",
+      "retrieved_at": "2026-08-28"
+    },
+    {
+      "id": "uk_charity_commission",
+      "name": "Charity Commission for England and Wales",
+      "url": "https://register-of-charities.charitycommission.gov.uk/",
+      "licence": "Open Government Licence v3.0",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "licence_note": "Established during the project research phase and recorded in README.md. Trustee data is deliberately not ingested: the database holds no natural persons.",
+      "default_verification": "register_confirmed",
+      "retrieved_at": "2026-08-28"
+    },
+    {
+      "id": "us_irs_propublica",
+      "name": "ProPublica Nonprofit Explorer (IRS Form 990 data)",
+      "url": "https://projects.propublica.org/nonprofits/",
+      "licence": null,
+      "licence_url": "https://projects.propublica.org/nonprofits/api",
+      "licence_note": "The underlying IRS filings are US government works in the public domain. ProPublica's own presentation and API terms were not re-read in this session, so no licence string is asserted for the service itself.",
+      "default_verification": "register_confirmed",
+      "retrieved_at": "2026-08-28"
+    },
+    {
+      "id": "de_dzi",
+      "name": "DZI Spenden-Siegel (Deutsches Zentralinstitut fuer soziale Fragen)",
+      "url": "https://www.dzi.de/spenderberatung/",
+      "licence": null,
+      "licence_url": "https://www.dzi.de/impressum/",
+      "licence_note": "Organisation profiles are published by DZI for public consultation; no open-data licence is offered. Cited by link, never republished in bulk.",
+      "default_verification": "register_confirmed",
+      "retrieved_at": "2026-08-28"
+    },
+    {
+      "id": "ch_zewo",
+      "name": "ZEWO (Swiss certification body for charitable organisations)",
+      "url": "https://zewo.ch/",
+      "licence": null,
+      "licence_url": "https://zewo.ch/de/impressum/",
+      "licence_note": "Certification entries are published for public consultation; no open-data licence is offered. Cited by link, never republished in bulk.",
+      "default_verification": "register_confirmed",
+      "retrieved_at": "2026-08-28"
+    },
+    {
+      "id": "org_website",
+      "name": "Organisation websites and annual reports",
+      "url": null,
+      "licence": null,
+      "licence_url": null,
+      "licence_note": "Each organisation's own pages and published reports, under that organisation's copyright. Used as the source for self-reported facts; cited by link with a short quote.",
+      "default_verification": "self_reported",
+      "retrieved_at": "2026-08-28"
+    },
+    {
+      "id": "media_report",
+      "name": "Media reports",
+      "url": null,
+      "licence": null,
+      "licence_url": null,
+      "licence_note": "News coverage under the publisher's copyright. Cited by link with a short quote, never republished.",
+      "default_verification": "third_party_reported",
+      "retrieved_at": "2026-08-28"
+    },
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia",
+      "url": "https://en.wikipedia.org/",
+      "licence": "CC BY-SA 4.0",
+      "licence_url": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License",
+      "licence_note": "A tertiary source. Used only where no primary source was reachable, and always visible as such through the verification grade on the value.",
+      "default_verification": "third_party_reported",
+      "retrieved_at": "2026-08-28"
+    }
+  ]
+}

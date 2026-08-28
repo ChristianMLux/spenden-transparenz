@@ -1,0 +1,43 @@
+[project]
+name = "spenden-transparenz"
+version = "0.1.0"
+description = "Workspace root. Not a distributable package - it only ties the three services together."
+requires-python = ">=3.13"
+# The root depends on both services so the documented `uv sync` produces an environment that
+# can actually run the test suite. Without this, a plain sync installs only the dev group and
+# every service test fails on import - which is what a fresh clone hit.
+dependencies = ["spenden-api"]
+
+[tool.uv.sources]
+spenden-api = { workspace = true }
+
+[tool.uv.workspace]
+members = ["packages/core", "apps/api", "pipeline"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "pytest-asyncio>=0.24",
+    "pytest-httpserver>=1.1",
+    "httpx>=0.28",
+    "jsonschema>=4.23",
+    "ruff>=0.8",
+    # Tests create and drop their own scratch databases, which asyncpg cannot do inside a
+    # transaction; psycopg with autocommit can.
+    "psycopg[binary]>=3.2",
+    # pipeline is a virtual project, so its runtime dependencies do not arrive through the
+    # root. These two are the ones nothing else pulls in. test_environment.py fails if this
+    # list ever drifts from pipeline/pyproject.toml, so the duplication cannot rot quietly.
+    "requests>=2.32",
+    "openai>=1.60",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+# One event loop for the whole run: an asyncpg engine created in a session-scoped fixture cannot
+# be used from a per-test loop.
+asyncio_default_fixture_loop_scope = "session"
+asyncio_default_test_loop_scope = "session"
+pythonpath = [".", "apps/api"]
+testpaths = ["packages/core/tests", "apps/api/tests", "pipeline/tests"]
+filterwarnings = ["ignore::DeprecationWarning:jsonschema"]

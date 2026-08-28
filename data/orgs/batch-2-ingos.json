@@ -17,7 +17,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "no Nepali-script name found on nepal.oxfam.org pages fetched"
+        "note": "no Nepali-script name found on nepal.oxfam.org pages fetched",
+        "gap_reason": "searched_not_found"
       },
       "aliases": [
         "Oxfam GB",
@@ -49,7 +50,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "SWC site (swc.org.np) unreachable 2026-08-28. Oxfam's own Nepal 'Accountability' page states work is regularly audited and details made available to the Social Welfare Council of the Government of Nepal, but publishes no SWC registration number."
+        "note": "SWC site (swc.org.np) unreachable 2026-08-28. Oxfam's own Nepal 'Accountability' page states work is regularly audited and details made available to the Social Welfare Council of the Government of Nepal, but publishes no SWC registration number.",
+        "gap_reason": "source_unreachable"
       }
     ],
     "nepal_presence": {
@@ -59,7 +61,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "self_reported",
         "quote": "Oxfam has been working in Nepal since the early 1980s",
-        "note": "org states only 'early 1980s', no exact year given, so value left null rather than guessed"
+        "note": "org states only 'early 1980s', no exact year given, so value left null rather than guessed",
+        "gap_reason": "searched_not_found"
       },
       "mode": {
         "value": "both",
@@ -75,7 +78,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "not found on pages checked"
+        "note": "not found on pages checked",
+        "gap_reason": "searched_not_found"
       },
       "partners": []
     },
@@ -111,7 +115,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "PDF not opened/read in this session; UK charities of this size are legally required to have independently audited accounts but this was not directly confirmed against the document"
+        "note": "PDF not opened/read in this session; UK charities of this size are legally required to have independently audited accounts but this was not directly confirmed against the document",
+        "gap_reason": "searched_not_found"
       },
       "iati_publisher": {
         "is_publisher": null,
@@ -128,7 +133,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "Charity Commission financial-history page returned HTTP 403 to automated fetch; figures not retrieved"
+        "note": "Charity Commission financial-history page returned HTTP 403 to automated fetch; figures not retrieved",
+        "gap_reason": "source_unreachable"
       },
       "expenditure": {
         "value": null,
@@ -139,7 +145,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "same 403 block as income"
+        "note": "same 403 block as income",
+        "gap_reason": "source_unreachable"
       },
       "program_ratio": {
         "value": null,
@@ -147,7 +154,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No published expenditure split found for this organisation within the research budget."
+        "note": "No published expenditure split found for this organisation within the research budget.",
+        "gap_reason": "searched_not_found"
       },
       "peer_group": null
     },
@@ -186,7 +194,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No Nepali-script (Devanagari) name found within research budget."
+        "note": "No Nepali-script (Devanagari) name found within research budget.",
+        "gap_reason": "searched_not_found"
       },
       "aliases": []
     },
@@ -214,7 +223,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "SWC site (swc.org.np) unreachable 2026-08-28. CARE Nepal's flood press release states it is coordinating with the Government of Nepal and NDRRMA, but no SWC registration/affiliation number was found."
+        "note": "SWC site (swc.org.np) unreachable 2026-08-28. CARE Nepal's flood press release states it is coordinating with the Government of Nepal and NDRRMA, but no SWC registration/affiliation number was found.",
+        "gap_reason": "source_unreachable"
       },
       {
         "registry": "IATI",
@@ -223,7 +233,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "Not checked within the 6-call research budget for this pilot entry. CARE International is known to publish some data to IATI at confederation level, but a Nepal-specific IATI publisher record was not verified."
+        "note": "Not checked within the 6-call research budget for this pilot entry. CARE International is known to publish some data to IATI at confederation level, but a Nepal-specific IATI publisher record was not verified.",
+        "gap_reason": "searched_not_found"
       }
     ],
     "nepal_presence": {
@@ -233,7 +244,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "carenepal.org/history/ likely states a founding year (search-result snippet suggested 1978) but the page was not directly fetched/verified within budget, so left null."
+        "note": "carenepal.org/history/ likely states a founding year (search-result snippet suggested 1978) but the page was not directly fetched/verified within budget, so left null.",
+        "gap_reason": "searched_not_found"
       },
       "mode": {
         "value": "unknown",
@@ -249,7 +261,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": null
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
       },
       "partners": []
     },
@@ -283,7 +296,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "Not confirmed within research budget."
+        "note": "Not confirmed within research budget.",
+        "gap_reason": "searched_not_found"
       },
       "iati_publisher": {
         "is_publisher": null,
@@ -319,7 +333,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No published expenditure split found for this organisation within the research budget."
+        "note": "No published expenditure split found for this organisation within the research budget.",
+        "gap_reason": "searched_not_found"
       },
       "peer_group": null
     },
@@ -358,7 +373,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No Nepali-script (Devanagari) name found on wvi.org/nepal"
+        "note": "No Nepali-script (Devanagari) name found on wvi.org/nepal",
+        "gap_reason": "searched_not_found"
       },
       "aliases": [
         "World Vision Nepal",
@@ -381,7 +397,8 @@
         "status": "listed",
         "retrieved_at": "2026-08-28",
         "verification": "third_party_reported",
-        "note": "Listed as 'Association World Vision International (WVI)' in Geneva's official international-organisations directory (geneve-int.ch) — a directory, not the Swiss commercial/association register (Handelsregister); no registration number obtained."
+        "note": "Listed as 'Association World Vision International (WVI)' in Geneva's official international-organisations directory (geneve-int.ch) — a directory, not the Swiss commercial/association register (Handelsregister); no registration number obtained.",
+        "gap_reason": "searched_not_found"
       },
       {
         "registry": "NP_SWC",
@@ -390,7 +407,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "SWC site (swc.org.np) unreachable 2026-08-28. WVI Nepal almost certainly holds an SWC/project-agreement registration (standard for INGO field offices in Nepal) but no registration number could be sourced."
+        "note": "SWC site (swc.org.np) unreachable 2026-08-28. WVI Nepal almost certainly holds an SWC/project-agreement registration (standard for INGO field offices in Nepal) but no registration number could be sourced.",
+        "gap_reason": "source_unreachable"
       },
       {
         "registry": "IATI",
@@ -425,7 +443,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": null
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
       },
       "partners": []
     },
@@ -460,7 +479,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "Annual report landing page did not surface audit statement text within budget; underlying PDF not opened."
+        "note": "Annual report landing page did not surface audit statement text within budget; underlying PDF not opened.",
+        "gap_reason": "searched_not_found"
       },
       "iati_publisher": {
         "is_publisher": true,
@@ -477,7 +497,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "An unattributed search-engine summary figure ('$3.14 billion') was excluded per the no-invented-values rule since it wasn't confirmed against a primary source page."
+        "note": "An unattributed search-engine summary figure ('$3.14 billion') was excluded per the no-invented-values rule since it wasn't confirmed against a primary source page.",
+        "gap_reason": "searched_not_found"
       },
       "expenditure": {
         "value": null,
@@ -488,7 +509,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": null
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
       },
       "program_ratio": {
         "value": null,
@@ -496,7 +518,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No published expenditure split found for this organisation within the research budget."
+        "note": "No published expenditure split found for this organisation within the research budget.",
+        "gap_reason": "searched_not_found"
       },
       "peer_group": null
     },
@@ -536,7 +559,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No Devanagari/Nepali-script name found within research budget"
+        "note": "No Devanagari/Nepali-script name found within research budget",
+        "gap_reason": "searched_not_found"
       },
       "aliases": []
     },
@@ -555,7 +579,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "swc.org.np unreachable 2026-08-28; not attempted. Org's Nepal page states presence since 1978 but no SWC registration number was located."
+        "note": "swc.org.np unreachable 2026-08-28; not attempted. Org's Nepal page states presence since 1978 but no SWC registration number was located.",
+        "gap_reason": "source_unreachable"
       },
       {
         "registry": "IATI",
@@ -564,7 +589,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "IATI Registry / d-portal lookup not completed within the 6-call research budget for this org"
+        "note": "IATI Registry / d-portal lookup not completed within the 6-call research budget for this org",
+        "gap_reason": "searched_not_found"
       }
     ],
     "nepal_presence": {
@@ -590,7 +616,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": null
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
       },
       "partners": []
     },
@@ -626,7 +653,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "Not researched within the 6-call budget for this org"
+        "note": "Not researched within the 6-call budget for this org",
+        "gap_reason": "searched_not_found"
       },
       "iati_publisher": {
         "is_publisher": null,
@@ -643,7 +671,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": null
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
       },
       "expenditure": {
         "value": null,
@@ -654,7 +683,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": null
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
       },
       "program_ratio": {
         "value": null,
@@ -662,7 +692,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No published expenditure split found for this organisation within the research budget."
+        "note": "No published expenditure split found for this organisation within the research budget.",
+        "gap_reason": "searched_not_found"
       },
       "peer_group": null
     },
@@ -703,7 +734,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No Nepali-script (Devanagari) name found in the sources checked"
+        "note": "No Nepali-script (Devanagari) name found in the sources checked",
+        "gap_reason": "searched_not_found"
       },
       "aliases": [
         "Action Aid Nepal"
@@ -724,7 +756,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "swc.org.np unreachable 2026-08-28 (not fetched). ActionAid Nepal publishes its own 'Brochure - SWC' document implying SWC affiliation, but no specific affiliation number could be verified."
+        "note": "swc.org.np unreachable 2026-08-28 (not fetched). ActionAid Nepal publishes its own 'Brochure - SWC' document implying SWC affiliation, but no specific affiliation number could be verified.",
+        "gap_reason": "source_unreachable"
       }
     ],
     "nepal_presence": {
@@ -750,7 +783,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": null
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
       },
       "partners": []
     },
@@ -769,7 +803,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": null
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
       },
       "iati_publisher": {
         "is_publisher": null,
@@ -786,7 +821,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": null
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
       },
       "expenditure": {
         "value": null,
@@ -797,7 +833,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": null
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
       },
       "program_ratio": {
         "value": null,
@@ -805,7 +842,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No published expenditure split found for this organisation within the research budget."
+        "note": "No published expenditure split found for this organisation within the research budget.",
+        "gap_reason": "searched_not_found"
       },
       "peer_group": null
     },
@@ -843,7 +881,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No Nepali-script (Devanagari) name found on habitatnepal.org"
+        "note": "No Nepali-script (Devanagari) name found on habitatnepal.org",
+        "gap_reason": "searched_not_found"
       },
       "aliases": [
         "Habitat Nepal",
@@ -874,7 +913,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "swc.org.np unreachable 2026-08-28. No SWC registration number is published on habitatnepal.org."
+        "note": "swc.org.np unreachable 2026-08-28. No SWC registration number is published on habitatnepal.org.",
+        "gap_reason": "source_unreachable"
       },
       {
         "registry": "IATI",
@@ -883,7 +923,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "No IATI registry publisher entry found for Habitat for Humanity International (US) or Habitat for Humanity Nepal. Only 'Habitat for Humanity Great Britain' (a separate UK charity, publisher ref hfhgb / GB-CHC-1043641) is a confirmed IATI publisher — a different legal entity, not used here."
+        "note": "No IATI registry publisher entry found for Habitat for Humanity International (US) or Habitat for Humanity Nepal. Only 'Habitat for Humanity Great Britain' (a separate UK charity, publisher ref hfhgb / GB-CHC-1043641) is a confirmed IATI publisher — a different legal entity, not used here.",
+        "gap_reason": "searched_not_found"
       }
     ],
     "nepal_presence": {
@@ -909,7 +950,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": null
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
       },
       "partners": []
     },
@@ -943,7 +985,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "IRS Form 990 filing confirmed via ProPublica (register-confirmed filing), but an independent/external audit statement was not verified."
+        "note": "IRS Form 990 filing confirmed via ProPublica (register-confirmed filing), but an independent/external audit statement was not verified.",
+        "gap_reason": "searched_not_found"
       },
       "iati_publisher": {
         "is_publisher": false,
@@ -979,7 +1022,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No published expenditure split found for this organisation within the research budget."
+        "note": "No published expenditure split found for this organisation within the research budget.",
+        "gap_reason": "searched_not_found"
       },
       "peer_group": null
     },
@@ -1017,7 +1061,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No Nepali/Devanagari-script name found on caritasnepal.org"
+        "note": "No Nepali/Devanagari-script name found on caritasnepal.org",
+        "gap_reason": "searched_not_found"
       },
       "aliases": []
     },
@@ -1054,7 +1099,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "Search results reference an IATI Registry publisher page with slug 'cnepal', but direct fetches of iatiregistry.org/publisher/cnepal (with and without www) both returned 404, so this could not be independently confirmed."
+        "note": "Search results reference an IATI Registry publisher page with slug 'cnepal', but direct fetches of iatiregistry.org/publisher/cnepal (with and without www) both returned 404, so this could not be independently confirmed.",
+        "gap_reason": "searched_not_found"
       }
     ],
     "nepal_presence": {
@@ -1080,7 +1126,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": null
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
       },
       "partners": []
     },
@@ -1099,7 +1146,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "caritasnepal.org's navigation menu references 'Annual Reports' and 'Audit Report' sections, but the actual documents/listing page were not fetched, so availability and content could not be confirmed within the research budget."
+        "note": "caritasnepal.org's navigation menu references 'Annual Reports' and 'Audit Report' sections, but the actual documents/listing page were not fetched, so availability and content could not be confirmed within the research budget.",
+        "gap_reason": "searched_not_found"
       },
       "iati_publisher": {
         "is_publisher": null,
@@ -1116,7 +1164,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": null
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
       },
       "expenditure": {
         "value": null,
@@ -1127,7 +1176,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": null
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
       },
       "program_ratio": {
         "value": null,
@@ -1135,7 +1185,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No published expenditure split found for this organisation within the research budget."
+        "note": "No published expenditure split found for this organisation within the research budget.",
+        "gap_reason": "searched_not_found"
       },
       "peer_group": null
     },
@@ -1177,7 +1228,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No Nepali-script org name found within search budget"
+        "note": "No Nepali-script org name found within search budget",
+        "gap_reason": "searched_not_found"
       },
       "aliases": [
         "LWF",
@@ -1202,7 +1254,8 @@
         "status": "certified",
         "retrieved_at": "2026-08-28",
         "verification": "register_confirmed",
-        "note": "Zewo-certified since 2019; page shows most recent recertification 2024. No certificate/registration number displayed on the page itself."
+        "note": "Zewo-certified since 2019; page shows most recent recertification 2024. No certificate/registration number displayed on the page itself.",
+        "gap_reason": "searched_not_found"
       },
       {
         "registry": "NP_SWC",
@@ -1211,7 +1264,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "swc.org.np unreachable 2026-08-28 (not fetched). LWF Nepal is widely described as operating in Nepal since 1984 as an INGO country programme, which would typically require SWC affiliation, but no registration number could be confirmed."
+        "note": "swc.org.np unreachable 2026-08-28 (not fetched). LWF Nepal is widely described as operating in Nepal since 1984 as an INGO country programme, which would typically require SWC affiliation, but no registration number could be confirmed.",
+        "gap_reason": "source_unreachable"
       },
       {
         "registry": "IATI",
@@ -1220,7 +1274,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "No IATI Registry publisher page for Lutheran World Federation found via search within the call budget."
+        "note": "No IATI Registry publisher page for Lutheran World Federation found via search within the call budget.",
+        "gap_reason": "searched_not_found"
       }
     ],
     "nepal_presence": {
@@ -1246,7 +1301,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": null
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
       },
       "partners": []
     },
@@ -1265,7 +1321,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "Zewo Gütesiegel certification generally requires externally audited annual accounts as a standing criterion, and LWF is Zewo-certified (recertified 2024), but the audit statement itself was not directly located/verified (PDF not text-extractable with available tools) so left null rather than asserted."
+        "note": "Zewo Gütesiegel certification generally requires externally audited annual accounts as a standing criterion, and LWF is Zewo-certified (recertified 2024), but the audit statement itself was not directly located/verified (PDF not text-extractable with available tools) so left null rather than asserted.",
+        "gap_reason": "searched_not_found"
       },
       "iati_publisher": {
         "is_publisher": null,
@@ -1282,7 +1339,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "PDF titled 'For Hope and a Future — LWF World Service 2024 Annual Report' was located on zewo.ch but could not be parsed for figures (binary PDF, no text extraction tool available)."
+        "note": "PDF titled 'For Hope and a Future — LWF World Service 2024 Annual Report' was located on zewo.ch but could not be parsed for figures (binary PDF, no text extraction tool available).",
+        "gap_reason": "searched_not_found"
       },
       "expenditure": {
         "value": null,
@@ -1293,7 +1351,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "Same PDF as income; not extractable within available tools."
+        "note": "Same PDF as income; not extractable within available tools.",
+        "gap_reason": "searched_not_found"
       },
       "program_ratio": {
         "value": null,
@@ -1301,7 +1360,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No published expenditure split found for this organisation within the research budget."
+        "note": "No published expenditure split found for this organisation within the research budget.",
+        "gap_reason": "searched_not_found"
       },
       "peer_group": null
     },
@@ -1341,7 +1401,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No Nepali/Devanagari-script organisation name found in the sources checked."
+        "note": "No Nepali/Devanagari-script organisation name found in the sources checked.",
+        "gap_reason": "searched_not_found"
       },
       "aliases": [
         "Handicap International",
@@ -1374,7 +1435,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "swc.org.np unreachable 2026-08-28; could not confirm whether HI's Nepal country programme holds an SWC registration/affiliation number."
+        "note": "swc.org.np unreachable 2026-08-28; could not confirm whether HI's Nepal country programme holds an SWC registration/affiliation number.",
+        "gap_reason": "source_unreachable"
       },
       {
         "registry": "IATI",
@@ -1383,7 +1445,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "Attempted to locate a Handicap International / HI IATI publisher record via d-portal; could not confirm a publisher reference within the research budget."
+        "note": "Attempted to locate a Handicap International / HI IATI publisher record via d-portal; could not confirm a publisher reference within the research budget.",
+        "gap_reason": "searched_not_found"
       }
     ],
     "nepal_presence": {
@@ -1428,7 +1491,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "Search results referenced an 'IDEAS label' governance/financial evaluation with independent audit, but no specific page was fetched to confirm this claim, so left null rather than asserted."
+        "note": "Search results referenced an 'IDEAS label' governance/financial evaluation with independent audit, but no specific page was fetched to confirm this claim, so left null rather than asserted.",
+        "gap_reason": "searched_not_found"
       },
       "iati_publisher": {
         "is_publisher": null,
@@ -1445,7 +1509,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "The 2024 network annual report PDF exists (see annual_report.url) but was not opened within the research budget. A third-party estimator (RocketReach, non-primary) claimed $236.1M revenue for 2025 — excluded here as unverifiable."
+        "note": "The 2024 network annual report PDF exists (see annual_report.url) but was not opened within the research budget. A third-party estimator (RocketReach, non-primary) claimed $236.1M revenue for 2025 — excluded here as unverifiable.",
+        "gap_reason": "searched_not_found"
       },
       "expenditure": {
         "value": null,
@@ -1456,7 +1521,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "Same as income — not opened within research budget."
+        "note": "Same as income — not opened within research budget.",
+        "gap_reason": "searched_not_found"
       },
       "program_ratio": {
         "value": null,
@@ -1464,7 +1530,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No published expenditure split found for this organisation within the research budget."
+        "note": "No published expenditure split found for this organisation within the research budget.",
+        "gap_reason": "searched_not_found"
       },
       "peer_group": null
     },
@@ -1502,7 +1569,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "HQ entity is Czech (Latin script). No Nepali-script name found for the Nepal country programme within research budget."
+        "note": "HQ entity is Czech (Latin script). No Nepali-script name found for the Nepal country programme within research budget.",
+        "gap_reason": "searched_not_found"
       },
       "aliases": [
         "PIN",
@@ -1524,7 +1592,8 @@
         "status": "registered",
         "retrieved_at": "2026-08-28",
         "verification": "self_reported",
-        "note": "Czech Republic is not in the registry enum. Legal entity 'Člověk v tísni, o.p.s.' is a Czech 'obecně prospěšná společnost' (public-benefit corporation) HQ'd at Šafaříkova 635/24, Praha 2 — self-reported via the org's own about-us page. It would be registered in a Czech public register (likely with a Czech IČO business ID) but no register entry or IČO number was located within the research budget."
+        "note": "Czech Republic is not in the registry enum. Legal entity 'Člověk v tísni, o.p.s.' is a Czech 'obecně prospěšná společnost' (public-benefit corporation) HQ'd at Šafaříkova 635/24, Praha 2 — self-reported via the org's own about-us page. It would be registered in a Czech public register (likely with a Czech IČO business ID) but no register entry or IČO number was located within the research budget.",
+        "gap_reason": "searched_not_found"
       },
       {
         "registry": "NP_SWC",
@@ -1533,7 +1602,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "swc.org.np unreachable 2026-08-28; not fetched. No SWC registration number found on People in Need's own pages either."
+        "note": "swc.org.np unreachable 2026-08-28; not fetched. No SWC registration number found on People in Need's own pages either.",
+        "gap_reason": "source_unreachable"
       },
       {
         "registry": "IATI",
@@ -1542,7 +1612,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "Org's About Us page loosely references participation in 'the IATI system' for transparency reporting, but this was a paraphrase from a fetch summary, not a verbatim confirmation; iatiregistry.org / d-portal.org were not checked directly. Publisher ref not confirmed."
+        "note": "Org's About Us page loosely references participation in 'the IATI system' for transparency reporting, but this was a paraphrase from a fetch summary, not a verbatim confirmation; iatiregistry.org / d-portal.org were not checked directly. Publisher ref not confirmed.",
+        "gap_reason": "searched_not_found"
       }
     ],
     "nepal_presence": {
@@ -1568,7 +1639,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "Not found on pages fetched."
+        "note": "Not found on pages fetched.",
+        "gap_reason": "searched_not_found"
       },
       "partners": [
         {
@@ -1667,7 +1739,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "About Us page referenced an 'Annual Report 2025' by title but no direct document link or listing page was located within budget."
+        "note": "About Us page referenced an 'Annual Report 2025' by title but no direct document link or listing page was located within budget.",
+        "gap_reason": "searched_not_found"
       },
       "iati_publisher": {
         "is_publisher": null,
@@ -1684,7 +1757,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "Not located within research budget."
+        "note": "Not located within research budget.",
+        "gap_reason": "searched_not_found"
       },
       "expenditure": {
         "value": null,
@@ -1695,7 +1769,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "Not located within research budget."
+        "note": "Not located within research budget.",
+        "gap_reason": "searched_not_found"
       },
       "program_ratio": {
         "value": null,
@@ -1703,7 +1778,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No published expenditure split found for this organisation within the research budget."
+        "note": "No published expenditure split found for this organisation within the research budget.",
+        "gap_reason": "searched_not_found"
       },
       "peer_group": null
     },
@@ -1744,7 +1820,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "wateraid.org/np blocked (403) to WebFetch; no Nepali-script name found elsewhere"
+        "note": "wateraid.org/np blocked (403) to WebFetch; no Nepali-script name found elsewhere",
+        "gap_reason": "source_unreachable"
       },
       "aliases": [
         "WaterAid"
@@ -1774,7 +1851,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "SWC site (swc.org.np) unreachable 2026-08-28; org's own Nepal-specific pages also blocked (403) to WebFetch, so no Nepal registration number could be located at all."
+        "note": "SWC site (swc.org.np) unreachable 2026-08-28; org's own Nepal-specific pages also blocked (403) to WebFetch, so no Nepal registration number could be located at all.",
+        "gap_reason": "source_unreachable"
       },
       {
         "registry": "IATI",
@@ -1783,7 +1861,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "d-portal.org/ctrack.html?publisher=GB-CHC-288701 was fetched but is JS-rendered and returned no data via static HTML conversion; iatiregistry.org publisher page not fetched within budget. Publisher status genuinely unconfirmed."
+        "note": "d-portal.org/ctrack.html?publisher=GB-CHC-288701 was fetched but is JS-rendered and returned no data via static HTML conversion; iatiregistry.org publisher page not fetched within budget. Publisher status genuinely unconfirmed.",
+        "gap_reason": "searched_not_found"
       }
     ],
     "nepal_presence": {
@@ -1793,7 +1872,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "wateraid.org/np and wateraid.org/where-we-work/nepal both returned 403"
+        "note": "wateraid.org/np and wateraid.org/where-we-work/nepal both returned 403",
+        "gap_reason": "source_unreachable"
       },
       "mode": {
         "value": "unknown",
@@ -1809,7 +1889,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": null
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
       },
       "partners": []
     },
@@ -1828,7 +1909,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "Charity Commission accounts-and-annual-returns page and wateraid.org financials/reports pages both inaccessible (403) to WebFetch this session"
+        "note": "Charity Commission accounts-and-annual-returns page and wateraid.org financials/reports pages both inaccessible (403) to WebFetch this session",
+        "gap_reason": "source_unreachable"
       },
       "iati_publisher": {
         "is_publisher": false,
@@ -1845,7 +1927,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "Charity Commission accounts page returned 403 to WebFetch"
+        "note": "Charity Commission accounts page returned 403 to WebFetch",
+        "gap_reason": "source_unreachable"
       },
       "expenditure": {
         "value": null,
@@ -1856,7 +1939,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "Charity Commission accounts page returned 403 to WebFetch"
+        "note": "Charity Commission accounts page returned 403 to WebFetch",
+        "gap_reason": "source_unreachable"
       },
       "program_ratio": {
         "value": null,
@@ -1864,7 +1948,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No published expenditure split found for this organisation within the research budget."
+        "note": "No published expenditure split found for this organisation within the research budget.",
+        "gap_reason": "searched_not_found"
       },
       "peer_group": null
     },
@@ -1907,7 +1992,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No Nepali-script name found on practicalaction.org/nepal"
+        "note": "No Nepali-script name found on practicalaction.org/nepal",
+        "gap_reason": "searched_not_found"
       },
       "aliases": []
     },
@@ -1935,7 +2021,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "SWC (swc.org.np) site was unreachable 2026-08-28; no SWC affiliation number is published on practicalaction.org/nepal either."
+        "note": "SWC (swc.org.np) site was unreachable 2026-08-28; no SWC affiliation number is published on practicalaction.org/nepal either.",
+        "gap_reason": "source_unreachable"
       },
       {
         "registry": "IATI",
@@ -1944,7 +2031,8 @@
         "status": null,
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
-        "note": "Attempted iatiregistry.org/publisher/practical_action and /practicalaction — both returned 404. Could not confirm whether Practical Action publishes to IATI or under what publisher slug/ref within the call budget available."
+        "note": "Attempted iatiregistry.org/publisher/practical_action and /practicalaction — both returned 404. Could not confirm whether Practical Action publishes to IATI or under what publisher slug/ref within the call budget available.",
+        "gap_reason": "searched_not_found"
       }
     ],
     "nepal_presence": {
@@ -1970,7 +2058,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": null
+        "note": "Searched in the 2026-08-28 research pass; not found.",
+        "gap_reason": "searched_not_found"
       },
       "partners": []
     },
@@ -1989,7 +2078,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "Annual report page states 'Read our 2024-25 annual report and financial accounts' and notes registration with the Fundraising Regulator, but the linked PDF returned only binary/encoded content to WebFetch and could not be parsed for an auditor's statement."
+        "note": "Annual report page states 'Read our 2024-25 annual report and financial accounts' and notes registration with the Fundraising Regulator, but the linked PDF returned only binary/encoded content to WebFetch and could not be parsed for an auditor's statement.",
+        "gap_reason": "searched_not_found"
       },
       "iati_publisher": {
         "is_publisher": null,
@@ -2006,7 +2096,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "UK Charity Commission accounts-and-annual-returns page returned HTTP 403 on every attempt; the org's own 2024-25 annual report PDF could not be parsed for figures by WebFetch (binary/compressed content only)."
+        "note": "UK Charity Commission accounts-and-annual-returns page returned HTTP 403 on every attempt; the org's own 2024-25 annual report PDF could not be parsed for figures by WebFetch (binary/compressed content only).",
+        "gap_reason": "source_unreachable"
       },
       "expenditure": {
         "value": null,
@@ -2017,7 +2108,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "Same access failure as income above."
+        "note": "Same access failure as income above.",
+        "gap_reason": "searched_not_found"
       },
       "program_ratio": {
         "value": null,
@@ -2025,7 +2117,8 @@
         "retrieved_at": "2026-08-28",
         "verification": "unverified",
         "quote": null,
-        "note": "No published expenditure split found for this organisation within the research budget."
+        "note": "No published expenditure split found for this organisation within the research budget.",
+        "gap_reason": "searched_not_found"
       },
       "peer_group": null
     },

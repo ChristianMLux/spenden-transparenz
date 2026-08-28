@@ -1,0 +1,25 @@
+[project]
+name = "spenden-pipeline"
+version = "0.1.0"
+description = "Idempotent ingestion jobs. Each run opens an ingestion_run and upserts on natural keys."
+requires-python = ">=3.13"
+dependencies = [
+    "sqlalchemy[asyncio]>=2.0.36",
+    "asyncpg>=0.30",
+    "psycopg[binary]>=3.2",
+    "requests>=2.32",
+    # OpenRouter exposes an OpenAI-compatible API; extraction goes through it, not a direct
+    # provider SDK (PO decision, 2026-08-28).
+    "openai>=1.60",
+    "jsonschema>=4.23",
+    "python-json-logger>=3.1",
+    "pydantic-settings>=2.6",
+    "spenden-core",
+]
+
+# No build-system on purpose: this is a virtual project. The directory is itself the `pipeline`
+# package (flat layout), which hatchling cannot package without moving every file. It is run
+# from the repository root and shipped to Railway via pipeline/requirements.txt.
+
+[tool.uv.sources]
+spenden-core = { workspace = true }

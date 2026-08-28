@@ -16,7 +16,7 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 RAW = ROOT / "data" / "raw"
 TODAY = date.today().isoformat()
 FLOOD_DATE = date(2026, 8, 26)
