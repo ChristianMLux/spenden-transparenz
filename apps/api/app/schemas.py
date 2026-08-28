@@ -34,6 +34,7 @@ ValueType = Literal["string", "integer", "number", "boolean", "money", "date"]
 MoneyScope = Literal["global", "nepal_only", "unknown"]
 DistrictResolution = Literal["stated", "inherited_from_report"]
 AmountBasis = Literal["reported", "appeal", "pledged", "raised", "released", "disbursed"]
+ChannelType = Literal["donation_page", "bank_transfer_page", "platform_page"]
 
 
 class Datum(BaseModel):
@@ -61,6 +62,15 @@ class Datum(BaseModel):
     note: str | None = Field(description="present whenever value is null")
     verification: Verification
     gap_reason: GapReason | None = Field(description="present exactly when value is null")
+    channel_type: ChannelType | None = Field(
+        description="for a donation_channel datum: what the link asks of a reader. Null elsewhere."
+    )
+    flood_specific: bool | None = Field(
+        description=(
+            "for a donation_channel datum: true when the link is this disaster's campaign, false "
+            "when it is the organisation's standing donation page. Null elsewhere."
+        )
+    )
 
 
 def serialise_datum(row: OrgDatum) -> Datum:
@@ -80,6 +90,26 @@ def serialise_datum(row: OrgDatum) -> Datum:
         note=row.note,
         verification=row.verification,
         gap_reason=row.gap_reason,
+        channel_type=row.channel_type,
+        flood_specific=row.flood_specific,
+    )
+
+
+class DonationChannel(BaseModel):
+    """An organisation's official donation page, compactly, for a board row.
+
+    Only ever the organisation's own registrable domain - the loader rejects anything else before
+    it reaches the database - and never payment details: a link, not an account number. Null on a
+    row means no official channel was found, which the board states rather than hides. The full
+    datum, with its note, quote and gap_reason, is on the organisation's own page.
+    """
+
+    url: str
+    channel_type: ChannelType | None
+    verification: Verification
+    retrieved_at: date | None
+    flood_specific: bool | None = Field(
+        description="true when this is the campaign for this disaster rather than a standing page"
     )
 
 
@@ -171,6 +201,14 @@ class ResponderItem(BaseModel):
     statements: list[StatementOut] = []
     counts: ResponderCounts
     flags: ResponderFlags
+    donation_channel: DonationChannel | None = Field(
+        default=None,
+        description=(
+            "the organisation's own official donation page, or null when none was found. Every "
+            "row carries this field and it is presented identically for every organisation: it is "
+            "a way to act, never a recommendation, and null is stated rather than hidden."
+        ),
+    )
 
 
 class DisasterOut(BaseModel):

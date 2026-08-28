@@ -47,6 +47,7 @@ from datetime import UTC, date, datetime
 from decimal import Decimal
 from typing import Any
 
+from core.donation import host_of, is_official_domain
 from core.logging import get_logger
 from core.models import (
     HAND_RESEARCH_MODEL,
@@ -65,6 +66,7 @@ from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
 from pipeline.migrations.add_gap_reason import (
+    BATCH_DIR,
     GENERATED_NOTE,
     derive_gap_reason,
     derive_registration_gap_reason,
@@ -86,6 +88,92 @@ ORG_COLUMNS = (
     "last_updated",
     "research_notes",
 )
+
+
+# --- donation channel ---------------------------------------------------------------------------
+
+DONATION_CHANNEL_PATH = "donation_channel"
+DONATION_CHANNELS_FILE = "donation-channels.json"
+
+OFF_DOMAIN_NOTE = (
+    "A donation page was found, but it is hosted on a different registrable domain than this "
+    "organisation's own website - typically a related international entity or a third-party "
+    "platform. A donor following it would be giving to a different recipient than the one named "
+    "here, so it is not stored and not shown. The URL itself is deliberately not recorded."
+)
+
+
+def load_donation_channels() -> tuple[dict[str, dict[str, Any]], list[dict[str, Any]]]:
+    """The researched donation channels, keyed by org_id, plus the government funds.
+
+    Kept in its own file rather than merged into the batch records because it was researched in one
+    pass against every organisation's own site, and a re-run of that research should replace one
+    file rather than reach into forty-four records.
+    """
+    path = BATCH_DIR / DONATION_CHANNELS_FILE
+    if not path.exists():
+        return {}, []
+    payload = json.loads(path.read_text(encoding="utf-8-sig"))
+    return payload.get("channels", {}), payload.get("government_funds", [])
+
+
+def vet_donation_channel(org_id: str, website: str | None, datum: dict[str, Any]) -> dict[str, Any]:
+    """The datum as researched, or a documented gap when the URL is not on the org's own domain.
+
+    This is the single choke point for the rule, so it holds for a channel merged in from the
+    research file and for one written inline on an organisation record alike. A rejected URL never
+    reaches the database - not as a value, and not quoted inside the note either, because a
+    third-party donation URL on this board is exactly the harm the rule exists to prevent. The
+    rejected host goes to the log, where an operator can see it and nobody can click it.
+    """
+    url = datum.get("value")
+    if url is None:
+        return datum
+
+    if is_official_domain(url, website):
+        if not datum.get("source_url"):
+            # A donation page is its own evidence. The claim being made is "this organisation's
+            # official donation channel is this page", and the page - on the organisation's own
+            # domain, which the check above just established - is what attests to it. That is what
+            # verification "self_reported" means here. Filling it explicitly rather than letting a
+            # null reach _datum_row, which would correctly refuse a value with no source: the rule
+            # is not being bent, the source was simply written in the value field.
+            datum = dict(datum, source_url=url)
+        return datum
+
+    log.warning(
+        "donation_channel_rejected_off_domain",
+        extra={
+            "org_id": org_id,
+            "rejected_host": host_of(url),
+            "website_host": host_of(website),
+        },
+    )
+    return {
+        "value": None,
+        "source_url": None,
+        "retrieved_at": datum.get("retrieved_at"),
+        "verification": "unverified",
+        "quote": None,
+        "note": OFF_DOMAIN_NOTE,
+        "gap_reason": "searched_not_found",
+        "channel_type": None,
+        "flood_specific": None,
+    }
+
+
+def merge_donation_channels(orgs: list[dict[str, Any]], channels: dict[str, dict[str, Any]]) -> int:
+    """Attach each researched channel to its organisation record, vetted. Returns how many orgs
+    got one. An organisation with no entry keeps no donation_channel key at all, which is a
+    different statement from a researched gap and is left to the record's own data_gaps."""
+    attached = 0
+    for org in orgs:
+        entry = channels.get(org["org_id"])
+        if entry is None:
+            continue
+        org[DONATION_CHANNEL_PATH] = vet_donation_channel(org["org_id"], org.get("website"), dict(entry))
+        attached += 1
+    return attached
 
 
 def _content_hash(*values: Any) -> str:
@@ -165,6 +253,16 @@ def _value_type_and_extra(datum: dict[str, Any], value: Any) -> tuple[str | None
             "scope": datum.get("scope"),
         }
         return "money", extra
+    if "channel_type" in datum:
+        # Same shape as money: sibling keys in the source JSON become sibling columns, and the
+        # datum keeps its type ("string" - the value is a URL) rather than inventing one. They are
+        # carried even on a gap, because "we looked and there is no official channel" is a fact
+        # about the organisation that the board shows in the same place as a link.
+        extra = {
+            "channel_type": datum.get("channel_type"),
+            "flood_specific": datum.get("flood_specific"),
+        }
+        return ("string" if isinstance(value, str) else None), extra
     if isinstance(value, bool):
         return "boolean", {}
     if isinstance(value, int):
@@ -203,7 +301,17 @@ def _datum_row(org_id: str, path: str, datum: dict[str, Any], data_gaps: set[str
     verification = datum.get("verification") or "unverified"
     quote = datum.get("quote")
 
-    content_hash = _content_hash(value, source_url, retrieved_at_raw, verification, quote, note, gap_reason)
+    content_hash = _content_hash(
+        value,
+        source_url,
+        retrieved_at_raw,
+        verification,
+        quote,
+        note,
+        gap_reason,
+        extra.get("channel_type"),
+        extra.get("flood_specific"),
+    )
 
     return {
         "org_id": org_id,
@@ -213,6 +321,8 @@ def _datum_row(org_id: str, path: str, datum: dict[str, Any], data_gaps: set[str
         "currency": extra.get("currency"),
         "fiscal_year": extra.get("fiscal_year"),
         "scope": extra.get("scope"),
+        "channel_type": extra.get("channel_type"),
+        "flood_specific": extra.get("flood_specific"),
         "source_url": source_url,
         "retrieved_at": _parse_date(retrieved_at_raw),
         "quote": quote,
@@ -587,6 +697,18 @@ async def ingest_orgs(
         return
 
     orgs = load_orgs()
+    channels, _government_funds = load_donation_channels()
+    # Vetted on the way in, before any row is built: the rule that a donation URL must sit on the
+    # organisation's own domain is the one rule on this board a reader acts on with money, so it
+    # is enforced where a rejected link can still become a documented gap rather than a row.
+    # The government fund's own channel is written inline on its record and vetted the same way.
+    attached = merge_donation_channels(orgs, channels)
+    for org in orgs:
+        inline = org.get(DONATION_CHANNEL_PATH)
+        if inline is not None and org["org_id"] not in channels:
+            org[DONATION_CHANNEL_PATH] = vet_donation_channel(org["org_id"], org.get("website"), dict(inline))
+    log.info("donation_channels_attached", extra={"orgs": len(orgs), "with_channel": attached})
+
     run_id = handle.id
 
     org_rows = [_organisation_row(org, run_id) for org in orgs]

@@ -1,4 +1,4 @@
-# Datenmodell v0.4 — Organisations-Record (Pilot „Nepal Flut 2026")
+# Datenmodell v0.5 — Organisations-Record (Pilot „Nepal Flut 2026")
 
 **Stand:** 2026-08-28 · **Status:** Entwurf, entstanden aus dem Pilot-Datensatz. Feldnamen EN (Handoff-Entscheidung 4, als Annahme übernommen). Maschinenlesbar: `schema/org.schema.json` (JSON Schema 2020-12), Beispiel: `schema/example-org.json`.
 
@@ -36,6 +36,48 @@ deshalb gewinnt `source_unreachable` gegen `not_public`, wenn beides auf eine No
 `gap_reason` ist **nicht** required. Ein Datum mit Wert trägt keinen Grund, und ein Pflichtfeld
 hätte jeden bestehenden Record ungültig gemacht. Erzwungen wird es dort, wo es zählt: die
 Datenbank (`org_datum`) lässt eine Lücke ohne `note` **und** `gap_reason` nicht zu.
+
+### Warum jede Organisation einen `donation_channel` bekommt (v0.5)
+
+Ein Nutzertest hat die Lücke gefunden, die keine Datenqualitätsprüfung findet: jemand hat über
+Google in Minuten eine offizielle nepalesische Kontonummer gefunden, während diese Seite — voller
+belegter Information — keinen einzigen Weg zum Handeln anbot. „Keine Empfehlung" war als „keine
+Spendenbuttons" umgesetzt worden. Das sind zwei verschiedene Dinge.
+
+`donation_channel` ist deshalb ein `datum` wie jedes andere, mit einer harten Regel im Loader:
+
+**Die registrierbare Domain der URL muss die der Organisations-Website sein** (oder eine
+Subdomain davon). `donation.nrcs.org` zu `nrcs.org` ist in Ordnung, `oxfam.org` zu
+`nepal.oxfam.org` ebenfalls — dieselbe registrierte Domain, derselbe Inhaber. Alles andere wird
+abgelehnt, geloggt und als Lücke gespeichert. Beim ersten Lauf über die recherchierte Datei traf
+das genau einen Eintrag: CARE Nepal (`carenepal.org`) mit einem Link auf `care.org` — das ist
+CARE USA, eine andere juristische Person in einem anderen Land. Wer diesem Link folgt, spendet an
+eine Organisation, die diese Seite nie genannt hat.
+
+Die abgelehnte URL landet **nirgends** in der Datenbank: nicht als Wert, nicht als Quelle, und
+auch nicht zitiert in der Notiz. Sie steht im Log, wo ein Betreiber sie sieht und niemand sie
+anklicken kann.
+
+**Kontonummern werden nirgends gespeichert.** Ein `donation_channel` ist ein Link, keine
+Zahlungsdaten — auch dann nicht, wenn die Quellseite eine IBAN oder ein QR-Bild zeigt. Ein Test
+prüft das gegen jedes Feld jedes Datums.
+
+| Feld | Bedeutung |
+|---|---|
+| `value` | URL der offiziellen Spendenseite, oder `null` |
+| `channel_type` | `donation_page` (Online-Formular) · `bank_transfer_page` (Seite mit Überweisungsdaten, nicht die Daten) · `platform_page` (eigene Seite auf einer Spendenplattform, von der eigenen Domain aus verlinkt) |
+| `flood_specific` | `true` = Kampagne zu genau dieser Katastrophe, `false` = laufende Spendenseite |
+| `verification` | immer `self_reported` — es ist die eigene Seite der Organisation |
+
+34 der 45 Records tragen eine URL. Die übrigen 11 sind Lücken mit `gap_reason`, und sie stehen auf
+dem Board an derselben Stelle und mit demselben Gewicht wie ein Link. Es gibt keine Sortierung und
+keine Reihung danach, ob eine Organisation einen Spendenweg hat: das Feld ist ein Weg zum Handeln,
+keine Empfehlung.
+
+Neu als Record: der **Prime Minister Disaster Relief Fund** (`org_type: government`, HQ NP). Der
+staatliche Fonds war das offensichtlichste Ziel überhaupt und das einzige, das diese Seite nie
+genannt hat. Er steht jetzt als Record wie jeder andere da — mit denselben Lücken, derselben
+Provenienz, ohne Sonderbehandlung.
 
 ### Warum die Klassifikation im Record steht (v0.4)
 

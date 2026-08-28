@@ -118,9 +118,13 @@ def test_the_seven_records_are_now_gaps_with_a_reason():
 
 
 def test_the_counts_after_the_migration():
-    """Seven datums moved from the value side to the gap side: 157/263 becomes 150/270."""
+    """Seven datums moved from the value side to the gap side: 157/263 became 150/270.
+
+    430/154/276 since schema v0.5 added the Prime Minister Disaster Relief Fund - four sourced
+    values (legal name, local script, presence mode, donation channel) and six gaps.
+    """
     orgs = load_orgs()
     datums = [d for o in orgs for _, d in walk_datums(o)]
-    assert len(datums) == 420
-    assert sum(1 for d in datums if d.get("value") is not None) == 150
-    assert sum(1 for d in datums if d.get("value") is None) == 270
+    assert len(datums) == 430
+    assert sum(1 for d in datums if d.get("value") is not None) == 154
+    assert sum(1 for d in datums if d.get("value") is None) == 276

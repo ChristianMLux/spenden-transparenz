@@ -158,6 +158,12 @@ class OrgDatum(Base):
     fiscal_year: Mapped[str | None]
     scope: Mapped[str | None]
 
+    # Sibling facts of a donation_channel datum, the way currency/fiscal_year/scope are sibling
+    # facts of a money datum: what the link asks of a reader, and whether it is the campaign for
+    # this disaster or the organisation's standing donation page. Both null on every other path.
+    channel_type: Mapped[str | None]
+    flood_specific: Mapped[bool | None] = mapped_column(Boolean)
+
     source_url: Mapped[str | None]
     retrieved_at: Mapped[date | None]
     quote: Mapped[str | None]
@@ -177,6 +183,7 @@ class OrgDatum(Base):
         _enum_check("gap_reason", enums.GAP_REASON, "org_datum"),
         _enum_check("value_type", enums.VALUE_TYPE, "org_datum"),
         _enum_check("scope", enums.MONEY_SCOPE, "org_datum"),
+        _enum_check("channel_type", enums.CHANNEL_TYPE, "org_datum"),
         CheckConstraint(
             "(value IS NOT NULL AND source_url IS NOT NULL AND gap_reason IS NULL)"
             " OR (value IS NULL AND note IS NOT NULL AND gap_reason IS NOT NULL)",

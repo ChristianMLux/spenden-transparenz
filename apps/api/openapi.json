@@ -33,6 +33,23 @@
       "Datum": {
         "description": "One value with its provenance, or one explicit gap.\n\nA gap is {\"value\": null, \"is_gap\": true, \"note\": ..., \"gap_reason\": ...}. Every key is present\nin both cases.\n\nEvery field is required-but-nullable rather than optional-with-a-default, and that is\ndeliberate. A default makes the field optional in the generated OpenAPI schema, which tells a\nclient the key may be absent - and a missing key and a null value render differently. The\nfrontend builds its whole honesty design on \"the key is always there\", so the contract has to\npromise it rather than merely happen to satisfy it.",
         "properties": {
+          "channel_type": {
+            "anyOf": [
+              {
+                "enum": [
+                  "donation_page",
+                  "bank_transfer_page",
+                  "platform_page"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "for a donation_channel datum: what the link asks of a reader. Null elsewhere.",
+            "title": "Channel Type"
+          },
           "currency": {
             "anyOf": [
               {
@@ -56,6 +73,18 @@
             ],
             "description": "e.g. \"2024\" or \"2024/25\"",
             "title": "Fiscal Year"
+          },
+          "flood_specific": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "for a donation_channel datum: true when the link is this disaster's campaign, false when it is the organisation's standing donation page. Null elsewhere.",
+            "title": "Flood Specific"
           },
           "gap_reason": {
             "anyOf": [
@@ -200,7 +229,9 @@
           "quote",
           "note",
           "verification",
-          "gap_reason"
+          "gap_reason",
+          "channel_type",
+          "flood_specific"
         ],
         "title": "Datum",
         "type": "object"
@@ -365,6 +396,75 @@
           "resolution"
         ],
         "title": "DistrictRef",
+        "type": "object"
+      },
+      "DonationChannel": {
+        "description": "An organisation's official donation page, compactly, for a board row.\n\nOnly ever the organisation's own registrable domain - the loader rejects anything else before\nit reaches the database - and never payment details: a link, not an account number. Null on a\nrow means no official channel was found, which the board states rather than hides. The full\ndatum, with its note, quote and gap_reason, is on the organisation's own page.",
+        "properties": {
+          "channel_type": {
+            "anyOf": [
+              {
+                "enum": [
+                  "donation_page",
+                  "bank_transfer_page",
+                  "platform_page"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Channel Type"
+          },
+          "flood_specific": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "true when this is the campaign for this disaster rather than a standing page",
+            "title": "Flood Specific"
+          },
+          "retrieved_at": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Retrieved At"
+          },
+          "url": {
+            "title": "Url",
+            "type": "string"
+          },
+          "verification": {
+            "enum": [
+              "self_reported",
+              "register_confirmed",
+              "externally_audited",
+              "third_party_reported",
+              "unverified"
+            ],
+            "title": "Verification",
+            "type": "string"
+          }
+        },
+        "required": [
+          "url",
+          "channel_type",
+          "verification",
+          "retrieved_at",
+          "flood_specific"
+        ],
+        "title": "DonationChannel",
         "type": "object"
       },
       "EnumsOut": {
@@ -796,6 +896,17 @@
         "properties": {
           "counts": {
             "$ref": "#/components/schemas/ResponderCounts"
+          },
+          "donation_channel": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DonationChannel"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "the organisation's own official donation page, or null when none was found. Every row carries this field and it is presented identically for every organisation: it is a way to act, never a recommendation, and null is stated rather than hidden."
           },
           "flags": {
             "$ref": "#/components/schemas/ResponderFlags"
