@@ -247,6 +247,59 @@ nothing is building into it.
 
 ---
 
+## Gate G3 re-run after WP4, 2026-08-28
+
+WP4 changed how the whole product looks and added the first thing on it a reader can act
+on, so the honesty checklist was run again from scratch rather than assumed to still hold.
+Thirteen lines now: DESIGN.md section 11 gained one and had two rewritten, because the
+action path made the old wording of check 5 unrunnable.
+
+| # | Check | Result |
+|---|---|---|
+| 1 | No superlatives or recommendation language | Pass. Every hit is either an unrelated word or the product denying it: "Wir bewerten nicht und empfehlen nicht. Es gibt keine Rangliste, keine Punktzahl". |
+| 2 | No score, rating, ranking, meter | Pass. Every hit is a comment explaining the prohibition ("sorting by evidence grade would rank", "no score, no badge row"). One false positive worth knowing: "meter" matches inside `Parameters` in lib/site.ts. |
+| 3 | No check marks or crosses | Pass, zero hits. |
+| 4 | No AthenaRun branding, no #FF6131 | Pass, zero hits. |
+| 5 | No donation call to action | Pass via `npm run check:copy`, 94 files, copy ok. The old grep form of this check was retired here; see below. |
+| 6 | Exactly three sort options, none by evidence grade | Pass. `latest`, `name`, `fewest-data` in lib/filter.ts, pinned by a tripwire test. |
+| 7 | "nicht gefunden" never weaker than a value | Pass. Computed-style test in org.spec.ts and zoom-and-keyboard.spec.ts, both green. |
+| 8 | Every number reaches its source in at most two interactions | Pass. The figures are filter links; the first row carries two source links, its statement provenance and its donation channel. |
+| 9 | No bare amounts | Pass. No currency literal outside amount.tsx and the message files; `<Amount>` requires a basis prop. |
+| 10 | Colour never the sole carrier of meaning | Pass. Rendered at 1280x900 under `filter: grayscale(1)`: every mark still sits beside its word and the structure is carried by rules and tints, not hue. |
+| 11 | `not_public` is a statement about the register | Pass. "Dieses Register veroeffentlicht den Wert nicht." |
+| 12 | No photographs | Pass. Zero hits in app/ and components/; the locator SVG this line used to name was removed at G1/G2. |
+| 13 | No donation state weaker than a found one (new) | Pass. Computed-style test in board.spec.ts compares the found link against "kein offizieller Spendenweg gefunden" on size, weight, slant, opacity, decoration and transform, and asserts the found one is a link while the missing one is not. |
+
+Two counts from the rendered board are worth recording next to the checklist, because they
+are the checklist working rather than passing: the page carries "kein offizieller
+Spendenweg gefunden" exactly 10 times and "Keine oeffentliche Reaktionsmeldung gefunden"
+exactly 9 times, matching the 10 organisations with no channel found and the "9 ohne
+gefundene Reaktion" figure. Both absences are rendered, both at full weight.
+
+### Why check 5 had to be rewritten rather than re-run
+
+Its old form was `rg -i "spenden jetzt|jetzt spenden|donate|jetzt helfen" apps/web` = 0
+hits. The action path ships 34 official donation URLs, several of which contain the word
+"donate", plus a dataset and a module named for the thing. A zero-hit grep would now fail
+on the feature working correctly, and the cheapest way to make it pass again would have
+been to rename the honest thing. That is the wrong pressure to put on an author, so the
+check is now `npm run check:copy`: it strips negated forms first, because "Sie bewertet
+keine Organisation und empfiehlt keine Spende" is the promise, then fails the build on
+imperatives and ranking language. It was proved to bite by injecting "Jetzt spenden bei
+der empfohlenen Organisation" into a message file and watching the build fail.
+
+### Measured, for the record
+
+`npm run verify` exit 0: tsc clean, eslint clean, contrast ok, copy ok, 128 unit tests,
+123 static pages, worst page 151.4 KB gz against 155, 216 Playwright tests. Board payload
+64,540 B raw and 12,422 brotli against the budget raised to 66,000 / 12,800. gitleaks over
+392 files: no leaks. Lighthouse against the Vercel preview of the merged tree: performance
+98 / 96 / 98 mobile and 100 desktop, accessibility 100, best practices 100, SEO 63 on every
+page from Vercel's own x-robots-tag noindex on protected previews, which reads 100 on a
+production domain.
+
+---
+
 ## Post-v1 follow-ups, logged 2026-08-28
 
 Not defects and not blocking v1. Each is written down here so it survives the session
