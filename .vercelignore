@@ -1,0 +1,17 @@
+data/raw/*
+!data/raw/reliefweb/
+!data/raw/hapi/
+data/raw/reliefweb/*
+!data/raw/reliefweb/disaster_updates.json
+data/raw/hapi/*
+!data/raw/hapi/admin2_NPL.json
+!data/raw/hapi/admin1_NPL.json
+apps/api
+packages
+pipeline
+scripts
+docs
+.env*
+**/.screenshots
+**/node_modules
+**/.next
