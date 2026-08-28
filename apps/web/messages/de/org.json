@@ -1,1 +1,102 @@
-{}
+{
+  "meta": {
+    "titleTemplate": "{name} | Spenden-Transparenz"
+  },
+  "header": {
+    "localScriptField": "Name in Landessprache",
+    "aliasesLabel": "Auch bekannt als",
+    "seat": "Sitz: {place}",
+    "seatCountryOnly": "Sitz: {country}",
+    "website": "Website",
+    "lastUpdated": "Zuletzt aktualisiert: {date}"
+  },
+  "response": {
+    "heading": "Reaktion auf die Flut",
+    "empty": "Keine öffentliche Reaktionsmeldung gefunden (Stand {date}).",
+    "searchedLabel": "Gesucht wurde:",
+    "field": "Aussage"
+  },
+  "presence": {
+    "heading": "Präsenz in Nepal",
+    "sinceYear": "Seit Jahr",
+    "mode": "Arbeitsweise",
+    "staffCount": "Beschäftigte",
+    "partners": "Partner",
+    "modeValue": {
+      "own_staff": "Eigenes Personal",
+      "partners": "Über Partnerorganisationen",
+      "both": "Eigenes Personal und Partnerorganisationen",
+      "unknown": "Nicht spezifiziert"
+    }
+  },
+  "registrations": {
+    "heading": "Registrierungen und Kennungen",
+    "registry": {
+      "NP_SWC": "Social Welfare Council (Nepal)",
+      "NP_DAO": "District Administration Office (Nepal)",
+      "IATI": "International Aid Transparency Initiative (IATI)",
+      "US_IRS": "US-amerikanische Steuerbehörde (IRS, Form 990)",
+      "DE_DZI": "Deutsches Zentralinstitut für soziale Fragen (DZI Spenden-Siegel)",
+      "DE_ITZ": "Initiative Transparente Zivilgesellschaft",
+      "DE_VEREINSREGISTER": "Vereinsregister (Amtsgericht)",
+      "UK_CC": "Charity Commission for England and Wales",
+      "CH_ZEWO": "ZEWO-Gütesiegel (Schweiz)",
+      "UN": "Vereinte Nationen",
+      "OTHER": "Weiteres Register"
+    },
+    "iatiNote": "Verbindungsschlüssel zu anderen Datensätzen.",
+    "sentence": {
+      "not_searched": "In dieser Runde nicht nach einer Kennung im Register {registry} gesucht.",
+      "searchedNotFoundWithDomain": "Keine Registriernummer gefunden ({domain}, {date}).",
+      "searchedNotFound": "Keine Registriernummer gefunden.",
+      "sourceUnreachableWithDomain": "Keine Registriernummer gefunden. Die Quelle war beim Abruf nicht erreichbar ({domain}, {date}).",
+      "sourceUnreachable": "Keine Registriernummer gefunden. Die Quelle war beim Abruf am {date} nicht erreichbar.",
+      "sourceUnreachablePlain": "Keine Registriernummer gefunden. Die Quelle war beim Abruf nicht erreichbar.",
+      "notPublic": "Dieses Register veröffentlicht die Kennung dieser Organisation nicht."
+    }
+  },
+  "financial": {
+    "heading": "Finanzielle Transparenz",
+    "emptyIntro": "Für diese Organisation wurden keine öffentlichen Finanzdaten gefunden.",
+    "emptySearched": "Gesucht wurde nach einem Jahresbericht, einem geprüften Abschluss und einer IATI-Registrierung.",
+    "emptyNormal": "Von den 14 nepalesischen Organisationen in diesem Datensatz hat keine eine öffentliche Einnahmenzahl. Das ist der Normalfall und kein Mangel dieser Organisation.",
+    "methodikLink": "Mehr dazu in der Methodik.",
+    "incomeField": "Einnahmen",
+    "expenditureField": "Ausgaben",
+    "programRatioField": "Programmquote",
+    "annualReportField": "Jahresbericht",
+    "auditedField": "Geprüfter Abschluss",
+    "iatiRefField": "IATI-Kennung",
+    "scopeLabel": "Umfang: {scope}",
+    "fiscalYearLabel": "Geschäftsjahr {year}",
+    "scope": {
+      "global": "weltweit",
+      "nepal_only": "nur Nepal",
+      "unknown": "Umfang nicht angegeben"
+    },
+    "programRatioFormula": "Formel: {note}",
+    "programRatioValue": "{percent} % der Ausgaben fließen in Programme"
+  },
+  "warnings": {
+    "heading": "Öffentliche Hinweise",
+    "field": "Hinweis"
+  },
+  "gaps": {
+    "heading": "Was wir nicht wissen",
+    "groupHeading": {
+      "searched_not_found": "Gesucht und nicht gefunden",
+      "not_searched": "In dieser Runde nicht gesucht",
+      "source_unreachable": "Quelle nicht erreichbar",
+      "not_public": "Register veröffentlicht das nicht"
+    },
+    "researchNotesHeading": "Wie recherchiert wurde",
+    "empty": "Für diese Organisation sind keine offenen Lücken verzeichnet."
+  },
+  "corrections": {
+    "heading": "Fehler gefunden?",
+    "sentence": "Wenn ein Wert auf dieser Seite falsch ist oder sich geändert hat, sagen Sie es uns.",
+    "linkLabel": "Zur Korrekturen-Seite",
+    "mailLabel": "Fehler per E-Mail melden",
+    "mailSubject": "Korrektur: {orgId} ({date})"
+  }
+}
