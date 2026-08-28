@@ -6,6 +6,7 @@ keys, never delete, second run writes zero rows - only exists in the database.
 
 from __future__ import annotations
 
+import hashlib
 import os
 from collections.abc import AsyncIterator
 from pathlib import Path
@@ -20,7 +21,27 @@ REPO = Path(__file__).resolve().parents[2]
 API_DIR = REPO / "apps" / "api"
 
 DEFAULT_SYNC_URL = "postgresql+psycopg://spenden:spenden@localhost:55432/spenden"
-JOB_DB = "spenden_jobs"
+JOB_DB_BASE = "spenden_jobs"
+
+
+def scratch_db(base: str) -> str:
+    """A database name unique to this checkout.
+
+    Every worktree points at the same Postgres container, and the names used to be fixed. Two
+    workers running their suites at the same time would then DROP the database the other was
+    using, which surfaced as ConnectionDoesNotExistError and as rows vanishing between insert and
+    read - in test files neither worker had touched. Hashing the repository root gives each
+    checkout its own database, stable across runs so the containers do not fill up with strays.
+    Override with SPENDEN_TEST_DB_SUFFIX when you want to pin one.
+    """
+    suffix = (
+        os.environ.get("SPENDEN_TEST_DB_SUFFIX")
+        or hashlib.blake2s(str(REPO).encode("utf-8"), digest_size=3).hexdigest()
+    )
+    return f"{base}_{suffix}"
+
+
+JOB_DB = scratch_db(JOB_DB_BASE)
 
 
 def _base_sync_url() -> str:
