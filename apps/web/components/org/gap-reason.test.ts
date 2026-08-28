@@ -43,6 +43,18 @@ const org: OrgDetail = {
   hq_country: "NP",
   hq_city: null,
   website: null,
+  donation: {
+    url: null,
+    channel_type: null,
+    flood_specific: null,
+    source_url: null,
+    publisher: null,
+    retrieved_at: "2026-08-28",
+    verification: "unverified",
+    quote: null,
+    note: null,
+    gap_reason: "searched_not_found",
+  },
   last_updated: "2026-08-28",
   statements: [],
   presence: {

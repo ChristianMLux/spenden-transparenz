@@ -41,6 +41,51 @@ export interface Datum<T = unknown> {
   gap_reason: GapReason | null;
 }
 
+export type DonationChannelType = "donation_page" | "platform_page" | "bank_transfer_page";
+
+/**
+ * Where an organisation says it takes donations, on its own domain, with the provenance
+ * of that claim. This is an information field like every other: it is never a
+ * recommendation, it carries no ranking, and an organisation without one is not worse
+ * than an organisation with one. `url` is null for the ten organisations where a real
+ * search found no official channel, and that state renders at full weight.
+ *
+ * Account numbers are deliberately absent from this type. The product links to the
+ * organisation's own page and never transcribes bank details, so there is no field here
+ * that could hold them.
+ */
+export interface DonationChannel {
+  url: string | null;
+  channel_type: DonationChannelType | null;
+  /** True when the page is specific to this flood, false when it is the general one. */
+  flood_specific: boolean | null;
+  source_url: string | null;
+  /** Host shown to the reader, e.g. "donation.nrcs.org". */
+  publisher: string | null;
+  retrieved_at: string | null;
+  verification: Verification;
+  quote: string | null;
+  note: string | null;
+  gap_reason: GapReason | null;
+}
+
+/**
+ * What a board row needs to render the link and its provenance chip. The research
+ * note behind a channel runs to several sentences and there are 44 of them, which is
+ * 12 KB of prose nobody reads on the board; it stays on the organisation page, where
+ * it is actually shown. Sending the whole record to the board cost 25 KB of payload
+ * and breached the budget test in lib/api.test.ts.
+ */
+export type DonationLink = Pick<
+  DonationChannel,
+  "url" | "retrieved_at" | "verification" | "gap_reason"
+>;
+
+/** A state relief fund. Same shape, but it is not an organisation on the board. */
+export interface GovernmentFund extends DonationChannel {
+  name: string;
+}
+
 export type OrgType =
   | "un_agency"
   | "red_cross_movement"
@@ -97,6 +142,7 @@ export interface Responder {
   /** Lowercased, diacritics folded, name plus aliases. Built once, never per keystroke. */
   search_key: string;
   statements: Statement[];
+  donation: DonationLink;
 }
 
 export interface Crisis {
@@ -118,6 +164,8 @@ export interface BoardData {
   crisis: Crisis;
   generated_at: string;
   responders: Responder[];
+  /** Not organisations and never counted as such. Rendered apart from the list. */
+  government_funds: GovernmentFund[];
   facets: {
     districts: Facet[];
     hq: Facet[];
@@ -151,6 +199,7 @@ export interface OrgDetail {
   hq_city: string | null;
   website: string | null;
   last_updated: string;
+  donation: DonationChannel;
   statements: Statement[];
   presence: {
     since_year: Datum<number>;

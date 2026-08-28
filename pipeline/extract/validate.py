@@ -134,13 +134,29 @@ def amount_is_supported(amount: Decimal | None, quote: str) -> bool:
     return False
 
 
+_CURRENCY_CODE = re.compile(r"^[A-Za-z]{3}$")
+
+
+def is_currency_code(value: Any) -> bool:
+    """True when `value` is a three-letter code of the shape ISO 4217 uses.
+
+    Deliberately a shape check, not a lookup against the ISO register: the register moves, and a
+    pipeline that silently discarded a real currency because its table was a year old would be
+    worse than one that stores an unrecognised three-letter code. What this does exclude is the
+    shape that carries no unit at all - None, "", "US$", "Rs." - because an amount whose unit
+    cannot be read is not a sum of money that anyone can check.
+    """
+    return isinstance(value, str) and bool(_CURRENCY_CODE.match(value.strip()))
+
+
 def gate(claim: dict[str, Any], body: str) -> tuple[Literal["auto", "rejected_unverbatim"], dict[str, Any]]:
     """The verbatim gate. Every extracted claim passes through this before it may become a row.
 
     Rejects a claim whose quote is missing, empty, whitespace-only, or not a real, at-most-40-word
     substring of the report body. An accepted claim gets its quote_offset filled in; if its amount
-    is not supported by a digit token inside the quote, the amount and currency are dropped to None
-    and the reason is recorded in the note - an invented number is worse than a missing one.
+    is not supported by a digit token inside the quote, or carries no readable currency code, the
+    amount and currency are dropped to None and the reason is recorded in the note - an invented
+    number is worse than a missing one, and a number whose unit nobody stated is not money at all.
     amount_basis is never touched here: it was set once, by the model reading the activity
     sentence, and nothing in this function reads a note to decide it.
 
@@ -162,11 +178,16 @@ def gate(claim: dict[str, Any], body: str) -> tuple[Literal["auto", "rejected_un
     result["quote_offset"] = offset
 
     amount = result.get("amount")
-    if amount is not None and not amount_is_supported(amount, quote):
-        result["amount"] = None
-        result["currency"] = None
-        reason = "amount dropped: not supported by the quote as written"
-        existing_note = result.get("note")
-        result["note"] = f"{existing_note}; {reason}" if existing_note else reason
+    if amount is not None:
+        reason = None
+        if not amount_is_supported(amount, quote):
+            reason = "amount dropped: not supported by the quote as written"
+        elif not is_currency_code(result.get("currency")):
+            reason = "amount dropped: a number with no currency code is a count, not a sum of money"
+        if reason is not None:
+            result["amount"] = None
+            result["currency"] = None
+            existing_note = result.get("note")
+            result["note"] = f"{existing_note}; {reason}" if existing_note else reason
 
     return "auto", result

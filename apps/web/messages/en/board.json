@@ -70,5 +70,14 @@
     "reportedBy": "reported by",
     "noDate": "No date"
   },
-  "districtsLabel": "Districts with at least one statement:"
+  "districtsLabel": "Districts with at least one statement:",
+  "help": {
+    "navLabel": "I want to help",
+    "heading": "I want to help",
+    "line1": "This page collects what organisations have publicly reported about this flood, each with its source and the date it was retrieved.",
+    "line2": "The list is not rated and not ordered by quality. You decide for yourself who to give to.",
+    "line3": "Where an official donation channel was found, the row links to the organisation's own page on its own domain.",
+    "governmentHeading": "Government fund",
+    "governmentNote": "Not an organisation in this list, but a Nepali state fund."
+  }
 }

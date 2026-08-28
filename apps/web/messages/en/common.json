@@ -99,5 +99,15 @@
   },
   "district": {
     "none": "no location stated"
+  },
+  "donation": {
+    "label": "Official donation channel",
+    "notFound": "no official donation channel found",
+    "notSearched": "not searched for a donation channel",
+    "scope": {
+      "flood": "flood donation page",
+      "general": "general donation page"
+    },
+    "safety": "Always check bank details on the organisation's own page. This site does not recommend any organisation."
   }
 }

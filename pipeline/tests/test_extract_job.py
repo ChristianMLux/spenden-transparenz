@@ -14,10 +14,12 @@ from decimal import Decimal
 import pytest
 from core.models import Disaster, District, IngestionRun, Report, ResponseStatement, StatementDistrict
 from sqlalchemy import func, select
+from sqlalchemy.exc import IntegrityError
 
 import pipeline.extract.client as llm_client
+import pipeline.jobs.extract as extract_module
 from pipeline.extract.client import ExtractionResult, cost_usd
-from pipeline.extract.prompt import PROMPT_VERSION, STATEMENT_TOOL, ReportInput, build_messages
+from pipeline.extract.prompt import PROMPT_VERSION, RESPONSE_FORMAT, STATEMENT_SCHEMA, ReportInput, build_messages
 from pipeline.jobs.extract import MAX_ATTEMPTS, extract_statements
 
 # --- prompt.build_messages -----------------------------------------------------------------------
@@ -36,6 +38,15 @@ def test_system_message_instructs_verbatim_quoting_and_the_word_cap():
     assert "40 word" in system.lower()
     assert "presence_declared" in system
     assert "amount_basis" in system
+
+
+def test_the_amount_field_is_documented_as_money_only():
+    """The model returned 69 for "at least 69 schools" because the schema asked for "the numeric
+    amount as the text states it" and a school count is a number the text states. amount sits next
+    to amount_basis on the board, where it reads as a sum of money; the schema has to say so."""
+    description = STATEMENT_SCHEMA["properties"]["amount"]["description"].lower()
+    assert "money" in description or "monetary" in description
+    assert "count" in description
 
 
 def test_system_message_says_known_districts_are_context_not_evidence():
@@ -58,28 +69,48 @@ def test_user_message_contains_the_report_body():
     assert "Flood report" in user
 
 
-def test_statement_tool_schema_mirrors_response_statement_fields():
-    props = STATEMENT_TOOL["function"]["parameters"]["properties"]["statements"]["items"]["properties"]
-    for field in (
-        "org_name_raw",
-        "activity",
-        "activity_type",
-        "where_raw",
-        "happened_on",
-        "amount",
-        "currency",
-        "amount_basis",
-        "quote",
-    ):
+FIELDS = (
+    "org_name_raw",
+    "activity",
+    "activity_type",
+    "where_raw",
+    "happened_on",
+    "amount",
+    "currency",
+    "amount_basis",
+    "quote",
+)
+
+
+def test_statement_schema_mirrors_response_statement_fields():
+    props = STATEMENT_SCHEMA["properties"]
+    for field in FIELDS:
         assert field in props
 
 
-def test_statement_tool_enums_come_from_core_enums():
+def test_every_property_is_required_and_nothing_else_is_allowed():
+    """Strict enforcement is only as strong as `required`. A logically optional field says so with
+    a nullable type, not by being absent - "the text states no date" is a fact about the report."""
+    assert sorted(STATEMENT_SCHEMA["required"]) == sorted(FIELDS)
+    assert STATEMENT_SCHEMA["additionalProperties"] is False
+
+
+def test_statement_schema_enums_come_from_core_enums():
     from core import enums
 
-    props = STATEMENT_TOOL["function"]["parameters"]["properties"]["statements"]["items"]["properties"]
+    props = STATEMENT_SCHEMA["properties"]
     assert props["activity_type"]["enum"] == list(enums.ACTIVITY_TYPE)
     assert props["amount_basis"]["enum"] == list(enums.AMOUNT_BASIS)
+
+
+def test_the_schema_is_sent_as_an_enforced_structured_output_not_as_a_tool():
+    """Measured, not assumed: asked for the same body three times each, tool calling returned
+    `statements` as a JSON string on 3 of 3 calls - the declared array type was not honoured and
+    neither was `required`, so claims arrived with fields missing. response_format returned a real
+    list on 3 of 3 with all nine properties present. A schema nothing enforces is a comment."""
+    assert RESPONSE_FORMAT["type"] == "json_schema"
+    assert RESPONSE_FORMAT["json_schema"]["strict"] is True
+    assert RESPONSE_FORMAT["json_schema"]["schema"]["properties"]["statements"]["items"] is STATEMENT_SCHEMA
 
 
 # --- client.cost_usd -------------------------------------------------------------------------------
@@ -377,3 +408,50 @@ async def test_extract_statements_closes_a_crashed_run_as_failed(job_sessionmake
     run = await _latest_run(session)
     assert run.status == "failed"
     assert "boom" in run.error
+
+
+async def test_a_write_the_database_refuses_costs_that_report_not_the_whole_run(job_sessionmaker, session, monkeypatch):
+    """A run pays for its LLM calls before it writes anything. When the first report's rows hit a
+    constraint the gate did not anticipate, aborting the run throws away every report after it -
+    and the money already spent on them. The live run this test comes from wrote 0 statements from
+    38 fetched reports because one claim carried a school count in the amount column.
+
+    So a refused write costs that report: the transaction is rolled back, its claims are counted as
+    rejected, and the loop continues. The rejection count is what keeps this honest - a systematic
+    write failure cannot hide behind a "succeeded" run, because every one of its claims lands in
+    the rejected total that the malformed rate is measured against.
+    """
+    body_one = "IFRC released emergency funding for the response."
+    body_two = "Nepal Red Cross distributed 500 tarpaulins in Rasuwa."
+    async with job_sessionmaker() as write:
+        await _make_report(write, url="https://example.org/1", body=body_one)
+        await _make_report(write, url="https://example.org/2", body=body_two)
+
+    stub = _StubExtract(
+        [
+            ExtractionResult(claims=[_claim(quote=body_one), _claim(quote=body_one)]),
+            ExtractionResult(claims=[_claim(org_name_raw="Nepal Red Cross", quote=body_two)]),
+        ]
+    )
+    monkeypatch.setattr(llm_client, "extract", stub)
+
+    real_upsert = extract_module._upsert_statements
+    calls = {"n": 0}
+
+    async def refuse_the_first_write(session_, rows):
+        calls["n"] += 1
+        if calls["n"] == 1:
+            raise IntegrityError("INSERT ...", {}, Exception("violates check constraint"))
+        return await real_upsert(session_, rows)
+
+    monkeypatch.setattr(extract_module, "_upsert_statements", refuse_the_first_write)
+
+    await extract_statements(job_sessionmaker)
+
+    rows = (await session.execute(select(ResponseStatement))).scalars().all()
+    assert [r.org_name_raw for r in rows] == ["Nepal Red Cross"]
+
+    run = await _latest_run(session)
+    assert run.status == "succeeded"
+    assert run.rows_written == 1
+    assert run.rows_rejected == 2

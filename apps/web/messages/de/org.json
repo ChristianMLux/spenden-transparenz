@@ -146,5 +146,9 @@
     "linkLabel": "Zur Korrekturen-Seite",
     "mailLabel": "Fehler per E-Mail melden",
     "mailSubject": "Korrektur: {orgId} ({date})"
+  },
+  "donation": {
+    "heading": "Spenden an diese Organisation",
+    "empty": "Für diese Organisation wurde keine offizielle Spendenseite auf ihrer eigenen Domain gefunden."
   }
 }

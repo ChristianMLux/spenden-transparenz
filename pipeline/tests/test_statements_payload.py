@@ -1,6 +1,6 @@
 """Whatever shape the model puts `statements` in, the client turns it into claim dicts or nothing.
 
-The tool schema asks for an array of objects. On the first live run the model returned it as a
+The schema asks for an array of objects. On the first live run the model returned it as a
 JSON *string* containing that array, so `list.extend` iterated the string's characters and the job
 died on `dict("[")` with "dictionary update sequence element #0 has length 1; 2 is required".
 
@@ -12,6 +12,8 @@ model necessarily sends.
 from __future__ import annotations
 
 import json
+
+import pytest
 
 from pipeline.extract.client import _statements
 
@@ -59,26 +61,68 @@ def test_an_empty_list_stays_empty():
     assert _statements("[]") == []
 
 
-# --- the tool schema itself -------------------------------------------------------------------
+# --- the response schema itself ---------------------------------------------------------------
 
 
-def test_the_tool_schema_is_strict():
-    """A live run returned 18 of 41 claims missing a required field. The schema already listed
-    `required`; nothing enforced it. strict makes the provider enforce it instead of advertising
-    it, so a claim with no quote - a claim with no evidence - cannot come back at all."""
-    from pipeline.extract.prompt import STATEMENT_TOOL
+def test_the_response_schema_is_strict():
+    """Two live runs returned claims missing a required field - 18 of 41, then 13 of 57. Both times
+    the schema already listed `required` and the request already said strict; both times it was
+    advertised through a tool call, which this route does not enforce. Sent as a structured output
+    it is enforced, so a claim with no quote - a claim with no evidence - cannot come back."""
+    from pipeline.extract.prompt import RESPONSE_FORMAT
 
-    assert STATEMENT_TOOL["function"]["strict"] is True
-    assert STATEMENT_TOOL["function"]["parameters"]["additionalProperties"] is False
+    assert RESPONSE_FORMAT["json_schema"]["strict"] is True
+    assert RESPONSE_FORMAT["json_schema"]["schema"]["additionalProperties"] is False
 
 
 def test_every_statement_field_is_required_and_optionality_is_a_nullable_type():
     """Strict mode requires every property in `required`. Fields that are logically optional say
     so with a nullable type, which is also the honest encoding: "the text states no date" is a
     fact about the report, not a missing key."""
-    from pipeline.extract.prompt import _STATEMENT_SCHEMA
+    from pipeline.extract.prompt import STATEMENT_SCHEMA
 
-    assert set(_STATEMENT_SCHEMA["required"]) == set(_STATEMENT_SCHEMA["properties"])
-    assert _STATEMENT_SCHEMA["additionalProperties"] is False
+    assert set(STATEMENT_SCHEMA["required"]) == set(STATEMENT_SCHEMA["properties"])
+    assert STATEMENT_SCHEMA["additionalProperties"] is False
     for optional in ("happened_on", "amount", "currency"):
-        assert "null" in _STATEMENT_SCHEMA["properties"][optional]["type"], optional
+        assert "null" in STATEMENT_SCHEMA["properties"][optional]["type"], optional
+
+
+# --- the response body ------------------------------------------------------------------------
+
+
+def test_a_well_formed_response_body_is_returned_as_a_dict():
+    from pipeline.extract.client import _payload
+
+    assert _payload('{"statements": []}') == {"statements": []}
+
+
+@pytest.mark.parametrize(
+    ("content", "expected_event"),
+    [
+        (None, "extract_response_empty"),
+        ("", "extract_response_empty"),
+        ("I could not find any statements.", "extract_response_not_json"),
+        ("[1, 2, 3]", "extract_response_not_an_object"),
+    ],
+)
+def test_a_response_the_schema_should_have_prevented_is_logged_not_swallowed(content, expected_event, monkeypatch):
+    """An enforced schema should make every one of these unreachable, so reaching one is not a
+    claim being rejected - it is the enforcement not holding, and it has to be visible at error
+    level. Returning an empty payload rather than raising keeps one bad response from ending a run
+    that has already paid for every call before it.
+
+    Stubbed at the module's `log` attribute for the reason written out in test_match.py: the
+    `spenden` logger tree sets propagate=False, so caplog's root handler never sees these records.
+    """
+    from pipeline.extract import client as client_module
+
+    events: list[str] = []
+
+    class _StubLog:
+        def error(self, message: str, extra: dict | None = None) -> None:
+            events.append(message)
+
+    monkeypatch.setattr(client_module, "log", _StubLog())
+
+    assert client_module._payload(content) == {}
+    assert events == [expected_event]

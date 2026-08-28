@@ -99,5 +99,15 @@
   },
   "district": {
     "none": "ohne Ortsangabe"
+  },
+  "donation": {
+    "label": "Offizieller Spendenweg",
+    "notFound": "kein offizieller Spendenweg gefunden",
+    "notSearched": "nicht nach einem Spendenweg gesucht",
+    "scope": {
+      "flood": "Spendenseite zur Flut",
+      "general": "allgemeine Spendenseite"
+    },
+    "safety": "Kontodaten immer auf der Originalseite der Organisation prüfen. Diese Seite empfiehlt keine Organisation."
   }
 }
