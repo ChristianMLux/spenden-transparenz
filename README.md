@@ -26,3 +26,9 @@ python validate_orgs.py --spotcheck 0.12
 ```
 
 Python 3.13. Keys werden aus Umgebung → `.env.spenden` gelesen; `.env*` ist gitignored.
+
+## Lizenz
+
+Code, Schema, Datensatz (`orgs-nepal-2026.json`) und Texte dieses Repos: [MIT](LICENSE). Nutzen, kopieren, verändern — nur der Hinweis bleibt drin.
+
+Rohdaten in `data/raw/` stammen von Dritten und bleiben unter deren Bedingungen: UK Charity Commission (Open Government Licence v3), IATI / d-portal / HDX (CC BY), OCHA FTS und HAPI (CC BY), ProPublica Nonprofit Explorer (IRS-Daten, gemeinfrei), ReliefWeb-Texte (Urheberrecht der jeweils genannten Quelle, hier nur als Recherche-Beleg gespeichert), SWC-Snapshots via Wayback Machine. Jeder Datenpunkt im Datensatz trägt seine `source_url`.
