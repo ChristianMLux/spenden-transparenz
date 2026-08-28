@@ -32,7 +32,7 @@ from typing import Annotated, Literal
 
 from app.deps import ILIKE_ESCAPE, get_session, ilike_pattern, list_cache
 from app.routers.statements import NOT_REJECTED, hydrate_statements
-from app.schemas import OrgRef, ResponderCounts, ResponderFlags, ResponderItem
+from app.schemas import DonationChannel, OrgRef, ResponderCounts, ResponderFlags, ResponderItem
 from core.models import (
     OrgAlias,
     Organisation,
@@ -117,7 +117,50 @@ def _org_extra_columns():
         .correlate(Organisation)
         .scalar_subquery()
     )
-    return aliases_agg.label("aliases_agg"), local_script.label("local_script")
+
+    def _channel(column):
+        return (
+            select(column)
+            .where(
+                OrgDatum.org_id == Organisation.org_id,
+                OrgDatum.path == "donation_channel",
+                OrgDatum.superseded_at.is_(None),
+            )
+            .correlate(Organisation)
+            .scalar_subquery()
+        )
+
+    # Four correlated lookups rather than a join, to stay with the shape this function already
+    # uses - and they are cheap: uq_org_datum_current is a partial unique index on
+    # (org_id, path) WHERE superseded_at IS NULL, so each is a single index hit on at most one row.
+    return (
+        aliases_agg.label("aliases_agg"),
+        local_script.label("local_script"),
+        _channel(OrgDatum.value).label("channel_value"),
+        _channel(OrgDatum.channel_type).label("channel_type"),
+        _channel(OrgDatum.verification).label("channel_verification"),
+        _channel(OrgDatum.retrieved_at).label("channel_retrieved_at"),
+        _channel(OrgDatum.flood_specific).label("channel_flood_specific"),
+    )
+
+
+def _donation_channel(row) -> DonationChannel | None:
+    """The compact channel for a board row, or null when there is none.
+
+    A gap datum has value NULL, so "researched and none found" and "never researched" both arrive
+    here as null - which is right for a row. The distinction lives on the organisation's own page,
+    where the full datum carries its gap_reason and note.
+    """
+    url = row.channel_value
+    if not isinstance(url, str) or not url:
+        return None
+    return DonationChannel(
+        url=url,
+        channel_type=row.channel_type,
+        verification=row.channel_verification,
+        retrieved_at=row.channel_retrieved_at,
+        flood_specific=row.channel_flood_specific,
+    )
 
 
 def _org_ref(org: Organisation, aliases: list[str], local_script: str | None) -> OrgRef:
@@ -145,7 +188,7 @@ def _org_extras(row) -> tuple[list[str], str | None]:
 
 
 class _Group:
-    __slots__ = ("aliases", "flags", "local_script", "org", "org_name_raw", "pairs")
+    __slots__ = ("aliases", "donation_channel", "flags", "local_script", "org", "org_name_raw", "pairs")
 
     def __init__(
         self,
@@ -154,12 +197,14 @@ class _Group:
         org_name_raw: str,
         aliases: list[str],
         local_script: str | None,
+        donation_channel: DonationChannel | None = None,
     ) -> None:
         self.org = org
         self.flags = flags
         self.org_name_raw = org_name_raw
         self.aliases = aliases
         self.local_script = local_script
+        self.donation_channel = donation_channel
         self.pairs: list[tuple[ResponseStatement, Report]] = []
 
 
@@ -167,8 +212,8 @@ async def _fetch_candidate_orgs(
     session: AsyncSession, *, org_type: list[str], hq: str | None, q: str | None
 ) -> list[tuple[Organisation, object]]:
     reg_flag, audit_flag, warn_flag = _flag_columns()
-    aliases_col, local_script_col = _org_extra_columns()
-    query = select(Organisation, reg_flag, audit_flag, warn_flag, aliases_col, local_script_col)
+    extra_cols = _org_extra_columns()
+    query = select(Organisation, reg_flag, audit_flag, warn_flag, *extra_cols)
     if org_type:
         query = query.where(Organisation.org_type.in_(org_type))
     if hq == "local":
@@ -191,9 +236,9 @@ async def _fetch_statements(
     q: str | None,
 ) -> list:
     reg_flag, audit_flag, warn_flag = _flag_columns()
-    aliases_col, local_script_col = _org_extra_columns()
+    extra_cols = _org_extra_columns()
     query = (
-        select(ResponseStatement, Report, Organisation, reg_flag, audit_flag, warn_flag, aliases_col, local_script_col)
+        select(ResponseStatement, Report, Organisation, reg_flag, audit_flag, warn_flag, *extra_cols)
         .join(Report, ResponseStatement.report_id == Report.id)
         .outerjoin(Organisation, ResponseStatement.org_id == Organisation.org_id)
         .where(NOT_REJECTED, Report.disaster_glide_id == glide_id)
@@ -270,7 +315,9 @@ async def list_responders(
             if org.org_id in responded_ids:
                 continue
             aliases, local_script = _org_extras(row)
-            groups[org.org_id] = _Group(org, _flags(row), org.name_common, aliases, local_script)
+            groups[org.org_id] = _Group(
+                org, _flags(row), org.name_common, aliases, local_script, _donation_channel(row)
+            )
         statements_by_group: dict[str, list] = {key: [] for key in groups}
     else:
         rows = await _fetch_statements(
@@ -281,7 +328,9 @@ async def list_responders(
             key = org.org_id if org is not None else f"raw:{statement.org_name_raw}"
             if key not in groups:
                 aliases, local_script = _org_extras(row)
-                groups[key] = _Group(org, _flags(row), statement.org_name_raw, aliases, local_script)
+                groups[key] = _Group(
+                    org, _flags(row), statement.org_name_raw, aliases, local_script, _donation_channel(row)
+                )
             groups[key].pairs.append((statement, report))
 
         board_is_unfiltered = not district and not verification and has_response is not True
@@ -292,7 +341,9 @@ async def list_responders(
                 if org.org_id in groups:
                     continue
                 aliases, local_script = _org_extras(row)
-                groups[org.org_id] = _Group(org, _flags(row), org.name_common, aliases, local_script)
+                groups[org.org_id] = _Group(
+                    org, _flags(row), org.name_common, aliases, local_script, _donation_channel(row)
+                )
 
         all_pairs = [pair for group in groups.values() for pair in group.pairs]
         statement_outs = await hydrate_statements(session, all_pairs)
@@ -311,6 +362,7 @@ async def list_responders(
                 "org_name_raw": group.org_name_raw,
                 "aliases": group.aliases,
                 "local_script": group.local_script,
+                "donation_channel": group.donation_channel,
                 "outs": outs,
                 "flags": group.flags,
                 "sort_latest": latest,
@@ -338,6 +390,7 @@ async def list_responders(
                 statements=len(item["outs"]), districts=len({d.code for s in item["outs"] for d in s.districts})
             ),
             flags=item["flags"],
+            donation_channel=item["donation_channel"],
         )
         for item in page
     ]

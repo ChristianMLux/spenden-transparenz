@@ -83,6 +83,8 @@ def test_datum_model_dump_always_has_the_full_key_set():
         "note",
         "verification",
         "gap_reason",
+        "channel_type",
+        "flood_specific",
     }
     datum = Datum(
         value=None,
@@ -97,6 +99,8 @@ def test_datum_model_dump_always_has_the_full_key_set():
         note="not found",
         verification="unverified",
         gap_reason="searched_not_found",
+        channel_type=None,
+        flood_specific=None,
     )
     assert set(datum.model_dump()) == expected
 

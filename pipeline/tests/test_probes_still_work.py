@@ -33,4 +33,4 @@ def test_validate_orgs_shim_runs_and_reports_zero_schema_errors():
     )
     report = json.loads((REPO / "data" / "raw" / "orgs" / "_validation.json").read_text(encoding="utf-8"))["data"]
     assert report["schema_errors"] == 0
-    assert report["orgs"] == 44
+    assert report["orgs"] == 45  # v0.5 added the Prime Minister Disaster Relief Fund

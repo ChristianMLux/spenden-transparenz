@@ -196,3 +196,69 @@ async def test_a_hand_researched_statement_with_no_quote_is_rendered_not_filtere
     assert hand_researched["activity_type"] == "cash_assistance"
     assert hand_researched["source"]["verification"] == "third_party_reported"
     assert nrcs["counts"]["statements"] == 2
+
+
+# --- donation_channel (v0.5) ---------------------------------------------------------------------
+
+
+async def test_a_board_row_carries_the_official_donation_channel(client: AsyncClient):
+    """Chris's user test: someone found an official Nepali account number through Google in
+    minutes while this site, full of information, offered no way to act. The link belongs on the
+    row - as a fact with provenance, presented identically for every organisation."""
+    r = await client.get(f"/v1/disasters/{DISASTER_GLIDE_ID}/responders")
+    assert r.status_code == 200
+    rows = {item["org"]["org_id"]: item for item in r.json() if item["org"]}
+
+    nrcs = rows["nepal-red-cross-society"]["donation_channel"]
+    assert nrcs == {
+        "url": "https://donation.nrcs.org/",
+        "channel_type": "donation_page",
+        "verification": "self_reported",
+        "retrieved_at": "2026-08-28",
+        "flood_specific": False,
+    }
+
+
+async def test_every_row_carries_the_key_even_when_there_is_no_channel(client: AsyncClient):
+    """null is an answer, and the key is always present so the frontend can render "none found"
+    rather than an absence. The same reason every Datum field is required-but-nullable."""
+    r = await client.get(f"/v1/disasters/{DISASTER_GLIDE_ID}/responders")
+    items = r.json()
+    assert items
+    for item in items:
+        assert "donation_channel" in item
+
+    rows = {item["org"]["org_id"]: item for item in items if item["org"]}
+    assert rows["world-vision-nepal"]["donation_channel"] is None
+
+
+async def test_no_row_ranks_or_sorts_by_whether_it_has_a_donation_channel(client: AsyncClient):
+    """The field is a way to act, never a recommendation. An organisation with a link must not
+    float above one without."""
+    r = await client.get(f"/v1/disasters/{DISASTER_GLIDE_ID}/responders", params={"sort": "name"})
+    names = [item["org_name_raw"] for item in r.json()]
+    assert names == sorted(names, key=str.casefold)
+
+
+async def test_the_org_page_carries_the_full_donation_channel_datum(client: AsyncClient):
+    """The row gets the compact link; the organisation's own page gets the datum with its quote,
+    note and gap_reason, in the same shape as every other fact."""
+    r = await client.get("/v1/orgs/nepal-red-cross-society")
+    assert r.status_code == 200
+    datum = r.json()["data"]["donation_channel"]
+    assert datum["value"] == "https://donation.nrcs.org/"
+    assert datum["channel_type"] == "donation_page"
+    assert datum["flood_specific"] is False
+    assert datum["verification"] == "self_reported"
+    assert datum["is_gap"] is False
+    assert datum["quote"] == "Ways to Donate To Nepal Redcross"
+
+
+async def test_a_gap_channel_is_a_datum_with_its_reason(client: AsyncClient):
+    r = await client.get("/v1/orgs/world-vision-nepal")
+    datum = r.json()["data"]["donation_channel"]
+    assert datum["value"] is None
+    assert datum["is_gap"] is True
+    assert datum["gap_reason"] == "searched_not_found"
+    assert datum["note"]
+    assert datum["channel_type"] is None

@@ -1,10 +1,10 @@
 {
- "retrieved_at": "2026-08-28T18:01:07+00:00",
+ "retrieved_at": "2026-08-28T19:57:20+00:00",
  "source": "orgs",
  "data": {
   "schema_errors": 0,
   "schema_error_samples": [],
-  "orgs": 44,
+  "orgs": 45,
   "by_org_type": {
    "red_cross_movement": 3,
    "ingo": 20,
@@ -14,10 +14,11 @@
    "alliance": 2,
    "community_org": 5,
    "foundation": 1,
-   "diaspora_charity": 5
+   "diaspora_charity": 5,
+   "government": 1
   },
   "by_hq_country": {
-   "NP": 14,
+   "NP": 15,
    "CH": 5,
    "US": 8,
    "GB": 4,
@@ -26,31 +27,31 @@
    "CZ": 1,
    "DE": 10
   },
-  "local_np": 14,
+  "local_np": 15,
   "international": 30,
   "fill_rate_all": {
    "names.legal": 0.84,
-   "registrations[any identifier]": 0.41,
+   "registrations[any identifier]": 0.4,
    "registrations[NP_SWC identifier]": 0.02,
-   "nepal_presence.since_year": 0.45,
+   "nepal_presence.since_year": 0.44,
    "nepal_presence.mode(known)": 0.82,
-   "current_response[>=1]": 0.8,
-   "financial.annual_report.available": 0.3,
-   "financial.audited": 0.14,
+   "current_response[>=1]": 0.78,
+   "financial.annual_report.available": 0.29,
+   "financial.audited": 0.13,
    "financial.iati_publisher": 0.11,
-   "financial.income": 0.32,
-   "financial.expenditure": 0.14,
+   "financial.income": 0.31,
+   "financial.expenditure": 0.13,
    "financial.program_ratio": 0.02,
    "warnings[>=1]": 0.0
   },
   "fill_rate_local_np": {
-   "names.legal": 0.64,
-   "registrations[any identifier]": 0.14,
+   "names.legal": 0.67,
+   "registrations[any identifier]": 0.13,
    "registrations[NP_SWC identifier]": 0.07,
-   "nepal_presence.since_year": 0.43,
-   "nepal_presence.mode(known)": 0.79,
-   "current_response[>=1]": 0.79,
-   "financial.annual_report.available": 0.14,
+   "nepal_presence.since_year": 0.4,
+   "nepal_presence.mode(known)": 0.8,
+   "current_response[>=1]": 0.73,
+   "financial.annual_report.available": 0.13,
    "financial.audited": 0.0,
    "financial.iati_publisher": 0.07,
    "financial.income": 0.0,
@@ -73,11 +74,11 @@
    "financial.program_ratio": 0.03,
    "warnings[>=1]": 0.0
   },
-  "datums_total": 420,
-  "datums_with_value": 150,
+  "datums_total": 430,
+  "datums_with_value": 154,
   "verification_distribution": {
-   "unverified": 266,
-   "self_reported": 98,
+   "unverified": 272,
+   "self_reported": 102,
    "register_confirmed": 35,
    "third_party_reported": 18,
    "externally_audited": 3
@@ -85,11 +86,11 @@
   "top_data_gaps": [
    [
     "nepal_presence.staff_count",
-    42
+    43
    ],
    [
     "financial_transparency.program_ratio",
-    39
+    40
    ],
    [
     "names.local_script",
@@ -97,11 +98,11 @@
    ],
    [
     "financial_transparency.audited_financials",
-    34
+    35
    ],
    [
     "financial_transparency.expenditure",
-    34
+    35
    ],
    [
     "financial_transparency.iati_publisher",
@@ -109,14 +110,14 @@
    ],
    [
     "financial_transparency.income",
-    26
-   ],
-   [
-    "financial_transparency.annual_report",
-    24
+    27
    ],
    [
     "nepal_presence.since_year",
+    25
+   ],
+   [
+    "financial_transparency.annual_report",
     24
    ],
    [
@@ -191,7 +192,8 @@
    "nepalmed",
    "govinda-entwicklungshilfe",
    "back-to-life",
-   "helvetas"
+   "helvetas",
+   "pm-disaster-relief-fund-nepal"
   ],
   "spotcheck": {
    "share": 0.12,

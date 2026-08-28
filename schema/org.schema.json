@@ -1,75 +1,239 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://spenden-transparenz.local/schema/org.schema.json",
-  "title": "Organisation record (pilot v0.4, Nepal floods 2026)",
+  "title": "Organisation record (pilot v0.5, Nepal floods 2026)",
   "description": "One organisation responding to (or active in) Nepal. Every fact is a `datum`: value + provenance. Missing = null value + entry in data_gaps. Nothing is invented.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["org_id", "names", "org_type", "hq", "registrations", "nepal_presence", "current_response", "financial_transparency", "warnings", "data_gaps", "last_updated"],
+  "required": [
+    "org_id",
+    "names",
+    "org_type",
+    "hq",
+    "registrations",
+    "nepal_presence",
+    "current_response",
+    "financial_transparency",
+    "warnings",
+    "data_gaps",
+    "last_updated"
+  ],
   "properties": {
-    "org_id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "stable slug, e.g. nepal-red-cross-society" },
+    "org_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "stable slug, e.g. nepal-red-cross-society"
+    },
     "names": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["common"],
+      "required": [
+        "common"
+      ],
       "properties": {
-        "common": { "type": "string" },
-        "legal": { "$ref": "#/$defs/datum_string_nullable" },
-        "local_script": { "$ref": "#/$defs/datum_string_nullable", "description": "Devanagari name if it exists" },
-        "aliases": { "type": "array", "items": { "type": "string" } }
+        "common": {
+          "type": "string"
+        },
+        "legal": {
+          "$ref": "#/$defs/datum_string_nullable"
+        },
+        "local_script": {
+          "$ref": "#/$defs/datum_string_nullable",
+          "description": "Devanagari name if it exists"
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       }
     },
     "org_type": {
       "type": "string",
-      "enum": ["un_agency", "red_cross_movement", "ingo", "national_ngo", "community_org", "diaspora_charity", "foundation", "government", "platform", "alliance", "unknown"]
+      "enum": [
+        "un_agency",
+        "red_cross_movement",
+        "ingo",
+        "national_ngo",
+        "community_org",
+        "diaspora_charity",
+        "foundation",
+        "government",
+        "platform",
+        "alliance",
+        "unknown"
+      ]
     },
     "hq": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["country"],
+      "required": [
+        "country"
+      ],
       "properties": {
-        "country": { "type": "string", "pattern": "^[A-Z]{2}$", "description": "ISO 3166-1 alpha-2 of the legal seat" },
-        "city": { "type": ["string", "null"] },
-        "source_url": { "type": ["string", "null"] }
+        "country": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$",
+          "description": "ISO 3166-1 alpha-2 of the legal seat"
+        },
+        "city": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       }
     },
-    "website": { "type": ["string", "null"] },
+    "website": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "registrations": {
       "type": "array",
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["registry", "identifier", "url", "retrieved_at", "verification"],
+        "required": [
+          "registry",
+          "identifier",
+          "url",
+          "retrieved_at",
+          "verification"
+        ],
         "properties": {
-          "registry": { "type": "string", "enum": ["NP_SWC", "NP_DAO", "NP_CDO", "UK_CC", "UK_OSCR", "US_IRS", "DE_VEREINSREGISTER", "DE_DZI", "DE_ITZ", "CH_ZEWO", "AT_OSGS", "IATI", "UN", "OTHER"] },
-          "identifier": { "type": ["string", "null"], "description": "registry number / EIN / SWC affiliation no. / IATI publisher ref" },
-          "url": { "type": ["string", "null"], "description": "URL of the register entry itself" },
-          "status": { "type": ["string", "null"] },
-          "retrieved_at": { "type": "string", "format": "date" },
-          "verification": { "$ref": "#/$defs/verification" },
-          "note": { "type": ["string", "null"] },
+          "registry": {
+            "type": "string",
+            "enum": [
+              "NP_SWC",
+              "NP_DAO",
+              "NP_CDO",
+              "UK_CC",
+              "UK_OSCR",
+              "US_IRS",
+              "DE_VEREINSREGISTER",
+              "DE_DZI",
+              "DE_ITZ",
+              "CH_ZEWO",
+              "AT_OSGS",
+              "IATI",
+              "UN",
+              "OTHER"
+            ]
+          },
+          "identifier": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "registry number / EIN / SWC affiliation no. / IATI publisher ref"
+          },
+          "url": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "URL of the register entry itself"
+          },
+          "status": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "retrieved_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "verification": {
+            "$ref": "#/$defs/verification"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
           "activity_type": {
-      "type": ["string", "null"],
-      "enum": ["relief_distribution", "search_and_rescue", "medical", "shelter", "wash", "cash_assistance", "food", "logistics", "coordination", "assessment", "appeal_launched", "funding_pledged", "presence_declared", "staff_deployed", "needs_statement", "other", null]
-    },
-    "amount_basis": {
-      "type": ["string", "null"],
-      "enum": ["reported", "appeal", "pledged", "raised", "released", "disbursed", null],
-      "description": "Never inferred from keywords. A pledge and a payment are different claims, and a wrong label here is a false statement on the board."
-    },
-    "gap_reason": { "$ref": "#/$defs/gap_reason", "description": "why `identifier` is missing; a register row with a null identifier stays in the record" }
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "relief_distribution",
+              "search_and_rescue",
+              "medical",
+              "shelter",
+              "wash",
+              "cash_assistance",
+              "food",
+              "logistics",
+              "coordination",
+              "assessment",
+              "appeal_launched",
+              "funding_pledged",
+              "presence_declared",
+              "staff_deployed",
+              "needs_statement",
+              "other",
+              null
+            ]
+          },
+          "amount_basis": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "reported",
+              "appeal",
+              "pledged",
+              "raised",
+              "released",
+              "disbursed",
+              null
+            ],
+            "description": "Never inferred from keywords. A pledge and a payment are different claims, and a wrong label here is a false statement on the board."
+          },
+          "gap_reason": {
+            "$ref": "#/$defs/gap_reason",
+            "description": "why `identifier` is missing; a register row with a null identifier stays in the record"
+          }
         }
       }
     },
     "nepal_presence": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["since_year", "mode"],
+      "required": [
+        "since_year",
+        "mode"
+      ],
       "properties": {
-        "since_year": { "$ref": "#/$defs/datum_int_nullable" },
-        "mode": { "$ref": "#/$defs/datum_presence_mode" },
-        "staff_count": { "$ref": "#/$defs/datum_int_nullable" },
-        "partners": { "type": "array", "items": { "$ref": "#/$defs/datum_string" }, "description": "named local implementing partners" }
+        "since_year": {
+          "$ref": "#/$defs/datum_int_nullable"
+        },
+        "mode": {
+          "$ref": "#/$defs/datum_presence_mode"
+        },
+        "staff_count": {
+          "$ref": "#/$defs/datum_int_nullable"
+        },
+        "partners": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/datum_string"
+          },
+          "description": "named local implementing partners"
+        }
       }
     },
     "current_response": {
@@ -78,56 +242,187 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["what", "where", "date", "source_url", "retrieved_at", "verification"],
+        "required": [
+          "what",
+          "where",
+          "date",
+          "source_url",
+          "retrieved_at",
+          "verification"
+        ],
         "properties": {
-          "what": { "type": "string", "description": "concrete activity, e.g. 'distributed 500 tarpaulins', 'deployed medical team'" },
-          "where": { "type": "array", "items": { "type": "string" }, "description": "districts / municipalities / 'unspecified'" },
-          "date": { "type": ["string", "null"], "description": "date of the activity or of the statement (YYYY-MM-DD)" },
-          "amount": { "type": ["number", "null"] },
-          "currency": { "type": ["string", "null"] },
-          "source_url": { "type": "string" },
-          "quote": { "type": ["string", "null"], "description": "verbatim snippet (<= 40 words) that supports the claim" },
-          "retrieved_at": { "type": "string", "format": "date" },
-          "verification": { "$ref": "#/$defs/verification" },
-          "note": { "type": ["string", "null"] },
-          "activity_type": { "$ref": "#/$defs/activity_type", "description": "v0.4: what kind of activity this is, read from the sentence by a person. Absent means the loader records 'other' rather than guessing." },
-          "amount_basis": { "$ref": "#/$defs/amount_basis", "description": "v0.4: what the amount is - an appeal target, a pledge, money released, or money paid out. Absent means 'reported', which claims nothing." }
+          "what": {
+            "type": "string",
+            "description": "concrete activity, e.g. 'distributed 500 tarpaulins', 'deployed medical team'"
+          },
+          "where": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "districts / municipalities / 'unspecified'"
+          },
+          "date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "date of the activity or of the statement (YYYY-MM-DD)"
+          },
+          "amount": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "currency": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_url": {
+            "type": "string"
+          },
+          "quote": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "verbatim snippet (<= 40 words) that supports the claim"
+          },
+          "retrieved_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "verification": {
+            "$ref": "#/$defs/verification"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "activity_type": {
+            "$ref": "#/$defs/activity_type",
+            "description": "v0.4: what kind of activity this is, read from the sentence by a person. Absent means the loader records 'other' rather than guessing."
+          },
+          "amount_basis": {
+            "$ref": "#/$defs/amount_basis",
+            "description": "v0.4: what the amount is - an appeal target, a pledge, money released, or money paid out. Absent means 'reported', which claims nothing."
+          }
         }
       }
     },
     "financial_transparency": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["annual_report", "audited_financials", "iati_publisher", "income", "expenditure", "program_ratio"],
+      "required": [
+        "annual_report",
+        "audited_financials",
+        "iati_publisher",
+        "income",
+        "expenditure",
+        "program_ratio"
+      ],
       "properties": {
         "annual_report": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["available", "url", "fiscal_year", "retrieved_at"],
+          "required": [
+            "available",
+            "url",
+            "fiscal_year",
+            "retrieved_at"
+          ],
           "properties": {
-            "available": { "type": "boolean" },
-            "url": { "type": ["string", "null"], "description": "must point at the document (PDF or report page), not the homepage" },
-            "fiscal_year": { "type": ["string", "null"], "description": "e.g. '2024' or '2024/25'" },
-            "fiscal_year_end": { "type": ["string", "null"], "description": "MM-DD, e.g. '12-31' or '07-15' (Nepali Ashad end)" },
-            "retrieved_at": { "type": "string", "format": "date" }
+            "available": {
+              "type": "boolean"
+            },
+            "url": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "must point at the document (PDF or report page), not the homepage"
+            },
+            "fiscal_year": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "e.g. '2024' or '2024/25'"
+            },
+            "fiscal_year_end": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "MM-DD, e.g. '12-31' or '07-15' (Nepali Ashad end)"
+            },
+            "retrieved_at": {
+              "type": "string",
+              "format": "date"
+            }
           }
         },
-        "audited_financials": { "$ref": "#/$defs/datum_bool_nullable", "description": "true if an external auditor's statement is published" },
+        "audited_financials": {
+          "$ref": "#/$defs/datum_bool_nullable",
+          "description": "true if an external auditor's statement is published"
+        },
         "iati_publisher": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["is_publisher", "publisher_ref"],
+          "required": [
+            "is_publisher",
+            "publisher_ref"
+          ],
           "properties": {
-            "is_publisher": { "type": ["boolean", "null"] },
-            "publisher_ref": { "type": ["string", "null"], "description": "IATI org identifier, e.g. GB-CHC-1234567" },
-            "source_url": { "type": ["string", "null"] },
-            "retrieved_at": { "type": ["string", "null"] }
+            "is_publisher": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "publisher_ref": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "IATI org identifier, e.g. GB-CHC-1234567"
+            },
+            "source_url": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "retrieved_at": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
           }
         },
-        "income": { "$ref": "#/$defs/datum_money_nullable" },
-        "expenditure": { "$ref": "#/$defs/datum_money_nullable" },
-        "program_ratio": { "$ref": "#/$defs/datum_number_nullable", "description": "share of expenditure on programmes (0..1), ONLY if derivable from a published split; state the formula in note" },
-        "peer_group": { "type": ["string", "null"], "description": "sector + size bucket for later peer comparison; leave null in v0.1" }
+        "income": {
+          "$ref": "#/$defs/datum_money_nullable"
+        },
+        "expenditure": {
+          "$ref": "#/$defs/datum_money_nullable"
+        },
+        "program_ratio": {
+          "$ref": "#/$defs/datum_number_nullable",
+          "description": "share of expenditure on programmes (0..1), ONLY if derivable from a published split; state the formula in note"
+        },
+        "peer_group": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "sector + size bucket for later peer comparison; leave null in v0.1"
+        }
       }
     },
     "warnings": {
@@ -136,93 +431,406 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["type", "source_url", "date", "note", "retrieved_at"],
+        "required": [
+          "type",
+          "source_url",
+          "date",
+          "note",
+          "retrieved_at"
+        ],
         "properties": {
-          "type": { "type": "string", "enum": ["regulator_inquiry", "fraud_allegation", "watchdog_alert", "delisting", "sanction", "media_report", "other"] },
-          "source_url": { "type": "string" },
-          "date": { "type": ["string", "null"] },
-          "note": { "type": "string" },
-          "retrieved_at": { "type": "string", "format": "date" }
+          "type": {
+            "type": "string",
+            "enum": [
+              "regulator_inquiry",
+              "fraud_allegation",
+              "watchdog_alert",
+              "delisting",
+              "sanction",
+              "media_report",
+              "other"
+            ]
+          },
+          "source_url": {
+            "type": "string"
+          },
+          "date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "note": {
+            "type": "string"
+          },
+          "retrieved_at": {
+            "type": "string",
+            "format": "date"
+          }
         }
       }
     },
     "data_gaps": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "description": "JSON paths that stayed empty after a real search, e.g. 'financial_transparency.income', 'registrations[NP_SWC]'"
     },
-    "research_notes": { "type": ["string", "null"], "description": "free text for the researcher: what was searched, what was ambiguous" },
-    "last_updated": { "type": "string", "format": "date" }
+    "research_notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "free text for the researcher: what was searched, what was ambiguous"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date"
+    },
+    "donation_channel": {
+      "$ref": "#/$defs/datum_donation_channel",
+      "description": "How to give to this organisation directly. Present on every record, identical in shape and weight for every organisation: it is a way to act, never a recommendation, and no record is ranked or ordered by whether it has one. A null value with a gap_reason is the honest answer when no official channel was found."
+    }
   },
   "$defs": {
     "verification": {
       "type": "string",
-      "enum": ["self_reported", "register_confirmed", "externally_audited", "third_party_reported", "unverified"],
+      "enum": [
+        "self_reported",
+        "register_confirmed",
+        "externally_audited",
+        "third_party_reported",
+        "unverified"
+      ],
       "description": "self_reported = org's own site/report; register_confirmed = official register (SWC, Charity Commission, IRS); externally_audited = auditor's statement / audited accounts; third_party_reported = media, OCHA, watchdog; unverified = found but source does not really support it"
     },
     "datum_base": {
       "type": "object",
-      "required": ["value", "source_url", "retrieved_at", "verification"],
+      "required": [
+        "value",
+        "source_url",
+        "retrieved_at",
+        "verification"
+      ],
       "properties": {
-        "source_url": { "type": ["string", "null"] },
-        "retrieved_at": { "type": ["string", "null"], "description": "YYYY-MM-DD" },
-        "verification": { "$ref": "#/$defs/verification" },
-        "quote": { "type": ["string", "null"] },
-        "note": { "type": ["string", "null"] },
+        "source_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "retrieved_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "YYYY-MM-DD"
+        },
+        "verification": {
+          "$ref": "#/$defs/verification"
+        },
+        "quote": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "activity_type": {
-      "type": ["string", "null"],
-      "enum": ["relief_distribution", "search_and_rescue", "medical", "shelter", "wash", "cash_assistance", "food", "logistics", "coordination", "assessment", "appeal_launched", "funding_pledged", "presence_declared", "staff_deployed", "needs_statement", "other", null]
-    },
-    "amount_basis": {
-      "type": ["string", "null"],
-      "enum": ["reported", "appeal", "pledged", "raised", "released", "disbursed", null],
-      "description": "Never inferred from keywords. A pledge and a payment are different claims, and a wrong label here is a false statement on the board."
-    },
-    "gap_reason": { "$ref": "#/$defs/gap_reason" }
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "relief_distribution",
+            "search_and_rescue",
+            "medical",
+            "shelter",
+            "wash",
+            "cash_assistance",
+            "food",
+            "logistics",
+            "coordination",
+            "assessment",
+            "appeal_launched",
+            "funding_pledged",
+            "presence_declared",
+            "staff_deployed",
+            "needs_statement",
+            "other",
+            null
+          ]
+        },
+        "amount_basis": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "reported",
+            "appeal",
+            "pledged",
+            "raised",
+            "released",
+            "disbursed",
+            null
+          ],
+          "description": "Never inferred from keywords. A pledge and a payment are different claims, and a wrong label here is a false statement on the board."
+        },
+        "gap_reason": {
+          "$ref": "#/$defs/gap_reason"
+        }
       }
     },
     "activity_type": {
-      "type": ["string", "null"],
-      "enum": ["relief_distribution", "search_and_rescue", "medical", "shelter", "wash", "cash_assistance", "food", "logistics", "coordination", "assessment", "appeal_launched", "funding_pledged", "presence_declared", "staff_deployed", "needs_statement", "other", null]
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "relief_distribution",
+        "search_and_rescue",
+        "medical",
+        "shelter",
+        "wash",
+        "cash_assistance",
+        "food",
+        "logistics",
+        "coordination",
+        "assessment",
+        "appeal_launched",
+        "funding_pledged",
+        "presence_declared",
+        "staff_deployed",
+        "needs_statement",
+        "other",
+        null
+      ]
     },
     "amount_basis": {
-      "type": ["string", "null"],
-      "enum": ["reported", "appeal", "pledged", "raised", "released", "disbursed", null],
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "reported",
+        "appeal",
+        "pledged",
+        "raised",
+        "released",
+        "disbursed",
+        null
+      ],
       "description": "Never inferred from keywords. A pledge and a payment are different claims, and a wrong label here is a false statement on the board."
     },
     "gap_reason": {
-      "type": ["string", "null"],
-      "enum": ["not_searched", "searched_not_found", "source_unreachable", "not_public", null],
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "not_searched",
+        "searched_not_found",
+        "source_unreachable",
+        "not_public",
+        null
+      ],
       "description": "Why the value is missing. Only meaningful when `value` is null. not_searched = we did not look; searched_not_found = we looked and found nothing; source_unreachable = the register or page did not answer; not_public = the source states the figure is not published. Without this field, three different honesty claims render identically."
     },
     "datum_string": {
-      "allOf": [{ "$ref": "#/$defs/datum_base" }, { "properties": { "value": { "type": "string" } } }]
+      "allOf": [
+        {
+          "$ref": "#/$defs/datum_base"
+        },
+        {
+          "properties": {
+            "value": {
+              "type": "string"
+            }
+          }
+        }
+      ]
     },
     "datum_string_nullable": {
-      "allOf": [{ "$ref": "#/$defs/datum_base" }, { "properties": { "value": { "type": ["string", "null"] } } }]
+      "allOf": [
+        {
+          "$ref": "#/$defs/datum_base"
+        },
+        {
+          "properties": {
+            "value": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      ]
     },
     "datum_int_nullable": {
-      "allOf": [{ "$ref": "#/$defs/datum_base" }, { "properties": { "value": { "type": ["integer", "null"] } } }]
+      "allOf": [
+        {
+          "$ref": "#/$defs/datum_base"
+        },
+        {
+          "properties": {
+            "value": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            }
+          }
+        }
+      ]
     },
     "datum_number_nullable": {
-      "allOf": [{ "$ref": "#/$defs/datum_base" }, { "properties": { "value": { "type": ["number", "null"] } } }]
+      "allOf": [
+        {
+          "$ref": "#/$defs/datum_base"
+        },
+        {
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          }
+        }
+      ]
     },
     "datum_bool_nullable": {
-      "allOf": [{ "$ref": "#/$defs/datum_base" }, { "properties": { "value": { "type": ["boolean", "null"] } } }]
+      "allOf": [
+        {
+          "$ref": "#/$defs/datum_base"
+        },
+        {
+          "properties": {
+            "value": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          }
+        }
+      ]
     },
     "datum_presence_mode": {
       "description": "v0.3: value may be null. This was the only datum type in the contract that could not express a gap, so a researcher who could not determine the mode had to write the enum member 'unknown' instead. A sourced 'unknown' stays legal - that is a different, evidenced claim.",
-      "allOf": [{ "$ref": "#/$defs/datum_base" }, { "properties": { "value": { "type": ["string", "null"], "enum": ["own_staff", "partners", "both", "none", "unknown", null] } } }]
+      "allOf": [
+        {
+          "$ref": "#/$defs/datum_base"
+        },
+        {
+          "properties": {
+            "value": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "own_staff",
+                "partners",
+                "both",
+                "none",
+                "unknown",
+                null
+              ]
+            }
+          }
+        }
+      ]
     },
     "datum_money_nullable": {
       "allOf": [
-        { "$ref": "#/$defs/datum_base" },
+        {
+          "$ref": "#/$defs/datum_base"
+        },
         {
           "properties": {
-            "value": { "type": ["number", "null"] },
-            "currency": { "type": ["string", "null"] },
-            "fiscal_year": { "type": ["string", "null"] },
-            "scope": { "type": ["string", "null"], "enum": ["global", "nepal_only", "unknown", null], "description": "whether the figure is the global org or the Nepal entity" }
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "currency": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "fiscal_year": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "scope": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "global",
+                "nepal_only",
+                "unknown",
+                null
+              ],
+              "description": "whether the figure is the global org or the Nepal entity"
+            }
+          }
+        }
+      ]
+    },
+    "channel_type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "donation_page",
+        "bank_transfer_page",
+        "platform_page",
+        null
+      ],
+      "description": "What the link asks of a reader. donation_page gives an online payment form, bank_transfer_page names a page that publishes transfer details (never the details themselves), platform_page is the organisation's own page on a fundraising platform reached from its own domain. Null when there is no channel."
+    },
+    "datum_donation_channel": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/datum_base"
+        },
+        {
+          "properties": {
+            "value": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "uri",
+              "description": "The organisation's official donation page, on its own registrable domain. A URL on any other domain is rejected by the loader and never stored - a donor following it would be giving to a different recipient than the one named here. Never payment details: a link, not an account number."
+            },
+            "channel_type": {
+              "$ref": "#/$defs/channel_type"
+            },
+            "flood_specific": {
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "description": "true when the link is this disaster's campaign, false when it is the organisation's standing donation page. Null when there is no channel."
+            }
           }
         }
       ]

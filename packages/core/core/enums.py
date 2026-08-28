@@ -67,6 +67,14 @@ PRESENCE_MODE = ("own_staff", "partners", "both", "none", "unknown")
 
 VALUE_TYPE = ("string", "integer", "number", "boolean", "money", "date")
 
+# How a donation channel takes money, so a reader knows what a link will ask of them before they
+# follow it. "donation_page" gives an online payment form, "bank_transfer_page" names a page that
+# publishes transfer details (never the details themselves - no account numbers are stored), and
+# "platform_page" is the organisation's own page on a third-party fundraising platform, reached
+# from its own domain. There is deliberately no value for "we found something plausible": a
+# channel that cannot be classified from the organisation's own site is a gap.
+CHANNEL_TYPE = ("donation_page", "bank_transfer_page", "platform_page")
+
 MONEY_SCOPE = ("global", "nepal_only", "unknown")
 
 ACTIVITY_TYPE = (
@@ -114,6 +122,7 @@ ALL_ENUMS: dict[str, tuple[str, ...]] = {
     "warning_type": WARNING_TYPE,
     "presence_mode": PRESENCE_MODE,
     "value_type": VALUE_TYPE,
+    "channel_type": CHANNEL_TYPE,
     "money_scope": MONEY_SCOPE,
     "activity_type": ACTIVITY_TYPE,
     "amount_basis": AMOUNT_BASIS,

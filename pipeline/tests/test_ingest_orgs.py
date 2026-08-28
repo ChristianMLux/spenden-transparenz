@@ -59,12 +59,22 @@ from pipeline.jobs.orgs import (
 from pipeline.jobs.seed_reference import seed_reference
 from pipeline.runs import run_context
 
-EXPECTED_ORGS = 44
-EXPECTED_NP = 14
-EXPECTED_DATUMS = 420
-EXPECTED_VALUES = 150
-EXPECTED_GAPS = 270
-EXPECTED_ALIASES = 100
+# 45, not the 44 of the pilot dataset: the Prime Minister Disaster Relief Fund was added in v0.5
+# so the state fund appears on the board like any other recipient instead of being the one obvious
+# destination the site never names. It is a Nepali entity, hence 15 NP.
+EXPECTED_ORGS = 45
+EXPECTED_NP = 15
+# 474 = the 420 of v0.4, plus one donation_channel datum for each of the 45 organisations, plus the
+# 9 datums the government record carries of its own.
+EXPECTED_DATUMS = 474
+EXPECTED_VALUES = 187
+EXPECTED_GAPS = 287
+EXPECTED_ALIASES = 105
+# 34 of the 45 donation_channel datums carry a URL. The other 11 are gaps that say so: 10 the
+# research could not find a channel for, and CARE Nepal, whose researched link pointed at care.org
+# (CARE USA) and was rejected by the official-domain rule.
+EXPECTED_DONATION_CHANNELS = 45
+EXPECTED_DONATION_URLS = 34
 EXPECTED_REGISTRATIONS_NULL_IDENTIFIER = 56
 EXPECTED_REPORTS = 39
 EXPECTED_STATEMENTS = 44
@@ -87,7 +97,7 @@ async def _latest_run(session, job: str = "ingest_orgs") -> IngestionRun:
 # --- ingest_orgs: counts, idempotency, history --------------------------------------------------
 
 
-async def test_ingest_writes_44_orgs_14_nepalese_and_420_datums(job_sessionmaker, session):
+async def test_ingest_writes_45_orgs_15_nepalese_and_474_datums(job_sessionmaker, session):
     await ingest_orgs(job_sessionmaker)
     assert await _count(session, Organisation) == EXPECTED_ORGS
     assert await _count_where(session, Organisation, Organisation.hq_country == "NP") == EXPECTED_NP
@@ -526,3 +536,114 @@ async def test_ingest_orgs_does_not_require_seed_reference_to_have_run_first(job
     assert await _count(session, Organisation) == EXPECTED_ORGS
     await seed_reference(job_sessionmaker)
     assert await _count(session, Organisation) == EXPECTED_ORGS
+
+
+# --- donation_channel (v0.5) ---------------------------------------------------------------------
+
+
+async def test_every_organisation_gets_a_donation_channel_datum(job_sessionmaker, session):
+    """A gap is an answer. An organisation with no official channel says so in the same place and
+    the same shape as one with a link, so the board never has to render an absence as blankness."""
+    await ingest_orgs(job_sessionmaker)
+    total = await _count_where(session, OrgDatum, OrgDatum.path == "donation_channel")
+    with_url = await _count_where(session, OrgDatum, OrgDatum.path == "donation_channel", OrgDatum.is_gap.is_(False))
+    assert total == EXPECTED_DONATION_CHANNELS
+    assert with_url == EXPECTED_DONATION_URLS
+
+
+async def test_an_off_domain_donation_url_never_reaches_the_database(job_sessionmaker, session):
+    """CARE Nepal's researched link pointed at care.org, which is CARE USA - a different legal
+    entity in a different country. A donor following it would be giving to an organisation this
+    board never named. It is stored as a documented gap, and the rejected URL appears nowhere: not
+    as a value, not as a source, and not quoted inside the note either.
+    """
+    await ingest_orgs(job_sessionmaker)
+    row = await session.scalar(
+        select(OrgDatum).where(OrgDatum.org_id == "care-nepal", OrgDatum.path == "donation_channel")
+    )
+    assert row is not None
+    assert row.value is None
+    assert row.source_url is None
+    assert row.gap_reason == "searched_not_found"
+    assert row.note and "different registrable domain" in row.note
+    assert "care.org" not in (row.note or "")
+
+    everywhere = await session.execute(
+        select(OrgDatum.value, OrgDatum.source_url, OrgDatum.note).where(OrgDatum.path == "donation_channel")
+    )
+    for value, source_url, note in everywhere.all():
+        assert not (isinstance(value, str) and "care.org/donate" in value)
+        assert not (source_url and "care.org/donate" in source_url)
+        assert not (note and "care.org/donate" in note)
+
+
+async def test_a_stored_channel_carries_its_type_and_whether_it_is_flood_specific(job_sessionmaker, session):
+    """channel_type tells a reader what the link will ask of them before they follow it, and
+    flood_specific separates this disaster's campaign from a standing donation page. Both are
+    sibling columns of the datum, the way currency is for money."""
+    await ingest_orgs(job_sessionmaker)
+    row = await session.scalar(
+        select(OrgDatum).where(OrgDatum.org_id == "nepal-red-cross-society", OrgDatum.path == "donation_channel")
+    )
+    assert row.value == "https://donation.nrcs.org/"
+    assert row.channel_type == "donation_page"
+    assert row.flood_specific is False
+    assert row.verification == "self_reported"
+
+
+async def test_a_donation_page_is_its_own_source_when_the_record_names_no_other(job_sessionmaker, session):
+    """Nineteen researched entries carry the donation URL as the value with no separate source.
+    The claim is "this organisation's official channel is this page", and the page - on the
+    organisation's own domain - is what attests to it. The provenance rule is satisfied, not bent:
+    a datum with a value still has a source."""
+    await ingest_orgs(job_sessionmaker)
+    rows = await session.execute(
+        select(OrgDatum.value, OrgDatum.source_url).where(
+            OrgDatum.path == "donation_channel", OrgDatum.is_gap.is_(False)
+        )
+    )
+    pairs = rows.all()
+    assert pairs
+    for value, source_url in pairs:
+        assert source_url, value
+
+
+async def test_the_state_relief_fund_is_on_the_board_like_any_other_recipient(job_sessionmaker, session):
+    """Chris's user test found an official Nepali account number through Google in minutes while
+    this site offered no way to act at all. The fund is a record, not a special case: same table,
+    same provenance, same gap handling."""
+    await ingest_orgs(job_sessionmaker)
+    org = await session.scalar(select(Organisation).where(Organisation.org_id == "pm-disaster-relief-fund-nepal"))
+    assert org is not None
+    assert org.org_type == "government"
+    assert org.hq_country == "NP"
+
+    channel = await session.scalar(
+        select(OrgDatum).where(OrgDatum.org_id == "pm-disaster-relief-fund-nepal", OrgDatum.path == "donation_channel")
+    )
+    assert channel.value == "https://www.opmcm.gov.np"
+    assert channel.channel_type == "donation_page"
+
+
+async def test_no_account_number_is_stored_anywhere(job_sessionmaker, session):
+    """The rule is that a donation channel is a link, never payment details. A digit run long
+    enough to be an account or IBAN in any donation_channel field would be a breach of it."""
+    import re
+
+    await ingest_orgs(job_sessionmaker)
+    rows = await session.execute(
+        select(OrgDatum.value, OrgDatum.source_url, OrgDatum.quote, OrgDatum.note).where(
+            OrgDatum.path == "donation_channel"
+        )
+    )
+    # A run of digits, allowing the spaces and hyphens account numbers and IBANs are written with,
+    # holding nine or more digits in total. Nine is above anything a date or a headline figure
+    # reaches ("Aug 26 2026" is six) and at or below the length of every real account identifier.
+    digit_run = re.compile(r"[\d][\d \-]*[\d]")
+    for row in rows.all():
+        for field in row:
+            if not isinstance(field, str):
+                continue
+            for run in digit_run.findall(field):
+                digits = sum(character.isdigit() for character in run)
+                assert digits < 9, f"{digits} digits in {run!r} within {field!r}"

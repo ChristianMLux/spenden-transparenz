@@ -245,6 +245,36 @@ async def _seed(session_factory) -> None:
                 content_hash=_hash(),
             )
         )
+        # Schema v0.5: the donation channel. NRCS has one, World Vision has a researched gap, so
+        # the board row has to render both an official link and an explicit "none found" with the
+        # same weight - which is the whole point of the field.
+        session.add_all(
+            [
+                OrgDatum(
+                    org_id=NRCS_ORG_ID,
+                    path="donation_channel",
+                    value="https://donation.nrcs.org/",
+                    value_type="string",
+                    channel_type="donation_page",
+                    flood_specific=False,
+                    source_url="https://www.nrcs.org",
+                    retrieved_at=date(2026, 8, 28),
+                    quote="Ways to Donate To Nepal Redcross",
+                    verification="self_reported",
+                    content_hash=_hash(),
+                ),
+                OrgDatum(
+                    org_id=WORLD_VISION_ORG_ID,
+                    path="donation_channel",
+                    value=None,
+                    source_url=None,
+                    note="No donation page on this organisation's own domain was found.",
+                    gap_reason="searched_not_found",
+                    verification="unverified",
+                    content_hash=_hash(),
+                ),
+            ]
+        )
         session.add_all(
             [
                 OrgAlias(alias_norm="nrcs", org_id=NRCS_ORG_ID, kind="acronym"),

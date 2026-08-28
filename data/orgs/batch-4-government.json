@@ -1,0 +1,150 @@
+[
+  {
+    "org_id": "pm-disaster-relief-fund-nepal",
+    "names": {
+      "common": "Prime Minister Disaster Relief Fund",
+      "legal": {
+        "value": "Prime Minister Disaster Relief Fund",
+        "source_url": "https://www.opmcm.gov.np",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "प्रधानमन्त्री दैवी प्रकोप उद्धार कोष र प्रधानमन्त्री राहत कोषमा आर्थिक सहयोग गरिदिनु हुन",
+        "note": "The OPMCM homepage names two funds (Prime Minister Divine Calamity Relief Fund and Prime Minister Relief Fund); recorded here as one entry because no deeper dedicated page for either was reachable.",
+        "gap_reason": null
+      },
+      "local_script": {
+        "value": "प्रधानमन्त्री दैवी प्रकोप उद्धार कोष",
+        "source_url": "https://www.opmcm.gov.np",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "प्रधानमन्त्री दैवी प्रकोप उद्धार कोष र प्रधानमन्त्री राहत कोषमा आर्थिक सहयोग गरिदिनु हुन",
+        "note": null,
+        "gap_reason": null
+      },
+      "aliases": [
+        "PM Disaster Relief Fund",
+        "Prime Minister Relief Fund",
+        "PMDRF"
+      ]
+    },
+    "org_type": "government",
+    "hq": {
+      "country": "NP",
+      "city": "Kathmandu",
+      "source_url": "https://www.opmcm.gov.np"
+    },
+    "website": "https://www.opmcm.gov.np",
+    "registrations": [],
+    "nepal_presence": {
+      "since_year": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "The fund is an instrument of the Office of the Prime Minister and Council of Ministers; no founding year was published on the pages checked.",
+        "gap_reason": "searched_not_found"
+      },
+      "mode": {
+        "value": "own_staff",
+        "source_url": "https://www.opmcm.gov.np",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+        "quote": "प्रधानमन्त्री दैवी प्रकोप उद्धार कोष र प्रधानमन्त्री राहत कोषमा आर्थिक सहयोग गरिदिनु हुन",
+        "note": "A state fund administered by the Office of the Prime Minister and Council of Ministers, not an implementing organisation with field staff of its own. Recorded as own_staff because the government administers it directly.",
+        "gap_reason": null
+      },
+      "staff_count": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Not applicable to a relief fund and not published.",
+        "gap_reason": "not_public"
+      },
+      "partners": []
+    },
+    "current_response": [],
+    "financial_transparency": {
+      "annual_report": {
+        "available": false,
+        "url": null,
+        "fiscal_year": null,
+        "fiscal_year_end": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "audited_financials": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No audited statement for the fund was found on opmcm.gov.np within the research budget. State funds in Nepal are covered by the Auditor General's reporting, which was not checked here.",
+        "gap_reason": "searched_not_found"
+      },
+      "iati_publisher": {
+        "is_publisher": false,
+        "publisher_ref": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28"
+      },
+      "income": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No income figure for the fund is published on the pages checked.",
+        "gap_reason": "searched_not_found"
+      },
+      "expenditure": {
+        "value": null,
+        "currency": null,
+        "fiscal_year": null,
+        "scope": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "No expenditure figure for the fund is published on the pages checked.",
+        "gap_reason": "searched_not_found"
+      },
+      "program_ratio": {
+        "value": null,
+        "source_url": null,
+        "retrieved_at": "2026-08-28",
+        "verification": "unverified",
+        "quote": null,
+        "note": "Cannot be computed without an income and expenditure split.",
+        "gap_reason": "searched_not_found"
+      },
+      "peer_group": null
+    },
+    "donation_channel": {
+      "value": "https://www.opmcm.gov.np",
+      "channel_type": "donation_page",
+      "flood_specific": false,
+      "source_url": "https://www.opmcm.gov.np",
+      "retrieved_at": "2026-08-28",
+      "verification": "self_reported",
+      "quote": "प्रधानमन्त्री दैवी प्रकोप उद्धार कोष र प्रधानमन्त्री राहत कोषमा आर्थिक सहयोग गरिदिनु हुन",
+      "note": "Nepali text (\"...contribute financial support to the Prime Minister Disaster Relief Fund and Prime Minister Relief Fund\") appears on the Office of the Prime Minister and Council of Ministers (OPMCM) homepage, gov.np domain, alongside a QR code for contributions. No bank account number was visible in the extracted text (not transcribed here regardless per the no-account-number rule). Two separate funds are actually named ('Prime Minister Divine Calamity Relief Fund' and 'Prime Minister Relief Fund') — recorded as one entry per the task's ask; could not find a deeper dedicated page for either fund within budget (ndrrma.gov.np, the other candidate checked, does not mention either fund).",
+      "gap_reason": null
+    },
+    "warnings": [],
+    "data_gaps": [
+      "nepal_presence.since_year",
+      "nepal_presence.staff_count",
+      "financial_transparency.audited_financials",
+      "financial_transparency.income",
+      "financial_transparency.expenditure",
+      "financial_transparency.program_ratio"
+    ],
+    "research_notes": "Added so the state relief fund appears on the board like any other recipient rather than being the one obvious destination the site never names. The OPMCM homepage carries the call for contributions and a QR code; no account number is transcribed here or stored anywhere, per the donation-channel rule. Two funds are named on that page (Prime Minister Divine Calamity Relief Fund and Prime Minister Relief Fund) and no deeper dedicated page for either was reachable within the research budget, so they are recorded as one entry. ndrrma.gov.np, the other government candidate checked, mentions neither.",
+    "last_updated": "2026-08-28"
+  }
+]
