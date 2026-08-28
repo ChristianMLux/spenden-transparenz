@@ -13,6 +13,7 @@ parallel. See SEEDED_* constants below for what exists and under which id.
 from __future__ import annotations
 
 import asyncio
+import hashlib
 import os
 import uuid
 from collections.abc import AsyncIterator, Callable, Iterator
@@ -44,8 +45,32 @@ API_DIR = Path(__file__).resolve().parents[1]
 REPO = API_DIR.parents[1]
 
 DEFAULT_SYNC_URL = "postgresql+psycopg://spenden:spenden@localhost:55432/spenden"
-SCRATCH_DB = "spenden_migrations"
-SEED_DB = "spenden_api_contract"
+SCRATCH_DB_BASE = "spenden_migrations"
+SEED_DB_BASE = "spenden_api_contract"
+
+
+def scratch_db(base: str) -> str:
+    """A database name unique to this checkout.
+
+    Every worktree points at the same Postgres container, and the names used to be fixed. Two
+    workers running their suites at the same time would then DROP the database the other was
+    using, which surfaced as ConnectionDoesNotExistError and as rows vanishing between insert and
+    read - in test files neither worker had touched. Hashing the repository root gives each
+    checkout its own database, stable across runs so the containers do not fill up with strays.
+    Override with SPENDEN_TEST_DB_SUFFIX when you want to pin one.
+    """
+    suffix = (
+        os.environ.get("SPENDEN_TEST_DB_SUFFIX")
+        or hashlib.blake2s(str(REPO).encode("utf-8"), digest_size=3).hexdigest()
+    )
+    return f"{base}_{suffix}"
+
+
+SCRATCH_DB = scratch_db(SCRATCH_DB_BASE)
+# The seeded contract database gets the same per-checkout isolation as SCRATCH_DB, for the same
+# reason: two worktrees running apps/api/tests concurrently against the shared Postgres container
+# would otherwise DROP and recreate each other's spenden_api_contract mid-run.
+SEED_DB = scratch_db(SEED_DB_BASE)
 
 # --- what test_contract.py, test_responders.py, test_orgs.py, test_meta.py and test_admin.py can
 # rely on existing. Hardcode these ids directly in tests rather than importing them, matching the
