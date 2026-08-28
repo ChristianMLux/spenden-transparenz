@@ -41,20 +41,26 @@ class Datum(BaseModel):
 
     A gap is {"value": null, "is_gap": true, "note": ..., "gap_reason": ...}. Every key is present
     in both cases.
+
+    Every field is required-but-nullable rather than optional-with-a-default, and that is
+    deliberate. A default makes the field optional in the generated OpenAPI schema, which tells a
+    client the key may be absent - and a missing key and a null value render differently. The
+    frontend builds its whole honesty design on "the key is always there", so the contract has to
+    promise it rather than merely happen to satisfy it.
     """
 
-    value: Any | None = Field(default=None, description="null means no value was found; see gap_reason")
+    value: Any | None = Field(description="null means no value was found; see gap_reason")
     is_gap: bool = Field(description="true exactly when value is null")
-    value_type: ValueType | None = None
-    currency: str | None = Field(default=None, description="ISO 4217, for money values")
-    fiscal_year: str | None = Field(default=None, description='e.g. "2024" or "2024/25"')
-    scope: MoneyScope | None = Field(default=None, description="whether a figure is global or Nepal only")
-    source_url: str | None = Field(default=None, description="present whenever value is not null")
-    retrieved_at: date | None = None
-    quote: str | None = Field(default=None, description="verbatim, at most 40 words")
-    note: str | None = Field(default=None, description="present whenever value is null")
+    value_type: ValueType | None = Field(description="how to read value; null for a gap")
+    currency: str | None = Field(description="ISO 4217, for money values")
+    fiscal_year: str | None = Field(description='e.g. "2024" or "2024/25"')
+    scope: MoneyScope | None = Field(description="whether a figure is global or Nepal only")
+    source_url: str | None = Field(description="present whenever value is not null")
+    retrieved_at: date | None = Field(description="when the source was read")
+    quote: str | None = Field(description="verbatim, at most 40 words")
+    note: str | None = Field(description="present whenever value is null")
     verification: Verification
-    gap_reason: GapReason | None = Field(default=None, description="present exactly when value is null")
+    gap_reason: GapReason | None = Field(description="present exactly when value is null")
 
 
 def serialise_datum(row: OrgDatum) -> Datum:
@@ -110,7 +116,14 @@ class StatementOut(BaseModel):
             "different claims. 'reported' claims nothing."
         ),
     )
-    quote: str = Field(description="verbatim, at most 40 words")
+    quote: str | None = Field(
+        default=None,
+        description=(
+            "verbatim, at most 40 words. Null only on a hand-researched statement, where the fact "
+            "came from a structured page rather than a sentence; a statement an LLM extracted "
+            "always carries its quote."
+        ),
+    )
     source: SourceRef
 
 
@@ -120,6 +133,17 @@ class OrgRef(BaseModel):
     org_type: str
     hq_country: str | None = None
     website: str | None = None
+    aliases: list[str] = Field(
+        default_factory=list,
+        description=(
+            "other names this organisation is known by. The board's name search is useless without "
+            "them: people type NRCS, MSF and WV Nepal, none of which is a substring of the common name."
+        ),
+    )
+    local_script: str | None = Field(
+        default=None,
+        description='the Devanagari name where one was found; rendered with lang="ne"',
+    )
 
 
 class ResponderCounts(BaseModel):

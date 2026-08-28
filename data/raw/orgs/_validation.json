@@ -1,5 +1,5 @@
 {
- "retrieved_at": "2026-08-28T16:18:26+00:00",
+ "retrieved_at": "2026-08-28T16:37:28+00:00",
  "source": "orgs",
  "data": {
   "schema_errors": 0,
@@ -88,12 +88,12 @@
     42
    ],
    [
-    "names.local_script",
-    36
+    "financial_transparency.program_ratio",
+    39
    ],
    [
-    "financial_transparency.program_ratio",
-    36
+    "names.local_script",
+    37
    ],
    [
     "financial_transparency.audited_financials",
@@ -117,7 +117,7 @@
    ],
    [
     "nepal_presence.since_year",
-    23
+    24
    ],
    [
     "registrations[NP_SWC].identifier",
