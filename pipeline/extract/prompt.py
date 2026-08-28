@@ -11,7 +11,12 @@ from dataclasses import dataclass, field
 
 from core import enums
 
-PROMPT_VERSION = "v2"
+# v3 (2026-08-28): rule 6 and the amount description now say that amount is a sum of money with
+# its currency, after a live run recorded 69 destroyed schools as an amount. The version moves with
+# the prompt because it is the cache key: extract_statements skips a report that already has a
+# statement at the current version, so a prompt change that did not bump this would leave rows
+# labelled with a prompt that no longer exists and never re-extract them.
+PROMPT_VERSION = "v3"
 
 STATEMENT_TOOL_NAME = "record_response_statements"
 
