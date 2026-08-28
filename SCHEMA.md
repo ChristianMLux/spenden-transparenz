@@ -1,4 +1,4 @@
-# Datenmodell v0.1 — Organisations-Record (Pilot „Nepal Flut 2026")
+# Datenmodell v0.2 — Organisations-Record (Pilot „Nepal Flut 2026")
 
 **Stand:** 2026-08-28 · **Status:** Entwurf, entstanden aus dem Pilot-Datensatz. Feldnamen EN (Handoff-Entscheidung 4, als Annahme übernommen). Maschinenlesbar: `schema/org.schema.json` (JSON Schema 2020-12), Beispiel: `schema/example-org.json`.
 
@@ -16,6 +16,26 @@
 | `verification` | `self_reported` (eigene Website/Bericht) · `register_confirmed` (amtliches Register: SWC, Charity Commission, IRS, DZI) · `externally_audited` (Wirtschaftsprüfer-Testat / geprüfter Abschluss) · `third_party_reported` (Medien, OCHA, Watchdog) · `unverified` (gefunden, aber Quelle trägt den Wert nicht wirklich) |
 | `quote` | wörtlicher Beleg ≤ 40 Wörter, wenn der Wert aus Fließtext stammt |
 | `note` | Einschränkungen, Formel, Kontext |
+| `gap_reason` | **neu in v0.2**, nur wenn `value: null`: *warum* der Wert fehlt. `not_searched` · `searched_not_found` · `source_unreachable` · `not_public` |
+
+### Warum `gap_reason` (v0.2)
+
+`data_gaps` sagt, **dass** etwas fehlt. `gap_reason` sagt, **warum**. Ohne das Feld rendern vier
+verschiedene Ehrlichkeits-Aussagen identisch als leere Zelle:
+
+| Wert | Aussage | Beispiel aus dem Pilotdatensatz |
+|---|---|---|
+| `not_searched` | Wir haben nicht gesucht. Kein Befund über die Organisation. | `names.local_script` bei US-Orgs ohne Devanagari-Namen |
+| `searched_not_found` | Wir haben gesucht und nichts gefunden. | „No published expenditure split found within research budget." |
+| `source_unreachable` | Die Quelle hat nicht geantwortet. Aussage über die **Quelle**, nicht über die Organisation. | „swc.org.np was unreachable during this research session." |
+| `not_public` | Die Quelle sagt selbst, dass sie den Wert nicht veröffentlicht. Aussage über das **Register**. | Register ohne Einnahmen-Split unter der Meldeschwelle |
+
+Die Reihenfolge ist bewusst: eine unerreichbare Quelle kann uns nicht sagen, was sie veröffentlicht,
+deshalb gewinnt `source_unreachable` gegen `not_public`, wenn beides auf eine Notiz zutrifft.
+
+`gap_reason` ist **nicht** required. Ein Datum mit Wert trägt keinen Grund, und ein Pflichtfeld
+hätte jeden bestehenden Record ungültig gemacht. Erzwungen wird es dort, wo es zählt: die
+Datenbank (`org_datum`) lässt eine Lücke ohne `note` **und** `gap_reason` nicht zu.
 
 Die Konvention (`source_url`, ISO-Datum, typisiertes Verifizierungs-Enum, Zitat + Locator) ist bewusst an die Haus-Konvention aus ProofRun (`source`/`claim`/`evidence`) und `idea-package.schema.json` (`source_url`, `evidence_quality`) angelehnt, damit ein späterer Umzug in eine gemeinsame Vault-Struktur ohne Umbenennung geht.
 

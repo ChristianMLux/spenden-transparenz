@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://spenden-transparenz.local/schema/org.schema.json",
-  "title": "Organisation record (pilot v0.1, Nepal floods 2026)",
+  "title": "Organisation record (pilot v0.2, Nepal floods 2026)",
   "description": "One organisation responding to (or active in) Nepal. Every fact is a `datum`: value + provenance. Missing = null value + entry in data_gaps. Nothing is invented.",
   "type": "object",
   "additionalProperties": false,
@@ -47,7 +47,8 @@
           "status": { "type": ["string", "null"] },
           "retrieved_at": { "type": "string", "format": "date" },
           "verification": { "$ref": "#/$defs/verification" },
-          "note": { "type": ["string", "null"] }
+          "note": { "type": ["string", "null"] },
+          "gap_reason": { "$ref": "#/$defs/gap_reason", "description": "why `identifier` is missing; a register row with a null identifier stays in the record" }
         }
       }
     },
@@ -156,8 +157,14 @@
         "retrieved_at": { "type": ["string", "null"], "description": "YYYY-MM-DD" },
         "verification": { "$ref": "#/$defs/verification" },
         "quote": { "type": ["string", "null"] },
-        "note": { "type": ["string", "null"] }
+        "note": { "type": ["string", "null"] },
+        "gap_reason": { "$ref": "#/$defs/gap_reason" }
       }
+    },
+    "gap_reason": {
+      "type": ["string", "null"],
+      "enum": ["not_searched", "searched_not_found", "source_unreachable", "not_public", null],
+      "description": "Why the value is missing. Only meaningful when `value` is null. not_searched = we did not look; searched_not_found = we looked and found nothing; source_unreachable = the register or page did not answer; not_public = the source states the figure is not published. Without this field, three different honesty claims render identically."
     },
     "datum_string": {
       "allOf": [{ "$ref": "#/$defs/datum_base" }, { "properties": { "value": { "type": "string" } } }]
