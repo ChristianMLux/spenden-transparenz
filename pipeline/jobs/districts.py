@@ -30,12 +30,13 @@ from collections import defaultdict
 from typing import Any
 
 from core.logging import get_logger
-from core.models import DistrictAlias, ResponseStatement, StatementDistrict
+from core.models import Disaster, DistrictAlias, ResponseStatement, StatementDistrict
 from core.normalise import alias_norm
 from sqlalchemy import select
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
+from pipeline.revalidate import crisis_tag, revalidate
 from pipeline.runs import RunHandle, run_context
 
 log = get_logger("resolve_districts")
@@ -140,3 +141,17 @@ async def resolve_districts(
                 "rows_skipped": skipped,
             },
         )
+
+    # After the commit, never before: a cache hint is not data, and a web app that is down must
+    # not turn a successful ingestion into a failed one.
+    if written:
+        await _revalidate_crises(session_factory)
+
+
+async def _revalidate_crises(session_factory: async_sessionmaker[AsyncSession]) -> None:
+    """Ask the web app to re-render every active crisis board. Best-effort, never raises."""
+    async with session_factory() as session:
+        glide_ids = (
+            (await session.execute(select(Disaster.glide_id).where(Disaster.is_active.is_(True)))).scalars().all()
+        )
+    revalidate([crisis_tag(glide_id) for glide_id in glide_ids])
