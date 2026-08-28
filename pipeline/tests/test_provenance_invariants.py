@@ -117,22 +117,21 @@ def test_the_dataset_contains_no_score_key():
 
 
 def test_the_org_datum_gap_reason_distribution():
-    """Measured directly against this checkout today (2026-08-28), not copied from the brief.
+    """Measured directly against this checkout, not copied from any brief or PR description.
 
-    The brief quotes 237 searched_not_found / 20 not_searched / 12 source_unreachable. Recomputing
-    it here gives 231 / 20 / 12 - not_searched and source_unreachable match, searched_not_found is
-    6 lower. The three still sum to the 263 total gaps that both the brief and
-    test_the_counts_the_product_promises agree on, and test_add_gap_reason.py's own
-    test_the_gap_reason_distribution_is_recorded pins the same 263 without pinning the
-    sub-distribution - this test pins it, using the number this checkout actually produces, and
-    is the discrepancy flagged in the WP-A report rather than silently matched to the brief.
+    Schema v0.3 (commit ec94db3) converted 7 nepal_presence.mode nodes from value="unknown" with
+    no source into real gaps, all classified searched_not_found by
+    pipeline/migrations/nullable_presence_mode.py (each was already listed in its record's
+    data_gaps). That moves this distribution from 231/20/12 (WP-A's own pre-migration
+    measurement, itself a correction of the brief's 237) to 238/20/12 - the 270 total gaps
+    test_ingest_orgs.py's EXPECTED_GAPS also expects.
     """
     counts: dict[str, int] = {}
     for o in ORGS:
         for _, d in walk_datums(o):
             if d.get("value") is None:
                 counts[d["gap_reason"]] = counts.get(d["gap_reason"], 0) + 1
-    assert counts == {"searched_not_found": 231, "not_searched": 20, "source_unreachable": 12}
+    assert counts == {"searched_not_found": 238, "not_searched": 20, "source_unreachable": 12}
 
 
 # --- the same shape invariants, run against every individual source file on disk ----------------

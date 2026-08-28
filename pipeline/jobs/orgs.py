@@ -8,13 +8,15 @@ row per key - gets one SELECT of current state plus one UPDATE to close out chan
 INSERT for new-or-changed rows. See pipeline/jobs/seed_reference.py:_upsert for the pattern the
 mutable tables copy, and _upsert_org_datum_rows below for the versioned one.
 
-Known data issue (flagged to the backend lead, 2026-08-28): 7 nepal_presence.mode nodes carry
-value="unknown" - a real PRESENCE_MODE enum member - with source_url null. "unknown" is how those
-research records say "we could not determine this", but the product's own provenance rule
-(CLAUDE.md Global Constraint 2, enforced here by core.models.OrgDatum's ck_org_datum_provenance
-CHECK) says a non-null value needs a source. Until the source data is fixed, _datum_row
-reclassifies these into gaps at ingestion time rather than crashing the whole batch insert on the
-CHECK constraint - see the reclassification branch below and its log line.
+Fixed at the source, not here (2026-08-28): 7 nepal_presence.mode nodes used to carry
+value="unknown" with source_url null, because datum_presence_mode was the only datum type in the
+schema whose value could not be null - "unknown" was the only word available to a researcher who
+could not determine an organisation's mode. Schema v0.3 (commit ec94db3) makes value nullable
+there too, and pipeline/migrations/nullable_presence_mode.py converted those 7 records into real
+gaps with a gap_reason. ingest_orgs does not reclassify anything: rewriting research data on the
+way into the database is exactly the kind of silent correction this product exists not to make.
+If a value ever arrives here without a source_url, that is a data bug - _datum_row raises rather
+than reinterpreting it, and the whole run fails loudly through run_context's exception handling.
 """
 
 from __future__ import annotations
@@ -148,14 +150,15 @@ def _datum_row(org_id: str, path: str, datum: dict[str, Any], data_gaps: set[str
     source_url = datum.get("source_url")
 
     if value is not None and not source_url:
-        # See the module docstring: a value-shaped enum sentinel with no source is not a value
-        # under this product's own rule. Reclassify rather than let the CHECK constraint reject
-        # the whole batch over a handful of rows.
-        log.warning(
-            "datum_value_without_source_reclassified_as_gap",
-            extra={"org_id": org_id, "path": path, "value": value},
+        # A value without a source is a data bug, not something to reinterpret on the way in -
+        # see the module docstring. Fail loudly and immediately, before any row reaches the
+        # database, rather than let a vague CHECK-constraint error surface later for a row buried
+        # in a 420-row batch insert.
+        raise ValueError(
+            f"{org_id}.{path}: value {value!r} has no source_url. A datum with a value must have "
+            "a source (CLAUDE.md Global Constraint 2); this is a bug in the source JSON to fix "
+            "at the source, not something ingest_orgs should reclassify or reinterpret."
         )
-        value = None
 
     gap_reason = datum.get("gap_reason")
     note = datum.get("note")

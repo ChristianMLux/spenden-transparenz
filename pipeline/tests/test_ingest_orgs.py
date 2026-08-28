@@ -1,18 +1,18 @@
 """ingest_orgs: the 44-organisation pilot dataset, idempotently, with append-only history.
 
 Numbers asserted here are measured against this checkout (2026-08-28), the same way
-pipeline/tests/test_seed_reference.py pins seed_reference's counts. Two of them differ from the
-WP-A brief and are flagged rather than silently matched:
+pipeline/tests/test_seed_reference.py pins seed_reference's counts.
 
-- Of the 420 org_datum nodes, 157 carry a JSON value in the source data, but 7 of those are
-  nepal_presence.mode = "unknown" with source_url null - a value-shaped enum sentinel with no
-  source, which core.models.OrgDatum's ck_org_datum_provenance CHECK will not accept as a value.
-  ingest_orgs reclassifies those 7 into gaps (see pipeline/jobs/orgs.py's module docstring and
-  test_the_seven_unsourced_unknown_mode_datums_are_reclassified_as_gaps below), so the database
-  ends up with 150 non-gap datums and 270 gaps, not the brief's 157/263. Flagged to the backend
-  lead as a data bug pending a source-data fix; this is the number that actually happens today.
-- 56 registration rows carry a null identifier (22 source_unreachable, 34 searched_not_found),
-  not the brief's 57/23. The top-line counts (44/14/420) all match the brief exactly.
+Schema v0.3 (commit ec94db3) made nepal_presence.mode's value nullable and converted the 7
+records that used to carry value="unknown" with source_url null into real gaps with a
+gap_reason, at the source - see pipeline/jobs/orgs.py's module docstring. Counts moved from
+157 values / 263 gaps to 150 / 270 for that reason, not because ingest_orgs reinterprets
+anything: a value ever arriving here without a source_url is now a bug ingest_orgs raises on,
+not one it silently reclassifies (see test_a_value_without_a_source_url_fails_loudly below).
+
+56 registration rows carry a null identifier (22 source_unreachable, 34 searched_not_found) -
+also measured directly, per the backend lead's PO-0 correction: the WP-A brief's original 57/23
+came from a gap_reason distribution measured before load_orgs deduplicated caritas-nepal.
 """
 
 from __future__ import annotations
@@ -23,15 +23,15 @@ import pytest
 from core.models import IngestionRun, OrgAlias, Organisation, OrgDatum, OrgRegistration
 from sqlalchemy import func, select, text
 
-from pipeline.jobs.orgs import _partition_aliases, _value_type_and_extra, ingest_orgs, upsert_datum
+from pipeline.jobs.orgs import _datum_row, _partition_aliases, _value_type_and_extra, ingest_orgs, upsert_datum
 from pipeline.jobs.seed_reference import seed_reference
 from pipeline.runs import run_context
 
 EXPECTED_ORGS = 44
 EXPECTED_NP = 14
 EXPECTED_DATUMS = 420
-EXPECTED_VALUES = 150  # 157 in the JSON minus the 7 reclassified unknown-mode nodes
-EXPECTED_GAPS = 270  # 263 in the JSON plus the 7 reclassified
+EXPECTED_VALUES = 150
+EXPECTED_GAPS = 270
 EXPECTED_ALIASES = 100
 EXPECTED_REGISTRATIONS_NULL_IDENTIFIER = 56
 
@@ -126,15 +126,19 @@ async def test_ingest_orgs_never_deletes_a_datum_row(job_sessionmaker, session):
     assert after == before + 1
 
 
-# --- the reclassified unknown-mode gap, specifically ---------------------------------------------
+# --- the seven formerly-unsourced unknown-mode datums: now real gaps, at the source --------------
 
 
-async def test_the_seven_unsourced_unknown_mode_datums_are_reclassified_as_gaps(job_sessionmaker, session):
+async def test_the_seven_previously_unsourced_unknown_mode_datums_are_real_gaps_from_the_source(
+    job_sessionmaker, session
+):
     """globalgiving, care-nepal, lutheran-world-federation-nepal, wateraid-nepal,
-    vishwa-hindu-parishad-nepal, kiwanis-club-rupandehi-lumbini, the-rising-youth-club all carry
-    nepal_presence.mode = "unknown" with source_url null in the source JSON - a value-shaped enum
-    sentinel with no source. Storing that as a value would violate ck_org_datum_provenance, so
-    ingest_orgs stores it as a gap instead."""
+    vishwa-hindu-parishad-nepal, kiwanis-club-rupandehi-lumbini, the-rising-youth-club used to
+    carry nepal_presence.mode = "unknown" with source_url null. Schema v0.3 and
+    pipeline/migrations/nullable_presence_mode.py fixed this at the source: the JSON itself now
+    has value=null + gap_reason for all seven, so this is no longer ingest_orgs reclassifying
+    anything - it is the ordinary gap path, exercised on these specific records as a regression
+    check that the source-data fix actually landed."""
     await ingest_orgs(job_sessionmaker)
     org_ids = (
         "globalgiving",
@@ -156,6 +160,32 @@ async def test_the_seven_unsourced_unknown_mode_datums_are_reclassified_as_gaps(
         assert row.is_gap is True, org_id
         assert row.gap_reason in ("not_searched", "searched_not_found", "source_unreachable", "not_public"), org_id
         assert row.note, org_id
+
+
+# --- a value without a source is a bug ingest_orgs refuses, never reinterprets --------------------
+
+
+def test_a_value_without_a_source_url_fails_loudly():
+    """Rewriting research data on the way into the database is exactly the kind of silent
+    correction this product exists not to make. If an unsourced value ever appears again,
+    ingest_orgs must raise, not reclassify it into a gap."""
+    datum = {"value": "unknown", "source_url": None, "retrieved_at": "2026-08-28", "verification": "unverified"}
+    with pytest.raises(ValueError, match="has no source_url"):
+        _datum_row("some-org", "nepal_presence.mode", datum, set(), run_id=None)
+
+
+def test_a_value_with_a_source_url_is_never_rejected():
+    """The failure is specific to "value present, source absent" - an ordinary sourced value must
+    still pass through untouched."""
+    datum = {
+        "value": "own_staff",
+        "source_url": "https://example.org/report",
+        "retrieved_at": "2026-08-28",
+        "verification": "self_reported",
+    }
+    row = _datum_row("some-org", "nepal_presence.mode", datum, set(), run_id=None)
+    assert row["value"] == "own_staff"
+    assert row["gap_reason"] is None
 
 
 # --- org_registration: honest nulls stay in the record -------------------------------------------
