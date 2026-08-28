@@ -1,0 +1,83 @@
+import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
+import type { Locale } from "@/i18n/routing";
+import { formatDate } from "@/lib/format";
+import type { Responder } from "@/lib/types";
+import { Statement } from "./statement";
+
+/** ISO 3166-1 region names from the platform, not a hand-maintained table. */
+function countryName(code: string, locale: Locale): string {
+  try {
+    return new Intl.DisplayNames([locale], { type: "region" }).of(code) ?? code;
+  } catch {
+    return code;
+  }
+}
+
+/**
+ * One row of Tab A. Server-rendered for the same reason as Statement: <Datum> needs
+ * next-intl translations, which only exist on the server in this app.
+ *
+ * The rule that drives this file: an organisation with no statement gets the identical
+ * <article> frame, the same heading size and the same vertical presence as one with
+ * three. There is no branch here that changes the wrapper, only the content inside it.
+ */
+export function ResponderRow({ responder, generatedAt }: { responder: Responder; generatedAt: string }) {
+  const t = useTranslations("board");
+  const tCommon = useTranslations("common");
+  const locale = useLocale() as Locale;
+  const headingId = `org-${(responder.org_id ?? responder.org_name_raw).replace(/[^a-zA-Z0-9_-]/g, "-")}`;
+
+  return (
+    <article aria-labelledby={headingId}>
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+        <h3 id={headingId} className="text-lg">
+          {responder.name}
+        </h3>
+        <p className="text-xs text-muted">
+          {countryName(responder.hq_country, locale)} · {tCommon(`orgType.${responder.org_type}`)}
+        </p>
+      </div>
+      {responder.aliases.length > 0 && (
+        <p className="text-xs text-muted">{responder.aliases.join(" · ")}</p>
+      )}
+
+      {responder.statements.length > 0 ? (
+        <div className="mt-3 space-y-3">
+          {responder.statements.map((statement, i) => (
+            <div key={statement.id}>
+              {i > 0 && <hr className="mb-3 border-dashed border-rule" />}
+              <Statement statement={statement} />
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="mt-3">
+          <p className="max-w-[68ch] text-base text-ink">
+            {t("empty.heading", { date: formatDate(generatedAt.slice(0, 10), locale) })}
+          </p>
+          <p className="mt-1 max-w-[68ch] text-sm text-ink">
+            {t("empty.searchedLabel")} {t("empty.searchedText")}
+          </p>
+        </div>
+      )}
+
+      {responder.org_id && (
+        <p className="mt-3">
+          {/* next/link's Link, not @/i18n/navigation's wrapped one: SiteFooter (every
+              page's layout) already pays for Link's own runtime and for next-intl's
+              pathname-translation chunk, so reusing plain next/link here with a
+              manually built, locale-invariant href (the org route is identical in both
+              locales, see routing.ts) adds nothing beyond what the shell already ships,
+              while a raw <a> would have given up prefetching for no bundle benefit. */}
+          <Link
+            href={`/${locale}/organisation/${responder.org_id}`}
+            className="text-sm text-accent underline-offset-2 hover:underline"
+          >
+            {t("viewOrg")}
+          </Link>
+        </p>
+      )}
+    </article>
+  );
+}
