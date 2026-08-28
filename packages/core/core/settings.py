@@ -57,6 +57,12 @@ class Settings(BaseSettings):
     max_run_cost_usd: float = 1.0
     reliefweb_min_interval_s: float = 2.0
 
+    # Telling the web app that a page it has cached is now stale. Both optional: unset means
+    # the pipeline skips revalidation with one log line rather than failing a run over a cache
+    # hint. Nothing the pipeline writes depends on the web app being reachable.
+    web_base_url: str | None = None
+    revalidate_secret: SecretStr | None = None
+
     user_agent: str = "spenden-transparenz/0.1 (+https://github.com/ChristianMLux/spenden-transparenz)"
     allowed_fetch_hosts: tuple[str, ...] = ("reliefweb.int", "api.reliefweb.int")
 
