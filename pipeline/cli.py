@@ -19,6 +19,8 @@ from core.settings import get_settings
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
 from pipeline.db import session_factory
+from pipeline.jobs.orgs import ingest_orgs
+from pipeline.jobs.reliefweb import fetch_report_bodies, ingest_reliefweb_listing
 from pipeline.jobs.seed_reference import seed_reference
 
 log = get_logger("cli")
@@ -27,6 +29,9 @@ Job = Callable[[async_sessionmaker[AsyncSession]], Awaitable[None]]
 
 JOBS: dict[str, Job] = {
     "seed_reference": seed_reference,
+    "ingest_orgs": ingest_orgs,
+    "ingest_reliefweb_listing": ingest_reliefweb_listing,
+    "fetch_report_bodies": fetch_report_bodies,
 }
 
 
