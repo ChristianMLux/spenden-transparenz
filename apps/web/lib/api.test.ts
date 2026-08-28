@@ -67,8 +67,16 @@ describe("board data", () => {
     // Printed on every run so a regression is visible before it breaches.
     console.log(`board payload: raw ${raw.byteLength} B, brotli ${brotli} B, gzip ${gzip} B`);
     // The spec's budget is stated in brotli, which is what a browser actually receives.
-    expect(raw.byteLength).toBeLessThanOrEqual(60_000);
-    expect(brotli).toBeLessThanOrEqual(12_000);
+    //
+    // Raised for WP4's action path, with the measurement rather than by feel: before the
+    // donation link the board was 56,921 B raw / 11,500 B brotli, after it 64,540 /
+    // 12,422. The 7.6 KB is what 44 rows of "official channel, its host, the date it was
+    // retrieved and the verification word" costs, after the research note and the quote
+    // were kept off the board (they stay on the organisation page, where they are shown)
+    // and the host was made derivable from the url instead of sent 44 times. It is the
+    // floor for the feature, not slack. The product owner confirms this number.
+    expect(raw.byteLength).toBeLessThanOrEqual(66_000);
+    expect(brotli).toBeLessThanOrEqual(12_800);
   });
 
   it("turns an unstated location into an empty district list, never a fake district", () => {

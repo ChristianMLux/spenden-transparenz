@@ -16,7 +16,7 @@
 import { cacheLife, cacheTag } from "next/cache";
 import { z } from "zod";
 import { resolveDistrict } from "./districts";
-import { readDisaster, readOrgs } from "./repo-data";
+import { readDisaster, readDonationChannels, readOrgs } from "./repo-data";
 import type {
   AmountBasis,
   BoardData,
@@ -24,8 +24,12 @@ import type {
   Crisis,
   Datum,
   DistrictRef,
+  DonationChannel,
+  DonationChannelType,
+  DonationLink,
   Facet,
   GapReason,
+  GovernmentFund,
   OrgDetail,
   OrgType,
   Registration,
@@ -199,6 +203,37 @@ const RawDisasterFileSchema = z.object({
   }),
 });
 
+// The official donation channel per organisation. Researched by hand into
+// data/orgs/donation-channels.json; the API gains the field with schema v0.5, and
+// donationFor() below is the single place that then has to change.
+const CHANNEL_TYPES = ["donation_page", "platform_page", "bank_transfer_page"] as const;
+
+const RawDonationEntrySchema = z.object({
+  value: z.string().nullable(),
+  channel_type: z.enum(CHANNEL_TYPES).nullable(),
+  flood_specific: z.boolean().nullable(),
+  source_url: z.string().nullable(),
+  retrieved_at: z.string().nullable(),
+  verification: z.string().nullable(),
+  quote: z.string().nullable(),
+  note: z.string().nullable(),
+  gap_reason: z.string().nullable(),
+});
+
+const RawDonationFileSchema = z.object({
+  generated_at: z.string(),
+  rules: z.string().optional(),
+  channels: z.record(z.string(), RawDonationEntrySchema),
+  government_funds: z.array(
+    RawDonationEntrySchema.extend({
+      name: z.string(),
+      // Absent in the file rather than null: a state relief fund is not a campaign
+      // page for one flood. Defaulting here keeps the 44 organisation entries strict.
+      flood_specific: z.boolean().nullable().default(null),
+    }),
+  ),
+});
+
 type RawDatum = z.infer<typeof RawDatumSchema>;
 type RawRegistration = z.infer<typeof RawRegistrationSchema>;
 type RawOrg = z.infer<typeof RawOrgSchema>;
@@ -208,6 +243,20 @@ type RawDisasterFile = z.infer<typeof RawDisasterFileSchema>;
 /** Exported only so lib/api.test.ts can prove a malformed record fails validation
  *  without needing its own fixture file. Not part of the locked interface. */
 export { RawDatasetSchema };
+
+let cachedDonations: z.infer<typeof RawDonationFileSchema> | null = null;
+function donationFile(): z.infer<typeof RawDonationFileSchema> {
+  if (!cachedDonations) {
+    const parsed = RawDonationFileSchema.safeParse(readDonationChannels<unknown>());
+    if (!parsed.success) {
+      throw new Error(
+        `donation-channels.json failed schema validation:\n${describeIssues(parsed.error)}`,
+      );
+    }
+    cachedDonations = parsed.data;
+  }
+  return cachedDonations;
+}
 
 function describeIssues(error: z.ZodError): string {
   return error.issues.map((issue) => `  ${issue.path.join(".") || "(root)"}: ${issue.message}`).join("\n");
@@ -418,6 +467,66 @@ function publisherOf(url: string | null): string | null {
   }
 }
 
+function toDonationChannel(
+  raw: z.infer<typeof RawDonationEntrySchema> | undefined,
+): DonationChannel {
+  // An organisation absent from the file was never searched, which is a different
+  // statement from "searched and found nothing" and has to survive as one.
+  if (!raw) {
+    return {
+      url: null,
+      channel_type: null,
+      flood_specific: null,
+      source_url: null,
+      publisher: null,
+      retrieved_at: null,
+      verification: "unverified",
+      quote: null,
+      note: null,
+      gap_reason: "not_searched",
+    };
+  }
+  return {
+    url: raw.value,
+    channel_type: raw.channel_type as DonationChannelType | null,
+    flood_specific: raw.flood_specific,
+    source_url: raw.source_url,
+    publisher: publisherOf(raw.value ?? raw.source_url),
+    retrieved_at: raw.retrieved_at,
+    verification: verificationOf(raw.verification),
+    quote: raw.quote,
+    note: raw.note,
+    gap_reason: isGapReason(raw.gap_reason)
+      ? raw.gap_reason
+      : raw.value
+        ? null
+        : "searched_not_found",
+  };
+}
+
+/** The one seam the live API replaces when schema v0.5 ships the field. */
+function donationFor(orgId: string | null): DonationChannel {
+  return toDonationChannel(orgId ? donationFile().channels[orgId] : undefined);
+}
+
+/** The board's five fields. See DonationLink for why the rest does not travel. */
+function donationLinkFor(orgId: string | null): DonationLink {
+  const full = donationFor(orgId);
+  return {
+    url: full.url,
+    retrieved_at: full.retrieved_at,
+    verification: full.verification,
+    gap_reason: full.gap_reason,
+  };
+}
+
+function governmentFunds(): GovernmentFund[] {
+  return donationFile().government_funds.map((fund) => ({
+    ...toDonationChannel(fund),
+    name: fund.name,
+  }));
+}
+
 function toDatum<T>(raw: RawDatum | undefined, fallbackRetrievedAt: string | null = null): Datum<T> {
   const value = (raw?.value ?? null) as T | null;
   const note = raw?.note ?? null;
@@ -530,6 +639,7 @@ function toResponder(raw: RawOrg): Responder {
     // Folded once at build. The filter compares against this and never re-normalises.
     search_key: fold([raw.names.common, ...aliases].join(" ")),
     statements: (raw.current_response ?? []).map((r, i) => toStatement(raw.org_id, i, r)),
+    donation: donationLinkFor(raw.org_id),
   };
 }
 
@@ -556,6 +666,7 @@ function toOrgDetail(raw: RawOrg): OrgDetail {
   return {
     org_id: raw.org_id,
     name: raw.names.common,
+    donation: donationFor(raw.org_id),
     local_script: toDatum<string>(raw.names.local_script, raw.last_updated),
     legal_name: toDatum<string>(raw.names.legal, raw.last_updated),
     aliases: raw.names.aliases ?? [],
@@ -696,6 +807,8 @@ function apiResponderToLocal(raw: z.infer<typeof ApiResponderItemSchema>): Respo
     is_local: org?.hq_country === "NP",
     search_key: fold(name),
     statements: (raw.statements ?? []).map(apiStatementToLocal),
+    // Until the API carries the field (schema v0.5) both paths read the same file.
+    donation: donationLinkFor(org?.org_id ?? null),
   };
 }
 
@@ -708,6 +821,8 @@ function apiOrgDetailToLocal(raw: z.infer<typeof ApiOrgDetailSchema>): OrgDetail
   return {
     org_id: raw.org_id,
     name: raw.name_common,
+    // Same seam as the board: the API carries the field from schema v0.5.
+    donation: donationFor(raw.org_id),
     local_script: pick<string>("names.local_script"),
     legal_name: pick<string>("names.legal"),
     aliases: raw.aliases ?? [],
@@ -908,6 +1023,7 @@ export async function getBoard(slug: string): Promise<BoardData> {
       crisis,
       generated_at: localDisaster().retrieved_at,
       responders,
+      government_funds: governmentFunds(),
       facets: buildFacets(responders),
       counts: boardCounts(responders),
     };
@@ -923,6 +1039,7 @@ export async function getBoard(slug: string): Promise<BoardData> {
     crisis,
     generated_at: freshness.retrieved_at,
     responders,
+    government_funds: governmentFunds(),
     facets: buildFacets(responders),
     counts: boardCounts(responders),
   };

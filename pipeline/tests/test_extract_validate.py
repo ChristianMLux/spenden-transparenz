@@ -166,6 +166,54 @@ def test_gate_keeps_an_amount_the_quote_does_contain():
     assert status == "auto" and claim["amount"] == Decimal("1000000")
 
 
+def test_gate_drops_a_number_that_is_not_money():
+    """The live run that this test comes from returned amount 69 with currency null, quoting "At
+    least 69 schools in flood-devastated districts". The number is genuinely in the quote, so the
+    verbatim check passes it; what it is not is a sum of money. The database says so itself
+    (ck_response_statement_amount_currency: an amount without a currency is not an amount), and
+    before this check the constraint was the only thing that said so - which turned one miscounted
+    school into a CheckViolationError that aborted the whole run and lost every other report in it.
+
+    amount_basis is deliberately left alone. It is a fact about a sentence, not about a number.
+    """
+    status, claim = gate(
+        {
+            "quote": "At least 69 schools in flood-devastated districts have been damaged",
+            "amount": Decimal("69"),
+            "currency": None,
+            "amount_basis": "reported",
+        },
+        "At least 69 schools in flood-devastated districts have been damaged, the assessment found.",
+    )
+    assert status == "auto"
+    assert claim["amount"] is None and claim["currency"] is None
+    assert "no currency" in claim["note"]
+    assert claim["amount_basis"] == "reported"
+
+
+def test_gate_drops_a_number_whose_currency_is_blank():
+    """An empty string is not an ISO 4217 code; treating it as one would put the same unusable row
+    in front of the same constraint."""
+    status, claim = gate(
+        {"quote": "distributed 500 tarpaulins", "amount": Decimal("500"), "currency": "   "},
+        "It distributed 500 tarpaulins in Rasuwa.",
+    )
+    assert status == "auto"
+    assert claim["amount"] is None and claim["currency"] is None
+
+
+def test_gate_keeps_a_currency_free_claim_that_has_no_amount():
+    """Most statements carry no money at all. Nothing about them should change here, and no note
+    should appear claiming something was dropped."""
+    status, claim = gate(
+        {"quote": "distributed 500 tarpaulins", "amount": None, "currency": None},
+        "It distributed 500 tarpaulins in Rasuwa.",
+    )
+    assert status == "auto"
+    assert claim["amount"] is None and claim["currency"] is None
+    assert claim.get("note") is None
+
+
 def test_quote_longer_than_40_words_is_rejected():
     long_quote = " ".join(["word"] * 41)
     status, _ = gate({"quote": long_quote}, long_quote)

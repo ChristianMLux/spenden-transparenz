@@ -11,6 +11,7 @@ const FILES = [
   ["orgs-nepal-2026.json", "orgs-nepal-2026.json"],
   ["data/raw/reliefweb/disaster_updates.json", "disaster-updates.json"],
   ["data/raw/hapi/admin2_NPL.json", "admin2-npl.json"],
+  ["data/orgs/donation-channels.json", "donation-channels.json"],
 ];
 
 function repoRoot() {
