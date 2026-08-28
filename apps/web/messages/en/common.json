@@ -1,3 +1,103 @@
 {
-  "siteName": "Donation Transparency"
+  "siteName": "Donation Transparency",
+  "skipLink": "Skip to content",
+  "mainLabel": "Content",
+  "footer": {
+    "dataStand": "Data as of {date}",
+    "standing": "No rating, no ranking. Every value carries its source.",
+    "methodik": "Methodology",
+    "quellen": "Sources",
+    "korrekturen": "Corrections",
+    "impressum": "Imprint",
+    "datenschutz": "Privacy"
+  },
+  "theme": {
+    "label": "Appearance",
+    "system": "System",
+    "light": "light",
+    "dark": "dark"
+  },
+  "locale": {
+    "label": "Language",
+    "de": "Deutsch",
+    "en": "English"
+  },
+  "sources": {
+    "showAll": "Show all sources",
+    "hideAll": "Collapse sources"
+  },
+  "datum": {
+    "heading": "Evidence: {field}",
+    "triggerLabel": "Evidence for {field}: {grade}. Show source and date.",
+    "retrievedOn": "Retrieved on {date} ({relative})",
+    "daysAgo": "{days, plural, =0 {today} =1 {yesterday} other {# days ago}}",
+    "searchedOn": "searched on {date}",
+    "word": {
+      "register_confirmed": "Register",
+      "externally_audited": "Audited",
+      "self_reported": "Self-reported",
+      "third_party_reported": "Third party",
+      "unverified": "Unverified",
+      "not_found": "Not found",
+      "not_searched": "Not searched",
+      "source_unreachable": "Source unreachable",
+      "not_public": "Not published",
+      "stale": "Older reading"
+    },
+    "sentence": {
+      "register_confirmed": "Confirmed in an official register.",
+      "externally_audited": "From audited accounts or an auditor's statement.",
+      "self_reported": "Stated by the organisation itself.",
+      "third_party_reported": "Reported by a third party such as media or OCHA.",
+      "unverified": "Found, but the source does not clearly carry the value.",
+      "not_found": "Searched for and not found.",
+      "not_searched": "Not searched for in this round.",
+      "source_unreachable": "The register could not be reached when we looked.",
+      "not_public": "This register does not publish the value.",
+      "stale": "This reading has not been rechecked for a while."
+    }
+  },
+  "amount": {
+    "basis": {
+      "reported": "reported, not evidenced as paid out",
+      "appeal": "as an appeal target, not evidenced as paid out",
+      "pledged": "announced, not evidenced as paid out",
+      "raised": "raised, not evidenced as paid out",
+      "released": "released, not evidenced as paid out",
+      "disbursed": "evidenced as paid out"
+    }
+  },
+  "verification": {
+    "register_confirmed": "Register",
+    "externally_audited": "Audited",
+    "self_reported": "Self-reported",
+    "third_party_reported": "Third party",
+    "unverified": "Unverified"
+  },
+  "gapReason": {
+    "not_searched": "not searched",
+    "searched_not_found": "searched and not found",
+    "source_unreachable": "source unreachable",
+    "not_public": "not published"
+  },
+  "hq": {
+    "local": "Based in Nepal",
+    "international": "Based abroad"
+  },
+  "orgType": {
+    "un_agency": "UN agency",
+    "red_cross_movement": "Red Cross and Red Crescent Movement",
+    "ingo": "international NGO",
+    "national_ngo": "national NGO",
+    "community_org": "local group",
+    "diaspora_charity": "diaspora charity",
+    "foundation": "foundation",
+    "government": "government",
+    "platform": "donation platform",
+    "alliance": "alliance",
+    "unknown": "unclassified"
+  },
+  "district": {
+    "none": "no location stated"
+  }
 }

@@ -3,9 +3,19 @@ name: web
 on:
   push:
     branches: [main]
-    paths: ['apps/web/**', '.github/workflows/web.yml']
+    paths:
+      - 'apps/web/**'
+      - 'orgs-nepal-2026.json'
+      - 'data/raw/hapi/**'
+      - 'data/raw/reliefweb/**'
+      - '.github/workflows/web.yml'
   pull_request:
-    paths: ['apps/web/**', '.github/workflows/web.yml']
+    paths:
+      - 'apps/web/**'
+      - 'orgs-nepal-2026.json'
+      - 'data/raw/hapi/**'
+      - 'data/raw/reliefweb/**'
+      - '.github/workflows/web.yml'
 
 concurrency:
   group: web-${{ github.ref }}
@@ -28,6 +38,23 @@ jobs:
       - run: npm ci
       - run: npx tsc --noEmit
       - run: npm run lint
+      # Fails if a token drops below its contrast floor, or if the "not found" mark ever
+      # reads weaker than the "documented" one.
       - run: npm run contrast
       - run: npm run test:unit
       - run: npm run build
+      - run: npm run check:bundle
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      # Lighthouse cannot launch Chrome on the maintainer's Windows machine, so this job
+      # is where its budgets are actually enforced.
+      - run: npm run test:lighthouse
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: web-failure-artifacts
+          path: |
+            apps/web/playwright-report
+            apps/web/test-results
+            apps/web/.lighthouseci
+          retention-days: 7

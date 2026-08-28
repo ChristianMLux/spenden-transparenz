@@ -7,8 +7,6 @@ export function generateStaticParams() {
 // Placeholder. WP1 owns this route.
 export default function BoardPage() {
   return (
-    <main>
-      <h1>Nepal</h1>
-    </main>
+    <h1>Nepal</h1>
   );
 }

@@ -1,3 +1,103 @@
 {
-  "siteName": "Spenden-Transparenz"
+  "siteName": "Spenden-Transparenz",
+  "skipLink": "Zum Inhalt springen",
+  "mainLabel": "Inhalt",
+  "footer": {
+    "dataStand": "Daten-Stand: {date}",
+    "standing": "Keine Bewertung, kein Ranking. Jeder Wert trägt seine Quelle.",
+    "methodik": "Methodik",
+    "quellen": "Quellen",
+    "korrekturen": "Korrekturen",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz"
+  },
+  "theme": {
+    "label": "Darstellung",
+    "system": "System",
+    "light": "hell",
+    "dark": "dunkel"
+  },
+  "locale": {
+    "label": "Sprache",
+    "de": "Deutsch",
+    "en": "English"
+  },
+  "sources": {
+    "showAll": "Alle Quellen anzeigen",
+    "hideAll": "Quellen einklappen"
+  },
+  "datum": {
+    "heading": "Beleg: {field}",
+    "triggerLabel": "Beleg für {field}: {grade}. Quelle und Datum anzeigen.",
+    "retrievedOn": "Abgerufen am {date} ({relative})",
+    "daysAgo": "{days, plural, =0 {heute} =1 {gestern} other {vor # Tagen}}",
+    "searchedOn": "gesucht am {date}",
+    "word": {
+      "register_confirmed": "Register",
+      "externally_audited": "Testat",
+      "self_reported": "Eigenangabe",
+      "third_party_reported": "Dritte",
+      "unverified": "ungeprüft",
+      "not_found": "nicht gefunden",
+      "not_searched": "nicht gesucht",
+      "source_unreachable": "Quelle nicht erreichbar",
+      "not_public": "wird nicht veröffentlicht",
+      "stale": "älterer Stand"
+    },
+    "sentence": {
+      "register_confirmed": "In einem amtlichen Register bestätigt.",
+      "externally_audited": "Aus einem geprüften Abschluss oder einem Testat.",
+      "self_reported": "Angabe der Organisation selbst.",
+      "third_party_reported": "Von Dritten berichtet, etwa Medien oder OCHA.",
+      "unverified": "Gefunden, aber die Quelle trägt den Wert nicht eindeutig.",
+      "not_found": "Gesucht und nicht gefunden.",
+      "not_searched": "In dieser Runde nicht gesucht.",
+      "source_unreachable": "Das Register war beim Abruf nicht erreichbar.",
+      "not_public": "Dieses Register veröffentlicht den Wert nicht.",
+      "stale": "Diese Angabe wurde länger nicht neu geprüft."
+    }
+  },
+  "amount": {
+    "basis": {
+      "reported": "gemeldet, nicht als Auszahlung belegt",
+      "appeal": "als Ziel eines Spendenaufrufs, nicht als Auszahlung belegt",
+      "pledged": "angekündigt, nicht als Auszahlung belegt",
+      "raised": "gesammelt, nicht als Auszahlung belegt",
+      "released": "freigegeben, nicht als Auszahlung belegt",
+      "disbursed": "als ausgezahlt belegt"
+    }
+  },
+  "verification": {
+    "register_confirmed": "Register",
+    "externally_audited": "Testat",
+    "self_reported": "Eigenangabe",
+    "third_party_reported": "Dritte",
+    "unverified": "ungeprüft"
+  },
+  "gapReason": {
+    "not_searched": "nicht gesucht",
+    "searched_not_found": "gesucht und nicht gefunden",
+    "source_unreachable": "Quelle nicht erreichbar",
+    "not_public": "wird nicht veröffentlicht"
+  },
+  "hq": {
+    "local": "Sitz in Nepal",
+    "international": "Sitz im Ausland"
+  },
+  "orgType": {
+    "un_agency": "UN-Organisation",
+    "red_cross_movement": "Rotkreuz- und Rothalbmond-Bewegung",
+    "ingo": "internationale NGO",
+    "national_ngo": "nationale NGO",
+    "community_org": "lokale Gruppe",
+    "diaspora_charity": "Diaspora-Verein",
+    "foundation": "Stiftung",
+    "government": "staatlich",
+    "platform": "Spendenplattform",
+    "alliance": "Bündnis",
+    "unknown": "nicht zugeordnet"
+  },
+  "district": {
+    "none": "ohne Ortsangabe"
+  }
 }

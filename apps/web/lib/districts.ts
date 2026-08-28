@@ -1,4 +1,4 @@
-import { readRepoJson } from "./repo-data";
+import { readDistricts } from "./repo-data";
 import type { DistrictRef } from "./types";
 
 interface HapiDistrict {
@@ -9,7 +9,7 @@ interface HapiDistrict {
 // All 77 admin2 districts, so a district that shows up in later data resolves without a
 // code change. Codes run country-wide, not per province: Bagmati starts at NP0320, which
 // is why the spec's example NP0301 does not exist. Rasuwa is NP0329.
-const HAPI = readRepoJson<{ data: HapiDistrict[] }>("data/raw/hapi/admin2_NPL.json").data;
+const HAPI = readDistricts<{ data: HapiDistrict[] }>().data;
 
 const norm = (s: string) =>
   s

@@ -1,28 +1,31 @@
-import { existsSync, readFileSync } from "node:fs";
-import { dirname, join, resolve } from "node:path";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 
-// The research artefacts live at the repository root and are read at build time only,
-// never at request time. Resolving from cwd upwards keeps this working under
-// `next build` (cwd = apps/web), under vitest (same), and from a Vercel monorepo root
-// directory, without hardcoding how deep we are.
-function repoRoot(): string {
-  let dir = resolve(process.cwd());
-  for (let i = 0; i < 6; i++) {
-    if (existsSync(join(dir, "orgs-nepal-2026.json"))) return dir;
-    const parent = dirname(dir);
-    if (parent === dir) break;
-    dir = parent;
+// Build-time only. The paths are literals inside apps/web/data so that Turbopack traces
+// exactly these three files instead of the whole repository. scripts/sync-data.mjs puts
+// them there before build and before the unit tests; the originals at the repository
+// root remain the single source.
+const DIR = join(process.cwd(), "data");
+
+function read<T>(name: string, full: string): T {
+  try {
+    return JSON.parse(readFileSync(full, "utf8")) as T;
+  } catch (cause) {
+    throw new Error(
+      `Could not read apps/web/data/${name}. Run \`node scripts/sync-data.mjs\` first.`,
+      { cause },
+    );
   }
-  throw new Error(
-    `Could not find the repository root above ${process.cwd()}. ` +
-      `Looked for orgs-nepal-2026.json in that directory and its first five ancestors.`,
-  );
 }
 
-const ROOT = repoRoot();
+export function readOrgs<T>(): T {
+  return read<T>("orgs-nepal-2026.json", join(DIR, "orgs-nepal-2026.json"));
+}
 
-export function readRepoJson<T>(relativePath: string): T {
-  const full = join(ROOT, relativePath);
-  if (!existsSync(full)) throw new Error(`Missing data file: ${full}`);
-  return JSON.parse(readFileSync(full, "utf8")) as T;
+export function readDisaster<T>(): T {
+  return read<T>("disaster-updates.json", join(DIR, "disaster-updates.json"));
+}
+
+export function readDistricts<T>(): T {
+  return read<T>("admin2-npl.json", join(DIR, "admin2-npl.json"));
 }

@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
-import { notFound } from "next/navigation";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getTranslations } from "next-intl/server";
+import { SiteFooter } from "@/components/shell/site-footer";
+import { SiteHeader } from "@/components/shell/site-header";
+import { SkipLink } from "@/components/shell/skip-link";
+import { ThemeScript } from "@/components/shell/theme-script";
+import { ACTIVE_CRISIS, routing } from "@/i18n/routing";
+import { getCrisis, getFreshness } from "@/lib/api";
 import { fontVariables } from "../fonts";
-import { routing } from "@/i18n/routing";
 import "../globals.css";
 
 // This is the root layout. There is deliberately no app/layout.tsx above it: only a
@@ -20,25 +24,32 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function LocaleLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await params;
-  if (!hasLocale(routing.locales, locale)) notFound();
+export default async function LocaleLayout({ children }: { children: React.ReactNode }) {
+  // Not `await params`. Under cacheComponents that turns the layout dynamic and the
+  // partial shell of /krise/[crisis] then fails to prerender. next-intl resolves the
+  // locale through next/root-params, which is static-safe, and its request config
+  // already calls notFound() for a locale that is not in the routing config.
+  const locale = await getLocale();
 
-  const messages = (await getMessages()) as Record<string, unknown>;
+  const t = await getTranslations("common");
+  const [crisis, freshness] = await Promise.all([getCrisis(ACTIVE_CRISIS), getFreshness()]);
 
   return (
-    <html lang={locale} className={fontVariables}>
-      <body>
-        {/* Only what client components actually read crosses the wire. Server
-            components read every namespace directly. */}
-        <NextIntlClientProvider messages={{ common: messages.common }}>
+    <html lang={locale} className={fontVariables} suppressHydrationWarning>
+      <head>
+        <ThemeScript />
+      </head>
+      <body className="flex min-h-screen flex-col">
+        {/* The provider is present because next-intl needs it in the tree, but it
+            carries no messages: every client component in this app takes its strings as
+            props, so the catalogue never crosses the wire. */}
+        <NextIntlClientProvider messages={{}}>
+        <SkipLink />
+        <SiteHeader crisis={crisis} siteName={t("siteName")} />
+        <main id="inhalt" tabIndex={-1} className="mx-auto w-full max-w-[80rem] flex-1 px-4 py-6">
           {children}
+        </main>
+        <SiteFooter generatedAt={freshness.retrieved_at} />
         </NextIntlClientProvider>
       </body>
     </html>

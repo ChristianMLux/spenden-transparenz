@@ -6,7 +6,8 @@
    drift. */
 @custom-variant dark (&:where(.dark, .dark *));
 
-:root {
+:root,
+.light {
   --bg: #FCFCFA;
   --surface: #FFFFFF;
   --ink: #1A1A18;
@@ -62,6 +63,30 @@
   --color-mark-open: var(--mark-open);
   --color-mark-open-tint: var(--mark-open-tint);
   --color-warn: var(--warn);
+
+  /* Compatibility aliases for the shadcn primitives. They ship referring to
+     bg-background, text-muted-foreground, border-input and so on; mapping those names
+     onto our tokens means a future `shadcn add` renders in this palette without anyone
+     editing the component. Note that shadcn's "accent" is a hover surface, not a brand
+     colour, so it maps to a tint rather than to --accent. */
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  --color-card: var(--surface);
+  --color-card-foreground: var(--ink);
+  --color-popover: var(--surface);
+  --color-popover-foreground: var(--ink);
+  --color-primary: var(--accent);
+  --color-primary-foreground: var(--bg);
+  --color-secondary: var(--mark-doc-tint);
+  --color-secondary-foreground: var(--mark-doc);
+  --color-muted-foreground: var(--muted);
+  /* Deliberately NOT aliased: shadcn's "accent" means a subtle hover surface, ours means
+     the one ink-blue. A component that needs a hover surface uses bg-mark-doc-tint. */
+  --color-destructive: var(--warn);
+  --color-destructive-foreground: var(--bg);
+  --color-border: var(--rule);
+  --color-input: var(--rule);
+  --color-ring: var(--accent);
 
   --font-serif: var(--font-source-serif), Georgia, "Times New Roman", serif;
   --font-sans: var(--font-public-sans), system-ui, sans-serif;

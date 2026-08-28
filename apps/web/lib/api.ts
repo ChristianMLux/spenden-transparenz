@@ -7,7 +7,7 @@
 // WP3 replaces the file reads with the live API behind SPENDEN_API_URL, keeps this as
 // the fallback, adds zod validation and wraps each loader in `use cache` + `cacheTag`.
 import { resolveDistrict } from "./districts";
-import { readRepoJson } from "./repo-data";
+import { readDisaster, readOrgs } from "./repo-data";
 import type {
   AmountBasis,
   BoardData,
@@ -117,8 +117,8 @@ interface RawDisasterFile {
   disaster: { url: string; title: string; disaster_id: string };
 }
 
-const DATASET = readRepoJson<RawDataset>("orgs-nepal-2026.json");
-const DISASTER = readRepoJson<RawDisasterFile>("data/raw/reliefweb/disaster_updates.json");
+const DATASET = readOrgs<RawDataset>();
+const DISASTER = readDisaster<RawDisasterFile>();
 
 // ---------------------------------------------------------------------------
 // Provenance

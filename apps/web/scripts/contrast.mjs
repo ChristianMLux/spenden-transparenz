@@ -44,7 +44,7 @@ const REQUIRED = [
   "warn",
 ];
 
-const light = tokens("light :root", /^:root \{\n([\s\S]*?)^\}/m);
+const light = tokens("light :root/.light", /^:root,\n\.light \{\n([\s\S]*?)^\}/m);
 const dark = tokens("dark .dark", /^\.dark \{\n([\s\S]*?)^\}/m);
 const darkNoJs = tokens(
   "dark prefers-color-scheme",
