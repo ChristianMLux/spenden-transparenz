@@ -1,1 +1,102 @@
-{}
+{
+  "meta": {
+    "titleTemplate": "{name} | Spenden-Transparenz"
+  },
+  "header": {
+    "localScriptField": "Name in local script",
+    "aliasesLabel": "Also known as",
+    "seat": "Based in: {place}",
+    "seatCountryOnly": "Based in: {country}",
+    "website": "Website",
+    "lastUpdated": "Last updated: {date}"
+  },
+  "response": {
+    "heading": "Response to the flood",
+    "empty": "No public response statement found (as of {date}).",
+    "searchedLabel": "What was searched:",
+    "field": "Statement"
+  },
+  "presence": {
+    "heading": "Presence in Nepal",
+    "sinceYear": "Present since",
+    "mode": "Mode of operation",
+    "staffCount": "Staff",
+    "partners": "Partners",
+    "modeValue": {
+      "own_staff": "Own staff",
+      "partners": "Through partner organisations",
+      "both": "Own staff and partner organisations",
+      "unknown": "Not specified"
+    }
+  },
+  "registrations": {
+    "heading": "Registrations and identifiers",
+    "registry": {
+      "NP_SWC": "Social Welfare Council (Nepal)",
+      "NP_DAO": "District Administration Office (Nepal)",
+      "IATI": "International Aid Transparency Initiative (IATI)",
+      "US_IRS": "U.S. Internal Revenue Service (Form 990)",
+      "DE_DZI": "German Central Institute for Social Issues (DZI Donations Seal)",
+      "DE_ITZ": "Transparent Civil Society Initiative (Germany)",
+      "DE_VEREINSREGISTER": "Register of Associations (German local court)",
+      "UK_CC": "Charity Commission for England and Wales",
+      "CH_ZEWO": "ZEWO seal (Switzerland)",
+      "UN": "United Nations",
+      "OTHER": "Other registry"
+    },
+    "iatiNote": "The join key across datasets.",
+    "sentence": {
+      "not_searched": "Not searched for an identifier in the {registry} register this round.",
+      "searchedNotFoundWithDomain": "No registration number found ({domain}, {date}).",
+      "searchedNotFound": "No registration number found.",
+      "sourceUnreachableWithDomain": "No registration number found. The source could not be reached when we looked ({domain}, {date}).",
+      "sourceUnreachable": "No registration number found. The source could not be reached on {date}.",
+      "sourceUnreachablePlain": "No registration number found. The source could not be reached.",
+      "notPublic": "This register does not publish this organisation's identifier."
+    }
+  },
+  "financial": {
+    "heading": "Financial transparency",
+    "emptyIntro": "No public financial data was found for this organisation.",
+    "emptySearched": "What was searched: an annual report, audited accounts and an IATI registration.",
+    "emptyNormal": "None of the 14 Nepali organisations in this dataset publishes a public income figure. That is the normal case, not a shortcoming of this organisation.",
+    "methodikLink": "More on this in the methodology.",
+    "incomeField": "Income",
+    "expenditureField": "Expenditure",
+    "programRatioField": "Programme ratio",
+    "annualReportField": "Annual report",
+    "auditedField": "Audited accounts",
+    "iatiRefField": "IATI reference",
+    "scopeLabel": "Scope: {scope}",
+    "fiscalYearLabel": "Fiscal year {year}",
+    "scope": {
+      "global": "global",
+      "nepal_only": "Nepal only",
+      "unknown": "scope not stated"
+    },
+    "programRatioFormula": "Formula: {note}",
+    "programRatioValue": "{percent}% of expenditure goes to programmes"
+  },
+  "warnings": {
+    "heading": "Public notices",
+    "field": "Notice"
+  },
+  "gaps": {
+    "heading": "What we do not know",
+    "groupHeading": {
+      "searched_not_found": "Searched for and not found",
+      "not_searched": "Not searched for in this round",
+      "source_unreachable": "Source unreachable",
+      "not_public": "The register does not publish this"
+    },
+    "researchNotesHeading": "How this was researched",
+    "empty": "No open gaps are recorded for this organisation."
+  },
+  "corrections": {
+    "heading": "Found an error?",
+    "sentence": "If a value on this page is wrong or has changed, let us know.",
+    "linkLabel": "Go to corrections",
+    "mailLabel": "Report an error by email",
+    "mailSubject": "Correction: {orgId} ({date})"
+  }
+}
