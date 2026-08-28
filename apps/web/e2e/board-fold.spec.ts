@@ -19,7 +19,10 @@ test.describe("board fold", () => {
     const m = await page.evaluate(() => {
       const arts = [...document.querySelectorAll("article")];
       const first = arts[0]?.getBoundingClientRect();
-      const secondHeading = arts[1]?.querySelector("h3")?.getBoundingClientRect();
+      // h2, not h3: the organisation name is the second level of the board, under the
+      // crisis h1. It was an h3 with no h2 above it, which Lighthouse flagged as a
+      // heading-order violation and which cost the accessibility score its last point.
+      const secondHeading = arts[1]?.querySelector("h2")?.getBoundingClientRect();
       return {
         firstTop: first?.top ?? Number.POSITIVE_INFINITY,
         firstBottom: first?.bottom ?? Number.POSITIVE_INFINITY,

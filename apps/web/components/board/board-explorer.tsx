@@ -382,7 +382,7 @@ function ChronologicalList({
     <div>
       {groups.map((g) => (
         <div key={g.key} className="border-b border-rule py-4 first:pt-0 last:border-b-0">
-          <h3 className="text-lg">{dayLabels[g.key] ?? g.key}</h3>
+          <h2 className="text-lg">{dayLabels[g.key] ?? g.key}</h2>
           <div className="mt-3">
             {g.items.map((s) => (
               <div key={s.id} className="border-t border-dashed border-rule pt-3 mt-3 first:mt-0 first:border-t-0 first:pt-0">

@@ -1,6 +1,7 @@
 {
   "meta": {
-    "titleTemplate": "{name} | Spenden-Transparenz"
+    "titleTemplate": "{name} | Spenden-Transparenz",
+    "description": "What is publicly evidenced about {name}: response to the flood, presence in Nepal, registrations and finances, every value with its source and retrieval date. No rating, no recommendation."
   },
   "header": {
     "localScriptField": "Name in local script",

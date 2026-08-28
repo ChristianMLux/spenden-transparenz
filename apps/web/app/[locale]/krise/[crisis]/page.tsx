@@ -22,7 +22,13 @@ export function generateStaticParams() {
 export async function generateMetadata(): Promise<Metadata> {
   const locale = (await getLocale()) as Locale;
   const board = await getBoard(ACTIVE_CRISIS);
-  return { title: locale === "de" ? board.crisis.name_de : board.crisis.name_en };
+  const t = await getTranslations("board");
+  return {
+    title: locale === "de" ? board.crisis.name_de : board.crisis.name_en,
+    // The same two sentences the page opens with. A search result that promises a
+    // ranking and delivers a register would be the first lie the product tells.
+    description: `${t("scopeLine1")} ${t("scopeLine2")}`,
+  };
 }
 
 function formatDataStand(iso: string, locale: Locale): string {

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!--
+    The site had no icon at all: WP0's scaffolding removed the Next.js default and never
+    replaced it, so every page load requested /favicon.ico and logged a 404 to the
+    console. Lighthouse counted that against Best Practices.
+
+    The mark is the project's own drawing language, scaled up from the 12px provenance
+    marks in components/datum/marks.tsx: a record with a seal on it. It is the
+    register_confirmed glyph, because a register is what this site is. No photo, no
+    emoji, no letterform.
+
+    Ink on transparent, with the stroke lightened under prefers-color-scheme: dark so it
+    stays legible in a dark browser chrome.
+  -->
+  <style>
+    .mark { stroke: #1A1A18; fill: none; stroke-width: 2.5; stroke-linecap: square; }
+    .seal { fill: #1A1A18; }
+    @media (prefers-color-scheme: dark) {
+      .mark { stroke: #EDEDE8; }
+      .seal { fill: #EDEDE8; }
+    }
+  </style>
+  <path class="mark" d="M5 4.5h22v23H5z" />
+  <circle class="seal" cx="21.5" cy="22" r="3.2" />
+</svg>
