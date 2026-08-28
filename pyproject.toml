@@ -16,6 +16,9 @@ dev = [
     "httpx>=0.28",
     "jsonschema>=4.23",
     "ruff>=0.8",
+    # Tests create and drop their own scratch databases, which asyncpg cannot do inside a
+    # transaction; psycopg with autocommit can.
+    "psycopg[binary]>=3.2",
 ]
 
 [tool.pytest.ini_options]
