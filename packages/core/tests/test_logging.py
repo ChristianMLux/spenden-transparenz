@@ -73,6 +73,46 @@ def test_an_exception_is_serialised_into_the_same_line(capsys):
     assert "ValueError: boom" in payload["exc_info"]
 
 
+def test_a_plain_record_carries_no_null_valued_keys(capsys):
+    """The first real uvicorn run emitted "exc_info": null on every single line. A key whose value
+    is always null is noise in a log drain, and it makes grep-by-key useless."""
+    configure_logging(service="api")
+    get_logger("t").info("api_started", extra={"env": "development"})
+    payload = json.loads(capsys.readouterr().err.strip())
+    assert None not in payload.values(), f"null-valued keys: {[k for k, v in payload.items() if v is None]}"
+    assert "exc_info" not in payload
+
+
+def test_uvicorn_logs_go_through_the_same_json_handler(capsys):
+    """Otherwise production logs are half JSON and half 'INFO:     Started server process'."""
+    configure_logging(service="api", capture_uvicorn=True)
+    logging.getLogger("uvicorn.error").info("Application startup complete.")
+    err = capsys.readouterr().err.strip()
+    assert len(err.splitlines()) == 1
+    payload = json.loads(err)
+    assert payload["message"] == "Application startup complete."
+    assert payload["service"] == "api"
+
+
+def test_ansi_escape_codes_never_reach_the_log(capsys):
+    """uvicorn attaches a color_message extra full of ANSI escapes. Terminal control codes in a
+    structured log are junk at best and a terminal-injection vector at worst."""
+    configure_logging(service="api", capture_uvicorn=True)
+    logging.getLogger("uvicorn.error").info(
+        "Started server process [%d]",
+        1234,
+        extra={"color_message": "Started server process [\x1b[36m%d\x1b[0m]"},
+    )
+    err = capsys.readouterr().err
+    assert "\\u001b" not in err and "\x1b" not in err
+    assert "color_message" not in err
+
+
+def test_uvicorn_capture_is_opt_in(capsys):
+    configure_logging(service="api")
+    assert logging.getLogger("uvicorn.error").handlers == []
+
+
 def test_level_filters_debug_by_default(capsys):
     configure_logging(service="api")
     get_logger("t").debug("noise")
