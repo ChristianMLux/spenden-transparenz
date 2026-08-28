@@ -42,7 +42,11 @@ label, or outside context you might otherwise have. "appeal" for a funding targe
 "released" for money an organisation has freed up or allocated internally, "disbursed" only when \
 the sentence itself says the money reached recipients, "reported" when the sentence does not say \
 which of these it is. Do not default to "disbursed" just because a number is mentioned.
-6. If the report describes no organisational response to the disaster at all, return an empty \
+6. "amount" is a sum of money and nothing else, and it always comes with its ISO 4217 \
+currency code. A number of people reached, houses damaged, schools destroyed, tents \
+distributed or staff deployed is not an amount: set "amount" and "currency" to null and let \
+the quote carry that number. A figure whose currency the text never names is also null.
+7. If the report describes no organisational response to the disaster at all, return an empty \
 list of statements. An empty list is a correct answer, not a failure.
 
 Known districts for this report (context only, not evidence): {known_districts}"""
@@ -78,7 +82,11 @@ _STATEMENT_SCHEMA = {
         },
         "amount": {
             "type": ["number", "null"],
-            "description": "The numeric amount as the text states it, or null if none is mentioned.",
+            "description": (
+                "A sum of money as the text states it, with its currency, or null. A count "
+                "of people, houses, schools, tarpaulins or any other thing is not an amount: "
+                "leave amount and currency null and let the quote carry the number."
+            ),
         },
         "currency": {
             "type": ["string", "null"],

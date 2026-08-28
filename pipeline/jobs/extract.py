@@ -23,6 +23,7 @@ from core.models import District, Report, ResponseStatement, StatementDistrict
 from core.settings import get_settings
 from sqlalchemy import or_, select
 from sqlalchemy.dialects.postgresql import insert
+from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
 from pipeline.extract import client as llm_client
@@ -285,9 +286,24 @@ async def extract_statements(
                 rows.append(row)
 
             if rows:
-                written, skipped, rejected = await _upsert_statements(session, rows)
-                handle.count(written=written, skipped=skipped, rejected=rejected + dropped)
-                await session.commit()
+                try:
+                    written, skipped, rejected = await _upsert_statements(session, rows)
+                    await session.commit()
+                except SQLAlchemyError:
+                    # A run pays for its LLM calls before it writes anything, so letting one
+                    # refused write end the run throws away every report after it and the money
+                    # already spent on them. The report is rolled back and its claims counted as
+                    # rejected instead - which is what keeps this honest, because a systematic
+                    # write failure cannot hide behind a "succeeded" run: every claim it loses
+                    # lands in the rejected total the malformed rate is measured against.
+                    await session.rollback()
+                    log.exception(
+                        "extract_statements_write_refused",
+                        extra={"report_id": report.id, "claims": len(rows)},
+                    )
+                    handle.count(rejected=len(rows) + dropped)
+                else:
+                    handle.count(written=written, skipped=skipped, rejected=rejected + dropped)
             elif dropped:
                 handle.count(rejected=dropped)
             else:
