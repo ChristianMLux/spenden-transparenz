@@ -15,9 +15,12 @@ from __future__ import annotations
 
 from datetime import date, datetime
 from decimal import Decimal
-from typing import Any, Literal
+from typing import TYPE_CHECKING, Any, Literal
 
 from pydantic import BaseModel, Field
+
+if TYPE_CHECKING:
+    from core.models import OrgDatum
 
 Verification = Literal[
     "self_reported",
@@ -52,6 +55,26 @@ class Datum(BaseModel):
     note: str | None = Field(default=None, description="present whenever value is null")
     verification: Verification
     gap_reason: GapReason | None = Field(default=None, description="present exactly when value is null")
+
+
+def serialise_datum(row: OrgDatum) -> Datum:
+    """The one place an `org_datum` row becomes a `Datum`. Every field is copied straight across,
+    never conditionally omitted: a gap keeps `value: null, is_gap: true` plus its `note` and
+    `gap_reason`, and a value keeps neither. Nothing else in this codebase may build a `Datum`."""
+    return Datum(
+        value=row.value,
+        is_gap=row.is_gap,
+        value_type=row.value_type,
+        currency=row.currency,
+        fiscal_year=row.fiscal_year,
+        scope=row.scope,
+        source_url=row.source_url,
+        retrieved_at=row.retrieved_at,
+        quote=row.quote,
+        note=row.note,
+        verification=row.verification,
+        gap_reason=row.gap_reason,
+    )
 
 
 class SourceRef(BaseModel):

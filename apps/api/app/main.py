@@ -10,11 +10,17 @@ from __future__ import annotations
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 
-from app.routers import health, stubs
+from app.deps import limiter
+from app.middleware import ETagMiddleware
+from app.routers import admin, disasters, health, meta, orgs, responders, statements
 from core.db import make_engine, make_sessionmaker
 from core.logging import configure_logging, get_logger
 from core.settings import get_settings
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from slowapi import _rate_limit_exceeded_handler
+from slowapi.errors import RateLimitExceeded
+from slowapi.middleware import SlowAPIMiddleware
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
 from starlette.responses import Response
@@ -80,13 +86,25 @@ def create_app(database_url: str | None = None) -> FastAPI:
     )
 
     app.add_middleware(SecurityHeadersMiddleware)
-    # WP-C adds here, in this order: ETagMiddleware, then CORSMiddleware, then the slowapi limiter.
+    # In this order: ETagMiddleware, then CORSMiddleware, then the slowapi limiter. Starlette
+    # wraps outside-in in the order middleware is added, so this is (outermost first) security
+    # headers -> ETag -> CORS -> rate limiting -> routes.
+    app.add_middleware(ETagMiddleware)
+    app.add_middleware(
+        CORSMiddleware,
+        # Exact origins only, never "*": Settings already rejects a wildcard at validation time,
+        # so an empty list here just means no browser origin is allowed yet, not an open CORS
+        # policy. GET/OPTIONS only - this is a read-only API.
+        allow_origins=settings.cors_origins,
+        allow_methods=["GET", "OPTIONS"],
+        allow_headers=["X-Admin-Token"],
+    )
+    app.state.limiter = limiter
+    app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+    app.add_middleware(SlowAPIMiddleware)
 
     app.include_router(health.router)
-    # Phase 0 ships the routes as typed stubs so the web team can generate lib/types.ts and
-    # start building. WP-C replaces app/routers/stubs.py with the six real routers and must
-    # not change a path, a parameter or a field name without telling both leads.
-    for router in stubs.ROUTERS:
+    for router in (disasters.router, responders.router, orgs.router, statements.router, meta.router, admin.router):
         app.include_router(router)
 
     return app
