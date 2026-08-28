@@ -1,0 +1,21 @@
+[project]
+name = "spenden-api"
+version = "0.1.0"
+description = "Read-only public API. One router per file."
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.141,<0.142",
+    "uvicorn[standard]>=0.34",
+    "sqlalchemy[asyncio]>=2.0.36",
+    "asyncpg>=0.30",
+    "psycopg[binary]>=3.2",
+    "alembic>=1.14",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.6",
+    "python-json-logger>=3.1",
+    "slowapi>=0.1.9",
+    "spenden-core",
+]
+
+[tool.uv.sources]
+spenden-core = { workspace = true }

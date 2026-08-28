@@ -1,0 +1,15 @@
+line-length = 120
+target-version = "py313"
+
+# pipeline/probes are frozen research artefacts: reformatting them would make the
+# "unchanged" claim in CLAUDE.md false. alembic/versions is generated code.
+# docs/ is prose: ruff formats python code blocks inside markdown, and illustrative
+# snippets in a spec or a plan must read as written, not as the formatter prefers them.
+exclude = ["pipeline/probes", "apps/api/alembic/versions", "docs", ".venv"]
+
+[lint]
+select = ["E", "F", "I", "B", "UP", "S", "ASYNC", "RUF"]
+
+[lint.per-file-ignores]
+"**/tests/**" = ["S101", "S105", "S106", "S311"]
+"scripts/validate_orgs.py" = ["S404"]
