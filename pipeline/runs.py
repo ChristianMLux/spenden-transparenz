@@ -83,6 +83,26 @@ async def run_context(
         await session.commit()
         run_id = run.id
 
+    async with adopt_run(session_factory, job, run_id) as handle:
+        yield handle
+
+
+@asynccontextmanager
+async def adopt_run(
+    session_factory: async_sessionmaker[AsyncSession],
+    job: str,
+    run_id: uuid.UUID,
+) -> AsyncIterator[RunHandle]:
+    """Report into an ingestion_run row that already exists, and close it whatever happens.
+
+    The queue drainer needs this: a run requested over the admin endpoint is already a row, in
+    status "queued", and the job that eventually executes it has to report into THAT row rather
+    than open a second one beside it. Two rows for one request would make /v1/meta/freshness count
+    a run that never ran, and would leave the queued row unclosed forever.
+
+    Everything after the row exists is identical for both callers, which is why run_context is
+    written in terms of this rather than the other way round.
+    """
     handle = RunHandle(id=run_id)
     log.info("job_started", extra={"job": job, "run_id": str(run_id)})
     error: BaseException | None = None
