@@ -19,6 +19,9 @@ from core.settings import get_settings
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
 from pipeline.db import session_factory
+from pipeline.jobs.districts import resolve_districts
+from pipeline.jobs.extract import extract_statements
+from pipeline.jobs.match import match_orgs
 from pipeline.jobs.orgs import ingest_orgs
 from pipeline.jobs.reliefweb import fetch_report_bodies, ingest_reliefweb_listing
 from pipeline.jobs.seed_reference import seed_reference
@@ -32,6 +35,9 @@ JOBS: dict[str, Job] = {
     "ingest_orgs": ingest_orgs,
     "ingest_reliefweb_listing": ingest_reliefweb_listing,
     "fetch_report_bodies": fetch_report_bodies,
+    "extract_statements": extract_statements,
+    "match_orgs": match_orgs,
+    "resolve_districts": resolve_districts,
 }
 
 
