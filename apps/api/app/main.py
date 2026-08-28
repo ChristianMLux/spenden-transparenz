@@ -10,17 +10,16 @@ from __future__ import annotations
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 
-from app.deps import limiter
+from app.deps import enforce_get_rate_limit, limiter
 from app.middleware import ETagMiddleware
 from app.routers import admin, disasters, health, meta, orgs, responders, statements
 from core.db import make_engine, make_sessionmaker
 from core.logging import configure_logging, get_logger
 from core.settings import get_settings
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
-from slowapi.middleware import SlowAPIMiddleware
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
 from starlette.responses import Response
@@ -101,11 +100,17 @@ def create_app(database_url: str | None = None) -> FastAPI:
     )
     app.state.limiter = limiter
     app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
-    app.add_middleware(SlowAPIMiddleware)
 
+    # No SlowAPIMiddleware. It cannot enforce anything here: it resolves the handler through
+    # `hasattr(route, "endpoint")`, and this FastAPI version wraps an included router in an
+    # _IncludedRouter that matches FULL and has no `endpoint`, so slowapi finds no handler and
+    # treats the request as exempt. Registering it would say "GETs are rate limited" while every
+    # request passed through untouched, which is worse than not registering it. The read limit is
+    # a router dependency (deps.enforce_get_rate_limit); the admin limit is a route decorator,
+    # which is checked inside the endpoint and never needed the middleware.
     app.include_router(health.router)
     for router in (disasters.router, responders.router, orgs.router, statements.router, meta.router, admin.router):
-        app.include_router(router)
+        app.include_router(router, dependencies=[Depends(enforce_get_rate_limit)])
 
     return app
 

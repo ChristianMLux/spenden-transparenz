@@ -16,6 +16,7 @@ from collections.abc import AsyncIterator
 
 from core.settings import get_settings
 from fastapi import Header, HTTPException, Request, Response
+from limits import parse
 from slowapi import Limiter
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -95,7 +96,12 @@ def require_admin_token(x_admin_token: str | None = Header(default=None)) -> Non
     """
     configured = get_settings().admin_token
     expected = configured.get_secret_value() if configured is not None else ""
-    if not secrets.compare_digest(x_admin_token or "", expected) or not expected:
+    # Bytes, not str: secrets.compare_digest raises TypeError on a str holding any non-ASCII
+    # character, and headers arrive decoded as latin-1, so one accented byte in the header turned
+    # this guard into an unhandled 500 - falsifying the "always 401, never a distinct status"
+    # invariant above, in the function protecting the only write route. Encoding cannot fail, and
+    # compare_digest stays constant-time over bytes.
+    if not secrets.compare_digest((x_admin_token or "").encode("utf-8"), expected.encode("utf-8")) or not expected:
         raise HTTPException(status_code=401, detail="invalid admin token", headers={"Cache-Control": NO_STORE})
 
 
@@ -110,16 +116,55 @@ def require_admin_token(x_admin_token: str | None = Header(default=None)) -> Non
 # depend on verifying Railway's exact proxy behaviour. Trusting the first hop instead - the
 # original mistake here - lets a caller get a fresh rate-limit bucket on every request just by
 # sending a different X-Forwarded-For value, defeating the 5/min admin limit entirely.
+#
+# Every line, not the first one. X-Forwarded-For is a list header, and RFC 7230 section 3.2.2
+# makes two header lines exactly equivalent to one comma-joined line - but Starlette's
+# headers.get() returns only the first. Reading the rightmost entry of that line reads the last
+# element of the CALLER's own line, which is the same bypass reached through a header shape the
+# fix above did not consider: send "X-Forwarded-For: 1.1.1.1" as a second line and rotate it.
+# uvicorn's own proxy-headers middleware joins all values before parsing; so does this.
 
 
 def rate_limit_key(request: Request) -> str:
-    forwarded = request.headers.get("x-forwarded-for")
-    if forwarded:
-        return forwarded.split(",")[-1].strip()
+    forwarded = ",".join(request.headers.getlist("x-forwarded-for"))
+    hops = [hop.strip() for hop in forwarded.split(",") if hop.strip()]
+    if hops:
+        return hops[-1]
     return request.client.host if request.client else "unknown"
 
 
-limiter = Limiter(key_func=rate_limit_key)
-
 GET_LIMIT = "60/minute"
 ADMIN_LIMIT = "5/minute"
+
+limiter = Limiter(key_func=rate_limit_key)
+
+# The read limit is a dependency, not the limiter's default_limits, because SlowAPIMiddleware
+# cannot enforce anything in this application. It resolves the handler with
+# `route.matches(scope)` + `hasattr(route, "endpoint")`, and this FastAPI version wraps an
+# included router in an _IncludedRouter object that matches FULL but carries no `endpoint`
+# attribute. slowapi therefore finds no handler, and a request with no handler is treated as
+# EXEMPT - so the middleware was silently passing every request through. The admin limit worked
+# only because a route decorator is checked inside the endpoint, never through the middleware.
+#
+# Measured before this fix: 61 consecutive GETs to /v1/meta/enums, all 200.
+#
+# The check uses the same slowapi Limiter object and therefore the same storage, so
+# `limiter.reset()` still clears it and the admin decorator and this share one view of a caller.
+_GET_RATE = parse(GET_LIMIT)
+
+
+async def enforce_get_rate_limit(request: Request) -> None:
+    """60/minute per caller on the public read routes.
+
+    Applied to the v1 routers at include time rather than route by route: a read route added later
+    inherits the limit by being mounted, instead of by someone remembering a decorator. /health is
+    deliberately outside this - see routers/health.py.
+    """
+    if not limiter.enabled:
+        return
+    if not limiter.limiter.hit(_GET_RATE, "v1-read", rate_limit_key(request)):
+        raise HTTPException(
+            status_code=429,
+            detail="rate limit exceeded",
+            headers={"Retry-After": str(_GET_RATE.get_expiry()), "Cache-Control": NO_STORE},
+        )
