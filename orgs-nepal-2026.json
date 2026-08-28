@@ -1151,7 +1151,8 @@
     "financial_transparency.iati_publisher",
     "financial_transparency.expenditure",
     "financial_transparency.income (nepal_only scope)",
-    "registrations (Nepal-specific registry entries, e.g. NP_SWC, not confirmed)"
+    "registrations (Nepal-specific registry entries, e.g. NP_SWC, not confirmed)",
+    "financial_transparency.program_ratio"
    ],
    "research_notes": "UN agency: hq.country/city (US/New York) reflects UNICEF's global HQ; as a UN body it has no 'legal seat' in the private-org/charity-registry sense, and no Nepal-specific registry entry was confirmed. All direct WebFetch calls to unicef.org (press releases, emergencies page, annual report page) returned HTTP 403 (site blocks automated fetching); the data used here comes from WebSearch result snippets that index those same unicef.org pages plus one third-party (ANI) news wire report, all retrieved 2026-08-28. Given the 6-fetch/search budget for this pilot record, financial figures beyond global 2024 income were not chased further (expenditure figures found were inconsistent/ambiguous and were left null rather than guessed). Flood context: 26 Aug 2026 glacier-collapse flash flood along the Trishuli/Bhote Koshi river system (Rasuwa/Nuwakot/Dhading districts); UNICEF reports 17,000+ children affected. Casualty figures cited in UNICEF's own materials (e.g. ~332 dead) differ slightly from the Wikipedia reference figure (~389 dead) given in the task brief, consistent with a fast-moving, 2-day-old disaster with unsettled official counts.",
    "last_updated": "2026-08-28"
@@ -2657,7 +2658,9 @@
     "financial_transparency.iati_publisher",
     "financial_transparency.income",
     "financial_transparency.expenditure",
-    "current_response"
+    "current_response",
+    "financial_transparency.program_ratio",
+    "names.local_script"
    ],
    "research_notes": "Entity determination: ActionAid Nepal's own About page explicitly self-describes as a national NGO 'member of the ActionAid International Federation' — distinguishing it as a Nepal-based national member, not a branch office. Established 1982, HQ Apsara Marga, Lazimpat, Kathmandu. On this basis org_type=national_ngo and hq.country=NP. NOTE: the site footer attributes copyright to 'Vereniging ActionAid International' (a DUTCH association, RSIN 813342211) — NOT South Africa as the research brief hypothesized. This was judged to be the federation secretariat's shared publishing/holding entity across country sites, not ActionAid Nepal's own registration, so it was not used for this record's hq/registrations — flagged as a correction to the brief. No formal Nepali registration number could be verified (SWC unreachable, no register-quality source found). No coverage of ActionAid activity for the 26 Aug 2026 Trishuli flood was found across ReliefWeb, Nepali press, or the org's own site — current_response is empty.",
    "last_updated": "2026-08-28"
@@ -3178,7 +3181,8 @@
     "financial_transparency.audited_financials",
     "financial_transparency.iati_publisher",
     "financial_transparency.income",
-    "financial_transparency.expenditure"
+    "financial_transparency.expenditure",
+    "financial_transparency.program_ratio"
    ],
    "research_notes": "Entity determination: settled on 'The Lutheran World Federation' — a Swiss Association per the Zewo registry, HQ Le Grand-Saconnex, Geneva. lutheranworld.org and worldservice.lutheranworld.org returned HTTP 403 to every WebFetch attempt (site-wide block against this fetch tool), so several facts rely only on WebSearch snippets or were left null. org_type chosen as 'ingo' over 'alliance' because the entity actually running country programmes and disbursing humanitarian aid (LWF World Service) is functionally classified as an international NGO (e.g. one of UNHCR's largest implementing partners across 24 countries). Because lutheranworld.org itself was unreachable, no dated, quote-verifiable content specific to the 26 Aug 2026 Trishuli flood could be confirmed — current_response left empty rather than guessed from unconfirmed search snippets that appear to conflate earlier flood/earthquake response content. swc.org.np not queried (unreachable).",
    "last_updated": "2026-08-28"
@@ -5289,7 +5293,8 @@
     "financial_transparency.iati_publisher",
     "financial_transparency.income",
     "financial_transparency.expenditure",
-    "financial_transparency.program_ratio"
+    "financial_transparency.program_ratio",
+    "nepal_presence.since_year"
    ],
    "research_notes": "Searched worecnepal.org homepage and the specific Rasuwa flood press release. No annual report/financials/registration numbers were found; the flood-response page is an appeal to other stakeholders plus a general commitment to cooperate, not a record of WOREC's own direct relief activity.",
    "last_updated": "2026-08-28"

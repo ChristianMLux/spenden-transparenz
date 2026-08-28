@@ -1147,7 +1147,8 @@
    "financial_transparency.iati_publisher",
    "financial_transparency.expenditure",
    "financial_transparency.income (nepal_only scope)",
-   "registrations (Nepal-specific registry entries, e.g. NP_SWC, not confirmed)"
+   "registrations (Nepal-specific registry entries, e.g. NP_SWC, not confirmed)",
+   "financial_transparency.program_ratio"
   ],
   "research_notes": "UN agency: hq.country/city (US/New York) reflects UNICEF's global HQ; as a UN body it has no 'legal seat' in the private-org/charity-registry sense, and no Nepal-specific registry entry was confirmed. All direct WebFetch calls to unicef.org (press releases, emergencies page, annual report page) returned HTTP 403 (site blocks automated fetching); the data used here comes from WebSearch result snippets that index those same unicef.org pages plus one third-party (ANI) news wire report, all retrieved 2026-08-28. Given the 6-fetch/search budget for this pilot record, financial figures beyond global 2024 income were not chased further (expenditure figures found were inconsistent/ambiguous and were left null rather than guessed). Flood context: 26 Aug 2026 glacier-collapse flash flood along the Trishuli/Bhote Koshi river system (Rasuwa/Nuwakot/Dhading districts); UNICEF reports 17,000+ children affected. Casualty figures cited in UNICEF's own materials (e.g. ~332 dead) differ slightly from the Wikipedia reference figure (~389 dead) given in the task brief, consistent with a fast-moving, 2-day-old disaster with unsettled official counts.",
   "last_updated": "2026-08-28"
