@@ -244,3 +244,48 @@ Two things came out of it that are worth keeping. The screenshot check that prod
 asserts the response status first. And this is the same hazard WP2 reported after losing
 time to an orphaned `next start` serving stale CSS. Inspect a build directory only when
 nothing is building into it.
+
+---
+
+## Post-v1 follow-ups, logged 2026-08-28
+
+Not defects and not blocking v1. Each is written down here so it survives the session
+rather than living in a chat thread.
+
+**A tighter fold, from WP1's own branch.** WP1 shipped its version of the fold fix in
+parallel with the one that merged, and its result is measurably better: the first article
+sits at y=344 against the merged y=470, because it moved the district links into the rail
+and put the tabs and the result count on one row. Its third article starts at y=807 rather
+than y=981. The merged version is the one the product owner accepted and it is green, so
+it was not churned to chase the difference. Taking the extra ~125px later is a contained
+change to two components: `components/board/board-explorer.tsx` and the tabs and result
+count block. WP1's branch itself must NOT be merged for it: it predates the integration and
+would revert WP2 and WP3.
+
+**The IATI publisher reference is invisible for two organisations.** It shows for the 3
+that carry an IATI row in `registrations`, and not for the 2 that carry it only in
+`financial_transparency.iati_publisher.publisher_ref`. The spec calls IATI the join key
+across datasets, so those two should show it. Small: one conditional row in section 4 or 5,
+guarded so the 3 that already have a registration row do not get it twice.
+
+**Impressum and Datenschutz are placeholders.** Visible ones, with `robots: index: false`,
+no lorem ipsum and no invented address. They stay that way until Chris supplies the
+content, and the `noindex` comes off with it.
+
+**The live API path has never met a real server.** `SPENDEN_API_URL` and the zod-validated
+adapters in `lib/api.ts` are implemented against `apps/api/openapi.json` and tested against
+a mocked fetch. Two gaps are known and marked in comments: the live responders list does
+not carry aliases or the local-script name (only `/v1/orgs/{id}` does), and the org-detail
+`data` map has no array convention for repeated `partners`. Both were raised with the
+backend lead.
+
+**Native HTML Popover API instead of Radix.** Radix Popover is 30.6 KB gz and is currently
+deferred to first interaction rather than removed. The native API would take it to zero and
+brings Escape and light-dismiss with it. It deviates from a spec line that names Radix and
+rewrites a component approved at G0, so it is a spike with a measured number attached, not
+a drive-by change.
+
+**Lighthouse has never run.** Chrome will not launch under chrome-launcher on the
+maintainer's Windows machine, and GitHub Actions is locked for billing, so `lighthouserc`
+has been configured but never executed. The first real Performance, Accessibility, Best
+Practices and SEO numbers will come from the Vercel preview or from CI once it is unlocked.
