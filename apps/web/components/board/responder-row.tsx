@@ -43,16 +43,16 @@ export function ResponderRow({ responder, generatedAt }: { responder: Responder;
       )}
 
       {responder.statements.length > 0 ? (
-        <div className="mt-3 space-y-3">
+        <div className="mt-2 space-y-2">
           {responder.statements.map((statement, i) => (
             <div key={statement.id}>
-              {i > 0 && <hr className="mb-3 border-dashed border-rule" />}
+              {i > 0 && <hr className="mb-2 border-dashed border-rule" />}
               <Statement statement={statement} />
             </div>
           ))}
         </div>
       ) : (
-        <div className="mt-3">
+        <div className="mt-2">
           <p className="max-w-[68ch] text-base text-ink">
             {t("empty.heading", { date: formatDate(generatedAt.slice(0, 10), locale) })}
           </p>
@@ -63,7 +63,7 @@ export function ResponderRow({ responder, generatedAt }: { responder: Responder;
       )}
 
       {responder.org_id && (
-        <p className="mt-3">
+        <p className="mt-2">
           {/* next/link's Link, not @/i18n/navigation's wrapped one: SiteFooter (every
               page's layout) already pays for Link's own runtime and for next-intl's
               pathname-translation chunk, so reusing plain next/link here with a

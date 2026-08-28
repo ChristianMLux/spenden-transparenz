@@ -15,6 +15,8 @@ export interface FilterBarLabels {
   mobileTitle: string;
   mobileClose: string;
   mobileOpen: string; // already formatted, e.g. "Filter (2)"
+  showMore: string; // "{count} mehr" template, see filter-group.tsx
+  showFewer: string;
 }
 
 interface Groups {
@@ -25,11 +27,20 @@ interface Groups {
 }
 
 /**
- * The filter bar. On xl/md it renders as an always-visible column; on base it moves
- * into a sheet opened by a button labelled with the active filter count (DESIGN.md
- * 8.2). Both are the same set of controls, not two independent copies of state: they
- * share the caller's filters object and onChange, so a change made in one place is
- * immediately reflected if the other were visible too.
+ * The filter rail. On md/xl it renders as an always-visible column to the left of the
+ * organisation list (board-explorer.tsx); on base it moves into a sheet opened by a
+ * button labelled with the active filter count (DESIGN.md 8.2, corrected by the lead's
+ * review: a left rail beside the list, not a bar stacked above it, so the rail's own
+ * height never decides where the list starts). Both are the same set of controls, not
+ * two independent copies of state: they share the caller's filters object and
+ * onChange, so a change made in one place is immediately reflected if the other were
+ * visible too.
+ *
+ * A single column throughout: each group shows its first few options with a "mehr"
+ * control for the rest (FilterGroup), which is what keeps a long group like
+ * organisation type (11 options, the full closed taxonomy) from growing the rail past
+ * a reasonable height, without resorting to multi-column text that wraps badly in a
+ * narrow rail.
  *
  * No submit button anywhere here: every control fires onChange immediately (MoJ's own
  * usability finding, cited in DESIGN.md section 2, is why this product does not repeat
@@ -68,15 +79,18 @@ export function FilterBar({
           value={q}
           onChange={(e) => onQChange(e.target.value)}
           placeholder={labels.searchLabel}
-          className="mt-2 min-h-11 w-full border border-rule bg-surface px-3 text-sm text-ink"
+          className="mt-2 min-h-11 w-full border border-rule bg-surface px-3 text-sm text-ink xl:min-h-9"
         />
       </div>
+
       <FilterGroup
         legend={labels.districtLegend}
         options={groups.district}
         selected={selected.district}
         onChange={(next) => onGroupChange("district", next)}
         idPrefix={`${idPrefix}-district`}
+        showMoreLabel={labels.showMore}
+        showFewerLabel={labels.showFewer}
       />
       <FilterGroup
         legend={labels.hqLegend}
@@ -84,6 +98,8 @@ export function FilterBar({
         selected={selected.hq}
         onChange={(next) => onGroupChange("hq", next)}
         idPrefix={`${idPrefix}-hq`}
+        showMoreLabel={labels.showMore}
+        showFewerLabel={labels.showFewer}
       />
       <FilterGroup
         legend={labels.orgTypeLegend}
@@ -91,6 +107,8 @@ export function FilterBar({
         selected={selected.orgType}
         onChange={(next) => onGroupChange("orgType", next)}
         idPrefix={`${idPrefix}-orgtype`}
+        showMoreLabel={labels.showMore}
+        showFewerLabel={labels.showFewer}
       />
       <FilterGroup
         legend={labels.verificationLegend}
@@ -100,7 +118,10 @@ export function FilterBar({
         selected={selected.verification}
         onChange={(next) => onGroupChange("verification", next)}
         idPrefix={`${idPrefix}-verification`}
+        showMoreLabel={labels.showMore}
+        showFewerLabel={labels.showFewer}
       />
+
       {sort}
     </div>
   );
@@ -126,7 +147,7 @@ export function FilterBar({
         </MobileFilterSheet>
       </div>
 
-      {/* md/xl: always visible */}
+      {/* md/xl: always visible, the rail */}
       <div className="hidden md:block" data-testid="filter-bar-desktop">
         {fieldsets("d")}
       </div>

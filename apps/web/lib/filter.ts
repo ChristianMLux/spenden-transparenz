@@ -15,6 +15,15 @@ export interface FilterState {
   q: string;
   sort: "latest" | "name" | "fewest-data";
   tab: "orgs" | "chronological";
+  /**
+   * true = only organisations with at least one statement. false = only organisations
+   * with none ("9 ohne gefundene Reaktion", a genuine filter, not a re-sort — see
+   * filter.test.ts). null = no opinion, the default: nothing is excluded for lacking a
+   * response. The one direction this can never be used for is hiding a no-response
+   * organisation by default; that only happens when a reader explicitly asks for
+   * has_response=true.
+   */
+  has_response: boolean | null;
 }
 
 export const EMPTY: FilterState = {
@@ -25,6 +34,7 @@ export const EMPTY: FilterState = {
   q: "",
   sort: "latest",
   tab: "orgs",
+  has_response: null,
 };
 
 const fold = (s: string) =>
@@ -52,6 +62,7 @@ export function parseFilters(sp: URLSearchParams): FilterState {
   };
   const sort = sp.get("sort");
   const tab = sp.get("tab");
+  const hasResponse = sp.get("hasResponse");
   return {
     districts: list("districts"),
     hq: list("hq") as FilterState["hq"],
@@ -60,6 +71,7 @@ export function parseFilters(sp: URLSearchParams): FilterState {
     q: sp.get("q") ?? "",
     sort: (SORTS as readonly string[]).includes(sort ?? "") ? (sort as FilterState["sort"]) : "latest",
     tab: (TABS as readonly string[]).includes(tab ?? "") ? (tab as FilterState["tab"]) : "orgs",
+    has_response: hasResponse === "true" ? true : hasResponse === "false" ? false : null,
   };
 }
 
@@ -72,6 +84,7 @@ export function serializeFilters(f: FilterState): URLSearchParams {
   if (f.q) sp.set("q", f.q);
   if (f.sort !== "latest") sp.set("sort", f.sort);
   if (f.tab !== "orgs") sp.set("tab", f.tab);
+  if (f.has_response !== null) sp.set("hasResponse", String(f.has_response));
   return sp;
 }
 
@@ -108,6 +121,14 @@ export function applyFilters(responders: Responder[], f: FilterState): Responder
   const q = f.q.trim() ? fold(f.q) : "";
 
   let result = responders.filter((r) => {
+    // The one filter allowed to speak about absence itself, rather than about a
+    // statement's content. Explicit and opt-in only: EMPTY.has_response is null, so
+    // this branch does nothing unless a reader actively asked for it (the "9 ohne
+    // gefundene Reaktion" number line link, or the equivalent checkbox). It can show
+    // only-no-response, but nothing here can make it hide a no-response organisation
+    // by default — see filter.test.ts.
+    if (f.has_response === true && r.statements.length === 0) return false;
+    if (f.has_response === false && r.statements.length > 0) return false;
     if (hq.size > 0 && !responderMatchesHq(r, hq)) return false;
     if (orgTypes.size > 0 && !orgTypes.has(r.org_type)) return false;
     if (q && !r.search_key.includes(q)) return false;

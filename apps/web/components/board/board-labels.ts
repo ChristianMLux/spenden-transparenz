@@ -41,11 +41,21 @@ export interface BoardLabels {
     mobileTitle: string;
     searchChipPrefix: string;
     removeSearchLabel: string;
+    /** Template containing "{count}", e.g. "{count} mehr" / "{count} more". */
+    showMore: string;
+    showFewer: string;
+    /** Chip text for an active has_response: true filter (has_response: false reuses
+     * numberLine.noResponse, since it is the exact same destination). */
+    hasResponseTrueChip: string;
+    removeHasResponse: string;
   };
   /** Facet key (district code, "local"/"international", an OrgType, a Verification) to
    * its display word. One flat map: the four key namespaces never collide. */
   optionLabel: Record<string, string>;
   /** Facet key to the full localised "remove this filter" sentence. */
   removeChipLabel: Record<string, string>;
-  locatorCaption: string;
+  /** Heading over the sourced list of affected districts + counts that replaced the
+   * fabricated locator SVG (review defect 2: there is no district-polygon data
+   * anywhere in this repo, so a "Nepal outline" could only ever have been invented). */
+  districtSummaryHeading: string;
 }

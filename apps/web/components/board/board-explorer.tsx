@@ -14,11 +14,11 @@ import type { BoardData, Responder } from "@/lib/types";
 import type { BoardLabels } from "./board-labels";
 import { BoardTabs } from "./board-tabs";
 import { dayKeyOf } from "./chronological";
+import { DistrictSummary } from "./district-summary";
 import type { Chip } from "./filter-chips";
 import { FilterChips } from "./filter-chips";
 import type { FilterOption } from "./filter-group";
 import { FilterBar } from "./filter-bar";
-import { Locator } from "./locator";
 import { ResultCount } from "./result-count";
 import { SortSelect } from "./sort-select";
 
@@ -37,13 +37,14 @@ function readFiltersFromLocation(): FilterState {
  *                             every evidenced statement, so no other filter is needed
  *  - district count        -> tab A, every named district selected (the complement of
  *                             "no location stated"), showing exactly the responders
- *                             that have a stated place
- *  - orgs without response -> tab A, sorted "fewest data first", which surfaces those
- *                             organisations at the very top rather than filtering the
- *                             rest away (there is no FilterState field for "has no
- *                             statement": inventing a hidden one would let a filter
- *                             silently remove the very organisations this product
- *                             insists on always showing)
+ *                             that have a stated place. The individual district names
+ *                             next to the number line link to the same destinations,
+ *                             one district at a time (district-summary.tsx).
+ *  - orgs without response -> tab A, has_response: false. A real filter, not a
+ *                             re-sort: a reader who clicks "9 ohne gefundene Reaktion"
+ *                             gets nine rows, not forty-four reordered. See
+ *                             lib/filter.ts on why this can only ever narrow to
+ *                             no-response organisations and never hide one.
  */
 function numberLineTargets(board: BoardData): Record<"orgs" | "statements" | "districts" | "noResponse", FilterState> {
   const realDistricts = board.facets.districts.filter((f) => f.key !== "none").map((f) => f.key);
@@ -51,7 +52,7 @@ function numberLineTargets(board: BoardData): Record<"orgs" | "statements" | "di
     orgs: { ...EMPTY },
     statements: { ...EMPTY, tab: "chronological" },
     districts: { ...EMPTY, districts: realDistricts },
-    noResponse: { ...EMPTY, sort: "fewest-data" },
+    noResponse: { ...EMPTY, has_response: false },
   };
 }
 
@@ -109,6 +110,17 @@ export function BoardExplorer({
 
   const targets = useMemo(() => numberLineTargets(board), [board]);
 
+  // The static (unfiltered) district counts, for DistrictSummary. "none" ("no location
+  // stated") is not a place, so it is excluded here the same way it was excluded from
+  // the old locator's marks.
+  const realDistricts = useMemo(
+    () =>
+      board.facets.districts
+        .filter((f) => f.key !== "none")
+        .map((f) => ({ code: f.key, name: f.label_key, count: f.count })),
+    [board.facets.districts],
+  );
+
   const activeFilterCount =
     filters.districts.length +
     filters.hq.length +
@@ -152,6 +164,12 @@ export function BoardExplorer({
   };
 
   const chips: Chip[] = [
+    ...(filters.has_response === false
+      ? [{ key: "has_response", label: labels.numberLine.noResponse, removeLabel: labels.filters.removeHasResponse }]
+      : []),
+    ...(filters.has_response === true
+      ? [{ key: "has_response", label: labels.filters.hasResponseTrueChip, removeLabel: labels.filters.removeHasResponse }]
+      : []),
     ...filters.districts.map((key) => ({
       key: `districts:${key}`,
       label: labels.optionLabel[key] ?? key,
@@ -180,6 +198,7 @@ export function BoardExplorer({
   const removeChip = (chipKey: string) => {
     const [group, value] = chipKey.split(":", 2);
     if (group === "q") setFilters({ ...filters, q: "" });
+    else if (group === "has_response") setFilters({ ...filters, has_response: null });
     else if (group === "districts") setFilters({ ...filters, districts: filters.districts.filter((v) => v !== value) });
     else if (group === "hq") setFilters({ ...filters, hq: filters.hq.filter((v) => v !== value) as FilterState["hq"] });
     else if (group === "orgTypes") setFilters({ ...filters, orgTypes: filters.orgTypes.filter((v) => v !== value) });
@@ -233,85 +252,115 @@ export function BoardExplorer({
         </a>
       </p>
 
-      <div className="mt-6 grid gap-6 xl:grid-cols-[180px_1fr]">
+      <hr className="mt-2 border-rule" />
+
+      {/* A left facet rail beside the list, not a filter bar stacked above it: the
+          list's vertical position is then set only by the header content above (the
+          number line and data-stand), never by how tall the rail's own content
+          happens to be. That is what keeps the first organisation rows above the fold
+          regardless of how many filter options there are, or how long the district
+          list is (review defect 1). The district links sit at the top of the rail
+          rather than above it for the same reason: still the first thing in the
+          "header area" a reader reaches, but no longer part of the height the list's
+          position depends on. Below md the rest of the rail becomes the
+          button-triggered bottom sheet; the district links stay outside it, visible
+          on every width, since they are not filter controls the sheet needs to hold. */}
+      <div className="mt-2 md:grid md:grid-cols-[240px_1fr] md:items-start md:gap-x-8 xl:grid-cols-[260px_1fr]">
         <div>
-          <Locator />
-          <p className="mt-2 max-w-[40ch] text-xs text-muted">{labels.locatorCaption}</p>
+          <DistrictSummary
+            heading={labels.districtSummaryHeading}
+            districts={realDistricts}
+            hrefFor={(code) => `?${serializeFilters({ ...EMPTY, districts: [code] }).toString()}`}
+            onSelect={(code) => setFilters({ ...EMPTY, districts: [code] })}
+          />
+          <div className="mt-4">
+            <FilterBar
+            groups={groups}
+            selected={selected}
+            onGroupChange={onGroupChange}
+            q={filters.q}
+            onQChange={(next) => setFilters({ ...filters, q: next })}
+            sort={
+              filters.tab === "orgs" ? (
+                <SortSelect
+                  id="board-sort"
+                  label={labels.filters.sortLabel}
+                  value={filters.sort}
+                  onChange={(next) => setFilters({ ...filters, sort: next })}
+                  latestLabel={labels.filters.sortLatest}
+                  nameLabel={labels.filters.sortName}
+                  fewestDataLabel={labels.filters.sortFewestData}
+                />
+              ) : null
+            }
+            labels={{
+              hint: labels.filters.hint,
+              districtLegend: labels.filters.districtLegend,
+              hqLegend: labels.filters.hqLegend,
+              orgTypeLegend: labels.filters.orgTypeLegend,
+              verificationLegend: labels.filters.verificationLegend,
+              searchLegend: labels.filters.searchLegend,
+              searchLabel: labels.filters.searchLabel,
+              mobileTitle: labels.filters.mobileTitle,
+              mobileClose: labels.filters.mobileClose,
+              mobileOpen:
+                labels.filters.mobileOpenLabels[activeFilterCount] ?? labels.filters.mobileOpenLabels[0] ?? "",
+              showMore: labels.filters.showMore,
+              showFewer: labels.filters.showFewer,
+            }}
+            mobileOpen={mobileOpen}
+            onMobileOpenChange={setMobileOpen}
+          />
+          </div>
         </div>
 
-        <FilterBar
-          groups={groups}
-          selected={selected}
-          onGroupChange={onGroupChange}
-          q={filters.q}
-          onQChange={(next) => setFilters({ ...filters, q: next })}
-          sort={
-            filters.tab === "orgs" ? (
-              <SortSelect
-                id="board-sort"
-                label={labels.filters.sortLabel}
-                value={filters.sort}
-                onChange={(next) => setFilters({ ...filters, sort: next })}
-                latestLabel={labels.filters.sortLatest}
-                nameLabel={labels.filters.sortName}
-                fewestDataLabel={labels.filters.sortFewestData}
-              />
-            ) : null
-          }
-          labels={{
-            hint: labels.filters.hint,
-            districtLegend: labels.filters.districtLegend,
-            hqLegend: labels.filters.hqLegend,
-            orgTypeLegend: labels.filters.orgTypeLegend,
-            verificationLegend: labels.filters.verificationLegend,
-            searchLegend: labels.filters.searchLegend,
-            searchLabel: labels.filters.searchLabel,
-            mobileTitle: labels.filters.mobileTitle,
-            mobileClose: labels.filters.mobileClose,
-            mobileOpen:
-              labels.filters.mobileOpenLabels[activeFilterCount] ?? labels.filters.mobileOpenLabels[0] ?? "",
-          }}
-          mobileOpen={mobileOpen}
-          onMobileOpenChange={setMobileOpen}
-        />
-      </div>
-
-      <hr className="my-6 border-rule" />
-
-      <BoardTabs
-        active={filters.tab}
-        onChange={(next) => setFilters({ ...filters, tab: next })}
-        orgsLabel={labels.tabs.orgs}
-        chronologicalLabel={labels.tabs.chronological}
-      />
-
-      <div className="mt-4 space-y-2">
-        <FilterChips
-          heading={labels.filters.selectedHeading}
-          clearAllLabel={labels.filters.clearAll}
-          chips={chips}
-          onRemove={removeChip}
-          onClearAll={() => setFilters({ ...EMPTY, tab: filters.tab })}
-        />
-        <ResultCount text={resultCountText} />
-      </div>
-
-      <div className="mt-6">
-        {filters.tab === "orgs" ? (
-          <div>
-            {filteredResponders.map((r) => (
-              <div key={rowKey(r)} className="border-b border-rule py-6 first:pt-0 last:border-b-0">
-                {rowNodes[rowKey(r)]}
-              </div>
-            ))}
+        <div className="mt-4 md:mt-0">
+          {/* Tabs and the result count share one row: at rest (no active filter) this
+              is the only place that combining them saves height, since FilterChips
+              renders nothing when there is nothing to show. */}
+          <div className="flex flex-wrap items-center justify-between gap-x-4 border-b border-rule">
+            <BoardTabs
+              active={filters.tab}
+              onChange={(next) => setFilters({ ...filters, tab: next })}
+              orgsLabel={labels.tabs.orgs}
+              chronologicalLabel={labels.tabs.chronological}
+            />
+            <ResultCount text={resultCountText} />
           </div>
-        ) : (
-          <ChronologicalList
-            statements={flattenStatements(filteredResponders)}
-            chronoNodes={chronoNodes}
-            dayLabels={dayLabels}
-          />
-        )}
+
+          {/* No wrapper margin when there is nothing to show: FilterChips renders
+              null with zero chips, and an empty margin-only div would still have
+              added back the height combining tabs and the result count just saved. */}
+          {chips.length > 0 && (
+            <div className="mt-2">
+              <FilterChips
+                heading={labels.filters.selectedHeading}
+                clearAllLabel={labels.filters.clearAll}
+                chips={chips}
+                onRemove={removeChip}
+                onClearAll={() => setFilters({ ...EMPTY, tab: filters.tab })}
+              />
+            </div>
+          )}
+
+          <div className="mt-2">
+            {filters.tab === "orgs" ? (
+              <div>
+                {filteredResponders.map((r) => (
+                  <div key={rowKey(r)} className="border-b border-rule py-2 first:pt-0 last:border-b-0">
+                    {rowNodes[rowKey(r)]}
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <ChronologicalList
+                statements={flattenStatements(filteredResponders)}
+                chronoNodes={chronoNodes}
+                dayLabels={dayLabels}
+              />
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -337,11 +386,11 @@ function ChronologicalList({
   return (
     <div>
       {groups.map((g) => (
-        <div key={g.key} className="border-b border-rule py-6 first:pt-0 last:border-b-0">
+        <div key={g.key} className="border-b border-rule py-4 first:pt-0 last:border-b-0">
           <h3 className="text-lg">{dayLabels[g.key] ?? g.key}</h3>
-          <div className="mt-3">
+          <div className="mt-2">
             {g.items.map((s) => (
-              <div key={s.id} className="border-t border-dashed border-rule pt-3 mt-3 first:mt-0 first:border-t-0 first:pt-0">
+              <div key={s.id} className="border-t border-dashed border-rule pt-2 mt-2 first:mt-0 first:border-t-0 first:pt-0">
                 {chronoNodes[s.id]}
               </div>
             ))}

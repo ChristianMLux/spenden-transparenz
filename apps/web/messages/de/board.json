@@ -34,7 +34,11 @@
     "removeChip": "{label} entfernen",
     "mobileOpen": "Filter ({count})",
     "mobileClose": "Filter schließen",
-    "mobileTitle": "Filter"
+    "mobileTitle": "Filter",
+    "showMore": "{count} mehr",
+    "showFewer": "Weniger anzeigen",
+    "hasResponseTrueChip": "Hat Reaktion",
+    "removeHasResponse": "Filter nach Reaktion entfernen"
   },
   "empty": {
     "heading": "Keine öffentliche Reaktionsmeldung gefunden (Stand {date}).",
@@ -42,8 +46,8 @@
     "searchedText": "ReliefWeb-Meldungen zur Flut, die eigene Website und nepalesische Presse."
   },
   "viewOrg": "Alle Angaben zu dieser Organisation ansehen",
-  "locator": {
-    "caption": "Schematischer Umriss, kein Nachweis vollständiger Abdeckung. Getönt sind die Distrikte, denen mindestens eine Aussage zugeordnet werden konnte."
+  "districtSummary": {
+    "heading": "Distrikte mit einer Aussage"
   },
   "chronological": {
     "reportedBy": "gemeldet von",

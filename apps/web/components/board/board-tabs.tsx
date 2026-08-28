@@ -20,7 +20,7 @@ export function BoardTabs({
     { key: "chronological", label: chronologicalLabel },
   ];
   return (
-    <div role="tablist" className="flex gap-6 border-b border-rule">
+    <div role="tablist" className="flex gap-6">
       {tabs.map((t) => (
         <button
           key={t.key}
@@ -28,7 +28,7 @@ export function BoardTabs({
           role="tab"
           aria-selected={active === t.key}
           onClick={() => onChange(t.key)}
-          className={`min-h-11 border-b-2 px-1 text-sm ${
+          className={`min-h-11 border-b-2 px-1 text-sm xl:min-h-9 ${
             active === t.key ? "border-accent text-ink" : "border-transparent text-muted"
           }`}
         >

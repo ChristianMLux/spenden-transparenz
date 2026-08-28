@@ -104,10 +104,14 @@ export default async function BoardPage() {
       mobileTitle: t("filters.mobileTitle"),
       searchChipPrefix: t("filters.search.chipPrefix"),
       removeSearchLabel: t("filters.removeSearch"),
+      showMore: t("filters.showMore"),
+      showFewer: t("filters.showFewer"),
+      hasResponseTrueChip: t("filters.hasResponseTrueChip"),
+      removeHasResponse: t("filters.removeHasResponse"),
     },
     optionLabel,
     removeChipLabel,
-    locatorCaption: t("locator.caption"),
+    districtSummaryHeading: t("districtSummary.heading"),
   };
 
   // ---------------------------------------------------------------------
@@ -129,11 +133,11 @@ export default async function BoardPage() {
       <h1 className="text-2xl">{crisisName}</h1>
       <p className="mt-1 font-mono text-xs text-muted">{board.crisis.glide_id}</p>
 
-      <p className="mt-4 max-w-[68ch] text-base text-ink">
+      <p className="mt-2 max-w-[68ch] text-base text-ink">
         {t("scopeLine1")} {t("scopeLine2")}
       </p>
 
-      <div className="mt-6">
+      <div className="mt-2">
         <BoardExplorer
           board={board}
           rowNodes={rowNodes}

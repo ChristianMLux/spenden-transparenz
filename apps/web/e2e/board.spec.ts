@@ -4,7 +4,7 @@ import { expect, test } from "@playwright/test";
 const BOARD = { de: "/de/krise/nepal-flut-2026", en: "/en/crisis/nepal-flut-2026" };
 
 test.describe("number line", () => {
-  test('"without a found response" applies a filter that surfaces those organisations, never hides the rest', async ({
+  test('"without a found response" filters to exactly those organisations, never hides one for lacking a response', async ({
     page,
   }) => {
     await page.goto(BOARD.de);
@@ -12,21 +12,37 @@ test.describe("number line", () => {
 
     const resultCount = page.locator('[aria-live="polite"]').first();
 
-    // The rule this product cannot break: an organisation with no statement is a
-    // permanent row, never a filtered-out one. "9 ohne gefundene Reaktion" therefore
-    // does not shrink the result count (it stays 44 of 44); it sorts those 9 to the
-    // top, which is a distinct, meaningful FilterState (sort=fewest-data) that this
-    // link applies.
+    // A reader who clicks a count of nine expects nine rows, not forty-four reordered
+    // (lead review, corrected spec): has_response=false is a real filter.
     const numberLine = page.getByRole("link", { name: /Organisationen|belegte Meldung|Distrikt|ohne gefundene Reaktion/ });
     const noResponseLink = numberLine.filter({ hasText: "ohne gefundene Reaktion" }).first();
-    await expect(noResponseLink).toHaveAttribute("href", /sort=fewest-data/);
+    await expect(noResponseLink).toHaveAttribute("href", /hasResponse=false/);
     await noResponseLink.click();
 
-    await expect(page).toHaveURL(/sort=fewest-data/);
+    await expect(page).toHaveURL(/hasResponse=false/);
+    await expect(resultCount).toHaveText(/9 von 44 Organisation/);
+    const articles = page.locator("article");
+    await expect(articles).toHaveCount(9);
+    for (const article of await articles.all()) {
+      await expect(article.getByText("Keine öffentliche Reaktionsmeldung gefunden")).toBeVisible();
+    }
+
+    // The direction that must never be possible: this filter can narrow to
+    // no-response organisations, but nothing can use it to hide one. Clearing it
+    // (the chip's remove button) restores all 44, none silently dropped.
+    await page.getByRole("button", { name: /entfernen/i }).first().click();
     await expect(resultCount).toHaveText(/44 von 44 Organisation/);
-    // Sorted to the very top, not merely present somewhere on the page.
-    const firstArticle = page.locator("article").first();
-    await expect(firstArticle.getByText("Keine öffentliche Reaktionsmeldung gefunden")).toBeVisible();
+  });
+
+  test("each district name next to the number line links to its own single-district filter", async ({ page }) => {
+    await page.goto(BOARD.de);
+    await page.waitForLoadState("networkidle");
+
+    const rasuwaLink = page.getByRole("link", { name: "Rasuwa" });
+    await expect(rasuwaLink).toHaveAttribute("href", /districts=NP0329/);
+    await rasuwaLink.click();
+    await expect(page).toHaveURL(/districts=NP0329/);
+    await expect(page.locator('[aria-live="polite"]').first()).not.toHaveText(/44 von 44 Organisation/);
   });
 
   test("the statements number switches to the chronological tab", async ({ page }) => {
@@ -158,4 +174,26 @@ test.describe("screenshots", () => {
       });
     });
   }
+});
+
+test.describe("fold", () => {
+  // Review acceptance: at 1280x900, at least the first three organisation articles
+  // must be visible without scrolling. fullPage screenshots (above) cannot prove this;
+  // only a non-fullPage capture at the exact viewport size can, which is why the first
+  // attempt at this fix went unnoticed.
+  test("at least three organisation articles are visible at 1280x900 without scrolling", async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 900 });
+    await page.goto(BOARD.de);
+    await page.waitForLoadState("networkidle");
+    await page.screenshot({ path: ".screenshots/board-de-fold-1280x900.png", fullPage: false });
+
+    const articles = page.locator("article");
+    const count = await articles.count();
+    let fullyVisible = 0;
+    for (let i = 0; i < count; i++) {
+      const box = await articles.nth(i).boundingBox();
+      if (box && box.y >= 0 && box.y + box.height <= 900) fullyVisible++;
+    }
+    expect(fullyVisible).toBeGreaterThanOrEqual(3);
+  });
 });

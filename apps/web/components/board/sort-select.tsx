@@ -26,7 +26,7 @@ export function SortSelect({
   fewestDataLabel: string;
 }) {
   return (
-    <div className="flex min-h-11 items-center gap-2">
+    <div className="flex min-h-11 items-center gap-2 xl:min-h-9">
       <label htmlFor={id} className="text-sm text-ink">
         {label}
       </label>
@@ -34,7 +34,7 @@ export function SortSelect({
         id={id}
         value={value}
         onChange={(e) => onChange(e.target.value as FilterState["sort"])}
-        className="min-h-11 border border-rule bg-surface px-2 text-sm text-ink"
+        className="min-h-11 border border-rule bg-surface px-2 text-sm text-ink xl:min-h-9"
       >
         <option value="latest">{latestLabel}</option>
         <option value="name">{nameLabel}</option>

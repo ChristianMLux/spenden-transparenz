@@ -41,6 +41,28 @@ describe("applyFilters", () => {
     );
   });
 
+  it("EMPTY never hides an organisation for lacking a response (has_response defaults to null)", () => {
+    expect(EMPTY.has_response).toBeNull();
+    expect(applyFilters(all, EMPTY).some((r) => r.statements.length === 0)).toBe(true);
+  });
+
+  it("has_response=false shows only organisations with no statement, not a reordering", () => {
+    const r = applyFilters(all, { ...EMPTY, has_response: false });
+    expect(r.length).toBe(9);
+    expect(r.every((x) => x.statements.length === 0)).toBe(true);
+  });
+
+  it("has_response=true shows only organisations with at least one statement", () => {
+    const r = applyFilters(all, { ...EMPTY, has_response: true });
+    expect(r.length).toBe(35);
+    expect(r.every((x) => x.statements.length > 0)).toBe(true);
+  });
+
+  it("has_response combines with other filters (AND)", () => {
+    const r = applyFilters(all, { ...EMPTY, has_response: false, hq: ["local"] });
+    expect(r.every((x) => x.statements.length === 0 && x.is_local)).toBe(true);
+  });
+
   it("searches name and aliases, diacritics folded", () => {
     expect(applyFilters(all, { ...EMPTY, q: "nrcs" }).map((r) => r.org_id)).toContain(
       "nepal-red-cross-society",
@@ -57,6 +79,12 @@ describe("applyFilters", () => {
   it("round-trips through search params", () => {
     const f: FilterState = { ...EMPTY, districts: ["NP0329"], hq: ["local"], q: "red cross" };
     expect(parseFilters(serializeFilters(f))).toEqual(f);
+  });
+
+  it("round-trips has_response through search params, true and false distinctly from absent", () => {
+    expect(parseFilters(serializeFilters({ ...EMPTY, has_response: false })).has_response).toBe(false);
+    expect(parseFilters(serializeFilters({ ...EMPTY, has_response: true })).has_response).toBe(true);
+    expect(parseFilters(serializeFilters(EMPTY)).has_response).toBeNull();
   });
 
   it("sorts latest first by default, most recent statement wins", () => {

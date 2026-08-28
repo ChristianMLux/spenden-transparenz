@@ -34,7 +34,11 @@
     "removeChip": "Remove {label}",
     "mobileOpen": "Filter ({count})",
     "mobileClose": "Close filters",
-    "mobileTitle": "Filter"
+    "mobileTitle": "Filter",
+    "showMore": "{count} more",
+    "showFewer": "Show fewer",
+    "hasResponseTrueChip": "Has a response",
+    "removeHasResponse": "Remove response filter"
   },
   "empty": {
     "heading": "No public response report found (as of {date}).",
@@ -42,8 +46,8 @@
     "searchedText": "ReliefWeb reports on the flood, the organisation's own website, and Nepalese press."
   },
   "viewOrg": "View all information on this organisation",
-  "locator": {
-    "caption": "A schematic outline, not proof of complete coverage. Tinted are the districts to which at least one statement could be assigned."
+  "districtSummary": {
+    "heading": "Districts with a statement"
   },
   "chronological": {
     "reportedBy": "reported by",
