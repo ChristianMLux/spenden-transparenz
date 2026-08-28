@@ -22,6 +22,24 @@ styled weaker than a found value.
 npm run dev            development server
 npm run build          production build
 npm start              serve the production build
+npm run verify         the whole gate in one command (see below)
+```
+
+`npm run verify` runs, in order:
+
+```
 npx tsc --noEmit       type check
 npm run lint           eslint
+npm run contrast       token contrast, both themes, and the mark-parity rule
+npm run test:unit      vitest
+npm run build          next build
+npm run check:bundle   first-load JS budget per prerendered page
+npm run test:e2e       playwright: axe, screenshots, zero third-party requests
 ```
+
+`npm run test:lighthouse` is separate because Chrome will not launch under
+chrome-launcher on Windows. It runs in CI.
+
+Data comes from the repository root and is copied into `apps/web/data` by
+`scripts/sync-data.mjs`, which runs automatically before `build` and before the unit
+tests. Those copies are gitignored; the files at the root stay the single source.
