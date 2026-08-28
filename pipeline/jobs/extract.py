@@ -267,15 +267,28 @@ async def extract_statements(
             )
 
             rows = []
+            dropped = 0
             for claim in result.claims:
                 status, gated_claim = gate(claim, report.body_text or "")
                 row = _build_row(report, gated_claim, status, handle.id, settings.llm_model)
-                if row is not None:
-                    rows.append(row)
+                if row is None:
+                    # _build_row's own guard, not gate()'s: a claim missing quote, org_name_raw or
+                    # activity never becomes a row at all, so without counting it here it is
+                    # invisible to the rejection rate - a model that starts omitting required
+                    # fields would look identical to a model producing nothing but clean claims.
+                    dropped += 1
+                    log.info(
+                        "extract_statements_claim_dropped",
+                        extra={"report_id": report.id, "reason": "missing quote, org_name_raw or activity"},
+                    )
+                    continue
+                rows.append(row)
 
             if rows:
                 written, skipped, rejected = await _upsert_statements(session, rows)
-                handle.count(written=written, skipped=skipped, rejected=rejected)
+                handle.count(written=written, skipped=skipped, rejected=rejected + dropped)
                 await session.commit()
+            elif dropped:
+                handle.count(rejected=dropped)
             else:
                 handle.count(skipped=1)

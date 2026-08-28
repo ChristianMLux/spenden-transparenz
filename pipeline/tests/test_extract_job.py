@@ -189,6 +189,30 @@ async def test_extract_statements_writes_a_rejected_row_for_a_hallucinated_quote
     assert rows[0].status == "rejected_unverbatim"
 
 
+async def test_a_claim_missing_a_required_field_is_dropped_and_counted_as_rejected(
+    job_sessionmaker, session, monkeypatch
+):
+    """A claim with an otherwise-verbatim quote but no organisation name never becomes a row (there
+    is nothing to display), but it must still be visible in the run's rejected count and in the
+    logs - otherwise a model that starts omitting required fields looks identical to one producing
+    only clean claims, and the reported rejection rate stops meaning anything."""
+    body = "IFRC released emergency funding for the response."
+    async with job_sessionmaker() as write:
+        await _make_report(write, url="https://example.org/1", body=body)
+
+    malformed = _claim(quote=body, org_name_raw="")
+    stub = _StubExtract([ExtractionResult(claims=[malformed], cost_usd=Decimal("0.001"))])
+    monkeypatch.setattr(llm_client, "extract", stub)
+
+    await extract_statements(job_sessionmaker)
+
+    rows = (await session.execute(select(ResponseStatement))).scalars().all()
+    assert rows == []
+
+    run = await _latest_run(session)
+    assert run.rows_rejected == 1
+
+
 async def test_extraction_attempts_is_incremented_before_the_call_not_after(job_sessionmaker, session, monkeypatch):
     """A crash mid-call must still leave the attempt counted, or a permanently-failing report
     would be retried forever."""

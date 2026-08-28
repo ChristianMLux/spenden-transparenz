@@ -125,6 +125,29 @@ def test_gate_rejects_a_hallucinated_quote():
     assert status == "rejected_unverbatim"
 
 
+def test_gate_rejects_an_empty_quote():
+    """str.find("") is 0 for any body, so an empty quote would otherwise read as verbatim at
+    offset 0 - a claim with no evidence at all passing as the most-verified kind of claim there is.
+    This is precisely the case the gate exists to catch: not a fabricated quote, but no quote."""
+    status, _claim = gate({"quote": ""}, "Any body text here.")
+    assert status == "rejected_unverbatim"
+
+
+def test_gate_rejects_a_none_quote():
+    status, _claim = gate({"quote": None}, "Any body text here.")
+    assert status == "rejected_unverbatim"
+
+
+def test_gate_rejects_a_whitespace_only_quote():
+    status, _claim = gate({"quote": "   "}, "Any body text here.")
+    assert status == "rejected_unverbatim"
+
+
+def test_gate_rejects_a_claim_with_no_quote_key_at_all():
+    status, _claim = gate({}, "Any body text here.")
+    assert status == "rejected_unverbatim"
+
+
 def test_gate_drops_an_amount_the_quote_does_not_contain():
     status, claim = gate(
         {"quote": "released emergency funding", "amount": Decimal("1000000"), "currency": "CHF"},

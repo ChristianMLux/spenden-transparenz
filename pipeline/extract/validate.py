@@ -137,17 +137,23 @@ def amount_is_supported(amount: Decimal | None, quote: str) -> bool:
 def gate(claim: dict[str, Any], body: str) -> tuple[Literal["auto", "rejected_unverbatim"], dict[str, Any]]:
     """The verbatim gate. Every extracted claim passes through this before it may become a row.
 
-    Rejects a claim whose quote is not a real, at-most-40-word substring of the report body. An
-    accepted claim gets its quote_offset filled in; if its amount is not supported by a digit
-    token inside the quote, the amount and currency are dropped to None and the reason is recorded
-    in the note - an invented number is worse than a missing one. amount_basis is never touched
-    here: it was set once, by the model reading the activity sentence, and nothing in this function
-    reads a note to decide it.
+    Rejects a claim whose quote is missing, empty, whitespace-only, or not a real, at-most-40-word
+    substring of the report body. An accepted claim gets its quote_offset filled in; if its amount
+    is not supported by a digit token inside the quote, the amount and currency are dropped to None
+    and the reason is recorded in the note - an invented number is worse than a missing one.
+    amount_basis is never touched here: it was set once, by the model reading the activity
+    sentence, and nothing in this function reads a note to decide it.
+
+    An empty quote is rejected explicitly rather than falling through to the substring check:
+    str.find("") returns 0 for any body, so without this check a claim with no evidence at all
+    would read as verbatim at offset 0 - the single most misleading result this function could
+    produce, since "no quote" would look identical to "the best-supported quote possible".
     """
     result = dict(claim)
     quote = result.get("quote") or ""
 
-    if word_count(quote) > MAX_QUOTE_WORDS:
+    words = word_count(quote)
+    if words == 0 or words > MAX_QUOTE_WORDS:
         return "rejected_unverbatim", result
 
     offset = quote_offset(quote, body)
