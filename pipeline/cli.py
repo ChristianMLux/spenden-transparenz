@@ -49,7 +49,7 @@ def main(argv: list[str] | None = None) -> int:
     configure_logging(
         level=settings.log_level,
         service="pipeline",
-        secrets=[s.get_secret_value() for s in (settings.admin_token, settings.anthropic_api_key) if s is not None],
+        secrets=[s.get_secret_value() for s in (settings.admin_token, settings.openrouter_api_key) if s is not None],
     )
 
     if args.command == "list":

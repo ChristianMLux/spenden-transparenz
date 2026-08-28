@@ -30,6 +30,7 @@ GapReason = Literal["not_searched", "searched_not_found", "source_unreachable", 
 ValueType = Literal["string", "integer", "number", "boolean", "money", "date"]
 MoneyScope = Literal["global", "nepal_only", "unknown"]
 DistrictResolution = Literal["stated", "inherited_from_report"]
+AmountBasis = Literal["reported", "appeal", "pledged", "raised", "released", "disbursed"]
 
 
 class Datum(BaseModel):
@@ -78,6 +79,14 @@ class StatementOut(BaseModel):
     happened_on: date | None = None
     amount: Decimal | None = Field(default=None, description="only set when the quote contains the figure")
     currency: str | None = None
+    amount_basis: AmountBasis = Field(
+        default="reported",
+        description=(
+            "what the amount is: an appeal target, a pledge, money raised, money released, or money "
+            "actually paid out. Never render a bare figure without it - a pledge and a payment are "
+            "different claims. 'reported' claims nothing."
+        ),
+    )
     quote: str = Field(description="verbatim, at most 40 words")
     source: SourceRef
 

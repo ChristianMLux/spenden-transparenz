@@ -198,6 +198,32 @@ async def test_an_amount_without_a_currency_is_rejected(session):
         await _statement(session, amount=1000000, currency=None)
 
 
+async def test_an_amount_carries_the_basis_it_was_reported_on(session):
+    """ "Pledged" and "paid" are different claims, and the pilot data has zero disbursed amounts.
+    Without this column the board would render a pledge and a payment identically, which is the
+    single most misleading thing this product could do."""
+    row = await _statement(session, amount=1000000, currency="CHF", amount_basis="pledged")
+    assert row.amount_basis == "pledged"
+
+
+async def test_amount_basis_defaults_to_a_claim_free_value(session):
+    row = await _statement(session)
+    await session.refresh(row)
+    assert row.amount_basis == "reported"
+
+
+async def test_an_unknown_amount_basis_is_rejected(session):
+    with pytest.raises((IntegrityError, DBAPIError), match="ck_response_statement_amount_basis"):
+        await _statement(session, amount_basis="paid_probably")
+
+
+async def test_disbursed_is_an_allowed_value_even_though_the_pilot_data_has_none(session):
+    """The dataset contains no disbursed amount. The enum still has to be able to say it, or the
+    product can never report the one thing donors actually want to know."""
+    row = await _statement(session, amount=500, currency="EUR", amount_basis="disbursed")
+    assert row.amount_basis == "disbursed"
+
+
 async def test_a_statement_may_have_no_org_id(session):
     """Named but not identified stays visible. That is a designed state, not a failure."""
     row = await _statement(session, org_id=None, org_name_raw="Local youth club, Timure")

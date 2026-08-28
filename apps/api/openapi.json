@@ -1042,6 +1042,20 @@
             "description": "only set when the quote contains the figure",
             "title": "Amount"
           },
+          "amount_basis": {
+            "default": "reported",
+            "description": "what the amount is: an appeal target, a pledge, money raised, money released, or money actually paid out. Never render a bare figure without it - a pledge and a payment are different claims. 'reported' claims nothing.",
+            "enum": [
+              "reported",
+              "appeal",
+              "pledged",
+              "raised",
+              "released",
+              "disbursed"
+            ],
+            "title": "Amount Basis",
+            "type": "string"
+          },
           "currency": {
             "anyOf": [
               {

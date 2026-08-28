@@ -87,6 +87,13 @@ ACTIVITY_TYPE = (
     "other",
 )
 
+# What an amount actually is. "Pledged" and "paid" are different claims, and the pilot data
+# contains zero disbursed amounts - which is exactly why the enum has to be able to say it.
+# Derive this from the activity sentence, never from the note: notes routinely read "not confirmed
+# disbursed" or "amount is a pledge, not a confirmed disbursement", so note-matching would label
+# pledges as payments.
+AMOUNT_BASIS = ("reported", "appeal", "pledged", "raised", "released", "disbursed")
+
 STATEMENT_STATUS = ("auto", "needs_review", "approved", "rejected_unverbatim")
 
 DISTRICT_RESOLUTION = ("stated", "inherited_from_report")
@@ -105,6 +112,7 @@ ALL_ENUMS: dict[str, tuple[str, ...]] = {
     "value_type": VALUE_TYPE,
     "money_scope": MONEY_SCOPE,
     "activity_type": ACTIVITY_TYPE,
+    "amount_basis": AMOUNT_BASIS,
     "statement_status": STATEMENT_STATUS,
     "district_resolution": DISTRICT_RESOLUTION,
     "alias_kind": ALIAS_KIND,

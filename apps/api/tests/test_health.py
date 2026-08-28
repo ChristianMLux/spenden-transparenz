@@ -10,6 +10,7 @@ from collections.abc import AsyncIterator
 from pathlib import Path
 
 import pytest
+from alembic.script import ScriptDirectory
 from app.main import create_app
 from httpx import ASGITransport, AsyncClient
 
@@ -49,12 +50,15 @@ async def test_health_is_never_cached(client: AsyncClient):
     assert response.headers["cache-control"] == "no-store"
 
 
-async def test_ready_reports_the_database_and_the_migration_revision(client: AsyncClient):
+async def test_ready_reports_the_database_and_the_migration_revision(client: AsyncClient, alembic_config):
+    """Compared against the actual head rather than a hardcoded revision: pinning "0001" here
+    turns every future migration into a spurious failure, which teaches people to edit the test."""
+    head = ScriptDirectory.from_config(alembic_config("postgresql+psycopg://unused/unused")).get_current_head()
     response = await client.get("/health/ready")
     assert response.status_code == 200
     body = response.json()
     assert body["database"] == "ok"
-    assert body["alembic_revision"] == "0001"
+    assert body["alembic_revision"] == head
 
 
 async def test_ready_is_503_when_the_database_is_unreachable(client_with_broken_db: AsyncClient):

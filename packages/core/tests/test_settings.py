@@ -21,7 +21,15 @@ VALID_TOKEN = "t" * 32
 
 @pytest.fixture(autouse=True)
 def _clean_env(monkeypatch):
-    for name in ("ENV", "ADMIN_TOKEN", "DATABASE_URL", "DATABASE_URL_SYNC", "ANTHROPIC_API_KEY", "LOG_LEVEL"):
+    for name in (
+        "ENV",
+        "ADMIN_TOKEN",
+        "DATABASE_URL",
+        "DATABASE_URL_SYNC",
+        "OPENROUTER_API_KEY",
+        "LLM_MODEL",
+        "LOG_LEVEL",
+    ):
         monkeypatch.delenv(name, raising=False)
 
 
@@ -98,10 +106,32 @@ def test_settings_never_read_the_athenarun_platform_env_file():
 
 
 def test_secrets_do_not_leak_into_repr_or_model_dump():
-    s = Settings(admin_token="a" * 40, anthropic_api_key="sk-ant-secret-value", _env_file=None)
+    s = Settings(admin_token="a" * 40, openrouter_api_key="sk-or-secret-value", _env_file=None)
     text = repr(s) + str(s.model_dump()) + str(s)
-    assert "sk-ant-secret-value" not in text
+    assert "sk-or-secret-value" not in text
     assert "a" * 40 not in text
+
+
+def test_the_llm_goes_through_openrouter_and_never_the_anthropic_api():
+    """PO decision, 2026-08-28: extraction runs on OpenRouter's OpenAI-compatible endpoint with
+    OPENROUTER_API_KEY. ANTHROPIC_API_KEY must not be read from anywhere."""
+    s = Settings(_env_file=None)
+    assert s.llm_base_url == "https://openrouter.ai/api/v1"
+    assert s.llm_model == "anthropic/claude-sonnet-5"
+    assert not hasattr(s, "anthropic_api_key")
+
+
+def test_the_model_is_a_setting_not_a_constant():
+    s = Settings(llm_model="anthropic/claude-opus-5", _env_file=None)
+    assert s.llm_model == "anthropic/claude-opus-5"
+
+
+def test_no_module_level_reference_to_anthropic_api_key():
+    tree = ast.parse(inspect.getsource(core.settings))
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Constant) and isinstance(node.value, str):
+            assert "anthropic_api_key" not in node.value.lower()
+    assert "ANTHROPIC_API_KEY" not in inspect.getsource(core.settings)
 
 
 def test_the_admin_token_is_still_readable_where_it_is_needed():
