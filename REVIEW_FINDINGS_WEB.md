@@ -205,3 +205,42 @@ All three workers hit context7 quota exhaustion partway through and fell back to
 the installed packages' own type definitions. That is the right fallback and in some cases
 a better source, but it means the "check the current signature before writing library
 code" gate was not uniformly available. Worth knowing before the next round.
+
+---
+
+## Gate G3, honesty review, 2026-08-28
+
+Run against the integration branch. All twelve checks from DESIGN.md section 11 pass. The
+commands and what they returned:
+
+| # | Check | Result |
+|---|---|---|
+| 1 | No superlatives or recommendation language | Pass. Every hit is the product denying it: "Sie bewertet keine Organisation und empfiehlt keine Spende", "Wir bewerten nicht und empfehlen nicht. Es gibt keine Rangliste, keine Punktzahl". |
+| 2 | No score, rating, stars, ranking, progress, meter | Pass. `grade` survives as a variable name for the evidence grade and as `datum.triggerLabel`'s interpolation, where it carries the word Register or Dritte, not a quality judgement. |
+| 3 | No check marks or crosses next to organisations | Pass, zero hits. |
+| 4 | No AthenaRun branding, no #FF6131 | Pass. The only hit is the line in DESIGN.md that defines the check. |
+| 5 | No donation calls to action | Pass, zero hits. |
+| 6 | Sort options are exactly three, none by evidence grade | Pass. `latest`, `name`, `fewest-data`, pinned by a tripwire test in filter.test.ts. |
+| 7 | "nicht gefunden" never styled weaker than a value | Pass. One expression, one class list: `text-base font-normal text-ink` for both. Also asserted by a Playwright test comparing computed colour, size, weight, style, opacity and decoration. |
+| 8 | Every number reaches its source in at most two interactions | Pass. Number in the count line applies a filter; the provenance line under each statement is itself the link to the source. |
+| 9 | No bare amounts | Pass. No currency literal outside `amount.tsx` and the message files; `<Amount>` requires a `basis` prop, so a naked figure does not compile. |
+| 10 | Colour never the sole carrier of meaning | Pass, verified by rendering the page in greyscale. Every mark sits beside its word, so nothing is lost. |
+| 11 | `not_public` is a statement about the register | Pass. "Dieses Register veröffentlicht den Wert nicht." |
+| 12 | No photographs | Pass. The only image is the locator SVG, which is being removed (see WP1 defect 2). |
+
+### A false alarm worth recording
+
+Midway through this review a spot check returned 404 on a real organisation page, and a
+directory listing showed only 38 of the 44 pages built, with six large INGOs missing in a
+contiguous block. That looks exactly like validation silently dropping records, which on
+this product would be serious.
+
+It was not. Both readings came from inspecting `.next` while a Playwright-managed
+`npm run build && npm start` was writing into it. A clean rebuild produces all 44, and a
+server started explicitly returns 200 for all six plus the two I had seen fail.
+
+Two things came out of it that are worth keeping. The screenshot check that produced the
+404 had passed, because a screenshot of an error page is still a screenshot; it now
+asserts the response status first. And this is the same hazard WP2 reported after losing
+time to an orphaned `next start` serving stale CSS. Inspect a build directory only when
+nothing is building into it.
