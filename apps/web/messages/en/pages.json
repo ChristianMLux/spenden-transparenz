@@ -1,1 +1,63 @@
-{}
+{
+  "methodik": {
+    "title": "Methodology",
+    "intro": "This page explains how a value gets an evidence grade, what \"not found\" means, and where the limits of this data collection are.",
+    "gradesHeading": "The five evidence grades",
+    "gradesIntro": "Every value on this site carries one of these five grades. The wording is the same one shown next to the value itself.",
+    "notFoundHeading": "What \"not found\" means, and what it does not",
+    "notFoundBody1": "Not found means: our research did not turn up a publicly accessible source for this value. It does not mean the value is wrong, that the organisation is hiding something, or that anything is out of the ordinary.",
+    "notFoundBody2": "For most small and local organisations, a public financial figure simply does not exist or cannot be found. That is the normal case, not a shortcoming of the individual organisation: of the 14 Nepali organisations in this register, none has a public income figure.",
+    "notFoundBody3": "A value that was not found is therefore rendered exactly like one that was: same colour, same size, same weight. Nothing about the design is meant to make a missing value read as a fault.",
+    "reasonsHeading": "The four reasons for a gap",
+    "reasonsIntro": "An empty field on its own does not say why it is empty. That is why every gap carries one of four reasons.",
+    "limitsHeading": "Limits of this data collection",
+    "limitsBody1": "Disaster mode shows who publicly reported a response, where, and with which source. It does not show how much money was actually paid out. Systems such as OCHA FTS or IATI typically report disbursements only months later (a median reporting lag of 95 to 142 days); in the first week after a disaster, there is structurally nothing there yet.",
+    "limitsBody2": "Local Nepali organisations are often named in the sources but not uniquely identified. The official register for Nepali NGOs (the Social Welfare Council) was unreachable from Germany during our research and does not publish financial data regardless.",
+    "limitsBody3": "In a spot check of 17 values (about 12% of the pilot dataset), 15 were verified directly on the cited source page, one could not be machine-verified at the cited source, and one carried a real provenance error, roughly 6%. That is approximately the error rate to expect from a first pass. Errors we find are documented on the corrections page, not hidden.",
+    "noRatingHeading": "What this page does not do",
+    "noRatingBody": "We do not rate and we do not recommend. There is no ranking, no score, and no categorisation of organisations by trustworthiness. Every value stands on its own, with its own source."
+  },
+  "quellen": {
+    "title": "Sources",
+    "intro": "Every source that data on this register comes from, with its licence and last retrieval date. The full dataset is available for download below.",
+    "tableName": "Source",
+    "tableLicence": "Licence",
+    "tableRetrieved": "Last retrieved",
+    "tableLink": "Link",
+    "licenceUnknown": "not stated",
+    "downloadHeading": "Dataset download",
+    "downloadBody": "The pilot dataset for the 2026 Nepal flood response as a JSON file, the same one this site reads its values from.",
+    "downloadLink": "Download orgs-nepal-2026.json"
+  },
+  "korrekturen": {
+    "title": "Corrections",
+    "intro": "Errors we found in our own data and corrected. An empty corrections page would be the least credible page on a transparency site, so every known error is listed here.",
+    "tableDate": "Date",
+    "tableOrg": "Organisation",
+    "tableField": "Field",
+    "tableBefore": "Before",
+    "tableAfter": "After",
+    "tableSource": "Source",
+    "sourceLinkLabel": "View source"
+  },
+  "impressum": {
+    "title": "Imprint",
+    "placeholderHeading": "Details will be added before publication",
+    "placeholderBody": "The legally required details about this site's operator (name, address, contact) will appear here once they are available. Until then, this page is excluded from search and will not go live before the details are complete."
+  },
+  "datenschutz": {
+    "title": "Privacy",
+    "placeholderHeading": "Will be added before publication",
+    "placeholderBody": "The full privacy policy will appear here once it is available. Until then, this page is excluded from search and will not go live before the text is complete.",
+    "factsHeading": "What already holds true today, and can be checked in the code",
+    "factsBody": "This site loads no third-party content: no external fonts, no analytics or tracking services, no embedded maps or videos. No cookies are set and no usage data is sent to third parties."
+  },
+  "og": {
+    "siteName": "Spenden-Transparenz",
+    "orgsLabel": "organisations",
+    "statementsLabel": "documented reports",
+    "districtsLabel": "districts",
+    "noResponseLabel": "no response found",
+    "dataStand": "Data as of {date}"
+  }
+}

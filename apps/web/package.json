@@ -9,7 +9,7 @@
     "lint": "eslint",
     "contrast": "node scripts/contrast.mjs",
     "test:unit": "vitest run",
-    "test:e2e": "playwright test",
+    "test:e2e": "npm run build && playwright test",
     "sync-data": "node scripts/sync-data.mjs",
     "prebuild": "node scripts/sync-data.mjs",
     "pretest:unit": "node scripts/sync-data.mjs",
@@ -25,7 +25,8 @@
     "radix-ui": "^1.6.7",
     "react": "19.2.8",
     "react-dom": "19.2.8",
-    "tailwind-merge": "^3.6.0"
+    "tailwind-merge": "^3.6.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
@@ -37,6 +38,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.3",
+    "pdf-parse": "^2.4.5",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^3.2.7"

@@ -1,1 +1,64 @@
-{}
+{
+  "scopeLine1": "This page shows who has publicly reported a response.",
+  "scopeLine2": "It does not rate any organisation and does not recommend a donation.",
+  "numbers": {
+    "orgs": "{count, plural, one {# organisation} other {# organisations}}",
+    "statements": "{count, plural, one {# evidenced statement} other {# evidenced statements}}",
+    "districts": "{count, plural, one {# district} other {# districts}}",
+    "noResponse": "{count, plural, one {# without a found response} other {# without a found response}}"
+  },
+  "dataStand": "Data as of {date}",
+  "sourcesLink": "Sources and licences",
+  "tabs": {
+    "orgs": "By organisation",
+    "chronological": "Chronological"
+  },
+  "resultCount": "{count, plural, one {# of {total} organisation} other {# of {total} organisations}}",
+  "resultCountStatements": "{count, plural, one {# of {total} statement} other {# of {total} statements}}",
+  "filters": {
+    "hint": "Select all that apply",
+    "district": {
+      "legend": "District"
+    },
+    "hq": {
+      "legend": "Seat"
+    },
+    "orgType": {
+      "legend": "Organisation type"
+    },
+    "verification": {
+      "legend": "Evidence grade of the statement"
+    },
+    "search": {
+      "legend": "Name search",
+      "label": "Search name or acronym",
+      "chipPrefix": "Search"
+    },
+    "removeSearch": "Remove name search",
+    "sort": {
+      "label": "Sort",
+      "latest": "Most recently reported",
+      "name": "A to Z",
+      "fewestData": "Least data first"
+    },
+    "selectedHeading": "Selected",
+    "clearAll": "Clear all filters",
+    "removeChip": "Remove {label}",
+    "mobileOpen": "Filter ({count})",
+    "mobileClose": "Close filters",
+    "mobileTitle": "Filter",
+    "more": "show {n} more",
+    "less": "show fewer"
+  },
+  "empty": {
+    "heading": "No public response report found (as of {date}).",
+    "searchedLabel": "Searched:",
+    "searchedText": "ReliefWeb reports on the flood, the organisation's own website, and Nepalese press."
+  },
+  "viewOrg": "View all information on this organisation",
+  "chronological": {
+    "reportedBy": "reported by",
+    "noDate": "No date"
+  },
+  "districtsLabel": "Districts with at least one statement:"
+}

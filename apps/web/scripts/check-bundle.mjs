@@ -12,13 +12,19 @@ import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
 import { gzipSync } from "node:zlib";
 
-// DESIGN.md and the spec name 110 KB. Measured on an empty page, Next 16 App Router with
-// cacheComponents plus next-intl already costs 127 KB gz before a single line of our own
-// code, so 110 is not reachable on this stack and pretending otherwise would just mean a
-// permanently red gate. 150 KB is set as the ceiling that our own code has to fit under,
-// which leaves roughly 5 KB of headroom on the board today. Raising it further is a
-// product owner decision, not a developer one.
-const BUDGET_BYTES = 150 * 1024;
+// The spec names 110 KB. Measured, Next 16 App Router with cacheComponents plus next-intl
+// costs about 127 KB gz on a bare redirect and 145.9 KB on a trust page that renders the
+// real shell and nothing else, so 110 is not reachable on this stack and pretending
+// otherwise would only mean a permanently red gate.
+//
+// 155 KB is the ceiling the product owner set for public pages. It is a real constraint,
+// not a rounding of whatever we happened to ship: the board sits at 151.2 and the
+// organisation pages at 147.4, the latter only because Radix Popover is deferred to first
+// interaction instead of being loaded up front. Undo that deferral and this gate goes red
+// again, which is the point of keeping the number close.
+//
+// Raising it is a product owner decision, not a developer one.
+const BUDGET_BYTES = 155 * 1024;
 
 const appDir = join(process.cwd(), ".next", "server", "app");
 if (!existsSync(appDir)) {

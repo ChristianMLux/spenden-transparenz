@@ -1,0 +1,27 @@
+/*
+ * Print rules scoped to the org page. Header, footer and the "Alle Quellen anzeigen"
+ * toggle already carry `print:hidden` from the shell and from source-toggle.tsx.
+ * `.datum-expanded` visibility is already global (app/globals.css, WP0) and needs no
+ * repeating here. This file adds only what belongs to this route: the page margin, and
+ * printing the full URL under every link so a reader following a paper copy is not
+ * asked to type a domain name back in by hand.
+ */
+
+@media print {
+  @page {
+    margin: 18mm;
+  }
+
+  .printScope :global(a[href^="http"])::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    word-break: break-all;
+  }
+
+  /* Inside a <Datum> provenance body the full URL is already printed as plain text right
+     below the domain link (components/datum/datum-body.tsx), so appending it again to
+     the link itself would be an immediate, visible duplicate. */
+  .printScope :global(.datum-expanded a[href^="http"])::after {
+    content: none;
+  }
+}

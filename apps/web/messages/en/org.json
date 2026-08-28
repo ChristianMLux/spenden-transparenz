@@ -1,1 +1,141 @@
-{}
+{
+  "meta": {
+    "titleTemplate": "{name} | Spenden-Transparenz"
+  },
+  "header": {
+    "localScriptField": "Name in local script",
+    "aliasesLabel": "Also known as",
+    "seat": "Based in: {place}",
+    "seatCountryOnly": "Based in: {country}",
+    "website": "Website",
+    "lastUpdated": "Last updated: {date}",
+    "legalNameLabel": "Registered name"
+  },
+  "response": {
+    "heading": "Response to the flood",
+    "empty": "No public response statement found (as of {date}).",
+    "searchedLabel": "What was searched:",
+    "field": "Statement"
+  },
+  "presence": {
+    "heading": "Presence in Nepal",
+    "sinceYear": "Present since",
+    "mode": "Mode of operation",
+    "staffCount": "Staff",
+    "partners": "Partners",
+    "modeValue": {
+      "own_staff": "Own staff",
+      "partners": "Through partner organisations",
+      "both": "Own staff and partner organisations",
+      "unknown": "Not specified"
+    }
+  },
+  "registrations": {
+    "heading": "Registrations and identifiers",
+    "registry": {
+      "NP_SWC": "Social Welfare Council (Nepal)",
+      "NP_DAO": "District Administration Office (Nepal)",
+      "IATI": "International Aid Transparency Initiative (IATI)",
+      "US_IRS": "U.S. Internal Revenue Service (Form 990)",
+      "DE_DZI": "German Central Institute for Social Issues (DZI Donations Seal)",
+      "DE_ITZ": "Transparent Civil Society Initiative (Germany)",
+      "DE_VEREINSREGISTER": "Register of Associations (German local court)",
+      "UK_CC": "Charity Commission for England and Wales",
+      "CH_ZEWO": "ZEWO seal (Switzerland)",
+      "UN": "United Nations",
+      "OTHER": "Other registry"
+    },
+    "iatiNote": "The join key across datasets.",
+    "sentence": {
+      "not_searched": "Not searched for an identifier in the {registry} register this round.",
+      "searchedNotFoundWithDomain": "No registration number found ({domain}, {date}).",
+      "searchedNotFound": "No registration number found.",
+      "sourceUnreachableWithDomain": "No registration number found. The source could not be reached when we looked ({domain}, {date}).",
+      "sourceUnreachable": "No registration number found. The source could not be reached on {date}.",
+      "sourceUnreachablePlain": "No registration number found. The source could not be reached.",
+      "notPublic": "This register does not publish this organisation's identifier."
+    }
+  },
+  "financial": {
+    "heading": "Financial transparency",
+    "emptyIntro": "No public financial data was found for this organisation.",
+    "emptySearched": "What was searched: an annual report, audited accounts and an IATI registration.",
+    "emptyNormal": "None of the 14 Nepali organisations in this dataset publishes a public income figure. That is the normal case, not a shortcoming of this organisation.",
+    "methodikLink": "More on this in the methodology.",
+    "incomeField": "Income",
+    "expenditureField": "Expenditure",
+    "programRatioField": "Programme ratio",
+    "annualReportField": "Annual report",
+    "auditedField": "Audited accounts",
+    "iatiRefField": "IATI reference",
+    "scopeLabel": "Scope: {scope}",
+    "fiscalYearLabel": "Fiscal year {year}",
+    "scope": {
+      "global": "global",
+      "nepal_only": "Nepal only",
+      "unknown": "scope not stated"
+    },
+    "programRatioFormula": "Formula: {note}",
+    "programRatioValue": "{percent}% of expenditure goes to programmes",
+    "annualReportValue": "View the annual report",
+    "annualReportWithYear": "View the {year} annual report",
+    "auditedValue": "Audited accounts are published"
+  },
+  "warnings": {
+    "heading": "Public notices",
+    "field": "Notice"
+  },
+  "gaps": {
+    "heading": "What we do not know",
+    "groupHeading": {
+      "searched_not_found": "Searched for and not found",
+      "not_searched": "Not searched for in this round",
+      "source_unreachable": "Source unreachable",
+      "not_public": "The register does not publish this"
+    },
+    "researchNotesHeading": "How this was researched",
+    "empty": "No open gaps are recorded for this organisation.",
+    "path": {
+      "names_legal": "The registered legal name was not found.",
+      "names_local_script": "A name in Devanagari was not found.",
+      "names_aliases": "Further common name forms were not recorded.",
+      "hq_city": "The seat is known at country level only, not the city.",
+      "website": "A website was not found.",
+      "presence_since_year": "Since when the organisation has worked in Nepal was not found.",
+      "presence_mode": "How the organisation works in Nepal, with its own staff or through partners, was not found.",
+      "presence_staff_count": "The number of staff in Nepal was not found.",
+      "presence_partners": "Local partner organisations were not found by name.",
+      "registrations_all": "No register entries were found.",
+      "registration_entry": "No entry was found in the {registry} register.",
+      "registration_identifier": "No identifier was found in the {registry} register.",
+      "registration_url": "No direct link to the entry in the {registry} register was found.",
+      "registration_status": "The status in the {registry} register was not found.",
+      "financial_all": "Nothing public was found about the finances.",
+      "financial_income": "An income figure was not found.",
+      "financial_expenditure": "An expenditure figure was not found.",
+      "financial_program_ratio": "A programme ratio cannot be derived from the published figures.",
+      "financial_annual_report": "An annual report was not found.",
+      "financial_annual_report_url": "No direct link to the annual report was found.",
+      "financial_fiscal_year": "The fiscal year of the annual report was not found.",
+      "financial_fiscal_year_end": "The end of the fiscal year was not found.",
+      "financial_audited": "Audited accounts were not found.",
+      "financial_iati": "No entry as an IATI publisher was found.",
+      "response_none": "No public response statement about this flood was found.",
+      "response_date": "At least one statement has no date.",
+      "response_amount": "At least one statement has no amount.",
+      "response_where": "At least one statement has no location.",
+      "response_quote": "At least one statement has no verbatim quote.",
+      "response_source_url": "At least one statement has no durable source URL.",
+      "warnings_none": "Public notices were searched for and none were found.",
+      "unmapped": "We hold nothing for this field:"
+    },
+    "researchNotesIntro": "The research note comes from the source work and is in English:"
+  },
+  "corrections": {
+    "heading": "Found an error?",
+    "sentence": "If a value on this page is wrong or has changed, let us know.",
+    "linkLabel": "Go to corrections",
+    "mailLabel": "Report an error by email",
+    "mailSubject": "Correction: {orgId} ({date})"
+  }
+}
