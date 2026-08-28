@@ -12,7 +12,8 @@ from __future__ import annotations
 
 import hashlib
 import json
-from datetime import date
+from dataclasses import dataclass
+from datetime import date, datetime
 from decimal import Decimal, InvalidOperation
 from typing import Any
 from uuid import UUID
@@ -21,14 +22,14 @@ from core import enums
 from core.logging import get_logger
 from core.models import District, Report, ResponseStatement, StatementDistrict
 from core.settings import get_settings
-from sqlalchemy import or_, select
+from sqlalchemy import or_, select, update
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
 from pipeline.extract import client as llm_client
 from pipeline.extract.prompt import PROMPT_VERSION, ReportInput
-from pipeline.extract.validate import gate
+from pipeline.extract.validate import MAX_QUOTE_WORDS, gate, word_count
 from pipeline.runs import RunHandle, run_context
 
 log = get_logger("extract_statements")
@@ -107,17 +108,24 @@ def content_hash(claim: dict[str, Any]) -> str:
     return hashlib.sha256(encoded).hexdigest()
 
 
-def _build_row(report: Report, claim: dict[str, Any], status: str, run_id: UUID, model: str) -> dict[str, Any] | None:
+def _build_row(report_id: int, claim: dict[str, Any], status: str, run_id: UUID, model: str) -> dict[str, Any] | None:
     quote = (claim.get("quote") or "").strip()
     org_name_raw = (claim.get("org_name_raw") or "").strip()
     activity = (claim.get("activity") or "").strip()
     if not quote or not org_name_raw or not activity:
-        # The tool schema marks these required; a model that skips one anyway has produced a claim
-        # with nothing to display or verify, so it is dropped rather than stored with a blank field.
+        # The schema marks these required; a model that skips one anyway has produced a claim with
+        # nothing to display or verify, so it is dropped rather than stored with a blank field.
+        return None
+
+    if word_count(quote) > MAX_QUOTE_WORDS:
+        # ck_response_statement_quote_words forbids this on EVERY row, whatever its status, so the
+        # row gate() hands back for an over-long quote is one the table refuses. A live run lost a
+        # whole batch to that on a 55-word French sentence. The claim is dropped here, where it can
+        # still be counted, rather than at the INSERT, where it can only abort.
         return None
 
     return {
-        "report_id": report.id,
+        "report_id": report_id,
         "org_name_raw": org_name_raw,
         "activity": activity,
         "activity_type": _safe_enum(claim.get("activity_type"), enums.ACTIVITY_TYPE, "other"),
@@ -138,7 +146,26 @@ def _build_row(report: Report, claim: dict[str, Any], status: str, run_id: UUID,
     }
 
 
-async def _select_candidate_reports(session: AsyncSession, limit: int) -> list[Report]:
+@dataclass(frozen=True)
+class _Candidate:
+    """One report's data as plain values, detached from the session.
+
+    Deliberately not the ORM object. This loop makes a twenty-second network call between database
+    touches and has to survive a rolled-back write, and a rollback expires every ORM object in the
+    session - after which reading even `report.id` for a log line emits a SELECT from a synchronous
+    context and raises MissingGreenlet. A live run ended that way two reports after a refused
+    write, having already paid for both calls. Plain values cannot expire.
+    """
+
+    id: int
+    url: str
+    title: str | None
+    body_text: str
+    published_at: datetime | None
+    disaster_glide_id: str | None
+
+
+async def _select_candidate_reports(session: AsyncSession, limit: int) -> list[_Candidate]:
     """Reports with a body, under the attempt cap, not already extracted at this prompt_version.
 
     One query. The cache key is effectively (body_sha256, prompt_version): a report's body_sha256
@@ -148,7 +175,14 @@ async def _select_candidate_reports(session: AsyncSession, limit: int) -> list[R
     """
     already_extracted = select(ResponseStatement.report_id).where(ResponseStatement.prompt_version == PROMPT_VERSION)
     stmt = (
-        select(Report)
+        select(
+            Report.id,
+            Report.url,
+            Report.title,
+            Report.body_text,
+            Report.published_at,
+            Report.disaster_glide_id,
+        )
         .where(Report.body_text.is_not(None))
         .where(Report.extraction_attempts < MAX_ATTEMPTS)
         .where(Report.id.not_in(already_extracted))
@@ -156,7 +190,7 @@ async def _select_candidate_reports(session: AsyncSession, limit: int) -> list[R
         .limit(limit)
     )
     result = await session.execute(stmt)
-    return list(result.scalars().all())
+    return [_Candidate(*row) for row in result.all()]
 
 
 async def _known_districts_by_disaster(session: AsyncSession, glide_ids: set[str]) -> dict[str, tuple[str, ...]]:
@@ -243,13 +277,17 @@ async def extract_statements(
 
             # Incremented before the call, not after: a crash on the line below must still leave
             # this attempt counted, or a permanently-failing report retries on every run forever.
-            report.extraction_attempts += 1
+            # An explicit UPDATE rather than a mutated ORM attribute, so this loop holds no
+            # session-bound object that a later rollback could expire underneath it.
+            await session.execute(
+                update(Report).where(Report.id == report.id).values(extraction_attempts=Report.extraction_attempts + 1)
+            )
             await session.commit()
 
             report_input = ReportInput(
                 url=report.url,
                 title=report.title or "",
-                body=report.body_text or "",
+                body=report.body_text,
                 published_at=report.published_at.date().isoformat() if report.published_at else None,
                 known_districts=known_by_disaster.get(report.disaster_glide_id or "", ()),
             )
@@ -270,8 +308,8 @@ async def extract_statements(
             rows = []
             dropped = 0
             for claim in result.claims:
-                status, gated_claim = gate(claim, report.body_text or "")
-                row = _build_row(report, gated_claim, status, handle.id, settings.llm_model)
+                status, gated_claim = gate(claim, report.body_text)
+                row = _build_row(report.id, gated_claim, status, handle.id, settings.llm_model)
                 if row is None:
                     # _build_row's own guard, not gate()'s: a claim missing quote, org_name_raw or
                     # activity never becomes a row at all, so without counting it here it is
@@ -280,7 +318,7 @@ async def extract_statements(
                     dropped += 1
                     log.info(
                         "extract_statements_claim_dropped",
-                        extra={"report_id": report.id, "reason": "missing quote, org_name_raw or activity"},
+                        extra={"report_id": report.id, "reason": "unusable field, or a quote the table cannot store"},
                     )
                     continue
                 rows.append(row)
