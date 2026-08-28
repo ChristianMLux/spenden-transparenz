@@ -124,6 +124,38 @@ Actions is locked, failing on `main`.
 
 ---
 
+### WP2 repairs applied by the lead
+
+WP2's agent transcript was gone by review time, so its three findings were fixed here
+rather than sent back.
+
+**`data_gaps` now reads as German sentences.** The section printed
+`financial_transparency.income`, `registrations[NP_SWC].identifier` and 73 other database
+paths. A reader who came to find out what we do not know was shown a schema.
+`components/org/gap-label.ts` maps each entry to a sentence. The entries are not clean
+paths: measured across the 44 records there are 75 distinct strings in three shapes, a
+plain path, a path with an English qualifier in brackets, and whole English sentences with
+no path at all. All three are handled, the qualifier is kept and marked `lang="en"` rather
+than dropped because it is often the most specific thing we know, and prose passes through
+untouched. A test walks every entry in the dataset and asserts none falls through to a raw
+path; the unmapped fallback covers under 2 percent.
+
+**The English research note is marked as English.** `research_notes` is source material and
+always English; it sat unmarked in German prose, so a screen reader pronounced it as
+German. It now carries `lang="en"` behind a German introduction that makes the switch
+deliberate.
+
+**Three invisible fields are on the page.** `legal_name` (37 of 44 records carry one, and
+it is the single most useful fact for a reader who wants to look an organisation up in a
+register themselves) is in the header, suppressed when it merely repeats the common name.
+`annual_report` (13 records) and `audited` (6 records) are in section 5, rendered in both
+branches: putting them only next to a figure would have hidden every one of them, since
+almost none of those records also carries an income number.
+
+Deferred, logged rather than done: `financial_transparency.iati_publisher.publisher_ref`
+is visible for the 3 organisations that also have an IATI registration row, and invisible
+for the 2 that only have the financial field. Small enough to leave for the next round.
+
 ### Per-package notes
 
 **WP1 #9, board.** Honest reporting throughout: it reported its own 0.7 KB overage and

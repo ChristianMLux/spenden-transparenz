@@ -8,7 +8,8 @@
     "seat": "Sitz: {place}",
     "seatCountryOnly": "Sitz: {country}",
     "website": "Website",
-    "lastUpdated": "Zuletzt aktualisiert: {date}"
+    "lastUpdated": "Zuletzt aktualisiert: {date}",
+    "legalNameLabel": "Eingetragener Name"
   },
   "response": {
     "heading": "Reaktion auf die Flut",
@@ -75,7 +76,10 @@
       "unknown": "Umfang nicht angegeben"
     },
     "programRatioFormula": "Formel: {note}",
-    "programRatioValue": "{percent} % der Ausgaben fließen in Programme"
+    "programRatioValue": "{percent} % der Ausgaben fließen in Programme",
+    "annualReportValue": "Jahresbericht ansehen",
+    "annualReportWithYear": "Jahresbericht {year} ansehen",
+    "auditedValue": "Ein Testat ist veröffentlicht"
   },
   "warnings": {
     "heading": "Öffentliche Hinweise",
@@ -90,7 +94,42 @@
       "not_public": "Register veröffentlicht das nicht"
     },
     "researchNotesHeading": "Wie recherchiert wurde",
-    "empty": "Für diese Organisation sind keine offenen Lücken verzeichnet."
+    "empty": "Für diese Organisation sind keine offenen Lücken verzeichnet.",
+    "path": {
+      "names_legal": "Der eingetragene Name wurde nicht gefunden.",
+      "names_local_script": "Ein Name in Devanagari wurde nicht gefunden.",
+      "names_aliases": "Weitere gebräuchliche Namensformen wurden nicht erfasst.",
+      "hq_city": "Der Sitz ist nur auf Landesebene bekannt, die Stadt nicht.",
+      "website": "Eine Website wurde nicht gefunden.",
+      "presence_since_year": "Seit wann die Organisation in Nepal arbeitet, wurde nicht gefunden.",
+      "presence_mode": "Wie die Organisation in Nepal arbeitet, mit eigenem Personal oder über Partner, wurde nicht gefunden.",
+      "presence_staff_count": "Die Zahl der Beschäftigten in Nepal wurde nicht gefunden.",
+      "presence_partners": "Lokale Partnerorganisationen wurden nicht namentlich gefunden.",
+      "registrations_all": "Zu Registereinträgen wurde nichts gefunden.",
+      "registration_entry": "Zum Register {registry} wurde kein Eintrag gefunden.",
+      "registration_identifier": "Beim Register {registry} wurde keine Kennung gefunden.",
+      "registration_url": "Zum Eintrag im Register {registry} wurde kein direkter Link gefunden.",
+      "registration_status": "Der Status im Register {registry} wurde nicht gefunden.",
+      "financial_all": "Zu den Finanzen wurde nichts Öffentliches gefunden.",
+      "financial_income": "Eine Einnahmenzahl wurde nicht gefunden.",
+      "financial_expenditure": "Eine Ausgabenzahl wurde nicht gefunden.",
+      "financial_program_ratio": "Eine Programmquote lässt sich aus den veröffentlichten Zahlen nicht berechnen.",
+      "financial_annual_report": "Ein Jahresbericht wurde nicht gefunden.",
+      "financial_annual_report_url": "Zum Jahresbericht wurde kein direkter Link gefunden.",
+      "financial_fiscal_year": "Das Geschäftsjahr des Jahresberichts wurde nicht gefunden.",
+      "financial_fiscal_year_end": "Das Ende des Geschäftsjahres wurde nicht gefunden.",
+      "financial_audited": "Ein geprüfter Abschluss wurde nicht gefunden.",
+      "financial_iati": "Ein Eintrag als IATI-Publisher wurde nicht gefunden.",
+      "response_none": "Keine öffentliche Reaktionsmeldung zu dieser Flut gefunden.",
+      "response_date": "Zu mindestens einer Meldung fehlt das Datum.",
+      "response_amount": "Zu mindestens einer Meldung fehlt ein Betrag.",
+      "response_where": "Zu mindestens einer Meldung fehlt die Ortsangabe.",
+      "response_quote": "Zu mindestens einer Meldung fehlt ein wörtliches Zitat.",
+      "response_source_url": "Zu mindestens einer Meldung fehlt eine dauerhafte Quell-URL.",
+      "warnings_none": "Nach öffentlichen Hinweisen wurde gesucht, es wurden keine gefunden.",
+      "unmapped": "Zu diesem Feld liegt uns nichts vor:"
+    },
+    "researchNotesIntro": "Die Recherchenotiz stammt aus der Quellenarbeit und ist auf Englisch:"
   },
   "corrections": {
     "heading": "Fehler gefunden?",

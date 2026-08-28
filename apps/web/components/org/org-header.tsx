@@ -11,9 +11,11 @@ import { SourceToggleButton } from "./source-toggle";
  * website with a visible domain, last updated, and the source-visibility switch. No
  * score, no badge row, no summary line (brief, verbatim).
  *
- * `legal_name` is part of `OrgDetail` but no section of the brief names a place to show
- * it; it is left undisplayed here rather than given an invented slot, and its gap still
- * surfaces honestly through "Was wir nicht wissen" via `data_gaps`.
+ * `legal_name` is shown here when it says something the common name does not. 37 of the
+ * 44 records carry one, and a registered legal name is the most useful single fact for a
+ * reader who wants to look the organisation up in a register themselves, which is what
+ * this page exists to enable. It is suppressed when it merely repeats the common name,
+ * because a line that says the same thing twice is noise, not information.
  */
 export function OrgHeader({ org }: { org: OrgDetail }) {
   const t = useTranslations("org.header");
@@ -58,6 +60,20 @@ export function OrgHeader({ org }: { org: OrgDetail }) {
                 variant="inline"
                 render={() => null}
                 id="local-script"
+              />
+            </dd>
+          </div>
+        ) : null}
+
+        {org.legal_name.value && org.legal_name.value !== org.name ? (
+          <div className="flex min-h-11 flex-wrap items-center gap-x-2 gap-y-1">
+            <dt className="text-sm text-muted">{t("legalNameLabel")}</dt>
+            <dd>
+              <Datum
+                datum={org.legal_name}
+                field={t("legalNameLabel")}
+                variant="inline"
+                id="legal-name"
               />
             </dd>
           </div>

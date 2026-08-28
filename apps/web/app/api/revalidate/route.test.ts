@@ -101,11 +101,43 @@ describe("POST /api/revalidate", () => {
     expect(res.status).toBe(400);
   });
 
-  it("refuses to load without a configured secret when NODE_ENV is production", async () => {
+  // This used to assert that the module throws on load without a secret in production.
+  // It does not any more: `next build` collects page data with NODE_ENV=production and no
+  // runtime environment, so a module-level throw failed the whole build on a route nobody
+  // had called. Build time is not start time.
+  //
+  // The security property is unchanged and is what is asserted here instead: an
+  // unconfigured deployment rejects every request. It answers 401 rather than a distinct
+  // status on purpose, so an unauthenticated caller cannot tell a misconfigured endpoint
+  // from a wrong secret.
+  it("rejects every request when no secret is configured, rather than failing to load", async () => {
     delete process.env.REVALIDATE_SECRET;
     vi.stubEnv("NODE_ENV", "production");
     vi.resetModules();
-    await expect(import("./route")).rejects.toThrow();
+    const mod = await import("./route");
+    expect(mod.POST).toBeTypeOf("function");
+
+    const res = await mod.POST(
+      request({ tag: "crisis:ff-2026-000162-npl" }, { authorization: "Bearer anything" }),
+    );
+    expect(res.status).toBe(401);
+  });
+
+  it("logs the misconfiguration once so an operator can see it", async () => {
+    delete process.env.REVALIDATE_SECRET;
+    vi.stubEnv("NODE_ENV", "production");
+    vi.resetModules();
+    const errors: string[] = [];
+    const spy = vi.spyOn(console, "error").mockImplementation((...args: unknown[]) => {
+      errors.push(String(args[0]));
+    });
+
+    const mod = await import("./route");
+    await mod.POST(request({ tag: "crisis:x" }));
+    await mod.POST(request({ tag: "crisis:x" }));
+
+    expect(errors.filter((e) => e.includes("revalidate.unconfigured"))).toHaveLength(1);
+    spy.mockRestore();
   });
 
   it("loads fine in production when the secret is configured", async () => {
