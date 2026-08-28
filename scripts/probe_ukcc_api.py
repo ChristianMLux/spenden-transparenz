@@ -51,7 +51,8 @@ def main():
             status, body = get(f"{ep}/{num}/0")
             availability.setdefault(ep, Counter())[status] += 1
             if status == 200:
-                dump_json(SRC, f"{ep}_{num}", body)
+                if ep != "charitytrusteeinformation":  # names of natural persons: probe availability, never persist
+                    dump_json(SRC, f"{ep}_{num}", body)
                 if isinstance(body, dict):
                     rec["endpoints"][ep] = {"keys": sorted(body.keys())[:40]}
                 elif isinstance(body, list):

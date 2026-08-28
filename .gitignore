@@ -3,3 +3,4 @@
 __pycache__/
 data/raw/ukcc/*.zip
 data/raw/iati/*.csv
+data/raw/ukcc_api/charitytrusteeinformation_*.json
