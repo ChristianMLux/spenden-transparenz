@@ -2,6 +2,7 @@
 
     python -m pipeline.cli list
     python -m pipeline.cli run seed_reference
+    python -m pipeline.cli drain
 
 Jobs are registered here by name. The admin endpoint uses the same registry, so a job that is not
 in this dict cannot be triggered over HTTP either.
@@ -25,6 +26,7 @@ from pipeline.jobs.match import match_orgs
 from pipeline.jobs.orgs import ingest_orgs
 from pipeline.jobs.reliefweb import fetch_report_bodies, ingest_reliefweb_listing
 from pipeline.jobs.seed_reference import seed_reference
+from pipeline.queue import MAX_RUNS_PER_TICK, drain_queue
 
 log = get_logger("cli")
 
@@ -47,12 +49,20 @@ async def run_job(name: str, database_url: str | None = None) -> None:
         await job(factory)
 
 
+async def drain(max_runs: int, database_url: str | None = None) -> int:
+    """Execute the runs the admin endpoint queued. This is what the cron calls."""
+    async with session_factory(database_url) as factory:
+        return await drain_queue(factory, JOBS, max_runs=max_runs)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="pipeline.cli", description="Run an ingestion job.")
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("list", help="list the registered jobs")
     run_parser = subparsers.add_parser("run", help="run one job")
     run_parser.add_argument("job", choices=sorted(JOBS))
+    drain_parser = subparsers.add_parser("drain", help="run the jobs the admin endpoint queued, oldest first")
+    drain_parser.add_argument("--max", type=int, default=MAX_RUNS_PER_TICK, dest="max_runs")
 
     args = parser.parse_args(argv)
 
@@ -66,6 +76,11 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "list":
         for name in sorted(JOBS):
             print(name)
+        return 0
+
+    if args.command == "drain":
+        executed = asyncio.run(drain(args.max_runs))
+        log.info("queue_drained", extra={"executed": executed})
         return 0
 
     try:

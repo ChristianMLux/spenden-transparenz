@@ -23,6 +23,44 @@ were written into `apps/api/tests/`, executed, and deleted; the working tree is 
 
 ---
 
+## Resolution (backend lead, 2026-08-28)
+
+Recorded after the review, against the findings as written. Nothing above was edited to match an
+outcome; the review stands as it was filed.
+
+| | finding | outcome |
+|---|---|---|
+| B1 | no rate limit on any GET route | **fixed** in PR #31 - and the cause was larger than the finding, see below |
+| B2 | rate-limit key defeated by a repeated `X-Forwarded-For` header | **fixed** in PR #31 |
+| B3 | non-ASCII `ADMIN_TOKEN` bricks the admin endpoint | **fixed** in PR #31 |
+| B4 | trustee names in the public repository's history | **risk accepted by the owner** - no rewrite |
+| N1 | nothing drains queued ingestion runs | **fixed** - the lead ruled it v1 |
+
+**B1 was worse than reported, and the reported fix would not have worked.** Setting the Limiter's
+`default_limits` changes nothing here: `SlowAPIMiddleware` resolves the handler through
+`route.matches(scope)` plus `hasattr(route, "endpoint")`, and this FastAPI version wraps an
+included router in an `_IncludedRouter` object that matches `Match.FULL` and carries no `endpoint`
+attribute. slowapi therefore finds no handler, and `_should_exempt` treats a `None` handler as
+**exempt** - so the middleware was passing every request through untouched. Measured with
+`default_limits` set: 61 consecutive GETs to `/v1/meta/enums`, all 200. The admin limit worked only
+because a route decorator is checked inside the endpoint and never went through the middleware.
+
+A middleware that announces a rate limit it cannot enforce is worse than no middleware, so it was
+removed. The read limit is a dependency applied to the v1 routers at include time, over the same
+Limiter and therefore the same storage. `/health` is deliberately outside it: Railway polls it,
+every request through Railway shares one rate-limit key, and 429ing the healthcheck would restart a
+healthy container - the rate limit taking the service down instead of protecting it.
+
+The `.isascii()` start-up restriction suggested for B3 was **not** added. Comparing bytes makes a
+non-ASCII token work correctly rather than crash, so refusing one at start-up would have been a new
+defect rather than a guard.
+
+The query-amplification half of B1 (`list_orgs` calling `_detail()` per row) is **not** fixed and
+is not tracked here as security - with the rate limit now real, the amplification is bounded. It
+belongs with the performance work.
+
+---
+
 ## The 8-point checklist
 
 ### 1. Admin token - PASS WITH NOTE
@@ -412,6 +450,28 @@ Four findings. All must be fixed before PO-5.
 
 ### B4. 52 trustee names are still published in the public repository's git history
 
+> **CLOSED - risk accepted by the repository owner, 2026-08-28.** No history rewrite. The
+> rationale: UK Charity Commission trustee data is a *public register*, published by the Commission
+> under the Open Government Licence v3.0, so republication is licensed rather than a disclosure of
+> anything the Commission has not already published itself. The files are out of the working tree
+> and gitignored, the probe that fetched them never persists trustee records, and the CI guard
+> prevents re-introduction. The finding below stands as written and is left unedited on purpose -
+> the analysis was correct, and the decision was made against it with the facts in view, which is
+> the record worth keeping. What changed is the accepted risk, not the assessment.
+>
+> Residual risk, stated plainly rather than argued away: the seven files remain reachable by SHA at
+> `f081415` and `585b925` for anyone who clones. The OGL covers the licensing question, not the
+> GDPR one - a public register does not make a German operator's republication of it automatically
+> lawful under Art. 6, and a trustee's erasure request under Art. 17 could not be satisfied without
+> the rewrite this decision declines. If a Datenschutz page is later written that claims no natural
+> persons are processed, that claim and this decision cannot both stand; revisit then.
+>
+> Guard as it stands: `git ls-files` check in CI, `.gitignore`, and a probe that never persists.
+> The CI gate's limitation noted in fix step 3 below is real - it tests HEAD, not history - but with
+> no purge planned there is nothing for a history check to enforce beyond what the ls-files gate
+> already prevents.
+
+
 - **Where:** commits `f081415` and `585b925`, both ancestors of `origin/main`; seven files under
   `data/raw/ukcc_api/charitytrusteeinformation_*.json`. Ineffective guard at
   `.github/workflows/ci.yml:119`.
@@ -429,7 +489,7 @@ Four findings. All must be fixed before PO-5.
   not ingest natural persons" and a `git log -p` away is exactly the kind of gap that costs a
   transparency project its credibility, and it is the one finding here that a journalist could find
   without reading code.
-- **Fix:** rewrite the history and force-push, then close the hole that let CI bless it.
+- **Fix (not taken - see the decision above):** rewrite the history and force-push, then close the hole that let CI bless it.
   1. `git filter-repo --path-glob 'data/raw/ukcc_api/charitytrusteeinformation_*.json' --invert-paths`
      (or BFG), on a fresh mirror clone, then force-push `main`. The repository is young, public and
      has no external contributors, so a rewrite is cheap now and only gets more expensive.
@@ -448,6 +508,16 @@ Ordered by how much they will cost if left. **N1 is not a security issue but is 
 blocker for the admin feature** - the lead should decide whether PO-5 ships with it.
 
 ### N1. Nothing drains queued ingestion runs
+
+> **FIXED 2026-08-28.** The lead's ruling: an admin endpoint that answers `accepted` and does
+> nothing is a lie in the API, so the drain is v1, not post-v1. `pipeline/queue.py` claims the
+> oldest queued run with `FOR UPDATE SKIP LOCKED`, marks it running, dispatches it through the
+> `JOBS` registry, and closes the row with its result; `pipeline/runs.py` grew `adopt_run` so the
+> job reports into the queued row rather than opening a second one beside it. Exposed as
+> `python -m pipeline.cli drain`, which is what the Railway cron calls. Nine tests in
+> `pipeline/tests/test_queue.py`, including the two this finding names: only `queued` rows are ever
+> claimed, and one failing job does not strand the runs queued behind it.
+
 
 `apps/api/app/routers/admin.py:60` writes `status="queued"`; `pipeline/runs.py:81` only ever writes
 `status="running"`. Grepping the pipeline package for the queued status returns comments and tests
