@@ -23,9 +23,12 @@ LOGGER_ROOT = "spenden"
 REDACTED = "[redacted]"
 
 # Fields the formatter must not copy out of the LogRecord into the JSON line.
+# color_message is uvicorn's: it duplicates the message with ANSI escape codes in it, and terminal
+# control codes in a structured log are junk at best and a terminal-injection vector at worst.
 _RESERVED = (
     "args,asctime,created,exc_text,filename,funcName,levelno,lineno,module,msecs,"
-    "msg,name,pathname,process,processName,relativeCreated,stack_info,thread,threadName,taskName"
+    "msg,name,pathname,process,processName,relativeCreated,stack_info,thread,threadName,taskName,"
+    "color_message"
 ).split(",")
 
 
@@ -43,6 +46,18 @@ class _RedactingFormatter(JsonFormatter):
         # Longest first: redacting a prefix before the full value would leave a tail behind.
         self._secrets = tuple(sorted((s for s in secrets if s), key=len, reverse=True))
 
+    def add_fields(
+        self,
+        log_data: dict[str, Any],
+        record: logging.LogRecord,
+        message_dict: dict[str, Any],
+    ) -> None:
+        super().add_fields(log_data, record, message_dict)
+        # Drop keys that are null for this record. The first real uvicorn run emitted
+        # "exc_info": null on every line, which is noise in a drain and makes grep-by-key useless.
+        for key in [k for k, value in log_data.items() if value is None]:
+            del log_data[key]
+
     def format(self, record: logging.LogRecord) -> str:
         line = super().format(record)
         for secret in self._secrets:
@@ -50,14 +65,22 @@ class _RedactingFormatter(JsonFormatter):
         return line
 
 
+UVICORN_LOGGERS = ("uvicorn", "uvicorn.error", "uvicorn.access")
+
+
 def configure_logging(
     level: str = "INFO",
     service: str = "api",
     secrets: list[str] | tuple[str, ...] = (),
+    capture_uvicorn: bool = False,
 ) -> None:
     """Install exactly one JSON handler on the `spenden` logger tree.
 
     Calling this twice is safe and does not double-log: the previous handlers are removed first.
+
+    capture_uvicorn routes uvicorn's own loggers through the same handler. Without it, production
+    logs are half JSON and half "INFO:     Started server process", which no drain can parse as
+    one stream.
     """
     logger = logging.getLogger(LOGGER_ROOT)
     for handler in list(logger.handlers):
@@ -79,6 +102,15 @@ def configure_logging(
     logger.setLevel(level.upper())
     # Never hand records to the root logger: it would print them a second time, unformatted.
     logger.propagate = False
+
+    for name in UVICORN_LOGGERS:
+        uvicorn_logger = logging.getLogger(name)
+        for existing in list(uvicorn_logger.handlers):
+            uvicorn_logger.removeHandler(existing)
+        if capture_uvicorn:
+            uvicorn_logger.addHandler(handler)
+            uvicorn_logger.setLevel(level.upper())
+            uvicorn_logger.propagate = False
 
 
 def get_logger(name: str) -> logging.Logger:

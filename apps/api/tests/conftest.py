@@ -7,11 +7,13 @@ create_all, and running `alembic upgrade head` into the same schema would collid
 from __future__ import annotations
 
 import os
-from collections.abc import Iterator
+from collections.abc import Callable, Iterator
 from pathlib import Path
 
 import psycopg
 import pytest
+from alembic import command
+from alembic.config import Config
 
 API_DIR = Path(__file__).resolve().parents[1]
 REPO = API_DIR.parents[1]
@@ -41,3 +43,24 @@ def scratch_db_url() -> Iterator[str]:
     yield _psycopg_url(base_sync_url(), SCRATCH_DB).replace("postgresql://", "postgresql+psycopg://", 1)
     with psycopg.connect(maintenance, autocommit=True) as conn:
         conn.execute(f'DROP DATABASE IF EXISTS "{SCRATCH_DB}" WITH (FORCE)')
+
+
+def _alembic_config(url: str) -> Config:
+    config = Config(str(API_DIR / "alembic.ini"))
+    config.set_main_option("script_location", str(API_DIR / "alembic"))
+    config.set_main_option("sqlalchemy.url", url)
+    return config
+
+
+@pytest.fixture(scope="session")
+def alembic_config() -> Callable[[str], Config]:
+    """Builds an Alembic config pointed at a given database. A fixture rather than an import,
+    so the test modules do not have to make `tests` an importable package."""
+    return _alembic_config
+
+
+@pytest.fixture(scope="session")
+def migrated(scratch_db_url: str) -> str:
+    """The scratch database at head. Shared by the migration tests and the API tests."""
+    command.upgrade(_alembic_config(scratch_db_url), "head")
+    return scratch_db_url
