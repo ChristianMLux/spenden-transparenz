@@ -6,6 +6,7 @@ which is the failure mode that only shows up in production otherwise.
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 import pytest
@@ -87,3 +88,51 @@ def test_downgrade_and_upgrade_again_is_clean(scratch_db_url: str, migrated: str
         engine.dispose()
     assert remaining == set(), f"downgrade left tables behind: {sorted(remaining)}"
     command.upgrade(config, "head")
+
+
+def test_no_enum_check_has_drifted_from_the_models(migrated: str):
+    """Every CHECK in a migrated database must say what the models say.
+
+    Alembic diffs whether a constraint exists, not what its expression contains, so adding a value
+    to an enum in core.enums leaves the database's CHECK untouched and autogenerate reports no
+    change. It has happened three times here. The last one - "coordination" - would have crashed
+    ingest_orgs on real data, because two records were already classified with it.
+
+    Comparing the members rather than the text keeps this immune to how Postgres chooses to
+    normalise an expression it stores.
+    """
+    expected = {
+        constraint.name: str(constraint.sqltext)
+        for table in Base.metadata.tables.values()
+        for constraint in table.constraints
+        if hasattr(constraint, "sqltext") and (constraint.name or "").startswith("ck_")
+    }
+
+    engine = sa.create_engine(migrated)
+    try:
+        with engine.connect() as conn:
+            actual = dict(
+                conn.execute(
+                    sa.text(
+                        "select c.conname, pg_get_constraintdef(c.oid) from pg_constraint c"
+                        " join pg_class t on t.oid = c.conrelid"
+                        " where c.contype = 'c' and t.relnamespace = 'public'::regnamespace"
+                    )
+                ).all()
+            )
+    finally:
+        engine.dispose()
+
+    def members(text: str) -> set[str]:
+        return set(re.findall(r"'([a-z_]+)'::text", text)) or set(re.findall(r"'([a-z_]+)'", text))
+
+    drifted = []
+    for name, sqltext in sorted(expected.items()):
+        if name not in actual:
+            drifted.append(f"{name}: in the models, missing from the database")
+            continue
+        in_model, in_db = members(sqltext), members(actual[name])
+        if in_model != in_db:
+            drifted.append(f"{name}: model-only={sorted(in_model - in_db)} db-only={sorted(in_db - in_model)}")
+
+    assert drifted == [], "a migration is missing for these constraints: " + "; ".join(drifted)
