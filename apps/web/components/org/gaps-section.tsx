@@ -56,7 +56,10 @@ export function GapsSection({ org }: { org: OrgDetail }) {
       {org.data_gaps.length === 0 ? (
         <p className="text-base text-ink">{t("empty")}</p>
       ) : (
-        <div className="flex flex-col gap-4">
+        // Two columns (BRIEF, "Amtsblatt"): a CSS grid rather than multi-column text, so
+        // a group's own <h3> and <ul> never split across the column break the way
+        // `columns-2` would risk with a group that starts near the bottom of one column.
+        <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
           {GAP_REASON_ORDER.filter((reason) => groups[reason].length > 0).map((reason) => (
             <div key={reason}>
               <h3 className="text-base text-ink">{t(`groupHeading.${reason}`)}</h3>

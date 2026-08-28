@@ -121,6 +121,12 @@ export default async function BoardPage() {
     optionLabel,
     removeChipLabel,
     districtsLabel: t("districtsLabel"),
+    columns: {
+      organisation: t("columns.organisation"),
+      reaction: t("columns.reaction"),
+      location: t("columns.location"),
+      source: t("columns.source"),
+    },
   };
 
   // ---------------------------------------------------------------------
@@ -139,14 +145,17 @@ export default async function BoardPage() {
 
   return (
     <div>
+      {/* The crisis title and its GLIDE id already carry full visual weight in the
+          masthead sub-strip (SiteHeader, on every page); this h1 is the page's own
+          required heading, not a second display of the same identity, so it stays
+          compact rather than repeating the mono GLIDE line underneath it again. */}
       <h1 className="text-2xl">{crisisName}</h1>
-      <p className="mt-1 font-mono text-xs text-muted">{board.crisis.glide_id}</p>
 
-      <p className="mt-4 max-w-[68ch] text-base text-ink">
+      <p className="mt-2 max-w-[68ch] text-base text-ink">
         {t("scopeLine1")} {t("scopeLine2")}
       </p>
 
-      <div className="mt-6">
+      <div className="mt-4">
         <BoardExplorer
           board={board}
           rowNodes={rowNodes}

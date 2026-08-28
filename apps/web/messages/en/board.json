@@ -56,6 +56,12 @@
     "searchedText": "ReliefWeb reports on the flood, the organisation's own website, and Nepalese press."
   },
   "viewOrg": "View all information on this organisation",
+  "columns": {
+    "organisation": "Organisation",
+    "reaction": "Response",
+    "location": "Location",
+    "source": "Source and date"
+  },
   "chronological": {
     "reportedBy": "reported by",
     "noDate": "No date"

@@ -30,11 +30,10 @@ export function OrgHeader({ org }: { org: OrgDetail }) {
     }
   };
 
-  const seatText = org.hq_city
-    ? t("seat", { place: `${org.hq_city}, ${countryName(org.hq_country)}` })
-    : t("seatCountryOnly", { country: countryName(org.hq_country) });
-
+  const seatValue = org.hq_city ? `${org.hq_city}, ${countryName(org.hq_country)}` : countryName(org.hq_country);
   const websiteDomain = domainOf(org.website);
+  const metaRowClass = "flex min-h-11 flex-col justify-center gap-1 md:flex-row md:items-baseline md:gap-3";
+  const metaLabelClass = "text-sm text-muted md:w-32 md:shrink-0";
 
   return (
     <OrgSection
@@ -49,66 +48,76 @@ export function OrgHeader({ org }: { org: OrgDetail }) {
         />
       }
     >
-      <dl className="flex flex-col gap-2 text-base text-ink">
-        {org.local_script.value ? (
-          <div className="flex min-h-11 flex-wrap items-center gap-2">
-            <dd className="flex flex-wrap items-center gap-2 text-xl">
-              <span lang="ne">{org.local_script.value}</span>
-              <Datum
-                datum={org.local_script}
-                field={t("localScriptField")}
-                variant="inline"
-                render={() => null}
-                id="local-script"
-              />
-            </dd>
+      {/* The identity strip (BRIEF, "Amtsblatt"): everything about who the organisation
+          is, on the page's single warm tint, as a two-column meta grid rather than a
+          flat stack. Local-script name and aliases run full width (md:col-span-2) since
+          neither is a short label/value pair the way type, seat, website and
+          last-updated are. */}
+      <div className="bg-tint p-4">
+        <dl className="grid grid-cols-1 gap-x-8 gap-y-3 text-base text-ink md:grid-cols-2">
+          {org.local_script.value ? (
+            <div className="flex min-h-11 flex-wrap items-center gap-2 md:col-span-2">
+              <dd className="flex flex-wrap items-center gap-2 text-xl">
+                <span lang="ne">{org.local_script.value}</span>
+                <Datum
+                  datum={org.local_script}
+                  field={t("localScriptField")}
+                  variant="inline"
+                  render={() => null}
+                  id="local-script"
+                />
+              </dd>
+            </div>
+          ) : null}
+
+          {org.legal_name.value && org.legal_name.value !== org.name ? (
+            <div className={`${metaRowClass} md:col-span-2`}>
+              <dt className={metaLabelClass}>{t("legalNameLabel")}</dt>
+              <dd>
+                <Datum
+                  datum={org.legal_name}
+                  field={t("legalNameLabel")}
+                  variant="inline"
+                  id="legal-name"
+                />
+              </dd>
+            </div>
+          ) : null}
+
+          {org.aliases.length > 0 ? (
+            <div className="md:col-span-2">
+              <dt className="inline text-sm text-muted">{t("aliasesLabel")}: </dt>
+              <dd className="inline">{org.aliases.join(", ")}</dd>
+            </div>
+          ) : null}
+
+          <div className={metaRowClass}>
+            <dt className={metaLabelClass}>{t("typeLabel")}</dt>
+            <dd>{tCommon(`orgType.${org.org_type}`)}</dd>
           </div>
-        ) : null}
 
-        {org.legal_name.value && org.legal_name.value !== org.name ? (
-          <div className="flex min-h-11 flex-wrap items-center gap-x-2 gap-y-1">
-            <dt className="text-sm text-muted">{t("legalNameLabel")}</dt>
-            <dd>
-              <Datum
-                datum={org.legal_name}
-                field={t("legalNameLabel")}
-                variant="inline"
-                id="legal-name"
-              />
-            </dd>
+          <div className={metaRowClass}>
+            <dt className={metaLabelClass}>{t("seatLabel")}</dt>
+            <dd>{seatValue}</dd>
           </div>
-        ) : null}
 
-        {org.aliases.length > 0 ? (
-          <div>
-            <dt className="inline text-sm text-muted">{t("aliasesLabel")}: </dt>
-            <dd className="inline">{org.aliases.join(", ")}</dd>
+          {org.website ? (
+            <div className={metaRowClass}>
+              <dt className={metaLabelClass}>{t("websiteLabel")}</dt>
+              <dd>
+                <a href={org.website} rel="noopener" className="underline">
+                  {websiteDomain ?? org.website}
+                </a>
+              </dd>
+            </div>
+          ) : null}
+
+          <div className={metaRowClass}>
+            <dt className={metaLabelClass}>{t("lastUpdatedLabel")}</dt>
+            <dd className="text-muted">{formatDate(org.last_updated, locale)}</dd>
           </div>
-        ) : null}
-
-        <div>
-          <dd>{tCommon(`orgType.${org.org_type}`)}</dd>
-        </div>
-
-        <div>
-          <dd>{seatText}</dd>
-        </div>
-
-        {org.website ? (
-          <div>
-            <dt className="sr-only">{t("website")}</dt>
-            <dd>
-              <a href={org.website} rel="noopener" className="underline">
-                {websiteDomain ?? org.website}
-              </a>
-            </dd>
-          </div>
-        ) : null}
-
-        <div className="text-sm text-muted">
-          <dd>{t("lastUpdated", { date: formatDate(org.last_updated, locale) })}</dd>
-        </div>
-      </dl>
+        </dl>
+      </div>
     </OrgSection>
   );
 }

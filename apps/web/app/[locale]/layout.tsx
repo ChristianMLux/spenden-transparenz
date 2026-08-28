@@ -45,8 +45,8 @@ export default async function LocaleLayout({ children }: { children: React.React
             props, so the catalogue never crosses the wire. */}
         <NextIntlClientProvider messages={{}}>
         <SkipLink />
-        <SiteHeader crisis={crisis} siteName={t("siteName")} />
-        <main id="inhalt" tabIndex={-1} className="mx-auto w-full max-w-[80rem] flex-1 px-4 py-6">
+        <SiteHeader crisis={crisis} siteName={t("siteName")} generatedAt={freshness.retrieved_at} />
+        <main id="inhalt" tabIndex={-1} className="mx-auto w-full max-w-[80rem] flex-1 px-4 pt-4 pb-6">
           {children}
         </main>
         <SiteFooter generatedAt={freshness.retrieved_at} />

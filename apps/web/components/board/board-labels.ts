@@ -51,4 +51,7 @@ export interface BoardLabels {
   /** Facet key to the full localised "remove this filter" sentence. */
   removeChipLabel: Record<string, string>;
   districtsLabel: string;
+  /** The board grid's persistent header row (BRIEF, "Amtsblatt"): Organisation |
+   * Reaktion | Ort | Quelle und Stand. */
+  columns: { organisation: string; reaction: string; location: string; source: string };
 }

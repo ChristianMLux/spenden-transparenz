@@ -18,6 +18,8 @@ import type { Chip } from "./filter-chips";
 import { FilterChips } from "./filter-chips";
 import type { FilterOption } from "./filter-group";
 import { FilterBar } from "./filter-bar";
+import type { FigureTile } from "./figure-strip";
+import { FigureStrip } from "./figure-strip";
 import { ResultCount } from "./result-count";
 import { SortSelect } from "./sort-select";
 
@@ -213,49 +215,30 @@ export function BoardExplorer({
     { key: "noResponse", text: labels.numberLine.noResponse },
   ];
 
+  const figureTiles: FigureTile[] = numberLine.map((n) => ({
+    key: n.key,
+    text: n.text,
+    href: `?${serializeFilters(targets[n.key]).toString()}`,
+    onSelect: () => setFilters(targets[n.key]),
+  }));
+
   return (
     <div>
-      <p className="flex flex-wrap gap-x-2 gap-y-1 text-base text-ink">
-        {numberLine.map((n, i) => (
-          <span key={n.key}>
-            <a
-              href={`?${serializeFilters(targets[n.key]).toString()}`}
-              onClick={(e) => {
-                e.preventDefault();
-                setFilters(targets[n.key]);
-              }}
-              className="text-accent underline-offset-2 hover:underline"
-            >
-              {n.text}
-            </a>
-            {i < numberLine.length - 1 && <span className="text-muted"> · </span>}
-          </span>
-        ))}
-      </p>
+      <FigureStrip tiles={figureTiles} />
 
-      <p className="mt-2 text-xs text-muted">
-        {labels.dataStand}
-        {" · "}
-        {/* A plain anchor with a server-precomputed href, not @/i18n/navigation's
-            Link: see board-labels.ts on sourcesHref for why. Permanently underlined,
-            not hover-only: this link sits inline in a sentence next to plain text of a
-            similar colour, and WCAG 1.4.1 (axe: link-in-text-block) requires more than
-            colour alone to tell the two apart. */}
-        <a href={labels.sourcesHref} className="text-accent underline underline-offset-2">
-          {labels.sourcesLink}
-        </a>
-      </p>
-
-      {/* The districts as plain links, where the locator drawing used to be. The drawing
-          was an invented outline of Nepal with district marks placed roughly, and on a
-          product whose whole claim is that nothing is invented, a fabricated map is the
-          worst possible first graphic. There is no attributable geometry in the repo, so
-          rather than redraw one from memory the names carry the same information and can
-          be sourced. A real outline is post-v1, from Natural Earth or GADM with its
-          licence. */}
-      <p className="mt-2 flex flex-wrap gap-x-2 gap-y-1 text-sm">
+      {/* The districts as plain links, where the locator drawing used to be, plus the
+          sources link, merged onto one line: DESIGN.md's own scope sentence already
+          says the same thing this page opens with, and the masthead sub-strip now
+          carries the data-stand timestamp, so this line only has to do one job. The
+          drawing this replaced was an invented outline of Nepal with district marks
+          placed roughly, and on a product whose whole claim is that nothing is
+          invented, a fabricated map is the worst possible first graphic. There is no
+          attributable geometry in the repo, so rather than redraw one from memory the
+          names carry the same information and can be sourced. A real outline is
+          post-v1, from Natural Earth or GADM with its licence. */}
+      <p className="mt-2 flex flex-wrap gap-x-2 gap-y-1 px-4 text-sm">
         <span className="text-muted">{labels.districtsLabel}</span>
-        {districtLinks.map((d, i) => (
+        {districtLinks.map((d) => (
           <span key={d.key}>
             <a
               href={`?${serializeFilters(d.filters).toString()}`}
@@ -267,18 +250,23 @@ export function BoardExplorer({
             >
               {d.label}
             </a>
-            {i < districtLinks.length - 1 && <span className="text-muted"> · </span>}
+            <span className="text-muted"> · </span>
           </span>
         ))}
+        <a href={labels.sourcesHref} className="text-accent underline underline-offset-2">
+          {labels.sourcesLink}
+        </a>
       </p>
 
-      <hr className="my-4 border-rule" />
+      <hr className="my-2 border-rule" />
 
       {/* Rail on the left, results beside it. Before this the filters ran the full width
           and the list began underneath them, so the first screen held no organisation at
-          all. */}
-      <div className="grid gap-6 xl:grid-cols-[16rem_1fr]">
-        <div className="xl:sticky xl:top-4 xl:self-start">
+          all. The rail's own warm-tint fill and right rule are the "filter rail" the
+          BRIEF specifies; xl:top-16 clears the 64px sticky band exactly, so the rail
+          settles flush under it rather than under empty space. */}
+      <div className="grid gap-6 xl:grid-cols-[15rem_1fr]">
+        <div className="xl:sticky xl:top-16 xl:self-start xl:border-r xl:border-rule xl:bg-tint xl:p-4">
         <FilterBar
           groups={groups}
           selected={selected}
@@ -327,7 +315,7 @@ export function BoardExplorer({
         chronologicalLabel={labels.tabs.chronological}
       />
 
-      <div className="mt-4 space-y-2">
+      <div className="mt-2 space-y-2">
         <FilterChips
           heading={labels.filters.selectedHeading}
           clearAllLabel={labels.filters.clearAll}
@@ -338,14 +326,20 @@ export function BoardExplorer({
         <ResultCount text={resultCountText} />
       </div>
 
-      <div className="mt-4">
+      <div className="mt-2">
         {filters.tab === "orgs" ? (
           <div>
-            {filteredResponders.map((r) => (
-              <div key={rowKey(r)} className="border-b border-rule py-4 first:pt-0 last:border-b-0">
-                {rowNodes[rowKey(r)]}
-              </div>
-            ))}
+            {/* The grid's persistent header row (BRIEF, "Amtsblatt"): 13px muted labels
+                over the same 4fr/5fr/2fr/3fr template every organisation row below it
+                uses, so the column edges line up exactly. md and up only, matching the
+                breakpoint responder-row.tsx switches its own layout at. */}
+            <div className="hidden border-b border-rule md:grid md:grid-cols-[4fr_5fr_2fr_3fr] md:gap-x-4 md:px-4 md:pb-2">
+              <span className="text-xs text-muted">{labels.columns.organisation}</span>
+              <span className="text-xs text-muted">{labels.columns.reaction}</span>
+              <span className="text-xs text-muted">{labels.columns.location}</span>
+              <span className="text-xs text-muted">{labels.columns.source}</span>
+            </div>
+            <div>{filteredResponders.map((r) => rowNodes[rowKey(r)])}</div>
           </div>
         ) : (
           <ChronologicalList

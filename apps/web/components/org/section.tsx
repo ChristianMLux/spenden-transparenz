@@ -5,6 +5,12 @@ import type { ReactNode } from "react";
  * space above (DESIGN.md 5.5), a heading that carries the section's accessible name, and
  * `break-inside-avoid` so a section never splits across a printed page. The first
  * section (the header) opts out of the top rule since it opens the page.
+ *
+ * Every heading is preceded by a 3px accent rule (BRIEF, "Amtsblatt"): a short bar in
+ * the single accent, aria-hidden since it carries no information a screen reader needs
+ * beyond the heading text itself. It is the one place other than the masthead band and
+ * the filter chips that colour appears on this page, and it marks a section the same
+ * way at the top of the org header as at the top of every section that follows.
  */
 export function OrgSection({
   headingId,
@@ -33,7 +39,8 @@ export function OrgSection({
       aria-labelledby={headingId}
       className={`break-inside-avoid ${first ? "" : "mt-8 border-t border-rule pt-8"}`}
     >
-      <div className="flex flex-wrap items-baseline justify-between gap-3">
+      <div className="h-[3px] w-10 bg-accent" aria-hidden="true" />
+      <div className="mt-2 flex flex-wrap items-baseline justify-between gap-3">
         <h2 id={headingId} className={`${headingClassName} text-ink`}>
           {heading}
         </h2>

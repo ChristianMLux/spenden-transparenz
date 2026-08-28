@@ -10,7 +10,11 @@
     "seatCountryOnly": "Based in: {country}",
     "website": "Website",
     "lastUpdated": "Last updated: {date}",
-    "legalNameLabel": "Registered name"
+    "legalNameLabel": "Registered name",
+    "typeLabel": "Organisation type",
+    "seatLabel": "Based in",
+    "websiteLabel": "Website",
+    "lastUpdatedLabel": "Last updated"
   },
   "response": {
     "heading": "Response to the flood",
