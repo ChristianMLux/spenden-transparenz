@@ -8,9 +8,8 @@ change.
 
 Signatures and the usage-block shape were read from the openai package actually pinned by this
 project's lockfile (openai==3.5.0, installed under .venv/Lib/site-packages/openai), not from
-memory: AsyncOpenAI(api_key=..., base_url=...), chat.completions.create(tools=[...],
-tool_choice={"type": "function", "function": {"name": ...}}) to force the tool call, and the
-response's usage.prompt_tokens / usage.completion_tokens.
+memory: AsyncOpenAI(api_key=..., base_url=...), chat.completions.create(response_format=...)
+for a schema the provider enforces, and usage.prompt_tokens / usage.completion_tokens.
 """
 
 from __future__ import annotations
@@ -24,7 +23,7 @@ from core.logging import get_logger
 from core.settings import Settings, get_settings
 from openai import AsyncOpenAI
 
-from pipeline.extract.prompt import PROMPT_VERSION, STATEMENT_TOOL, STATEMENT_TOOL_NAME, ReportInput, build_messages
+from pipeline.extract.prompt import PROMPT_VERSION, RESPONSE_FORMAT, ReportInput, build_messages
 
 log = get_logger("extract.client")
 
@@ -101,6 +100,28 @@ def _statements(raw: Any) -> list[dict[str, Any]]:
     return claims
 
 
+def _payload(content: str | None) -> dict[str, Any]:
+    """The response body as a dict, or an empty one.
+
+    A schema the provider enforces should make this unreachable, so a failure here is not a claim
+    that was rejected - it is the enforcement itself not holding, and it is logged at error level
+    rather than swallowed. Returning an empty payload rather than raising keeps one bad response
+    from ending a run that has already paid for every call before it.
+    """
+    if not content:
+        log.error("extract_response_empty")
+        return {}
+    try:
+        payload = json.loads(content)
+    except json.JSONDecodeError:
+        log.error("extract_response_not_json", extra={"preview": content[:200]})
+        return {}
+    if not isinstance(payload, dict):
+        log.error("extract_response_not_an_object", extra={"type": type(payload).__name__})
+        return {}
+    return payload
+
+
 async def extract(report: ReportInput, *, openai_client: AsyncOpenAI | None = None) -> ExtractionResult:
     """Call the model once for one report and return its claims plus cost.
 
@@ -114,16 +135,11 @@ async def extract(report: ReportInput, *, openai_client: AsyncOpenAI | None = No
     response = await active_client.chat.completions.create(
         model=settings.llm_model,
         messages=build_messages(report),
-        tools=[STATEMENT_TOOL],
-        tool_choice={"type": "function", "function": {"name": STATEMENT_TOOL_NAME}},
+        response_format=RESPONSE_FORMAT,
     )
 
-    claims: list[dict[str, Any]] = []
-    message = response.choices[0].message
-    if message.tool_calls:
-        for tool_call in message.tool_calls:
-            payload = json.loads(tool_call.function.arguments)
-            claims.extend(_statements(payload.get("statements")))
+    content = response.choices[0].message.content
+    claims = _statements(_payload(content).get("statements"))
 
     tokens_in = response.usage.prompt_tokens if response.usage else 0
     tokens_out = response.usage.completion_tokens if response.usage else 0

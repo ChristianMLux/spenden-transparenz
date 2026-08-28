@@ -148,3 +148,20 @@ other's database — surfacing as `ConnectionDoesNotExistError` and as rows vani
 and read, in test files neither worker had touched. Both WP-A and WP-B reported it rather than
 retrying until it went green, which is what made it diagnosable. Fixed in PR #8: each checkout
 gets its own database, named from a hash of the repository root.
+
+## The gate writes a note that nothing stores
+
+`gate()` records why it dropped an amount - "not supported by the quote as written", or, since
+PR #26, "a number with no currency code is a count, not a sum of money". It writes that reason into
+`claim["note"]`. `_build_row` does not carry `note` into the row, and `response_statement` has no
+`note` column at all, so the sentence is computed once and thrown away.
+
+Nothing is wrong on the board today: a statement whose number was stripped still shows the quote
+that contains the number, and `amount` is the money field, so an empty one is the honest answer.
+What is missing is the audit trail. A statement that never had a number and a statement that had
+one taken away from it are indistinguishable after the fact, which makes it impossible to measure
+how often the model puts a non-monetary figure in a money field without re-reading the run logs.
+
+Not fixed in v1: adding a column and a migration to store a sentence nobody reads yet is a worse
+trade than leaving the gap documented. It belongs with the other post-v1 items, and it should be
+decided together with whether `warnings[]`-style provenance notes ever surface on a statement.
