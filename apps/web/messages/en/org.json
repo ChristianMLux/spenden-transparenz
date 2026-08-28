@@ -142,5 +142,9 @@
     "linkLabel": "Go to corrections",
     "mailLabel": "Report an error by email",
     "mailSubject": "Correction: {orgId} ({date})"
+  },
+  "donation": {
+    "heading": "Donating to this organisation",
+    "empty": "No official donation page on this organisation's own domain was found for this organisation."
   }
 }
