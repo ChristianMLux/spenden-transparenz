@@ -95,7 +95,9 @@
     "quote": "connects medical care and outreach to the country's hardest-to-reach areas",
     "retrieved_at": "2026-08-28",
     "verification": "third_party_reported",
-    "note": "described by funder (Direct Relief), not found on Mountain Heart Nepal's own site/social media"
+    "note": "described by funder (Direct Relief), not found on Mountain Heart Nepal's own site/social media",
+    "activity_type": "medical",
+    "amount_basis": "reported"
    }
   ],
   "financial_transparency": {
@@ -425,7 +427,9 @@
     "quote": "local partners including Community Self Reliance Centre (CSRC)",
     "retrieved_at": "2026-08-28",
     "verification": "third_party_reported",
-    "note": "role described by CARE Nepal, not confirmed on CSRC's own site; no CSRC-authored statement about the flood was found"
+    "note": "role described by CARE Nepal, not confirmed on CSRC's own site; no CSRC-authored statement about the flood was found",
+    "activity_type": "coordination",
+    "amount_basis": "reported"
    }
   ],
   "financial_transparency": {
@@ -735,7 +739,9 @@
     "quote": "A devastating flood originating from the China-Tibet border has caused significant loss of life and property across Rasuwa",
     "retrieved_at": "2026-08-28",
     "verification": "self_reported",
-    "note": "an appeal for support, not confirmation of a completed distribution"
+    "note": "an appeal for support, not confirmation of a completed distribution",
+    "activity_type": "appeal_launched",
+    "amount_basis": "appeal"
    }
   ],
   "financial_transparency": {
@@ -907,7 +913,9 @@
     "quote": "A team of relief workers has already reached Nuwakot, where they are assessing the situation on the ground, identifying urgent needs",
     "retrieved_at": "2026-08-28",
     "verification": "third_party_reported",
-    "note": "source (organiser.org) is an RSS/HSS-affiliated Indian outlet; corroborated independently by Nepali outlet dharananews.com"
+    "note": "source (organiser.org) is an RSS/HSS-affiliated Indian outlet; corroborated independently by Nepali outlet dharananews.com",
+    "activity_type": "relief_distribution",
+    "amount_basis": "reported"
    },
    {
     "what": "Began rescue work in a flood-affected area, per Nepali press",
@@ -921,7 +929,9 @@
     "quote": "बाढी प्रभावित क्षेत्रमा हिन्दू स्वयंसेवक संघ नेपालद्वारा उद्धार कार्य प्रारम्भ",
     "retrieved_at": "2026-08-28",
     "verification": "third_party_reported",
-    "note": null
+    "note": null,
+    "activity_type": "search_and_rescue",
+    "amount_basis": "reported"
    }
   ],
   "financial_transparency": {
@@ -1087,7 +1097,9 @@
     "quote": "हिन्दू स्वयंसेवक संघ नेपाल, विश्व हिन्दू परिषद् नेपाल लगायतका संस्थाका स्वयंसेवकहरू उद्धार, सेवा तथा राहत कार्यका लागि प्रभावित क्षेत्रमा परिचालित",
     "retrieved_at": "2026-08-28",
     "verification": "third_party_reported",
-    "note": null
+    "note": null,
+    "activity_type": "search_and_rescue",
+    "amount_basis": "reported"
    }
   ],
   "financial_transparency": {
@@ -1251,7 +1263,9 @@
     "quote": "preparing to receive injured patients evacuated from the hardest-hit communities",
     "retrieved_at": "2026-08-28",
     "verification": "third_party_reported",
-    "note": "described via funder Direct Relief; the hospital's own site could not be reached this session"
+    "note": "described via funder Direct Relief; the hospital's own site could not be reached this session",
+    "activity_type": "medical",
+    "amount_basis": "reported"
    }
   ],
   "financial_transparency": {
@@ -1416,7 +1430,9 @@
     "quote": "सहयोग तथा राहतका लागि हरसम्भव सहयोग, समन्वय र सहकार्यका लागि ओरेक प्रतिवद्धता व्यक्त गर्दछ",
     "retrieved_at": "2026-08-28",
     "verification": "self_reported",
-    "note": "an appeal/commitment statement calling on others to unite, not confirmation of a completed distribution — no items distributed or people reached are stated"
+    "note": "an appeal/commitment statement calling on others to unite, not confirmation of a completed distribution — no items distributed or people reached are stated",
+    "activity_type": "appeal_launched",
+    "amount_basis": "appeal"
    }
   ],
   "financial_transparency": {
@@ -1581,7 +1597,9 @@
     "quote": "गैरआवासीय नेपाली संघ (एनआरएनए)ले तत्काल ५ करोड रुपैयाँ सहयोग गर्ने घोषणा गरेको थियो",
     "retrieved_at": "2026-08-28",
     "verification": "third_party_reported",
-    "note": "amount is a pledge/announcement, not confirmed disbursement"
+    "note": "amount is a pledge/announcement, not confirmed disbursement",
+    "activity_type": "funding_pledged",
+    "amount_basis": "pledged"
    },
    {
     "what": "Sent a team with relief materials (food, health supplies, medicine) to affected areas",
@@ -1596,7 +1614,9 @@
     "quote": "रसुवा बाढी : एनआरएनए टोली राहत लिएर जाने",
     "retrieved_at": "2026-08-28",
     "verification": "third_party_reported",
-    "note": null
+    "note": null,
+    "activity_type": "relief_distribution",
+    "amount_basis": "reported"
    }
   ],
   "financial_transparency": {
@@ -1757,7 +1777,9 @@
     "quote": "to support relief and rehabilitation efforts for citizens affected by natural disasters",
     "retrieved_at": "2026-08-28",
     "verification": "third_party_reported",
-    "note": "club president Govindhprasad Bhusal quoted; club is based in Rupandehi district, outside the flood zone itself"
+    "note": "club president Govindhprasad Bhusal quoted; club is based in Rupandehi district, outside the flood zone itself",
+    "activity_type": "funding_pledged",
+    "amount_basis": "pledged"
    }
   ],
   "financial_transparency": {
@@ -1923,7 +1945,9 @@
     "quote": null,
     "retrieved_at": "2026-08-28",
     "verification": "third_party_reported",
-    "note": "the fetch tool returned an English paraphrase ('reach flood-affected areas and directly participate in rescue, relief distribution and necessary assistance') rather than an extracted verbatim Nepali sentence, so no quote field is recorded; only a phone contact (9851269100) was given, no website or social media, no registration status"
+    "note": "the fetch tool returned an English paraphrase ('reach flood-affected areas and directly participate in rescue, relief distribution and necessary assistance') rather than an extracted verbatim Nepali sentence, so no quote field is recorded; only a phone contact (9851269100) was given, no website or social media, no registration status",
+    "activity_type": "presence_declared",
+    "amount_basis": "reported"
    }
   ],
   "financial_transparency": {

@@ -105,7 +105,9 @@
         "quote": "Menschen, die ihr Zuhause durch die Fluten verloren haben, erhalten dringend benötigte Hilfsgüter wie Trinkwasser, Planen, Decken und Schlafmatten.",
         "retrieved_at": "2026-08-28",
         "verification": "self_reported",
-        "note": "No page date/timestamp; no distribution quantities or disbursed amounts published; donation account given (IBAN DE63 3702 0500 0005 0233 07) but that is a call, not a disbursement"
+        "note": "No page date/timestamp; no distribution quantities or disbursed amounts published; donation account given (IBAN DE63 3702 0500 0005 0233 07) but that is a call, not a disbursement",
+        "activity_type": "relief_distribution",
+        "amount_basis": "reported"
       }
     ],
     "financial_transparency": {
@@ -278,7 +280,9 @@
         "quote": "100.000 Euro aus unserem Nothilfefonds",
         "retrieved_at": "2026-08-28",
         "verification": "self_reported",
-        "note": "Described as \"in einem ersten Schritt\" (as a first step) — a fund allocation, not confirmed on-the-ground distribution; page gives no distribution details"
+        "note": "Described as \"in einem ersten Schritt\" (as a first step) — a fund allocation, not confirmed on-the-ground distribution; page gives no distribution details",
+        "activity_type": "funding_pledged",
+        "amount_basis": "released"
       }
     ],
     "financial_transparency": {
@@ -458,7 +462,9 @@
         "quote": "Aus Sicherheitsgründen mussten wir unsere Aktivitäten dort vorübergehend pausieren.",
         "retrieved_at": "2026-08-28",
         "verification": "self_reported",
-        "note": "This is a pause of existing programming, not yet a described emergency-response activity; no relief distribution described on the page as of retrieval"
+        "note": "This is a pause of existing programming, not yet a described emergency-response activity; no relief distribution described on the page as of retrieval",
+        "activity_type": "presence_declared",
+        "amount_basis": "reported"
       }
     ],
     "financial_transparency": {
@@ -622,7 +628,9 @@
         "quote": "Sturzflut in Nepal: \"Aktion Deutschland Hilft\" stellt 100.000 Euro bereit / Hilfsorganisationen im Bündnis starten Nothilfe und verschaffen sich Zugang zu der betroffenen Region",
         "retrieved_at": "2026-08-28",
         "verification": "third_party_reported",
-        "note": "Donation account: IBAN DE62 3702 0500 0000 1020 30, keyword \"Flut Nepal\" (per aktion-deutschland-hilft.de). Headline figure of 100,000 euros is from a press-portal release title, not yet cross-checked against ADH's own site copy for this specific Trishuli flood (2026); ADH's own flood page fetched returned older 2015 South Asia content, so this claim rests on the press-release headline only"
+        "note": "Donation account: IBAN DE62 3702 0500 0000 1020 30, keyword \"Flut Nepal\" (per aktion-deutschland-hilft.de). Headline figure of 100,000 euros is from a press-portal release title, not yet cross-checked against ADH's own site copy for this specific Trishuli flood (2026); ADH's own flood page fetched returned older 2015 South Asia content, so this claim rests on the press-release headline only",
+        "activity_type": "appeal_launched",
+        "amount_basis": "reported"
       }
     ],
     "financial_transparency": {
@@ -812,7 +820,9 @@
         "quote": "Caritas international stellt 50.000 Euro Soforthilfe bereit.",
         "retrieved_at": "2026-08-28",
         "verification": "self_reported",
-        "note": "Second quote: \"Caritas Nepal plant Unterstützung mit Lebensmitteln und den Betrieb von Gemeinschaftsküchen, Haushaltwaren, provisorischen Unterkünften, Solarlampen, temporären Lernzentren sowie psychosozialer Unterstützung.\" — this is a plan (\"plant\"), not yet confirmed disbursement; access to some areas remains restricted per the page"
+        "note": "Second quote: \"Caritas Nepal plant Unterstützung mit Lebensmitteln und den Betrieb von Gemeinschaftsküchen, Haushaltwaren, provisorischen Unterkünften, Solarlampen, temporären Lernzentren sowie psychosozialer Unterstützung.\" — this is a plan (\"plant\"), not yet confirmed disbursement; access to some areas remains restricted per the page",
+        "activity_type": "funding_pledged",
+        "amount_basis": "released"
       }
     ],
     "financial_transparency": {
@@ -992,7 +1002,9 @@
         "quote": "Nothilfe wird vorbereitet",
         "retrieved_at": "2026-08-28",
         "verification": "self_reported",
-        "note": "Page explicitly frames this as preparatory (\"Nothilfe wird vorbereitet\", \"prüfen erste Hilfsmaßnahmen\") — no distribution or amount confirmed yet; page last-updated date 28.08.2026"
+        "note": "Page explicitly frames this as preparatory (\"Nothilfe wird vorbereitet\", \"prüfen erste Hilfsmaßnahmen\") — no distribution or amount confirmed yet; page last-updated date 28.08.2026",
+        "activity_type": "assessment",
+        "amount_basis": "reported"
       }
     ],
     "financial_transparency": {
@@ -1463,7 +1475,9 @@
         "quote": "nach bisherigem Stand niemand aus unseren Projekten unmittelbar von der Katastrophe betroffen ist",
         "retrieved_at": "2026-08-28",
         "verification": "self_reported",
-        "note": "This is a donation-collection appeal (\"Fluthilfe Nepal\") coordinated via partner SDA; no confirmed distribution or amount collected/disbursed found"
+        "note": "This is a donation-collection appeal (\"Fluthilfe Nepal\") coordinated via partner SDA; no confirmed distribution or amount collected/disbursed found",
+        "activity_type": "presence_declared",
+        "amount_basis": "reported"
       }
     ],
     "financial_transparency": {
@@ -1619,7 +1633,9 @@
         "quote": "Hilfe von außen sehr, sehr notwendig",
         "retrieved_at": "2026-08-28",
         "verification": "third_party_reported",
-        "note": "Interview quote via ZDF, not the org's own site; the doctor-airlift detail was described by Deetjen but ZDF's summary does not specify which organisation coordinates the flights, so this is reported cautiously as Back to Life's stated involvement, not a fully independent confirmation. No amount or precise location given."
+        "note": "Interview quote via ZDF, not the org's own site; the doctor-airlift detail was described by Deetjen but ZDF's summary does not specify which organisation coordinates the flights, so this is reported cautiously as Back to Life's stated involvement, not a fully independent confirmation. No amount or precise location given.",
+        "activity_type": "medical",
+        "amount_basis": "reported"
       }
     ],
     "financial_transparency": {
@@ -1778,7 +1794,9 @@
         "quote": "Versorgung besonders verletzlicher Haushalte mit Notunterkünften, Hygieneartikeln, Trinkwasser und anderen lebenswichtigen Gütern",
         "retrieved_at": "2026-08-28",
         "verification": "self_reported",
-        "note": "Press release dated 27.08.2026, 11:02. Working with local partner organisations and Alliance2015 network partners. This is a fund allocation plus assessment-team deployment, described by Helvetas as preparing (\"bereitet ... vor\") emergency aid, not yet a confirmed completed distribution"
+        "note": "Press release dated 27.08.2026, 11:02. Working with local partner organisations and Alliance2015 network partners. This is a fund allocation plus assessment-team deployment, described by Helvetas as preparing (\"bereitet ... vor\") emergency aid, not yet a confirmed completed distribution",
+        "activity_type": "funding_pledged",
+        "amount_basis": "released"
       }
     ],
     "financial_transparency": {
