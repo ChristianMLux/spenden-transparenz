@@ -7,12 +7,27 @@ import { revalidateTag } from "next/cache";
 
 const TAG_PATTERN = /^(crisis|org):[a-z0-9-]+$/;
 
-// Refuse to start without the secret in production, rather than silently accepting
-// requests nobody can ever authorize (a wrong-looking failure) or, worse, accepting
-// every request because the auth check below degrades open. This runs once, when the
-// module is first loaded by the running server.
-if (process.env.NODE_ENV === "production" && !process.env.REVALIDATE_SECRET) {
-  throw new Error("REVALIDATE_SECRET must be set in production. Refusing to start this route.");
+// This was a module-level throw when NODE_ENV was production and the secret was missing.
+// It broke `next build`: the build collects page data with NODE_ENV=production and no
+// runtime environment, so the whole build failed on a route nobody had called yet. Build
+// time is not start time.
+//
+// The fail-closed behaviour is unchanged, because isAuthorized() already returns false
+// without a secret and an unconfigured deployment answers 401 to everything. What was
+// lost was the operator signal, so that is logged on the first request instead. Still 401
+// rather than a distinct status, deliberately: an unauthenticated caller learns nothing
+// about whether the endpoint is configured.
+let warnedUnconfigured = false;
+
+function warnIfUnconfigured(): void {
+  if (warnedUnconfigured || process.env.REVALIDATE_SECRET) return;
+  warnedUnconfigured = true;
+  console.error(
+    JSON.stringify({
+      event: "revalidate.unconfigured",
+      message: "REVALIDATE_SECRET is not set. Every revalidation request will be rejected.",
+    }),
+  );
 }
 
 /**
@@ -38,6 +53,7 @@ function isAuthorized(request: Request): boolean {
 }
 
 export async function POST(request: Request): Promise<Response> {
+  warnIfUnconfigured();
   if (!isAuthorized(request)) {
     return new Response("unauthorized", { status: 401 });
   }
