@@ -1,6 +1,23 @@
 import { brotliCompressSync, constants, gzipSync } from "node:zlib";
-import { describe, expect, it } from "vitest";
-import { getBoard, getCrisis, getFreshness, getOrg, listOrgIds } from "./api";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+
+// "use cache" functions call cacheTag()/cacheLife() from next/cache. Outside a real
+// Next.js build or server - which is exactly what this Vitest run is - there is no
+// "use cache" work-unit store for them to attach to, and the real implementations throw
+// ("cacheTag() can only be called inside a 'use cache' function"). Mocking the module is
+// the standard way to unit-test a "use cache" function directly: it proves the loader's
+// own logic without pulling in Next's server runtime, which no unit test in this repo
+// starts. revalidateTag is mocked too, for symmetry, even though this file never calls it.
+vi.mock("next/cache", () => ({
+  cacheTag: vi.fn(),
+  cacheLife: vi.fn(),
+  revalidateTag: vi.fn(),
+  updateTag: vi.fn(),
+  revalidatePath: vi.fn(),
+}));
+
+const { RawDatasetSchema, getBoard, getCorrections, getCrisis, getFreshness, getOrg, getSources, listOrgIds } =
+  await import("./api");
 
 const board = await getBoard("nepal-flut-2026");
 
@@ -114,11 +131,19 @@ describe("organisations", () => {
     expect(swc.datum.gap_reason).toBe("source_unreachable");
   });
 
-  it("marks a gap with no note as not_searched rather than claiming a search happened", async () => {
-    const club = await getOrg("the-rising-youth-club");
-    expect(club.legal_name.value).toBeNull();
-    expect(club.legal_name.note).toBeNull();
-    expect(club.legal_name.gap_reason).toBe("not_searched");
+  // Schema v0.2: gap_reason is read straight from the source record. The org used here
+  // (the-rising-youth-club) covered the "no note at all" case under the old note-derived
+  // guess; that org's legal_name now carries a research note in the real data (schema
+  // v0.2 populates one even for a not_searched field), so the guess and the real field
+  // would have agreed there by accident. unicef-nepal's local_script is the real
+  // not_searched case the old regex-based guess got wrong: its note reads "Not searched
+  // in this research pass." - non-empty text that the old derivation's empty-note check
+  // never matched, so it fell through to searched_not_found. Reading the real field
+  // fixes exactly that.
+  it("marks a gap as not_searched from the real field, not a guess from note text", async () => {
+    const unicef = await getOrg("unicef-nepal");
+    expect(unicef.local_script.value).toBeNull();
+    expect(unicef.local_script.gap_reason).toBe("not_searched");
   });
 
   it("marks a gap with a note as searched_not_found", async () => {
@@ -151,5 +176,143 @@ describe("freshness", () => {
   it("reports when the data was retrieved", async () => {
     const f = await getFreshness();
     expect(f.retrieved_at).toMatch(/^\d{4}-\d{2}-\d{2}/);
+  });
+});
+
+describe("sources and corrections", () => {
+  it("lists at least the two sources the board's board.json depends on", async () => {
+    const sources = await getSources();
+    expect(sources.map((s) => s.key)).toEqual(expect.arrayContaining(["reliefweb", "hapi"]));
+    expect(sources.every((s) => s.url.startsWith("https://"))).toBe(true);
+  });
+
+  it("seeds the two real sampling errors on day one, never an empty list", async () => {
+    const corrections = await getCorrections();
+    expect(corrections.length).toBeGreaterThanOrEqual(2);
+    const fields = corrections.map((c) => c.org_id);
+    expect(fields).toContain("non-resident-nepali-association");
+    expect(fields).toContain("unicef-nepal");
+    // date, organisation, field, before, after, source - every column populated.
+    for (const c of corrections) {
+      expect(c.date).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(c.org_name.length).toBeGreaterThan(0);
+      expect(c.field.length).toBeGreaterThan(0);
+      expect(c.before.length).toBeGreaterThan(0);
+      expect(c.after.length).toBeGreaterThan(0);
+      expect(c.source_url.startsWith("https://")).toBe(true);
+    }
+  });
+});
+
+describe("schema validation", () => {
+  it("fails on a record missing the required org_id, instead of rendering it as undefined", () => {
+    const malformed = {
+      generated_at: "2026-08-28T00:00:00Z",
+      orgs: [{ names: { common: "No Id Org" }, org_type: "ingo", hq: { country: "NP" }, registrations: [] }],
+    };
+    const result = RawDatasetSchema.safeParse(malformed);
+    expect(result.success).toBe(false);
+  });
+
+  it("fails on a gap with no gap_reason, instead of silently treating it as searched_not_found", () => {
+    const malformed = {
+      generated_at: "2026-08-28T00:00:00Z",
+      orgs: [
+        {
+          org_id: "no-gap-reason-org",
+          names: {
+            common: "No Gap Reason Org",
+            legal: { value: null, source_url: null, note: "not searched" },
+          },
+          org_type: "ingo",
+          hq: { country: "NP" },
+          registrations: [],
+          nepal_presence: {},
+          financial_transparency: {},
+          last_updated: "2026-08-28",
+        },
+      ],
+    };
+    const result = RawDatasetSchema.safeParse(malformed);
+    expect(result.success).toBe(false);
+  });
+
+  it("accepts a minimal, well-formed record", () => {
+    const minimal = {
+      generated_at: "2026-08-28T00:00:00Z",
+      orgs: [
+        {
+          org_id: "minimal-org",
+          names: { common: "Minimal Org" },
+          org_type: "ingo",
+          hq: { country: "NP" },
+          registrations: [],
+          nepal_presence: {},
+          financial_transparency: {},
+          last_updated: "2026-08-28",
+        },
+      ],
+    };
+    const result = RawDatasetSchema.safeParse(minimal);
+    expect(result.success).toBe(true);
+  });
+});
+
+describe("SPENDEN_API_URL switch", () => {
+  const originalFetch = global.fetch;
+
+  beforeEach(() => {
+    vi.resetModules();
+  });
+
+  afterEach(() => {
+    global.fetch = originalFetch;
+    delete process.env.SPENDEN_API_URL;
+  });
+
+  it("reads from the JSON fallback when SPENDEN_API_URL is unset", async () => {
+    delete process.env.SPENDEN_API_URL;
+    const fetchSpy = vi.fn();
+    global.fetch = fetchSpy as unknown as typeof fetch;
+    const { getSources: freshGetSources } = await import("./api");
+    const sources = await freshGetSources();
+    expect(fetchSpy).not.toHaveBeenCalled();
+    expect(sources.some((s) => s.key === "reliefweb")).toBe(true);
+  });
+
+  it("prefers the live API and validates its response when SPENDEN_API_URL is set", async () => {
+    process.env.SPENDEN_API_URL = "https://api.example.test";
+    const live = [
+      {
+        id: "reliefweb",
+        name: "ReliefWeb (live)",
+        url: "https://reliefweb.int/",
+        licence: "ReliefWeb terms of use",
+        retrieved_at: "2026-08-29",
+        default_verification: "third_party_reported",
+      },
+    ];
+    const fetchSpy = vi.fn(async () => new Response(JSON.stringify(live), { status: 200 }));
+    global.fetch = fetchSpy as unknown as typeof fetch;
+    const { getSources: freshGetSources } = await import("./api");
+    const sources = await freshGetSources();
+    expect(fetchSpy).toHaveBeenCalledWith("https://api.example.test/v1/meta/sources");
+    expect(sources).toEqual([
+      {
+        key: "reliefweb",
+        name: "ReliefWeb (live)",
+        url: "https://reliefweb.int/",
+        licence: "ReliefWeb terms of use",
+        retrieved_at: "2026-08-29",
+      },
+    ]);
+  });
+
+  it("throws a descriptive error when the live API returns a shape that fails validation", async () => {
+    process.env.SPENDEN_API_URL = "https://api.example.test";
+    const fetchSpy = vi.fn(async () => new Response(JSON.stringify([{ nonsense: true }]), { status: 200 }));
+    global.fetch = fetchSpy as unknown as typeof fetch;
+    const { getSources: freshGetSources } = await import("./api");
+    await expect(freshGetSources()).rejects.toThrow(/failed schema validation/);
   });
 });
