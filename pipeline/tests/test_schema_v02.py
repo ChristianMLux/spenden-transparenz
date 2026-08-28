@@ -38,8 +38,10 @@ def test_registration_items_may_also_carry_gap_reason():
     assert props["gap_reason"]["$ref"] == "#/$defs/gap_reason"
 
 
-def test_the_schema_announces_version_0_2():
-    assert "v0.2" in SCHEMA["title"]
+def test_the_schema_announces_its_version():
+    """gap_reason arrived in v0.2 and a nullable presence mode in v0.3; this asserts the contract
+    keeps announcing a version at all, not one particular number."""
+    assert "v0.3" in SCHEMA["title"]
 
 
 def test_schema_md_documents_gap_reason():

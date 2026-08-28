@@ -1689,12 +1689,13 @@
     "gap_reason": "searched_not_found"
    },
    "mode": {
-    "value": "unknown",
+    "value": null,
     "source_url": null,
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": "Could not verify this session whether/how GlobalGiving currently operates in Nepal (own staff vs. partner NGOs vs. none) — globalgiving.org blocked automated fetching (HTTP 403 on every attempt, including a second, independent attempt after the initial subagent's research) and the session's WebSearch budget was exhausted."
+    "note": "Could not verify this session whether/how GlobalGiving currently operates in Nepal (own staff vs. partner NGOs vs. none) — globalgiving.org blocked automated fetching (HTTP 403 on every attempt, including a second, independent attempt after the initial subagent's research) and the session's WebSearch budget was exhausted.",
+    "gap_reason": "searched_not_found"
    },
    "staff_count": {
     "value": null,

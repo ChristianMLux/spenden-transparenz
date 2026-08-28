@@ -1055,12 +1055,13 @@
     "gap_reason": "searched_not_found"
    },
    "mode": {
-    "value": "unknown",
+    "value": null,
     "source_url": null,
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "staff_count": {
     "value": null,
@@ -1723,12 +1724,13 @@
     "gap_reason": "searched_not_found"
    },
    "mode": {
-    "value": "unknown",
+    "value": null,
     "source_url": null,
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "staff_count": {
     "value": null,
@@ -1888,12 +1890,13 @@
     "gap_reason": "searched_not_found"
    },
    "mode": {
-    "value": "unknown",
+    "value": null,
     "source_url": null,
     "retrieved_at": "2026-08-28",
     "verification": "unverified",
     "quote": null,
-    "note": null
+    "note": "Searched in the 2026-08-28 research pass; not found.",
+    "gap_reason": "searched_not_found"
    },
    "staff_count": {
     "value": null,
