@@ -10,6 +10,13 @@
 // never needs translating because it is the reader's own words.
 export interface BoardLabels {
   numberLine: { orgs: string; statements: string; districts: string; noResponse: string };
+  /** Short, sentence-case words for the figures panel's four typographic tiles
+   *  (variant B, "Dossier"). Not the accessible name of the tile — that stays the full
+   *  numberLine sentence above, attached via aria-label — just the visible word under
+   *  the 40px numeral. */
+  figures: { panelLabel: string; orgs: string; statements: string; districts: string; noResponse: string };
+  /** The muted label line above the board's list panel (variant B, "Dossier"). */
+  list: { label: string };
   dataStand: string;
   sourcesLink: string;
   /** Precomputed locale-aware href ("/de/quellen" / "/en/sources"), so the client never

@@ -33,7 +33,7 @@ export function FilterChips({
           type="button"
           onClick={() => onRemove(c.key)}
           aria-label={c.removeLabel}
-          className="inline-flex min-h-11 items-center gap-1 border border-rule px-3 text-sm text-ink"
+          className="dossier-chip inline-flex min-h-11 items-center gap-1 px-3 text-sm"
           style={{ borderRadius: 2 }}
         >
           <span>{c.label}</span>

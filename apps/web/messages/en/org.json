@@ -4,6 +4,7 @@
     "description": "What is publicly evidenced about {name}: response to the flood, presence in Nepal, registrations and finances, every value with its source and retrieval date. No rating, no recommendation."
   },
   "header": {
+    "label": "Organisation",
     "localScriptField": "Name in local script",
     "aliasesLabel": "Also known as",
     "seat": "Based in: {place}",
@@ -13,12 +14,14 @@
     "legalNameLabel": "Registered name"
   },
   "response": {
+    "label": "Statements",
     "heading": "Response to the flood",
     "empty": "No public response statement found (as of {date}).",
     "searchedLabel": "What was searched:",
     "field": "Statement"
   },
   "presence": {
+    "label": "Presence",
     "heading": "Presence in Nepal",
     "sinceYear": "Present since",
     "mode": "Mode of operation",
@@ -32,6 +35,7 @@
     }
   },
   "registrations": {
+    "label": "Registers",
     "heading": "Registrations and identifiers",
     "registry": {
       "NP_SWC": "Social Welfare Council (Nepal)",
@@ -58,6 +62,7 @@
     }
   },
   "financial": {
+    "label": "Finances",
     "heading": "Financial transparency",
     "emptyIntro": "No public financial data was found for this organisation.",
     "emptySearched": "What was searched: an annual report, audited accounts and an IATI registration.",
@@ -83,10 +88,12 @@
     "auditedValue": "Audited accounts are published"
   },
   "warnings": {
+    "label": "Notices",
     "heading": "Public notices",
     "field": "Notice"
   },
   "gaps": {
+    "label": "Gaps",
     "heading": "What we do not know",
     "groupHeading": {
       "searched_not_found": "Searched for and not found",
@@ -133,6 +140,7 @@
     "researchNotesIntro": "The research note comes from the source work and is in English:"
   },
   "corrections": {
+    "label": "Correction",
     "heading": "Found an error?",
     "sentence": "If a value on this page is wrong or has changed, let us know.",
     "linkLabel": "Go to corrections",

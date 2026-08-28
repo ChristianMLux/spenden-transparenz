@@ -206,32 +206,60 @@ export function BoardExplorer({
       filters: { ...EMPTY, districts: [d.key] } as FilterState,
     }));
 
-  const numberLine: { key: keyof typeof targets; text: string }[] = [
-    { key: "orgs", text: labels.numberLine.orgs },
-    { key: "statements", text: labels.numberLine.statements },
-    { key: "districts", text: labels.numberLine.districts },
-    { key: "noResponse", text: labels.numberLine.noResponse },
+  const numberLine: { key: keyof typeof targets; text: string; count: number; shortLabel: string }[] = [
+    { key: "orgs", text: labels.numberLine.orgs, count: board.counts.orgs, shortLabel: labels.figures.orgs },
+    {
+      key: "statements",
+      text: labels.numberLine.statements,
+      count: board.counts.statements,
+      shortLabel: labels.figures.statements,
+    },
+    {
+      key: "districts",
+      text: labels.numberLine.districts,
+      count: board.counts.districts,
+      shortLabel: labels.figures.districts,
+    },
+    {
+      key: "noResponse",
+      text: labels.numberLine.noResponse,
+      count: board.counts.orgsWithoutResponse,
+      shortLabel: labels.figures.noResponse,
+    },
   ];
 
   return (
     <div>
-      <p className="flex flex-wrap gap-x-2 gap-y-1 text-base text-ink">
-        {numberLine.map((n, i) => (
-          <span key={n.key}>
+      {/* The figures panel: one dossier panel holding four typographic tiles, separated
+          by 1px vertical rules, a 40px tabular numeral over a 13px muted label. Each
+          tile stays the filter link it was before this variant; the accessible name is
+          still the full existing sentence ("44 Organisationen"), attached via
+          aria-label so the visible number and short label can be styled as two
+          separate lines without changing what a screen reader announces. */}
+      <div className="dossier-panel">
+        <span className="dossier-panel-label">{labels.figures.panelLabel}</span>
+        <div className="grid grid-cols-2 divide-x divide-rule sm:grid-cols-4">
+          {numberLine.map((n, i) => (
             <a
+              key={n.key}
               href={`?${serializeFilters(targets[n.key]).toString()}`}
               onClick={(e) => {
                 e.preventDefault();
                 setFilters(targets[n.key]);
               }}
-              className="text-accent underline-offset-2 hover:underline"
+              aria-label={n.text}
+              className={`block py-1 pr-4 hover:underline ${i === 0 ? "pl-0" : "pl-4"}`}
             >
-              {n.text}
+              <span aria-hidden="true" className="block text-2xl text-ink">
+                {n.count}
+              </span>
+              <span aria-hidden="true" className="mt-1 block text-xs text-muted">
+                {n.shortLabel}
+              </span>
             </a>
-            {i < numberLine.length - 1 && <span className="text-muted"> · </span>}
-          </span>
-        ))}
-      </p>
+          ))}
+        </div>
+      </div>
 
       <p className="mt-2 text-xs text-muted">
         {labels.dataStand}
@@ -272,13 +300,16 @@ export function BoardExplorer({
         ))}
       </p>
 
-      <hr className="my-4 border-rule" />
-
-      {/* Rail on the left, results beside it. Before this the filters ran the full width
-          and the list began underneath them, so the first screen held no organisation at
-          all. */}
-      <div className="grid gap-6 xl:grid-cols-[16rem_1fr]">
-        <div className="xl:sticky xl:top-4 xl:self-start">
+      {/* Rail on the left, the list panel beside it. Before this the filters ran the
+          full width and the list began underneath them, so the first screen held no
+          organisation at all. */}
+      <div className="mt-8 grid gap-6 xl:grid-cols-[16rem_1fr]">
+        <div className="dossier-rail xl:sticky xl:top-4 xl:self-start xl:border-r xl:border-rule">
+        {/* Hidden below md: on small screens the sheet-trigger button already carries
+            "Filter (n)" (FilterBar's own mobile branch), and a second "Filter" heading
+            above it would just repeat the word. This panel heading only earns its place
+            once the always-visible fieldsets are showing, at md and up. */}
+        <h2 className="mb-3 hidden text-lg text-ink md:block">{labels.filters.mobileTitle}</h2>
         <FilterBar
           groups={groups}
           selected={selected}
@@ -320,40 +351,44 @@ export function BoardExplorer({
         </div>
 
         <div className="min-w-0">
-      <BoardTabs
-        active={filters.tab}
-        onChange={(next) => setFilters({ ...filters, tab: next })}
-        orgsLabel={labels.tabs.orgs}
-        chronologicalLabel={labels.tabs.chronological}
-      />
-
-      <div className="mt-4 space-y-2">
-        <FilterChips
-          heading={labels.filters.selectedHeading}
-          clearAllLabel={labels.filters.clearAll}
-          chips={chips}
-          onRemove={removeChip}
-          onClearAll={() => setFilters({ ...EMPTY, tab: filters.tab })}
+      {/* The list panel: every organisation in this Krise's board is a record inside
+          this one filing. The word above the tabs names what the two tabs are two views
+          of. */}
+      <div className="dossier-panel">
+        <span className="dossier-panel-label">{labels.list.label}</span>
+        <BoardTabs
+          active={filters.tab}
+          onChange={(next) => setFilters({ ...filters, tab: next })}
+          orgsLabel={labels.tabs.orgs}
+          chronologicalLabel={labels.tabs.chronological}
         />
-        <ResultCount text={resultCountText} />
-      </div>
 
-      <div className="mt-4">
-        {filters.tab === "orgs" ? (
-          <div>
-            {filteredResponders.map((r) => (
-              <div key={rowKey(r)} className="border-b border-rule py-4 first:pt-0 last:border-b-0">
-                {rowNodes[rowKey(r)]}
-              </div>
-            ))}
-          </div>
-        ) : (
-          <ChronologicalList
-            statements={flattenStatements(filteredResponders)}
-            chronoNodes={chronoNodes}
-            dayLabels={dayLabels}
+        <div className="mt-4 space-y-2">
+          <FilterChips
+            heading={labels.filters.selectedHeading}
+            clearAllLabel={labels.filters.clearAll}
+            chips={chips}
+            onRemove={removeChip}
+            onClearAll={() => setFilters({ ...EMPTY, tab: filters.tab })}
           />
-        )}
+          <ResultCount text={resultCountText} />
+        </div>
+
+        <div className="mt-4">
+          {filters.tab === "orgs" ? (
+            <div className="divide-y divide-rule">
+              {filteredResponders.map((r) => (
+                <div key={rowKey(r)}>{rowNodes[rowKey(r)]}</div>
+              ))}
+            </div>
+          ) : (
+            <ChronologicalList
+              statements={flattenStatements(filteredResponders)}
+              chronoNodes={chronoNodes}
+              dayLabels={dayLabels}
+            />
+          )}
+        </div>
       </div>
         </div>
       </div>

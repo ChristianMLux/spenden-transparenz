@@ -66,10 +66,14 @@ export function FinancialsSection({ financials }: { financials: OrgDetail["finan
   );
 
   return (
-    <OrgSection headingId="financial-heading" heading={t("heading")}>
+    <OrgSection headingId="financial-heading" heading={t("heading")} label={t("label")}>
       {!hasFigures ? (
         <div className="flex flex-col gap-4">
-          <div className="flex max-w-[68ch] flex-col gap-2">
+          {/* The empty case is the designed case (DESIGN.md section 5): a tinted callout
+              with an accent left rule, no border box, no shadow. Applying the callout
+              device here, one level down from the panel it sits in, is the "record and
+              callout" repeat of the same left-rule language the variant is built on. */}
+          <div className="dossier-callout flex max-w-[68ch] flex-col gap-2">
             <p className="text-base text-ink">{t("emptyIntro")}</p>
             <p className="text-base text-ink">{t("emptySearched")}</p>
             <p className="text-base text-ink">{t("emptyNormal")}</p>

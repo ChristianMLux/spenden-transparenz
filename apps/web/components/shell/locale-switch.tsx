@@ -29,11 +29,17 @@ export function LocaleSwitch({
   locales,
   navLabel,
   labels,
+  inverted = false,
 }: {
   current: string;
   locales: readonly string[];
   navLabel: string;
   labels: Record<string, string>;
+  /** Variant B ("Dossier"): the masthead's first band is a fixed dark ink-blue in both
+   *  colour schemes (see --masthead in globals.css), so the switch renders in white
+   *  there regardless of theme rather than in the theme-switching --ink/--accent pair
+   *  it uses everywhere else. */
+  inverted?: boolean;
 }) {
   // On the server, and until hydration, each link points at the locale root. Always
   // correct, just less specific.
@@ -55,8 +61,8 @@ export function LocaleSwitch({
           aria-current={locale === current ? "true" : undefined}
           className={
             locale === current
-              ? "flex min-h-11 items-center text-ink no-underline"
-              : "flex min-h-11 items-center underline"
+              ? `flex min-h-11 items-center no-underline ${inverted ? "text-white" : "text-ink"}`
+              : `flex min-h-11 items-center underline ${inverted ? "text-white" : ""}`
           }
         >
           {labels[locale]}

@@ -7,6 +7,16 @@
     "districts": "{count, plural, one {# Distrikt} other {# Distrikte}}",
     "noResponse": "{count, plural, one {# ohne gefundene Reaktion} other {# ohne gefundene Reaktion}}"
   },
+  "figures": {
+    "panelLabel": "Kennzahlen",
+    "orgsLabel": "Organisationen",
+    "statementsLabel": "Belegte Meldungen",
+    "districtsLabel": "Distrikte",
+    "noResponseLabel": "Ohne Reaktion"
+  },
+  "list": {
+    "label": "Register"
+  },
   "dataStand": "Daten-Stand {date}",
   "sourcesLink": "Quellen und Lizenzen",
   "tabs": {

@@ -23,7 +23,7 @@ export function CorrectionsLink({ orgId }: { orgId: string }) {
   const mailtoHref = `mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent(subject)}`;
 
   return (
-    <OrgSection headingId="corrections-heading" heading={t("heading")}>
+    <OrgSection headingId="corrections-heading" heading={t("heading")} label={t("label")}>
       <p className="max-w-[68ch] text-base text-ink">{t("sentence")}</p>
       <p className="mt-2 flex flex-wrap gap-4 text-sm">
         <Link href="/korrekturen" className="underline">

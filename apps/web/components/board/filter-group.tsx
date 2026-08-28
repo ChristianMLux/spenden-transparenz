@@ -88,7 +88,7 @@ export function FilterGroup({
                   else next.delete(opt.key);
                   onChange(next);
                 }}
-                className="h-4 w-4 shrink-0 accent-accent"
+                className="dossier-checkbox"
                 data-testid={`${idPrefix}-${opt.key}`}
               />
               <span>

@@ -41,7 +41,7 @@ export function PresenceSection({ org }: { org: OrgDetail }) {
   };
 
   return (
-    <OrgSection headingId="presence-heading" heading={t("heading")}>
+    <OrgSection headingId="presence-heading" heading={t("heading")} label={t("label")}>
       <dl className="flex flex-col gap-3">
         <div className={PRESENCE_ROW_CLASS}>
           <dt className={PRESENCE_LABEL_CLASS}>{t("sinceYear")}</dt>

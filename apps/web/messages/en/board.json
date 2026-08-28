@@ -7,6 +7,16 @@
     "districts": "{count, plural, one {# district} other {# districts}}",
     "noResponse": "{count, plural, one {# without a found response} other {# without a found response}}"
   },
+  "figures": {
+    "panelLabel": "Key figures",
+    "orgsLabel": "Organisations",
+    "statementsLabel": "Evidenced statements",
+    "districtsLabel": "Districts",
+    "noResponseLabel": "No response"
+  },
+  "list": {
+    "label": "Register"
+  },
   "dataStand": "Data as of {date}",
   "sourcesLink": "Sources and licences",
   "tabs": {

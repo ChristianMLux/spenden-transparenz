@@ -32,7 +32,7 @@ export function ResponseSection({
   });
 
   return (
-    <OrgSection headingId="response-heading" heading={t("heading")}>
+    <OrgSection headingId="response-heading" heading={t("heading")} label={t("label")}>
       {sorted.length === 0 ? (
         <div className="flex flex-col gap-2">
           <p className="text-base text-ink">

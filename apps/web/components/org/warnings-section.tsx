@@ -24,7 +24,7 @@ export function WarningsSection({ warnings }: { warnings: OrgDetail["warnings"] 
   if (warnings.length === 0) return null;
 
   return (
-    <OrgSection headingId="warnings-heading" heading={t("heading")}>
+    <OrgSection headingId="warnings-heading" heading={t("heading")} label={t("label")}>
       <ul className="flex flex-col gap-4">
         {warnings.map((warning, index) => (
           <li key={`${warning.type}-${index}`} className="border-l-2 border-warn pl-3">

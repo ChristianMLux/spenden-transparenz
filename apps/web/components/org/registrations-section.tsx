@@ -60,7 +60,7 @@ export function RegistrationsSection({ registrations }: { registrations: Registr
   };
 
   return (
-    <OrgSection headingId="registrations-heading" heading={t("heading")}>
+    <OrgSection headingId="registrations-heading" heading={t("heading")} label={t("label")}>
       <dl className="flex flex-col gap-4">
         {registrations.map((registration, index) => {
           const name = registryName(registration.registry);

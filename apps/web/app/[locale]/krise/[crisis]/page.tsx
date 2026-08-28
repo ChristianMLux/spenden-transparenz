@@ -81,6 +81,14 @@ export default async function BoardPage() {
       districts: t("numbers.districts", { count: board.counts.districts }),
       noResponse: t("numbers.noResponse", { count: board.counts.orgsWithoutResponse }),
     },
+    figures: {
+      panelLabel: t("figures.panelLabel"),
+      orgs: t("figures.orgsLabel"),
+      statements: t("figures.statementsLabel"),
+      districts: t("figures.districtsLabel"),
+      noResponse: t("figures.noResponseLabel"),
+    },
+    list: { label: t("list.label") },
     dataStand: t("dataStand", { date: formatDataStand(board.generated_at, locale) }),
     sourcesLink: t("sourcesLink"),
     // Read directly from routing.pathnames (already-known, locale-keyed strings) rather

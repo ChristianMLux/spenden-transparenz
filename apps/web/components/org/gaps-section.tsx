@@ -52,7 +52,7 @@ export function GapsSection({ org }: { org: OrgDetail }) {
   }
 
   return (
-    <OrgSection headingId="gaps-heading" heading={t("heading")}>
+    <OrgSection headingId="gaps-heading" heading={t("heading")} label={t("label")}>
       {org.data_gaps.length === 0 ? (
         <p className="text-base text-ink">{t("empty")}</p>
       ) : (
@@ -60,11 +60,15 @@ export function GapsSection({ org }: { org: OrgDetail }) {
           {GAP_REASON_ORDER.filter((reason) => groups[reason].length > 0).map((reason) => (
             <div key={reason}>
               <h3 className="text-base text-ink">{t(`groupHeading.${reason}`)}</h3>
-              <ul className="mt-1 flex list-disc flex-col gap-1 pl-5">
+              {/* Two-column list per the variant brief: a CSS multi-column flow rather
+                  than a grid, since entries are single sentences of uneven length, not
+                  paired data. break-inside-avoid on each entry stops a sentence
+                  splitting across the column gap. */}
+              <ul className="mt-1 list-disc gap-x-8 pl-5 md:columns-2">
                 {groups[reason].map((gap) => {
                   const { text, english } = sentenceFor(gap);
                   return (
-                    <li key={gap} className="max-w-[68ch] text-sm text-ink">
+                    <li key={gap} className="mb-1 break-inside-avoid text-sm text-ink">
                       {text}
                       {english ? (
                         <>

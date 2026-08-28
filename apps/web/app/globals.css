@@ -35,6 +35,21 @@
   --warn: #E39684;
 }
 
+/* Variant B ("Dossier"): the masthead's first band is the one fixed brand mark on the
+   page, not a themed surface. It is deliberately NOT `--accent`: that token's dark-mode
+   value (#7FA6D4) is tuned to work as TEXT on a dark background (DESIGN.md 5.2), and
+   using it as a full-bleed band fill with white text measures ~2.1:1 there, well under
+   AA. `--masthead` instead carries the light theme's ink-blue in both schemes, which
+   measures 11.47:1 against white (computed with the same formula as scripts/contrast.mjs)
+   and satisfies "the same band, slightly lifted" for dark mode: the band itself does not
+   need to invert, because it was never part of the switching surface stack. This is a
+   deliberate deviation from token-only theming, recorded in the worker report.
+   Not in the :root, .light / .dark blocks scripts/contrast.mjs parses, so it does not
+   need to be duplicated there or satisfy the REQUIRED token list. */
+:root {
+  --masthead: #1F3A5F;
+}
+
 @media (prefers-color-scheme: dark) {
   html:not(.light):not(.dark) {
     --bg: #16161A;
@@ -92,6 +107,8 @@
   --font-sans: var(--font-public-sans), system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
   --font-deva: var(--font-noto-devanagari), sans-serif;
+
+  --color-masthead: var(--masthead);
 }
 
 @theme {
@@ -234,6 +251,133 @@
   @media print {
     .datum-expanded {
       display: block;
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------------------
+   Variant B ("Dossier"): one repeating device — a panel one step lighter than the page
+   (bg -> surface), a 3px accent rule on its left edge, a 13px muted label line above its
+   heading. It repeats at three depths: page section, record, and callout. That repeat is
+   the whole signature; nothing else on the page competes with it for attention.
+   ------------------------------------------------------------------------------------- */
+@layer components {
+  .dossier-panel {
+    background-color: var(--surface);
+    border-left: 3px solid var(--accent);
+    padding: 16px;
+  }
+
+  .dossier-panel-label {
+    display: block;
+    font-size: var(--text-xs);
+    line-height: var(--text-xs--line-height);
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  /* One organisation inside the board's list panel. Same left-rule language as the
+     panel, at record scale. The hover tint spans the full record (both columns) so a
+     reader can see where one filing ends and the next begins; it is mixed from --accent
+     at low strength rather than from --mark-doc-tint or --mark-open-tint, which
+     DESIGN.md section 4 hard-lines to the Datum chips only, never a row background. */
+  .dossier-record {
+    border-left: 3px solid var(--accent);
+    padding: 16px 16px 16px 20px;
+    min-height: 88px;
+  }
+
+  .dossier-record:hover {
+    background-color: color-mix(in srgb, var(--accent) 6%, transparent);
+  }
+
+  /* The filter rail: a panel with a subtle right rule instead of the shared left rule,
+     since it sits to the left of the list it filters rather than above a heading. The
+     rule itself is added by the caller as `xl:border-r` (see board-explorer.tsx), not
+     baked in here: below the xl breakpoint the rail stacks above the list instead of
+     beside it, and a right border on a full-width block would read as a stray line
+     rather than a rail edge. */
+  .dossier-rail {
+    background-color: var(--surface);
+    padding: 16px;
+  }
+
+  /* The financial "nothing published" callout: tinted, an accent left rule, no border
+     box and no shadow (DESIGN.md forbids both). Mixed from --accent, not from either
+     evidence tint, for the same reason as .dossier-record:hover. */
+  .dossier-callout {
+    background-color: color-mix(in srgb, var(--accent) 8%, var(--bg));
+    border-left: 3px solid var(--accent);
+    padding: 16px;
+  }
+
+  /* Checkboxes drawn with CSS instead of the browser default or a Radix/shadcn
+     primitive: DESIGN.md's lead decision on the brief's filter-styling line ("style the
+     existing native <input type=checkbox> with appearance:none plus a CSS-drawn tick").
+     Zero JavaScript, identical keyboard and label semantics, no icon dependency. */
+  .dossier-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    border: 1px solid var(--muted);
+    background-color: var(--surface);
+    position: relative;
+  }
+
+  .dossier-checkbox:checked {
+    background-color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .dossier-checkbox:checked::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid var(--bg);
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
+  }
+
+  .dossier-checkbox:disabled {
+    border-color: var(--rule);
+    background-color: var(--surface);
+    cursor: not-allowed;
+  }
+
+  .dossier-checkbox:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  /* Active filters as accent chips: a tint fill plus a 1px tint border, at least 24px
+     tall (DESIGN.md 8.2's own wording for the two evidence chips, reused here for the
+     filter chips, which are not an evidence mark and so are free to use --accent
+     directly rather than either mark tint). */
+  .dossier-chip {
+    background-color: color-mix(in srgb, var(--accent) 10%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--surface));
+    color: var(--accent);
+  }
+
+  /* Printed panels keep their left rule (it prints in black-ish ink and still marks the
+     device) but drop the tint fill: paper is the surface in print, not a colour. */
+  @media print {
+    .dossier-panel,
+    .dossier-rail {
+      background-color: transparent;
+    }
+
+    .dossier-record:hover {
+      background-color: transparent;
+    }
+
+    .dossier-callout {
+      background-color: transparent;
     }
   }
 }

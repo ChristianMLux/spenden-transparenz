@@ -41,6 +41,7 @@ export function OrgHeader({ org }: { org: OrgDetail }) {
       first
       headingId="org-name"
       heading={org.name}
+      label={t("label")}
       headingClassName="text-xl"
       headingExtra={
         <SourceToggleButton
@@ -49,9 +50,14 @@ export function OrgHeader({ org }: { org: OrgDetail }) {
         />
       }
     >
-      <dl className="flex flex-col gap-2 text-base text-ink">
+      {/* The identity header is the widest panel on the page (variant brief), so its
+          facts run in a two-column meta grid rather than a single stacked list. The
+          name in local script, the legal name and the alias line stay full width: they
+          are either display text or a sentence, and squeezing either into a half column
+          reads worse than the extra height of leaving them be. */}
+      <dl className="grid gap-x-8 gap-y-3 text-base text-ink md:grid-cols-2">
         {org.local_script.value ? (
-          <div className="flex min-h-11 flex-wrap items-center gap-2">
+          <div className="flex min-h-11 flex-wrap items-center gap-2 md:col-span-2">
             <dd className="flex flex-wrap items-center gap-2 text-xl">
               <span lang="ne">{org.local_script.value}</span>
               <Datum
@@ -66,7 +72,7 @@ export function OrgHeader({ org }: { org: OrgDetail }) {
         ) : null}
 
         {org.legal_name.value && org.legal_name.value !== org.name ? (
-          <div className="flex min-h-11 flex-wrap items-center gap-x-2 gap-y-1">
+          <div className="flex min-h-11 flex-wrap items-center gap-x-2 gap-y-1 md:col-span-2">
             <dt className="text-sm text-muted">{t("legalNameLabel")}</dt>
             <dd>
               <Datum
@@ -80,7 +86,7 @@ export function OrgHeader({ org }: { org: OrgDetail }) {
         ) : null}
 
         {org.aliases.length > 0 ? (
-          <div>
+          <div className="md:col-span-2">
             <dt className="inline text-sm text-muted">{t("aliasesLabel")}: </dt>
             <dd className="inline">{org.aliases.join(", ")}</dd>
           </div>
