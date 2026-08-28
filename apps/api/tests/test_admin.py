@@ -23,6 +23,16 @@ def _request_with_headers(headers: dict[str, str]) -> Request:
     return Request(scope)
 
 
+def _request_with_raw_headers(pairs: list[tuple[str, str]]) -> Request:
+    """A request whose headers may repeat a name, which `dict` cannot express."""
+    scope = {
+        "type": "http",
+        "headers": [(k.lower().encode(), v.encode()) for k, v in pairs],
+        "client": ("203.0.113.9", 12345),
+    }
+    return Request(scope)
+
+
 def test_rate_limit_key_uses_the_last_hop_when_there_is_no_proxy_chain():
     """X-Forwarded-For reads left to right as "client, proxy1, proxy2": with a single trusted
     proxy (Railway) directly in front of the app, the LAST entry is the one Railway itself
@@ -127,3 +137,57 @@ async def test_ingest_with_a_valid_token_but_an_unknown_job_is_404(client: Async
         assert r.status_code == 404
     finally:
         get_settings.cache_clear()
+
+
+def test_a_second_x_forwarded_for_header_line_cannot_change_the_key():
+    """X-Forwarded-For is a list header: RFC 7230 section 3.2.2 makes two header lines exactly
+    equivalent to one comma-joined line. Starlette's headers.get() returns only the FIRST line, so
+    reading the rightmost entry of that line reads the last element of the CALLER's own line - the
+    same bypass as trusting the leftmost, reached through a header shape the first fix did not
+    consider. uvicorn's own proxy-headers middleware joins every value before parsing; so must
+    this. Railway's line is appended last, so the rightmost entry across all lines is its own.
+    """
+    key = rate_limit_key(_request_with_raw_headers([("X-Forwarded-For", "1.2.3.4"), ("X-Forwarded-For", "9.9.9.9")]))
+    assert key == "9.9.9.9"
+
+
+def test_rotating_a_spoofed_second_header_line_still_yields_the_same_key():
+    """The attack itself: a fresh bucket per request defeats the 5/min admin limit entirely."""
+    first = rate_limit_key(_request_with_raw_headers([("X-Forwarded-For", "1.1.1.1"), ("X-Forwarded-For", "9.9.9.9")]))
+    second = rate_limit_key(_request_with_raw_headers([("X-Forwarded-For", "2.2.2.2"), ("X-Forwarded-For", "9.9.9.9")]))
+    assert first == second == "9.9.9.9"
+
+
+async def test_a_non_ascii_admin_token_header_is_401_not_500(client: AsyncClient):
+    """secrets.compare_digest refuses non-ASCII str and raises TypeError, which FastAPI turns into
+    a 500. That falsifies the invariant this endpoint is built on - always 401, never a distinct
+    status - and puts an unhandled exception in the function guarding the only write route.
+    Comparing bytes cannot raise on any string a caller can send.
+    """
+    # Sent as raw latin-1 bytes, which is what arrives off a socket and what Starlette decodes
+    # headers as - an httpx str header would be rejected client-side before it ever left.
+    r = await client.post(
+        "/v1/admin/ingest/seed_reference",
+        headers={b"X-Admin-Token": "token-with-an-é-accent".encode("latin-1")},
+    )
+    assert r.status_code == 401
+
+
+async def test_get_routes_are_rate_limited(client: AsyncClient):
+    """GET_LIMIT was defined and never applied: the Limiter carried no default_limits, and
+    SlowAPIMiddleware only enforces those, so every read route on this public API was unlimited.
+    The read routes are the expensive ones - a list request fans out into per-row detail queries -
+    so an unlimited GET is the cheapest way to make this API do work for free.
+    """
+    statuses = [(await client.get("/v1/meta/enums")).status_code for _ in range(61)]
+    assert statuses[:60] == [200] * 60
+    assert statuses[60] == 429
+
+
+async def test_the_liveness_probe_is_never_rate_limited(client: AsyncClient):
+    """Railway polls /health, and every request through Railway shares one rate-limit key: the
+    proxy's own address. A busy minute would otherwise 429 the healthcheck and restart a perfectly
+    healthy container - the rate limit taking the service down instead of protecting it.
+    """
+    statuses = [(await client.get("/health")).status_code for _ in range(65)]
+    assert set(statuses) == {200}

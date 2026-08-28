@@ -3,10 +3,16 @@
 /health answers from the process alone. It is the Railway healthcheck, and if it queried Postgres
 then a database restart would also restart the API. /health/ready is the one that reports the
 database, and it reports it without ever naming the connection string.
+
+/health is exempt from the rate limit for the same reason it does not query Postgres. Every
+request through Railway shares one rate-limit key - the proxy's own address - so a busy minute
+would otherwise answer the healthcheck with 429 and restart a container that was working fine,
+the rate limit taking the service down instead of protecting it.
 """
 
 from __future__ import annotations
 
+from app.deps import limiter
 from core.logging import get_logger
 from fastapi import APIRouter, Request, Response
 from sqlalchemy import text
@@ -18,7 +24,8 @@ NO_STORE = {"Cache-Control": "no-store"}
 
 
 @router.get("/health", summary="Liveness. Answers without touching the database.")
-async def health(response: Response) -> dict[str, str]:
+@limiter.exempt
+async def health(request: Request, response: Response) -> dict[str, str]:
     response.headers.update(NO_STORE)
     return {"status": "ok"}
 
