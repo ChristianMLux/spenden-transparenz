@@ -8,7 +8,9 @@ import { expect, test } from "@playwright/test";
  * nobody noticed.
  */
 test.describe("board fold", () => {
-  test("the list starts on the first screen, with organisations visible at 1280x900", async ({ page }) => {
+  test("the first organisation is fully visible and the second's heading is visible at 1280x900", async ({
+    page,
+  }) => {
     await page.setViewportSize({ width: 1280, height: 900 });
     const res = await page.goto("/de/krise/nepal-flut-2026");
     expect(res?.status()).toBe(200);
@@ -16,20 +18,24 @@ test.describe("board fold", () => {
 
     const m = await page.evaluate(() => {
       const arts = [...document.querySelectorAll("article")];
+      const first = arts[0]?.getBoundingClientRect();
+      const secondHeading = arts[1]?.querySelector("h3")?.getBoundingClientRect();
       return {
-        firstTop: arts[0]?.getBoundingClientRect().top ?? Number.POSITIVE_INFINITY,
-        visible: arts.filter((a) => a.getBoundingClientRect().top < 900).length,
+        firstTop: first?.top ?? Number.POSITIVE_INFINITY,
+        firstBottom: first?.bottom ?? Number.POSITIVE_INFINITY,
+        secondHeadingBottom: secondHeading?.bottom ?? Number.POSITIVE_INFINITY,
       };
     });
 
-    // The list has to begin in the upper half of the first screen. Before the rail this
-    // was around 1500px, below a full column of checkboxes.
+    // The list has to begin in the upper half of the first screen. Before the rail it
+    // started around y=1140, below a full column of checkboxes.
     expect(m.firstTop).toBeLessThan(500);
-    // Measured: the run-up is 470px and the articles are 209 to 236px tall, so two start
-    // and finish above the fold and the third begins just below it. A literal three would
-    // mean giving up the scope sentence, the figure row or the district links, which is a
-    // trade for the product owner rather than something to shave off for a threshold.
-    expect(m.visible).toBeGreaterThanOrEqual(2);
+    // The acceptance the product owner set, after reading the delivered fold: the first
+    // organisation complete, and enough of the second to see whose row it is. A literal
+    // three would mean giving up the scope sentence or the figure row, and those are the
+    // page's honesty statement, so they stay.
+    expect(m.firstBottom).toBeLessThan(900);
+    expect(m.secondHeadingBottom).toBeLessThan(900);
   });
 
   test("no invented map is shipped", async ({ page }) => {
