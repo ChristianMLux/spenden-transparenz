@@ -7,13 +7,15 @@ create_all, and running `alembic upgrade head` into the same schema would collid
 from __future__ import annotations
 
 import os
-from collections.abc import Callable, Iterator
+from collections.abc import AsyncIterator, Callable, Iterator
 from pathlib import Path
 
 import psycopg
 import pytest
 from alembic import command
 from alembic.config import Config
+from app.main import create_app
+from httpx import ASGITransport, AsyncClient
 
 API_DIR = Path(__file__).resolve().parents[1]
 REPO = API_DIR.parents[1]
@@ -57,6 +59,16 @@ def alembic_config() -> Callable[[str], Config]:
     """Builds an Alembic config pointed at a given database. A fixture rather than an import,
     so the test modules do not have to make `tests` an importable package."""
     return _alembic_config
+
+
+@pytest.fixture
+async def client_no_db() -> AsyncIterator[AsyncClient]:
+    """The stub routes serve no data, so they need no database. Building the client without one
+    also proves that: a stub route that quietly queried Postgres would fail here."""
+    app = create_app(database_url=None)
+    async with app.router.lifespan_context(app):
+        async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as client:
+            yield client
 
 
 @pytest.fixture(scope="session")

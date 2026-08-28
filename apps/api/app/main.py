@@ -10,7 +10,7 @@ from __future__ import annotations
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 
-from app.routers import health
+from app.routers import health, stubs
 from core.db import make_engine, make_sessionmaker
 from core.logging import configure_logging, get_logger
 from core.settings import get_settings
@@ -83,7 +83,11 @@ def create_app(database_url: str | None = None) -> FastAPI:
     # WP-C adds here, in this order: ETagMiddleware, then CORSMiddleware, then the slowapi limiter.
 
     app.include_router(health.router)
-    # WP-C adds here: disasters, responders, orgs, statements, meta, admin - each with prefix /v1.
+    # Phase 0 ships the routes as typed stubs so the web team can generate lib/types.ts and
+    # start building. WP-C replaces app/routers/stubs.py with the six real routers and must
+    # not change a path, a parameter or a field name without telling both leads.
+    for router in stubs.ROUTERS:
+        app.include_router(router)
 
     return app
 
