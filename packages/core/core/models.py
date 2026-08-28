@@ -60,6 +60,10 @@ def _enum_check(column: str, values: tuple[str, ...], table: str) -> CheckConstr
     return CheckConstraint(enums.check_in(column, values), name=f"ck_{table}_{column}")
 
 
+# The value of response_statement.model for a statement that came from the human research pass
+# rather than from a language model. The provenance CHECK on quote keys off it.
+HAND_RESEARCH_MODEL = "hand_research"
+
 TIMESTAMP_NOW = func.now()
 
 
@@ -374,7 +378,9 @@ class ResponseStatement(Base):
     # out. Defaults to "reported", which claims nothing.
     amount_basis: Mapped[str] = mapped_column(nullable=False, server_default=text("'reported'"))
 
-    quote: Mapped[str] = mapped_column(nullable=False)
+    # Nullable only for hand-researched statements; the CHECK below enforces that. A claim an
+    # LLM extracted must always carry the sentence it came from.
+    quote: Mapped[str | None]
     quote_offset: Mapped[int | None] = mapped_column(Integer)
     confidence: Mapped[Decimal | None] = mapped_column(Numeric(3, 2))
     verification: Mapped[str] = mapped_column(nullable=False)
@@ -394,8 +400,14 @@ class ResponseStatement(Base):
         UniqueConstraint("report_id", "content_hash", name="uq_response_statement_content"),
         # The 40-word rule is a copyright boundary, so the database keeps it too.
         CheckConstraint(
-            r"array_length(regexp_split_to_array(btrim(quote), '\s+'), 1) <= 40",
+            r"quote IS NULL OR array_length(regexp_split_to_array(btrim(quote), '\s+'), 1) <= 40",
             name="ck_response_statement_quote_words",
+        ),
+        # A quote may only be absent on a hand-researched statement, where the fact came from a
+        # structured page rather than a sentence. Anything a model produced must show its evidence.
+        CheckConstraint(
+            f"quote IS NOT NULL OR model = '{HAND_RESEARCH_MODEL}'",
+            name="ck_response_statement_quote_required_for_extracted",
         ),
         # A bare number with no currency cannot be rendered honestly.
         CheckConstraint("amount IS NULL OR currency IS NOT NULL", name="ck_response_statement_amount_currency"),

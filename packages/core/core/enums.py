@@ -100,7 +100,10 @@ DISTRICT_RESOLUTION = ("stated", "inherited_from_report")
 
 ALIAS_KIND = ("acronym", "local_script", "former_name", "misspelling", "other")
 
-RUN_STATUS = ("running", "succeeded", "failed")
+# "queued" is what the admin endpoint writes. The API never runs a job in-process: it records
+# the request and the pipeline service drains queued runs on its next tick. That keeps the API
+# read-only in practice and keeps the LLM key out of the API service entirely.
+RUN_STATUS = ("queued", "running", "succeeded", "failed")
 
 ALL_ENUMS: dict[str, tuple[str, ...]] = {
     "org_type": ORG_TYPE,
