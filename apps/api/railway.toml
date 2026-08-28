@@ -1,0 +1,30 @@
+# Railway config for the `api` service.
+#
+# Set this file as the service's Config-as-Code path (an absolute repository path,
+# /apps/api/railway.toml). Railway's monorepo docs are explicit that the config file path does NOT
+# follow Root Directory, which is what lets both services keep the repository root as their Root
+# Directory - required, because packages/core lives outside either service directory and a Root
+# Directory would cut it out of the build context.
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "apps/api/Dockerfile"
+
+# Do not rebuild the API when only pipeline code or research data changes.
+watchPatterns = ["apps/api/**", "packages/core/**"]
+
+[deploy]
+# start.sh, not a bare uvicorn line: it carries --no-server-header and the proxy-header flags
+# together with the written reason for each, which a start command in a dashboard field cannot.
+startCommand = "./start.sh"
+
+# The schema has to exist before the first request. A pre-deploy that fails blocks the release,
+# which is the point: the alternative is an API serving 500s from a database that is behind the
+# code, and /health cannot see that because it deliberately never touches Postgres. The app logs
+# `schema_behind_code` at start-up as the second line of defence.
+preDeployCommand = ["alembic", "upgrade", "head"]
+
+healthcheckPath = "/health"
+healthcheckTimeout = 60
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10

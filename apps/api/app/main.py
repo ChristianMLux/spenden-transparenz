@@ -7,8 +7,10 @@ that two workers do not invent two different wirings.
 
 from __future__ import annotations
 
+import re
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from app.deps import enforce_get_rate_limit, limiter
 from app.middleware import ETagMiddleware
@@ -20,6 +22,7 @@ from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
+from sqlalchemy import text
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
 from starlette.responses import Response
@@ -48,6 +51,74 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
         return response
 
 
+EXPECTED_REVISION_FILE_GLOB = "*.py"
+
+
+def _code_head_revision() -> str | None:
+    """The newest migration revision this deployment's code carries, read from the files.
+
+    Deliberately parsed from the versions directory rather than imported through Alembic: this
+    runs at start-up, on every boot, and must not need alembic.ini, a database connection, or a
+    working directory to answer. A file it cannot parse is skipped rather than fatal - a start-up
+    check that can prevent the app from starting is a worse failure than the one it looks for.
+    """
+    versions = Path(__file__).resolve().parents[1] / "alembic" / "versions"
+    revisions: set[str] = set()
+    downs: set[str] = set()
+    try:
+        files = sorted(versions.glob(EXPECTED_REVISION_FILE_GLOB))
+    except OSError:
+        return None
+    for file in files:
+        try:
+            text = file.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        revision = re.search(r"^revision: str = ['\"]([^'\"]+)['\"]", text, re.MULTILINE)
+        down = re.search(r"^down_revision: [^=]+= ['\"]([^'\"]+)['\"]", text, re.MULTILINE)
+        if revision:
+            revisions.add(revision.group(1))
+        if down:
+            downs.add(down.group(1))
+    heads = revisions - downs
+    return heads.pop() if len(heads) == 1 else None
+
+
+async def _warn_if_schema_is_behind_the_code(app: FastAPI) -> None:
+    """Say so, loudly, at start-up when the database has not been migrated to this code's head.
+
+    This exists because of a real 500. Code at migration 0006 against a database at 0005 answered
+    /health with 200 - it deliberately does not touch Postgres - while every request to the board
+    failed with `column org_datum.channel_type does not exist`. The signal existed (/health/ready
+    reports the revision) and nothing was reading it, so the first evidence was a stack trace.
+
+    On Railway the window is real: a pre-deploy `alembic upgrade head` that fails still leaves the
+    API starting, and a rolling deploy has a new-code/old-schema moment by construction.
+
+    A warning, not a refusal to start. Which is right is not obvious - a hard exit would turn a
+    migration that has not run yet into an outage - but a deployment that can still serve
+    /health/ready and its unaffected routes is more useful than one that will not boot, and the
+    log line names the fix.
+    """
+    expected = _code_head_revision()
+    factory = getattr(app.state, "sessionmaker", None)
+    if expected is None or factory is None:
+        return
+    try:
+        async with factory() as session:
+            actual = (await session.execute(text("select version_num from alembic_version"))).scalar_one_or_none()
+    except Exception as exc:
+        log.warning("schema_revision_check_failed", extra={"error_type": type(exc).__name__})
+        return
+    if actual != expected:
+        log.error(
+            "schema_behind_code",
+            extra={"database_revision": actual, "code_revision": expected},
+        )
+    else:
+        log.info("schema_revision_ok", extra={"revision": actual})
+
+
 def create_app(database_url: str | None = None) -> FastAPI:
     settings = get_settings()
     configure_logging(
@@ -68,6 +139,7 @@ def create_app(database_url: str | None = None) -> FastAPI:
             app.state.engine = None
             app.state.sessionmaker = None
             log.warning("started_without_database")
+        await _warn_if_schema_is_behind_the_code(app)
         log.info("api_started", extra={"env": settings.env})
         yield
         if app.state.engine is not None:

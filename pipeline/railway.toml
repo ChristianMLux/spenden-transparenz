@@ -1,0 +1,28 @@
+# Railway config for the `pipeline` cron service.
+#
+# Set this file as the service's Config-as-Code path (/pipeline/railway.toml). See
+# apps/api/railway.toml for why Root Directory stays at the repository root.
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "pipeline/Dockerfile"
+
+# data/** is in here on purpose: ingest_orgs and seed_reference read those files at runtime, so a
+# change to the dataset is a change to what this service will write.
+watchPatterns = ["pipeline/**", "packages/core/**", "data/**"]
+
+[deploy]
+# Every 30 minutes. One tick drains whatever the admin endpoint queued, then runs the scheduled
+# sequence; a tick that finds nothing new writes nothing and takes seconds.
+cronSchedule = "*/30 * * * *"
+startCommand = "python -m pipeline.cli tick"
+
+# No healthcheck: a cron service is a process that runs to completion and exits, not a server
+# with a port to poll. Railway would wait for an HTTP response that never comes.
+#
+# No restart policy either. A failed tick must NOT be retried automatically: extract_statements
+# spends real money per call, and a job that fails deterministically would burn the run budget on
+# a loop. Each job records its own failure on its ingestion_run row, the next scheduled tick
+# retries it once, and MAX_ATTEMPTS in the extract job caps how often a single report is retried
+# across ticks.
+restartPolicyType = "NEVER"
