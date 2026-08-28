@@ -81,8 +81,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: pip-audit
+        # --python 3.13 is required, not cosmetic: pip-audit builds an ephemeral venv, and on a
+        # different minor version pip picks the cp312 wheels, whose hashes are not in a lock
+        # resolved for 3.13. The run then fails as a hash mismatch and reads like tampering.
         run: |
-          uvx pip-audit --requirement apps/api/requirements.txt --requirement pipeline/requirements.txt
+          uvx --python 3.13 pip-audit --requirement apps/api/requirements.txt --requirement pipeline/requirements.txt
 
       - name: no third-party report text in the published contract
         run: |
