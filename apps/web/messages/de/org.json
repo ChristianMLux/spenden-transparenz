@@ -1,6 +1,7 @@
 {
   "meta": {
-    "titleTemplate": "{name} | Spenden-Transparenz"
+    "titleTemplate": "{name} | Spenden-Transparenz",
+    "description": "Was über {name} öffentlich belegt ist: Reaktion auf die Flut, Präsenz in Nepal, Registrierungen und Finanzen, jeder Wert mit Quelle und Abrufdatum. Keine Bewertung, keine Empfehlung."
   },
   "header": {
     "localScriptField": "Name in Landessprache",

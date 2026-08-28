@@ -30,7 +30,11 @@ export async function generateMetadata({
     getTranslations("org.meta"),
   ]);
   if (!org) return {};
-  return { title: t("titleTemplate", { name: org.name }) };
+  return {
+    title: t("titleTemplate", { name: org.name }),
+    // Says what the page holds and, just as importantly, what it does not: no rating.
+    description: t("description", { name: org.name }),
+  };
 }
 
 export default async function OrgDetailPage({

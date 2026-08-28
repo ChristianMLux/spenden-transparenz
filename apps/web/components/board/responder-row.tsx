@@ -31,9 +31,9 @@ export function ResponderRow({ responder, generatedAt }: { responder: Responder;
   return (
     <article aria-labelledby={headingId}>
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-        <h3 id={headingId} className="text-lg">
+        <h2 id={headingId} className="text-lg">
           {responder.name}
-        </h3>
+        </h2>
         <p className="text-xs text-muted">
           {countryName(responder.hq_country, locale)} · {tCommon(`orgType.${responder.org_type}`)}
         </p>

@@ -15,7 +15,8 @@
     "pretest:unit": "node scripts/sync-data.mjs",
     "test:lighthouse": "lhci autorun",
     "check:bundle": "node scripts/check-bundle.mjs",
-    "verify": "npx tsc --noEmit && npm run lint && npm run contrast && npm run test:unit && npm run build && npm run check:bundle && npm run test:e2e"
+    "verify": "npx tsc --noEmit && npm run lint && npm run contrast && npm run test:unit && npm run build && npm run check:bundle && npm run test:e2e",
+    "lighthouse:local": "node scripts/lighthouse.mjs"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
