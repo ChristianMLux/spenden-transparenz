@@ -18,8 +18,14 @@ response_statement (added 2026-08-28, per the backend lead): the 44 current_resp
 across 39 distinct source_urls (also measured directly), loaded as hand-researched statements so
 the Response Board has real data before WP-B's extraction pipeline has run. See
 pipeline/jobs/orgs.py's module docstring for why body_text/title/format stay NULL on these
-reports, and derive_activity_type/derive_amount_basis's own docstrings for how those two fields
-are derived from the activity sentence.
+reports.
+
+activity_type/amount_basis (schema v0.4, 2026-08-28): read from the record, never derived. A
+keyword heuristic here got 14 of the 44 wrong, three of them by inventing a financial claim on a
+sentence with no amount at all - see pipeline/jobs/orgs.py's module docstring for the full story.
+The classification is data now (pipeline/migrations/explicit_classification.py); this loader's
+only remaining decision is the fallback when a record has none (DEFAULT_ACTIVITY_TYPE /
+DEFAULT_AMOUNT_BASIS), tested directly below.
 """
 
 from __future__ import annotations
@@ -40,12 +46,13 @@ from core.models import (
 from sqlalchemy import func, select, text
 
 from pipeline.jobs.orgs import (
+    DEFAULT_ACTIVITY_TYPE,
+    DEFAULT_AMOUNT_BASIS,
     FLOOD_GLIDE_ID,
     _datum_row,
     _partition_aliases,
+    _response_statement_row,
     _value_type_and_extra,
-    derive_activity_type,
-    derive_amount_basis,
     ingest_orgs,
     upsert_datum,
 )
@@ -424,60 +431,59 @@ async def test_response_statements_never_get_deleted(job_sessionmaker, session):
     assert after == before
 
 
-# --- activity_type and amount_basis derivation --------------------------------------------------
+# --- activity_type and amount_basis: read from the record, fall back when absent -----------------
 
 
-@pytest.mark.parametrize(
-    ("what", "expected"),
-    [
-        ("Began rescue work in a flood-affected area, per Nepali press", "search_and_rescue"),
-        (
-            "Distributed pre-positioned hygiene kits, medical tents, bed nets, newborn kits, and "
-            "ready-to-use therapeutic food for children with acute malnutrition",
-            "relief_distribution",
-        ),
-        ("IFRC launched a CHF 25 million Emergency Appeal to fund the response", "appeal_launched"),
-        ("IFRC released Disaster Response Emergency Fund (DREF) funding to support NRCS", "funding_pledged"),
-        ("MSF emergency team arrived in Nepal to assess people's immediate needs", "assessment"),
-        (
-            "Partner hospital used pre-positioned field medic packs to treat flood-evacuated patients",
-            "medical",
-        ),
-        (
-            # The classic trap this heuristic exists to avoid: "rescue" appears only as a listed
-            # use-case of a fund, not as a described rescue operation.
-            "Nepal Flood Relief Fund launched; USD 174,819 raised; flexible funding for search "
-            "and rescue, medical care, shelter, food, water",
-            "appeal_launched",
-        ),
-    ],
-)
-def test_derive_activity_type(what, expected):
-    assert derive_activity_type(what) == expected
+async def test_every_statement_has_a_legal_activity_type_and_amount_basis(job_sessionmaker, session):
+    """Schema v0.4 wrote activity_type/amount_basis for all 44 real entries
+    (pipeline/migrations/explicit_classification.py, and its own tests read every value against
+    the PO's classification). This is the read side: proves ingest_orgs actually picks the values
+    up rather than silently falling back to "other"/"reported" for everything."""
+    await ingest_orgs(job_sessionmaker)
+    rows = (await session.execute(select(ResponseStatement))).scalars().all()
+    assert len(rows) == EXPECTED_STATEMENTS
+    fallback_only = [r for r in rows if r.activity_type == "other" and r.amount_basis == "reported"]
+    # "other"/"reported" can be a legitimate explicit choice too, so this is a loose sanity bound,
+    # not a claim that none of the 44 are legitimately "other" - just that the fallback path is
+    # not silently swallowing everything.
+    assert len(fallback_only) < EXPECTED_STATEMENTS
 
 
-@pytest.mark.parametrize(
-    ("what", "expected"),
-    [
-        ("USD 174,819 raised from 1,433 donors", "raised"),
-        ("IFRC launched a CHF 25 million Emergency Appeal", "appeal"),
-        ("Announced NPR 50 million in immediate support", "pledged"),
-        ("100,000 euros allocated from the emergency relief fund", "released"),
-        ("IFRC released DREF funding to support NRCS", "released"),
-        ("A statement with no amount language at all", "reported"),
-    ],
-)
-def test_derive_amount_basis(what, expected):
-    assert derive_amount_basis(what) == expected
+def test_response_statement_row_uses_the_explicit_classification():
+    org = {"org_id": "some-org", "names": {"common": "Some Org"}}
+    entry = {
+        "what": "Distributed tarpaulins",
+        "where": ["Rasuwa"],
+        "date": "2026-08-27",
+        "verification": "self_reported",
+        "activity_type": "relief_distribution",
+        "amount_basis": "released",
+        "amount": 1000,
+        "currency": "USD",
+    }
+    row = _response_statement_row(org, entry, report_id=1, run_id=None)
+    assert row["activity_type"] == "relief_distribution"
+    assert row["amount_basis"] == "released"
 
 
-def test_derive_amount_basis_never_reads_the_note():
-    """The same rule WP-B follows: a note reading "not confirmed disbursed" must never turn a
-    pledge into a payment. derive_amount_basis takes only the activity sentence as an argument -
-    there is no note parameter to accidentally wire in."""
-    import inspect
-
-    assert list(inspect.signature(derive_amount_basis).parameters) == ["what"]
+def test_response_statement_row_falls_back_when_the_record_has_no_classification():
+    """The only thing left in this loader that decides anything, per the backend lead: an absent
+    value falls back to DEFAULT_ACTIVITY_TYPE / DEFAULT_AMOUNT_BASIS, which claim nothing - never
+    a guess. Schema v0.4 writes an explicit value for every real entry today, so this exercises a
+    shape the loader has never actually seen against the pilot data - the fallback is what
+    protects the day a new response_statement source arrives without a classification."""
+    org = {"org_id": "some-org", "names": {"common": "Some Org"}}
+    entry = {
+        "what": "Something happened",
+        "where": [],
+        "date": None,
+        "verification": "unverified",
+    }
+    row = _response_statement_row(org, entry, report_id=1, run_id=None)
+    assert row["activity_type"] == DEFAULT_ACTIVITY_TYPE
+    assert row["amount_basis"] == DEFAULT_AMOUNT_BASIS
+    assert row["activity_type"] == "other"
+    assert row["amount_basis"] == "reported"
 
 
 # --- runs the whole pipeline once as a sanity check on the run contract itself -------------------

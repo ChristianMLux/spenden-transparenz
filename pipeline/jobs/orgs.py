@@ -25,6 +25,18 @@ whole Response Board was designed around are not in the database until WP-B's ex
 has run against live ReliefWeb reports. These are hand-researched, not model-extracted - model =
 core.models.HAND_RESEARCH_MODEL, status "approved" - and where_raw is written as-is; district
 resolution is WP-B's resolve_districts job, not this one.
+
+activity_type/amount_basis: schema v0.4 (2026-08-28, commit 6f71094). The first version of this
+loader derived both from the activity sentence with a keyword heuristic. The PO read all 44
+researched responses against it and found 14 wrong, three of them by inventing a financial claim -
+amount_basis released/pledged/disbursed - on a sentence with no amount in it at all, which is the
+single most damaging thing this product could get wrong: amount_basis renders next to the figure
+on the board, so "disbursed" with no figure is the product asserting a payment nobody reported.
+So the classification is data now, written by a person
+(pipeline/migrations/explicit_classification.py) directly into current_response[]. This loader
+only reads it - see _response_statement_row - and falls back to DEFAULT_ACTIVITY_TYPE /
+DEFAULT_AMOUNT_BASIS ("other" / "reported", which claim nothing) when a record has none. No
+keyword table, no note-reading, no inference of any kind lives in this file any more.
 """
 
 from __future__ import annotations
@@ -436,84 +448,11 @@ RESPONSE_STATUS = "approved"
 DISASTER_COLUMNS = ("reliefweb_id", "name", "country_iso3", "started_on", "is_active", "source_url")
 HAND_RESEARCH_REPORT_COLUMNS = ("title", "format", "published_at", "disaster_glide_id")
 
-
-def derive_activity_type(what: str) -> str:
-    """A best-effort keyword classification of the free-text activity sentence, checked from the
-    most specific/unambiguous signal to the most general.
-
-    Order is load-bearing, not incidental. An appeal or rescue mention anywhere in the sentence
-    outranks a single relief item named in passing: a fund whose stated use includes "search and
-    rescue" is an appeal, not a rescue operation (globalgiving), and a multi-item distribution
-    that happens to include a hygiene kit is a distribution, not narrowly wash (unicef-nepal,
-    save-the-children-international). Two entries describing the same underlying IFRC/NRCS DREF
-    release differ only in how much of the fund's intended use they spell out, and both must
-    still land on funding_pledged - which is why "released"/"allocat" are checked before any
-    item-specific keyword, not after.
-
-    Checked against all 44 current_response entries in the pilot dataset (see
-    test_ingest_orgs.py); a documented heuristic, not a general-purpose NLP classifier. No board
-    filter depends on this field today (the spec's Response Board filters are district, hq,
-    org_type, verification and name search), so precision here matters less than never landing on
-    something actively misleading.
-    """
-    text = what.lower()
-    if any(k in text for k in ("appeal", "fundrais", "donat", "raised", " goal")):
-        return "appeal_launched"
-    if "rescue" in text:
-        return "search_and_rescue"
-    if any(k in text for k in ("released", "allocat", "grant", "announc")):
-        return "funding_pledged"
-    if any(k in text for k in ("distribut", "dispatch", "provision of", "relief materials", "sent a team with relief")):
-        return "relief_distribution"
-    if "assess" in text:
-        return "assessment"
-    if any(
-        k in text
-        for k in ("medical", "medic pack", "hospital", "health facilit", "treat ", "patients", "clinic", "surgical")
-    ):
-        return "medical"
-    if any(k in text for k in ("drinking water", "hygiene kit", "hygiene article", "hygiene supplies", "sanitation")):
-        return "wash"
-    if any(k in text for k in ("food ration", "ready-to-eat", "nutrient-packed", "cooking kit")):
-        return "food"
-    if any(k in text for k in ("shelter kit", "emergency shelter", "temporary shelter")):
-        return "shelter"
-    if any(k in text for k in ("deployed", "dispatched a team", "sent a team", "team reached", "team arrived")):
-        return "staff_deployed"
-    needs_statement_keywords = (
-        "priorities named",
-        "identified needs",
-        "preparing emergency",
-        "identify urgent needs",
-        "preparing to mobilise",
-    )
-    if any(k in text for k in needs_statement_keywords):
-        return "needs_statement"
-    if any(k in text for k in ("responding to", "coordinating with", "named as", "engaging with")):
-        return "presence_declared"
-    return "other"
-
-
-def derive_amount_basis(what: str) -> str:
-    """What an amount actually is, from the activity sentence, never from the note - the same
-    rule WP-B follows for extracted statements. A note routinely reads "not confirmed disbursed"
-    or "amount is a pledge, not a confirmed disbursement", so matching against the note would
-    label pledges and appeal targets as payments: the exact inversion this column exists to
-    prevent. Checked against all 9 amount-carrying entries in the pilot dataset; none classify as
-    disbursed, which matches the plan's own measurement of zero disbursed amounts in this data.
-    """
-    text = what.lower()
-    if "raised" in text:
-        return "raised"
-    if "appeal" in text:
-        return "appeal"
-    if any(k in text for k in ("pledge", "announc", "committed")):
-        return "pledged"
-    if any(k in text for k in ("released", "allocat", "provided")):
-        return "released"
-    if "disburs" in text:
-        return "disbursed"
-    return "reported"
+# Schema v0.4: activity_type and amount_basis are read from the record (see
+# _response_statement_row below), never derived from the activity sentence. These are the
+# fallbacks for a record with no explicit value, and both claim nothing - never a guess.
+DEFAULT_ACTIVITY_TYPE = "other"
+DEFAULT_AMOUNT_BASIS = "reported"
 
 
 def _parse_response_datetime(value: str | None) -> datetime | None:
@@ -573,7 +512,15 @@ def _hand_research_report_rows(orgs: list[dict[str, Any]], run_id: Any) -> list[
 
 def _response_statement_row(org: dict[str, Any], entry: dict[str, Any], report_id: int, run_id: Any) -> dict[str, Any]:
     """One current_response[] entry. org_id is never null here - unlike WP-B's extraction, every
-    hand-researched entry is already attributed to the organisation whose record it lives in."""
+    hand-researched entry is already attributed to the organisation whose record it lives in.
+
+    activity_type and amount_basis are read from the record, never derived. Schema v0.4 (see
+    module docstring) moved classification out of a keyword heuristic and into data a person
+    wrote after reading all 44 sentences - a keyword table got 14 of them wrong, three of those
+    by inventing a financial claim (amount_basis released/pledged/disbursed) on a sentence with
+    no amount in it at all. An absent value falls back to DEFAULT_ACTIVITY_TYPE /
+    DEFAULT_AMOUNT_BASIS, which claim nothing - never a guess.
+    """
     what = entry["what"]
     amount_raw = entry.get("amount")
     currency = entry.get("currency")
@@ -581,8 +528,8 @@ def _response_statement_row(org: dict[str, Any], entry: dict[str, Any], report_i
     happened_on_raw = entry.get("date")
     quote = entry.get("quote")
     verification = entry["verification"]
-    activity_type = derive_activity_type(what)
-    amount_basis = derive_amount_basis(what)
+    activity_type = entry.get("activity_type") or DEFAULT_ACTIVITY_TYPE
+    amount_basis = entry.get("amount_basis") or DEFAULT_AMOUNT_BASIS
 
     content_hash = _content_hash(
         org["org_id"],
