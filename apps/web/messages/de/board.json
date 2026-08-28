@@ -60,5 +60,14 @@
     "reportedBy": "gemeldet von",
     "noDate": "Ohne Datum"
   },
-  "districtsLabel": "Distrikte mit mindestens einer Meldung:"
+  "districtsLabel": "Distrikte mit mindestens einer Meldung:",
+  "help": {
+    "navLabel": "Ich möchte helfen",
+    "heading": "Ich möchte helfen",
+    "line1": "Diese Seite sammelt, was Organisationen öffentlich zu dieser Flut gemeldet haben, jeweils mit Quelle und Abrufdatum.",
+    "line2": "Die Liste ist weder bewertet noch nach Qualität sortiert. Sie entscheiden selbst, wem Sie etwas geben.",
+    "line3": "Wo ein offizieller Spendenweg gefunden wurde, verlinkt die Zeile die Seite der Organisation auf deren eigener Domain.",
+    "governmentHeading": "Staatlicher Fonds",
+    "governmentNote": "Keine Organisation in dieser Liste, sondern ein staatlicher Fonds Nepals."
+  }
 }
