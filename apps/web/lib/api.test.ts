@@ -266,6 +266,174 @@ describe("schema validation", () => {
   });
 });
 
+describe("donation channel from the live API", () => {
+  const originalFetch = global.fetch;
+
+  beforeEach(() => {
+    vi.resetModules();
+    process.env.SPENDEN_API_URL = "https://api.example.test";
+  });
+
+  afterEach(() => {
+    global.fetch = originalFetch;
+    delete process.env.SPENDEN_API_URL;
+  });
+
+  const disaster = {
+    glide_id: "ff-2026-000162-npl",
+    name: "Nepal: Sturzfluten, August 2026",
+    is_active: true,
+    started_on: "2026-08-26",
+    source_url: "https://reliefweb.int/disaster/ff-2026-000162-npl",
+  };
+  const freshness = { generated_at: "2026-08-29T06:00:00Z" };
+
+  const row = (donation_channel: unknown) => ({
+    org: {
+      org_id: "nepal-red-cross-society",
+      name_common: "Nepal Red Cross Society",
+      org_type: "red_cross_movement",
+      hq_country: "NP",
+    },
+    org_name_raw: "Nepal Red Cross Society",
+    statements: [],
+    counts: { statements: 0, districts: 0 },
+    donation_channel,
+  });
+
+  function routeFetch(responders: unknown[], org?: unknown) {
+    return vi.fn(async (url: string) => {
+      const body = url.includes("/responders")
+        ? responders
+        : url.includes("/v1/meta/freshness")
+          ? freshness
+          : url.includes("/v1/orgs/")
+            ? org
+            : disaster;
+      return new Response(JSON.stringify(body), { status: 200 });
+    });
+  }
+
+  it("reads a board row's channel off the API rather than the JSON file", async () => {
+    global.fetch = routeFetch([
+      row({
+        url: "https://donation.nrcs.org/live",
+        channel_type: "donation_page",
+        verification: "self_reported",
+        retrieved_at: "2026-08-29",
+        flood_specific: true,
+      }),
+    ]) as unknown as typeof fetch;
+
+    const { getBoard: freshGetBoard } = await import("./api");
+    const board = await freshGetBoard("nepal-flut-2026");
+    // The live url, not the one in data/orgs/donation-channels.json.
+    expect(board.responders[0]?.donation.url).toBe("https://donation.nrcs.org/live");
+    expect(board.responders[0]?.donation.retrieved_at).toBe("2026-08-29");
+    expect(board.responders[0]?.donation.verification).toBe("self_reported");
+    expect(board.responders[0]?.donation.gap_reason).toBeNull();
+  });
+
+  it("reads a null row as searched and not found, never as never searched", async () => {
+    global.fetch = routeFetch([row(null)]) as unknown as typeof fetch;
+
+    const { getBoard: freshGetBoard } = await import("./api");
+    const { donationView } = await import("./donation");
+    const board = await freshGetBoard("nepal-flut-2026");
+    const view = donationView(board.responders[0]!.donation);
+
+    // The API contract fixes this meaning: "Null on a row means no official channel was
+    // found". Reading it as not_searched would tell a reader we never looked.
+    expect(view.state).toBe("not_found");
+    expect(view.labelKey).toBe("notFound");
+    expect(view.href).toBeNull();
+  });
+
+  it("rejects a row whose channel is missing its url rather than rendering a dead link", async () => {
+    global.fetch = routeFetch([
+      row({
+        channel_type: "donation_page",
+        verification: "self_reported",
+        retrieved_at: "2026-08-29",
+        flood_specific: false,
+      }),
+    ]) as unknown as typeof fetch;
+
+    const { getBoard: freshGetBoard } = await import("./api");
+    await expect(freshGetBoard("nepal-flut-2026")).rejects.toThrow(/failed schema validation/);
+  });
+
+  const orgDetail = (datum: unknown) => ({
+    org_id: "nepal-red-cross-society",
+    name_common: "Nepal Red Cross Society",
+    org_type: "red_cross_movement",
+    hq_country: "NP",
+    last_updated: "2026-08-29",
+    data: datum === undefined ? {} : { donation_channel: datum },
+  });
+
+  it("reads the organisation page's channel from the full datum, siblings included", async () => {
+    global.fetch = routeFetch(
+      [],
+      orgDetail({
+        value: "https://donation.nrcs.org/live",
+        is_gap: false,
+        source_url: "https://nrcs.org",
+        retrieved_at: "2026-08-29",
+        verification: "self_reported",
+        quote: "Ways to Donate",
+        note: "homepage nav",
+        gap_reason: null,
+        channel_type: "donation_page",
+        flood_specific: true,
+      }),
+    ) as unknown as typeof fetch;
+
+    const { getOrg: freshGetOrg } = await import("./api");
+    const org = await freshGetOrg("nepal-red-cross-society");
+    expect(org.donation.url).toBe("https://donation.nrcs.org/live");
+    expect(org.donation.flood_specific).toBe(true);
+    expect(org.donation.channel_type).toBe("donation_page");
+    expect(org.donation.quote).toBe("Ways to Donate");
+    expect(org.donation.publisher).toBe("donation.nrcs.org");
+  });
+
+  it("keeps the organisation page's gap reason as the datum states it", async () => {
+    global.fetch = routeFetch(
+      [],
+      orgDetail({
+        value: null,
+        is_gap: true,
+        source_url: null,
+        retrieved_at: "2026-08-29",
+        verification: "unverified",
+        quote: null,
+        note: "checked the site, no donate route",
+        gap_reason: "searched_not_found",
+        channel_type: null,
+        flood_specific: null,
+      }),
+    ) as unknown as typeof fetch;
+
+    const { getOrg: freshGetOrg } = await import("./api");
+    const { donationView } = await import("./donation");
+    const org = await freshGetOrg("nepal-red-cross-society");
+    expect(donationView(org.donation).state).toBe("not_found");
+    expect(org.donation.note).toBe("checked the site, no donate route");
+  });
+
+  it("says never searched when the organisation carries no donation datum at all", async () => {
+    global.fetch = routeFetch([], orgDetail(undefined)) as unknown as typeof fetch;
+
+    const { getOrg: freshGetOrg } = await import("./api");
+    const { donationView } = await import("./donation");
+    const org = await freshGetOrg("nepal-red-cross-society");
+    // Absent is not the same statement as null-on-a-row, and only this case is allowed
+    // to say we did not look.
+    expect(donationView(org.donation).state).toBe("not_searched");
+  });
+});
+
 describe("SPENDEN_API_URL switch", () => {
   const originalFetch = global.fetch;
 
